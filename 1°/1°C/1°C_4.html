@@ -1,0 +1,100 @@
+<head>
+  <meta charset="UTF-8">
+  <title>1° anno: parte C4</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
+<div class="slide active">
+    <h2>geometria</h2>
+    </ol>
+    </ol>
+</div>
+
+<div class="slide">
+    <h2>relazione tra angoli e lati</h2>
+    <div class="block quest">
+        Dati tre punti sul piano \({\rm A},{\rm B},{\rm C}\) questi identificano un triangolo:
+        <ul>
+            <li>Chiamiamo \(\alpha\) l'angolo che ruota \({\rm B}-{\rm A}\) in \({\rm C}-{\rm A}\).</li>
+            <li>Chiamiamo \(\beta\) l'angolo che ruota \({\rm C}-{\rm B}\) in \({\rm A}-{\rm B}\).</li>
+            <li>Chiamiamo \(\gamma\) l'angolo che ruota \({\rm A}-{\rm C}\) in \({\rm B}-{\rm C}\).</li>
+        </ul>
+        Denotiamo inoltre:
+        <ul>
+            <li>\[{\rm a}=\left|{\rm C}-{\rm B}\right|\]</li>
+            <li>\[{\rm b}=\left|{\rm A}-{\rm C}\right|\]</li>
+            <li>\[{\rm c}=\left|{\rm C}-{\rm B}\right|\]</li>
+        </ul>
+        Come possiamo calcolare \(\frac{\rm a}{\rm b},\frac{\rm c}{\rm a},\frac{\rm b}{\rm c}\) conoscendo \(\alpha,\beta,\gamma\)?
+        Come possiamo calcolare \(\alpha,\beta,\gamma\) conoscendo \(\frac{\rm a}{\rm b},\frac{\rm c}{\rm a},\frac{\rm b}{\rm c}\)?
+    </div>
+    <div class="block facts">
+        Diciamo:
+        <ul>
+            <li>\[{\rm a}=\left|{\rm C}-{\rm B}\right|=\cos\left(\beta\right)\cdot{\rm c}+\cos\left(\gamma\right)\cdot{\rm b}\]</li>
+            <li>\[{\rm b}=\left|{\rm A}-{\rm C}\right|=\cos\left(\gamma\right)\cdot{\rm a}+\cos\left(\alpha\right)\cdot{\rm c}\]</li>
+            <li>\[{\rm c}=\left|{\rm C}-{\rm B}\right|=\cos\left(\alpha\right)\cdot{\rm b}+\cos\left(\beta\right)\cdot{\rm a}\]</li>
+        </ul>
+        Da cui si ricava:
+        <ul>
+            <li>\[{\rm b}^2-{\rm a}^2=\cos\left(\alpha\right)\cdot{\rm c}\cdot{\rm b}-\cos\left(\beta\right)\cdot{\rm c}\cdot{\rm a}=\cos\left(\alpha\right)^2\cdot{\rm b}^2-\cos\left(\beta\right)^2\cdot{\rm a}^2\]</li>
+            <li>\[{\rm c}^2-{\rm b}^2=\cos\left(\beta\right)\cdot{\rm a}\cdot{\rm c}-\cos\left(\gamma\right)\cdot{\rm a}\cdot{\rm b}=\cos\left(\beta\right)^2\cdot{\rm c}^2-\cos\left(\gamma\right)^2\cdot{\rm b}^2\]</li>
+            <li>\[{\rm a}^2-{\rm c}^2=\cos\left(\gamma\right)\cdot{\rm b}\cdot{\rm a}-\cos\left(\alpha\right)\cdot{\rm b}\cdot{\rm c}=\cos\left(\gamma\right)^2\cdot{\rm a}^2-\cos\left(\alpha\right)^2\cdot{\rm c}^2\]</li>
+        </ul>
+        Cioè:
+        \[\frac{{\rm a}^2}{1-\cos\left(\alpha\right)^2}=\frac{{\rm b}^2}{1-\cos\left(\beta\right)^2}=\frac{{\rm c}^2}{1-\cos\left(\gamma\right)^2}\]
+        Si nota invece che l'area del triangolo si può calcolare come:
+        \[\sin\left(\alpha\right)\cdot{\rm b}\cdot{\rm c}={\rm a}\cdot\sin\left(\beta\right)\cdot{\rm c}={\rm a}\cdot{\rm b}\cdot\sin\left(\gamma\right)\]
+        Da cui si ricava:
+        \[\frac{\rm a}{\sin\left(\alpha\right)}=\frac{\rm b}{\sin\left(\beta\right)}=\frac{\rm c}{\sin\left(\gamma\right)}\]
+        Questa formula è infatti equivalente alla precedente.
+    </div>
+    <div class="block corol">
+        La relazione tra gli angoli interni di un triangolo si legge dunque:
+        <ul>
+            <li>\[{\rm a}=\cos\left(\beta\right)\cdot{\rm c}+\cos\left(\gamma\right)\cdot{\rm b}\]</li>
+            <li>\[{\rm b}=\cos\left(\gamma\right)\cdot{\rm a}+\cos\left(\alpha\right)\cdot{\rm c}\]</li>
+            <li>\[{\rm c}=\cos\left(\alpha\right)\cdot{\rm b}+\cos\left(\beta\right)\cdot{\rm a}\]</li>
+        </ul>
+        Da cui si ricava:
+        <ul>
+            <li>\[{\rm b}^2-\cos\left(\gamma\right)\cdot{\rm a}\cdot{\rm b}={\rm c}^2-\cos\left(\beta\right)\cdot{\rm a}\cdot{\rm c}\]</li>
+            <li>\[{\rm c}^2-\cos\left(\alpha\right)\cdot{\rm b}\cdot{\rm c}={\rm a}^2-\cos\left(\gamma\right)\cdot{\rm b}\cdot{\rm a}\]</li>
+            <li>\[{\rm a}^2-\cos\left(\beta\right)\cdot{\rm c}\cdot{\rm a}={\rm b}^2-\cos\left(\alpha\right)\cdot{\rm c}\cdot{\rm b}\]</li>
+        </ul>
+        E si può calcolare
+        <ul>
+            <li>\[\cos\left(\alpha\right)=\frac{{\rm b}^2+{\rm c}^2-{\rm a}^2}{2\cdot{\rm b}\cdot{\rm c}}\]</li>
+            <li>\[\cos\left(\beta\right)=\frac{{\rm c}^2+{\rm a}^2-{\rm b}^2}{2\cdot{\rm c}\cdot{\rm a}}\]</li>
+            <li>\[\cos\left(\gamma\right)=\frac{{\rm a}^2+{\rm b}^2-{\rm c}^2}{2\cdot{\rm a}\cdot{\rm b}}\]</li>
+        </ul>
+    </div>
+</div>
+
+<div class="nav-buttons">
+  <button onclick="prevSlide()">Indietro</button>
+  <a href="../../README.md">Torna all'Indice</a>
+  <button onclick="nextSlide()">Avanti</button>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+</script>
