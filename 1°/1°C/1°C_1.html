@@ -12,11 +12,6 @@
         <li>vettori</li>
         <li>triangoli</li>
     <ol>
-    </ol>
-        <li>ceviane</li>
-        <li>circonferenze</li>
-        <li>excentri</li>
-    <ol>
 </div>
 
 <div class="slide">
@@ -102,116 +97,13 @@
         <ul>
             <li>Se due triangoli hanno le lunghezze dei tre lati uguali, allora sono congruenti o simmetrici.</li>
             <li>Se due triangoli hanno le lunghezze dei lati in proporzione tra loro, allora hanno tutti gli angoli uguali o opposti.</li>
-        </ul>        
-    </div>
-</div>
-
-<div class="slide">
-    <h2>baricentro e ceviane</h2>
-    <div class="block shape">
-        Consideriamo un punto
-        \[{\rm P}={\rm a}_{\rm P}\cdot{\rm A}+{\rm b}_{\rm P}\cdot{\rm B}+{\rm c}_{\rm P}\cdot{\rm C}\]
-        con \({\rm a}_{\rm P}+{\rm b}_{\rm P}+{\rm c}_{\rm P}=1\) e consideriamo i punti:
-        <ul>
-            <li>\[{\rm X}=\frac{{\rm b}_{\rm P}\cdot{\rm B}+{\rm c}_{\rm P}\cdot{\rm C}}{1-{\rm a}_{\rm P}}\]</li>
-            <li>\[{\rm Y}=\frac{{\rm c}_{\rm P}\cdot{\rm C}+{\rm a}_{\rm P}\cdot{\rm A}}{1-{\rm b}_{\rm P}}\]</li>
-            <li>\[{\rm Z}=\frac{{\rm a}_{\rm P}\cdot{\rm A}+{\rm b}_{\rm P}\cdot{\rm B}}{1-{\rm c}_{\rm P}}\]</li>
         </ul>
-        \[\begin{cases}
-        \left|{\rm X}-{\rm B}\right|=\frac{{\rm c}_{\rm P}\cdot{\rm a}}{1-{\rm a}_{\rm P}}\\
-        \left|{\rm X}-{\rm C}\right|=\frac{{\rm b}_{\rm P}\cdot{\rm a}}{1-{\rm a}_{\rm P}}\\
-        \left|{\rm Y}-{\rm C}\right|=\frac{{\rm a}_{\rm P}\cdot{\rm b}}{1-{\rm b}_{\rm P}}\\
-        \left|{\rm Y}-{\rm A}\right|=\frac{{\rm c}_{\rm P}\cdot{\rm b}}{1-{\rm b}_{\rm P}}\\
-        \left|{\rm Z}-{\rm A}\right|=\frac{{\rm b}_{\rm P}\cdot{\rm c}}{1-{\rm c}_{\rm P}}\\
-        \left|{\rm Z}-{\rm B}\right|=\frac{{\rm a}_{\rm P}\cdot{\rm c}}{1-{\rm c}_{\rm P}}
-        \end{cases}\]
-        Da cui segue:
-        \[\left|{\rm X}-{\rm B}\right|\cdot\left|{\rm Y}-{\rm C}\right|\cdot\left|{\rm Z}-{\rm A}\right|=\left|{\rm X}-{\rm C}\right|\cdot\left|{\rm Y}-{\rm A}\right|\cdot\left|{\rm Z}-{\rm B}\right|\]
-    </div>
-    <div class="block shape">
-        Richiedendo che i punti
-        <ul>
-            <li>\[{\rm X}={\rm b}_{\rm X}\cdot{\rm B}+{\rm c}_{\rm X}\cdot{\rm C}\]</li>
-            <li>\[{\rm Y}={\rm c}_{\rm Y}\cdot{\rm C}+{\rm a}_{\rm Y}\cdot{\rm A}\]</li>
-            <li>\[{\rm Z}={\rm a}_{\rm Z}\cdot{\rm A}+{\rm b}_{\rm Z}\cdot{\rm B}\]</li>
-        </ul>
-        siano allineati si ottiene:
-        \[\begin{cases}
-        \frac{{\rm a}_{\rm Y}}{{\rm a}_{\rm Z}}=\frac{{\rm b}_{\rm X}}{{\rm b}_{\rm X}-{\rm b}_{\rm Z}}=\frac{{\rm c}_{\rm X}-{\rm c}_{\rm Y}}{{\rm c}_{\rm X}}\\
-        \frac{{\rm b}_{\rm Z}}{{\rm b}_{\rm X}}=\frac{{\rm c}_{\rm Y}}{{\rm c}_{\rm Y}-{\rm c}_{\rm X}}=\frac{{\rm a}_{\rm Y}-{\rm a}_{\rm Z}}{{\rm a}_{\rm Y}}\\
-        \frac{{\rm c}_{\rm X}}{{\rm c}_{\rm Y}}=\frac{{\rm a}_{\rm Z}}{{\rm a}_{\rm Z}-{\rm a}_{\rm Y}}=\frac{{\rm b}_{\rm Z}-{\rm b}_{\rm X}}{{\rm b}_{\rm Z}}
-        \end{cases}\]
-        Da cui segue:
-        \[\left|{\rm X}-{\rm B}\right|\cdot\left|{\rm Y}-{\rm C}\right|\cdot\left|{\rm Z}-{\rm A}\right|=\left|{\rm X}-{\rm C}\right|\cdot\left|{\rm Y}-{\rm A}\right|\cdot\left|{\rm Z}-{\rm B}\right|\]
-    </div>
-</div>
-
-<div class="slide">
-    <h2>circocentro e circonferenze</h2>
-    <div class="block shape">
-        Consideriamo il circocentro \({\rm O}\) di \({\rm A},{\rm B},{\rm C}\):
-        <ul>
-            <li>Il triangolo \({\rm O},{\rm B},{\rm C}\) ha angoli \(2\cdot\alpha,\frac{\pi}{2}-\alpha,\frac{\pi}{2}-\alpha\)</li>
-            <li>Il triangolo \({\rm A},{\rm O},{\rm C}\) ha angoli \(2\cdot\beta,\frac{\pi}{2}-\gamma,\frac{\pi}{2}-\beta\)</li>
-            <li>Il triangolo \({\rm A},{\rm B},{\rm O}\) ha angoli \(2\cdot\gamma,\frac{\pi}{2}-\gamma,\frac{\pi}{2}-\gamma\)</li>
-        </ul>
-        Questo mostra che:
-        <ul>
-            <li>L'angolo al centro è doppio dell'angolo sulla circonferenza.</li>
-            <li>L'angolo sulla circonferenza dipende solo dalla corda.</li>
-        </ul>
-        Un quadrilatero è circoscrivibile se e solo se vale una delle seguenti:
-        <ul>
-            <li>I triangoli che si formano con due lati opposti e l'intersezione delle diagonali sono simili.</li>
-            <li>I triangoli che si formano con due lati opposti e l'intersezione degli altri due sono simili.</li>
-            <li>I triangoli che si formano con le diagonali e l'intersezione di due lati opposti sono simili.</li>
-        </ul>
-        Inoltre tracciando il diametro del circocentro passante per un vertice si ottiene
-        \[{\cal S}\cdot{\cal R}={\rm a}{\rm b}{\rm c}\]
-        Dove \({\cal S},{\cal R}\) sono l'area di \({\rm A},{\rm B},{\rm C}\) ed il raggio della circonferenza circoscritta.
-    </div>
-</div>
-
-<div class="slide">
-    <h2>incentro ed ortocentro</h2>
-    <div class="block notes">
-        Date due rette incidenti, le loro due bisettrici sono il luogo geometrico dei punti da loro equidistanti:
-        <ul>
-            <li>Queste sono le rette che dividono a metà i due angoli complementari formati sulla loro intersezione.</li>
-            <li>Le bisettrici di un triangolo \({\rm A},{\rm B},{\rm C}\) si incontrano in quattro punti che sono da loro equidistanti.</li>
-            <li>Tre di questi punti sono detti excentri \({\rm X},{\rm Y},{\rm Z}\) e l'altro è l'incentro \({\rm H}\).</li>
-        </ul>
-    </div>
-    <div class="block shape">
-        <ul>
-            <li>L'ortocentro di \({\rm X},{\rm Y},{\rm Z}\) è \({\rm H}\) e gli angoli sono \(\frac{\pi-\alpha}{2},\frac{\pi-\beta}{2},\frac{\pi-\gamma}{2}\).</li>
-            <li>L'ortocentro di \({\rm H},{\rm Y},{\rm Z}\) è \({\rm X}\) e gli angoli sono \(\frac{\pi+\alpha}{2},\frac{\beta}{2},\frac{\gamma}{2}\).</li>
-            <li>L'ortocentro di \({\rm X},{\rm H},{\rm Z}\) è \({\rm Y}\) e gli angoli sono \(\frac{\alpha}{2},\frac{\pi+\beta}{2},\frac{\gamma}{2}\).</li>
-            <li>L'ortocentro di \({\rm X},{\rm Y},{\rm H}\) è \({\rm Z}\) e gli angoli sono \(\frac{\alpha}{2},\frac{\beta}{2},\frac{\pi+\gamma}{2}\).</li>
-        </ul>
-        \[\begin{cases}\left|{\rm C}-{\rm X}\right|\cdot{\rm z}=\left|{\rm B}-{\rm X}\right|\cdot{\rm y}\\\left|{\rm A}-{\rm Y}\right|\cdot{\rm x}=\left|{\rm C}-{\rm Y}\right|\cdot{\rm z}\\\left|{\rm B}-{\rm Z}\right|\cdot{\rm y}=\left|{\rm A}-{\rm Z}\right|\cdot{\rm x}\end{cases}\Longrightarrow\begin{cases}\left|{\rm B}-{\rm Z}\right|\cdot{\rm y}+\left|{\rm C}-{\rm Y}\right|\cdot{\rm z}={\rm x}^2\\\left|{\rm C}-{\rm X}\right|\cdot{\rm z}+\left|{\rm A}-{\rm Z}\right|\cdot{\rm x}={\rm y}^2\\\left|{\rm A}-{\rm Y}\right|\cdot{\rm x}+\left|{\rm B}-{\rm X}\right|\cdot{\rm y}={\rm z}^2\end{cases}\Longrightarrow\begin{cases}\left|{\rm A}-{\rm Y}\right|-\left|{\rm A}-{\rm Z}\right|=\frac{{\rm z}^2-{\rm y}^2}{\rm x}\\\left|{\rm B}-{\rm Z}\right|-\left|{\rm B}-{\rm X}\right|=\frac{{\rm x}^2-{\rm z}^2}{\rm y}\\\left|{\rm C}-{\rm X}\right|-\left|{\rm C}-{\rm Y}\right|=\frac{{\rm y}^2-{\rm x}^2}{\rm z}\end{cases}\]
-        Da cui calcoliamo:
-        \[\begin{cases}\left|{\rm A}-{\rm Y}\right|=\frac{{\rm x}^2+{\rm z}^2-{\rm y}^2}{2\cdot{\rm x}}\\\left|{\rm A}-{\rm Z}\right|=\frac{{\rm x}^2+{\rm y}^2-{\rm z}^2}{2\cdot{\rm x}}\\\left|{\rm B}-{\rm Z}\right|=\frac{{\rm y}^2+{\rm x}^2-{\rm z}^2}{2\cdot{\rm y}}\\\left|{\rm B}-{\rm X}\right|=\frac{{\rm y}^2+{\rm z}^2-{\rm x}^2}{2\cdot{\rm y}}\\\left|{\rm C}-{\rm X}\right|=\frac{{\rm z}^2+{\rm y}^2-{\rm x}^2}{2\cdot{\rm z}}\\\left|{\rm C}-{\rm Y}\right|=\frac{{\rm z}^2+{\rm x}^2-{\rm y}^2}{2\cdot{\rm z}}\end{cases}\]
-        E per similitudine:
-        \[\begin{cases}{\rm a}=\frac{\rm x}{2\cdot{\rm y}\cdot{\rm z}}\left({\rm y}^2+{\rm z}^2-{\rm x}^2\right)\\{\rm b}=\frac{\rm y}{2\cdot{\rm x}\cdot{\rm z}}\left({\rm x}^2+{\rm z}^2-{\rm y}^2\right)\\{\rm c}=\frac{\rm z}{2\cdot{\rm x}\cdot{\rm y}}\left({\rm x}^2+{\rm y}^2-{\rm z}^2\right)\end{cases}\]
-    </div>
-    <div class="block obser">
-        Consideriamo le similitudini:
-        \[\begin{cases}
-        {\rm X}{\rm Z}{\rm C}\simeq{\rm H}{\rm Z}{\rm B}\simeq{\rm A}{\rm Z}{\rm W}_1\simeq{\rm H}{\rm A}{\rm W}_0\\
-        {\rm X}{\rm Y}{\rm B}\simeq{\rm H}{\rm Y}{\rm C}\simeq{\rm A}{\rm Y}{\rm V}_1\simeq{\rm H}{\rm A}{\rm V}_0\\
-        {\rm Y}{\rm X}{\rm A}\simeq{\rm H}{\rm X}{\rm C}\simeq{\rm B}{\rm X}{\rm U}_1\simeq{\rm H}{\rm B}{\rm U}_0\\
-        {\rm Y}{\rm Z}{\rm C}\simeq{\rm H}{\rm Z}{\rm A}\simeq{\rm B}{\rm Z}{\rm W}_1\simeq{\rm H}{\rm B}{\rm W}_0\\
-        {\rm Z}{\rm Y}{\rm B}\simeq{\rm H}{\rm Y}{\rm A}\simeq{\rm C}{\rm Y}{\rm V}_1\simeq{\rm H}{\rm C}{\rm V}_0\\
-        {\rm Z}{\rm X}{\rm A}\simeq{\rm H}{\rm X}{\rm B}\simeq{\rm C}{\rm X}{\rm X}_1\simeq{\rm H}{\rm C}{\rm U}_0
-        \end{cases}\]
-        Queste si possono usare per calcolare tutto ciò che resta in funzione di \({\cal S}\).
     </div>
 </div>
 
 <div class="nav-buttons">
   <button onclick="prevSlide()">Indietro</button>
-  <a href="../../README.md">Torna all'Indice</a>
+  <a href="../../">Torna all'Indice</a>
   <button onclick="nextSlide()">Avanti</button>
 </div>
 
