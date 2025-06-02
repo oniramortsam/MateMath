@@ -9,14 +9,14 @@
 <div class="slide active">
     <h2></h2>
     <ol>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>(NFR)</li>
+        <li>(NFD)</li>
+        <li>(QFR)</li>
     </ol>
 </div>
 
 <div class="slide">
-    <div class="block notes">
+    <div class="block N">
         <h2>razionali</h2>
         Ricordiamo le operazioni tra numeri razioali:
         <ul>
@@ -30,7 +30,7 @@
         \[\frac{\rm a}{\rm b}\pm\frac{\rm c}{\rm d}=\frac{\operatorname{gcd}\left({\rm a},{\rm b}\right)}{\operatorname{lcm}\left({\rm b},{\rm d}\right)}\left(\frac{{\rm a}\cdot\operatorname{lcm}\left({\rm b},{\rm d}\right)}{\operatorname{gcd}\left({\rm a},{\rm c}\right)\cdot{\rm b}}\pm\frac{{\rm c}\cdot\operatorname{lcm}\left({\rm b},{\rm d}\right)}{\operatorname{gcd}\left({\rm a},{\rm c}\right)\cdot{\rm d}}\right)\]
         In questo modo andrà calcolato e fattorizzato solo il secondo fattore.
     </div>
-    <div class="block facts">
+    <div class="block F">
         Ribadiamo le proprietà delle operazioni:
         \[\begin{cases}
         {\rm a}+\left({\rm b}+{\rm c}\right)={\rm a}+{\rm b}+{\rm c}={\rm a}+{\rm c}+{\rm b}\\
@@ -46,11 +46,12 @@
         \left({\rm a}\cdot{\rm b}\right)^{\rm c}={\rm a}^{\rm c}\cdot{\rm b}^{\rm c}\\
         \left({\rm a}/{\rm b}\right)^{\rm c}={\rm a}^{\rm c}/{\rm b}^{\rm c}\\
         {\rm a}^{{\rm b}+{\rm c}}={\rm a}^{\rm b}\cdot{\rm a}^{\rm b}\\
-        {\rm a}^{{\rm b}-{\rm c}}={\rm a}^{\rm b}/{\rm a}^{\rm b}
+        {\rm a}^{{\rm b}-{\rm c}}={\rm a}^{\rm b}/{\rm a}^{\rm b}\\
+        {\rm a}^{{\rm b}\cdot{\rm c}}=\left({\rm a}^{\rm b}\right)^{\rm c}
         \end{cases}\]
-        Ci teniamo l'ultima delle potenze per dopo.
+        Notare che all'ultima manca la versione inversa.
     </div>
-    <div class="block obser">
+    <div class="block R">
         Le leggi di monotonia si scrivono:
         <li>\[{\rm a}+{\rm c}={\rm b}+{\rm c}\Longleftrightarrow{\rm a}\ge{\rm b}\]</li>
         <li>\[\begin{cases}{\rm a}\ge{\rm b}\\{\rm c}\ge0\end{cases}\Longrightarrow{\rm a}\cdot{\rm c}\ge{\rm b}\cdot{\rm c}\]</li>
@@ -62,7 +63,7 @@
 
 <div class="slide">
     <h2>reali</h2>
-    <div class="block notes">
+    <div class="block N">
         Sia data una successione di numeri naturali \({\rm D}_{{\rm n}+1}={\rm D}_{\rm n}\cdot{\rm d}_{\rm n}\) e consideriamo:
         \[{\rm x}_{{\rm n}+1}\in{\rm d}_{\rm n}\qquad{\rm X}_{{\rm n}+1}={\rm X}_{\rm n}\cdot{\rm d}_{\rm n}+{\rm x}_{{\rm n}+1}\]
         Da cui:
@@ -71,7 +72,7 @@
         \[\forall{\rm n}\in{\mathbb N}\quad\frac{{\rm X}_{\rm n}}{{\rm D}_{\rm n}}\lt{\rm x}\lt\frac{{\rm X}_{\rm n}+1}{{\rm D}_{\rm n}}\]
         Se ad esempio \({\rm D}_{\rm n}={\rm n}!\), allora \({\rm x}\) non può essere razionale.
     </div>
-    <div class="block facts">
+    <div class="block F">
         Tutte le proprietà viste per i razionali valgono anche per i reali, ma stavolta possiamo definire:
         \[\forall{\rm a}\gt0\quad\sqrt[{\rm n}]{\rm a}=\sup\left({\rm x}\in{\mathbb Q}\quad0\le{\rm x}^{\rm n}\le{\rm a}\right)\]
         Ed a questo punto posso definire
@@ -79,13 +80,43 @@
         e quindi:
         \[\forall{\rm a}\gt0\quad{\rm a}^{\rm b}=\sup\left({\rm a}^{\rm x}\quad{\rm x}\in{\mathbb Q}\quad{\rm x}\le{\rm b}\right)\]
     </div>
-    <div clas="block shape">
+    <div clas="block D">
         Possiamo anche ricavare da un poliedro
         \[\pi=\sup\left({\rm n}\cdot\sin\left(\frac{\pi}{\rm n}\right)\quad{\rm n}\in{\mathbb N}\right)\]
+        E calcolarlo, ma questo lo vediamo dopo.
     </div>
 </div>
 
 <div class="slide">
+    <div class="block Q">
+        Una Wonka ha lati \({\rm a},{\rm b}\) la posso tagliare di modo che i due pezzi siano simili?
+    </div>
+    <div class="block F">
+        Una equazione parabolica è del tipo:
+        \[{\rm a}\cdot{\rm x}^2-{\rm b}\cdot{\rm x}+{\rm c}=0\]
+        Questa si può risolvere prima dividendo per \({\rm a}\):
+        \[{\rm x}^2-\left(\frac{\rm b}{\rm a}\right)\cdot{\rm x}+\frac{\rm c}{\rm a}=0\]
+        Poi isolando \({\rm x}-{\rm b}/\left(2\cdot{\rm a}\right)\)
+        \[\left({\rm x}-\frac{\rm b}{2\cdot{\rm a}}\right)^2+\left(\frac{\rm c}{\rm a}-\frac{{\rm b}^2}{4\cdot{\rm a}^2}\right)=0\]
+        Se infine:
+        \[{\rm b}^2\ge4\cdot{\rm a}\cdot{\rm c}\]
+        Si ottiene:
+        \[{\rm x}-\frac{\rm b}{2\cdot{\rm a}}=\pm\sqrt{\frac{{\rm b}^2-4\cdot{\rm a}\cdot{\rm c}}{4\cdot{\rm a}^2}}\]
+        Ed infine:
+        \[{\rm x}=\frac{{\rm b}\pm\sqrt{{\rm b}^2-4\cdot{\rm a}\cdot{\rm c}}}{2\cdot{\rm a}}\]
+        Notare che il minimo della funzione polinomiale è proprio:
+        \[{\rm x}=\frac{\rm b}{2\cdot{\rm a}}\Longrightarrow{\rm a}\cdot{\rm x}^2-{\rm b}\cdot{\rm x}+{\rm c}={\rm c}-\frac{{\rm b}^2}{4\cdot{\rm a}}\]
+        E notare che, se si trovano le soluzioni:
+        \[{\rm a}\cdot{\rm x}^2-{\rm b}\cdot{\rm x}+{\rm c}={\rm a}\cdot\left({\rm x}-\frac{{\rm b}+\sqrt{{\rm b}^2-4\cdot{\rm a}\cdot{\rm c}}}{2\cdot{\rm a}}\right)\cdot\left({\rm x}-\frac{{\rm b}-\sqrt{{\rm b}^2-4\cdot{\rm a}\cdot{\rm c}}}{2\cdot{\rm a}}\right)\]
+    </div>
+    <div class="block R">
+        Siccome:
+        \[\cos\left(2\cdot\alpha\right)=2\cdot\cos\left(\alpha\right)^2-1=1-2\cdot\sin\left(\alpha\right)^2\]
+        Pssiamo ricavare:
+        \[\begin{cases}\cos\left(\frac{\alpha}{2}\right)=\pm\sqrt{\frac{1+\cos\left(\alpha\right)}{2}}\\\sin\left(\frac{\alpha}{2}\right)=\pm\sqrt{\frac{1-\cos\left(\alpha\right)}{2}}\end{cases}\]
+        Da cui il calcolo anticipato sopra:
+        \[\pi=\sup\left(2^{\rm n}\cdot\sin\left(\frac{\pi}{2^{\rm n}}\right)\quad{\rm n}\in{\mathbb N}\right)\]
+    </div>
 </div>
 
 <div class="nav-buttons">

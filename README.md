@@ -18,15 +18,16 @@
 
 ## 1° anno: parte C
 - Slide introduttiva
-- <a href="1°/1°C/1°C_1.html">triangoli nel piano</a>
-- <a href="1°/1°C/1°C_2.html">teorema di pitagora</a>
+- <a href="1°/1°C/1°C_1.html">su angoli e vettori</a>
+- <a href="1°/1°C/1°C_2.html">triangoli nel piano</a>
 - <a href="1°/1°C/1°C_3.html">sui triangoli retti</a>
+- <a href="1°/1°C/1°C_4.html">NAME TO BE FOUND</a>
 
 # 2° anno
-- sistemi di equazioni e disequazioni lineari
-- dai razionali ai reali
+
+- <a href=2°/2°A/2°A_1.html>dai razionali ai reali</a>
 - operazioni tra radicali
-- le funzioni paraboliche
+- sistemi di equazioni e disequazioni lineari
 
 ## parte A
 - Slide introduttiva

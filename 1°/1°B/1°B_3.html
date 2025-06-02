@@ -9,15 +9,15 @@
 <div class="slide active">
     <h2>numerazione</h2>
     <ol>
-        <li>unicità della rappresentazione</li>
-        <li>svolgere operazioni in tabella</li>
-        <li>svolgere la divisione euclidea</li>
+        <li>unicità della rappresentazione (NDS)</li>
+        <li>svolgere operazioni in tabella (NDS)</li>
+        <li>svolgere la divisione euclidea (QDC)</li>
     </ol>
 </div>
 
 <div class="slide">
     <h2>unicità della rappresentazione</h2>
-    <div class="block notes">
+    <div class="block N">
         Abbiamo notato che
         <ul>
             <li>\[\left({\rm a}/\!\!/{\rm b}\right)\%{\rm c}=\left({\rm a}\%\left({\rm b}\cdot{\rm c}\right)\right)/\!\!/{\rm b}\]</li>
@@ -30,7 +30,7 @@
         la sua inversa è esattamente:
         \[{\rm a}=\sum_{{\rm n}\in{\rm N}}{\rm a}_{\rm n}\cdot{\rm D}_{\rm n}\]
     </div>
-    <div class="block shape">
+    <div class="block D">
         Dati \({\rm a},{\rm b}\), consideriamo \({\rm N},{\rm M}\) tali che:
         \[\begin{cases}{\rm D}_{\rm N}\le{\rm a}\le{\rm D}_{{\rm N}+1}\\{\rm D}_{\rm M}\le{\rm b}\le{\rm D}_{{\rm M}+1}\end{cases}\]
         In questa forma le operazioni di somma e differenza in tabella si riducono a:
@@ -39,7 +39,7 @@
             <li>\[{\rm a}-{\rm b}=\left(\sum_{{\rm a}_{\rm n}\ge{\rm b}_{\rm n}}\left({\rm a}_{\rm n}-{\rm b}_{\rm n}\right)\cdot{\rm D}_{\rm n}\right)+\left(\sum_{{\rm a}_{\rm n}\le{\rm b}_{\rm n}}{\rm D}_{{\rm n}+1}\right)-\left(\sum_{{\rm a}_{\rm n}\le{\rm b}_{\rm n}}\left({\rm d}_{\rm n}-\left({\rm b}_{\rm n}-{\rm a}_{\rm n}\right)\right)\cdot{\rm D}_{\rm n}\right)\]</li>
         </ul>
     </div>
-    <div class="block sampl">
+    <div class="block S">
         Notare in ultimo che si può passare da una successione ad una sottosuccessione e viceversa osservando che:
         \[\left({\rm a}/\!\!/{\rm D}_{\rm n}\right)\%\left({\rm d}_{{\rm n}+1}\cdot{\rm d}_{\rm n}\right)={\rm a}_{{\rm n}+1}\cdot{\rm D}+{\rm a}_{\rm n}=\left({\rm a}\%{\rm D}_{{\rm n}+2}\right)/\!\!/{\rm D}_{\rm n}\]
         Cioè il grafico commutativo di corrispondenze:
@@ -50,14 +50,14 @@
 
 <div class="slide">
     <h2>svolgere operazioni in tabella</h2>
-    <div class="block notes">
+    <div class="block N">
         Nel seguito si considera solo:
         \[{\rm D}_{\rm n}={\rm D}^{\rm n}\qquad{\rm d}_{\rm n}={\rm D}\]
         Dati \({\rm a},{\rm b}\), consideriamo \({\rm N},{\rm M}\) tali che:
         \[\begin{cases}{\rm D}^{\rm N}\le{\rm a}\le{\rm D}^{{\rm N}+1}\\{\rm D}^{\rm M}\le{\rm b}\le{\rm D}^{{\rm M}+1}\end{cases}\]
         Abbiamo già visto come si svolgono la somma e la differenza in tabella, cosa significa questa cosa con \({\rm D}=10\)?
     </div>
-    <div class="block shape">
+    <div class="block D">
         Per la moltiplicazione usiamo la proprietà distributiva:
         \[{\rm a}\cdot{\rm b}=\sum_{\left({\rm k},{\rm h}\right)\in{\rm N}\times{\rm M}}\left(\left({\rm a}_{\rm k}\cdot{\rm b}_{\rm h}\right)/\!\!/{\rm D}\right)\cdot{\rm D}^{{\rm k}+{\rm h}+1}+\sum_{\left({\rm k},{\rm h}\right)\in{\rm N}\times{\rm M}}\left(\left({\rm a}_{\rm k}\cdot{\rm b}_{\rm h}\right)\%{\rm D}\right)\cdot{\rm D}^{{\rm k}+{\rm h}}\]
         Mentre per la divisione:
@@ -66,27 +66,27 @@
             <li>\[\begin{cases}{\rm N}\gt{\rm M}\\{\rm a}_{\rm N}\lt{\rm b}_{\rm M}\end{cases}\Longrightarrow\begin{cases}{\rm a}/\!\!/{\rm b}=\left(\left({\rm a}_{{\rm N}+1}\cdot{\rm D}+{\rm a}_{\rm N}\right)/\!\!/{\rm b}_{\rm M}\right)\cdot{\rm D}^{{\rm N}-{\rm M}-1}+\left({\rm a}-\left(\left({\rm a}_{{\rm N}+1}\cdot{\rm D}+{\rm a}_{\rm N}\right)/\!\!/{\rm b}_{\rm M}\right)\cdot{\rm D}^{{\rm N}-{\rm M}-1}\cdot{\rm b}\right)/\!\!/{\rm b}\\{\rm a}\%{\rm b}=\left({\rm a}-\left(\left({\rm a}_{{\rm N}+1}\cdot{\rm D}+{\rm a}_{\rm N}\right)/\!\!/{\rm b}_{\rm M}\right)\cdot{\rm D}^{{\rm N}-{\rm M}-1}\cdot{\rm b}\right)\%{\rm b}\end{cases}\]</li>
         </ul>
     </div>
-    <div class="block sampl">
+    <div class="block S">
         Le operazioni in ambito computazionale si implementano proprio così.
     </div>
 </div>
 
 <div class="slide">
     <h2>svolgere la divisione euclidea</h2>
-    <div class="block quest">
+    <div class="block Q">
         Le lancette di un cronometro con \({\rm D}\) tacche si spostano ciascuna di una tacca ogni giro della precedente:
         <ul>
             <li>Dove sarà ogni lancetta dopo esattamente \({\rm a}/{\rm b}\) giri della lancetta grande?</li>
         </ul>
     </div>
-    <div class="block shape">
+    <div class="block D">
         Consideriamo:
         \[\begin{cases}{\rm n}\ge{\rm m}\\{\rm n}-{\rm m}\%{\rm t}=0\end{cases}\Longrightarrow\left({\rm D}^{\rm n}\cdot{\rm a}\right)\%{\rm b}=\left({\rm D}^{\rm m}\cdot{\rm a}\right)\%{\rm b}={\rm k}\]
         Allora possiamo dire:
         \[\begin{cases}\left({\rm D}^{\rm t}\cdot{\rm k}\right)\%{\rm b}={\rm k}\\{\rm H}={\rm k}\cdot\left({\rm D}^{\rm t}-1\right)/\!\!/{\rm b}\end{cases}\]
         I valori di \({\rm m},{\rm t},{\rm H}\) si calcolano attraverso la divisione razionale euclidea in base \({\rm D}\) in tabella.
     </div>
-    <div class="block corol">
+    <div class="block C">
         Dalla relazione:
         \[{\rm D}^{{\rm m}-{\rm n}}\cdot\left(\left(\left({\rm D}^{\rm n}\cdot{\rm a}\right)/\!\!/{\rm b}\right)\cdot{\rm b}+\left({\rm D}^{\rm n}\cdot{\rm a}\right)\%{\rm b}\right)=\left(\left({\rm D}^{\rm m}\cdot{\rm a}\right)/\!\!/{\rm b}\right)\cdot{\rm b}+\left({\rm D}^{\rm m}\cdot{\rm a}\right)\%{\rm b}\]
         Possiamo dedurre:

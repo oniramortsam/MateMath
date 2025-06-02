@@ -1,0 +1,51 @@
+<head>
+  <meta charset="UTF-8">
+  <title>2° anno: parte A2</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
+<div class="slide active">
+    <h2></h2>
+    <ol>
+        <li>(NFR)</li>
+        <li>(NFD)</li>
+        <li>(QFR)</li>
+    </ol>
+</div>
+
+<div class="slide">
+</div>
+
+<div class="slide">
+</div>
+
+<div class="slide">
+</div>
+
+<div class="nav-buttons">
+  <button onclick="prevSlide()">Indietro</button>
+  <a href="../../README.md">Torna all'Indice</a>
+  <button onclick="nextSlide()">Avanti</button>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+</script>

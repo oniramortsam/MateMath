@@ -9,15 +9,15 @@
 <div class="slide active">
     <h2>su gcd, lcm</h2>
     <ol>
-        <li>l'algoritmo di bezout</li>
-        <li>fattorizzazione unica</li>
-        <li>gcd e lcm di naturali</li>
+        <li>l'algoritmo di bezout (NQD)</li>
+        <li>fattorizzazione unica (NFD)</li>
+        <li>gcd e lcm di naturali (???)</li>
     </ol>
 </div>
 
 <div class="slide">
     <h2>l'algoritmo di bezout</h2>
-    <div class="block notes">
+    <div class="block N">
         Dato un predicato \({\cal C}\) decidibile su \({\rm A}\) ed una espressione \({\cal E}\) valutabile su \({\rm A}\) si può rappresentare un insieme come:
         \[\{{\cal E}\left({\rm x}\right)\quad{\rm x}\in{\rm A}\quad{\cal C}\left({\rm x}\right)\}\]
         Di seguito la rappresentazione dell'insieme degli interi divisibili per \({\rm a}\in{\mathbb N}\) per caratteristica e dei suoi multipli per elencazione:
@@ -31,7 +31,7 @@
         </ul>
         Nel seguito mostriamo anche le eguaglianze tra questi insiemi.
     </div>
-    <div class="block quest">
+    <div class="block Q">
         Due Oompaloompa intonano un verso ogni \({\rm a},{\rm b}\) giri di lancetta grande rispettivamente, iniziano sincrinizzati:
         <ul>
             <li>Ogni quanto si sincronizzano?</li>
@@ -44,7 +44,7 @@
             <li>Come li taglio?</li>
         </ul>
     </div>
-    <div class="block shape">
+    <div class="block S">
         Dati due numeri razionali \({\rm a}\gt{\rm b}\) costruiamo una successione decrescente:
         \[\begin{cases}{\rm r}_0={\rm a}\\{\rm r}_1={\rm b}\\\forall{\rm n}\in{\mathbb N}\quad\begin{cases}{\rm q}_{\rm n}\in{\mathbb N}\\0\le{\rm r}_{{\rm n}+2}={\rm r}_{\rm n}-{\rm q}_{\rm n}\cdot{\rm r}_{{\rm n}+1}\lt{\rm r}_{{\rm n}+1}\end{cases}\end{cases}\]
         Sostituendo ogni equazione all'interno della successiva si ottengono:
@@ -67,7 +67,7 @@
 
 <div class="slide">
     <h2>fattorizzazione unica</h2>
-    <div class="block notes">
+    <div class="block N">
         Un numero primo \({\rm p}\) soddisfa la proprietà:
         \[\left({\rm a}\cdot{\rm b}\right)\%{\rm p}=0\Longrightarrow\left({\rm a}\%{\rm p}\right)\cdot\left({\rm b}\%{\rm p}\right)=0\]
         per cui è irriducibile:
@@ -77,10 +77,10 @@
         Da cui:
         \[{\rm x}\cdot{\rm y}\cdot{\rm a}\cdot{\rm b}+\left({\rm u}\cdot{\rm v}\cdot{\rm p}+{\rm u}\cdot{\rm y}\cdot{\rm b}+{\rm x}\cdot{\rm a}\cdot{\rm v}\right)\cdot{\rm p}=1\]
     </div>
-    <div class="block facts">
+    <div class="block F">
         I numeri primi sono infiniti.
     </div>
-    <div class="block shape">
+    <div class="block D">
         Sia:
         \[{\rm n}\%{\rm p}^{{\rm n}_{\rm p}+1}\ne{\rm n}\%{\rm p}^{{\rm n}_{\rm p}}=0\]
         vogliamo dimostrare che:

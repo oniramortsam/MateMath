@@ -95,46 +95,46 @@ a {
 }
 
 /* Varianti per tipo di contenuto */
-.block.quest {
+.block.Q {
   border-color: #e63946;
   border-left: 0.4rem solid #e63946;
   background-color: #e6394633;
 }
 
-.block.notes {
+.block.N {
   border-color: #457b9d;
   border-left: 0.4rem solid #457b9d;
   background-color: #457b9d33;
 }
 
-.block.facts {
-  border-color: #2a9d8f;
-  border-left: 0.4rem solid #2a9d8f;
-  background-color: #2a9d8f33;
-}
-
-.block.shape {
+.block.D {
   border-color: #f4a261;
   border-left: 0.4rem solid #f4a261;
   background-color: #f4a26133;
 }
 
-.block.corol {
+.block.F {
+  border-color: #2a9d8f;
+  border-left: 0.4rem solid #2a9d8f;
+  background-color: #2a9d8f33;
+}
+
+.block.C {
   border-color: #8e44ad;
   border-left: 0.4rem solid #8e44ad;
   background-color: #8e44ad33;
 }
 
-.block.sampl {
-  border-color: #1d3557;
-  border-left: 0.4rem solid #1d3557;
-  background-color: #1d355733;
-}
-
-.block.obser {
+.block.R {
   border-color: #ffb703;
   border-left: 0.4rem solid #ffb703;
   background-color: #ffb70333;
+}
+
+.block.S {
+  border-color: #1d3557;
+  border-left: 0.4rem solid #1d3557;
+  background-color: #1d355733;
 }
 
 /* Titolo del blocco (opzionale) */

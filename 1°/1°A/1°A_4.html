@@ -9,15 +9,15 @@
 <div class="slide active">
     <h2>potenze di numeri interi</h2>
     <ol>
-        <li>potenze e proprietà</li>
-        <li>la serie geometrica</li>
-        <li>le sommatorie serie</li>
+        <li>potenze e proprietà (QNF)</li>
+        <li>la serie geometrica (QFC)</li>
+        <li>le sommatorie serie (NSF)</li>
     </ol>
 </div>
 
 <div class="slide">
     <h2>potenze e proprietà</h2>
-    <div class="block quest">
+    <div class="block Q">
         Il mio alfabeto contiene \({\rm a}\) consonanti e \({\rm b}\) vocali, una sillaba è sempre costruita da una vocale ed una consonante:
         <ul>
             <li>Quante sillabe posso costruire nel mio alfabeto?</li>
@@ -37,7 +37,7 @@
             <li>Quante frasi posso costruire con \({\rm c}\) parole?</li>
         </ul>
     </div>
-    <div class="block notes">
+    <div class="block N">
         La potenza di base \({\rm a}\) ed esponente \({\rm b}\) è definita come il numero di:
         <ul>
             <li>Colorazioni di \({\rm b}\) zone con \({\rm a}\) colori diversi</li>
@@ -46,7 +46,7 @@
         </ul>
         cioè al numero di funzioni \({\rm f}:{\rm B}\rightarrow{\rm A}\) tra due insiemi \({\rm A},{\rm B}\) di cardinalità \({\rm a},{\rm b}\) rispettivamente.
     </div>
-    <div class="block facts">
+    <div class="block F">
         Le proprietà delle potenze sono tre:
         <ul>
             <li>\[\left({\rm a}\cdot{\rm b}\right)^{\rm c}={\rm a}^{\rm c}\cdot{\rm b}^{\rm c}\]</li>
@@ -63,14 +63,14 @@
 
 <div class="slide">
     <h2>la serie geometrica</h2>
-    <div class="block quest">
+    <div class="block Q">
         Achille viaggia \({\rm a}\) volte più veloce della tartaruga e ci metterebbe un mattito di ciglia a raggiungerla se fosse ferma:
         <ul>
             <li>Quanto ci mettere Achille a raggiungere una tartaruga che si ferma dopo un battito di ciglia?</li>
             <li>Quanti battiti di ciglia servono ad Achille per raggiungere la tartaruga?</li>
         </ul>
     </div>
-    <div class="block facts">
+    <div class="block F">
         Posso definire:
         \[{\rm A}_{\rm n}=\sum_{{\rm k}\in{\rm n}}{\rm a}^{\rm k}\]
         Cioè:
@@ -80,7 +80,7 @@
         Da cui:
         \[\sum_{{\rm k}\in{\rm n}}{\rm a}^{\rm k}=\frac{{\rm a}^{{\rm n}+1}-1}{{\rm a}-1}\]
     </div>
-    <div class="block corol">
+    <div class="block C">
         Sapendo la scrittura in base \({\rm D}\) di un numero razionale possiamo calcolare numeratore e denominatore:
         \[\frac{\rm a}{\rm b}=\frac{\rm K}{{\rm D}^{\rm m}}+\sum_{{\rm j}>0}\frac{\rm H}{{\rm D}^{{\rm m}+{\rm t}\cdot{\rm j}}}=\frac{\rm K}{{\rm D}^{\rm m}}+\sum_{{\rm j}>0}\frac{\rm H}{{\rm D}^{{\rm m}+{\rm t}\cdot{\rm j}}}=\frac{\rm K}{{\rm D}^{\rm m}}+\frac{\rm H}{{\rm D}^{\rm m}\cdot\left({\rm D}^{\rm t}-1\right)}\]
         Dove \({\rm H}\lt{\rm D}^{\rm t}\) è il periodo di lunghezza \({\rm t}\) ed \({\rm m}\) è la lunghezza della mantissa non periodica.
@@ -89,14 +89,14 @@
 
 <div class="slide">
     <h2>le sommatorie serie</h2>
-    <div class="block notes">
+    <div class="block N">
         Si definiscono somma e prodotto:
         <ul>
             <li>\[\sum_{{\rm n}\in{\rm N}+1}{\rm a}_{\rm k}=\left(\sum_{{\rm n}\in{\rm n}}{\rm a}_{\rm n}\right)+{\rm a}_{\rm N}\]</li>
             <li>\[\prod_{{\rm n}\in{\rm N}+1}{\rm a}_{\rm k}=\left(\prod_{{\rm n}\in{\rm n}}{\rm a}_{\rm n}\right)\cdot{\rm a}_{\rm N}\]</li>
         </ul>
     </div>
-    <div class="block shape">
+    <div class="block D">
         La proprietà distributiva scritta in modo serio è:
         <ul>
             <li>\[\left(\sum_{{\rm n}\in{\rm N}}{\rm a}_{\rm n}\right)\cdot{\rm b}=\sum_{{\rm n}\in{\rm N}}\left({\rm a}_{\rm n}\cdot{\rm b}\right)\qquad{\rm a}\cdot\left(\sum_{{\rm n}\in{\rm n}}{\rm b}_{\rm n}\right)=\sum_{{\rm n}\in{\rm n}}\left({\rm a}\cdot{\rm b}_{\rm n}\right)\]</li>
@@ -114,7 +114,7 @@
         </ul>
         Questa cosa permette di scrivere le somme ed i prodotti come indicizzate su insiemi.
     </div>
-    <div class="block facts">
+    <div class="block F">
         Si mostra che:
         <ul>
             <li>\[\sum_{{\rm n}\in{\rm A}\cup{\rm B}}{\rm a}_{\rm n}=\left(\sum_{{\rm n}\in{\rm A}}{\rm a}_{\rm n}\right)+\left(\sum_{{\rm n}\in{\rm B}}{\rm a}_{\rm n}\right)-\left(\sum_{{\rm n}\in{\rm A}\cap{\rm B}}{\rm a}_{\rm n}\right)\]</li>
