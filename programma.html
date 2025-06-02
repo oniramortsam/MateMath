@@ -1,0 +1,155 @@
+<head>
+  <meta charset="UTF-8">
+  <title>Slide Show</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
+<div class="slide active">
+    <h1>Slide introduttiva</h1>
+</div>
+
+<div class="slide">
+    <h1>1° anno: parte A</h1>
+    <ol>
+        <li><a href="1°/1°A/1°A_1.html">le operazioni, proprietà</a></li>
+        <li><a href="1°/1°A/1°A_2.html">le differenza e naturali</a></li>
+        <li><a href="1°/1°A/1°A_3.html">divisione e divisibilità</a></li>
+        <li><a href="1°/1°A/1°A_4.html">potenze di numeri interi</a></li>
+    </ol>
+    <h1>1° anno: parte B</h1>
+    <ol>
+        <li><a href="1°/1°B/1°B_1.html">i predicati</a></li>
+        <li><a href="1°/1°B/1°B_2.html">gli insiemi</a></li>
+        <li><a href="1°/1°B/1°B_3.html">numerazione</a></li>
+        <li><a href="1°/1°B/1°B_4.html">su gcd, lcm</a></li>
+    </ol>
+    <h1>1° anno: parte C</h1>
+    <ol>
+        <li><a href="1°/1°C/1°C_1.html">talete e simmetrie</a></li>
+        <li>teorema di pitagora</li>
+        <li>area e volume</li>
+        <li>circonferenze</li>
+    </ol>
+</div>
+
+<div class="slide">
+    <h1>2° anno: parte A</h1>
+    <h1>2° anno: parte B</h1>
+    <h1>2° anno: parte C</h1>
+
+    <ol>
+        <li>sistemi lineari</li>
+        <li>vettori e rette</li>
+        <li>triangoli retti</li>
+        <li>le mappe affini</li>
+    </ol>
+    <ol>
+    </ol>
+    <ol>
+        <li>dai razionali ai reali</li>
+        <li>operazioni tra radicali</li>
+        <li>le funzioni paraboliche</li>
+    </ol>
+</div>
+
+<div class="slide">
+    <h1>CONICHE NEL PIANO</h1>
+    Intro:
+    <ol>
+        <li>circonferenze</li>
+        <li>la parabola</li>
+        <li>l'ellisse</li>
+        <li>l'iperbole</li>
+    </ol>
+    Inter:
+    <ol>
+        <li>relazioni e proprietà</li>
+        <li>funzioni tra insiemi</li>
+        <li>periodi e simmetrie</li>
+        <li>bigettive ed inverse</li>
+    </ol>
+    Outro:
+    <ol>
+        <li>trasformazioni del piano</li>
+        <li>le rotazioni di vettori</li>
+        <li>le funzioni goniometriche</li>
+        <li>esponenziale e logaritmo</li>
+    </ol>
+</div>
+
+<div class="slide">
+    <h1>ANELLI DI POLINOMI</h1>
+    Intro:
+    <ol>
+        <li>polinomi e metodo di ruffini</li>
+        <li>la divisione tra polinomi</li>
+        <li>metodo dei fratti semplici</li>
+        <li>la derivata di un polinomio</li>
+    </ol>
+    Inter:
+    <ol>
+        <li>probabilità e combinatoria</li>
+        <li>permutazioni con ripetizione</li>
+        <li>combinazioni con ripetizione</li>
+        <li>le potenze del multinomio</li>
+    </ol>
+    Outro:
+    <ol>
+        <li>area e determinante</li>
+        <li>geometria nello spazio</li>
+        <li>il prodotto vettoriale</li>
+        <li>poliedri notevoli</li>
+    </ol>
+</div>
+
+<div class="slide">
+    <h1>FUNZIONI E CALCOLO</h1>
+    Intro:
+    <ol>
+        <li>limiti di successioni</li>
+        <li>derivate di funzioni</li>
+        <li>lo studio di funzione</li>
+        <li>integrali indefiniti</li>
+    </ol>
+    Inter:
+    <ol>
+        <li>distribuzioni di probabilità</li>
+        <li>probabilità condizionata e Bayes</li>
+        <li>la legge dei grandi numeri</li>
+        <li>il teorema limite centrale</li>
+    </ol>
+    Outro:
+    <ol>
+        <li>l'interpolazione polinomiale</li>
+        <li>sui metodi di ottimizzazione</li>
+        <li>contrazzioni e metodi iterativi</li>
+        <li>equazioni differenziali ordinarie</li>
+    </ol>
+</div>
+
+<div class="nav-buttons">
+  <button onclick="prevSlide()">Indietro</button>
+  <button onclick="nextSlide()">Avanti</button>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+</script>

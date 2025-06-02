@@ -1,0 +1,128 @@
+<head>
+  <meta charset="UTF-8">
+  <title>1° anno: parte B4</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
+<div class="slide active">
+    <h2>su gcd, lcm</h2>
+    <ol>
+        <li>l'algoritmo di bezout</li>
+        <li>fattorizzazione unica</li>
+        <li>gcd e lcm di naturali</li>
+    </ol>
+</div>
+
+<div class="slide">
+    <h2>l'algoritmo di bezout</h2>
+    <div class="block notes">
+        Dato un predicato \({\cal C}\) decidibile su \({\rm A}\) ed una espressione \({\cal E}\) valutabile su \({\rm A}\) si può rappresentare un insieme come:
+        \[\{{\cal E}\left({\rm x}\right)\quad{\rm x}\in{\rm A}\quad{\cal C}\left({\rm x}\right)\}\]
+        Di seguito la rappresentazione dell'insieme degli interi divisibili per \({\rm a}\in{\mathbb N}\) per caratteristica e dei suoi multipli per elencazione:
+        \[\{{\rm x}\in{\mathbb Z}\quad{\rm x}\%{\rm a}=0\}=\{{\rm x}\cdot{\rm a}\quad{\rm x}\in{\mathbb Z}\}={\rm a}\cdot{\mathbb Z}\]
+        Si nota che:
+        \[{\rm a}\cdot{\mathbb Z}\subseteq{\rm b}\cdot{\mathbb Z}\Longleftrightarrow{\rm a}\in{\rm b}\cdot{\mathbb Z}\Longleftrightarrow{\rm a}\%{\rm b}=0\]
+        Altrimenti:
+        <ul>
+            <li>\[{\rm a}\cdot{\mathbb Z}\cap{\rm b}\cdot{\mathbb Z}\supseteq\operatorname{lcm}\left({\rm a},{\rm b}\right)\cdot{\mathbb Z}\]</li>
+            <li>\[{\rm a}\cdot{\mathbb Z}+{\rm b}\cdot{\mathbb Z}=\{{\rm x}\cdot{\rm a}+{\rm y}\cdot{\rm b}\quad\left({\rm x},{\rm y}\right)\in{\mathbb Z}\}\subseteq\operatorname{gcd}\left({\rm a},{\rm b}\right)\cdot{\mathbb Z}\]</li>
+        </ul>
+        Nel seguito mostriamo anche le eguaglianze tra questi insiemi.
+    </div>
+    <div class="block quest">
+        Due Oompaloompa intonano un verso ogni \({\rm a},{\rm b}\) giri di lancetta grande rispettivamente, iniziano sincrinizzati:
+        <ul>
+            <li>Ogni quanto si sincronizzano?</li>
+            <li>Quanti versi in un periodo?</li>
+        </ul>
+        Ho due Wonka lunghe \({\rm a},{\rm b}\) chicchi di cacao rispettivamente e le voglio spezzare in modo da avere tutti i pezzi uguali:
+        <ul>
+            <li>Quanto sono lunghi?</li>
+            <li>Quanti pezzi ottengo?</li>
+            <li>Come li taglio?</li>
+        </ul>
+    </div>
+    <div class="block shape">
+        Dati due numeri razionali \({\rm a}\gt{\rm b}\) costruiamo una successione decrescente:
+        \[\begin{cases}{\rm r}_0={\rm a}\\{\rm r}_1={\rm b}\\\forall{\rm n}\in{\mathbb N}\quad\begin{cases}{\rm q}_{\rm n}\in{\mathbb N}\\0\le{\rm r}_{{\rm n}+2}={\rm r}_{\rm n}-{\rm q}_{\rm n}\cdot{\rm r}_{{\rm n}+1}\lt{\rm r}_{{\rm n}+1}\end{cases}\end{cases}\]
+        Sostituendo ogni equazione all'interno della successiva si ottengono:
+        \[\begin{cases}\left({\rm x}_{\rm n},{\rm y}_{\rm n}\right)\in{\mathbb Z}\times{\mathbb Z}\\{\rm r}_{\rm n}={\rm x}_{\rm n}\cdot{\rm a}+{\rm y}_{\rm n}\cdot{\rm b}\\{\rm x}_0={\rm y}_1=1\\{\rm x}_1={\rm y}_0=0\\{\rm x}_{{\rm n}+2}={\rm x}_{\rm n}-{\rm q}_{\rm n}\cdot{\rm x}_{{\rm n}+1}\\{\rm y}_{{\rm n}+2}={\rm y}_{\rm n}-{\rm q}_{\rm n}\cdot{\rm y}_{{\rm n}+1}\end{cases}\]
+        Siccome questi devono essere multipli del reciproco del prodotto dei denominatori di \({\rm a},{\rm b}\), si devono annullare:
+        \[{\rm r}_{\rm N}\ne{\rm r}_{{\rm N}+1}=0\]
+        Da cui si ottiene che
+        \[{\rm r}_{\rm n}={\rm r}_{\rm N}\cdot{\rm Q}_{\rm n}\]
+        Con
+        \[{\rm Q}_{{\rm n}+2}={\rm Q}_{\rm n}-{\rm q}_{\rm n}\cdot{\rm Q}_{{\rm n}+1}\]
+        Da cui:
+        \[{\rm Q}_{\rm n}={\rm Q}_0\cdot{\rm x}_{\rm n}+{\rm Q}_1\cdot{\rm y}_{\rm n}\]
+        E si hanno:
+        \[{\rm Q}_0\cdot{\rm b}={\rm Q}_0\cdot{\rm r}\cdot{\rm Q}_1={\rm a}\cdot{\rm Q}_1\]
+        Con:
+        \[\begin{cases}\operatorname{gcd}\left({\rm a},{\rm b}\right)={\rm r}\\\operatorname{lcm}\left({\rm a},{\rm b}\right)={\rm Q}_0\cdot{\rm r}\cdot{\rm Q}_1\end{cases}\]
+        NON SO SE:\[\left|{\rm x}_{{\rm N}+1}\right|={\rm Q}_0\qquad\left|{\rm y}_{{\rm N}+1}\right|={\rm Q}_1\]
+    </div>
+</div>
+
+<div class="slide">
+    <h2>fattorizzazione unica</h2>
+    <div class="block notes">
+        Un numero primo \({\rm p}\) soddisfa la proprietà:
+        \[\left({\rm a}\cdot{\rm b}\right)\%{\rm p}=0\Longrightarrow\left({\rm a}\%{\rm p}\right)\cdot\left({\rm b}\%{\rm p}\right)=0\]
+        per cui è irriducibile:
+        \[{\rm p}={\rm a}\cdot{\rm b}\Longrightarrow\left({\rm a}-{\rm p}\right)\cdot\left({\rm b}-{\rm p}\right)=\left({\rm a}-1\right)\cdot\left({\rm b}-1\right)=0\]
+        Viceversa un numero irriducibile è primo, se infatti \({\rm p}\) non divide \({\rm a},{\rm b}\) allora il massimo comun divisore è:
+        \[{\rm x}\cdot{\rm a}+{\rm u}\cdot{\rm p}={\rm y}\cdot{\rm b}+{\rm v}\cdot{\rm p}=1\]
+        Da cui:
+        \[{\rm x}\cdot{\rm y}\cdot{\rm a}\cdot{\rm b}+\left({\rm u}\cdot{\rm v}\cdot{\rm p}+{\rm u}\cdot{\rm y}\cdot{\rm b}+{\rm x}\cdot{\rm a}\cdot{\rm v}\right)\cdot{\rm p}=1\]
+    </div>
+    <div class="block facts">
+        I numeri primi sono infiniti.
+    </div>
+    <div class="block shape">
+        Sia:
+        \[{\rm n}\%{\rm p}^{{\rm n}_{\rm p}+1}\ne{\rm n}\%{\rm p}^{{\rm n}_{\rm p}}=0\]
+        vogliamo dimostrare che:
+        \[{\rm n}=\prod_{\rm p}{\rm p}^{{\rm n}_{\rm p}}\]
+        per farlo notiamo che dati due numeri coprimi
+        \[{\rm n}\%{\rm a}={\rm n}\%{\rm b}=0\Longleftrightarrow{\rm n}\%\left({\rm a}\cdot{\rm b}\right)\]
+        e che in particolare i fattori del prodotto sono coprimi tra loro.
+    </div>
+</div>
+
+<div class="slide">
+    <h2>gcd e lcm di naturali</h2>
+    <div class="block">
+    </div>
+    <div class="block">
+    </div>
+    <div class="block">
+    </div>
+</div>
+
+<div class="nav-buttons">
+  <button onclick="prevSlide()">Indietro</button>
+  <a href="../../programma.html">Torna all'Indice</a>
+  <button onclick="nextSlide()">Avanti</button>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+</script>

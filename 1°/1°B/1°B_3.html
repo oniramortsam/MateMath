@@ -1,0 +1,126 @@
+<head>
+  <meta charset="UTF-8">
+  <title>1° anno: parte B3</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
+<div class="slide active">
+    <h2>numerazione</h2>
+    <ol>
+        <li>unicità della rappresentazione</li>
+        <li>svolgere operazioni in tabella</li>
+        <li>svolgere la divisione euclidea</li>
+    </ol>
+</div>
+
+<div class="slide">
+    <h2>unicità della rappresentazione</h2>
+    <div class="block notes">
+        Abbiamo notato che
+        <ul>
+            <li>\[\left({\rm a}/\!\!/{\rm b}\right)\%{\rm c}=\left({\rm a}\%\left({\rm b}\cdot{\rm c}\right)\right)/\!\!/{\rm b}\]</li>
+            <li>\[{\rm c}\%{\rm b}=0\Longrightarrow\left({\rm a}/\!\!/{\rm b}\right)\%\left({\rm c}/\!\!/{\rm b}\right)=\left({\rm a}\%{\rm c}\right)/\!\!/{\rm b}\]</li>
+        </ul>
+        Sia data una successione di numeri naturali \({\rm D}_{{\rm n}+1}={\rm D}_{\rm n}\cdot{\rm d}_{\rm n}\) allora possiamo dire che
+        \[\left({\rm a}/\!\!/{\rm D}_{\rm n}\right)\%{\rm d}_{\rm n}={\rm a}_{\rm n}=\left({\rm a}\%{\rm D}_{{\rm n}+1}\right)/\!\!/{\rm D}_{\rm n}\]
+        Questa definisce una corrispondenza canonica:
+        \[{\rm D}_{\rm N}\leftrightarrow\prod_{{\rm n}\in{\rm N}}{\rm d}_{\rm n}\]
+        la sua inversa è esattamente:
+        \[{\rm a}=\sum_{{\rm n}\in{\rm N}}{\rm a}_{\rm n}\cdot{\rm D}_{\rm n}\]
+    </div>
+    <div class="block shape">
+        Dati \({\rm a},{\rm b}\), consideriamo \({\rm N},{\rm M}\) tali che:
+        \[\begin{cases}{\rm D}_{\rm N}\le{\rm a}\le{\rm D}_{{\rm N}+1}\\{\rm D}_{\rm M}\le{\rm b}\le{\rm D}_{{\rm M}+1}\end{cases}\]
+        In questa forma le operazioni di somma e differenza in tabella si riducono a:
+        <ul>
+            <li>\[{\rm a}+{\rm b}=\sum_{{\rm n}\in{\rm N}}\left(\left({\rm a}_{\rm n}+{\rm b}_{\rm n}\right)\%{\rm d}_{\rm n}\right)\cdot{\rm D}_{\rm n}+\sum_{{\rm n}\in{\rm M}}\left(\left({\rm a}_{\rm n}+{\rm b}_{\rm n}\right)/\!\!/{\rm d}_{\rm n}\right)\cdot{\rm D}_{{\rm n}+1}\]</li>
+            <li>\[{\rm a}-{\rm b}=\left(\sum_{{\rm a}_{\rm n}\ge{\rm b}_{\rm n}}\left({\rm a}_{\rm n}-{\rm b}_{\rm n}\right)\cdot{\rm D}_{\rm n}\right)+\left(\sum_{{\rm a}_{\rm n}\le{\rm b}_{\rm n}}{\rm D}_{{\rm n}+1}\right)-\left(\sum_{{\rm a}_{\rm n}\le{\rm b}_{\rm n}}\left({\rm d}_{\rm n}-\left({\rm b}_{\rm n}-{\rm a}_{\rm n}\right)\right)\cdot{\rm D}_{\rm n}\right)\]</li>
+        </ul>
+    </div>
+    <div class="block sampl">
+        Notare in ultimo che si può passare da una successione ad una sottosuccessione e viceversa osservando che:
+        \[\left({\rm a}/\!\!/{\rm D}_{\rm n}\right)\%\left({\rm d}_{{\rm n}+1}\cdot{\rm d}_{\rm n}\right)={\rm a}_{{\rm n}+1}\cdot{\rm D}+{\rm a}_{\rm n}=\left({\rm a}\%{\rm D}_{{\rm n}+2}\right)/\!\!/{\rm D}_{\rm n}\]
+        Cioè il grafico commutativo di corrispondenze:
+        \[{\rm D}_{{\rm N}_{\rm M}}\leftrightarrow\prod_{{\rm m}\in{\rm M}}\frac{{\rm D}_{{\rm N}_{{\rm m}+1}}}{{\rm D}_{{\rm N}_{\rm m}}}\leftrightarrow\prod_{{\rm m}\in{\rm M}}\left(\prod_{{\rm N}_{\rm m}\le{\rm k}\lt{\rm N}_{{\rm m}+1}}{\rm d}_{\rm k}\right)\leftrightarrow\prod_{{\rm k}\in{\rm N}_{\rm M}}{\rm d}_{\rm k}\leftrightarrow{\rm D}_{{\rm N}_{\rm M}}\]
+        Pensare ad esempio a come si passa da binario ad esadecimale (64 bit per pixel).
+    </div>
+</div>
+
+<div class="slide">
+    <h2>svolgere operazioni in tabella</h2>
+    <div class="block notes">
+        Nel seguito si considera solo:
+        \[{\rm D}_{\rm n}={\rm D}^{\rm n}\qquad{\rm d}_{\rm n}={\rm D}\]
+        Dati \({\rm a},{\rm b}\), consideriamo \({\rm N},{\rm M}\) tali che:
+        \[\begin{cases}{\rm D}^{\rm N}\le{\rm a}\le{\rm D}^{{\rm N}+1}\\{\rm D}^{\rm M}\le{\rm b}\le{\rm D}^{{\rm M}+1}\end{cases}\]
+        Abbiamo già visto come si svolgono la somma e la differenza in tabella, cosa significa questa cosa con \({\rm D}=10\)?
+    </div>
+    <div class="block shape">
+        Per la moltiplicazione usiamo la proprietà distributiva:
+        \[{\rm a}\cdot{\rm b}=\sum_{\left({\rm k},{\rm h}\right)\in{\rm N}\times{\rm M}}\left(\left({\rm a}_{\rm k}\cdot{\rm b}_{\rm h}\right)/\!\!/{\rm D}\right)\cdot{\rm D}^{{\rm k}+{\rm h}+1}+\sum_{\left({\rm k},{\rm h}\right)\in{\rm N}\times{\rm M}}\left(\left({\rm a}_{\rm k}\cdot{\rm b}_{\rm h}\right)\%{\rm D}\right)\cdot{\rm D}^{{\rm k}+{\rm h}}\]
+        Mentre per la divisione:
+        <ul>
+            <li>\[\begin{cases}{\rm N}\ge{\rm M}\\{\rm a}_{\rm N}\ge{\rm b}_{\rm M}\end{cases}\Longrightarrow\begin{cases}{\rm a}/\!\!/{\rm b}=\left({\rm a}_{\rm N}/\!\!/{\rm b}_{\rm M}\right)\cdot{\rm D}^{{\rm N}-{\rm M}}+\left({\rm a}-\left({\rm a}_{\rm N}/\!\!/{\rm b}_{\rm M}\right)\cdot{\rm D}^{{\rm N}-{\rm M}}\cdot{\rm b}\right)/\!\!/{\rm b}\\{\rm a}\%{\rm b}=\left({\rm a}-\left({\rm a}_{\rm N}/\!\!/{\rm b}_{\rm M}\right)\cdot{\rm D}^{{\rm N}-{\rm M}}\cdot{\rm b}\right)\%{\rm b}\end{cases}\]</li>
+            <li>\[\begin{cases}{\rm N}\gt{\rm M}\\{\rm a}_{\rm N}\lt{\rm b}_{\rm M}\end{cases}\Longrightarrow\begin{cases}{\rm a}/\!\!/{\rm b}=\left(\left({\rm a}_{{\rm N}+1}\cdot{\rm D}+{\rm a}_{\rm N}\right)/\!\!/{\rm b}_{\rm M}\right)\cdot{\rm D}^{{\rm N}-{\rm M}-1}+\left({\rm a}-\left(\left({\rm a}_{{\rm N}+1}\cdot{\rm D}+{\rm a}_{\rm N}\right)/\!\!/{\rm b}_{\rm M}\right)\cdot{\rm D}^{{\rm N}-{\rm M}-1}\cdot{\rm b}\right)/\!\!/{\rm b}\\{\rm a}\%{\rm b}=\left({\rm a}-\left(\left({\rm a}_{{\rm N}+1}\cdot{\rm D}+{\rm a}_{\rm N}\right)/\!\!/{\rm b}_{\rm M}\right)\cdot{\rm D}^{{\rm N}-{\rm M}-1}\cdot{\rm b}\right)\%{\rm b}\end{cases}\]</li>
+        </ul>
+    </div>
+    <div class="block sampl">
+        Le operazioni in ambito computazionale si implementano proprio così.
+    </div>
+</div>
+
+<div class="slide">
+    <h2>svolgere la divisione euclidea</h2>
+    <div class="block quest">
+        Le lancette di un cronometro con \({\rm D}\) tacche si spostano ciascuna di una tacca ogni giro della precedente:
+        <ul>
+            <li>Dove sarà ogni lancetta dopo esattamente \({\rm a}/{\rm b}\) giri della lancetta grande?</li>
+        </ul>
+    </div>
+    <div class="block shape">
+        Consideriamo:
+        \[\begin{cases}{\rm n}\ge{\rm m}\\{\rm n}-{\rm m}\%{\rm t}=0\end{cases}\Longrightarrow\left({\rm D}^{\rm n}\cdot{\rm a}\right)\%{\rm b}=\left({\rm D}^{\rm m}\cdot{\rm a}\right)\%{\rm b}={\rm k}\]
+        Allora possiamo dire:
+        \[\begin{cases}\left({\rm D}^{\rm t}\cdot{\rm k}\right)\%{\rm b}={\rm k}\\{\rm H}={\rm k}\cdot\left({\rm D}^{\rm t}-1\right)/\!\!/{\rm b}\end{cases}\]
+        I valori di \({\rm m},{\rm t},{\rm H}\) si calcolano attraverso la divisione razionale euclidea in base \({\rm D}\) in tabella.
+    </div>
+    <div class="block corol">
+        Dalla relazione:
+        \[{\rm D}^{{\rm m}-{\rm n}}\cdot\left(\left(\left({\rm D}^{\rm n}\cdot{\rm a}\right)/\!\!/{\rm b}\right)\cdot{\rm b}+\left({\rm D}^{\rm n}\cdot{\rm a}\right)\%{\rm b}\right)=\left(\left({\rm D}^{\rm m}\cdot{\rm a}\right)/\!\!/{\rm b}\right)\cdot{\rm b}+\left({\rm D}^{\rm m}\cdot{\rm a}\right)\%{\rm b}\]
+        Possiamo dedurre:
+        \[\frac{\left({\rm D}^{\rm n}\cdot{\rm a}\right)/\!\!/{\rm b}}{{\rm D}^{\rm n}}+\frac{\rm k}{{\rm D}^{\rm n}\cdot{\rm b}}=\frac{\left({\rm D}^{\rm m}\cdot{\rm a}\right)/\!\!/{\rm b}}{{\rm D}^{\rm m}}+\frac{\rm k}{{\rm D}^{\rm m}\cdot{\rm b}}\]
+        Che si riscrive come:
+        \[\frac{\left({\rm D}^{\rm n}\cdot{\rm a}\right)/\!\!/{\rm b}}{{\rm D}^{\rm n}}=\frac{\left({\rm D}^{\rm m}\cdot{\rm a}\right)/\!\!/{\rm b}}{{\rm D}^{\rm m}}+\frac{{\rm k}\cdot\left({\rm D}^{{\rm n}-{\rm m}}-1\right)}{{\rm D}^{\rm n}\cdot{\rm b}}=\frac{\left({\rm D}^{\rm m}\cdot{\rm a}\right)/\!\!/{\rm b}}{{\rm D}^{\rm m}}+\frac{{\rm H}}{{\rm D}^{\rm n}}\cdot\sum_{{\rm j}\in\frac{{\rm m}-{\rm n}}{\rm t}}{\rm D}^{{\rm t}\cdot{\rm j}}\]
+        Questo permette di approssimare:
+        \[\frac{\rm a}{\rm b}=\frac{\left({\rm D}^{\rm m}\cdot{\rm a}\right)/\!\!/{\rm b}}{{\rm D}^{\rm m}}+\sum_{{\rm j}>0}\frac{\rm H}{{\rm D}^{{\rm m}+{\rm t}\cdot{\rm j}}}\]
+        Il valore di \({\rm H}\lt{\rm D}^{\rm t}\) è detto periodo e \({\rm t}\lt{\rm b}\) è la sua lunghezza.
+    </div>
+</div>
+
+<div class="nav-buttons">
+  <button onclick="prevSlide()">Indietro</button>
+  <a href="../../programma.html">Torna all'Indice</a>
+  <button onclick="nextSlide()">Avanti</button>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+</script>

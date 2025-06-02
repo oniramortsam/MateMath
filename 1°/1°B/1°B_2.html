@@ -1,0 +1,142 @@
+<head>
+  <meta charset="UTF-8">
+  <title>1° anno: parte B2</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
+<div class="slide active">
+    <h2>gli insiemi</h2>
+    <ol>
+        <li>operazioni di insiemi</li>
+        <li>prodotto, equivalenze</li>
+        <li>le funzioni e potenze</li>
+    </ol>
+</div>
+
+<div class="slide">
+    <h2>operazioni di insiemi</h2>
+    <div class="block notes">
+        Si definiscono unione, intersezione, complementare e confronto tra insiemi come:
+        <ul>
+            <li>\[{\rm x}\in{\rm A}\cup{\rm B}\Longleftrightarrow{\rm x}\in{\rm A}\lor{\rm x}\in{\rm B}\]</li>
+            <li>\[{\rm x}\in{\rm A}\cap{\rm B}\Longleftrightarrow{\rm x}\in{\rm A}\land{\rm x}\in{\rm B}\]</li>
+            <li>\[{\rm x}\in{\rm A}\setminus{\rm B}\Longleftrightarrow{\rm x}\in{\rm A}\land{\rm x}\notin{\rm B}\]</li>
+            <li>\[{\rm A}\subseteq{\rm B}\Longleftrightarrow\left[\forall{\rm x}\quad{\rm x}\notin{\rm A}\lor{\rm x}\in{\rm B}\right]\]</li>
+            <li>\[{\rm A}\ne\emptyset\Longleftrightarrow\left[\exists{\rm x}\quad{\rm x}\in{\rm A}\right]\]</li>
+        </ul>
+    </div>
+    <div class="block facts">
+        Valgono le proprietà associative:
+        <ul>
+            <li>\[\left({\rm A}\cup{\rm B}\right)\cup{\rm C}={\rm A}\cap\left({\rm B}\cap{\rm C}\right)\]</li>
+            <li>\[\left({\rm A}\cap{\rm B}\right)\cap{\rm C}={\rm A}\cap\left({\rm B}\cap{\rm C}\right)\]</li>
+            <li>\[\left({\rm A}\setminus{\rm C}\right)\cap{\rm B}=\left({\rm A}\cap{\rm B}\right)\setminus{\rm C}=\left({\rm B}\setminus{\rm C}\right)\cap{\rm A}\]</li>
+            <li>\[\left({\rm A}\setminus{\rm B}\right)\setminus{\rm C}={\rm A}\setminus\left({\rm C}\cup{\rm B}\right)=\left({\rm A}\setminus{\rm C}\right)\setminus{\rm B}\]</li>
+        </ul>
+        Valgono le proprietà distributive:
+        <ul>
+            <li>\[\left({\rm A}\cap{\rm B}\right)\cup{\rm C}=\left({\rm A}\cup{\rm C}\right)\cap\left({\rm B}\cup{\rm C}\right)\]</li>
+            <li>\[\left({\rm A}\cup{\rm B}\right)\cap{\rm C}=\left({\rm A}\cap{\rm C}\right)\cup\left({\rm B}\cap{\rm C}\right)\]</li>
+            <li>\[\left({\rm A}\cup{\rm B}\right)\setminus{\rm C}=\left({\rm A}\setminus{\rm C}\right)\cup\left({\rm B}\setminus{\rm C}\right)\]</li>
+            <li>\[\left({\rm A}\setminus{\rm B}\right)\cup{\rm C}=\left({\rm A}\cup{\rm C}\right)\cap\left({\rm C}\setminus{\rm B}\right)\]</li>
+        </ul>
+        Valgono le proprietà del confronto:
+        <ul>
+            <li>\[{\rm A}\subseteq{\rm B}\Longleftrightarrow{\rm A}\cup{\rm B}={\rm B}\Longleftrightarrow{\rm A}\cap{\rm B}={\rm A}\Longleftrightarrow{\rm A}\setminus{\rm B}=\emptyset\]</li>
+            <li>\[{\rm A}\subseteq{\rm B}\subseteq{\rm A}\Longleftrightarrow{\rm A}={\rm B}\]</li>
+            <li>\[{\rm A}\subseteq{\rm B}\subseteq{\rm C}\Longrightarrow{\rm A}\subseteq{\rm C}\]</li>
+        </ul>
+        Valgono le proprietà di definizione delle operazioni:
+        <ul>
+            <li>\[{\rm A}\cup{\rm B}\subseteq{\rm C}\Longleftrightarrow{\rm A}\subseteq{\rm C}\land{\rm B}\subseteq{\rm C}\]</li>
+            <li>\[{\rm A}\subseteq{\rm B}\cap{\rm C}\Longleftrightarrow{\rm A}\subseteq{\rm B}\land{\rm A}\subseteq{\rm C}\]</li>
+            <li>\[{\rm A}\subseteq{\rm B}\setminus{\rm C}\Longleftrightarrow{\rm A}\subseteq{\rm B}\land{\rm A}\cap{\rm C}=\emptyset\]</li>
+        </ul>
+    </div>
+    <div class="block obser">
+        Tutte queste si possono verificare nel caso degli insiemi finiti e visualizzare con i diagrammi di venn.
+    </div>
+</div>
+
+<div class="slide">
+    <h2>prodotto, equivalenze</h2>
+    <div class="block notes">
+        Il prodotto cartesiano è definito come
+        \[{\rm x}\in{\rm A}\times{\rm B}\Longleftrightarrow\left[\exists{\rm a}\in{\rm A},{\rm b}\in{\rm B}\quad{\rm x}=\left({\rm a},{\rm b}\right)\right]\]
+        Equivalentemente
+        \[{\rm x}\in{\rm A}\times{\rm B}\Longleftrightarrow\left[\exists{\rm a},{\rm b}\quad{\rm x}=\left({\rm a},{\rm b}\right)\land\begin{cases}{\rm a}\in{\rm A}\\{\rm b}\in{\rm B}\end{cases}\right]\]
+        Cioè si verifica prima che \({\rm x}\) sia una coppia, e poi l'appartenenza sia di ascissa che di ordinata:
+        <ul>
+            <li>\[\left[\forall{\rm k}\quad\forall{\rm h}\quad{\cal A}\left({\rm k},{\rm h}\right)\right]\Longleftrightarrow\left[\forall\left({\rm k},{\rm h}\right)\quad{\cal A}\left({\rm k},{\rm h}\right)\right]\]</li>
+            <li>\[\left[\exists{\rm k}\quad\exists{\rm h}\quad{\cal A}\left({\rm k},{\rm h}\right)\right]\Longleftrightarrow\left[\exists\left({\rm k},{\rm h}\right)\quad{\cal A}\left({\rm k},{\rm h}\right)\right]\]</li>
+        </ul>
+    </div>
+    <div class="block facts">
+        Valgono le proprietà distributive:
+        <ul>
+            <li>\[\left({\rm A}\cup{\rm B}\right)\times{\rm C}=\left({\rm A}\times{\rm C}\right)\cup\left({\rm B}\times{\rm C}\right)\]</li>
+            <li>\[\left({\rm A}\cap{\rm B}\right)\times{\rm C}=\left({\rm A}\times{\rm C}\right)\cap\left({\rm B}\times{\rm C}\right)\]</li>
+            <li>\[\left({\rm A}\setminus{\rm B}\right)\times{\rm C}=\left({\rm A}\times{\rm C}\right)\setminus\left({\rm B}\times{\rm C}\right)\]</li>
+            <li>\[{\rm A}\times{\rm B}\subseteq{\rm C}\times{\rm D}\Longleftrightarrow{\rm A}\subseteq{\rm C}\land{\rm B}\subseteq{\rm D}\]</li>
+        </ul>
+    </div>
+    <div class="block shape">
+        Vale la proprietà associativa:
+        \[\left|\left({\rm A}\times{\rm B}\right)\times{\rm C}\right|=\left|{\rm A}\times\left({\rm B}\times{\rm C}\right)\right|\]</li>
+        Che si mostra facendo corrispondere in modo biunivoco:
+        \[\left(\left({\rm a},{\rm b}\right),{\rm c}\right)\leftrightarrow\left({\rm a},\left({\rm b},{\rm c}\right)\right)\]
+    </div>
+</div>
+
+<div class="slide">
+    <h2>le funzioni e potenze</h2>
+    <div class="block notes">
+        Diciamo \({\rm A}^{\rm B}\) l'insieme delle funzioni \({\rm f}:{\rm B}\rightarrow{\rm A}\).
+    </div>
+    <div class="block sampl">
+        Mostriamo le corrispondenze canoniche:
+        <ul>
+            <li>\[\left|\left({\rm A}\times{\rm B}\right)^{\rm C}\right|=\left|{\rm A}^{\rm C}\times{\rm B}^{\rm C}\right|\]</li>
+            <li>\[{\rm B}\cap{\rm C}=\emptyset\Longrightarrow\left|{\rm A}^{\left({\rm B}\cup{\rm C}\right)}\right|=\left|{\rm A}^{\rm B}\times{\rm A}^{\rm C}\right|\]</li>
+            <li>\[\left|{\rm A}^{\left({\rm B}\times{\rm C}\right)}\right|=\left|\left({\rm A}^{\rm B}\right)^{\rm C}\right|\]</li>
+        </ul>
+        Facciamo corrispondere \({\rm f}\leftrightarrow{\rm g}\) nei vari casi:
+        <ul>
+            <li>\[{\rm g}=\left({\rm g}_0,{\rm g}_1\right)\land\left[\forall{\rm c}\in{\rm C}\quad{\rm f}\left({\rm c}\right)=\left({\rm g}_0\left({\rm c}\right),{\rm g}_1\left({\rm c}\right)\right)\right]\]</li>
+            <li>\[{\rm g}=\left({\rm g}_0,{\rm g}_1\right)\land\left[\forall{\rm a}\in{\rm A}\quad{\rm f}\left({\rm a}\right)={\rm g}_0\left({\rm a}\right)\right]\land\left[\forall{\rm b}\in{\rm B}\quad{\rm f}\left({\rm b}\right)={\rm g}_1\left({\rm b}\right)\right]\]</li>
+            <li>\[\forall\left({\rm b},{\rm c}\right)\in{\rm B}\times{\rm C}\quad{\rm f}\left({\rm b},{\rm c}\right)={\rm g}\left({\rm c}\right)\left({\rm b}\right)\]</li>
+        </ul>
+        Questa è la vera dimostrazione delle proprietà delle potenze.
+    </div>
+    <div class="block obser">
+        Le corrispondenze canoniche sono a loro volta particolari funzioni che si dicono invertibili, lo vediamo dopo.
+    </div>
+</div>
+
+<div class="nav-buttons">
+  <button onclick="prevSlide()">Indietro</button>
+  <a href="../../programma.html">Torna all'Indice</a>
+  <button onclick="nextSlide()">Avanti</button>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+</script>

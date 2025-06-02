@@ -1,0 +1,235 @@
+<head>
+  <meta charset="UTF-8">
+  <title>1° anno: parte C1</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
+<div class="slide active">
+    <h2>geometria</h2>
+    </ol>
+        <li>pitagora</li>
+        <li>analitica</li>
+        <li>proiezioni</li>
+    <ol>
+    </ol>
+        <li>goniometria</li>
+        <li>similitudine</li>
+    </ol>
+</div>
+
+<div class="slide">
+    <h2>il teorema di pitagora</h2>
+    <div class="block quest">
+        Dati due punti \({\rm A},{\rm B}\), come ne calcolo la distanza \(\left|{\rm A}-{\rm B}\right|\)?
+    </div>
+    <div class="block shape">
+        La dimostrazione del teorema di pitagora si articola come segue:
+        <ul>
+            <li>Costruiamo un quadrato di vertici \(\left({\rm a},{\rm b}\right),\left(-{\rm b},{\rm a}\right),\left(-{\rm a},-{\rm b}\right),\left({\rm b},-{\rm a}\right)\)</li>
+            <li>Consideriamo i rettangoli con i lati paralleli agli assi cartesiani ed aventi i lati del quadrato come diagonali. Ciascuno ha lati lunghi \({\rm a}\pm{\rm b}\)</li>
+            <li>Consideriamo i due quadrati con lati paralleli agli assi cartesiani, questi hanno area \(4\cdot{\rm a}^2,4\cdot{\rm b}^2\)</li>
+        </ul>
+        l'area del quadrato disegnato all'inizio è dunque:
+        \[2\cdot\left({\rm a}^2+{\rm b}^2\right)=\left({\rm a}-{\rm b}\right)^2+\left({\rm a}+{\rm b}\right)^2\]
+        Da cui si evince che per un triangolo rettangolo la somma dei quadrati dei cateti è pari al quadrato dell'ipotenusa:
+        \[\cos\left(\theta\right)^2+\sin\left(\theta\right)^2=1\]
+    </div>
+    <div class="block corol">
+        La distanza tra due punti si calcola come:
+        \[\left|{\rm A}-{\rm B}\right|=\sqrt{\left({\rm x}_{\rm A}-{\rm x}_{\rm B}\right)^2+\left({\rm y}_{\rm A}-{\rm y}_{\rm B}\right)^2}\]
+    </div>
+</div>
+
+<div class="slide">
+    <h2>vettori, rotazioni e rette</h2>
+    <div class="block shape">
+        Dati due punti \({\rm A},{\rm B}\) nel piano cartesiano, la retta passante per questi punti si rappresenta come:
+        \[\{{\rm B}+{\rm t}\cdot\left({\rm A}-{\rm B}\right)\quad{\rm t}\in{\mathbb R}\}\]
+        Che corrisponde alla relazione tra \({\rm x},{\rm y}\):
+        \[\exists{\rm t}\in{\mathbb R}\qquad\begin{cases}{\rm x}={\rm x}_{\rm B}+{\rm t}\cdot\left({\rm x}_{\rm A}-{\rm x}_{\rm B}\right)={\rm t}\cdot{\rm x}_{\rm A}+\left(1-{\rm t}\right)\cdot{\rm x}_{\rm B}\\{\rm y}={\rm y}_{\rm B}+{\rm t}\cdot\left({\rm y}_{\rm B}-{\rm y}_{\rm A}\right)={\rm t}\cdot{\rm y}_{\rm A}+\left(1-{\rm t}\right)\cdot{\rm y}_{\rm B}\end{cases}\]
+        <ul>
+            <li>In forma cartesiana tale relazione si riduce all'equazione lineare:\[\left({\rm x}-{\rm x}_{\rm B}\right)\cdot\left({\rm y}_{\rm B}-{\rm y}_{\rm A}\right)=\left({\rm y}-{\rm y}_{\rm B}\right)\cdot\left({\rm x}_{\rm B}-{\rm x}_{\rm A}\right)\]</li>
+            <li>Esplicitando \({\rm x}\):\[{\rm y}={\rm y}_{\rm B}+\frac{{\rm y}_{\rm B}-{\rm y}_{\rm A}}{{\rm x}_{\rm B}-{\rm x}_{\rm A}}\left({\rm x}-{\rm x}_{\rm B}\right)\]</li>
+            <li>Esplicitando \({\rm y}\):\[{\rm x}={\rm x}_{\rm B}+\frac{{\rm x}_{\rm B}-{\rm x}_{\rm A}}{{\rm y}_{\rm B}-{\rm y}_{\rm A}}\left({\rm y}-{\rm y}_{\rm B}\right)\]</li>
+        </ul>
+    </div>
+    <div class="block facts">
+        Il luogo geometrico dei punti \({\rm P}\) tali che \({\rm P}-{\rm A}\) è ortogonale ad un vettore \({\rm v}\) è la retta:
+        \[\left({\rm P}-{\rm A}\right)\cdot{\rm v}=\left({\rm x}_{\rm P}-{\rm x}_{\rm A}\right)\cdot{\rm x}_{\rm v}+\left({\rm y}_{\rm P}-{\rm y}_{\rm A}\right)\cdot{\rm y}_{\rm v}=0\]
+        Questa è parallela al vettore \({\rm u}\) che si ottiene ruotando \({\rm v}\) di \(\pi/2\) in senso orario.
+    </div>
+    <div class="block notes">
+        Tale definizione identifica il prodotto vettoriale di due vettori come:
+        <ul>
+            <li>Con direzione perpendicolare ad entrambi.</li>
+            <li>Con verso dato dalla regola della mano destra.</li>
+            <li>Con modulo l'area del parallelogramma da loro identificato.</li>
+        </ul>
+        Dati due vettori \({\rm u},{\rm v}\) nel piano, il loro prodotto vettoriale è dunque:
+        \[{\rm u}\times{\rm v}=\left|{\rm u}\right|\cdot\left|{\rm v}\right|\cdot\sin\left(\theta\right)\cdot{\rm k}\]
+        Dove:
+        <ul>
+            <li>\(\theta\) è l'angolo che ruota \({\rm u}\) in \({\rm v}\) in senso antiorario.</li>
+            <li>\({\rm k}\) il versore uscente dal piano cartesiano.</li>
+        </ul>
+        Il prodotto vettoriale con il versore \({\rm k}\) uscente dal piano cartesiano è invece:
+        \[\begin{cases}\left({\rm x}_{\rm u},{\rm y}_{\rm u}\right)={\rm u}={\rm v}\times{\rm k}=\left({\rm y}_{\rm v},-{\rm x}_{\rm v}\right)\\\left({\rm x}_{\rm v},{\rm y}_{\rm v}\right)={\rm v}={\rm k}\times{\rm u}=\left(-{\rm y}_{\rm v},{\rm x}_{\rm v}\right)\end{cases}\]
+        dove \({\rm u}\) si ottiene ruotando \({\rm v}\) di \(\pi/2\) in senso orario.
+    </div>
+</div>
+
+<div class="slide">
+    <h2>le proiezioni su rette</h2>
+    <div class="block facts">
+        La distanza di un punto \({\rm A}\) dalla retta per \({\rm B},{\rm C}\) è data trovando il più piccolo valore della distanza
+        \[\left({\rm x}_{\rm B}-{\rm x}_{\rm A}+{\rm t}\cdot\left({\rm x}_{\rm C}-{\rm x}_{\rm B}\right)\right)^2+\left({\rm y}_{\rm B}-{\rm y}_{\rm A}+{\rm t}\cdot\left({\rm y}_{\rm C}-{\rm y}_{\rm B}\right)\right)^2\]
+        Che si trova ponendo
+        \[{\rm t}=-\frac{\left({\rm x}_{\rm B}-{\rm x}_{\rm A}\right)\cdot\left({\rm x}_{\rm C}-{\rm x}_{\rm B}\right)+\left({\rm y}_{\rm B}-{\rm y}_{\rm A}\right)\cdot\left({\rm y}_{\rm C}-{\rm y}_{\rm B}\right)}{\left({\rm x}_{\rm C}-{\rm x}_{\rm B}\right)^2+\left({\rm y}_{\rm C}-{\rm y}_{\rm B}\right)^2}=\frac{\left({\rm A}-{\rm B}\right)\cdot\left({\rm C}-{\rm B}\right)}{\left|{\rm C}-{\rm B}\right|^2}\]
+    </div>
+    <div class="block corol">
+        Otteniamo dunque la scomposizione:
+        \[{\rm U}=\left({\rm U}\cdot{\rm v}\right)\cdot{\rm v}+\left({\rm U}\cdot\left({\rm k}\times{\rm v}\right)\right)\cdot\left({\rm k}\times{\rm v}\right)=\left|{\rm A}-{\rm B}\right|\cdot\left(\cos\left(\beta\right)\cdot{\rm v}+\sin\left(\beta\right)\cdot\left({\rm k}\times{\rm v}\right)\right)\]
+        Dove:
+        <ul>
+            <li>\[{\rm U}={\rm A}-{\rm B}=\left|{\rm A}-{\rm B}\right|\cdot{\rm u}\]</li>
+            <li>\[{\rm V}={\rm C}-{\rm B}=\left|{\rm C}-{\rm B}\right|\cdot{\rm v}\]</li>
+            <li>\({\rm k}\) è il versore uscente dal piano cartesiano.</li>
+            <li>\(\beta\) è l'angolo che ruota \({\rm v}\) in \({\rm u}\) in senso antiorario.</li>
+        </ul>
+        La distanza di \({\rm A}\) dalla retta per \({\rm B},{\rm C}\) si calcola dunque come il valore assoluto di:
+        \[\left|{\rm u}\right|\cdot\sin\left(\beta\right)={\rm u}\cdot\left({\rm k}\times{\rm v}\right)=\frac{\left({\rm y}_{\rm A}-{\rm y}_{\rm B}\right)\cdot\left({\rm x}_{\rm C}-{\rm x}_{\rm B}\right)-\left({\rm x}_{\rm A}-{\rm x}_{\rm B}\right)\cdot\left({\rm y}_{\rm C}-{\rm y}_{\rm B}\right)}{\left|{\rm C}-{\rm B}\right|^2}={\rm k}\cdot\left({\rm v}\times{\rm u}\right)\]
+        L'area identificata dal triangolo \({\rm A},{\rm B},{\rm C}\) si può quindi calcolare come:
+        \[{\rm x}_{\rm U}\cdot{\rm y}_{\rm V}-{\rm y}_{\rm U}\cdot{\rm x}_{\rm V}=\left|{\rm A}-{\rm B}\right|\cdot\left|{\rm C}-{\rm B}\right|\cdot\sin\left(\beta\right)\]
+    </div>
+</div>
+
+<div class="slide">
+    <h2>funzioni goniometriche</h2>
+    <div class="block quest">
+        Consideriamo un vettore \({\rm v}\)
+        <ul>
+            <li>Come posso scrivere la rotazione di \({\rm v}\) di angolo \(\alpha\)?</li>
+            <li>Come posso scrivere la rotazione di \({\rm v}\) di angolo \(\beta\)?</li>
+            <li>Come posso scrivere la rotazione di \({\rm v}\) di angolo \(\alpha+\beta\)?</li>
+        </ul>
+    </div>
+    <div class="block notes">
+        Dati tre punti sul piano \({\rm A},{\rm B},{\rm C}\), se \(\beta=\pi/2\), chiamiamo:
+        <ul>
+            <li>\[\sin\left(\alpha\right)=\cos\left(\gamma\right)=\frac{\left|{\rm C}-{\rm B}\right|}{\left|{\rm C}-{\rm A}\right|}\]</li>
+            <li>\[\cos\left(\alpha\right)=\sin\left(\alpha\right)=\frac{\left|{\rm B}-{\rm A}\right|}{\left|{\rm C}-{\rm A}\right|}\]</li>
+        </ul>
+    </div>
+    <div class="block facts">
+        La rotazione di un angolo \(\theta\) fa corrispondere ad un vettore \({\rm v}\) il vettore:
+        \[{\rm x}_{\rm v}\cos\left(\theta\right)-{\rm y}_{\rm v}\sin\left(\theta\right),{\rm x}_{\rm v}\sin\left(\theta\right)+{\rm y}_{\rm v}\cos\left(\theta\right)\]
+        Componendo le rotazioni di angoli \(\alpha,\beta\) rispettivamente si hanno le seguenti:
+        <ul>
+            <li>\[\cos\left(\alpha+\beta\right)=\cos\left(\alpha\right)\cdot\cos\left(\beta\right)-\sin\left(\alpha\right)\cdot\sin\left(\beta\right)\]</li>
+            <li>\[\sin\left(\alpha+\beta\right)=\cos\left(\alpha\right)\cdot\sin\left(\beta\right)+\sin\left(\alpha\right)\cdot\cos\left(\beta\right)\]</li>
+        </ul>
+        Seguono le formule:
+        <ul>
+            <li>\[\cos\left(\alpha\right)\cdot\cos\left(\beta\right)=\frac{\cos\left(\alpha-\beta\right)+\cos\left(\alpha+\beta\right)}{2}\]</li>
+            <li>\[\cos\left(\alpha\right)\cdot\sin\left(\beta\right)=\frac{\sin\left(\alpha+\beta\right)-\sin\left(\alpha-\beta\right)}{2}\]</li>
+            <li>\[\sin\left(\alpha\right)\cdot\cos\left(\beta\right)=\frac{\sin\left(\alpha+\beta\right)+\sin\left(\alpha-\beta\right)}{2}\]</li>
+            <li>\[\sin\left(\alpha\right)\cdot\sin\left(\beta\right)=\frac{\cos\left(\alpha-\beta\right)-\cos\left(\alpha+\beta\right)}{2}\]</li>
+        </ul>
+        Seguono le formule:
+        <ul>            
+            <li>\[\cos\left(\beta\right)+\cos\left(\alpha\right)=2\cdot\cos\left(\frac{\alpha+\beta}{2}\right)\cdot\cos\left(\frac{\alpha-\beta}{2}\right)\]</li>
+            <li>\[\sin\left(\alpha\right)-\sin\left(\beta\right)=2\cdot\cos\left(\frac{\alpha+\beta}{2}\right)\cdot\sin\left(\frac{\alpha-\beta}{2}\right)\]</li>
+            <li>\[\sin\left(\alpha\right)+\sin\left(\beta\right)=2\cdot\sin\left(\frac{\alpha+\beta}{2}\right)\cdot\cos\left(\frac{\alpha-\beta}{2}\right)\]</li>
+            <li>\[\cos\left(\beta\right)-\cos\left(\alpha\right)=2\cdot\sin\left(\frac{\alpha+\beta}{2}\right)\cdot\sin\left(\frac{\alpha-\beta}{2}\right)\]</li>
+        </ul>
+    </div>
+</div>
+
+<div class="slide">
+    <h2>relazione tra angoli e lati</h2>
+    <div class="block quest">
+        Dati tre punti sul piano \({\rm A},{\rm B},{\rm C}\) questi identificano un triangolo:
+        <ul>
+            <li>Chiamiamo \(\alpha\) l'angolo che ruota \({\rm B}-{\rm A}\) in \({\rm C}-{\rm A}\).</li>
+            <li>Chiamiamo \(\beta\) l'angolo che ruota \({\rm C}-{\rm B}\) in \({\rm A}-{\rm B}\).</li>
+            <li>Chiamiamo \(\gamma\) l'angolo che ruota \({\rm A}-{\rm C}\) in \({\rm B}-{\rm C}\).</li>
+        </ul>
+        Denotiamo inoltre:
+        <ul>
+            <li>\[{\rm a}=\left|{\rm C}-{\rm B}\right|\]</li>
+            <li>\[{\rm b}=\left|{\rm A}-{\rm C}\right|\]</li>
+            <li>\[{\rm c}=\left|{\rm C}-{\rm B}\right|\]</li>
+        </ul>
+        Come possiamo calcolare \(\frac{\rm a}{\rm b},\frac{\rm c}{\rm a},\frac{\rm b}{\rm c}\) conoscendo \(\alpha,\beta,\gamma\)?
+        Come possiamo calcolare \(\alpha,\beta,\gamma\) conoscendo \(\frac{\rm a}{\rm b},\frac{\rm c}{\rm a},\frac{\rm b}{\rm c}\)?
+    </div>
+    <div class="block facts">
+        Diciamo:
+        <ul>
+            <li>\[{\rm a}=\left|{\rm C}-{\rm B}\right|=\cos\left(\beta\right)\cdot{\rm c}+\cos\left(\gamma\right)\cdot{\rm b}\]</li>
+            <li>\[{\rm b}=\left|{\rm A}-{\rm C}\right|=\cos\left(\gamma\right)\cdot{\rm a}+\cos\left(\alpha\right)\cdot{\rm c}\]</li>
+            <li>\[{\rm c}=\left|{\rm C}-{\rm B}\right|=\cos\left(\alpha\right)\cdot{\rm b}+\cos\left(\beta\right)\cdot{\rm a}\]</li>
+        </ul>
+        Da cui si ricava:
+        <ul>
+            <li>\[{\rm b}^2-{\rm a}^2=\cos\left(\alpha\right)\cdot{\rm c}\cdot{\rm b}-\cos\left(\beta\right)\cdot{\rm c}\cdot{\rm a}=\cos\left(\alpha\right)^2\cdot{\rm b}^2-\cos\left(\beta\right)^2\cdot{\rm a}^2\]</li>
+            <li>\[{\rm c}^2-{\rm b}^2=\cos\left(\beta\right)\cdot{\rm a}\cdot{\rm c}-\cos\left(\gamma\right)\cdot{\rm a}\cdot{\rm b}=\cos\left(\beta\right)^2\cdot{\rm c}^2-\cos\left(\gamma\right)^2\cdot{\rm b}^2\]</li>
+            <li>\[{\rm a}^2-{\rm c}^2=\cos\left(\gamma\right)\cdot{\rm b}\cdot{\rm a}-\cos\left(\alpha\right)\cdot{\rm b}\cdot{\rm c}=\cos\left(\gamma\right)^2\cdot{\rm a}^2-\cos\left(\alpha\right)^2\cdot{\rm c}^2\]</li>
+        </ul>
+        Cioè:
+        \[\frac{{\rm a}^2}{1-\cos\left(\alpha\right)^2}=\frac{{\rm b}^2}{1-\cos\left(\beta\right)^2}=\frac{{\rm c}^2}{1-\cos\left(\gamma\right)^2}\]
+        Si nota invece che l'area del triangolo si può calcolare come:
+        \[\sin\left(\alpha\right)\cdot{\rm b}\cdot{\rm c}={\rm a}\cdot\sin\left(\beta\right)\cdot{\rm c}={\rm a}\cdot{\rm b}\cdot\sin\left(\gamma\right)\]
+        Da cui si ricava:
+        \[\frac{\rm a}{\sin\left(\alpha\right)}=\frac{\rm b}{\sin\left(\beta\right)}=\frac{\rm c}{\sin\left(\gamma\right)}\]
+        Questa formula è infatti equivalente alla precedente.
+    </div>
+    <div class="block corol">
+        La relazione tra gli angoli interni di un triangolo si legge dunque:
+        <ul>
+            <li>\[{\rm a}=\cos\left(\beta\right)\cdot{\rm c}+\cos\left(\gamma\right)\cdot{\rm b}\]</li>
+            <li>\[{\rm b}=\cos\left(\gamma\right)\cdot{\rm a}+\cos\left(\alpha\right)\cdot{\rm c}\]</li>
+            <li>\[{\rm c}=\cos\left(\alpha\right)\cdot{\rm b}+\cos\left(\beta\right)\cdot{\rm a}\]</li>
+        </ul>
+        Da cui si ricava:
+        <ul>
+            <li>\[{\rm b}^2-\cos\left(\gamma\right)\cdot{\rm a}\cdot{\rm b}={\rm c}^2-\cos\left(\beta\right)\cdot{\rm a}\cdot{\rm c}\]</li>
+            <li>\[{\rm c}^2-\cos\left(\alpha\right)\cdot{\rm b}\cdot{\rm c}={\rm a}^2-\cos\left(\gamma\right)\cdot{\rm b}\cdot{\rm a}\]</li>
+            <li>\[{\rm a}^2-\cos\left(\beta\right)\cdot{\rm c}\cdot{\rm a}={\rm b}^2-\cos\left(\alpha\right)\cdot{\rm c}\cdot{\rm b}\]</li>
+        </ul>
+        E si può calcolare
+        <ul>
+            <li>\[\cos\left(\alpha\right)=\frac{{\rm b}^2+{\rm c}^2-{\rm a}^2}{2\cdot{\rm b}\cdot{\rm c}}\]</li>
+            <li>\[\cos\left(\beta\right)=\frac{{\rm c}^2+{\rm a}^2-{\rm b}^2}{2\cdot{\rm c}\cdot{\rm a}}\]</li>
+            <li>\[\cos\left(\gamma\right)=\frac{{\rm a}^2+{\rm b}^2-{\rm c}^2}{2\cdot{\rm a}\cdot{\rm b}}\]</li>
+        </ul>
+    </div>
+</div>
+
+<div class="nav-buttons">
+  <button onclick="prevSlide()">Indietro</button>
+  <a href="../../programma.html">Torna all'Indice</a>
+  <button onclick="nextSlide()">Avanti</button>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+</script>

@@ -1,0 +1,147 @@
+/* Impostazioni base */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Verdana', sans-serif;
+  background: #111;
+  color: #fff;
+}
+
+/* Contenitore delle slide */
+.slide {
+  overflow-y: auto;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 4rem;
+  box-sizing: border-box;
+  background-color: #222;
+  transition: opacity 0.5s ease;
+}
+
+/* Slide attiva */
+.slide.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Titolo slide */
+.slide h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.slide h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #ffcb77; /* un giallo tenue leggibile su sfondo scuro */
+  padding-left: 1rem;
+  line-height: 1.4;
+}
+
+/* Contenuto slide */
+.slide p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Navigazione (opzionale) */
+.nav-buttons {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.nav-buttons button {
+  background-color: #444;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0.3rem;
+}
+
+.nav-buttons button:hover {
+  background-color: #666;
+}
+
+a {
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0.3rem;
+}
+
+.block {
+  overflow-x: auto;
+  border-left: 0.4rem solid #2a2a2a;
+  background-color: #2a2a2a;
+  color: #fff;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  font-size: 1.6rem;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.4);
+}
+
+/* Varianti per tipo di contenuto */
+.block.quest {
+  border-color: #e63946;
+  border-left: 0.4rem solid #e63946;
+  background-color: #e6394633;
+}
+
+.block.notes {
+  border-color: #457b9d;
+  border-left: 0.4rem solid #457b9d;
+  background-color: #457b9d33;
+}
+
+.block.facts {
+  border-color: #2a9d8f;
+  border-left: 0.4rem solid #2a9d8f;
+  background-color: #2a9d8f33;
+}
+
+.block.shape {
+  border-color: #f4a261;
+  border-left: 0.4rem solid #f4a261;
+  background-color: #f4a26133;
+}
+
+.block.corol {
+  border-color: #8e44ad;
+  border-left: 0.4rem solid #8e44ad;
+  background-color: #8e44ad33;
+}
+
+.block.sampl {
+  border-color: #1d3557;
+  border-left: 0.4rem solid #1d3557;
+  background-color: #1d355733;
+}
+
+.block.obser {
+  border-color: #ffb703;
+  border-left: 0.4rem solid #ffb703;
+  background-color: #ffb70333;
+}
+
+/* Titolo del blocco (opzionale) */
+.block strong {
+  display: block;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+

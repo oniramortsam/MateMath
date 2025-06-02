@@ -1,0 +1,122 @@
+<head>
+  <meta charset="UTF-8">
+  <title>1° anno: parte A1</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
+<div class="slide active">
+    <h2>le operazioni, proprietà</h2>
+    <ol>
+        <li>somma tra naturali</li>
+        <li>la moltiplicazione</li>
+        <li>la distributività</li>
+    </ol>
+</div>
+
+<div class="slide">
+    <h2>somma tra naturali</h2>
+    <div class="block quest">
+        Tre Oompaloompa hanno \({\rm a},{\rm b},{\rm c}\) monete rispettivamente:
+        <ul>
+            <li>Quante monete hanno i primi due?</li>
+            <li>Che succede se si scambiano i borselli?</li>
+            <li>Quante monete hanno gli ultimi due?</li>
+            <li>Quanto possono spendere tutti e tre?</li>
+        </ul>
+    </div>
+    <div class="block notes">
+        La somma tra numeri naturali è la cardinalità dell'unione disgiunta di insiemi aventi tali cardinalità:
+        \[{\rm A}\cap{\rm B}=\emptyset\Longrightarrow\left|{\rm A}\cup{\rm B}\right|=\left|{\rm A}\right|+\left|{\rm B}\right|\]
+    </div>
+    <div class="block facts">
+        La somma è commutativa ed associativa:
+        <ul>
+            <li>\[{\rm a}+{\rm b}={\rm b}+{\rm a}\]</li>
+            <li>\[\left({\rm a}+{\rm b}\right)+{\rm c}={\rm a}+\left({\rm b}+{\rm c}\right)\]</li>
+        </ul>
+    </div>
+</div>
+
+<div class="slide">
+    <h2>la moltiplicazione</h2>
+    <div class="block quest">
+        Date \({\rm a}\) scatole, ciascuna contenente \({\rm b}\) pacchetti identici, ciascuno contenente \({\rm c}\) Wonka diverse:
+        <ul>
+            <li>Quanti pacchetti ci sono in totale?</li>
+            <li>Quante Wonka ci sono in una scatola?</li>
+            <li>Quante Wonka di un tipo in una scatola?</li>
+            <li>Quante Wonka ci sono in totale?</li>
+        </ul>
+    </div>
+    <div class="block notes">
+        La moltiplicazione tra numeri naturali è la cardinalità del prodotto cartesiano di insiemi aventi tali cardinalità:
+        \[\left|{\rm A}\times{\rm B}\right|=\left|{\rm A}\right|\cdot\left|{\rm B}\right|\]
+    </div>
+    <div class="block facts">
+        La moltiplicazione è commutativa ed associativa:
+        <ul>
+            <li>\[{\rm a}\cdot{\rm b}={\rm b}\cdot{\rm a}\]</li>
+            <li>\[\left({\rm a}\cdot{\rm b}\right)\cdot{\rm c}={\rm a}\cdot\left({\rm b}\cdot{\rm c}\right)\]</li>
+        </ul>
+    </div>
+</div>
+
+<div class="slide">
+    <h2>la distributività</h2>
+    <div class="block quest">
+        Dati \({\rm a}\) pacchetti contenenti \({\rm b},{\rm c}\) Wonka di due tipi diversi rispettivamente:
+        <ul>
+            <li>Quante Wonka ci sono di ogni tipo?</li>
+            <li>Quante Wonka ci sono in ogni pacchetto?</li>
+            <li>Quante Wonka ci sono in totale?</li>
+        </ul>
+        In due classi di \({\rm a},{\rm b}\) studenti rispettivamente, ogni studente ha \({\rm c}\) monete:
+        <ul>
+            <li>Quante monete ci sono in ogni classe?</li>
+            <li>Quanti studenti ci sono in totale?</li>
+            <li>Quanto potrebbero spendere insieme?</li>
+        </ul>
+    </div>
+    <div class="block facts">
+        La moltiplicazione è distributiva sulla somma:
+        <ul>
+            <li>\[{\rm a}\cdot\left({\rm b}+{\rm c}\right)={\rm a}\cdot{\rm b}+{\rm a}\cdot{\rm c}\]</li>
+            <li>\[\left({\rm a}+{\rm b}\right)\cdot{\rm c}={\rm a}\cdot{\rm c}+{\rm b}\cdot{\rm c}\]</li>
+        </ul>
+    </div>
+    <div class="block obser">
+        Per concludere:
+        <ul>
+            <li>Abbiamo scoperto che, accostando due rettangoli con un lato identico, l'area totale è la somma delle due aree.</li>
+            <li>La proprietà distributiva è il motivo per cui mi ricordo solo alla fine di mettere le unità di misura in fisica.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="nav-buttons">
+  <button onclick="prevSlide()">Indietro</button>
+  <a href="../../programma.html">Torna all'Indice</a>
+  <button onclick="nextSlide()">Avanti</button>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+</script>

@@ -1,0 +1,157 @@
+<head>
+  <meta charset="UTF-8">
+  <title>1° anno: parte A4</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
+<div class="slide active">
+    <h2>potenze di numeri interi</h2>
+    <ol>
+        <li>potenze e proprietà</li>
+        <li>la serie geometrica</li>
+        <li>le sommatorie serie</li>
+    </ol>
+</div>
+
+<div class="slide">
+    <h2>potenze e proprietà</h2>
+    <div class="block quest">
+        Il mio alfabeto contiene \({\rm a}\) consonanti e \({\rm b}\) vocali, una sillaba è sempre costruita da una vocale ed una consonante:
+        <ul>
+            <li>Quante sillabe posso costruire nel mio alfabeto?</li>
+            <li>Quante sequenze di \({\rm c}\) consonanti o di \({\rm c}\) vocali posso scrivere?</li>
+            <li>Quante parole posso comporre con \({\rm c}\) sillabe?</li>
+        </ul>
+        Il mio alfabeto contiene \({\rm a}\) caratteri, un sostantivo ne ha \({\rm b}\) ed un aggettivo ne ha \({\rm c}\):
+        <ul>
+            <li>Quanti sostantivi ci sono al massimo nel mio vocabolario?</li>
+            <li>Quanti aggettivi ci sono al massimo nel mio vocabolario?</li>
+            <li>Quanti nickname posso ottenere unendo un sostantivo ed un aggettivo?</li>
+        </ul>
+        Il mio alfabeto contiene \({\rm a}\) caratteri, una parola ne ha sempre \({\rm b}\):
+        <ul>
+            <li>Quante parole ci sono al massimo nel mio vocabolario?</li>
+            <li>Quante lettere ci sono in una frase di \({\rm c}\) parole?</li>
+            <li>Quante frasi posso costruire con \({\rm c}\) parole?</li>
+        </ul>
+    </div>
+    <div class="block notes">
+        La potenza di base \({\rm a}\) ed esponente \({\rm b}\) è definita come il numero di:
+        <ul>
+            <li>Colorazioni di \({\rm b}\) zone con \({\rm a}\) colori diversi</li>
+            <li>Sequenze di \({\rm b}\) simboli scelti tra \({\rm a}\) possibili</li>
+            <li>Strategie di risposta a \({\rm b}\) eventi in \({\rm a}\) modi</li>
+        </ul>
+        cioè al numero di funzioni \({\rm f}:{\rm B}\rightarrow{\rm A}\) tra due insiemi \({\rm A},{\rm B}\) di cardinalità \({\rm a},{\rm b}\) rispettivamente.
+    </div>
+    <div class="block facts">
+        Le proprietà delle potenze sono tre:
+        <ul>
+            <li>\[\left({\rm a}\cdot{\rm b}\right)^{\rm c}={\rm a}^{\rm c}\cdot{\rm b}^{\rm c}\]</li>
+            <li>\[{\rm a}^{\left({\rm b}+{\rm c}\right)}={\rm a}^{\rm b}\cdot{\rm a}^{\rm c}\]</li>
+            <li>\[{\rm a}^{\left({\rm b}\cdot{\rm c}\right)}=\left({\rm a}^{\rm b}\right)^{\rm c}\]</li>
+        </ul>
+        Tuttavia, nelle prime due si può usare la seconda legge di monotonia per dire che:
+        <ul>
+            <li>\[{\rm a}\%{\rm b}=0\Longrightarrow\begin{cases}{\rm a}^{\rm c}\%{\rm b}^{\rm c}=0\\\left({\rm a}:{\rm b}\right)^{\rm c}={\rm a}^{\rm c}:{\rm b}^{\rm c}\end{cases}\]</li>
+            <li>\[{\rm b}\ge{\rm c}\Longrightarrow\begin{cases}{\rm a}^{\rm b}\%{\rm a}^{\rm c}=0\\{\rm a}^{\left({\rm b}-{\rm c}\right)}={\rm a}^{\rm b}:{\rm a}^{\rm c}\end{cases}\]</li>
+        </ul>
+    </div>
+</div>
+
+<div class="slide">
+    <h2>la serie geometrica</h2>
+    <div class="block quest">
+        Achille viaggia \({\rm a}\) volte più veloce della tartaruga e ci metterebbe un mattito di ciglia a raggiungerla se fosse ferma:
+        <ul>
+            <li>Quanto ci mettere Achille a raggiungere una tartaruga che si ferma dopo un battito di ciglia?</li>
+            <li>Quanti battiti di ciglia servono ad Achille per raggiungere la tartaruga?</li>
+        </ul>
+    </div>
+    <div class="block facts">
+        Posso definire:
+        \[{\rm A}_{\rm n}=\sum_{{\rm k}\in{\rm n}}{\rm a}^{\rm k}\]
+        Cioè:
+        \[{\rm A}_{{\rm n}+1}={\rm a}^{\rm n}+{\rm A}_{\rm n}={\rm a}\cdot{\rm A}_{\rm n}+1\]
+        Notiamo che:
+        \[\left({\rm a}-1\right)\cdot{\rm A}_{{\rm n}+1}+1=\left({\rm a}-1\right)\cdot{\rm a}\cdot{\rm A}_{\rm n}+{\rm a}={\rm a}^{{\rm n}+1}\]
+        Da cui:
+        \[\sum_{{\rm k}\in{\rm n}}{\rm a}^{\rm k}=\frac{{\rm a}^{{\rm n}+1}-1}{{\rm a}-1}\]
+    </div>
+    <div class="block corol">
+        Sapendo la scrittura in base \({\rm D}\) di un numero razionale possiamo calcolare numeratore e denominatore:
+        \[\frac{\rm a}{\rm b}=\frac{\rm K}{{\rm D}^{\rm m}}+\sum_{{\rm j}>0}\frac{\rm H}{{\rm D}^{{\rm m}+{\rm t}\cdot{\rm j}}}=\frac{\rm K}{{\rm D}^{\rm m}}+\sum_{{\rm j}>0}\frac{\rm H}{{\rm D}^{{\rm m}+{\rm t}\cdot{\rm j}}}=\frac{\rm K}{{\rm D}^{\rm m}}+\frac{\rm H}{{\rm D}^{\rm m}\cdot\left({\rm D}^{\rm t}-1\right)}\]
+        Dove \({\rm H}\lt{\rm D}^{\rm t}\) è il periodo di lunghezza \({\rm t}\) ed \({\rm m}\) è la lunghezza della mantissa non periodica.
+    </div>
+</div>
+
+<div class="slide">
+    <h2>le sommatorie serie</h2>
+    <div class="block notes">
+        Si definiscono somma e prodotto:
+        <ul>
+            <li>\[\sum_{{\rm n}\in{\rm N}+1}{\rm a}_{\rm k}=\left(\sum_{{\rm n}\in{\rm n}}{\rm a}_{\rm n}\right)+{\rm a}_{\rm N}\]</li>
+            <li>\[\prod_{{\rm n}\in{\rm N}+1}{\rm a}_{\rm k}=\left(\prod_{{\rm n}\in{\rm n}}{\rm a}_{\rm n}\right)\cdot{\rm a}_{\rm N}\]</li>
+        </ul>
+    </div>
+    <div class="block shape">
+        La proprietà distributiva scritta in modo serio è:
+        <ul>
+            <li>\[\left(\sum_{{\rm n}\in{\rm N}}{\rm a}_{\rm n}\right)\cdot{\rm b}=\sum_{{\rm n}\in{\rm N}}\left({\rm a}_{\rm n}\cdot{\rm b}\right)\qquad{\rm a}\cdot\left(\sum_{{\rm n}\in{\rm n}}{\rm b}_{\rm n}\right)=\sum_{{\rm n}\in{\rm n}}\left({\rm a}\cdot{\rm b}_{\rm n}\right)\]</li>
+            <li>\[\left(\prod_{{\rm n}\in{\rm N}}{\rm a}_{\rm n}\right)^{\rm b}=\prod_{{\rm n}\in{\rm N}}\left({\rm a}_{\rm n}\right)^{\rm b}\qquad{\rm a}^\left(\sum_{{\rm n}\in{\rm n}}{\rm b}_{\rm n}\right)=\prod_{{\rm n}\in{\rm n}}{\rm a}^{\left({\rm b}_{\rm n}\right)}\]</li>
+        </ul>
+        La proprietà associativa scritta in modo serio è:
+        <ul>
+            <li>\[\sum_{{\rm m}\in{\rm M}}\left(\sum_{{\rm n}\in{\rm N}_{\rm m}}{\rm a}_{\left(\sum_{{\rm k}\in{\rm m}}{\rm N}_{\rm k}\right)+{\rm n}}\right)=\sum_{\left({\rm n}\in\sum_{{\rm m}\in{\rm M}}{\rm N}_{\rm m}\right)}{\rm a}_{\rm n}\]</li>
+            <li>\[\prod_{{\rm m}\in{\rm M}}\left(\prod_{{\rm n}\in{\rm N}_{\rm m}}{\rm a}_{\left(\sum_{{\rm k}\in{\rm m}}{\rm N}_{\rm k}\right)+{\rm n}}\right)=\prod_{\left({\rm n}\in\sum_{{\rm m}\in{\rm M}}{\rm N}_{\rm m}\right)}{\rm a}_{\rm n}\]</li>
+        </ul>
+        Sia \({\rm f}:{\rm N}\rightarrow{\rm N}\) una permutazione, la proprietà commutativa scritta in modo serio è:
+        <ul>
+            <li>\[\sum_{{\rm n}\in{\rm N}}{\rm a}_{{\rm f}\left({\rm n}\right)}=\sum_{{\rm n}\in{\rm N}}{\rm a}_{\rm n}\]</li>
+            <li>\[\prod_{{\rm n}\in{\rm N}}{\rm a}_{{\rm f}\left({\rm n}\right)}=\prod_{{\rm n}\in{\rm N}}{\rm a}_{\rm n}\]</li>
+        </ul>
+        Questa cosa permette di scrivere le somme ed i prodotti come indicizzate su insiemi.
+    </div>
+    <div class="block facts">
+        Si mostra che:
+        <ul>
+            <li>\[\sum_{{\rm n}\in{\rm A}\cup{\rm B}}{\rm a}_{\rm n}=\left(\sum_{{\rm n}\in{\rm A}}{\rm a}_{\rm n}\right)+\left(\sum_{{\rm n}\in{\rm B}}{\rm a}_{\rm n}\right)-\left(\sum_{{\rm n}\in{\rm A}\cap{\rm B}}{\rm a}_{\rm n}\right)\]</li>
+            <li>\[\prod_{{\rm n}\in{\rm A}\cup{\rm B}}{\rm a}_{\rm n}=\left(\prod_{{\rm n}\in{\rm A}}{\rm a}_{\rm n}\right)\cdot\left(\sum_{{\rm n}\in{\rm B}}{\rm a}_{\rm n}\right):\left(\sum_{{\rm n}\in{\rm A}\cap{\rm B}}{\rm a}_{\rm n}\right)\]</li>
+        </ul>
+        Questa cosa si può scrivere in modo serio scrivendo, per un datato \({\cal A}\subseteq{\cal P}\left({\mathbb N}\right)\):
+        \[\forall{\rm k}\in\left|{\cal A}\right|\quad{\rm A}\in{\cal A}_{\rm k}\Longleftrightarrow{\rm A}\subseteq{\cal A}\land\left|{\rm A}\right|={\rm k}\]
+        Valgono infatti le proprietà additive di somma e prodotto:
+        <ul>
+            <li>\[\left(\sum_{\left({\rm n}\in\bigcup_{{\rm X}\in{\cal A}}{\rm X}\right)}{\rm a}_{\rm k}\right)+\sum_{{\rm k}\in\left|{\cal A}\right|}\left(\left(-1\right)^{\rm k}\cdot\sum_{{\rm A}\in{\cal A}_{\rm k}}\left(\sum_{\left({\rm n}\in\bigcap_{{\rm X}\in{\rm A}}{\rm X}\right)}{\rm a}_{\rm n}\right)\right)=0\]</li>
+            <li>\[\left(\prod_{\left({\rm n}\in\bigcup_{{\rm X}\in{\cal A}}{\rm X}\right)}{\rm a}_{\rm k}\right)\cdot\prod_{{\rm k}\in\left|{\cal A}\right|}\left(\prod_{{\rm A}\in{\cal A}_{\rm k}}\left(\prod_{\left({\rm n}\in\bigcap_{{\rm X}\in{\rm A}}{\rm X}\right)}{\rm a}_{\rm n}\right)\right)^{\left(-1\right)^{\rm k}}=0\]</li>
+        </ul>
+    </div>
+</div>
+
+<div class="nav-buttons">
+  <button onclick="prevSlide()">Indietro</button>
+  <a href="../../programma.html">Torna all'Indice</a>
+  <button onclick="nextSlide()">Avanti</button>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+</script>
