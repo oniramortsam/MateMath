@@ -9,13 +9,14 @@
 <div class="slide active">
     <h2>su angoli e vettori</h2>
     <ol>
-        <li>i vettori (NFC)</li>
-        <li>triangoli (NFC)</li>
+        <li>punti, rette (NFC)</li>
+        <li>su triangoli (NFC)</li>
+        <li>l'ortocentro (NDF)</li>
     <ol>
 </div>
 
 <div class="slide">
-    <h2>i vettori</h2>
+    <h2>punti, rette</h2>
     <div class="block N">
         Dobbiamo dire cosa sono punti, rette, lunghezze, angoli, senza ricorrere alle coordinate:
         <ul>
@@ -62,9 +63,9 @@
 </div>
 
 <div class="slide">
-    <h2>triangoli</h2>
+    <h2>su triangoli</h2>
     <div class="block N">
-        Dati tre punti sul piano \({\rm A},{\rm B},{\rm C}\) questi identificano un triangolo:
+        Dati tre punti sul piano \({\rm A},{\rm B},{\rm C}\):
         <ul>
             <li>Chiamiamo \(\alpha\) l'angolo che ruota \({\rm B}-{\rm A}\) in \({\rm C}-{\rm A}\).</li>
             <li>Chiamiamo \(\beta\) l'angolo che ruota \({\rm C}-{\rm B}\) in \({\rm A}-{\rm B}\).</li>
@@ -98,6 +99,59 @@
             <li>Se due triangoli hanno le lunghezze dei tre lati uguali, allora sono congruenti o simmetrici.</li>
             <li>Se due triangoli hanno le lunghezze dei lati in proporzione tra loro, allora hanno tutti gli angoli uguali o opposti.</li>
         </ul>
+    </div>
+</div>
+
+<div class="slide">
+    <h2>l'ortocentro</h2>
+    <div class="block N">
+        Date due rette incidenti, le loro due bisettrici sono il luogo geometrico dei punti da loro equidistanti:
+        <ul>
+            <li>Queste sono le rette che dividono a metà i due angoli complementari formati sulla loro intersezione.</li>
+            <li>Le bisettrici di un triangolo \({\rm A},{\rm B},{\rm C}\) si incontrano in quattro punti che sono da loro equidistanti.</li>
+            <li>Tre di questi punti sono detti excentri \({\rm X},{\rm Y},{\rm Z}\) e l'altro è l'incentro \({\rm H}\).</li>
+        </ul>
+    </div>
+    <div class="block D">
+        Siano date le altezze del triangolo \({\rm A},{\rm B},{\rm C}\):
+        \[{\cal S}={\rm a}\cdot\left|{\rm A}-{\rm X}\right|={\rm b}\cdot\left|{\rm B}-{\rm Y}\right|={\rm c}\cdot\left|{\rm C}-{\rm Z}\right|\]
+        Allora queste si incontrano:
+        <ul>
+            <li>Nell'incentro di \({\rm X},{\rm Y},{\rm Z}\) se gli angoli sono tutti acuti.</li>
+            <li>Nell'excentro opposto al lato opposto al vertice di angolo ottuso altrimenti.</li>
+        </ul>
+        Tale intersezione \({\rm H}\) è detta ortocentro.
+    </div>
+    <div class="block F">
+        Si notino le similitudini:
+        <ul>
+            <li>\[{\rm B}{\rm Z}{\rm H}\simeq{\rm B}{\rm Y}{\rm A}\simeq{\rm C}{\rm Z}{\rm A}\simeq{\rm C}{\rm Y}{\rm H}\]</li>
+            <li>\[{\rm C}{\rm X}{\rm H}\simeq{\rm C}{\rm Z}{\rm B}\simeq{\rm A}{\rm X}{\rm B}\simeq{\rm A}{\rm Z}{\rm H}\]</li>
+            <li>\[{\rm A}{\rm Y}{\rm H}\simeq{\rm A}{\rm X}{\rm C}\simeq{\rm B}{\rm Y}{\rm C}\simeq{\rm B}{\rm X}{\rm H}\]</li>
+        </ul>
+        Usando le centrali sugli allineamenti ed applicando di nuovo gli allineamenti:
+        <ul>
+            <li>\[{\rm b}^2+{\rm c}^2-{\rm a}^2=\left|{\rm A}-{\rm Y}\right|\cdot{\rm b}+\left|{\rm A}-{\rm Z}\right|\cdot{\rm c}\]</li>
+            <li>\[{\rm c}^2+{\rm a}^2-{\rm b}^2=\left|{\rm B}-{\rm Z}\right|\cdot{\rm c}+\left|{\rm B}-{\rm X}\right|\cdot{\rm a}\]</li>
+            <li>\[{\rm a}^2+{\rm b}^2-{\rm c}^2=\left|{\rm C}-{\rm X}\right|\cdot{\rm a}+\left|{\rm C}-{\rm Y}\right|\cdot{\rm b}\]</li>
+        </ul>
+        Usando invece le similitudini:
+        \[{\rm A}{\rm Y}{\rm Z}\simeq{\rm X}{\rm B}{\rm C}\simeq{\rm X}{\rm Y}{\rm C}\simeq{\rm A}{\rm B}{\rm C}\]
+        Si deduce che:
+        <ul>
+            <li>\[{\rm x}=\frac{\rm a}{2\cdot{\rm b}\cdot{\rm c}}\left({\rm b}^2+{\rm c}^2-{\rm a}^2\right)\]</li>
+            <li>\[{\rm y}=\frac{\rm b}{2\cdot{\rm a}\cdot{\rm c}}\left({\rm a}^2+{\rm c}^2-{\rm b}^2\right)\]</li>
+            <li>\[{\rm z}=\frac{\rm c}{2\cdot{\rm a}\cdot{\rm b}}\left({\rm a}^2+{\rm b}^2-{\rm c}^2\right)\]</li>
+        </ul>
+        E continuando:
+        <ul>
+            <li>\[\left|{\rm A}-{\rm H}\right|=2\cdot{\cal S}\cdot{\rm x}\cdot{\rm b}\cdot{\rm c}\]</li>
+            <li>\[\left|{\rm B}-{\rm H}\right|=2\cdot{\cal S}\cdot{\rm a}\cdot{\rm y}\cdot{\rm c}\]</li>
+            <li>\[\left|{\rm C}-{\rm H}\right|=2\cdot{\cal S}\cdot{\rm a}\cdot{\rm b}\cdot{\rm z}\]</li>
+            <li>\[\left|{\rm X}-{\rm H}\right|=2\cdot{\cal S}\cdot{\rm a}\cdot{\rm y}\cdot{\rm z}\]</li>
+            <li>\[\left|{\rm Y}-{\rm H}\right|=2\cdot{\cal S}\cdot{\rm x}\cdot{\rm b}\cdot{\rm z}\]</li>
+            <li>\[\left|{\rm Z}-{\rm H}\right|=2\cdot{\cal S}\cdot{\rm x}\cdot{\rm y}\cdot{\rm c}\]</li>
+        </ul>        
     </div>
 </div>
 

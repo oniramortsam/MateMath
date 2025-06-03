@@ -20,6 +20,7 @@
   - potenze e proprietà (QNF)
   - la serie geometrica (QFC)
   - le sommatorie serie (NDF)
+- Slide di riepilogo
 
 ## Parte B
 - Slide introduttiva
@@ -39,16 +40,18 @@
   - l'algoritmo di bezout (NQD)
   - fattorizzazione unica (NDF)
   - gcd e lcm di naturali (FCR)
+- Slide di riepilogo
 
 ## Parte C
 - Slide introduttiva
 - <a href="1°/1°C/1°C_1.html">su angoli e vettori</a>
-  - i vettori (NFC)
-  - triangoli (NFC)
+  - punti, rette (NFC)
+  - su triangoli (NFC)
+  - l'ortocentro (NDF)
 - <a href="1°/1°C/1°C_2.html">triangoli nel piano</a>
-  - baricentro e ceviane (DF?)
-  - circocentro e angoli (D??)
-  - excentri ed incentro (NDR)
+  - baricentro e ceviane (DFR)
+  - circocentro e angoli (DCR)
+  - excentri ed incentro (DR?)
 - <a href="1°/1°C/1°C_3.html">sui triangoli retti</a>
   - le trigonometriche (QNF)
   - terema di pitagora (QDC)
@@ -57,6 +60,7 @@
   - prodotto vettoriale nello spazio (ND?)
   - su angoli e lati di un triangolo (QFC)
   - le equazioni delle circonferenze (DF?)
+- Slide di riepilogo
 
 # 2° anno
 
@@ -66,18 +70,21 @@
 - <a href="2°/2°A/2°A_2.html">i sistemi di equazioni</a>
 - <a href="2°/2°A/2°A_3.html">divisione tra polinomi</a>
 - <a href="2°/2°A/2°A_4.html">sulle fratte razionali</a>
+- Slide di riepilogo
 
 ## Parte B
 - Slide introduttiva
 - <a href="2°/2°B/2°B_1.html">ancora la combinatoria</a>
 - <a href="2°/2°B/2°B_2.html">le funzioni ed inverse</a>
 - <a href="2°/2°B/2°B_3.html">relazioni, ordinamento</a>
+- Slide di riepilogo
 
 ## Parte C
 - Slide introduttiva
 - <a href="2°/2°B/2°C_1.html">logaritmo ed esponenziale</a>
 - <a href="2°/2°B/2°C_2.html">le funzioni goniometriche</a>
 - <a href="2°/2°B/2°C_3.html">la geometria nello spazio</a>
+- Slide di riepilogo
 
 # 3° anno
 
@@ -87,6 +94,7 @@
 - l'ellisse
 - l'iperbole
 - le coniche
+- Slide di riepilogo
 
 ## Parte B
 - Slide introduttiva
@@ -94,6 +102,7 @@
 - derivate di funzioni
 - lo studio di funzione
 - integrali indefiniti
+- Slide di riepilogo
 
 ## Parte C
 - Slide introduttiva
@@ -101,3 +110,4 @@
 - probabilità condizionata e Bayes
 - la legge dei grandi numeri
 - il teorema limite centrale
+- Slide di riepilogo
