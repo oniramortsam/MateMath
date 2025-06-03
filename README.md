@@ -45,21 +45,21 @@
 ## Parte C
 - Slide introduttiva
 - <a href="1°/1°C/1°C_1.html">su angoli e vettori</a>
-  - punti, rette (NFC)
-  - su triangoli (NFC)
-  - l'ortocentro (NDF)
+  - punti e rette (NFC)
+  - sui triangoli (NFC)
+  - il baricentro (DFR)
 - <a href="1°/1°C/1°C_2.html">triangoli nel piano</a>
-  - baricentro e ceviane (DFR)
-  - circocentro e angoli (DCR)
-  - excentri ed incentro (DR?)
+  - ortocentro e altezze (NDF)
+  - circocentro e angoli (DFR)
+  - excentri ed incentro (DFR)
 - <a href="1°/1°C/1°C_3.html">sui triangoli retti</a>
   - le trigonometriche (QNF)
   - terema di pitagora (QDC)
   - approcci analitici (DNF)
 - <a href="1°/1°C/1°C_4.html">chiudiamo il quadro</a>
-  - prodotto vettoriale nello spazio (ND?)
   - su angoli e lati di un triangolo (QFC)
-  - le equazioni delle circonferenze (DF?)
+  - le equazioni delle circonferenze (DFR)
+  - prodotto vettoriale nello spazio (NDR)
 - Slide di riepilogo
 
 # 2° anno

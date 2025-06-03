@@ -9,62 +9,69 @@
 <div class="slide active">
     <h2>triangoli nel piano</h2>
     </ol>
-        <li>baricentro e ceviane (DFR)</li>
-        <li>circocentro e angoli (DCR)</li>
-        <li>excentri ed incentro (?DR)</li>
+        <li>ortocentro e altezze (NDF)</li>
+        <li>circocentro e angoli (DFR)</li>
+        <li>excentri ed incentro (DFR)</li>
     <ol>
 </div>
 
 <div class="slide">
-    <h2>baricentro e ceviane</h2>
-    <div class="block D">
-        Consideriamo un punto
-        \[{\rm P}={\rm a}_{\rm P}\cdot{\rm A}+{\rm b}_{\rm P}\cdot{\rm B}+{\rm c}_{\rm P}\cdot{\rm C}\]
-        con \({\rm a}_{\rm P}+{\rm b}_{\rm P}+{\rm c}_{\rm P}=1\) e consideriamo i punti:
+    <h2>ortocentro e altezze</h2>
+    <div class="block N">
+        Date due rette incidenti, le loro due bisettrici sono il luogo geometrico dei punti da loro equidistanti:
         <ul>
-            <li>\[{\rm X}=\frac{{\rm b}_{\rm P}\cdot{\rm B}+{\rm c}_{\rm P}\cdot{\rm C}}{1-{\rm a}_{\rm P}}\]</li>
-            <li>\[{\rm Y}=\frac{{\rm c}_{\rm P}\cdot{\rm C}+{\rm a}_{\rm P}\cdot{\rm A}}{1-{\rm b}_{\rm P}}\]</li>
-            <li>\[{\rm Z}=\frac{{\rm a}_{\rm P}\cdot{\rm A}+{\rm b}_{\rm P}\cdot{\rm B}}{1-{\rm c}_{\rm P}}\]</li>
+            <li>Queste sono le rette che dividono a metà i due angoli complementari formati sulla loro intersezione.</li>
+            <li>Le bisettrici di un triangolo si incontrano in quattro punti equidistanti dai lati.</li>
+            <li>Tre di questi punti sono detti excentri e l'altro incentro.</li>
         </ul>
-        \[\begin{cases}
-        \left|{\rm X}-{\rm B}\right|=\frac{{\rm c}_{\rm P}\cdot{\rm a}}{1-{\rm a}_{\rm P}}\\
-        \left|{\rm X}-{\rm C}\right|=\frac{{\rm b}_{\rm P}\cdot{\rm a}}{1-{\rm a}_{\rm P}}\\
-        \left|{\rm Y}-{\rm C}\right|=\frac{{\rm a}_{\rm P}\cdot{\rm b}}{1-{\rm b}_{\rm P}}\\
-        \left|{\rm Y}-{\rm A}\right|=\frac{{\rm c}_{\rm P}\cdot{\rm b}}{1-{\rm b}_{\rm P}}\\
-        \left|{\rm Z}-{\rm A}\right|=\frac{{\rm b}_{\rm P}\cdot{\rm c}}{1-{\rm c}_{\rm P}}\\
-        \left|{\rm Z}-{\rm B}\right|=\frac{{\rm a}_{\rm P}\cdot{\rm c}}{1-{\rm c}_{\rm P}}
-        \end{cases}\]
-        Da cui segue:
-        \[\left|{\rm X}-{\rm B}\right|\cdot\left|{\rm Y}-{\rm C}\right|\cdot\left|{\rm Z}-{\rm A}\right|=\left|{\rm X}-{\rm C}\right|\cdot\left|{\rm Y}-{\rm A}\right|\cdot\left|{\rm Z}-{\rm B}\right|\]
+    </div>
+    <div class="block D">
+        Siano date le altezze del triangolo \({\rm A},{\rm B},{\rm C}\):
+        \[{\cal S}={\rm a}\cdot\left|{\rm A}-{\rm X}\right|={\rm b}\cdot\left|{\rm B}-{\rm Y}\right|={\rm c}\cdot\left|{\rm C}-{\rm Z}\right|\]
+        Allora queste si incontrano:
+        <ul>
+            <li>Nell'incentro di \({\rm X},{\rm Y},{\rm Z}\) se gli angoli sono tutti acuti.</li>
+            <li>Nell'excentro opposto al lato opposto al vertice di angolo ottuso altrimenti.</li>
+        </ul>
+        Tale intersezione \({\rm H}\) è detta ortocentro.
     </div>
     <div class="block F">
-        Richiedendo che i punti
+        Si notino le similitudini:
         <ul>
-            <li>\[{\rm X}={\rm b}_{\rm X}\cdot{\rm B}+{\rm c}_{\rm X}\cdot{\rm C}\]</li>
-            <li>\[{\rm Y}={\rm c}_{\rm Y}\cdot{\rm C}+{\rm a}_{\rm Y}\cdot{\rm A}\]</li>
-            <li>\[{\rm Z}={\rm a}_{\rm Z}\cdot{\rm A}+{\rm b}_{\rm Z}\cdot{\rm B}\]</li>
+            <li>\[{\rm B}{\rm Z}{\rm H}\simeq{\rm B}{\rm Y}{\rm A}\simeq{\rm C}{\rm Z}{\rm A}\simeq{\rm C}{\rm Y}{\rm H}\]</li>
+            <li>\[{\rm C}{\rm X}{\rm H}\simeq{\rm C}{\rm Z}{\rm B}\simeq{\rm A}{\rm X}{\rm B}\simeq{\rm A}{\rm Z}{\rm H}\]</li>
+            <li>\[{\rm A}{\rm Y}{\rm H}\simeq{\rm A}{\rm X}{\rm C}\simeq{\rm B}{\rm Y}{\rm C}\simeq{\rm B}{\rm X}{\rm H}\]</li>
         </ul>
-        siano allineati si ottiene:
+        Usando le centrali sugli allineamenti ed applicando di nuovo gli allineamenti:
         <ul>
-            <li>\[\frac{{\rm a}_{\rm Y}}{{\rm a}_{\rm Z}}=\frac{{\rm b}_{\rm X}}{{\rm b}_{\rm X}-{\rm b}_{\rm Z}}=\frac{{\rm c}_{\rm X}-{\rm c}_{\rm Y}}{{\rm c}_{\rm X}}\]</li>
-            <li>\[\frac{{\rm b}_{\rm Z}}{{\rm b}_{\rm X}}=\frac{{\rm c}_{\rm Y}}{{\rm c}_{\rm Y}-{\rm c}_{\rm X}}=\frac{{\rm a}_{\rm Y}-{\rm a}_{\rm Z}}{{\rm a}_{\rm Y}}\]</li>
-            <li>\[\frac{{\rm c}_{\rm X}}{{\rm c}_{\rm Y}}=\frac{{\rm a}_{\rm Z}}{{\rm a}_{\rm Z}-{\rm a}_{\rm Y}}=\frac{{\rm b}_{\rm Z}-{\rm b}_{\rm X}}{{\rm b}_{\rm Z}}\]</li>
+            <li>\[{\rm b}^2+{\rm c}^2-{\rm a}^2=\left|{\rm A}-{\rm Y}\right|\cdot{\rm b}+\left|{\rm A}-{\rm Z}\right|\cdot{\rm c}\]</li>
+            <li>\[{\rm c}^2+{\rm a}^2-{\rm b}^2=\left|{\rm B}-{\rm Z}\right|\cdot{\rm c}+\left|{\rm B}-{\rm X}\right|\cdot{\rm a}\]</li>
+            <li>\[{\rm a}^2+{\rm b}^2-{\rm c}^2=\left|{\rm C}-{\rm X}\right|\cdot{\rm a}+\left|{\rm C}-{\rm Y}\right|\cdot{\rm b}\]</li>
         </ul>
+        Usando invece le similitudini:
+        \[{\rm A}{\rm Y}{\rm Z}\simeq{\rm X}{\rm B}{\rm C}\simeq{\rm X}{\rm Y}{\rm C}\simeq{\rm A}{\rm B}{\rm C}\]
+        Si deduce che:
         <ul>
-            <li>\[\frac{{\rm c}_{\rm X}}{{\rm c}_{\rm Y}}\cdot\frac{{\rm b}_{\rm Z}}{{\rm b}_{\rm X}}=\left(\frac{{{\rm a}_{\rm Z}}{\rm a}_{\rm Z}-{\rm a}_{\rm Y}}\right)\cdot\left(\frac{{\rm a}_{\rm Y}-{\rm a}_{\rm Z}}{{\rm a}_{\rm Y}}\right)\]</li>
-            <li>\[\frac{{\rm a}_{\rm Y}}{{\rm a}_{\rm Z}}\cdot\frac{{\rm c}_{\rm X}}{{\rm c}_{\rm Y}}=\left(\frac{{{\rm b}_{\rm X}}{\rm b}_{\rm X}-{\rm a}_{\rm Z}}\right)\cdot\left(\frac{{\rm b}_{\rm Z}-{\rm b}_{\rm X}}{{\rm b}_{\rm Z}}\right)\]</li>
-            <li>\[\frac{{\rm b}_{\rm Z}}{{\rm b}_{\rm X}}\cdot\frac{{\rm a}_{\rm Y}}{{\rm a}_{\rm Z}}=\left(\frac{{{\rm c}_{\rm Y}}{\rm c}_{\rm Y}-{\rm a}_{\rm X}}\right)\cdot\left(\frac{{\rm c}_{\rm X}-{\rm c}_{\rm Y}}{{\rm c}_{\rm X}}\right)\]</li>
+            <li>\[{\rm x}=\frac{\rm a}{2\cdot{\rm b}\cdot{\rm c}}\left({\rm b}^2+{\rm c}^2-{\rm a}^2\right)\]</li>
+            <li>\[{\rm y}=\frac{\rm b}{2\cdot{\rm a}\cdot{\rm c}}\left({\rm a}^2+{\rm c}^2-{\rm b}^2\right)\]</li>
+            <li>\[{\rm z}=\frac{\rm c}{2\cdot{\rm a}\cdot{\rm b}}\left({\rm a}^2+{\rm b}^2-{\rm c}^2\right)\]</li>
         </ul>
-        Da cui segue:
-        \[\left|{\rm X}-{\rm B}\right|\cdot\left|{\rm Y}-{\rm C}\right|\cdot\left|{\rm Z}-{\rm A}\right|=\left|{\rm X}-{\rm C}\right|\cdot\left|{\rm Y}-{\rm A}\right|\cdot\left|{\rm Z}-{\rm B}\right|\]
-    </div>
-    <div class="block R">
-        Insomma la formula è la stessa, ma:
+        Possiamo ricavare:
         <ul>
-            <li>con tre ceviane interne si trova l'intersezione nel triangolo.</li>
-            <li>con una ceviana esterna c'è l'allineamento con una retta secante.</li>
-            <li>con una ceviana interna si trova l'intersezione fuori dal triangolo.</li>
-            <li>con tre ceviane esterne c'è l'allineamento con una retta disgiunta.</li>
+            <li>\[{\rm X}=\frac{{\rm b}\cdot{\rm z}}{{\rm a}\cdot{\rm c}}\cdot{\rm B}+\frac{{\rm c}\cdot{\rm y}}{{\rm a}\cdot{\rm b}}\cdot{\rm C}\]</li>
+            <li>\[{\rm Y}=\frac{{\rm c}\cdot{\rm x}}{{\rm b}\cdot{\rm a}}\cdot{\rm C}+\frac{{\rm a}\cdot{\rm z}}{{\rm b}\cdot{\rm c}}\cdot{\rm A}\]</li>
+            <li>\[{\rm Z}=\frac{{\rm a}\cdot{\rm y}}{{\rm c}\cdot{\rm b}}\cdot{\rm A}+\frac{{\rm b}\cdot{\rm x}}{{\rm c}\cdot{\rm a}}\cdot{\rm B}\]</li>
+        </ul>
+        Da cui per ceviane:
+        \[{\rm H}=\frac{2\cdot{\rm x}\cdot{\rm y}\cdot{\rm z}}{{\rm x}+{\rm y}+{\rm z}}\cdot\left(\frac{{\rm a}\cdot{\rm A}}{{\rm x}\cdot{\rm b}\cdot{\rm c}}+\frac{{\rm b}\cdot{\rm B}}{{\rm a}\cdot{\rm y}\cdot{\rm c}}+\frac{{\rm c}\cdot{\rm C}}{{\rm a}\cdot{\rm b}\cdot{\rm z}}\right)\]
+        E continuando con le altre similitudini:
+        <ul>
+            <li>\[\left|{\rm A}-{\rm H}\right|=2\cdot{\cal S}\cdot{\rm x}\cdot{\rm b}\cdot{\rm c}\]</li>
+            <li>\[\left|{\rm B}-{\rm H}\right|=2\cdot{\cal S}\cdot{\rm a}\cdot{\rm y}\cdot{\rm c}\]</li>
+            <li>\[\left|{\rm C}-{\rm H}\right|=2\cdot{\cal S}\cdot{\rm a}\cdot{\rm b}\cdot{\rm z}\]</li>
+            <li>\[\left|{\rm X}-{\rm H}\right|=2\cdot{\cal S}\cdot{\rm a}\cdot{\rm y}\cdot{\rm z}\]</li>
+            <li>\[\left|{\rm Y}-{\rm H}\right|=2\cdot{\cal S}\cdot{\rm x}\cdot{\rm b}\cdot{\rm z}\]</li>
+            <li>\[\left|{\rm Z}-{\rm H}\right|=2\cdot{\cal S}\cdot{\rm x}\cdot{\rm y}\cdot{\rm c}\]</li>
         </ul>
     </div>
 </div>
@@ -72,11 +79,11 @@
 <div class="slide">
     <h2>circocentro e angoli</h2>
     <div class="block D">
-        Consideriamo il circocentro \({\rm O}\) di \({\rm A},{\rm B},{\rm C}\):
+        Consideriamo il circocentro \({\rm H}\) di \({\rm A},{\rm B},{\rm C}\):
         <ul>
-            <li>Il triangolo \({\rm O},{\rm B},{\rm C}\) ha angoli \(2\cdot\alpha,\frac{\pi}{2}-\alpha,\frac{\pi}{2}-\alpha\)</li>
-            <li>Il triangolo \({\rm A},{\rm O},{\rm C}\) ha angoli \(2\cdot\beta,\frac{\pi}{2}-\gamma,\frac{\pi}{2}-\beta\)</li>
-            <li>Il triangolo \({\rm A},{\rm B},{\rm O}\) ha angoli \(2\cdot\gamma,\frac{\pi}{2}-\gamma,\frac{\pi}{2}-\gamma\)</li>
+            <li>Il triangolo \({\rm H},{\rm B},{\rm C}\) ha angoli \(2\cdot\alpha,\frac{\pi}{2}-\alpha,\frac{\pi}{2}-\alpha\)</li>
+            <li>Il triangolo \({\rm A},{\rm H},{\rm C}\) ha angoli \(2\cdot\beta,\frac{\pi}{2}-\gamma,\frac{\pi}{2}-\beta\)</li>
+            <li>Il triangolo \({\rm A},{\rm B},{\rm H}\) ha angoli \(2\cdot\gamma,\frac{\pi}{2}-\gamma,\frac{\pi}{2}-\gamma\)</li>
         </ul>
         Questo mostra che:
         <ul>
@@ -84,8 +91,6 @@
             <li>L'angolo sulla circonferenza dipende solo dalla corda.</li>
             <li>Angoli su lati opposti della corda sono complementari.</li>
         </ul>
-    </div>
-    <div class="block C">
         Un quadrilatero è circoscrivibile se e solo se vale una delle seguenti:
         <ul>
             <li>I triangoli che si formano con due lati opposti e l'intersezione delle diagonali sono simili.</li>
@@ -98,6 +103,10 @@
             <li>Angoli formati dai lati su vertici opposti sono complementari.</li>
         </ul>
     </div>
+    <div class="block F">
+        Congiungendo i punti medi si ottiene un triangolo simile con \({\rm H}\) come ortocentro:
+        \[{\rm H}=\frac{{\rm x}\cdot{\rm A}+{\rm y}\cdot{\rm B}+{\rm z}\cdot{\rm C}}{{\rm x}+{\rm y}+{\rm z}}\]
+    </div>
     <div class="block R">
         Inoltre tracciando il diametro del circocentro passante per un vertice si ottiene
         \[4\cdot{\cal S}\cdot{\cal R}={\rm a}{\rm b}{\rm c}\]
@@ -108,6 +117,7 @@
 <div class="slide">
     <h2>excentri ed incentro</h2>
     <div class="block D">
+        Sia \({\rm H}\) l'incentro di \({\rm A},{\rm B},{\rm C}\) e siano \({\rm X},{\rm Y},{\rm Z}\) gli excentri:
         <ul>
             <li>L'ortocentro di \({\rm X},{\rm Y},{\rm Z}\) è \({\rm H}\) e gli angoli sono \(\frac{\pi-\alpha}{2},\frac{\pi-\beta}{2},\frac{\pi-\gamma}{2}\).</li>
             <li>L'ortocentro di \({\rm H},{\rm Y},{\rm Z}\) è \({\rm X}\) e gli angoli sono \(\frac{\pi+\alpha}{2},\frac{\beta}{2},\frac{\gamma}{2}\).</li>
@@ -115,9 +125,22 @@
             <li>L'ortocentro di \({\rm X},{\rm Y},{\rm H}\) è \({\rm Z}\) e gli angoli sono \(\frac{\alpha}{2},\frac{\beta}{2},\frac{\pi+\gamma}{2}\).</li>
         </ul>
         Da cui ricordiamo le formule:
-        \[\begin{cases}\left|{\rm A}-{\rm Y}\right|=\frac{{\rm x}^2+{\rm z}^2-{\rm y}^2}{2\cdot{\rm x}}\\\left|{\rm A}-{\rm Z}\right|=\frac{{\rm x}^2+{\rm y}^2-{\rm z}^2}{2\cdot{\rm x}}\\\left|{\rm B}-{\rm Z}\right|=\frac{{\rm y}^2+{\rm x}^2-{\rm z}^2}{2\cdot{\rm y}}\\\left|{\rm B}-{\rm X}\right|=\frac{{\rm y}^2+{\rm z}^2-{\rm x}^2}{2\cdot{\rm y}}\\\left|{\rm C}-{\rm X}\right|=\frac{{\rm z}^2+{\rm y}^2-{\rm x}^2}{2\cdot{\rm z}}\\\left|{\rm C}-{\rm Y}\right|=\frac{{\rm z}^2+{\rm x}^2-{\rm y}^2}{2\cdot{\rm z}}\end{cases}\qquad\begin{cases}\left|{\rm A}-{\rm H}\right|=2\cdot{\cal S}\cdot{\rm x}\cdot{\rm b}\cdot{\rm c}\\\left|{\rm B}-{\rm H}\right|=2\cdot{\cal S}\cdot{\rm a}\cdot{\rm y}\cdot{\rm c}\\\left|{\rm C}-{\rm H}\right|=2\cdot{\cal S}\cdot{\rm a}\cdot{\rm b}\cdot{\rm z}\\\left|{\rm X}-{\rm H}\right|=2\cdot{\cal S}\cdot{\rm a}\cdot{\rm y}\cdot{\rm z}\\\left|{\rm Y}-{\rm H}\right|=2\cdot{\cal S}\cdot{\rm x}\cdot{\rm b}\cdot{\rm z}\\\left|{\rm Z}-{\rm H}\right|=2\cdot{\cal S}\cdot{\rm x}\cdot{\rm y}\cdot{\rm c}\end{cases}\]
-        Dove:
-        \[\begin{cases}{\rm a}=\frac{\rm x}{2\cdot{\rm y}\cdot{\rm z}}\left({\rm y}^2+{\rm z}^2-{\rm x}^2\right)\\{\rm b}=\frac{\rm y}{2\cdot{\rm x}\cdot{\rm z}}\left({\rm x}^2+{\rm z}^2-{\rm y}^2\right)\\{\rm c}=\frac{\rm z}{2\cdot{\rm x}\cdot{\rm y}}\left({\rm x}^2+{\rm y}^2-{\rm z}^2\right)\end{cases}\]
+        <ul>
+            <li>\[\begin{cases}\left|{\rm A}-{\rm Y}\right|=\frac{{\rm z}\cdot{\rm b}}{\rm y}\\\left|{\rm A}-{\rm Z}\right|=\frac{{\rm y}\cdot{\rm c}}{\rm z}\\\left|{\rm B}-{\rm Z}\right|=\frac{{\rm x}\cdot{\rm c}}{\rm z}\\\left|{\rm B}-{\rm X}\right|=\frac{{\rm z}\cdot{\rm a}}{\rm x}\\\left|{\rm C}-{\rm X}\right|=\frac{{\rm y}\cdot{\rm a}}{\rm x}\\\left|{\rm C}-{\rm Y}\right|=\frac{{\rm x}\cdot{\rm b}}{\rm y}\end{cases}\qquad\begin{cases}\left|{\rm A}-{\rm H}\right|=2\cdot{\cal S}\cdot{\rm x}\cdot{\rm b}\cdot{\rm c}\\\left|{\rm B}-{\rm H}\right|=2\cdot{\cal S}\cdot{\rm a}\cdot{\rm y}\cdot{\rm c}\\\left|{\rm C}-{\rm H}\right|=2\cdot{\cal S}\cdot{\rm a}\cdot{\rm b}\cdot{\rm z}\\\left|{\rm X}-{\rm H}\right|=2\cdot{\cal S}\cdot{\rm a}\cdot{\rm y}\cdot{\rm z}\\\left|{\rm Y}-{\rm H}\right|=2\cdot{\cal S}\cdot{\rm x}\cdot{\rm b}\cdot{\rm z}\\\left|{\rm Z}-{\rm H}\right|=2\cdot{\cal S}\cdot{\rm x}\cdot{\rm y}\cdot{\rm c}\end{cases}\]</li>
+            <li>\[\begin{cases}{\rm a}=\frac{\rm x}{2\cdot{\rm y}\cdot{\rm z}}\left({\rm y}^2+{\rm z}^2-{\rm x}^2\right)\\{\rm b}=\frac{\rm y}{2\cdot{\rm x}\cdot{\rm z}}\left({\rm x}^2+{\rm z}^2-{\rm y}^2\right)\\{\rm c}=\frac{\rm z}{2\cdot{\rm x}\cdot{\rm y}}\left({\rm x}^2+{\rm y}^2-{\rm z}^2\right)\end{cases}\qquad\begin{cases}{\rm A}=\frac{{\rm y}\cdot{\rm c}}{{\rm x}\cdot{\rm z}}\cdot{\rm Y}+\frac{{\rm z}\cdot{\rm b}}{{\rm x}\cdot{\rm y}}\cdot{\rm Z}\\{\rm B}=\frac{{\rm z}\cdot{\rm a}}{{\rm y}\cdot{\rm x}}\cdot{\rm Z}+\frac{{\rm x}\cdot{\rm c}}{{\rm y}\cdot{\rm z}}\cdot{\rm X}\\{\rm C}=\frac{{\rm x}\cdot{\rm b}}{{\rm z}\cdot{\rm y}}\cdot{\rm X}+\frac{{\rm y}\cdot{\rm a}}{{\rm z}\cdot{\rm x}}\cdot{\rm Y}\end{cases}\]</li>
+            <li>\[{\rm H}=\frac{2\cdot{\rm a}\cdot{\rm b}\cdot{\rm c}}{{\rm a}+{\rm b}+{\rm c}}\cdot\left(\frac{{\rm x}\cdot{\rm X}}{{\rm a}\cdot{\rm y}\cdot{\rm z}}+\frac{{\rm y}\cdot{\rm Y}}{{\rm x}\cdot{\rm b}\cdot{\rm z}}+\frac{{\rm z}\cdot{\rm Z}}{{\rm x}\cdot{\rm y}\cdot{\rm c}}\right)\]</li>
+        </ul>
+    </div>
+    <div class="block F">
+        Risolvendo invece si ottiene:
+        <ul>
+            <li>\[{\rm X}=\frac{{\rm y}\cdot{\rm z}}{2\cdot{\rm x}\cdot{\rm b}\cdot{\rm c}}\cdot\left({\rm b}\cdot{\rm B}+{\rm c}\cdot{\rm C}-{\rm a}\cdot{\rm A}\right)\]
+            <li>\[{\rm Y}=\frac{{\rm z}\cdot{\rm x}}{2\cdot{\rm a}\cdot{\rm y}\cdot{\rm c}}\cdot\left({\rm c}\cdot{\rm C}+{\rm a}\cdot{\rm A}-{\rm b}\cdot{\rm B}\right)\]
+            <li>\[{\rm Z}=\frac{{\rm x}\cdot{\rm y}}{2\cdot{\rm a}\cdot{\rm b}\cdot{\rm z}}\cdot\left({\rm a}\cdot{\rm A}+{\rm b}\cdot{\rm B}-{\rm c}\cdot{\rm C}\right)\]
+        </ul>
+        Che sostituendo:
+        \[{\rm H}=\frac{{\rm a}\cdot{\rm A}+{\rm b}\cdot{\rm B}+{\rm c}\cdot{\rm C}}{{\rm a}+{\rm b}+{\rm c}}\]
+        Questo identifica le coordinate affini di excentri ed incentro.
     </div>
     <div class="block R">
         Consideriamo le similitudini:
@@ -134,9 +157,11 @@
 </div>
 
 <div class="nav-buttons">
-  <button onclick="prevSlide()">Indietro</button>
-  <a href="../../">Torna all'Indice</a>
-  <button onclick="nextSlide()">Avanti</button>
+    <a href="https://oniramortsam.github.io/MateMath">https://oniramortsam.github.io/MateMath</a>
+    <br>
+    <button onclick="prevSlide()">Indietro</button>
+    <a href="../../">Torna all'Indice</a>
+    <button onclick="nextSlide()">Avanti</button>
 </div>
 
 <script>
