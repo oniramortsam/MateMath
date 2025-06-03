@@ -10,8 +10,8 @@
     <h2>su gcd, lcm</h2>
     <ol>
         <li>l'algoritmo di bezout (NQD)</li>
-        <li>fattorizzazione unica (NFD)</li>
-        <li>gcd e lcm di naturali (???)</li>
+        <li>fattorizzazione unica (NDF)</li>
+        <li>gcd e lcm di naturali (FRS)</li>
     </ol>
 </div>
 
@@ -69,22 +69,23 @@
     <h2>fattorizzazione unica</h2>
     <div class="block N">
         Un numero primo \({\rm p}\) soddisfa la proprietà:
-        \[\left({\rm a}\cdot{\rm b}\right)\%{\rm p}=0\Longrightarrow\left({\rm a}\%{\rm p}\right)\cdot\left({\rm b}\%{\rm p}\right)=0\]
+        \[\forall\left({\rm a},{\rm b}\right)\in{\mathbb N}\times{\mathbb N}\quad\left({\rm a}\cdot{\rm b}\right)\%{\rm p}=0\Longleftrightarrow\left({\rm a}\%{\rm p}\right)\cdot\left({\rm b}\%{\rm p}\right)=0\]
         per cui è irriducibile:
-        \[{\rm p}={\rm a}\cdot{\rm b}\Longrightarrow\left({\rm a}-{\rm p}\right)\cdot\left({\rm b}-{\rm p}\right)=\left({\rm a}-1\right)\cdot\left({\rm b}-1\right)=0\]
+        \[\forall{\rm n}\in{\mathbb N}\quad{\rm p}%{\rm n}=0\Longrightarrow\left({\rm n}-{\rm p}\right)\cdot\left({\rm n}-1\right)=0\]
         Viceversa un numero irriducibile è primo, se infatti \({\rm p}\) non divide \({\rm a},{\rm b}\) allora il massimo comun divisore è:
         \[{\rm x}\cdot{\rm a}+{\rm u}\cdot{\rm p}={\rm y}\cdot{\rm b}+{\rm v}\cdot{\rm p}=1\]
         Da cui:
         \[{\rm x}\cdot{\rm y}\cdot{\rm a}\cdot{\rm b}+\left({\rm u}\cdot{\rm v}\cdot{\rm p}+{\rm u}\cdot{\rm y}\cdot{\rm b}+{\rm x}\cdot{\rm a}\cdot{\rm v}\right)\cdot{\rm p}=1\]
     </div>
-    <div class="block F">
-        I numeri primi sono infiniti.
-    </div>
     <div class="block D">
+        Diciamo \(\{{\rm p}_{\rm m}\quad{\rm m}\in{\mathbb N}\}\) la successione dei numeri primi:
+        \[{\rm p}_{\rm n}=\min\left({\rm x}\in{\mathbb N}\quad\left[\forall{\rm m}\in{\rm n}\quad{\rm x}\%{\rm p}_{\rm m}\ne0\right]\right)\le\left(\prod_{{\rm m}\in{\rm n}}{\rm p}_{\rm m}\right)+1\]
+    </div>
+    <div class="block F">
         Sia:
-        \[{\rm n}\%{\rm p}^{{\rm n}_{\rm p}+1}\ne{\rm n}\%{\rm p}^{{\rm n}_{\rm p}}=0\]
+        \[{\rm n}\%{\rm p}^{{\rm n}/\!\!/\!\!/{\rm p}+1}\ne{\rm n}\%{\rm p}^{{\rm n}/\!\!/\!\!/{\rm p}}=0\]
         vogliamo dimostrare che:
-        \[{\rm n}=\prod_{\rm p}{\rm p}^{{\rm n}_{\rm p}}\]
+        \[{\rm n}=\prod_{{\rm m}\in{\mathbb N}}\left({\rm p}_{\rm m}\right)^{{\rm n}/\!\!/\!\!/{\rm p}_{\rm m}}\]
         per farlo notiamo che dati due numeri coprimi
         \[{\rm n}\%{\rm a}={\rm n}\%{\rm b}=0\Longleftrightarrow{\rm n}\%\left({\rm a}\cdot{\rm b}\right)\]
         e che in particolare i fattori del prodotto sono coprimi tra loro.
@@ -93,11 +94,27 @@
 
 <div class="slide">
     <h2>gcd e lcm di naturali</h2>
-    <div class="block">
+    <div class="block F">
+        Anzitutto notiamo che:
+        \[\forall\left({\rm a},{\rm b}\right)\in{\mathbb N}\times{\mathbb N}\quad{\rm a}\%{\rm b}=0\Longleftrightarrow\left[\forall{\rm m}\in{\mathbb N}\quad{\rm a}/\!\!/\!\!/{\rm p}_{\rm m}\ge{\rm b}/\!\!/\!\!/{\rm p}_{\rm m}\right]\]
+        Da questo segue immediatamente per una successione di naturali:
+        <ul>
+            <li>\[\operatorname{gcd}\left({\rm n}_{\rm K}\quad{\rm k}\in{\rm N}\right)=\prod_{{\rm m}\in{\mathbb N}}\left({\rm p}_{\rm m}\right)^{\min\left({\rm n}_{\rm k}/\!\!/\!\!/{\rm p}_{\rm m}\quad{\rm k}\in{\rm K}\right)}\]</li>
+            <li>\[\operatorname{lcm}\left({\rm n}_{\rm K}\quad{\rm k}\in{\rm N}\right)=\prod_{{\rm m}\in{\mathbb N}}\left({\rm p}_{\rm m}\right)^{\max\left({\rm n}_{\rm k}/\!\!/\!\!/{\rm p}_{\rm m}\quad{\rm k}\in{\rm K}\right)}\]</li>
+        </ul>
     </div>
-    <div class="block">
+    <div class="block R">
+        Per i numeri razionali positivi si può fare lo stesso e, se questi sono in forma ridotta:
+        <ul>
+            <li>\[\operatorname{gcd}\left(\frac{{\rm N}_{\rm m}}{{\rm D}_{\rm m}}\quad{\rm m}\in{\rm M}\right)=\frac{\operatorname{gcd}\left({\rm N}_{\rm m}\quad{\rm m}\in{\rm M}\right)}{\operatorname{lcm}\left({\rm D}_{\rm m}\quad{\rm m}\in{\rm M}\right)}\]</li>
+            <li>\[\operatorname{lcm}\left(\frac{{\rm N}_{\rm m}}{{\rm D}_{\rm m}}\quad{\rm m}\in{\rm M}\right)=\frac{\operatorname{lcm}\left({\rm N}_{\rm m}\quad{\rm m}\in{\rm M}\right)}{\operatorname{gcd}\left({\rm D}_{\rm m}\quad{\rm m}\in{\rm M}\right)}\]</li>
+        </ul>
     </div>
-    <div class="block">
+    <div class="block S">
+        Notiamo che si possono contare i divisori di un numero naturale:
+        \[\forall{\rm n}\in{\mathbb N}\quad\left|{\rm d}\in{\mathbb N}\quad{\rm n}\%{\rm d}=0\right|=\prod_{{\rm m}\in{\mathbb N}}\left({\rm n}/\!\!/\!\!/{\rm p}_{\rm m}+1\right)\]
+        Così come si possono contare:
+        \[\forall\left({\rm a},{\rm b}\right)\in\left({\mathbb Q}\times{\mathbb Q}\right)\quad{\rm b}\%{\rm a}=0\Longrightarrow\left|{\rm x}\in{\mathbb Q}\quad{\rm b}\%{\rm x}={\rm x}\%{\rm a}=0\right|=\prod_{{\rm m}\in{\mathbb N}}\left(\frac{\rm b}{\rm a}/\!\!/\!\!/{\rm p}_{\rm m}+1\right)\]
     </div>
 </div>
 

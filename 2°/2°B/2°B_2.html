@@ -1,0 +1,147 @@
+<head>
+  <meta charset="UTF-8">
+  <title>2° anno: parte B2</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
+<div class="slide active">
+    <h2>le funzioni ed inverse</h2>
+    <ol>
+        <li>le funzioni e cardinali (NFD)</li>
+        <li>immagini ed iniettività (NFD)</li>
+        <li>equivalenze e quozienti (NDS)</li>
+    </ul>
+</div>
+
+<div class="slide">
+    <h2>le funzioni e cardinali</h2>
+    <div class="block N">
+        Definiamo l'insieme delle parti \({\cal P}\left({\rm A}\right)\) come
+        \[{\rm X}\in{\cal P}\left({\rm A}\right)\Longleftrightarrow{\rm X}\subseteq{\rm A}\]
+    </div>
+    <div class="block F">
+        Una relazione \({\cal R}\), cioè un predicato di due variabili, è detta funzionale da un dominio \({\rm A}\) ad un codominio \({\rm B}\) quando:
+        \[\forall{\rm x}\in{\rm A}\quad\exists{\rm y}\in{\rm B}\quad\forall{\rm z}\in{\rm B}\quad{\cal R}\left({\rm x},{\rm z}\right)\Leftrightarrow{\rm z}={\rm y}\]
+        Tale proprietà è equivalente a:
+        \[\exists{\rm f}\in{\rm B}^{\rm A}\quad\forall\left({\rm x},{\rm y}\right)\in{\rm A}\times{\rm B}\quad{\cal R}\left({\rm x},{\rm y}\right)\Leftrightarrow{\rm y}={\rm f}\left({\rm x}\right)\]
+        Il fatto che esista una funzione inversa:
+        \[\exists{\rm g}\in{\rm A}^{\rm B}\quad\forall\left({\rm x},{\rm y}\right)\in{\rm A}\times{\rm B}\quad{\rm y}={\rm f}\left({\rm x}\right)\Leftrightarrow{\rm x}={\rm g}\left({\rm y}\right)\]
+        Dipende dalla proprietà:
+        \[\forall{\rm y}\in{\rm B}\quad\exists{\rm x}\in{\rm A}\quad\forall{\rm z}\in{\rm A}\quad{\rm f}\left({\rm z}\right)={\rm y}\Leftrightarrow{\rm z}={\rm x}\]
+    </div>
+    <div class="block D">
+        Sia \({\rm f}:{\rm A}\rightarrow{\rm B}\), definiamo \({\rm f}^{-1}:{\rm B}\rightarrow{\cal P}\left({\rm B}\right)\) come:
+        \[{\rm x}\in{\rm f}^{-1}\left({\rm y}\right)\Longleftrightarrow{\rm f}\left({\rm x}\right)={\rm y}\]
+        Allora vale la proprietà:
+        \[\left|{\rm A}\right|=\sum_{{\rm y}\in{\rm B}}\left|{\rm f}^{-1}\left({\rm y}\right)\right|\]
+        Ma l'invertibilità di \({\rm f}\) è equivalente a
+        \[\forall{\rm y}\in{\rm B}\quad\left|{\rm f}^{-1}\left({\rm y}\right)\right|=1\]
+        Ma la stessa formula può mostrare che:
+        <ul>
+            <li>\[\left[\forall{\rm y}\in{\rm B}\quad\exists{\rm x}\in{\rm A}\quad{\rm f}\left({\rm x}\right)={\rm y}\right]\Longrightarrow\left|{\rm A}\right|\ge\left|{\rm B}\right|\]</li>
+            <li>\[\left[\forall\left({\rm x},{\rm z}\right)\in{\rm A}\times{\rm A}\quad{\rm f}\left({\rm x}\right)={\rm f}\left({\rm z}\right)\Rightarrow{\rm x}={\rm z}\right]\Longrightarrow\left|{\rm A}\right|\le\left|{\rm B}\right|\]</li>
+        </ul>
+        Tali funzioni si dicono suriettive, iniettive rispettivamente.
+    </div>
+</div>
+
+<div class="slide">
+    <h2>immagini ed iniettività</h2>
+    <div class="block N">
+        Date due funzioni \(\left({\rm f},{\rm g}\right)\in{\rm A}^{\rm B}\times{\rm B}^{\rm C}\) si definisce \({\rm f}\circ{\rm g}\in{\rm A}^{\rm C}\) come:
+        \[\left({\rm f}\circ{\rm g}\right)\left({\rm x}\right)={\rm f}\left({\rm g}\left({\rm x}\right)\right)\]
+        Si dice inoltre che \({\rm f}\) è un'inversa sinistra di \({\rm g}\) e che \({\rm g}\) è un'inversa destra di \({\rm f}\) se:
+        \[{\rm A}={\rm C}\land\left({\rm f}\circ{\rm g}\right)\left({\rm x}\right)=1_{\rm A}\left({\rm x}\right)={\rm x}=1_{\rm C}\left({\rm x}\right)\]
+    </div>
+    <div class="block F">
+        Sono fatti equivalenti:
+        <ul>
+            <li>C'è una inversa sinistra e destra</li>
+            <li>L'inversa sinistra è unica</li>
+            <li>L'inversa destra è unica</li>
+        </ul>
+        Valgono le proprietà:
+        <ul>
+            <li>La composizione di funzioni suriettive è suriettiva.</li>
+            <li>La composizione di funzioni iniettive è iniettiva.</li>
+            <li>Se la composizione è suriettiva, allora lo è anche la sinistra.</li>
+            <li>Se la composizione è iniettiva, allora lo è anche la destra.</li>
+            <li>Una funzione è surettiva se e solo se ammette inversa destra.</li>
+            <li>Una funzione è iniettiva se e solo se ammette inversa sinistra.</li>
+            <li>Una funzione è invertibile se e solo se è sia iniettiva che suriettiva.</li>
+            <li>L'inversa di una composizione è la composizione delle inverse.</li>
+        </ul>
+        Una funzione tra insiemi finiti della stessa cardinalità è iniettiva se e solo se è suriettiva.
+    </div>
+    <div class="block D">
+        Date due funzioni iniettive \(\left({\rm f},{\rm g}\right)\in{\rm A}^{\rm B}\times{\rm B}^{\rm A}\), possiamo costruirne una invertibile nel seguente modo:
+        <ul>
+            <li>\[\begin{cases}{\rm f}^{-1}\left({\rm x}\right)=\emptyset\Rightarrow{\rm G}\left({\rm x}\right)={\rm g}\left({\rm x}\right)\\{\rm f}^{-1}\left({\rm x}\right)=\{{\rm y}\}\Rightarrow\begin{cases}{\rm g}^{-1}\left({\rm y}\right)=\emptyset\Rightarrow{\rm G}\left({\rm x}\right)={\rm y}\\{\rm g}^{-1}\left({\rm y}\right)\ne\emptyset\Rightarrow{\rm G}\left({\rm x}\right)={\rm g}\left({\rm x}\right)\end{cases}\end{cases}\]</li>
+            <li>\[\begin{cases}{\rm g}^{-1}\left({\rm y}\right)=\emptyset\Rightarrow{\rm F}\left({\rm y}\right)={\rm f}\left({\rm y}\right)\\{\rm g}^{-1}\left({\rm y}\right)=\{{\rm x}\}\Rightarrow\begin{cases}{\rm f}^{-1}\left({\rm x}\right)=\emptyset\Rightarrow{\rm F}\left({\rm y}\right)={\rm x}\\{\rm f}^{-1}\left({\rm x}\right)\ne\emptyset\Rightarrow{\rm F}\left({\rm y}\right)={\rm f}\left({\rm y}\right)\end{cases}\end{cases}\]</li>
+        </ul>
+        Questo procedimento può essere iterato finchè non si ottengono funzioni inverse l'una dell'altra, ma servirebbe ZORN.
+    </div>
+</div>
+
+<div class="slide">
+    <h2>equivalenze e quozienti</h2>
+    <div class="block N">
+        Data una funzione \({\rm f}:{\rm A}\rightarrow{\rm B}\) si dice immagine:
+        \[{\rm y}\in\operatorname{Imm}\left({\rm f}\right)\subseteq{\rm B}\Leftrightarrow{\rm f}^{-1}\left({\rm y}\right)\ne\emptyset\]
+    </div>
+    <div class="block D">
+        Una relazione \({\cal R}\) si dice di equivalenza su un dominio {\rm A} se
+        \[\exists{\rm B}\quad\exists{\rm f}\in{\rm B}^{\rm A}\quad\forall{\rm x},{\rm z}\in{\rm A}\times{\rm A}\quad{\cal R}\left({\rm x},{\rm z}\right)\Leftrightarrow{\rm f}\left({\rm x}\right)={\rm f}\left({\rm z}\right)\]
+        Tale proprietà è equivalente a tre condizioni:
+        <ul>
+            <li>Riflessiva: \[\forall{\rm x}\in{\rm A}\quad{\cal R}\left({\rm x},{\rm x}\right)\]</li>
+            <li>Simmetrica: \[\forall\left({\rm x},{\rm y}\right)\in{\rm A}\times{\rm A}\quad{\cal R}\left({\rm x},{\rm y}\right)\Leftrightarrow{\cal R}\left({\rm y},{\rm x}\right)\]</li>
+            <li>Transitiva: \[\forall\left({\rm x},{\rm y},{\rm z}\right)\in{\rm A}\times{\rm A}\times{\rm A}\quad{\cal R}\left({\rm x},{\rm y}\right)\land{\cal R}\left({\rm y},{\rm z}\right)\Rightarrow{\cal R}\left({\rm x},{\rm z}\right)\]</li>
+        </ul>
+        Grazie a queste condizioni si può definire \({\rm f}:{\rm A}\rightarrow{\cal P}\left({\rm A}\right)\) come:
+        \[{\rm z}\in{\rm f}\left({\rm x}\right)\Longleftrightarrow{\cal R}\left({\rm x},{\rm z}\right)\]
+        Tale funzione si dice proiezione al quoziente e la sua immagine si denota \({\rm A}/{\cal R}\).
+    </div>
+    <div class="block S">
+        Una relazione di equivalenza è equilibrata di ordine \(\left|{\cal R}\right|\) se:
+        \[\forall{\rm y}\in\operatorname{Imm}\left({\rm f}\right)\quad\left|{\rm y}\right|=\left|{\cal R}\right|\]
+        Questa proprietà implica
+        \[\left|{\rm A}\right|=\left|{\cal R}\right|\cdot\left|{\rm A}/{\cal R}\right|\]
+        Una struttura di fibrato su \({\rm A},{\cal R}\) è una struttura del tipo
+        \[{\rm f}\left({\rm X},{\rm Y}\right):{\rm Y}\rightarrow{\rm X}\]
+        Con:
+        <ul>
+            <li>\[\forall{\rm X}\in\left({\rm A}/{\cal R}\right)\quad{\rm f}\left({\rm X},{\rm X}\right)=1_{\rm X}\]</li>
+            <li>\[\forall\left({\rm X},{\rm Y}\right)\in\left({\rm A}/{\cal R}\right)\times\left({\rm A}/{\cal R}\right)\quad{\rm f}\left({\rm X},{\rm Y}\right)\circ{\rm f}\left({\rm Y},{\rm X}\right)={\rm f}\left({\rm X},{\rm X}\right)=1_{\rm X}\]</li>
+        </ul>
+        Questo apre le porte alla MONODROMIA.
+    </div>
+</div>
+
+<div class="nav-buttons">
+  <button onclick="prevSlide()">Indietro</button>
+  <a href="../../README.md">Torna all'Indice</a>
+  <button onclick="nextSlide()">Avanti</button>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+</script>
