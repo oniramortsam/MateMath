@@ -17,7 +17,7 @@
 - <a href="1°/1°A/1°A_4.html">potenze di numeri interi</a>
   - potenze e proprietà (QNF)
   - la serie geometrica (QFC)
-  - le sommatorie serie (NSF)
+  - le sommatorie serie (NDF)
 
 ## 1° anno: parte B
 - Slide introduttiva
@@ -27,24 +27,34 @@
   - predicati e quantificazione (NSF)
 - <a href="1°/1°B/1°B_2.html">gli insiemi</a>
   - operazioni di insiemi (NFR)
-  - prodotto, equivalenze (NFD)
-  - le funzioni e potenze (NSR)
+  - prodotto, equivalenze (NFR)
+  - le funzioni e potenze (NDR)
 - <a href="1°/1°B/1°B_3.html">numerazione</a>
-  - unicità della rappresentazione (NDS)
-  - svolgere operazioni in tabella (NDS)
+  - unicità della rappresentazione (NDR)
+  - svolgere operazioni in tabella (NDR)
   - svolgere la divisione euclidea (QDC)
 - <a href="1°/1°B/1°B_4.html">su gcd, lcm</a>
   - l'algoritmo di bezout (NQD)
   - fattorizzazione unica (NDF)
-  - gcd e lcm di naturali (FRS)
+  - gcd e lcm di naturali (FCR)
 
 ## 1° anno: parte C
 - Slide introduttiva
 - <a href="1°/1°C/1°C_1.html">su angoli e vettori</a>
+        <li>i vettori (NFC)</li>
+        <li>triangoli (NFC)</li>
 - <a href="1°/1°C/1°C_2.html">triangoli nel piano</a>
+        <li>baricentro e ceviane (DF?)</li>
+        <li>circocentro e angoli (D??)</li>
+        <li>excentri ed incentro (NDR)</li>
 - <a href="1°/1°C/1°C_3.html">sui triangoli retti</a>
+        <li>le trigonometriche (QNF)</li>
+        <li>terema di pitagora (QDC)</li>
+        <li>approcci analitici (DNF)</li>
 - <a href="1°/1°C/1°C_4.html">chiudiamo il quadro</a>
-
+        <li>prodotto vettoriale nello spazio (ND?)</li>
+        <li>su angoli e lati di un triangolo (QFC)</li>
+        <li>le equazioni delle circonferenze (DF?)</li>
 # 2° anno
 
 ## parte A

@@ -96,45 +96,39 @@ a {
 
 /* Varianti per tipo di contenuto */
 .block.Q {
-  border-color: #e63946;
-  border-left: 0.4rem solid #e63946;
-  background-color: #e6394633;
+  border-color: #D7263D;
+  border-left: 0.4rem solid #D7263D;
+  background-color: #D7263D33;
 }
 
 .block.N {
-  border-color: #457b9d;
-  border-left: 0.4rem solid #457b9d;
-  background-color: #457b9d33;
+  border-color: #33658A;
+  border-left: 0.4rem solid #33658A;
+  background-color: #33658A33;
 }
 
 .block.D {
-  border-color: #f4a261;
-  border-left: 0.4rem solid #f4a261;
-  background-color: #f4a26133;
+  border-color: #2F4858;
+  border-left: 0.4rem solid #2F4858;
+  background-color: #2F485833;
 }
 
 .block.F {
-  border-color: #2a9d8f;
-  border-left: 0.4rem solid #2a9d8f;
-  background-color: #2a9d8f33;
+  border-color: #F49D37;
+  border-left: 0.4rem solid #F49D37;
+  background-color: #F49D3733;
 }
 
 .block.C {
-  border-color: #8e44ad;
-  border-left: 0.4rem solid #8e44ad;
-  background-color: #8e44ad33;
+  border-color: #A3A847;
+  border-left: 0.4rem solid #A3A847;
+  background-color: #A3A84733;
 }
 
 .block.R {
-  border-color: #ffb703;
-  border-left: 0.4rem solid #ffb703;
-  background-color: #ffb70333;
-}
-
-.block.S {
-  border-color: #1d3557;
-  border-left: 0.4rem solid #1d3557;
-  background-color: #1d355733;
+  border-color: #8C5383;
+  border-left: 0.4rem solid #8C5383;
+  background-color: #8C538333;
 }
 
 /* Titolo del blocco (opzionale) */

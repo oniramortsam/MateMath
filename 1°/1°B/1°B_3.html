@@ -9,8 +9,8 @@
 <div class="slide active">
     <h2>numerazione</h2>
     <ol>
-        <li>unicità della rappresentazione (NDS)</li>
-        <li>svolgere operazioni in tabella (NDS)</li>
+        <li>unicità della rappresentazione (NDR)</li>
+        <li>svolgere operazioni in tabella (NDR)</li>
         <li>svolgere la divisione euclidea (QDC)</li>
     </ol>
 </div>
@@ -39,7 +39,7 @@
             <li>\[{\rm a}-{\rm b}=\left(\sum_{{\rm a}_{\rm n}\ge{\rm b}_{\rm n}}\left({\rm a}_{\rm n}-{\rm b}_{\rm n}\right)\cdot{\rm D}_{\rm n}\right)+\left(\sum_{{\rm a}_{\rm n}\le{\rm b}_{\rm n}}{\rm D}_{{\rm n}+1}\right)-\left(\sum_{{\rm a}_{\rm n}\le{\rm b}_{\rm n}}\left({\rm d}_{\rm n}-\left({\rm b}_{\rm n}-{\rm a}_{\rm n}\right)\right)\cdot{\rm D}_{\rm n}\right)\]</li>
         </ul>
     </div>
-    <div class="block S">
+    <div class="block R">
         Notare in ultimo che si può passare da una successione ad una sottosuccessione e viceversa osservando che:
         \[\left({\rm a}/\!\!/{\rm D}_{\rm n}\right)\%\left({\rm d}_{{\rm n}+1}\cdot{\rm d}_{\rm n}\right)={\rm a}_{{\rm n}+1}\cdot{\rm D}+{\rm a}_{\rm n}=\left({\rm a}\%{\rm D}_{{\rm n}+2}\right)/\!\!/{\rm D}_{\rm n}\]
         Cioè il grafico commutativo di corrispondenze:
@@ -66,7 +66,7 @@
             <li>\[\begin{cases}{\rm N}\gt{\rm M}\\{\rm a}_{\rm N}\lt{\rm b}_{\rm M}\end{cases}\Longrightarrow\begin{cases}{\rm a}/\!\!/{\rm b}=\left(\left({\rm a}_{{\rm N}+1}\cdot{\rm D}+{\rm a}_{\rm N}\right)/\!\!/{\rm b}_{\rm M}\right)\cdot{\rm D}^{{\rm N}-{\rm M}-1}+\left({\rm a}-\left(\left({\rm a}_{{\rm N}+1}\cdot{\rm D}+{\rm a}_{\rm N}\right)/\!\!/{\rm b}_{\rm M}\right)\cdot{\rm D}^{{\rm N}-{\rm M}-1}\cdot{\rm b}\right)/\!\!/{\rm b}\\{\rm a}\%{\rm b}=\left({\rm a}-\left(\left({\rm a}_{{\rm N}+1}\cdot{\rm D}+{\rm a}_{\rm N}\right)/\!\!/{\rm b}_{\rm M}\right)\cdot{\rm D}^{{\rm N}-{\rm M}-1}\cdot{\rm b}\right)\%{\rm b}\end{cases}\]</li>
         </ul>
     </div>
-    <div class="block S">
+    <div class="block R">
         Le operazioni in ambito computazionale si implementano proprio così.
     </div>
 </div>
