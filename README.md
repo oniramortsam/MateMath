@@ -25,20 +25,26 @@
 
 # 2° anno
 
-- <a href=2°/2°A/2°A_1.html>dai razionali ai reali</a>
-- operazioni tra radicali
-- sistemi di equazioni e disequazioni lineari
-
 ## parte A
 - Slide introduttiva
+- <a href=2°/2°A/2°A_1.html>dai razionali ai reali</a>
+- <a href=2°/2°A/2°A_2.html>i sistemi di equazioni</a>
+- <a href=2°/2°A/2°A_3.html>divisione tra polinomi</a>
+- <a href=2°/2°A/2°A_4.html>sulle fratte razionali</a>
 
 ## parte B
 - Slide introduttiva
+- <a href=2°/2°B/2°B_1.html>ancora la combinatoria</a>
+- <a href=2°/2°B/2°B_2.html>le funzioni ed inverse</a>
+- <a href=2°/2°B/2°B_3.html>relazioni, ordinamento</a>
 
 ## parte C
 - Slide introduttiva
+- <a href=2°/2°B/2°C_1.html>logaritmo ed esponenziale</a>
+- <a href=2°/2°B/2°C_2.html>le funzioni goniometriche</a>
+- <a href=2°/2°B/2°C_3.html>la geometria nello spazio</a>
 
-# CONICHE NEL PIANO
+# 3° anno
 
 ## parte A
 - Slide introduttiva
@@ -46,45 +52,6 @@
 - l'ellisse
 - l'iperbole
 - le coniche
-
-## parte B
-- Slide introduttiva
-- relazioni e proprietà
-- funzioni tra insiemi
-- periodi e simmetrie
-- bigettive ed inverse
-
-## parte C
-- Slide introduttiva
-- trasformazioni del piano
-- le rotazioni di vettori
-- le funzioni goniometriche
-- esponenziale e logaritmo
-
-# ANELLI DI POLINOMI
-
-## parte A
-- Slide introduttiva
-- polinomi e metodo di ruffini
-- la divisione tra polinomi
-- metodo dei fratti semplici
-- la derivata di un polinomio
-
-## parte B
-- Slide introduttiva
-- probabilità e combinatoria
-- permutazioni con ripetizione
-- combinazioni con ripetizione
-- le potenze del multinomio
-
-## parte C
-- Slide introduttiva
-- area e determinante
-- geometria nello spazio
-- il prodotto vettoriale
-- poliedri notevoli
-
-## FUNZIONI E CALCOLO
 
 ## parte A
 - Slide introduttiva
@@ -99,10 +66,3 @@
 - probabilità condizionata e Bayes
 - la legge dei grandi numeri
 - il teorema limite centrale
-
-## parte C
-- Slide introduttiva
-- l'interpolazione polinomiale
-- sui metodi di ottimizzazione
-- contrazzioni e metodi iterativi
-- equazioni differenziali ordinarie

@@ -1,6 +1,27 @@
+<head>
+  <meta charset="UTF-8">
+  <title>2° anno: parte B1</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
+<div class="slide active">
+    <h2>le funzioni ed inverse</h2>
+    <ol>
+        <li>le funzioni e cardinali (NFD)</li>
+        <li>immagini ed iniettività (NFD)</li>
+        <li>equivalenze e quozienti (NDS)</li>
+    </ul>
+</div>
+
 <div class="slide">
-    <h2>le funzioni | le funzioni e cardinali</h2>
-    <div class="block facts">
+    <h2>le funzioni e cardinali</h2>
+    <div class="block N">
+        Definiamo l'insieme delle parti \({\cal P}\left({\rm A}\right)\) come
+        \[{\rm X}\in{\cal P}\left({\rm A}\right)\Longleftrightarrow{\rm X}\subseteq{\rm A}\]
+    </div>
+    <div class="block F">
         Una relazione \({\cal R}\), cioè un predicato di due variabili, è detta funzionale da un dominio \({\rm A}\) ad un codominio \({\rm B}\) quando:
         \[\forall{\rm x}\in{\rm A}\quad\exists{\rm y}\in{\rm B}\quad\forall{\rm z}\in{\rm B}\quad{\cal R}\left({\rm x},{\rm z}\right)\Leftrightarrow{\rm z}={\rm y}\]
         Tale proprietà è equivalente a:
@@ -10,11 +31,7 @@
         Dipende dalla proprietà:
         \[\forall{\rm y}\in{\rm B}\quad\exists{\rm x}\in{\rm A}\quad\forall{\rm z}\in{\rm A}\quad{\rm f}\left({\rm z}\right)={\rm y}\Leftrightarrow{\rm z}={\rm x}\]
     </div>
-    <div class="block notes">
-        Definiamo l'insieme delle parti \({\cal P}\left({\rm A}\right)\) come
-        \[{\rm X}\in{\cal P}\left({\rm A}\right)\Longleftrightarrow{\rm X}\subseteq{\rm A}\]
-    </div>
-    <div class="block shape">
+    <div class="block D">
         Sia \({\rm f}:{\rm A}\rightarrow{\rm B}\), definiamo \({\rm f}^{-1}:{\rm B}\rightarrow{\cal P}\left({\rm B}\right)\) come:
         \[{\rm x}\in{\rm f}^{-1}\left({\rm y}\right)\Longleftrightarrow{\rm f}\left({\rm x}\right)={\rm y}\]
         Allora vale la proprietà:
@@ -31,14 +48,14 @@
 </div>
 
 <div class="slide">
-    <h2>le funzioni | immagini ed iniettività</h2>
-    <div class="block notes">
+    <h2>immagini ed iniettività</h2>
+    <div class="block N">
         Date due funzioni \(\left({\rm f},{\rm g}\right)\in{\rm A}^{\rm B}\times{\rm B}^{\rm C}\) si definisce \({\rm f}\circ{\rm g}\in{\rm A}^{\rm C}\) come:
         \[\left({\rm f}\circ{\rm g}\right)\left({\rm x}\right)={\rm f}\left({\rm g}\left({\rm x}\right)\right)\]
         Si dice inoltre che \({\rm f}\) è un'inversa sinistra di \({\rm g}\) e che \({\rm g}\) è un'inversa destra di \({\rm f}\) se:
         \[{\rm A}={\rm C}\land\left({\rm f}\circ{\rm g}\right)\left({\rm x}\right)=1_{\rm A}\left({\rm x}\right)={\rm x}=1_{\rm C}\left({\rm x}\right)\]
     </div>
-    <div class="block facts">
+    <div class="block F">
         Sono fatti equivalenti:
         <ul>
             <li>C'è una inversa sinistra e destra</li>
@@ -58,7 +75,7 @@
         </ul>
         Una funzione tra insiemi finiti della stessa cardinalità è iniettiva se e solo se è suriettiva.
     </div>
-    <div class="block shape">
+    <div class="block D">
         Date due funzioni iniettive \(\left({\rm f},{\rm g}\right)\in{\rm A}^{\rm B}\times{\rm B}^{\rm A}\), possiamo costruirne una invertibile nel seguente modo:
         <ul>
             <li>\[\begin{cases}{\rm f}^{-1}\left({\rm x}\right)=\emptyset\Rightarrow{\rm G}\left({\rm x}\right)={\rm g}\left({\rm x}\right)\\{\rm f}^{-1}\left({\rm x}\right)=\{{\rm y}\}\Rightarrow\begin{cases}{\rm g}^{-1}\left({\rm y}\right)=\emptyset\Rightarrow{\rm G}\left({\rm x}\right)={\rm y}\\{\rm g}^{-1}\left({\rm y}\right)\ne\emptyset\Rightarrow{\rm G}\left({\rm x}\right)={\rm g}\left({\rm x}\right)\end{cases}\end{cases}\]</li>
@@ -69,12 +86,12 @@
 </div>
 
 <div class="slide">
-    <h2>le funzioni | equivalenze e quozienti</h2>
-    <div class="block notes">
+    <h2>equivalenze e quozienti</h2>
+    <div class="block N">
         Data una funzione \({\rm f}:{\rm A}\rightarrow{\rm B}\) si dice immagine:
         \[{\rm y}\in\operatorname{Imm}\left({\rm f}\right)\subseteq{\rm B}\Leftrightarrow{\rm f}^{-1}\left({\rm y}\right)\ne\emptyset\]
     </div>
-    <div class="block shape">
+    <div class="block D">
         Una relazione \({\cal R}\) si dice di equivalenza su un dominio {\rm A} se
         \[\exists{\rm B}\quad\exists{\rm f}\in{\rm B}^{\rm A}\quad\forall{\rm x},{\rm z}\in{\rm A}\times{\rm A}\quad{\cal R}\left({\rm x},{\rm z}\right)\Leftrightarrow{\rm f}\left({\rm x}\right)={\rm f}\left({\rm z}\right)\]
         Tale proprietà è equivalente a tre condizioni:
@@ -87,7 +104,7 @@
         \[{\rm z}\in{\rm f}\left({\rm x}\right)\Longleftrightarrow{\cal R}\left({\rm x},{\rm z}\right)\]
         Tale funzione si dice proiezione al quoziente e la sua immagine si denota \({\rm A}/{\cal R}\).
     </div>
-    <div class="block sampl">
+    <div class="block S">
         Una relazione di equivalenza è equilibrata di ordine \(\left|{\cal R}\right|\) se:
         \[\forall{\rm y}\in\operatorname{Imm}\left({\rm f}\right)\quad\left|{\rm y}\right|=\left|{\cal R}\right|\]
         Questa proprietà implica
@@ -102,3 +119,29 @@
         Questo apre le porte alla MONODROMIA.
     </div>
 </div>
+
+<div class="nav-buttons">
+  <button onclick="prevSlide()">Indietro</button>
+  <a href="../../README.md">Torna all'Indice</a>
+  <button onclick="nextSlide()">Avanti</button>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+</script>
