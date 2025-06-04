@@ -1,0 +1,70 @@
+<head>
+  <meta charset="UTF-8">
+  <title>3° anno: parte A3</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
+<div class="slide active">
+    <h2>relazioni, ordinamento</h2>
+    <ol>
+        <li>(???)</li>
+        <li>(???)</li>
+        <li>(???)</li>
+    </ul>
+</div>
+
+<div class="slide">
+    Una relazione d'ordine soddisfa le proprietà:
+    <ul>
+        <li>Simmetrica: \[\forall\left({\rm x},{\rm y}\right)\in{\rm A}\times{\rm A}\quad{\cal R}\left({\rm x},{\rm y}\right)\land{\cal R}\left({\rm y},{\rm x}\right)\Longrightarrow{\rm x}={\rm y}\]</li>
+        <li>Transitiva: \[\forall\left({\rm x},{\rm y},{\rm z}\right)\in{\rm A}\times{\rm A}\times{\rm A}\quad{\cal R}\left({\rm x},{\rm y}\right)\land{\cal R}\left({\rm y},{\rm z}\right)\Longrightarrow{\cal R}\left({\rm x},{\rm z}\right)\]</li>
+    </ul>
+    Si può dire totale se:
+    \[\forall\left({\rm x},{\rm y}\right)\in{\rm A}\times{\rm A}\quad{\cal R}\left({\rm x},{\rm y}\right)\lor{\cal R}\left({\rm y},{\rm x}\right)\]
+</div>
+
+<div class="slide">
+    Per una relazione d'ordine:
+    <ul>
+        <li>si dice minorante di un sottoinsieme</li>
+        <li>si dice maggiorante di un sottoinsieme</li>
+        <li>si dice minimo di un sottoinsieme</li>
+        <li>si dice massimo di un sottoinsieme</li>
+        <li>si dice estremo inferiore di un sottoinsieme</li>
+        <li>si dice estremo superiore di un sottoinsieme</li>
+    </ul>
+    Una relazione d'ordine si dice ben fondata se ogni sottoinsieme ammette minimale.
+</div>
+
+<div class="slide">
+</div>
+
+<div class="nav-buttons">
+    <a href="https://oniramortsam.github.io/MateMath">https://oniramortsam.github.io/MateMath</a>
+    <br>
+    <button onclick="prevSlide()">Indietro</button>
+    <a href="../../">Torna all'Indice</a>
+    <button onclick="nextSlide()">Avanti</button>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+</script>

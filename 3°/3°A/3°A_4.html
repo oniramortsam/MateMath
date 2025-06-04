@@ -1,0 +1,53 @@
+<head>
+  <meta charset="UTF-8">
+  <title>3° anno: parte A4</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
+<div class="slide active">
+    <h2>risolvere una equazione</h2>
+    <ol>
+        <li>(???)</li>
+        <li>(???)</li>
+        <li>(???)</li>
+    </ul>
+</div>
+
+<div class="slide">
+</div>
+
+<div class="slide">
+</div>
+
+<div class="slide">
+</div>
+
+<div class="nav-buttons">
+    <a href="https://oniramortsam.github.io/MateMath">https://oniramortsam.github.io/MateMath</a>
+    <br>
+    <button onclick="prevSlide()">Indietro</button>
+    <a href="../../">Torna all'Indice</a>
+    <button onclick="nextSlide()">Avanti</button>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+</script>

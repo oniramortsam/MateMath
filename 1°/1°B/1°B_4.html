@@ -19,15 +19,15 @@
     <h2>l'algoritmo di bezout</h2>
     <div class="block N">
         Dato un predicato \({\cal C}\) decidibile su \({\rm A}\) ed una espressione \({\cal E}\) valutabile su \({\rm A}\) si può rappresentare un insieme come:
-        \[\{{\cal E}\left({\rm x}\right)\quad{\rm x}\in{\rm A}\quad{\cal C}\left({\rm x}\right)\}\]
+        \[\left{{\cal E}\left({\rm x}\right)\quad{\rm x}\in{\rm A}\quad{\cal C}\left({\rm x}\right)\right}\]
         Di seguito la rappresentazione dell'insieme degli interi divisibili per \({\rm a}\in{\mathbb N}\) per caratteristica e dei suoi multipli per elencazione:
-        \[\{{\rm x}\in{\mathbb Z}\quad{\rm x}\%{\rm a}=0\}=\{{\rm x}\cdot{\rm a}\quad{\rm x}\in{\mathbb Z}\}={\rm a}\cdot{\mathbb Z}\]
+        \[\left{{\rm x}\in{\mathbb Z}\quad{\rm x}\%{\rm a}=0\right}=\left{{\rm x}\cdot{\rm a}\quad{\rm x}\in{\mathbb Z}\right}={\rm a}\cdot{\mathbb Z}\]
         Si nota che:
         \[{\rm a}\cdot{\mathbb Z}\subseteq{\rm b}\cdot{\mathbb Z}\Longleftrightarrow{\rm a}\in{\rm b}\cdot{\mathbb Z}\Longleftrightarrow{\rm a}\%{\rm b}=0\]
         Altrimenti:
         <ul>
             <li>\[{\rm a}\cdot{\mathbb Z}\cap{\rm b}\cdot{\mathbb Z}\supseteq\operatorname{lcm}\left({\rm a},{\rm b}\right)\cdot{\mathbb Z}\]</li>
-            <li>\[{\rm a}\cdot{\mathbb Z}+{\rm b}\cdot{\mathbb Z}=\{{\rm x}\cdot{\rm a}+{\rm y}\cdot{\rm b}\quad\left({\rm x},{\rm y}\right)\in{\mathbb Z}\}\subseteq\operatorname{gcd}\left({\rm a},{\rm b}\right)\cdot{\mathbb Z}\]</li>
+            <li>\[{\rm a}\cdot{\mathbb Z}+{\rm b}\cdot{\mathbb Z}=\left{{\rm x}\cdot{\rm a}+{\rm y}\cdot{\rm b}\quad\left({\rm x},{\rm y}\right)\in{\mathbb Z}\right}\subseteq\operatorname{gcd}\left({\rm a},{\rm b}\right)\cdot{\mathbb Z}\]</li>
         </ul>
         Nel seguito mostriamo anche le eguaglianze tra questi insiemi.
     </div>
@@ -78,7 +78,7 @@
         \[{\rm x}\cdot{\rm y}\cdot{\rm a}\cdot{\rm b}+\left({\rm u}\cdot{\rm v}\cdot{\rm p}+{\rm u}\cdot{\rm y}\cdot{\rm b}+{\rm x}\cdot{\rm a}\cdot{\rm v}\right)\cdot{\rm p}=1\]
     </div>
     <div class="block D">
-        Diciamo \(\{{\rm p}_{\rm m}\quad{\rm m}\in{\mathbb N}\}\) la successione dei numeri primi:
+        Diciamo \(\left{{\rm p}_{\rm m}\quad{\rm m}\in{\mathbb N}\right}\) la successione dei numeri primi:
         \[{\rm p}_{\rm n}=\min\left({\rm x}\in{\mathbb N}\quad\left[\forall{\rm m}\in{\rm n}\quad{\rm x}\%{\rm p}_{\rm m}\ne0\right]\right)\le\left(\prod_{{\rm m}\in{\rm n}}{\rm p}_{\rm m}\right)+1\]
     </div>
     <div class="block F">

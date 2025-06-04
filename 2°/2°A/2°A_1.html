@@ -7,127 +7,161 @@
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
 
 <div class="slide active">
-    <h2>dai razionali ai reali</h2>
+    <h2>su angoli e vettori</h2>
     <ol>
-        <li>(NFR)</li>
-        <li>(NFD)</li>
-        <li>(QFR)</li>
-    </ol>
+        <li>punti e rette (NFC)</li>
+        <li>sui triangoli (NFC)</li>
+        <li>il baricentro (DFR)</li>
+    <ol>
 </div>
 
 <div class="slide">
+    <h2>punti, rette</h2>
     <div class="block N">
-        <h2>razionali</h2>
-        Riepiloghiamo
+        Dobbiamo dire cosa sono punti, rette, lunghezze, angoli, senza ricorrere alle coordinate:
         <ul>
-            <li>{\mathbb Z}=\{{\rm a}-{\rm b}\quad{\rm a},{\rm b}\in{\mathbb N}\times{\mathbb N}\}</li>
-            <li>{\mathbb Q}=\{{\rm a}/{\rm b}\quad{\rm a},{\rm b}\in{\mathbb Z}\times\left({\mathbb N}\setminus\{0\}\right)\}</li>
+            <li>Un vettore definisce una traslazione di punti.</li>
+            <li>Un angolo definisce una rotazione di vettori.</li>
+            <li>Un numero definisce una dilatazione di vettori.</li>
         </ul>
-        Ricordiamo le operazioni tra numeri razionali:
-        <ul>
-            <li>\[\frac{\rm a}{\rm b}\pm\frac{\rm c}{\rm d}=\frac{{\rm a}\cdot{\rm d}\pm{\rm b}\cdot{\rm c}}{{\rm b}\cdot{\rm d}}\]</li>
-            <li>\[\frac{\rm a}{\rm b}\cdot\frac{\rm c}{\rm d}=\frac{{\rm a}\cdot{\rm c}}{{\rm b}\cdot{\rm d}}\qquad\frac{\rm a}{\rm b}:\frac{\rm c}{\rm d}=\frac{{\rm a}\cdot{\rm d}}{{\rm b}\cdot{\rm c}}\]</li>
-            <li>\[\left(\frac{\rm a}{\rm b}\right)^{\rm n}=\frac{{\rm a}^{\rm n}}{{\rm b}^{\rm n}}\qquad\left(\frac{\rm a}{\rm b}\right)^{-{\rm n}}=\frac{{\rm b}^{\rm n}}{{\rm a}^{\rm n}}\]</li>
-        </ul>
-        Tuttavia, bisogna sempre portare il risultato in forma ridotta:
-        \[\frac{\rm a}{\rm b}=\frac{{\rm a}/\operatorname{gcd}\left({\rm a},{\rm b}\right)}{{\rm b}/\operatorname{gcd}\left({\rm a},{\rm b}\right)}=\frac{\operatorname{lcm}\left({\rm a},{\rm b}\right)/{\rm b}}{\operatorname{lcm}\left({\rm a},{\rm b}\right)/{\rm a}}\]
-        Scriviamo sempre numeratore e denominatore fattorizzati e per minimizzare la quantità di calcoli:
-        \[\frac{\rm a}{\rm b}\pm\frac{\rm c}{\rm d}=\frac{\operatorname{gcd}\left({\rm a},{\rm b}\right)}{\operatorname{lcm}\left({\rm b},{\rm d}\right)}\left(\frac{{\rm a}\cdot\operatorname{lcm}\left({\rm b},{\rm d}\right)}{\operatorname{gcd}\left({\rm a},{\rm c}\right)\cdot{\rm b}}\pm\frac{{\rm c}\cdot\operatorname{lcm}\left({\rm b},{\rm d}\right)}{\operatorname{gcd}\left({\rm a},{\rm c}\right)\cdot{\rm d}}\right)\]
-        In questo modo andrà calcolato e fattorizzato solo il secondo fattore.
     </div>
     <div class="block F">
-        Ribadiamo le proprietà delle operazioni:
+        Postulati di commutatività:
+        <ul>
+            <li>Composizione di rotazioni è una rotazione (somma di angoli, cioè commutativa).</li>
+            <li>Composizione di dilatazioni è una dilatazione (prodotto di numeri, cioè commutativo).</li>
+            <li>Composizione di traslazioni è una traslazione (somma tra vettori, cioè commutativa).</li>
+            <li>Sia dilatazioni che rotazioni si distribuiscono sulla somma di vettori e commutano tra loro.</li>
+        </ul>
+        Postulati di esistenza:
+        <ul>
+            <li>Dati due punti nel piano c'è un solo vettore che manda l'uno nell'altro (differenza tra punti).</li>
+            <li>Dati vettori nel piano esistono una sola rotazione e dilatazione positiva che mandano l'uno nell'altro.</li>
+            <li>Due rette non parallele si intersecano in esattamente un punto.</li>
+        </ul>
+        Postulati di identità:
+        <ul>
+            <li>La dilatazione di \(1\) e la rotazione di \(0\) sono l'identità.</li>
+            <li>La dilatazione di \(-1\) è una rotazione di \(\pi\).</li>
+        </ul>
+        Postulati di misura:
+        <ul>
+            <li>Le rotazioni e le traslazioni coservano i moduli dei vettori, le dilatazioni li moltiplicano.</li>
+            <li>la lunghezza di una diagonale è minore dela somma dei moduli dei lati.</li>
+            <li>Il vettore di modulo minimo che trasla un punto su una retta è perpendicolare alla retta.</li>
+            <li>L'area di un parallelogramma è il prodotto tra base ed altezza.</li>
+        </ul>
+    </div>
+    <div class="block C">
+        Dati due punti, il loro asse di simmetria è il luogo geometrico dei punti da loro equidistanti.
+        <ul>
+            <li>Questo è una retta perpendicolare la segmento che li congiunge.</li>
+            <li>Le assi di simmetria di un triangolo si incontrano nel circocentro.</li>
+            <li>Quindi due circonferenze possono incontrarsi in al più due punti.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="slide">
+    <h2>su triangoli</h2>
+    <div class="block N">
+        Dati tre punti sul piano \({\rm A},{\rm B},{\rm C}\):
+        <ul>
+            <li>Chiamiamo \(\alpha\) l'angolo che ruota \({\rm B}-{\rm A}\) in \({\rm C}-{\rm A}\).</li>
+            <li>Chiamiamo \(\beta\) l'angolo che ruota \({\rm C}-{\rm B}\) in \({\rm A}-{\rm B}\).</li>
+            <li>Chiamiamo \(\gamma\) l'angolo che ruota \({\rm A}-{\rm C}\) in \({\rm B}-{\rm C}\).</li>
+        </ul>
+        Denotiamo inoltre:
+        <ul>
+            <li>\[{\rm a}=\left|{\rm C}-{\rm B}\right|\]</li>
+            <li>\[{\rm b}=\left|{\rm A}-{\rm C}\right|\]</li>
+            <li>\[{\rm c}=\left|{\rm C}-{\rm B}\right|\]</li>
+        </ul>
+    </div>
+    <div class="block F">
+        Si può notare che:
+        <ul>
+            <li>\(\beta+\gamma\) ruota \({\rm C}-{\rm A}\) in \({\rm B}-{\rm A}\).</li>
+            <li>\(\gamma+\alpha\) ruota \({\rm A}-{\rm B}\) in \({\rm C}-{\rm B}\).</li>
+            <li>\(\alpha+\beta\) ruota \({\rm B}-{\rm C}\) in \({\rm A}-{\rm C}\).</li>
+        </ul>
+        da cui \(\alpha+\beta+\gamma=\pm\pi\) con segno concorde ai singoli addendi.
+    </div>
+    <div class="block C">
+        Si può ruotare due triangoli l'uno sull'altro per mostrare che:
+        <ul>
+            <li>Se due triangoli hanno gli angoli su due vertici e la lunghezza di un lato in comune, allora sono congruenti.</li>
+            <li>Se due triangoli hanno le lunghezze di due lati e l'angolo del vertice compreso in comune, allora sono congruenti.</li>
+            <li>Se due triangoli hanno tutti gli angoli uguali, allora hanno le lunghezze dei lati in proporzione tra loro.</li>
+        </ul>
+        Osservando invece le circonferenze con centro il vertice di un lato e passanti per l'altro vertice dello stesso lato:
+        <ul>
+            <li>Se due triangoli hanno le lunghezze dei tre lati uguali, allora sono congruenti o simmetrici.</li>
+            <li>Se due triangoli hanno le lunghezze dei lati in proporzione tra loro, allora hanno tutti gli angoli uguali o opposti.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="slide">
+    <h2>baricentro e ceviane</h2>
+    <div class="block D">
+        Consideriamo un punto
+        \[{\rm P}={\rm a}_{\rm P}\cdot{\rm A}+{\rm b}_{\rm P}\cdot{\rm B}+{\rm c}_{\rm P}\cdot{\rm C}\]
+        con \({\rm a}_{\rm P}+{\rm b}_{\rm P}+{\rm c}_{\rm P}=1\) e consideriamo i punti:
+        <ul>
+            <li>\[{\rm D}=\frac{{\rm b}_{\rm P}\cdot{\rm B}+{\rm c}_{\rm P}\cdot{\rm C}}{1-{\rm a}_{\rm P}}\]</li>
+            <li>\[{\rm E}=\frac{{\rm c}_{\rm P}\cdot{\rm C}+{\rm a}_{\rm P}\cdot{\rm A}}{1-{\rm b}_{\rm P}}\]</li>
+            <li>\[{\rm F}=\frac{{\rm a}_{\rm P}\cdot{\rm A}+{\rm b}_{\rm P}\cdot{\rm B}}{1-{\rm c}_{\rm P}}\]</li>
+        </ul>
         \[\begin{cases}
-        {\rm a}+\left({\rm b}+{\rm c}\right)={\rm a}+{\rm b}+{\rm c}={\rm a}+{\rm c}+{\rm b}\\
-        {\rm a}+\left({\rm b}-{\rm c}\right)={\rm a}+{\rm b}-{\rm c}={\rm a}-{\rm c}+{\rm b}\\
-        {\rm a}-\left({\rm b}+{\rm c}\right)={\rm a}-{\rm b}-{\rm c}={\rm a}-{\rm c}-{\rm b}\\
-        {\rm a}-\left({\rm b}-{\rm c}\right)={\rm a}-{\rm b}+{\rm c}={\rm a}+{\rm c}-{\rm b}
-        \end{cases}\qquad\begin{cases}
-        {\rm a}\cdot\left({\rm b}\cdot{\rm c}\right)={\rm a}\cdot{\rm b}\cdot{\rm c}={\rm a}\cdot{\rm c}\cdot{\rm b}\\
-        {\rm a}\cdot\left({\rm b}/{\rm c}\right)={\rm a}\cdot{\rm b}/{\rm c}={\rm a}/{\rm c}\cdot{\rm b}\\
-        {\rm a}/\left({\rm b}\cdot{\rm c}\right)={\rm a}/{\rm b}/{\rm c}={\rm a}/{\rm c}/{\rm b}\\
-        {\rm a}/\left({\rm b}/{\rm c}\right)={\rm a}/{\rm b}\cdot{\rm c}={\rm a}\cdot{\rm c}/{\rm b}
-        \end{cases}\qquad\begin{cases}
-        \left({\rm a}\cdot{\rm b}\right)^{\rm c}={\rm a}^{\rm c}\cdot{\rm b}^{\rm c}\\
-        \left({\rm a}/{\rm b}\right)^{\rm c}={\rm a}^{\rm c}/{\rm b}^{\rm c}\\
-        {\rm a}^{{\rm b}+{\rm c}}={\rm a}^{\rm b}\cdot{\rm a}^{\rm b}\\
-        {\rm a}^{{\rm b}-{\rm c}}={\rm a}^{\rm b}/{\rm a}^{\rm b}\\
-        {\rm a}^{{\rm b}\cdot{\rm c}}=\left({\rm a}^{\rm b}\right)^{\rm c}
+        \left|{\rm D}-{\rm B}\right|=\frac{{\rm c}_{\rm P}\cdot{\rm a}}{1-{\rm a}_{\rm P}}\\
+        \left|{\rm D}-{\rm C}\right|=\frac{{\rm b}_{\rm P}\cdot{\rm a}}{1-{\rm a}_{\rm P}}\\
+        \left|{\rm E}-{\rm C}\right|=\frac{{\rm a}_{\rm P}\cdot{\rm b}}{1-{\rm b}_{\rm P}}\\
+        \left|{\rm E}-{\rm A}\right|=\frac{{\rm c}_{\rm P}\cdot{\rm b}}{1-{\rm b}_{\rm P}}\\
+        \left|{\rm F}-{\rm A}\right|=\frac{{\rm b}_{\rm P}\cdot{\rm c}}{1-{\rm c}_{\rm P}}\\
+        \left|{\rm F}-{\rm B}\right|=\frac{{\rm a}_{\rm P}\cdot{\rm c}}{1-{\rm c}_{\rm P}}
         \end{cases}\]
-        Notare che all'ultima manca la versione inversa.
-    </div>
-    <div class="block R">
-        Le leggi di monotonia si scrivono:
-        <li>\[{\rm a}+{\rm c}={\rm b}+{\rm c}\Longleftrightarrow{\rm a}\ge{\rm b}\]</li>
-        <li>\[\begin{cases}{\rm a}\ge{\rm b}\\{\rm c}\ge0\end{cases}\Longrightarrow{\rm a}\cdot{\rm c}\ge{\rm b}\cdot{\rm c}\]</li>
-        <li>\[\begin{cases}{\rm a}\ge{\rm b}\\{\rm c}\le0\end{cases}\Longrightarrow{\rm a}\cdot{\rm c}\le{\rm b}\cdot{\rm c}\]</li>
-        <li>\[\begin{cases}{\rm a}\gt{\rm b}\\{\rm c}\gt0\end{cases}\Longrightarrow{\rm a}/{\rm c}\gt{\rm b}/{\rm c}\]</li>
-        <li>\[\begin{cases}{\rm a}\gt{\rm b}\\{\rm c}\lt0\end{cases}\Longrightarrow{\rm a}/{\rm c}\lt{\rm b}/{\rm c}\]</li>
-    </div>
-</div>
-
-<div class="slide">
-    <h2>reali</h2>
-    <div class="block N">
-        Sia data una successione di numeri naturali \({\rm D}_{{\rm n}+1}={\rm D}_{\rm n}\cdot{\rm d}_{\rm n}\) e consideriamo:
-        \[{\rm x}_{{\rm n}+1}\in{\rm d}_{\rm n}\qquad{\rm X}_{{\rm n}+1}={\rm X}_{\rm n}\cdot{\rm d}_{\rm n}+{\rm x}_{{\rm n}+1}\]
-        Da cui:
-        \[\frac{{\rm X}_{\rm n}}{{\rm D}_{\rm n}}\lt\frac{{\rm X}_{{\rm n}+1}}{{\rm D}_{{\rm n}+1}}\lt\frac{{\rm X}_{{\rm n}+1}+1}{{\rm D}_{{\rm n}+1}}\lt\frac{{\rm X}_{\rm n}+1}{{\rm D}_{\rm n}}\]
-        Questo identifica un numero reale:
-        \[\forall{\rm n}\in{\mathbb N}\quad\frac{{\rm X}_{\rm n}}{{\rm D}_{\rm n}}\lt{\rm x}\lt\frac{{\rm X}_{\rm n}+1}{{\rm D}_{\rm n}}\]
-        Se ad esempio \({\rm D}_{\rm n}={\rm n}!\), allora \({\rm x}\) non può essere razionale.
+        Da cui segue:
+        \[\left|{\rm D}-{\rm B}\right|\cdot\left|{\rm E}-{\rm C}\right|\cdot\left|{\rm F}-{\rm A}\right|=\left|{\rm D}-{\rm C}\right|\cdot\left|{\rm E}-{\rm A}\right|\cdot\left|{\rm F}-{\rm B}\right|\]
     </div>
     <div class="block F">
-        Tutte le proprietà viste per i razionali valgono anche per i reali, ma stavolta possiamo definire:
-        \[\forall{\rm a}\gt0\quad\sqrt[{\rm n}]{\rm a}=\sup\left({\rm x}\in{\mathbb Q}\quad0\le{\rm x}^{\rm n}\le{\rm a}\right)\]
-        Ed a questo punto posso definire
-        \[\forall{\rm a}\gt0\quad{\rm a}^\frac{\rm b}{\rm c}=\sqrt[{\rm c}]{{\rm a}^{\rm b}}=\sqrt[{\rm c}]{{\rm a}}^{\rm b}\]
-        e quindi:
-        \[\forall{\rm a}\gt0\quad{\rm a}^{\rm b}=\sup\left({\rm a}^{\rm x}\quad{\rm x}\in{\mathbb Q}\quad{\rm x}\le{\rm b}\right)\]
-    </div>
-    <div clas="block D">
-        Possiamo anche ricavare da un poliedro
-        \[\pi=\sup\left({\rm n}\cdot\sin\left(\frac{\pi}{\rm n}\right)\quad{\rm n}\in{\mathbb N}\right)\]
-        E calcolarlo, ma questo lo vediamo dopo.
-    </div>
-</div>
-
-<div class="slide">
-    <div class="block Q">
-        Una Wonka ha lati \({\rm a},{\rm b}\) la posso tagliare di modo che i due pezzi siano simili?
-    </div>
-    <div class="block F">
-        Una equazione parabolica è del tipo:
-        \[{\rm a}\cdot{\rm x}^2-{\rm b}\cdot{\rm x}+{\rm c}=0\]
-        Questa si può risolvere prima dividendo per \({\rm a}\):
-        \[{\rm x}^2-\left(\frac{\rm b}{\rm a}\right)\cdot{\rm x}+\frac{\rm c}{\rm a}=0\]
-        Poi isolando \({\rm x}-{\rm b}/\left(2\cdot{\rm a}\right)\)
-        \[\left({\rm x}-\frac{\rm b}{2\cdot{\rm a}}\right)^2+\left(\frac{\rm c}{\rm a}-\frac{{\rm b}^2}{4\cdot{\rm a}^2}\right)=0\]
-        Se infine:
-        \[{\rm b}^2\ge4\cdot{\rm a}\cdot{\rm c}\]
-        Si ottiene:
-        \[{\rm x}-\frac{\rm b}{2\cdot{\rm a}}=\pm\sqrt{\frac{{\rm b}^2-4\cdot{\rm a}\cdot{\rm c}}{4\cdot{\rm a}^2}}\]
-        Ed infine:
-        \[{\rm x}=\frac{{\rm b}\pm\sqrt{{\rm b}^2-4\cdot{\rm a}\cdot{\rm c}}}{2\cdot{\rm a}}\]
-        Notare che il minimo della funzione polinomiale è proprio:
-        \[{\rm x}=\frac{\rm b}{2\cdot{\rm a}}\Longrightarrow{\rm a}\cdot{\rm x}^2-{\rm b}\cdot{\rm x}+{\rm c}={\rm c}-\frac{{\rm b}^2}{4\cdot{\rm a}}\]
-        E notare che, se si trovano le soluzioni:
-        \[{\rm a}\cdot{\rm x}^2-{\rm b}\cdot{\rm x}+{\rm c}={\rm a}\cdot\left({\rm x}-\frac{{\rm b}+\sqrt{{\rm b}^2-4\cdot{\rm a}\cdot{\rm c}}}{2\cdot{\rm a}}\right)\cdot\left({\rm x}-\frac{{\rm b}-\sqrt{{\rm b}^2-4\cdot{\rm a}\cdot{\rm c}}}{2\cdot{\rm a}}\right)\]
+        Richiedendo che i punti
+        <ul>
+            <li>\[{\rm D}={\rm b}_{\rm D}\cdot{\rm B}+{\rm c}_{\rm D}\cdot{\rm C}\]</li>
+            <li>\[{\rm E}={\rm c}_{\rm E}\cdot{\rm C}+{\rm a}_{\rm E}\cdot{\rm A}\]</li>
+            <li>\[{\rm F}={\rm a}_{\rm F}\cdot{\rm A}+{\rm b}_{\rm F}\cdot{\rm B}\]</li>
+        </ul>
+        siano allineati si ottiene:
+        <ul>
+            <li>\[\frac{{\rm a}_{\rm E}}{{\rm a}_{\rm F}}=\frac{{\rm b}_{\rm D}}{{\rm b}_{\rm D}-{\rm b}_{\rm F}}=\frac{{\rm c}_{\rm D}-{\rm c}_{\rm E}}{{\rm c}_{\rm D}}\]</li>
+            <li>\[\frac{{\rm b}_{\rm F}}{{\rm b}_{\rm D}}=\frac{{\rm c}_{\rm E}}{{\rm c}_{\rm E}-{\rm c}_{\rm D}}=\frac{{\rm a}_{\rm E}-{\rm a}_{\rm F}}{{\rm a}_{\rm E}}\]</li>
+            <li>\[\frac{{\rm c}_{\rm D}}{{\rm c}_{\rm E}}=\frac{{\rm a}_{\rm F}}{{\rm a}_{\rm F}-{\rm a}_{\rm E}}=\frac{{\rm b}_{\rm F}-{\rm b}_{\rm D}}{{\rm b}_{\rm F}}\]</li>
+        </ul>
+        <ul>
+            <li>\[\frac{{\rm c}_{\rm D}}{{\rm c}_{\rm E}}\cdot\frac{{\rm b}_{\rm F}}{{\rm b}_{\rm D}}=\left(\frac{{\rm a}_{\rm F}}{{\rm a}_{\rm F}-{\rm a}_{\rm E}}\right)\cdot\left(\frac{{\rm a}_{\rm E}-{\rm a}_{\rm F}}{{\rm a}_{\rm E}}\right)\]</li>
+            <li>\[\frac{{\rm a}_{\rm E}}{{\rm a}_{\rm F}}\cdot\frac{{\rm c}_{\rm D}}{{\rm c}_{\rm E}}=\left(\frac{{\rm b}_{\rm D}}{{\rm b}_{\rm D}-{\rm a}_{\rm F}}\right)\cdot\left(\frac{{\rm b}_{\rm F}-{\rm b}_{\rm D}}{{\rm b}_{\rm F}}\right)\]</li>
+            <li>\[\frac{{\rm b}_{\rm F}}{{\rm b}_{\rm D}}\cdot\frac{{\rm a}_{\rm E}}{{\rm a}_{\rm F}}=\left(\frac{{\rm c}_{\rm E}}{{\rm c}_{\rm E}-{\rm a}_{\rm D}}\right)\cdot\left(\frac{{\rm c}_{\rm D}-{\rm c}_{\rm E}}{{\rm c}_{\rm D}}\right)\]</li>
+        </ul>
+        Da cui segue:
+        \[\left|{\rm D}-{\rm B}\right|\cdot\left|{\rm E}-{\rm C}\right|\cdot\left|{\rm F}-{\rm A}\right|=\left|{\rm D}-{\rm C}\right|\cdot\left|{\rm E}-{\rm A}\right|\cdot\left|{\rm F}-{\rm B}\right|\]
     </div>
     <div class="block R">
-        Siccome:
-        \[\cos\left(2\cdot\alpha\right)=2\cdot\cos\left(\alpha\right)^2-1=1-2\cdot\sin\left(\alpha\right)^2\]
-        Pssiamo ricavare:
-        \[\begin{cases}\cos\left(\frac{\alpha}{2}\right)=\pm\sqrt{\frac{1+\cos\left(\alpha\right)}{2}}\\\sin\left(\frac{\alpha}{2}\right)=\pm\sqrt{\frac{1-\cos\left(\alpha\right)}{2}}\end{cases}\]
-        Da cui il calcolo anticipato sopra:
-        \[\pi=\sup\left(2^{\rm n}\cdot\sin\left(\frac{\pi}{2^{\rm n}}\right)\quad{\rm n}\in{\mathbb N}\right)\]
+        Insomma la formula è la stessa, ma:
+        <ul>
+            <li>con tre ceviane interne si trova l'intersezione nel triangolo.</li>
+            <li>con una ceviana esterna c'è l'allineamento con una retta secante.</li>
+            <li>con una ceviana interna si trova l'intersezione fuori dal triangolo.</li>
+            <li>con tre ceviane esterne c'è l'allineamento con una retta disgiunta.</li>
+        </ul>
     </div>
 </div>
 
 <div class="nav-buttons">
-  <button onclick="prevSlide()">Indietro</button>
-  <a href="../../README.md">Torna all'Indice</a>
-  <button onclick="nextSlide()">Avanti</button>
+    <a href="https://oniramortsam.github.io/MateMath">https://oniramortsam.github.io/MateMath</a>
+    <br>
+    <button onclick="prevSlide()">Indietro</button>
+    <a href="../../">Torna all'Indice</a>
+    <button onclick="nextSlide()">Avanti</button>
 </div>
 
 <script>

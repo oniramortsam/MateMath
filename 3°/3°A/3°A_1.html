@@ -1,0 +1,94 @@
+<head>
+  <meta charset="UTF-8">
+  <title>3° anno: parte A1</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
+<div class="slide active">
+    <h2>ancora la combinatoria</h2>
+    <ol>
+        <li>disposizioni (QNF)</li>
+        <li>permutazioni (???)</li>
+        <li>combinazioni (???)</li>
+    </ul>
+</div>
+
+<div class="slide">
+    <h2>disposizioni</h2>
+    <div class="block Q">
+        Quante sono le funzioni iniettive tra due insiemi?
+    </div>
+    <div class="block N">
+        Diciamo:
+        <ul>
+            <li>\({\cal S}\left({\rm A}\right)\) le permutazioni di \({\rm A}\).</li>
+            <li>\({{\rm n}+1}!={\rm n}!\cdot\left({\rm n}+1\right)\) il fattoriale.</li>
+        </ul>
+        Che \(\left|{\cal S}\left({\rm A}\right)\right|=\left|{\rm A}\right|!\) lo vediamo dopo.
+    </div>
+    <div class="block F">
+        Anzitutto costruiamo:
+        \[\left{{\rm f}\in{\rm B}^{\rm A}\quad\left|\operatorname{Imm}\left({\rm f}\right)\right|=\left|{\rm A}\right|\right}\leftrightarrow\left{{\rm f}\in\left|{\rm B}\right|^{\left|{\rm n}\right|}\quad\left|\operatorname{Imm}\left({\rm f}\right)\right|=\left|{\rm A}\right|\right}\]
+        Dopodichè:
+        \[\left{{\rm f}\in{{\rm m}+1}^{{\rm n}+1}\quad\left|\operatorname{Imm}\left({\rm f}\right)\right|=\left|{\rm n}\right|\right}\leftrightarrow\left({\rm m}+1\right)\times\left{{\rm f}\in{\rm m}^{\rm n}\quad\left|\operatorname{Imm}\left({\rm f}\right)\right|=\left|{\rm n}\right|\right}\]
+        Col seguente criterio:
+        \[\forall{\rm k}\in{\rm n}\quad\begin{cases}{\rm g}_1\left({\rm k}\right)\lt{\rm g}_0\Longrightarrow{\rm f}\left({\rm k}+1\right)={\rm g}_1\left({\rm k}\right)\\{\rm g}_1\left({\rm k}\right)\ge{\rm g}_0\Longrightarrow{\rm f}\left({\rm k}+1\right)={\rm g}_1\left({\rm k}\right)+1\end{cases}\]
+        Da cui si ottiene:
+        \[\left|{\rm f}\in{\rm B}^{\rm A}\quad\left|\operatorname{Imm}\left({\rm f}\right)\right|=\left|{\rm A}\right|\right|=\left(\prod_{\left|{\rm B}\right|-\left|{\rm A}\right|\lt{\rm k}\le\left|{\rm B}\right|}{\rm k}\right)=\frac{\left|{\rm B}\right|!}{\left(\left|{\rm B}\right|-\left|{\rm A}\right|\right)!}\]
+    </div>
+</div>
+
+<div class="slide">
+    <h2>permutazioni</h2>
+    <div class="block N">
+        \[{\cal C}_{\rm n}\left({\rm B}\right)=\left{{\rm f}\in{\mathbb N}^{\rm B}\quad\sum_{{\rm b}\in{\rm B}}{\rm f}\left(\rm B\right)={\rm n}\right}\]
+    </div>
+    <div class="block D">
+        Fissiamo \({\rm f}\in{\rm B}^{\rm A}\):
+        \[\left{\phi\in{\cal S}\left({\rm A}\right)\quad{\rm f}\circ\phi={\rm f}\right}\leftrightarrow\prod_{{\rm b}\in{\rm B}}{\cal S}\left({\rm f}^{-1}\left({\rm b}\right)\right)\]
+        \[\left{\psi\in{\cal S}\left({\rm B}\right)\quad\psi\circ{\rm f}={\rm f}\right}\leftrightarrow{\cal S}\left({\rm B}\setminus\operatorname{Imm}\left({\rm f}\right)\right)\]
+        \[\left|{\rm f}\circ\phi\quad\phi\in{\cal S}\left({\rm A}\right)\right|=\frac{\left|{\rm A}\right|!\cdot\left|{\rm B}\right|!}{\prod_{{\rm b}\in\operatorname{Imm}{\rm f}}\left|{\rm f}^{-1}\left({\rm b}\right)\right|!}\]
+    </div>
+    <div class="block F">
+        Notare che:
+        \[\forall\left({\rm a},{\rm c}\right)\in{\rm A}\times\operatorname{Imm}\left({\rm f}\right)\quad\left|{\rm f}\circ\phi\quad\phi\in{\cal S}\left({\rm A}\right)\land{\rm f}\circ\phi\left({\rm a}\right)={\rm b}\right|=\frac{\left|{\rm A}\right|!\cdot\left|{\rm B}\right|!}{\prod_{{\rm b}\in{\rm b}\in\operatorname{Imm}\left({\rm f}\right)\setminus\left{{\rm c}\right}}\left|{\rm f}^{-1}\left({\rm b}\right)\right|!}\]
+        da cui si ricava stifel.
+    </div>
+</div>
+
+<div class="slide">
+    <h2>combinazioni</h2>
+    Notiamo che:
+    \[\left(\sum_{{\rm k}\in{\rm m}}{\rm a}_{\rm k}\right)^{\rm n}=\sum_{{\rm c}\in{\cal C}_{\rm n}\left({\rm m}\right)}\left(\sum_{{\rm k}\in{\rm m}}\left({\rm a}_{\rm k}\right)^{{\rm c}_{\rm k}}\right)\]
+    Questa cosa si può notare usando stifel:
+</div>
+
+<div class="nav-buttons">
+    <a href="https://oniramortsam.github.io/MateMath">https://oniramortsam.github.io/MateMath</a>
+    <br>
+    <button onclick="prevSlide()">Indietro</button>
+    <a href="../../">Torna all'Indice</a>
+    <button onclick="nextSlide()">Avanti</button>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+</script>

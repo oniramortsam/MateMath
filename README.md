@@ -30,7 +30,7 @@
   - predicati e quantificazione (NSF)
 - <a href="1°/1°B/1°B_2.html">gli insiemi</a>
   - operazioni di insiemi (NFR)
-  - prodotto, equivalenze (NFR)
+  - prodotto: equivalenze (NFR)
   - le funzioni e potenze (NDR)
 - <a href="1°/1°B/1°B_3.html">numerazione</a>
   - unicità della rappresentazione (NDR)
@@ -42,61 +42,61 @@
   - gcd e lcm di naturali (FCR)
 - Slide di riepilogo
 
-## Parte C
-- Slide introduttiva
-- <a href="1°/1°C/1°C_1.html">su angoli e vettori</a>
-  - punti e rette (NFC)
-  - sui triangoli (NFC)
-  - il baricentro (DFR)
-- <a href="1°/1°C/1°C_2.html">triangoli nel piano</a>
-  - ortocentro e altezze (NDF)
-  - circocentro e angoli (DFR)
-  - excentri ed incentro (DFR)
-- <a href="1°/1°C/1°C_3.html">sui triangoli retti</a>
-  - le trigonometriche (QNF)
-  - terema di pitagora (QDC)
-  - approcci analitici (DNF)
-- <a href="1°/1°C/1°C_4.html">chiudiamo il quadro</a>
-  - su angoli e lati di un triangolo (QFC)
-  - le equazioni delle circonferenze (DFR)
-  - prodotto vettoriale nello spazio (NDR)
-- Slide di riepilogo
-
 # 2° anno
 
 ## Parte A
 - Slide introduttiva
-- <a href="2°/2°A/2°A_1.html">dai razionali ai reali</a>
-- <a href="2°/2°A/2°A_2.html">i sistemi di equazioni</a>
-- <a href="2°/2°A/2°A_3.html">divisione tra polinomi</a>
-- <a href="2°/2°A/2°A_4.html">sulle fratte razionali</a>
+- <a href="2°/2°A/2°A_1.html">su angoli e vettori</a>
+  - punti e rette (NFC)
+  - sui triangoli (NFC)
+  - il baricentro (DFR)
+- <a href="2°/2°A/2°A_2.html">triangoli nel piano</a>
+  - ortocentro e altezze (NDF)
+  - circocentro e angoli (DFR)
+  - excentri ed incentro (DFR)
+- <a href="2°/2°A/2°A_3.html">sui triangoli retti</a>
+  - le trigonometriche (QNF)
+  - terema di pitagora (QDC)
+  - angoli e lunghezze (QFC)
+- <a href="2°/2°A/2°A_4.html">chiudiamo il quadro</a>
+  - rette: parametriche e cartesiane (DNF)
+  - le equazioni delle circonferenze (DFR)
+  - prodotto vettoriale nello spazio (NDF)
 - Slide di riepilogo
 
 ## Parte B
 - Slide introduttiva
-- <a href="2°/2°B/2°B_1.html">ancora la combinatoria</a>
-- <a href="2°/2°B/2°B_2.html">le funzioni ed inverse</a>
-- <a href="2°/2°B/2°B_3.html">relazioni, ordinamento</a>
-- Slide di riepilogo
-
-## Parte C
-- Slide introduttiva
-- <a href="2°/2°B/2°C_1.html">logaritmo ed esponenziale</a>
-- <a href="2°/2°B/2°C_2.html">le funzioni goniometriche</a>
-- <a href="2°/2°B/2°C_3.html">la geometria nello spazio</a>
+- <a href="2°/2°B/2°B_1.html">dai razionali ai reali</a>
+  - numeri razionali (NFR)
+  - sui numeri reali (NFR)
+  - equazioni quadre (QFR)
+- <a href="2°/2°B/2°B_2.html">i sistemi di equazioni</a>
+- <a href="2°/2°B/2°B_3.html">divisione tra polinomi</a>
 - Slide di riepilogo
 
 # 3° anno
 
 ## Parte A
 - Slide introduttiva
-- la parabola
-- l'ellisse
-- l'iperbole
-- le coniche
+- <a href="3°/3°A/3°A_1.html">ancora la combinatoria</a>
+- <a href="3°/3°A/3°A_2.html">le funzioni ed inverse</a>
+  - le funzioni e cardinali (NFD)
+  - immagini ed iniettività (NFD)
+  - equivalenze e quozienti (NDS)
+  - risolvere una equazione (???)
+- <a href="3°/3°A/3°A_3.html">relazioni, ordinamento</a>
 - Slide di riepilogo
 
 ## Parte B
+- Slide introduttiva
+- <a href="3°/3°B/3°B_1.html">logaritmo ed esponenziale</a>
+- <a href="3°/3°B/3°B_2.html">le funzioni goniometriche</a>
+- <a href="3°/3°B/3°B_3.html">ellissi parabole iperboli</a>
+- Slide di riepilogo
+
+# 4° anno
+
+## Parte A
 - Slide introduttiva
 - limiti di successioni
 - derivate di funzioni
@@ -104,7 +104,7 @@
 - integrali indefiniti
 - Slide di riepilogo
 
-## Parte C
+## Parte B
 - Slide introduttiva
 - distribuzioni di probabilità
 - probabilità condizionata e Bayes
