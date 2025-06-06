@@ -1,29 +1,28 @@
 # MateMath
 
-# 1° anno
+## 1° anno
 
-## Parte A
-- Slide introduttiva
-- <a href="1°/1°A/1°A_1.html">le operazioni, proprietà</a>
+### Parte A
+
+- <a href="1°/1°A/1°A_1.html">le operazioni, proprietà</a>: <a href="1°/1°A/1°A_1.html" download>SCARICA</a>
   - somma tra naturali (QNF)
   - la moltiplicazione (QNF)
   - sulla distributiva (QFR)
-- <a href="1°/1°A/1°A_2.html">le differenza e naturali</a>
+- <a href="1°/1°A/1°A_2.html">le differenza e naturali</a>: <a href="1°/1°A/1°A_2.html" download>SCARICA</a>
   - sul confronto (QNF)
   - la differenza (QFR)
   - numeri interi (QNF)
-- <a href="1°/1°A/1°A_3.html">divisione e divisibilità</a>
+- <a href="1°/1°A/1°A_3.html">divisione e divisibilità</a>: <a href="1°/1°A/1°A_3.html" download>SCARICA</a>
   - la divisione intera euclidea (QNF)
   - le proprietà della divisione (QFR)
   - sguardo sui numeri razionali (QNF)
-- <a href="1°/1°A/1°A_4.html">potenze di numeri interi</a>
+- <a href="1°/1°A/1°A_4.html">potenze di numeri interi</a>: <a href="1°/1°A/1°A_4.html" download>SCARICA</a>
   - potenze e proprietà (QNF)
   - la serie geometrica (QFC)
   - le sommatorie serie (NDF)
-- Slide di riepilogo
 
-## Parte B
-- Slide introduttiva
+### Parte B
+
 - <a href="1°/1°B/1°B_1.html">i predicati</a>
   - congiunzione e disgiunzione (NFR)
   - le tautologie e gli assurdi (DNS)
@@ -40,12 +39,11 @@
   - l'algoritmo di bezout (NQD)
   - fattorizzazione unica (NDF)
   - gcd e lcm di naturali (FCR)
-- Slide di riepilogo
 
-# 2° anno
+## 2° anno
 
-## Parte A
-- Slide introduttiva
+### Parte A
+
 - <a href="2°/2°A/2°A_1.html">su angoli e vettori</a>
   - punti e rette (NFC)
   - sui triangoli (NFC)
@@ -62,10 +60,9 @@
   - rette: parametriche e cartesiane (DNF)
   - le equazioni delle circonferenze (DFR)
   - prodotto vettoriale nello spazio (NDR)
-- Slide di riepilogo
 
-## Parte B
-- Slide introduttiva
+### Parte B
+
 - <a href="2°/2°B/2°B_1.html">dai razionali ai reali</a>
   - numeri razionali (NFR)
   - sui numeri reali (NFR)
@@ -79,12 +76,14 @@
   - zeri e divisori (DFR)
   - fratti semplici (NFR)
 - <a href="2°/2°B/2°B_4.html">geometria nello spazio</a>
-- Slide di riepilogo
+  - punti (QFR)
+  - piani (QFR)
+  - rette (DFR)
 
-# 3° anno
+## 3° anno
 
-## Parte A
-- Slide introduttiva
+### Parte A
+
 - <a href="3°/3°A/3°A_1.html">le funzioni ed inverse</a>
   - le funzioni e cardinali (NFD)
   - immagini ed iniettività (NFD)
@@ -98,12 +97,30 @@
   - limiti e la continuità (NFS)
   - risolvere un'equazione (DFS)
 - <a href="3°/3°B/3°A_4.html">le funzioni elementari</a>
-- Slide di riepilogo
+  - ancora le goniometriche (NFR)
+  - le funzioni iperboliche (NFR)
+  - le tangenti iperboliche (NFR)
 
-## Parte B
-- Slide introduttiva
+### Parte B
+
 - <a href="3°/3°B/3°B_1.html">coniche nel piano</a>
+  - ()
+  - ()
+  - ()
+  - ()
 - <a href="3°/3°B/3°B_2.html">limiti e derivate</a>
+  - ()
+  - ()
+  - ()
+  - ()
 - <a href="3°/3°B/3°B_3.html">calcolo integrale</a>
+  - ()
+  - ()
+  - ()
+  - ()
 - <a href="3°/3°B/3°B_4.html">sulla probabilità</a>
-- Slide di riepilogo
+  - ()
+  - ()
+  - ()
+  - ()
+

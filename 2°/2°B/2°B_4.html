@@ -9,43 +9,79 @@
 <div class="slide active">
     <h2>geometria nello spazio</h2>
     <ol>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>punti (QFR)</li>
+        <li>piani (QFR)</li>
+        <li>rette (DFR)</li>
     </ol>
 </div>
 
 <div class="slide">
-    <div class="block F">
-        Dati due punti nello spazio, i piano che passano per quei punti si trovano risolvendo l'omogenea:
-        \[\begin{cases}{\rm a}\cdot{\rm x}_0+{\rm b}\cdot{\rm y}_0+{\rm c}\cdot{\rm z}_0+{\rm d}=0\\{\rm a}\cdot{\rm x}_1+{\rm b}\cdot{\rm y}_1+{\rm c}\cdot{\rm z}_1+{\rm d}=0\end{cases}\]
-        Mentre la direzione della retta che li congiunge è semplicemente:
-        \[\begin{cases}{\rm x}={\rm k}\cdot\left({\rm x}_1-{\rm x}_0\right)\\{\rm y}={\rm k}\cdot\left({\rm y}_1-{\rm y}_0\right)\cdot{\rm h}\\{\rm c}={\rm c}_0\cdot{\rm k}+{\rm c}_1\cdot{\rm h}\\{\rm d}={\rm d}_0\cdot{\rm k}+{\rm d}_1\cdot{\rm h}\end{cases}\]
+    <h2>punti</h2>
+    <div class="block Q">
+        <ul>
+            <li>Dati due punti nello spazio, si trova la retta che li congiunge: \[\begin{cases}{\rm a}\cdot{\rm x}_{\rm P}+{\rm b}\cdot{\rm y}_{\rm P}+{\rm c}\cdot{\rm z}_{\rm P}+{\rm d}=0\\{\rm a}\cdot{\rm x}_{\rm Q}+{\rm b}\cdot{\rm y}_{\rm Q}+{\rm c}\cdot{\rm z}_{\rm Q}+{\rm d}=0\end{cases}\]</li>
+            <li>Dati tre punti non allineati nello spazio, si trova il piano che passa per quei punti: \[\begin{cases}{\rm a}\cdot{\rm x}_{\rm P}+{\rm b}\cdot{\rm y}_{\rm P}+{\rm c}\cdot{\rm z}_{\rm P}+{\rm d}=0\\{\rm a}\cdot{\rm x}_{\rm Q}+{\rm b}\cdot{\rm y}_{\rm Q}+{\rm c}\cdot{\rm z}_{\rm Q}+{\rm d}=0\\{\rm a}\cdot{\rm x}_{\rm R}+{\rm b}\cdot{\rm y}_{\rm R}+{\rm c}\cdot{\rm z}_{\rm R}+{\rm d}=0\end{cases}\]</li>
+            <li>Dati una retta ed un punto nello spazio, si trova il piano passante per entrambi: \[\left({\rm k}\cdot{\rm a}_0+{\rm h}\cdot{\rm a}_1\right)\cdot{\rm x}+\left({\rm k}\cdot{\rm b}_0+{\rm h}\cdot{\rm b}_1\right)\cdot{\rm y}+\left({\rm k}\cdot{\rm c}_0+{\rm h}\cdot{\rm c}_1\right)\cdot{\rm z}+\left({\rm k}\cdot{\rm d}_0+{\rm h}\cdot{\rm d}_1\right)=0\Longrightarrow\begin{cases}{\rm a}={\rm k}\cdot{\rm a}_0+{\rm h}\cdot{\rm a}_1\\{\rm b}={\rm k}\cdot{\rm b}_0+{\rm h}\cdot{\rm b}_1\\{\rm c}={\rm k}\cdot{\rm c}_0+{\rm h}\cdot{\rm c}_1\\{\rm d}={\rm k}\cdot{\rm d}_0+{\rm h}\cdot{\rm d}_1\end{cases}\]</li>
+        </ul>
     </div>
     <div class="block F">
-        Dati tre punti nello spazio, il piano che passa per quei punti si trova risolvendo l'omogenea:
-        \[\begin{cases}{\rm a}\cdot{\rm x}_0+{\rm b}\cdot{\rm y}_0+{\rm c}\cdot{\rm z}_0+{\rm d}=0\\{\rm a}\cdot{\rm x}_1+{\rm b}\cdot{\rm y}_1+{\rm c}\cdot{\rm z}_1+{\rm d}=0\\{\rm a}\cdot{\rm x}_2+{\rm b}\cdot{\rm y}_2+{\rm c}\cdot{\rm z}_2+{\rm d}=0\end{cases}\]
-        Se questi sono allineati, dalle equazioni si ottiene un fascio di piani passante per la retta che li congiunge:
-        \[\begin{cases}{\rm a}={\rm a}_0\cdot{\rm k}+{\rm a}_1\cdot{\rm h}\\{\rm b}={\rm b}_0\cdot{\rm k}+{\rm b}_1\cdot{\rm h}\\{\rm c}={\rm c}_0\cdot{\rm k}+{\rm c}_1\cdot{\rm h}\\{\rm d}={\rm d}_0\cdot{\rm k}+{\rm d}_1\cdot{\rm h}\end{cases}\]
+        <ul>
+            <li>Dati tre punti non allineati nello spazio, si trova il piano che passa per quei punti: \[\begin{cases}{\rm a}={\rm y}_{\rm P}\cdot{\rm z}_{\rm Q}+{\rm y}_{\rm Q}\cdot{\rm z}_{\rm R}+{\rm y}_{\rm R}\cdot{\rm z}_{\rm P}-{\rm z}_{\rm P}\cdot{\rm y}_{\rm Q}-{\rm z}_{\rm Q}\cdot{\rm y}_{\rm R}-{\rm z}_{\rm R}\cdot{\rm y}_{\rm P}\\{\rm b}={\rm z}_{\rm P}\cdot{\rm x}_{\rm Q}+{\rm z}_{\rm Q}\cdot{\rm x}_{\rm R}+{\rm z}_{\rm R}\cdot{\rm x}_{\rm P}-{\rm x}_{\rm P}\cdot{\rm z}_{\rm Q}-{\rm x}_{\rm Q}\cdot{\rm z}_{\rm R}-{\rm x}_{\rm R}\cdot{\rm z}_{\rm P}\\{\rm c}={\rm x}_{\rm P}\cdot{\rm y}_{\rm Q}+{\rm x}_{\rm Q}\cdot{\rm y}_{\rm R}+{\rm x}_{\rm R}\cdot{\rm y}_{\rm P}-{\rm y}_{\rm P}\cdot{\rm x}_{\rm Q}-{\rm y}_{\rm Q}\cdot{\rm x}_{\rm R}-{\rm y}_{\rm R}\cdot{\rm x}_{\rm P}\\{\rm d}={\rm x}_{\rm P}\cdot{\rm y}_{\rm Q}\cdot{\rm z}_{\rm R}+{\rm x}_{\rm Q}\cdot{\rm y}_{\rm R}\cdot{\rm z}_{\rm P}+{\rm x}_{\rm R}\cdot{\rm y}_{\rm P}\cdot{\rm z}_{\rm Q}-{\rm z}_{\rm P}\cdot{\rm y}_{\rm Q}\cdot{\rm x}_{\rm R}-{\rm z}_{\rm Q}\cdot{\rm y}_{\rm R}\cdot{\rm x}_{\rm P}-{\rm z}_{\rm R}\cdot{\rm y}_{\rm P}\cdot{\rm x}_{\rm Q}\end{cases}\]</li>
+            <li>Dati due punti nello spazio, si trova la retta che li congiunge: \[\begin{cases}{\rm x}={\rm t}\cdot{\rm x}_{\rm Q}+\left({\rm t}-1\right)\cdot{\rm x}_{\rm P}\\{\rm y}={\rm t}\cdot{\rm y}_{\rm Q}+\left({\rm t}-1\right)\cdot{\rm y}_{\rm P}\\{\rm z}={\rm t}\cdot{\rm z}_{\rm Q}+\left({\rm t}-1\right)\cdot{\rm z}_{\rm P}\end{cases}\]</li>
+            <li>Dati una retta ed un punto nello spazio, si trova il piano passante per entrambi: \[\begin{cases}{\rm a}=\left({\rm y}-{\rm y}_{\rm P}\right)\cdot{\rm z}_{\rm u}-\left({\rm z}-{\rm z}_{\rm P}\right)\cdot{\rm y}_{\rm u}\\{\rm b}=\left({\rm z}-{\rm z}_{\rm P}\right)\cdot{\rm x}_{\rm u}-\left({\rm x}-{\rm x}_{\rm P}\right)\cdot{\rm z}_{\rm u}\\{\rm c}=\left({\rm x}-{\rm x}_{\rm P}\right)\cdot{\rm y}_{\rm u}-\left({\rm y}-{\rm y}_{\rm P}\right)\cdot{\rm x}_{\rm u}\\{\rm d}={\rm x}\cdot{\rm y}_{\rm P}\cdot{\rm z}_{\rm u}+{\rm y}\cdot{\rm z}_{\rm P}\cdot{\rm x}_{\rm u}+{\rm z}\cdot{\rm x}_{\rm P}\cdot{\rm y}_{\rm u}-{\rm z}\cdot{\rm y}_{\rm P}\cdot{\rm x}_{\rm u}+{\rm y}\cdot{\rm x}_{\rm P}\cdot{\rm z}_{\rm u}+{\rm x}\cdot{\rm z}_{\rm P}\cdot{\rm y}_{\rm u}\end{cases}\]</li>
+        </ul>
     </div>
-    <div class="block F">
-        Dati due piani nello spazio, la loro retta di intersezione si trova risolvendo:
-        \[\begin{cases}{\rm a}_0\cdot{\rm x}+{\rm b}_0\cdot{\rm y}+{\rm c}_0\cdot{\rm z}+{\rm d}_0=0\\{\rm a}_1\cdot{\rm x}+{\rm b}_1\cdot{\rm y}+{\rm c}_1\cdot{\rm z}+{\rm d}_1=0\end{cases}\]
-        Se questi non sono paralleli, si può trovare la direzione risolvendo l'omogenea:
-        \[\begin{cases}{\rm a}_0\cdot{\rm x}+{\rm b}_0\cdot{\rm y}+{\rm c}_0\cdot{\rm z}=0\\{\rm a}_1\cdot{\rm x}+{\rm b}_1\cdot{\rm y}+{\rm c}_1\cdot{\rm z}=0\end{cases}\]
-    </div>
-    <div class="block F">
-        Dati tre piani nello spazio, la loro intersezione si trova risolvendo:
-        \[\begin{cases}{\rm a}_0\cdot{\rm x}+{\rm b}_0\cdot{\rm y}+{\rm c}_0\cdot{\rm z}+{\rm d}_0=0\\{\rm a}_1\cdot{\rm x}+{\rm b}_1\cdot{\rm y}+{\rm c}_1\cdot{\rm z}+{\rm d}_1=0\\{\rm a}_2\cdot{\rm x}+{\rm b}_2\cdot{\rm y}+{\rm c}_2\cdot{\rm z}+{\rm d}_2=0\end{cases}\]
-        Se questa è una retta, si può trovare la direzione risolvendo l'omogenea:
-        \[\begin{cases}{\rm a}_0\cdot{\rm x}+{\rm b}_0\cdot{\rm y}+{\rm c}_0\cdot{\rm z}=0\\{\rm a}_1\cdot{\rm x}+{\rm b}_1\cdot{\rm y}+{\rm c}_1\cdot{\rm z}=0\\{\rm a}_2\cdot{\rm x}+{\rm b}_2\cdot{\rm y}+{\rm c}_2\cdot{\rm z}=0\end{cases}\]
+    <div class="block R">
+        La distanza tra due punti si calcola come: \[\sqrt{\left({\rm x}_{\rm Q}-{\rm x}_{\rm P}\right)^2+\left({\rm y}_{\rm Q}-{\rm y}_{\rm P}\right)^2+\left({\rm z}_{\rm Q}-{\rm z}_{\rm P}\right)^2}\]
     </div>
 </div>
 
 <div class="slide">
+    <h2>piani</h2>
+    <div class="block Q">
+        <ul>
+            <li>Dati due piani nello spazio, si trova la loro retta di intersezione: \[\begin{cases}{\rm a}_0\cdot{\rm x}+{\rm b}_0\cdot{\rm y}+{\rm c}_0\cdot{\rm z}+{\rm d}_0=0\\{\rm a}_1\cdot{\rm x}+{\rm b}_1\cdot{\rm y}+{\rm c}_1\cdot{\rm z}+{\rm d}_1=0\end{cases}\]</li>
+            <li>Dati tre piani nello spazio, si trova la loro intersezione: \[\begin{cases}{\rm a}_0\cdot{\rm x}+{\rm b}_0\cdot{\rm y}+{\rm c}_0\cdot{\rm z}+{\rm d}_0=0\\{\rm a}_1\cdot{\rm x}+{\rm b}_1\cdot{\rm y}+{\rm c}_1\cdot{\rm z}+{\rm d}_1=0\\{\rm a}_2\cdot{\rm x}+{\rm b}_2\cdot{\rm y}+{\rm c}_2\cdot{\rm z}+{\rm d}_2=0\end{cases}\]</li>
+            <li>Dati una retta ed un piano nello spazio, si trova l'intersezione: \[\begin{cases}{\rm a}_0\cdot{\rm x}+{\rm b}_0\cdot{\rm y}+{\rm c}_0\cdot{\rm z}+{\rm d}_0=0\\{\rm a}_1\cdot{\rm x}+{\rm b}_1\cdot{\rm y}+{\rm c}_1\cdot{\rm z}+{\rm d}_1=0\\{\rm a}\cdot{\rm x}+{\rm b}\cdot{\rm y}+{\rm c}\cdot{\rm z}+{\rm d}=0\end{cases}\]</li>
+        </ul>
+    </div>
+    <div class="block F">
+        <ul>
+            <li>Dati due piani nello spazio, si trova la loro retta di intersezione: \[\begin{cases}{\rm x}_{\rm u}={\rm b}_0\cdot{\rm c}_1-{\rm b}_1\cdot{\rm c}_0\\{\rm y}_{\rm u}={\rm c}_0\cdot{\rm a}_1-{\rm c}_1\cdot{\rm a}_0\\{\rm z}_{\rm u}={\rm a}_0\cdot{\rm b}_1-{\rm a}_1\cdot{\rm b}_0\end{cases}\]</li>
+            <li>Dati tre piani nello spazio, si trova la loro intersezione: \[\begin{cases}{\rm x}=-\frac{{\rm d}_0\cdot{\rm b}_1\cdot{\rm c}_2+{\rm b}_0\cdot{\rm c}_1\cdot{\rm d}_2+{\rm c}_0\cdot{\rm d}_1\cdot{\rm b}_2-{\rm c}_0\cdot{\rm b}_1\cdot{\rm d}_2-{\rm b}_0\cdot{\rm d}_1\cdot{\rm c}_2-{\rm d}_0\cdot{\rm c}_1\cdot{\rm b}_2}{{\rm a}_0\cdot{\rm b}_1\cdot{\rm c}_2+{\rm b}_0\cdot{\rm c}_1\cdot{\rm a}_2+{\rm c}_0\cdot{\rm a}_1\cdot{\rm b}_2-{\rm c}_0\cdot{\rm b}_1\cdot{\rm a}_2-{\rm b}_0\cdot{\rm a}_1\cdot{\rm c}_2-{\rm a}_0\cdot{\rm c}_1\cdot{\rm b}_2}\\{\rm y}=-\frac{{\rm a}_0\cdot{\rm d}_1\cdot{\rm c}_2+{\rm d}_0\cdot{\rm c}_1\cdot{\rm a}_2+{\rm c}_0\cdot{\rm a}_1\cdot{\rm d}_2-{\rm c}_0\cdot{\rm d}_1\cdot{\rm a}_2-{\rm d}_0\cdot{\rm a}_1\cdot{\rm c}_2-{\rm a}_0\cdot{\rm c}_1\cdot{\rm d}_2}{{\rm a}_0\cdot{\rm b}_1\cdot{\rm c}_2+{\rm b}_0\cdot{\rm c}_1\cdot{\rm a}_2+{\rm c}_0\cdot{\rm a}_1\cdot{\rm b}_2-{\rm c}_0\cdot{\rm b}_1\cdot{\rm a}_2-{\rm b}_0\cdot{\rm a}_1\cdot{\rm c}_2-{\rm a}_0\cdot{\rm c}_1\cdot{\rm b}_2}\\{\rm z}=-\frac{{\rm a}_0\cdot{\rm b}_1\cdot{\rm d}_2+{\rm b}_0\cdot{\rm d}_1\cdot{\rm a}_2+{\rm d}_0\cdot{\rm a}_1\cdot{\rm b}_2-{\rm d}_0\cdot{\rm b}_1\cdot{\rm a}_2-{\rm b}_0\cdot{\rm a}_1\cdot{\rm d}_2-{\rm a}_0\cdot{\rm d}_1\cdot{\rm b}_2}{{\rm a}_0\cdot{\rm b}_1\cdot{\rm c}_2+{\rm b}_0\cdot{\rm c}_1\cdot{\rm a}_2+{\rm c}_0\cdot{\rm a}_1\cdot{\rm b}_2-{\rm c}_0\cdot{\rm b}_1\cdot{\rm a}_2-{\rm b}_0\cdot{\rm a}_1\cdot{\rm c}_2-{\rm a}_0\cdot{\rm c}_1\cdot{\rm b}_2}\end{cases}\]</li>
+            <li>Dati una retta ed un piano nello spazio, si trova l'intersezione: \[{\rm t}=-\frac{{\rm a}\cdot{\rm x}_{\rm u}+{\rm b}\cdot{\rm y}_{\rm u}+{\rm c}\cdot{\rm z}_{\rm u}+{\rm d}}{{\rm a}\cdot{\rm x}_{\rm P}+{\rm b}\cdot{\rm y}_{\rm P}+{\rm c}\cdot{\rm z}_{\rm P}+{\rm d}}\Longrightarrow\begin{cases}{\rm x}={\rm x}_{\rm P}+{\rm t}\cdot{\rm x}_{\rm u}\\{\rm y}={\rm y}_{\rm P}+{\rm t}\cdot{\rm y}_{\rm u}\\{\rm z}={\rm z}_{\rm P}+{\rm t}\cdot{\rm z}_{\rm u}\end{cases}\]</li>
+        </ul>
+    </div>
+    <div class="block F">
+        La distanza tra due piani paralleli si calcola come:
+        \[\frac{\left|{\rm d}_1-{\rm d}_0\right|}{\sqrt{{\rm a}^2+{\rm b}^2+{\rm c}^2}}\]
+    </div>
 </div>
 
 <div class="slide">
+    <h2>rette</h2>
+    <div class="block D">
+        Date due rette nello spazio, si trova la direzione del piano parallelo ad entrambe:
+        <ul>
+            <li>\[\begin{cases}{\rm a}={\rm y}_{\rm u}\cdot{\rm z}_{\rm v}-{\rm z}_{\rm u}\cdot{\rm y}_{\rm v}\\{\rm b}={\rm z}_{\rm u}\cdot{\rm x}_{\rm v}-{\rm x}_{\rm u}\cdot{\rm z}_{\rm v}\\{\rm c}={\rm x}_{\rm u}\cdot{\rm y}_{\rm v}-{\rm y}_{\rm u}\cdot{\rm x}_{\rm v}\end{cases}\]</li>
+            <li>\[{\rm k}_0\cdot\left({\rm a}_{0,0}\cdot{\rm x}_{\rm v}+{\rm b}_{0,0}\cdot{\rm y}_{\rm v}+{\rm c}_{0,0}\cdot{\rm z}_{\rm v}\right)+{\rm h}_0\cdot\left({\rm a}_{0,1}\cdot{\rm x}_{\rm v}+{\rm b}_{0,1}\cdot{\rm y}_{\rm v}+{\rm c}_{0,1}\cdot{\rm z}_{\rm v}\right)=0\Longrightarrow\begin{cases}{\rm a}={\rm k}_0\cdot{\rm a}_{0,0}+{\rm h}_0\cdot{\rm a}_{0,1}\\{\rm b}={\rm k}_0\cdot{\rm b}_{0,0}+{\rm h}_0\cdot{\rm b}_{0,1}\\{\rm c}={\rm k}_0\cdot{\rm c}_{0,0}+{\rm h}_0\cdot{\rm c}_{0,1}\\{\rm d}_0={\rm k}_0\cdot{\rm d}_{0,0}+{\rm h}_0\cdot{\rm d}_{0,1}\end{cases}\]</li>
+            <li>\[{\rm k}_1\cdot\left({\rm a}_{1,0}\cdot{\rm x}_{\rm u}+{\rm b}_{1,0}\cdot{\rm y}_{\rm u}+{\rm c}_{1,0}\cdot{\rm z}_{\rm u}\right)+{\rm h}_1\cdot\left({\rm a}_{1,1}\cdot{\rm x}_{\rm u}+{\rm b}_{1,1}\cdot{\rm y}_{\rm u}+{\rm c}_{1,1}\cdot{\rm z}_{\rm u}\right)=0\Longrightarrow\begin{cases}{\rm a}={\rm k}_1\cdot{\rm a}_{1,0}+{\rm h}_1\cdot{\rm a}_{1,1}\\{\rm b}={\rm k}_1\cdot{\rm b}_{1,0}+{\rm h}_1\cdot{\rm b}_{1,1}\\{\rm c}={\rm k}_1\cdot{\rm c}_{1,0}+{\rm h}_1\cdot{\rm c}_{1,1}\\{\rm d}_1={\rm k}_1\cdot{\rm d}_{1,0}+{\rm h}_1\cdot{\rm d}_{1,1}\end{cases}\]</li>
+            <li>\[\begin{cases}{\rm a}={\rm k}_0\cdot{\rm a}_{0,0}+{\rm h}_0\cdot{\rm a}_{0,1}={\rm k}_1\cdot{\rm a}_{1,0}+{\rm h}_1\cdot{\rm a}_{1,1}\\{\rm b}={\rm k}_0\cdot{\rm b}_{0,0}+{\rm h}_0\cdot{\rm b}_{0,1}={\rm k}_1\cdot{\rm b}_{1,0}+{\rm h}_1\cdot{\rm b}_{1,1}\\{\rm c}={\rm k}_0\cdot{\rm c}_{0,0}+{\rm h}_0\cdot{\rm c}_{0,1}={\rm k}_1\cdot{\rm c}_{1,0}+{\rm h}_1\cdot{\rm c}_{1,1}\end{cases}\]</li>
+        </ul>
+    </div>
+    <div class="block F">
+        E la retta incidente entrambe e perpendicolare a tale piano:
+        <ul>
+            <li>\begin{cases}{\rm a}_{0,0}\cdot\left({\rm x}+{\rm t}_0\cdot{\rm a}\right)+{\rm b}_{0,0}\cdot\left({\rm y}+{\rm t}_0\cdot{\rm b}\right)+{\rm c}_{0,0}\cdot\left({\rm z}+{\rm t}_0\cdot{\rm c}\right)+{\rm d}_{0,0}=0\\{\rm a}_{0,1}\cdot\left({\rm x}+{\rm t}_0\cdot{\rm a}\right)+{\rm b}_{0,1}\cdot\left({\rm y}+{\rm t}_0\cdot{\rm b}\right)+{\rm c}_{0,1}\cdot\left({\rm z}+{\rm t}_0\cdot{\rm c}\right)+{\rm d}_{0,1}=0\\{\rm a}_{1,0}\cdot\left({\rm x}+{\rm t}_1\cdot{\rm a}\right)+{\rm b}_{1,0}\cdot\left({\rm y}+{\rm t}_1\cdot{\rm b}\right)+{\rm c}_{1,0}\cdot\left({\rm z}+{\rm t}_1\cdot{\rm c}\right)+{\rm d}_{1,0}=0\\{\rm a}_{1,1}\cdot\left({\rm x}+{\rm t}_1\cdot{\rm a}\right)+{\rm b}_{1,1}\cdot\left({\rm y}+{\rm t}_1\cdot{\rm b}\right)+{\rm c}_{1,1}\cdot\left({\rm z}+{\rm t}_1\cdot{\rm c}\right)+{\rm d}_{1,1}=0\end{cases}</li>
+            <li>\begin{cases}{\rm a}_{0,0}\cdot\left({\rm x}+{\rm t}_0\cdot{\rm a}\right)+{\rm b}_{0,0}\cdot\left({\rm y}+{\rm t}_0\cdot{\rm b}\right)+{\rm c}_{0,0}\cdot\left({\rm z}+{\rm t}_0\cdot{\rm c}\right)+{\rm d}_{0,0}=0\\{\rm a}_{0,1}\cdot\left({\rm x}+{\rm t}_0\cdot{\rm a}\right)+{\rm b}_{0,1}\cdot\left({\rm y}+{\rm t}_0\cdot{\rm b}\right)+{\rm c}_{0,1}\cdot\left({\rm z}+{\rm t}_0\cdot{\rm c}\right)+{\rm d}_{0,1}=0\\{\rm x}+{\rm t}_1\cdot{\rm a}={\rm x}_{\rm Q}+{\rm s}_1\cdot{\rm x}_{\rm v}\\{\rm y}+{\rm t}_1\cdot{\rm b}={\rm y}_{\rm Q}+{\rm s}_1\cdot{\rm y}_{\rm v}\\{\rm z}+{\rm t}_1\cdot{\rm c}={\rm z}_{\rm Q}+{\rm s}_1\cdot{\rm z}_{\rm v}\end{cases}</li>
+            <li>\begin{cases}{\rm x}+{\rm t}_0\cdot{\rm a}={\rm x}_{\rm P}+{\rm s}_0\cdot{\rm x}_{\rm u}\\{\rm y}+{\rm t}_0\cdot{\rm b}={\rm y}_{\rm P}+{\rm s}_0\cdot{\rm y}_{\rm u}\\{\rm z}+{\rm t}_0\cdot{\rm c}={\rm z}_{\rm P}+{\rm s}_0\cdot{\rm z}_{\rm u}\\{\rm a}_{1,0}\cdot\left({\rm x}+{\rm t}_1\cdot{\rm a}\right)+{\rm b}_{1,0}\cdot\left({\rm y}+{\rm t}_1\cdot{\rm b}\right)+{\rm c}_{1,0}\cdot\left({\rm z}+{\rm t}_1\cdot{\rm c}\right)+{\rm d}_{1,0}=0\\{\rm a}_{1,1}\cdot\left({\rm x}+{\rm t}_1\cdot{\rm a}\right)+{\rm b}_{1,1}\cdot\left({\rm y}+{\rm t}_1\cdot{\rm b}\right)+{\rm c}_{1,1}\cdot\left({\rm z}+{\rm t}_1\cdot{\rm c}\right)+{\rm d}_{1,1}=0\end{cases}</li>
+            <li>\begin{cases}{\rm x}+{\rm t}_0\cdot{\rm a}={\rm x}_{\rm P}+{\rm s}_0\cdot{\rm x}_{\rm u}\\{\rm y}+{\rm t}_0\cdot{\rm b}={\rm y}_{\rm P}+{\rm s}_0\cdot{\rm y}_{\rm u}\\{\rm z}+{\rm t}_0\cdot{\rm c}={\rm z}_{\rm P}+{\rm s}_0\cdot{\rm z}_{\rm u}\\{\rm x}+{\rm t}_1\cdot{\rm a}={\rm x}_{\rm Q}+{\rm s}_1\cdot{\rm x}_{\rm v}\\{\rm y}+{\rm t}_1\cdot{\rm b}={\rm y}_{\rm Q}+{\rm s}_1\cdot{\rm y}_{\rm v}\\{\rm z}+{\rm t}_1\cdot{\rm c}={\rm z}_{\rm Q}+{\rm s}_1\cdot{\rm z}_{\rm v}\end{cases}</li>
+        </ul>
+    </div>
+    <div class="block R">
+        La distanza tra le due rette si calcola come:
+        \[\left|{\rm t}_1-{\rm t}_0\right|\cdot\sqrt{{\rm a}^2+{\rm b}^2+{\rm c}^2}=\frac{\left|{\rm d}_1-{\rm d}_0\right|}{\sqrt{{\rm a}^2+{\rm b}^2+{\rm c}^2}}\]
+    </div>
 </div>
 
 <div class="nav-buttons">
