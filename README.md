@@ -4,19 +4,19 @@
 
 ### Parte A
 
-- <a href="1°/1°A/1°A_1.html">le operazioni, proprietà</a>: <a href="1°/1°A/1°A_1.html" download>SCARICA</a>
+- <a href="1°/1°A/1°A_1.html">le operazioni, proprietà</a>
   - somma tra naturali (QNF)
   - la moltiplicazione (QNF)
   - sulla distributiva (QFR)
-- <a href="1°/1°A/1°A_2.html">le differenza e naturali</a>: <a href="1°/1°A/1°A_2.html" download>SCARICA</a>
+- <a href="1°/1°A/1°A_2.html">le differenza e naturali</a>
   - sul confronto (QNF)
   - la differenza (QFR)
   - numeri interi (QNF)
-- <a href="1°/1°A/1°A_3.html">divisione e divisibilità</a>: <a href="1°/1°A/1°A_3.html" download>SCARICA</a>
+- <a href="1°/1°A/1°A_3.html">divisione e divisibilità</a>
   - la divisione intera euclidea (QNF)
   - le proprietà della divisione (QFR)
   - sguardo sui numeri razionali (QNF)
-- <a href="1°/1°A/1°A_4.html">potenze di numeri interi</a>: <a href="1°/1°A/1°A_4.html" download>SCARICA</a>
+- <a href="1°/1°A/1°A_4.html">potenze di numeri interi</a>
   - potenze e proprietà (QNF)
   - la serie geometrica (QFC)
   - le sommatorie serie (NDF)
@@ -104,23 +104,22 @@
 ### Parte B
 
 - <a href="3°/3°B/3°B_1.html">coniche nel piano</a>
-  - ()
-  - ()
-  - ()
-  - ()
+  - gli ellissi cartesiani ()
+  - le parabole cartesiane ()
+  - le iperboli cartesiane ()
+  - raccogliere i quadrati ()
 - <a href="3°/3°B/3°B_2.html">limiti e derivate</a>
-  - ()
-  - ()
-  - ()
-  - ()
+  - i limiti ()
+  - derivate ()
+  - prodotto ()
+  - composta ()
 - <a href="3°/3°B/3°B_3.html">calcolo integrale</a>
-  - ()
-  - ()
-  - ()
-  - ()
+  - fondamentale integrale ()
+  - integrazione per parti ()
+  - i metodi delle sezioni ()
+  - gli integrali impropri ()
 - <a href="3°/3°B/3°B_4.html">sulla probabilità</a>
-  - ()
-  - ()
-  - ()
-  - ()
-
+  - la media e la varianza ()
+  - distribuzioni notevoli ()
+  - distribuzione di gauss ()
+  - elementi di statistica ()
