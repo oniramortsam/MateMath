@@ -61,7 +61,7 @@
 - <a href="2°/2°A/2°A_4.html">chiudiamo il quadro</a>
   - rette: parametriche e cartesiane (DNF)
   - le equazioni delle circonferenze (DFR)
-  - prodotto vettoriale nello spazio (NDF)
+  - prodotto vettoriale nello spazio (NDR)
 - Slide di riepilogo
 
 ## Parte B
@@ -71,43 +71,39 @@
   - sui numeri reali (NFR)
   - equazioni quadre (QFR)
 - <a href="2°/2°B/2°B_2.html">i sistemi di equazioni</a>
+  - due variabili (QFR)
+  - le proiettive (NFR)
+  - tre variabili (QFR)
 - <a href="2°/2°B/2°B_3.html">divisione tra polinomi</a>
+  - polinomi: grado (NDF)
+  - zeri e divisori (DFR)
+  - fratti semplici (NFR)
+- <a href="2°/2°B/2°B_4.html">geometria nello spazio</a>
 - Slide di riepilogo
 
 # 3° anno
 
 ## Parte A
 - Slide introduttiva
-- <a href="3°/3°A/3°A_1.html">ancora la combinatoria</a>
-- <a href="3°/3°A/3°A_2.html">le funzioni ed inverse</a>
+- <a href="3°/3°A/3°A_1.html">le funzioni ed inverse</a>
   - le funzioni e cardinali (NFD)
   - immagini ed iniettività (NFD)
   - equivalenze e quozienti (NDS)
-  - risolvere una equazione (???)
-- <a href="3°/3°A/3°A_3.html">relazioni, ordinamento</a>
+- <a href="3°/3°B/3°B_2.html">ancora la combinatoria</a>
+  - disposizioni (QNF)
+  - combinazioni (QNF)
+  - permutazioni (DFN)
+- <a href="3°/3°A/3°A_3.html">relazioni: ordinamento</a>
+  - relazioni: ordinamenti (NFC)
+  - limiti e la continuità (NFS)
+  - risolvere un'equazione (DFS)
+- <a href="3°/3°B/3°A_4.html">le funzioni elementari</a>
 - Slide di riepilogo
 
 ## Parte B
 - Slide introduttiva
-- <a href="3°/3°B/3°B_1.html">logaritmo ed esponenziale</a>
-- <a href="3°/3°B/3°B_2.html">le funzioni goniometriche</a>
-- <a href="3°/3°B/3°B_3.html">ellissi parabole iperboli</a>
-- Slide di riepilogo
-
-# 4° anno
-
-## Parte A
-- Slide introduttiva
-- limiti di successioni
-- derivate di funzioni
-- lo studio di funzione
-- integrali indefiniti
-- Slide di riepilogo
-
-## Parte B
-- Slide introduttiva
-- distribuzioni di probabilità
-- probabilità condizionata e Bayes
-- la legge dei grandi numeri
-- il teorema limite centrale
+- <a href="3°/3°B/3°B_1.html">coniche nel piano</a>
+- <a href="3°/3°B/3°B_2.html">limiti e derivate</a>
+- <a href="3°/3°B/3°B_3.html">calcolo integrale</a>
+- <a href="3°/3°B/3°B_4.html">sulla probabilità</a>
 - Slide di riepilogo

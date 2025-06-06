@@ -1,0 +1,77 @@
+<head>
+  <meta charset="UTF-8">
+  <title>2° anno: parte B4</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
+<div class="slide active">
+    <h2>geometria nello spazio</h2>
+    <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>
+</div>
+
+<div class="slide">
+    <div class="block F">
+        Dati due punti nello spazio, i piano che passano per quei punti si trovano risolvendo l'omogenea:
+        \[\begin{cases}{\rm a}\cdot{\rm x}_0+{\rm b}\cdot{\rm y}_0+{\rm c}\cdot{\rm z}_0+{\rm d}=0\\{\rm a}\cdot{\rm x}_1+{\rm b}\cdot{\rm y}_1+{\rm c}\cdot{\rm z}_1+{\rm d}=0\end{cases}\]
+        Mentre la direzione della retta che li congiunge è semplicemente:
+        \[\begin{cases}{\rm x}={\rm k}\cdot\left({\rm x}_1-{\rm x}_0\right)\\{\rm y}={\rm k}\cdot\left({\rm y}_1-{\rm y}_0\right)\cdot{\rm h}\\{\rm c}={\rm c}_0\cdot{\rm k}+{\rm c}_1\cdot{\rm h}\\{\rm d}={\rm d}_0\cdot{\rm k}+{\rm d}_1\cdot{\rm h}\end{cases}\]
+    </div>
+    <div class="block F">
+        Dati tre punti nello spazio, il piano che passa per quei punti si trova risolvendo l'omogenea:
+        \[\begin{cases}{\rm a}\cdot{\rm x}_0+{\rm b}\cdot{\rm y}_0+{\rm c}\cdot{\rm z}_0+{\rm d}=0\\{\rm a}\cdot{\rm x}_1+{\rm b}\cdot{\rm y}_1+{\rm c}\cdot{\rm z}_1+{\rm d}=0\\{\rm a}\cdot{\rm x}_2+{\rm b}\cdot{\rm y}_2+{\rm c}\cdot{\rm z}_2+{\rm d}=0\end{cases}\]
+        Se questi sono allineati, dalle equazioni si ottiene un fascio di piani passante per la retta che li congiunge:
+        \[\begin{cases}{\rm a}={\rm a}_0\cdot{\rm k}+{\rm a}_1\cdot{\rm h}\\{\rm b}={\rm b}_0\cdot{\rm k}+{\rm b}_1\cdot{\rm h}\\{\rm c}={\rm c}_0\cdot{\rm k}+{\rm c}_1\cdot{\rm h}\\{\rm d}={\rm d}_0\cdot{\rm k}+{\rm d}_1\cdot{\rm h}\end{cases}\]
+    </div>
+    <div class="block F">
+        Dati due piani nello spazio, la loro retta di intersezione si trova risolvendo:
+        \[\begin{cases}{\rm a}_0\cdot{\rm x}+{\rm b}_0\cdot{\rm y}+{\rm c}_0\cdot{\rm z}+{\rm d}_0=0\\{\rm a}_1\cdot{\rm x}+{\rm b}_1\cdot{\rm y}+{\rm c}_1\cdot{\rm z}+{\rm d}_1=0\end{cases}\]
+        Se questi non sono paralleli, si può trovare la direzione risolvendo l'omogenea:
+        \[\begin{cases}{\rm a}_0\cdot{\rm x}+{\rm b}_0\cdot{\rm y}+{\rm c}_0\cdot{\rm z}=0\\{\rm a}_1\cdot{\rm x}+{\rm b}_1\cdot{\rm y}+{\rm c}_1\cdot{\rm z}=0\end{cases}\]
+    </div>
+    <div class="block F">
+        Dati tre piani nello spazio, la loro intersezione si trova risolvendo:
+        \[\begin{cases}{\rm a}_0\cdot{\rm x}+{\rm b}_0\cdot{\rm y}+{\rm c}_0\cdot{\rm z}+{\rm d}_0=0\\{\rm a}_1\cdot{\rm x}+{\rm b}_1\cdot{\rm y}+{\rm c}_1\cdot{\rm z}+{\rm d}_1=0\\{\rm a}_2\cdot{\rm x}+{\rm b}_2\cdot{\rm y}+{\rm c}_2\cdot{\rm z}+{\rm d}_2=0\end{cases}\]
+        Se questa è una retta, si può trovare la direzione risolvendo l'omogenea:
+        \[\begin{cases}{\rm a}_0\cdot{\rm x}+{\rm b}_0\cdot{\rm y}+{\rm c}_0\cdot{\rm z}=0\\{\rm a}_1\cdot{\rm x}+{\rm b}_1\cdot{\rm y}+{\rm c}_1\cdot{\rm z}=0\\{\rm a}_2\cdot{\rm x}+{\rm b}_2\cdot{\rm y}+{\rm c}_2\cdot{\rm z}=0\end{cases}\]
+    </div>
+</div>
+
+<div class="slide">
+</div>
+
+<div class="slide">
+</div>
+
+<div class="nav-buttons">
+    <a href="https://oniramortsam.github.io/MateMath">https://oniramortsam.github.io/MateMath</a>
+    <br>
+    <button onclick="prevSlide()">Indietro</button>
+    <a href="../../">Torna all'Indice</a>
+    <button onclick="nextSlide()">Avanti</button>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+</script>

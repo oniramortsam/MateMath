@@ -10,8 +10,8 @@
     <h2>i sistemi di equazioni</h2>
     <ol>
         <li>due variabili (QFR)</li>
+        <li>le proiettive (NFR)</li>
         <li>tre variabili (QFR)</li>
-        <li>le proiettive (???)</li>
     </ol>
 </div>
 
@@ -58,6 +58,52 @@
 </div>
 
 <div class="slide">
+    <h2>le proiettive</h2>
+    <div class="block N">
+        Date due rette ed un punto nel piano si definisce la relazione:
+        \[\left({\rm O}_0+{\rm t}_0\cdot{\rm u}_0-{\rm O}\right)\times\left({\rm O}_1+{\rm t}_1\cdot{\rm u}_1-{\rm O}\right)=0\]
+        Dati due piani ed un punto nello spazio si definisce la relazione:
+        \[\left({\rm O}_0+{\rm t}_0\cdot{\rm u}_0+{\rm s}_0\cdot{\rm v}_0-{\rm O}\right)\times\left({\rm O}_1+{\rm t}_1\cdot{\rm u}_1+{\rm s}_1\cdot{\rm v}_1-{\rm O}\right)=0\]
+        Date due rette ed un'altra nello spazio si definisce la relazione:
+        \[\left({\rm O}_0+{\rm t}_0\cdot{\rm u}_0-{\rm O}\right)\times{\rm u}\cdot\left({\rm O}_1+{\rm t}_1\cdot{\rm u}_1-{\rm O}\right)=0\]
+        Tutte queste sono dette proiezioni.
+    </div>
+    <div class="block F">
+        La prima si scrive come:
+        \[\left({\rm x}_{{\rm O},0}+{\rm t}_0\cdot{\rm x}_{{\rm u},0}\right)\cdot\left({\rm y}_{{\rm O},1}+{\rm t}_1\cdot{\rm y}_{{\rm u},1}\right)=\left({\rm y}_{{\rm O},0}+{\rm t}_0\cdot{\rm y}_{{\rm u},0}\right)\cdot\left({\rm x}_{{\rm O},1}+{\rm t}_1\cdot{\rm x}_{{\rm u},1}\right)\]
+        Da cui:
+        \[{\rm t}_1=\frac{\left({\rm y}_{{\rm O},0}+{\rm t}_0\cdot{\rm y}_{{\rm u},0}\right)\cdot{\rm x}_{{\rm O},1}-\left({\rm x}_{{\rm O},0}+{\rm t}_0\cdot{\rm x}_{{\rm u},0}\right)\cdot{\rm y}_{{\rm O},1}}{\left({\rm x}_{{\rm O},0}+{\rm t}_0\cdot{\rm x}_{{\rm u},0}\right)\cdot{\rm y}_{{\rm u},1}-\left({\rm y}_{{\rm O},0}+{\rm t}_0\cdot{\rm y}_{{\rm u},0}\right)\cdot{\rm x}_{{\rm u},1}}=-\frac{\begin{bmatrix}{\rm x}_{{\rm u},0}&{\rm y}_{{\rm u},0}\\{\rm x}_{{\rm O},1}&{\rm y}_{{\rm O},1}\end{bmatrix}\cdot{\rm t}_0+\begin{bmatrix}{\rm x}_{{\rm O},0}&{\rm y}_{{\rm O},0}\\{\rm x}_{{\rm O},1}&{\rm y}_{{\rm O},1}\end{bmatrix}}{\begin{bmatrix}{\rm x}_{{\rm u},0}&{\rm y}_{{\rm u},0}\\{\rm x}_{{\rm u},1}&{\rm y}_{{\rm u},1}\end{bmatrix}\cdot{\rm t}_0+\begin{bmatrix}{\rm x}_{{\rm O},0}&{\rm y}_{{\rm O},0}\\{\rm x}_{{\rm u},1}&{\rm y}_{{\rm u},1}\end{bmatrix}}\]
+        La seconda si scrive come:
+        \[{\rm a}_{\rm O}+{\rm t}_1\cdot{\rm a}_{\rm u}+{\rm s}_1\cdot{\rm a}_{\rm v}=0\Longrightarrow\begin{cases}{\rm t}_1=-\frac{{\rm a}_{\rm O}\cdot{\rm v}_1}{{\rm a}_{\rm u}\cdot{\rm v}_1}=\frac{{\rm a}_{\rm O}\cdot{\rm v}_1}{{\rm a}_{\rm v}\cdot{\rm u}_1}\\{\rm s}_1=\frac{{\rm a}_{\rm O}\cdot{\rm u}_1}{{\rm a}_{\rm u}\cdot{\rm v}_1}=-\frac{{\rm a}_{\rm O}\cdot{\rm u}_1}{{\rm a}_{\rm v}\cdot{\rm u}_1}\end{cases}\]
+        dove:
+        <ul>
+            <li>\[{\rm a}_{\rm O}=\left({\rm O}_0+{\rm t}_0\cdot{\rm u}_0+{\rm s}_0\cdot{\rm v}_0\right)\times{\rm O}_1\]</li>
+            <li>\[{\rm a}_{\rm u}=\left({\rm O}_0+{\rm t}_0\cdot{\rm u}_0+{\rm s}_0\cdot{\rm v}_0\right)\times{\rm u}_1\]</li>
+            <li>\[{\rm a}_{\rm v}=\left({\rm O}_0+{\rm t}_0\cdot{\rm u}_0+{\rm s}_0\cdot{\rm v}_0\right)\times{\rm v}_1\]</li>
+        </ul>
+        E notiamo che la soluzione soddisfa:
+        \[{\rm t}_1\cdot{\rm a}_{\rm u}\cdot{\rm O}_1+{\rm s}_1\cdot{\rm a}_{\rm v}\cdot{\rm O}_1={\rm t}_1\cdot{\rm a}_{\rm O}\cdot{\rm u}_1+{\rm s}_1\cdot{\rm a}_{\rm O}\cdot{\rm v}_1=0\]
+        La terza si scrive come:
+        \[{\rm t}_1=-\frac{\begin{bmatrix}{\rm x}_{{\rm O},0}+{\rm t}_0\cdot{\rm x}_{{\rm u},0}&{\rm x}_{\rm u}&{\rm x}_{{\rm O},1}\\{\rm y}_{{\rm O},0}+{\rm t}_0\cdot{\rm y}_{{\rm u},0}&{\rm y}_{\rm u}&{\rm y}_{{\rm O},1}\\{\rm z}_{{\rm O},0}+{\rm t}_0\cdot{\rm z}_{{\rm u},0}&{\rm z}_{\rm u}&{\rm z}_{{\rm O},1}\end{bmatrix}}{\begin{bmatrix}{\rm x}_{{\rm O},0}+{\rm t}_0\cdot{\rm x}_{{\rm u},0}&{\rm x}_{\rm u}&{\rm x}_{{\rm u},1}\\{\rm y}_{{\rm O},0}+{\rm t}_0\cdot{\rm y}_{{\rm u},0}&{\rm y}_{\rm u}&{\rm y}_{{\rm u},1}\\{\rm z}_{{\rm O},0}+{\rm t}_0\cdot{\rm z}_{{\rm u},0}&{\rm z}_{\rm u}&{\rm z}_{{\rm u},1}\end{bmatrix}}\]
+    </div>
+    <div class="block R">
+        Per la seconda possiamo anche scrivere:
+        <ul>
+            <li>\[{\rm a}_{\rm O}=\left({\rm r}_0\cdot{\rm O}_0+{\rm t}_0\cdot{\rm u}_0+{\rm s}_0\cdot{\rm v}_0\right)\times{\rm O}_1\]</li>
+            <li>\[{\rm a}_{\rm u}=\left({\rm r}_0\cdot{\rm O}_0+{\rm t}_0\cdot{\rm u}_0+{\rm s}_0\cdot{\rm v}_0\right)\times{\rm u}_1\]</li>
+            <li>\[{\rm a}_{\rm v}=\left({\rm r}_0\cdot{\rm O}_0+{\rm t}_0\cdot{\rm u}_0+{\rm s}_0\cdot{\rm v}_0\right)\times{\rm v}_1\]</li>
+        </ul>
+        E risolvere:
+        <ul>
+            \[{\rm t}_1=-{\rm a}_{\rm O}\cdot{\rm v}_1={\rm a}_{\rm v}\cdot{\rm O}_1\]
+            \[{\rm s}_1={\rm a}_{\rm O}\cdot{\rm u}_1=-{\rm a}_{\rm u}\cdot{\rm O}_1\]
+            \[{\rm r}_1={\rm a}_{\rm u}\cdot{\rm v}_1={\rm a}_{\rm v}\cdot{\rm u}_1\]
+        </ul>
+        Questa si dice l'equazione omogeneizzata.
+    </div>
+</div>
+
+<div class="slide">
     <h2>tre variabili</h2>
     <div class="block Q">
         In un ristorante:
@@ -97,20 +143,6 @@
         Si può interpretare questo metodo come:
         \[{\rm x}\cdot{\rm a}+{\rm y}\cdot{\rm b}+{\rm z}\cdot{\rm c}={\rm d}\Longrightarrow\begin{cases}{\rm x}=\frac{\left({\rm b}\times{\rm c}\right)\cdot{\rm d}}{\left({\rm b}\times{\rm c}\right)\cdot{\rm a}}\\{\rm y}=\frac{\left({\rm c}\times{\rm a}\right)\cdot{\rm d}}{\left({\rm c}\times{\rm a}\right)\cdot{\rm b}}\\{\rm z}=\frac{\left({\rm a}\times{\rm b}\right)\cdot{\rm d}}{\left({\rm a}\times{\rm b}\right)\cdot{\rm c}}\end{cases}\]
         cioè moltimplicando per l'ortogonale di un vettore si riesce ad annullare un addendo.
-    </div>
-</div>
-<div class="slide">
-    <h2>le proiettive</h2>
-    <div class="block D">
-        Date due rette ed un punto nel piano si definisce la relazione:
-        \[\left({\rm O}_0+{\rm x}_0\cdot{\rm u}_0-{\rm O}\right)\times\left({\rm O}_1+{\rm x}_1\cdot{\rm u}_1-{\rm O}\right)=0\]
-        Dati due piani ed un punto nello spazio si definisce la relazione:
-        \[\left({\rm O}_0+{\rm x}_0\cdot{\rm u}_0+{\rm y}_0\cdot{\rm v}_0-{\rm O}\right)\times\left({\rm O}_1+{\rm x}_1\cdot{\rm u}_1+{\rm y}_1\cdot{\rm v}_1-{\rm O}\right)=0\]
-        Date due rette ed un'altra nello spazio si definisce la relazione:
-        \[\left({\rm O}_0+{\rm x}_0\cdot{\rm u}_0-{\rm O}\right)\times{\rm u}\cdot\left({\rm O}_1+{\rm x}_1\cdot{\rm u}_1-{\rm O}\right)=0\]
-        Tutte queste sono dette proiezioni.
-    </div>
-    <div class="block F">
     </div>
 </div>
 
