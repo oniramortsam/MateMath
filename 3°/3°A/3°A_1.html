@@ -11,7 +11,7 @@
     <ol>
         <li>le funzioni e cardinali (NFD)</li>
         <li>immagini ed iniettività (NFD)</li>
-        <li>equivalenze e quozienti (NDS)</li>
+        <li>equivalenze e quozienti (NDR)</li>
     </ol>
 </div>
 
@@ -78,8 +78,8 @@
     <div class="block D">
         Date due funzioni iniettive \(\left({\rm f},{\rm g}\right)\in{\rm A}^{\rm B}\times{\rm B}^{\rm A}\), possiamo costruirne una invertibile nel seguente modo:
         <ul>
-            <li>\[\begin{cases}{\rm f}^{-1}\left({\rm x}\right)=\emptyset\Longrightarrow{\rm G}\left({\rm x}\right)={\rm g}\left({\rm x}\right)\\{\rm f}^{-1}\left({\rm x}\right)=\left{{\rm y}\right}\Longrightarrow\begin{cases}{\rm g}^{-1}\left({\rm y}\right)=\emptyset\Longrightarrow{\rm G}\left({\rm x}\right)={\rm y}\\{\rm g}^{-1}\left({\rm y}\right)\ne\emptyset\Longrightarrow{\rm G}\left({\rm x}\right)={\rm g}\left({\rm x}\right)\end{cases}\end{cases}\]</li>
-            <li>\[\begin{cases}{\rm g}^{-1}\left({\rm y}\right)=\emptyset\Longrightarrow{\rm F}\left({\rm y}\right)={\rm f}\left({\rm y}\right)\\{\rm g}^{-1}\left({\rm y}\right)=\left{{\rm x}\right}\Longrightarrow\begin{cases}{\rm f}^{-1}\left({\rm x}\right)=\emptyset\Longrightarrow{\rm F}\left({\rm y}\right)={\rm x}\\{\rm f}^{-1}\left({\rm x}\right)\ne\emptyset\Longrightarrow{\rm F}\left({\rm y}\right)={\rm f}\left({\rm y}\right)\end{cases}\end{cases}\]</li>
+            <li>\[\begin{cases}{\rm f}^{-1}\left({\rm x}\right)=\emptyset\Longrightarrow{\rm G}\left({\rm x}\right)={\rm g}\left({\rm x}\right)\\{\rm f}^{-1}\left({\rm x}\right)=\left\{{\rm y}\right\}\Longrightarrow\begin{cases}{\rm g}^{-1}\left({\rm y}\right)=\emptyset\Longrightarrow{\rm G}\left({\rm x}\right)={\rm y}\\{\rm g}^{-1}\left({\rm y}\right)\ne\emptyset\Longrightarrow{\rm G}\left({\rm x}\right)={\rm g}\left({\rm x}\right)\end{cases}\end{cases}\]</li>
+            <li>\[\begin{cases}{\rm g}^{-1}\left({\rm y}\right)=\emptyset\Longrightarrow{\rm F}\left({\rm y}\right)={\rm f}\left({\rm y}\right)\\{\rm g}^{-1}\left({\rm y}\right)=\left\{{\rm x}\right\}\Longrightarrow\begin{cases}{\rm f}^{-1}\left({\rm x}\right)=\emptyset\Longrightarrow{\rm F}\left({\rm y}\right)={\rm x}\\{\rm f}^{-1}\left({\rm x}\right)\ne\emptyset\Longrightarrow{\rm F}\left({\rm y}\right)={\rm f}\left({\rm y}\right)\end{cases}\end{cases}\]</li>
         </ul>
         Questo procedimento può essere iterato finchè non si ottengono funzioni inverse l'una dell'altra, ma servirebbe ZORN.
     </div>
@@ -104,10 +104,10 @@
         \[{\rm z}\in{\rm f}\left({\rm x}\right)\Longleftrightarrow{\cal R}\left({\rm x},{\rm z}\right)\]
         Tale funzione si dice proiezione al quoziente e la sua immagine si denota \({\rm A}/{\cal R}\).
     </div>
-    <div class="block S">
+    <div class="block R">
         Una relazione di equivalenza è equilibrata di ordine \(\left|{\cal R}\right|\) se:
         \[\forall{\rm y}\in\operatorname{Imm}\left({\rm f}\right)\quad\left|{\rm y}\right|=\left|{\cal R}\right|\]
-        Questa proprietà implica
+        Questa proprietà implica:
         \[\left|{\rm A}\right|=\left|{\cal R}\right|\cdot\left|{\rm A}/{\cal R}\right|\]
         Una struttura di fibrato su \({\rm A},{\cal R}\) è una struttura del tipo
         \[{\rm f}\left({\rm X},{\rm Y}\right):{\rm Y}\rightarrow{\rm X}\]

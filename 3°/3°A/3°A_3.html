@@ -10,8 +10,8 @@
     <h2>relazioni: ordinamento</h2>
     <ol>
         <li>relazioni: ordinamenti (NFC)</li>
-        <li>limiti e la continuità (NFS)</li>
-        <li>risolvere un'equazione (DFS)</li>
+        <li>limiti e la continuità (NFC)</li>
+        <li>risolvere un'equazione (DFC)</li>
     </ol>
 </div>
 
@@ -80,12 +80,16 @@
 <div class="slide">
     <h2>limiti e la continuità</h2>
     <div class="block N">
-        LIMITE
+        Se normalmente:
+        \[\liminf_{{\rm n}\in{\mathbb N}}{\rm x}_{\rm n}\le{\rm x}\le\limsup_{{\rm n}\in{\mathbb N}}{\rm x}_{\rm n}\]
+        Si dice che una successione ammette limite se:
+        \[{\rm x}=\lim_{{\rm n}\in{\mathbb N}}{\rm x}_{\rm n}\Longleftrightarrow\limsup_{{\rm n}\in{\mathbb N}}{\rm x}_{\rm n}\le{\rm x}\le\liminf_{{\rm n}\in{\mathbb N}}{\rm x}_{\rm n}\]
     </div>    
     <div class="block F">
-        CARABINIERI
-    </div>    
-    <div class="block S">
+        Vale la seguente:
+        \[\forall{\rm m}\in{\mathbb N}\quad\exists{\rm n}\in{\mathbb N}\quad\exists{\rm k}\in{\mathbb N}\quad{\rm a}_{\rm k}\le{\rm b}_{\rm m}\Longrightarrow\limsup_{{\rm k}\in{\mathbb N}}{\rm a}_{\rm k}\le\liminf_{{\rm m}\in{\mathbb N}}{\rm b}_{\rm m}\]
+    </div>
+    <div class="block C">
         Siccome:
         \[\sum_{{\rm k}\in{\rm n}}\frac{{\rm x}^{{\rm k}+1}}{\left({\rm k}+1\right)!}\le\sum_{{\rm k}\lt{\rm x}+1}\frac{{\rm x}^{{\rm k}+1}}{\left({\rm k}+1\right)!}+\frac{{\rm x}^{{\rm x}+1}}{2\cdot\left({\rm x}+2\right)^{\rm x}}\]
         Possiamo definire:
@@ -119,7 +123,7 @@
     <div class="block F">
         Nel caso di funzioni continue di variabile reale l'iniettività equivale alla monotonia.
     </div>
-    <div class="block S">
+    <div class="block C">
         Nel caso di \(\exp\) l'inversa è detta:
         \[\log:\left(0,\infty\right)\rightarrow{\mathbb R}\]
         Nel caso di \(\sin,\cos\) si usano rispettivamente:

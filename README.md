@@ -57,8 +57,8 @@
   - terema di pitagora (QDC)
   - angoli e lunghezze (QFC)
 - <a href="2°/2°A/2°A_4.html">chiudiamo il quadro</a>
-  - rette: parametriche e cartesiane (DNF)
-  - le equazioni delle circonferenze (DFR)
+  - rette: parametriche e cartesiane (NDF)
+  - le equazioni delle circonferenze (NDF)
   - prodotto vettoriale nello spazio (NDR)
 
 ### Parte B
@@ -87,15 +87,15 @@
 - <a href="3°/3°A/3°A_1.html">le funzioni ed inverse</a>
   - le funzioni e cardinali (NFD)
   - immagini ed iniettività (NFD)
-  - equivalenze e quozienti (NDS)
+  - equivalenze e quozienti (NDR)
 - <a href="3°/3°B/3°B_2.html">ancora la combinatoria</a>
   - disposizioni (QNF)
   - combinazioni (QNF)
   - permutazioni (DFN)
 - <a href="3°/3°A/3°A_3.html">relazioni: ordinamento</a>
   - relazioni: ordinamenti (NFC)
-  - limiti e la continuità (NFS)
-  - risolvere un'equazione (DFS)
+  - limiti e la continuità (NFC)
+  - risolvere un'equazione (DFC)
 - <a href="3°/3°B/3°A_4.html">le funzioni elementari</a>
   - ancora le goniometriche (NFR)
   - le funzioni iperboliche (NFR)
@@ -104,22 +104,18 @@
 ### Parte B
 
 - <a href="3°/3°B/3°B_1.html">coniche nel piano</a>
-  - gli ellissi cartesiani ()
-  - le parabole cartesiane ()
-  - le iperboli cartesiane ()
-  - raccogliere i quadrati ()
+  - descrizioni cartesiane (NFR)
+  - equazioni parametriche (DFR)
+  - delle equazioni affini (DFR)
 - <a href="3°/3°B/3°B_2.html">limiti e derivate</a>
-  - i limiti ()
-  - derivate ()
-  - prodotto ()
-  - composta ()
+  - i limiti (NFR)
+  - derivate (NFR)
+  - funzioni (DFC)
 - <a href="3°/3°B/3°B_3.html">calcolo integrale</a>
-  - fondamentale integrale ()
-  - integrazione per parti ()
-  - i metodi delle sezioni ()
-  - gli integrali impropri ()
+  - integrazione per parti (NFR)
+  - lo scambio d'integrali (DFC)
+  - risultati per sequenze (DFR)
 - <a href="3°/3°B/3°B_4.html">sulla probabilità</a>
-  - la media e la varianza ()
-  - distribuzioni notevoli ()
-  - distribuzione di gauss ()
-  - elementi di statistica ()
+  - la media e la varianza (NFR)
+  - distribuzioni notevoli (NFR)
+  - le coppie di variabili (NFR)

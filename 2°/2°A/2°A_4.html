@@ -9,29 +9,29 @@
 <div class="slide active">
     <h2>chiudiamo il quadro</h2>
     </ol>
-        <li>rette: parametriche e cartesiane (DNF)</li>
-        <li>le equazioni delle circonferenze (DFR)</li>
+        <li>rette: parametriche e cartesiane (NDF)</li>
+        <li>le equazioni delle circonferenze (NDF)</li>
         <li>prodotto vettoriale nello spazio (NDR)</li>
     </ol>
 </div>
 
 <div class="slide">
     <h2>rette: parametriche e cartesiane</h2>
-    <div class="block D">
+    <div class="block N">
         Fissiamo un punto ed un versore \({\rm O},{\cal Z}\) sul piano cartesiano:
         <ul>
             <li>Consideriamo \({\cal Y}={\cal Z}\times{\cal X}\) la rotazione di \({\cal X}\) di \(\pi/2\).</li>
             <li>Per ogni punto \({\rm P}\) diciamo \({\rm x}_{\rm P},{\rm y}_{\rm P}\) tali che \({\rm P}={\rm O}+{\rm x}_{\rm P}\cdot{\cal X}+{\rm y}_{\rm P}\cdot{\cal Y}\).</li>
         </ul>
     </div>
-    <div class="block N">
+    <div class="block D">
         Il prodotto scalare tra due vettori \({\rm u},{\rm v}\) è definito come:
-        \[{\rm u}\times{\rm v}={\rm x}_{\rm u}\cdot{\rm x}_{\rm v}+{\rm y}_{\rm u}\cdot{\rm y}_{\rm v}=\left|{\rm u}\right|\cdot\left|{\rm v}\right|\cdot\cos\left(\theta\right)\]
+        \[{\rm u}\cdot{\rm v}={\rm x}_{\rm u}\cdot{\rm x}_{\rm v}+{\rm y}_{\rm u}\cdot{\rm y}_{\rm v}=\left|{\rm u}\right|\cdot\left|{\rm v}\right|\cdot\cos\left(\theta\right)\]
         Dove \(\theta\) è l'angolo che ruota \({\rm u}\) in \({\rm v}\).
     </div>
     <div class="block F">
         Dati due punti \({\rm A},{\rm B}\) nel piano cartesiano, la retta passante per questi punti si rappresenta come:
-        \[\left{{\rm B}+{\rm t}\cdot\left({\rm A}-{\rm B}\right)\quad{\rm t}\in{\mathbb R}\right}\]
+        \[\left\{{\rm B}+{\rm t}\cdot\left({\rm A}-{\rm B}\right)\quad{\rm t}\in{\mathbb R}\right\}\]
         Che corrisponde alla relazione tra \({\rm x},{\rm y}\):
         \[\exists{\rm t}\in{\mathbb R}\qquad\begin{cases}{\rm x}={\rm x}_{\rm B}+{\rm t}\cdot\left({\rm x}_{\rm A}-{\rm x}_{\rm B}\right)={\rm t}\cdot{\rm x}_{\rm A}+\left(1-{\rm t}\right)\cdot{\rm x}_{\rm B}\\{\rm y}={\rm y}_{\rm B}+{\rm t}\cdot\left({\rm y}_{\rm B}-{\rm y}_{\rm A}\right)={\rm t}\cdot{\rm y}_{\rm A}+\left(1-{\rm t}\right)\cdot{\rm y}_{\rm B}\end{cases}\]
         <ul>
@@ -47,24 +47,41 @@
 
 <div class="slide">
     <h2>le equazioni delle circonferenze</h2>
+    <div class="block N">
+        Una tangente ad una circonferenza di centro \({\rm O}\) in un punto \({\rm P}\) è la retta:
+        \[\left\{{\rm P}+{\rm t}\cdot\left({\cal Z}\times\left({\rm O}-{\rm P}\right)\right)\quad{\rm t}\in{\mathbb R}\right\}=\left\{{\rm Q}\in{\mathbb R}^2\quad\left({\rm Q}-{\rm P}\right)\cdot\left({\rm O}-{\rm P}\right)=0\right\}\]
+    </div>
     <div class="block D">
-        L'equazione cartesiana di una circonferenza è:
-        \[\left({\rm x}-{\rm x}_{\rm C}\right)^2+\left({\rm y}-{\rm y}_{\rm C}\right)^2={\rm r}^2\]
-        Cioè:
-        \[{\rm x}^2+{\rm y}^2-2\cdot{\rm x}_{\rm C}\cdot{\rm x}-2\cdot{\rm y}_{\rm C}\cdot{\rm y}={\rm r}^2-\left({\rm x}_{\rm C}^2+{\rm y}_{\rm C}^2\right)\]
-        Quella parametrica è invece:
-        \[\left{{\rm C}+{\rm r}\cdot\left(\cos\left({\rm t}\right)\cdot{\cal X}+\sin\left({\rm t}\right)\cdot{\cal Y}\right)\quad{\rm t}\in{\mathbb R}\right}\]
-        Che corrisponde alla relazione tra \({\rm x},{\rm y}\):
-        \[\exists{\rm t}\in{\mathbb R}\qquad\begin{cases}{\rm x}={\rm x}_{\rm C}+{\rm r}\cdot\cos\left({\rm t}\right)\\{\rm y}={\rm x}_{\rm C}+{\rm r}\cdot\sin\left({\rm t}\right)\end{cases}\]
+        <ul>
+            <li>
+                Consideriamo un punto \({\rm Q}\) su una tangente ad una circonferenza di centro \({\rm O}\) in un punto \({\rm P}\):
+                \[{\rm Q}={\rm P}+{\rm t}\cdot\left({\cal Z}\times\left({\rm O}-{\rm P}\right)\right)\]
+                Allora \({\rm Q}\) è esterno alla circonferenza:
+                \[\left|{\rm Q}-{\rm P}\right|^2+\left|{\rm P}-{\rm O}\right|^2=\left|{\rm Q}-{\rm O}\right|^2\]
+                Inoltre si può trovare \({\rm P}\) intersecando una circonferenza di centro \({\rm Q}\).
+            </li>
+            <li>
+                Date due circonferenze:
+                \[\left|{\rm Q}-{\rm O}_1\right|^2-\left|{\rm Q}-{\rm O}_0\right|^2={\rm r}_1^2-{\rm r}_0^2\]
+                Se \({\rm Q}\) sta sulla retta che congiunge i centri:
+                \[\begin{cases}\left|{\rm Q}-{\rm O}_1\right|+\left|{\rm Q}-{\rm O}_0\right|=\left|{\rm O}_1-{\rm O}_0\right|\\\left|{\rm Q}-{\rm O}_1\right|-\left|{\rm Q}-{\rm O}_0\right|=\frac{{\rm r}_1^2-{\rm r}_0^2}{\left|{\rm O}_1-{\rm O}_0\right|}\end{cases}\qquad\begin{cases}\left|{\rm Q}-{\rm O}_1\right|-\left|{\rm Q}-{\rm O}_0\right|=\left|{\rm O}_1-{\rm O}_0\right|\\\left|{\rm Q}-{\rm O}_1\right|+\left|{\rm Q}-{\rm O}_0\right|=\frac{{\rm r}_1^2-{\rm r}_0^2}{\left|{\rm O}_1-{\rm O}_0\right|}\end{cases}\]</li>
+                In entrambi si trova un punto e due tangenti comuni.
+            </li>
+        </ul>
     </div>
     <div class="block F">
-        Consideriamo un versore \({\rm u}\), la parametrica:
-        \[\left{{\rm C}+{\rm a}\cdot\cos\left({\rm t}\right)\cdot\left({\rm u}\right)+{\rm b}\cdot\sin\left({\rm t}\right)\cdot\left({\cal Z}\times\left({\rm u}\right)\right)\quad{\rm t}\in{\mathbb R}\right}\]
-        Corrisponde alla relazione:
-        \[\left(\frac{\left({\rm x}-{\rm x}_{\rm C}\right)\cdot{\rm x}_{\rm u}+\left({\rm y}-{\rm y}_{\rm C}\right)\cdot{\rm y}_{\rm u}}{\rm a}\right)^2+\left(\frac{\left({\rm x}-{\rm x}_{\rm C}\right)\cdot{\rm y}_{\rm u}-\left({\rm y}-{\rm y}_{\rm C}\right)\cdot{\rm x}_{\rm u}}{\rm b}\right)^2=1\]
-    </div>
-    <div class="block R">
-        Viceversa data una equazione di secondo grado in due variabili si può trovare \({\rm u}\) come sopra, lo vediamo dopo.
+        Data una circonferenza:
+        <ul>
+            <li>Per un punto esterno passano due rette tangenti.</li>
+            <li>Da un punto giacente passano una retta tangente.</li>
+            <li>Per un punto interno non passano rette tangenti.</li>
+        </ul>
+        Date due circonferenze:
+        <ul>
+            <li>Se sono esterne, allora hanno 4 tangenti in comune.</li>
+            <li>Se sono secanti, allora hanno 2 tangenti in comune.</li>
+            <li>Se sono interne, allora hanno 0 tangenti in comune.</li>
+        </ul>
     </div>
 </div>
 
