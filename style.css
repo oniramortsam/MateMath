@@ -42,7 +42,7 @@ body, html {
   font-weight: 600;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  color: #ffcb77; /* un giallo tenue leggibile su sfondo scuro */
+  color: #ffcb77;
   padding-left: 1rem;
   line-height: 1.4;
 }
@@ -96,46 +96,31 @@ a {
 
 /* Varianti per tipo di contenuto */
 .block.Q {
-  border-color: #D7263D;
-  border-left: 0.4rem solid #D7263D;
-  background-color: #D7263D33;
+  border-color: #AF2222;
+  border-left: 0.4rem solid #AF2222;
+  background-color: #AF222233;
 }
 
 .block.N {
-  border-color: #33658A;
-  border-left: 0.4rem solid #33658A;
-  background-color: #33658A33;
+  border-color: #5B2B80;
+  border-left: 0.4rem solid #5B2B80;
+  background-color: #5B2B8033;
 }
 
 .block.D {
-  border-color: #2F4858;
-  border-left: 0.4rem solid #2F4858;
-  background-color: #2F485833;
+  border-color: #00857C;
+  border-left: 0.4rem solid #00857C;
+  background-color: #00857C33;
 }
 
 .block.F {
-  border-color: #F49D37;
-  border-left: 0.4rem solid #F49D37;
-  background-color: #F49D3733;
-}
-
-.block.C {
-  border-color: #A3A847;
-  border-left: 0.4rem solid #A3A847;
-  background-color: #A3A84733;
+  border-color: #FF7F11;
+  border-left: 0.4rem solid #FF7F11;
+  background-color: #FF7F1133;
 }
 
 .block.R {
-  border-color: #8C5383;
-  border-left: 0.4rem solid #8C5383;
-  background-color: #8C538333;
+  border-color: #005FAD;
+  border-left: 0.4rem solid #005FAD;
+  background-color: #005FAD33;
 }
-
-/* Titolo del blocco (opzionale) */
-.block strong {
-  display: block;
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: #fff;
-}
-
