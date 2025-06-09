@@ -65,7 +65,7 @@
 
 - <a href="2°/2°B/2°B_1.html">dai razionali ai reali</a>
   - numeri razionali (NFR)
-  - sui numeri reali (NFR) (ERRORE NELL'ULTIMO BLOCCO)
+  - sui numeri reali (NFR)
   - equazioni quadre (QFR)
 - <a href="2°/2°B/2°B_2.html">i sistemi di equazioni</a>
   - due variabili (QFR)
