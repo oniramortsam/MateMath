@@ -21,7 +21,7 @@
         Riepiloghiamo
         <ul>
             <li>{\mathbb Z}=\left\{{\rm a}-{\rm b}\quad{\rm a},{\rm b}\in{\mathbb N}\times{\mathbb N}\right\}</li>
-            <li>{\mathbb Q}=\left\{{\rm a}/{\rm b}\quad{\rm a},{\rm b}\in{\mathbb Z}\times\left({\mathbb N}\setminus1\right)\right\}</li>
+            <li>{\mathbb Q}=\left\{{\rm a}:{\rm b}\quad{\rm a},{\rm b}\in{\mathbb Z}\times\left({\mathbb N}\setminus1\right)\right\}</li>
         </ul>
         Ricordiamo le operazioni tra numeri razionali:
         <ul>
@@ -30,7 +30,7 @@
             <li>\[\left(\frac{\rm a}{\rm b}\right)^{\rm n}=\frac{{\rm a}^{\rm n}}{{\rm b}^{\rm n}}\qquad\left(\frac{\rm a}{\rm b}\right)^{-{\rm n}}=\frac{{\rm b}^{\rm n}}{{\rm a}^{\rm n}}\]</li>
         </ul>
         Tuttavia, bisogna sempre portare il risultato in forma ridotta:
-        \[\frac{\rm a}{\rm b}=\frac{{\rm a}/\operatorname{gcd}\left({\rm a},{\rm b}\right)}{{\rm b}/\operatorname{gcd}\left({\rm a},{\rm b}\right)}=\frac{\operatorname{lcm}\left({\rm a},{\rm b}\right)/{\rm b}}{\operatorname{lcm}\left({\rm a},{\rm b}\right)/{\rm a}}\]
+        \[\frac{\rm a}{\rm b}=\frac{{\rm a}:\operatorname{gcd}\left({\rm a},{\rm b}\right)}{{\rm b}:\operatorname{gcd}\left({\rm a},{\rm b}\right)}=\frac{\operatorname{lcm}\left({\rm a},{\rm b}\right)/{\rm b}}{\operatorname{lcm}\left({\rm a},{\rm b}\right)/{\rm a}}\]
         Scriviamo sempre numeratore e denominatore fattorizzati e per minimizzare la quantità di calcoli:
         \[\frac{\rm a}{\rm b}\pm\frac{\rm c}{\rm d}=\frac{\operatorname{gcd}\left({\rm a},{\rm b}\right)}{\operatorname{lcm}\left({\rm b},{\rm d}\right)}\left(\frac{{\rm a}\cdot\operatorname{lcm}\left({\rm b},{\rm d}\right)}{\operatorname{gcd}\left({\rm a},{\rm c}\right)\cdot{\rm b}}\pm\frac{{\rm c}\cdot\operatorname{lcm}\left({\rm b},{\rm d}\right)}{\operatorname{gcd}\left({\rm a},{\rm c}\right)\cdot{\rm d}}\right)\]
         In questo modo andrà calcolato e fattorizzato solo il secondo fattore.
@@ -44,14 +44,14 @@
         {\rm a}-\left({\rm b}-{\rm c}\right)={\rm a}-{\rm b}+{\rm c}={\rm a}+{\rm c}-{\rm b}
         \end{cases}\qquad\begin{cases}
         {\rm a}\cdot\left({\rm b}\cdot{\rm c}\right)={\rm a}\cdot{\rm b}\cdot{\rm c}={\rm a}\cdot{\rm c}\cdot{\rm b}\\
-        {\rm a}\cdot\left({\rm b}/{\rm c}\right)={\rm a}\cdot{\rm b}/{\rm c}={\rm a}/{\rm c}\cdot{\rm b}\\
-        {\rm a}/\left({\rm b}\cdot{\rm c}\right)={\rm a}/{\rm b}/{\rm c}={\rm a}/{\rm c}/{\rm b}\\
-        {\rm a}/\left({\rm b}/{\rm c}\right)={\rm a}/{\rm b}\cdot{\rm c}={\rm a}\cdot{\rm c}/{\rm b}
+        {\rm a}\cdot\left({\rm b}:{\rm c}\right)={\rm a}\cdot{\rm b}:{\rm c}={\rm a}:{\rm c}\cdot{\rm b}\\
+        {\rm a}:\left({\rm b}\cdot{\rm c}\right)={\rm a}:{\rm b}:{\rm c}={\rm a}:{\rm c}:{\rm b}\\
+        {\rm a}:\left({\rm b}:{\rm c}\right)={\rm a}:{\rm b}\cdot{\rm c}={\rm a}\cdot{\rm c}:{\rm b}
         \end{cases}\qquad\begin{cases}
         \left({\rm a}\cdot{\rm b}\right)^{\rm c}={\rm a}^{\rm c}\cdot{\rm b}^{\rm c}\\
-        \left({\rm a}/{\rm b}\right)^{\rm c}={\rm a}^{\rm c}/{\rm b}^{\rm c}\\
+        \left({\rm a}:{\rm b}\right)^{\rm c}={\rm a}^{\rm c}:{\rm b}^{\rm c}\\
         {\rm a}^{{\rm b}+{\rm c}}={\rm a}^{\rm b}\cdot{\rm a}^{\rm b}\\
-        {\rm a}^{{\rm b}-{\rm c}}={\rm a}^{\rm b}/{\rm a}^{\rm b}\\
+        {\rm a}^{{\rm b}-{\rm c}}={\rm a}^{\rm b}:{\rm a}^{\rm b}\\
         {\rm a}^{{\rm b}\cdot{\rm c}}=\left({\rm a}^{\rm b}\right)^{\rm c}
         \end{cases}\]
         Notare che all'ultima manca la versione inversa.
@@ -61,8 +61,8 @@
         <li>\[{\rm a}+{\rm c}={\rm b}+{\rm c}\Longleftrightarrow{\rm a}\ge{\rm b}\]</li>
         <li>\[\begin{cases}{\rm a}\ge{\rm b}\\{\rm c}\ge0\end{cases}\Longrightarrow{\rm a}\cdot{\rm c}\ge{\rm b}\cdot{\rm c}\]</li>
         <li>\[\begin{cases}{\rm a}\ge{\rm b}\\{\rm c}\le0\end{cases}\Longrightarrow{\rm a}\cdot{\rm c}\le{\rm b}\cdot{\rm c}\]</li>
-        <li>\[\begin{cases}{\rm a}\gt{\rm b}\\{\rm c}\gt0\end{cases}\Longrightarrow{\rm a}/{\rm c}\gt{\rm b}/{\rm c}\]</li>
-        <li>\[\begin{cases}{\rm a}\gt{\rm b}\\{\rm c}\lt0\end{cases}\Longrightarrow{\rm a}/{\rm c}\lt{\rm b}/{\rm c}\]</li>
+        <li>\[\begin{cases}{\rm a}\gt{\rm b}\\{\rm c}\gt0\end{cases}\Longrightarrow{\rm a}:{\rm c}\gt{\rm b}:{\rm c}\]</li>
+        <li>\[\begin{cases}{\rm a}\gt{\rm b}\\{\rm c}\lt0\end{cases}\Longrightarrow{\rm a}:{\rm c}\lt{\rm b}:{\rm c}\]</li>
     </div>
 </div>
 
@@ -102,7 +102,7 @@
         \[{\rm a}\cdot{\rm x}^2-{\rm b}\cdot{\rm x}+{\rm c}=0\]
         Questa si può risolvere prima dividendo per \({\rm a}\):
         \[{\rm x}^2-\left(\frac{\rm b}{\rm a}\right)\cdot{\rm x}+\frac{\rm c}{\rm a}=0\]
-        Poi isolando \({\rm x}-{\rm b}/\left(2\cdot{\rm a}\right)\)
+        Poi isolando \({\rm x}-{\rm b}:\left(2\cdot{\rm a}\right)\)
         \[\left({\rm x}-\frac{\rm b}{2\cdot{\rm a}}\right)^2+\left(\frac{\rm c}{\rm a}-\frac{{\rm b}^2}{4\cdot{\rm a}^2}\right)=0\]
         Se infine:
         \[{\rm b}^2\ge4\cdot{\rm a}\cdot{\rm c}\]
