@@ -63,17 +63,7 @@
     </div>
     <div class="block R">
         Si dice che i numeri razionali sono densi:
-        \[\forall\left({\rm x},{\rm z}\right)\in{\mathbb Q}\times{\mathbb Q}\quad\exists{\rm y}\in{\mathbb Q}\quad{\rm x}\lt{\rm y}\lt{\rm z}\]
-        E che sono densi nei reali:
-        \[\forall\left({\rm x},{\rm z}\right)\in{\mathbb R}\times{\mathbb R}\quad\exists{\rm y}\in{\mathbb Q}\quad{\rm x}\lt{\rm y}\lt{\rm z}\]
-        Si dice continua una funzione da un denso totale ad un denso totale completo una funzione che soddisfa le quattro condizioni:
-        <ul>
-            <li>\[{\rm f}\left({\rm z}\right)=\sup_{{\rm x}\lt{\rm z}}\left(\inf_{{\rm x}\lt{\rm y}\lt{\rm z}}{\rm f}\left({\rm y}\right)\right)\]</li>
-            <li>\[{\rm f}\left({\rm z}\right)=\inf_{{\rm x}\lt{\rm z}}\left(\sup_{{\rm x}\lt{\rm y}\lt{\rm z}}{\rm f}\left({\rm y}\right)\right)\]</li>
-            <li>\[{\rm f}\left({\rm x}\right)=\sup_{{\rm x}\lt{\rm z}}\left(\inf_{{\rm x}\lt{\rm y}\lt{\rm z}}{\rm f}\left({\rm y}\right)\right)\]</li>
-            <li>\[{\rm f}\left({\rm x}\right)=\inf_{{\rm x}\lt{\rm z}}\left(\sup_{{\rm x}\lt{\rm y}\lt{\rm z}}{\rm f}\left({\rm y}\right)\right)\]</li>
-        </ul>
-        Una funzione continua si estende da un sottoinsieme denso in esattamente un modo.
+        \[\forall\left({\rm x},{\rm z}\right)\in{\mathbb Q}\times{\mathbb Q}\quad{\rm x}\ne{\rm z}\Longrightarrow\left[\exists{\rm y}\in{\mathbb Q}\quad{\rm x}\lt{\rm y}\lt{\rm z}\right]\]
     </div>
 </div>
 
@@ -84,6 +74,9 @@
         \[\liminf_{{\rm n}\in{\mathbb N}}{\rm x}_{\rm n}\le{\rm x}\le\limsup_{{\rm n}\in{\mathbb N}}{\rm x}_{\rm n}\]
         Si dice che una successione ammette limite se:
         \[{\rm x}=\lim_{{\rm n}\in{\mathbb N}}{\rm x}_{\rm n}\Longleftrightarrow\limsup_{{\rm n}\in{\mathbb N}}{\rm x}_{\rm n}\le{\rm x}\le\liminf_{{\rm n}\in{\mathbb N}}{\rm x}_{\rm n}\]
+        Una funzione \({\rm f}:{\mathbb Q}\rightarrow{\mathbb R}\) si dice continua se:
+        \[\forall{\rm x}\in{\mathbb Q}^{\mathbb N}\quad\lim_{{\rm n}\in{\mathbb N}}{\rm x}_{\rm n}\in{\mathbb Q}\Longrightarrow\lim_{{\rm n}\in{\mathbb N}}{\rm f}\left({\rm x}_{\rm n}\right)={\rm f}\left(\lim_{{\rm n}\in{\mathbb N}}{\rm x}_{\rm n}\right)\]
+        Una funzione continua si estende da un sottoinsieme denso di \({\mathbb R}\) in esattamente un modo.
     </div>    
     <div class="block F">
         Vale la seguente:
