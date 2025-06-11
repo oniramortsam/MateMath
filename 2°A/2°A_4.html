@@ -1,0 +1,156 @@
+<head>
+  <meta charset="UTF-8">
+  <title>2° anno: parte A4</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
+<div class="slide active">
+    <h2>divisione tra polinomi</h2>
+    <ol>
+        <li>polinomi: grado (NDF)</li>
+        <li>zeri e divisori (DFR)</li>
+        <li>fratti semplici (NFR)</li>
+    </ol>
+</div>
+
+<div class="slide">
+    <div class="block N">
+        Un polinomio di grado \({\rm n}\) nella variabile \({\rm x}\) è una espressione del tipo:
+        \[{\rm f}=\sum_{{\rm k}\in{\rm n}}{\rm f}_{\rm k}\cdot{\rm x}^{\rm k}\]
+        Si dice che \({\rm n}=\deg\left({\rm f}\right)\) se \({\rm a}_{\rm n}\ne0\)
+    </div>
+    <div class="block D">
+        Dati due polinomi \({\rm f},{\rm g}\), si dicono quoziente e resto della divisione euclidea tra \({\rm f},{\rm g}\) due polinomi tali che:
+        \[\begin{cases}0\le\deg\left({\rm r}\right)\lt\deg\left({\rm g}\right)\\{\rm f}={\rm q}\cdot{\rm g}+{\rm r}\end{cases}\Longrightarrow\begin{cases}{\rm q}={\rm f}/\!\!/{\rm g}\\{\rm r}={\rm f}\%{\rm g}\end{cases}\]
+        Vale \({\rm f}\%{\rm g}=0\) se e solo se \({\rm f}\) è multiplo di \({\rm g}\), cioè se si scrive come \({\rm q}\cdot{\rm g}\), in tal caso deve essere \({\rm q}={\rm f}/\!\!/{\rm g}\).
+    </div>
+    <div class="block F">
+        Per calcolare la divisione tra polinomi si usa la formula:
+        \[\deg\left({\rm f}\right)\ge\deg\left({\rm g}\right)\Longrightarrow\begin{cases}{\rm f}/\!\!/{\rm g}=\left(\frac{{\rm f}_{\deg\left({\rm f}\right)}}{{\rm g}_{\deg\left({\rm g}\right)}}\right)\cdot{\rm x}^{\deg\left({\rm f}\right)-\deg\left({\rm g}\right)}+\left({\rm f}-\left(\frac{{\rm f}_{\deg\left({\rm f}\right)}}{{\rm g}_{\deg\left({\rm g}\right)}}\right)\cdot{\rm x}^{\deg\left({\rm f}\right)-\deg\left({\rm g}\right)}\cdot{\rm g}\right)/\!\!/{\rm g}\\{\rm f}\%{\rm g}=\left({\rm f}-\left(\frac{{\rm f}_{\deg\left({\rm f}\right)}}{{\rm g}_{\deg\left({\rm g}\right)}}\right)\cdot{\rm x}^{\deg\left({\rm f}\right)-\deg\left({\rm g}\right)}\cdot{\rm g}\right)\%{\rm g}\end{cases}\]
+    </div>
+</div>
+
+<div class="slide">
+    <div class="block D">
+        Considerato che:
+        <ul>
+            <li>Le espressioni vengono meglio quando si può fattorizzare.</li>
+            <li>Le leggi di monotonia valgono per i prodotti.</li>
+        </ul>
+        Siamo interessati a fattorizzare un polinomio almeno in fattori che non si annullano.
+    </div>
+    <div class="block F">
+        Se si trova un punto in cui un polinomio si annulla, allora se ne trova un divisore:
+        \[{\rm f}\left({\rm a}\right)={\rm f}\%\left({\rm x}-{\rm a}\right)\]
+        Quindi cerchiamo di capire se un polinomio di annulla oppure no.
+    </div>
+    <div class="block R">
+        Per i polinomi di secondo grado abbiamo già un criterio, in genere:
+        \[{\rm f}={\rm f}\left({\rm a}\right)+\left(\sum_{{\rm k}\in\deg\left({\rm f}\right)}{\rm k}\cdot{\rm f}_{\rm k}\cdot{\rm a}^{{\rm k}-1}\right)\cdot\left({\rm x}-{\rm a}\right)+{\rm g}\cdot\left({\rm x}-{\rm a}\right)\]
+        E si nota che:
+        \[\left[\forall{\rm a}\in{\mathbb R}\quad\left(\frac{\partial{\rm f}}{\partial{\rm x}}\right)\left({\rm a}\right)=\sum_{{\rm k}\in\deg\left({\rm f}\right)}{\rm k}\cdot{\rm f}_{\rm k}\cdot{\rm a}^{{\rm k}-1}=0\Longrightarrow{\rm f}\left({\rm a}\right)\cdot{\rm a}_{\deg\left({\rm f}\right)}\ge0\right]\Rightarrow\left[\forall{\rm a}\in{\mathbb R}\quad{\rm f}\left({\rm a}\right)\cdot{\rm a}_{\deg\left({\rm f}\right)}\ge0\right]\]
+        Notare che per i gradi dispari questo non succede mai.
+    </div>
+</div>
+
+<div class="slide">
+    <div class="block N">
+        Notare che:
+        \[\frac{\rm f}{{\rm g}^{{\rm k}+1}}=\frac{{\rm f}/\!\!/{\rm g}}{{\rm g}^{\rm k}}+\frac{{\rm f}\%{\rm g}}{{\rm g}^{{\rm k}+1}}\]
+        Questo metodo ci sarà utile dopo.
+    </div>
+    <div class="block F">
+        Siccome si può fare la divisione euclidea si può fare bezout per trovare:
+        \[\frac{1}{\operatorname{lcm}\left({\rm f},{\rm g}\right)}=\frac{\operatorname{gcd}\left({\rm f},{\rm g}\right)}{{\rm f}\cdot{\rm g}}=\frac{\rm x}{\rm f}+\frac{\rm y}{\rm g}\]
+        Oltre a permettere il calcolo \(\operatorname{gcd},\operatorname{lcm}\), questo metodo ci sarà utile dopo.
+    </div>
+    <div class="block R">
+        Un buon tentativo per fattorizzare un polinomio è quello di calcolare:
+        \[\operatorname{gcd}\left({\rm f},\frac{\partial{\rm f}}{\partial{\rm x}}\right)\]
+        Questo avrà tutti i fattori di \({\rm f}\) che compaiono con esponente maggiore di uno.
+    </div>
+</div>
+
+<div class="nav-buttons">
+    <div>
+        <a href="https://oniramortsam.github.io/MateMath">https://oniramortsam.github.io/MateMath</a>
+        <br>
+        <button onclick="prevSlide()">Indietro</button>
+        <a href="../">Torna all'Indice</a>
+        <button onclick="nextSlide()">Avanti</button>
+    </div>
+    <div>
+        1° anno:
+        <br>
+        <a href="../1°/1°A/1°A_1.html">A1</a>
+        <a href="../1°/1°A/1°A_2.html">A2</a>
+        <a href="../1°/1°A/1°A_3.html">A3</a>
+        <a href="../1°/1°A/1°A_4.html">A4</a>
+        <br>
+        <a href="../1°/1°B/1°B_1.html">B1</a>
+        <a href="../1°/1°B/1°B_2.html">B2</a>
+        <a href="../1°/1°B/1°B_3.html">B3</a>
+        <a href="../1°/1°B/1°B_4.html">B4</a>
+    </div>
+    <div>
+        2° anno:
+        <br>
+        <a href="../2°/2°A/2°A_1.html">A1</a>
+        <a href="../2°/2°A/2°A_2.html">A2</a>
+        <a href="../2°/2°A/2°A_3.html">A3</a>
+        <a href="../2°/2°A/2°A_4.html">A4</a>
+        <br>
+        <a href="../2°/2°B/2°B_1.html">B1</a>
+        <a href="../2°/2°B/2°B_2.html">B2</a>
+        <a href="../2°/2°B/2°B_3.html">B3</a>
+        <a href="../2°/2°B/2°B_4.html">B4</a>
+    </div>
+    <div>
+        3° anno:
+        <br>
+        <a href="../3°/3°A/3°A_1.html">A1</a>
+        <a href="../3°/3°A/3°A_2.html">A2</a>
+        <a href="../3°/3°A/3°A_3.html">A3</a>
+        <a href="../3°/3°A/3°A_4.html">A4</a>
+        <br>
+        <a href="../3°/3°B/3°B_1.html">B1</a>
+        <a href="../3°/3°B/3°B_2.html">B2</a>
+        <a href="../3°/3°B/3°B_3.html">B3</a>
+        <a href="../3°/3°B/3°B_4.html">B4</a>
+    </div>
+    <div>
+        4° anno:
+        <br>
+        <a href="../4°/4°A/4°A_1.html">A1</a>
+        <a href="../4°/4°A/4°A_2.html">A2</a>
+        <a href="../4°/4°A/4°A_3.html">A3</a>
+        <a href="../4°/4°A/4°A_4.html">A4</a>
+        <br>
+        <a href="../4°/4°B/4°B_1.html">B1</a>
+        <a href="../4°/4°B/4°B_2.html">B2</a>
+        <a href="../4°/4°B/4°B_3.html">B3</a>
+        <a href="../4°/4°B/4°B_4.html">B4</a>
+    </div>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+</script>

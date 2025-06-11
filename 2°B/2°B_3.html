@@ -1,0 +1,243 @@
+<head>
+  <meta charset="UTF-8">
+  <title>2° anno: parte B3</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
+<div class="slide active">
+    <h2>sui triangoli retti</h2>
+    </ol>
+        <li>le trigonometriche (QNF)</li>
+        <li>terema di pitagora (QDC)</li>
+        <li>angoli e lunghezze (QFC)</li>
+    </ol>
+</div>
+
+<div class="slide">
+    <h2>le trigonometriche</h2>
+    <div class="block Q">
+        Consideriamo un vettore \({\rm v}\)
+        <ul>
+            <li>Come posso scrivere la rotazione di \({\rm v}\) di angolo \(\alpha\)?</li>
+            <li>Come posso scrivere la rotazione di \({\rm v}\) di angolo \(\beta\)?</li>
+            <li>Come posso scrivere la rotazione di \({\rm v}\) di angolo \(\alpha+\beta\)?</li>
+        </ul>
+    </div>
+    <div class="block N">
+        Dati tre punti sul piano \({\rm A},{\rm B},{\rm C}\), se \(\beta=\pi/2\), chiamiamo:
+        <ul>
+            <li>\[\sin\left(\alpha\right)=\cos\left(\gamma\right)=\frac{\left|{\rm C}-{\rm B}\right|}{\left|{\rm C}-{\rm A}\right|}\]</li>
+            <li>\[\cos\left(\alpha\right)=\sin\left(\alpha\right)=\frac{\left|{\rm B}-{\rm A}\right|}{\left|{\rm C}-{\rm A}\right|}\]</li>
+        </ul>
+        La rotazione di un angolo \(\theta\) fa corrispondere ad un vettore \({\rm v}\) il vettore:
+        \[\cos\left(\theta\right)\cdot{\rm v}+\sin\left(\theta\right)\cdot{\cal Z}\times{\rm v}=\cos\left(\theta\right)\cdot{\rm v}-\sin\left(\theta\right)\cdot{\rm v}\times{\cal Z}\]
+        Dove \({\cal Z}\) è il versore uscente dal piano cartesiano:
+        <ul>
+            <li>\({\cal Z}\times{\rm v}\) indica la rotazione di \({\rm v}\) di \(\pi/2\) in senso antiorario.</li>
+            <li>\({\rm v}\times{\cal Z}\) indica la rotazione di \({\rm v}\) di \(\pi/2\) in senso orario.</li>
+        </ul>
+        Osserviamo che:
+        <ul>
+            <li>\[\sin\left(0\right)=\cos\left(\pi/2\right)=0\]</li>
+            <li>\[\cos\left(0\right)=\sin\left(\pi/2\right)=1\]</li>
+            <li>\[\sin\left(\pi/2-{\rm x}\right)=\cos\left({\rm x}\right)\]</li>
+            <li>\[\cos\left(\pi/2-{\rm x}\right)=\sin\left({\rm x}\right)\]</li>
+            <li>\[\sin\left({\rm x}\right)+\sin\left({\rm x}+\pi\right)=0\]</li>
+            <li>\[\cos\left({\rm x}\right)+\cos\left({\rm x}+\pi\right)=0\]</li>
+        </ul>
+    </div>
+    <div class="block F">
+        Seguono le formule di addizione:
+        <ul>
+            <li>\[\sin\left(\alpha+\beta\right)=\sin\left(\alpha\right)\cdot\cos\left(\beta\right)+\cos\left(\alpha\right)\cdot\sin\left(\beta\right)\]</li>
+            <li>\[\sin\left(\alpha-\beta\right)=\sin\left(\alpha\right)\cdot\cos\left(\beta\right)-\cos\left(\alpha\right)\cdot\sin\left(\beta\right)\]</li>
+            <li>\[\cos\left(\alpha+\beta\right)=\cos\left(\alpha\right)\cdot\cos\left(\beta\right)-\sin\left(\alpha\right)\cdot\sin\left(\beta\right)\]</li>
+            <li>\[\cos\left(\alpha-\beta\right)=\cos\left(\alpha\right)\cdot\cos\left(\beta\right)+\sin\left(\alpha\right)\cdot\sin\left(\beta\right)\]</li>
+        </ul>
+        Seguono le formule di werner:
+        <ul>
+            <li>\[\sin\left(\alpha\right)\cdot\cos\left(\beta\right)=\frac{\sin\left(\alpha+\beta\right)+\sin\left(\alpha-\beta\right)}{2}\]</li>
+            <li>\[\cos\left(\alpha\right)\cdot\sin\left(\beta\right)=\frac{\sin\left(\alpha+\beta\right)-\sin\left(\alpha-\beta\right)}{2}\]</li>
+            <li>\[\sin\left(\alpha\right)\cdot\sin\left(\beta\right)=\frac{\cos\left(\alpha-\beta\right)-\cos\left(\alpha+\beta\right)}{2}\]</li>
+            <li>\[\cos\left(\alpha\right)\cdot\cos\left(\beta\right)=\frac{\cos\left(\alpha-\beta\right)+\cos\left(\alpha+\beta\right)}{2}\]</li>
+        </ul>
+        Seguono le formule di prostaferesi:
+        <ul>            
+            <li>\[\sin\left(\alpha\right)+\sin\left(\beta\right)=2\cdot\sin\left(\frac{\alpha+\beta}{2}\right)\cdot\cos\left(\frac{\alpha-\beta}{2}\right)\]</li>
+            <li>\[\sin\left(\alpha\right)-\sin\left(\beta\right)=2\cdot\cos\left(\frac{\alpha+\beta}{2}\right)\cdot\sin\left(\frac{\alpha-\beta}{2}\right)\]</li>
+            <li>\[\cos\left(\beta\right)-\cos\left(\alpha\right)=2\cdot\sin\left(\frac{\alpha+\beta}{2}\right)\cdot\sin\left(\frac{\alpha-\beta}{2}\right)\]</li>
+            <li>\[\cos\left(\beta\right)+\cos\left(\alpha\right)=2\cdot\cos\left(\frac{\alpha+\beta}{2}\right)\cdot\cos\left(\frac{\alpha-\beta}{2}\right)\]</li>
+        </ul>
+    </div>
+</div>
+
+<div class="slide">
+    <h2>teorema di pitagora</h2>
+    <div class="block Q">
+        Dati due punti \({\rm A},{\rm B}\), come ne calcolo la distanza \(\left|{\rm A}-{\rm B}\right|\)?
+    </div>
+    <div class="block D">
+        La dimostrazione del teorema di pitagora si articola come segue:
+        <ul>
+            <li>Costruiamo un quadrato di vertici \(\left({\rm a},{\rm b}\right),\left(-{\rm b},{\rm a}\right),\left(-{\rm a},-{\rm b}\right),\left({\rm b},-{\rm a}\right)\)</li>
+            <li>Consideriamo i rettangoli con i lati paralleli agli assi cartesiani ed aventi i lati del quadrato come diagonali.</li>
+            <li>Consideriamo i due quadrati con lati paralleli agli assi cartesiani, questi hanno area \(4\cdot{\rm a}^2,4\cdot{\rm b}^2\)</li>
+        </ul>
+        l'area del quadrato disegnato all'inizio è dunque:
+        \[2\cdot\left({\rm a}^2+{\rm b}^2\right)=\left({\rm a}-{\rm b}\right)^2+\left({\rm a}+{\rm b}\right)^2\]
+        Da cui si evince che per un triangolo rettangolo la somma dei quadrati dei cateti è pari al quadrato dell'ipotenusa:
+        \[\cos\left(\theta\right)^2+\sin\left(\theta\right)^2=1\]
+    </div>
+    <div class="block C">
+        La distanza tra due punti si calcola come:
+        \[\left|{\rm A}-{\rm B}\right|=\sqrt{\left({\rm x}_{\rm A}-{\rm x}_{\rm B}\right)^2+\left({\rm y}_{\rm A}-{\rm y}_{\rm B}\right)^2}\]
+    </div>
+</div>
+
+<div class="slide">
+    <h2>angoli e lunghezze</h2>
+    <div class="block Q">
+        Dati tre punti sul piano \({\rm A},{\rm B},{\rm C}\) questi identificano un triangolo:
+        <ul>
+            <li>Chiamiamo \(\alpha\) l'angolo che ruota \({\rm B}-{\rm A}\) in \({\rm C}-{\rm A}\).</li>
+            <li>Chiamiamo \(\beta\) l'angolo che ruota \({\rm C}-{\rm B}\) in \({\rm A}-{\rm B}\).</li>
+            <li>Chiamiamo \(\gamma\) l'angolo che ruota \({\rm A}-{\rm C}\) in \({\rm B}-{\rm C}\).</li>
+        </ul>
+        Denotiamo inoltre:
+        <ul>
+            <li>\[{\rm a}=\left|{\rm C}-{\rm B}\right|\]</li>
+            <li>\[{\rm b}=\left|{\rm A}-{\rm C}\right|\]</li>
+            <li>\[{\rm c}=\left|{\rm C}-{\rm B}\right|\]</li>
+        </ul>
+        Come possiamo calcolare:
+        <ul>
+            <li>\(\frac{\rm a}{\rm b},\frac{\rm c}{\rm a},\frac{\rm b}{\rm c}\) conoscendo \(\alpha,\beta,\gamma\)?</li>
+            <li>\(\alpha,\beta,\gamma\) conoscendo \(\frac{\rm a}{\rm b},\frac{\rm c}{\rm a},\frac{\rm b}{\rm c}\)?</li>
+        </ul>
+    </div>
+    <div class="block F">
+        Diciamo:
+        <ul>
+            <li>\[{\rm a}=\left|{\rm C}-{\rm B}\right|=\cos\left(\beta\right)\cdot{\rm c}+\cos\left(\gamma\right)\cdot{\rm b}\]</li>
+            <li>\[{\rm b}=\left|{\rm A}-{\rm C}\right|=\cos\left(\gamma\right)\cdot{\rm a}+\cos\left(\alpha\right)\cdot{\rm c}\]</li>
+            <li>\[{\rm c}=\left|{\rm C}-{\rm B}\right|=\cos\left(\alpha\right)\cdot{\rm b}+\cos\left(\beta\right)\cdot{\rm a}\]</li>
+        </ul>
+        Da cui si ricava:
+        <ul>
+            <li>\[{\rm b}^2-{\rm a}^2=\cos\left(\alpha\right)\cdot{\rm c}\cdot{\rm b}-\cos\left(\beta\right)\cdot{\rm c}\cdot{\rm a}=\cos\left(\alpha\right)^2\cdot{\rm b}^2-\cos\left(\beta\right)^2\cdot{\rm a}^2\]</li>
+            <li>\[{\rm c}^2-{\rm b}^2=\cos\left(\beta\right)\cdot{\rm a}\cdot{\rm c}-\cos\left(\gamma\right)\cdot{\rm a}\cdot{\rm b}=\cos\left(\beta\right)^2\cdot{\rm c}^2-\cos\left(\gamma\right)^2\cdot{\rm b}^2\]</li>
+            <li>\[{\rm a}^2-{\rm c}^2=\cos\left(\gamma\right)\cdot{\rm b}\cdot{\rm a}-\cos\left(\alpha\right)\cdot{\rm b}\cdot{\rm c}=\cos\left(\gamma\right)^2\cdot{\rm a}^2-\cos\left(\alpha\right)^2\cdot{\rm c}^2\]</li>
+        </ul>
+        Cioè:
+        \[\frac{{\rm a}^2}{1-\cos\left(\alpha\right)^2}=\frac{{\rm b}^2}{1-\cos\left(\beta\right)^2}=\frac{{\rm c}^2}{1-\cos\left(\gamma\right)^2}\]
+        Si nota invece che l'area del triangolo si può calcolare come:
+        \[\sin\left(\alpha\right)\cdot{\rm b}\cdot{\rm c}={\rm a}\cdot\sin\left(\beta\right)\cdot{\rm c}={\rm a}\cdot{\rm b}\cdot\sin\left(\gamma\right)\]
+        Da cui si ricava:
+        \[\frac{\rm a}{\sin\left(\alpha\right)}=\frac{\rm b}{\sin\left(\beta\right)}=\frac{\rm c}{\sin\left(\gamma\right)}\]
+        Questa formula è infatti equivalente alla precedente.
+    </div>
+    <div class="block C">
+        La relazione tra gli angoli interni di un triangolo si legge dunque:
+        <ul>
+            <li>\[{\rm a}=\cos\left(\beta\right)\cdot{\rm c}+\cos\left(\gamma\right)\cdot{\rm b}\]</li>
+            <li>\[{\rm b}=\cos\left(\gamma\right)\cdot{\rm a}+\cos\left(\alpha\right)\cdot{\rm c}\]</li>
+            <li>\[{\rm c}=\cos\left(\alpha\right)\cdot{\rm b}+\cos\left(\beta\right)\cdot{\rm a}\]</li>
+        </ul>
+        Da cui si ricava:
+        <ul>
+            <li>\[{\rm b}^2-\cos\left(\gamma\right)\cdot{\rm a}\cdot{\rm b}={\rm c}^2-\cos\left(\beta\right)\cdot{\rm a}\cdot{\rm c}\]</li>
+            <li>\[{\rm c}^2-\cos\left(\alpha\right)\cdot{\rm b}\cdot{\rm c}={\rm a}^2-\cos\left(\gamma\right)\cdot{\rm b}\cdot{\rm a}\]</li>
+            <li>\[{\rm a}^2-\cos\left(\beta\right)\cdot{\rm c}\cdot{\rm a}={\rm b}^2-\cos\left(\alpha\right)\cdot{\rm c}\cdot{\rm b}\]</li>
+        </ul>
+        E si può calcolare
+        <ul>
+            <li>\[\cos\left(\alpha\right)=\frac{{\rm b}^2+{\rm c}^2-{\rm a}^2}{2\cdot{\rm b}\cdot{\rm c}}\]</li>
+            <li>\[\cos\left(\beta\right)=\frac{{\rm c}^2+{\rm a}^2-{\rm b}^2}{2\cdot{\rm c}\cdot{\rm a}}\]</li>
+            <li>\[\cos\left(\gamma\right)=\frac{{\rm a}^2+{\rm b}^2-{\rm c}^2}{2\cdot{\rm a}\cdot{\rm b}}\]</li>
+        </ul>
+    </div>
+</div>
+
+<div class="nav-buttons">
+    <div>
+        <a href="https://oniramortsam.github.io/MateMath">https://oniramortsam.github.io/MateMath</a>
+        <br>
+        <button onclick="prevSlide()">Indietro</button>
+        <a href="../">Torna all'Indice</a>
+        <button onclick="nextSlide()">Avanti</button>
+    </div>
+    <div>
+        1° anno:
+        <br>
+        <a href="../1°/1°A/1°A_1.html">A1</a>
+        <a href="../1°/1°A/1°A_2.html">A2</a>
+        <a href="../1°/1°A/1°A_3.html">A3</a>
+        <a href="../1°/1°A/1°A_4.html">A4</a>
+        <br>
+        <a href="../1°/1°B/1°B_1.html">B1</a>
+        <a href="../1°/1°B/1°B_2.html">B2</a>
+        <a href="../1°/1°B/1°B_3.html">B3</a>
+        <a href="../1°/1°B/1°B_4.html">B4</a>
+    </div>
+    <div>
+        2° anno:
+        <br>
+        <a href="../2°/2°A/2°A_1.html">A1</a>
+        <a href="../2°/2°A/2°A_2.html">A2</a>
+        <a href="../2°/2°A/2°A_3.html">A3</a>
+        <a href="../2°/2°A/2°A_4.html">A4</a>
+        <br>
+        <a href="../2°/2°B/2°B_1.html">B1</a>
+        <a href="../2°/2°B/2°B_2.html">B2</a>
+        <a href="../2°/2°B/2°B_3.html">B3</a>
+        <a href="../2°/2°B/2°B_4.html">B4</a>
+    </div>
+    <div>
+        3° anno:
+        <br>
+        <a href="../3°/3°A/3°A_1.html">A1</a>
+        <a href="../3°/3°A/3°A_2.html">A2</a>
+        <a href="../3°/3°A/3°A_3.html">A3</a>
+        <a href="../3°/3°A/3°A_4.html">A4</a>
+        <br>
+        <a href="../3°/3°B/3°B_1.html">B1</a>
+        <a href="../3°/3°B/3°B_2.html">B2</a>
+        <a href="../3°/3°B/3°B_3.html">B3</a>
+        <a href="../3°/3°B/3°B_4.html">B4</a>
+    </div>
+    <div>
+        4° anno:
+        <br>
+        <a href="../4°/4°A/4°A_1.html">A1</a>
+        <a href="../4°/4°A/4°A_2.html">A2</a>
+        <a href="../4°/4°A/4°A_3.html">A3</a>
+        <a href="../4°/4°A/4°A_4.html">A4</a>
+        <br>
+        <a href="../4°/4°B/4°B_1.html">B1</a>
+        <a href="../4°/4°B/4°B_2.html">B2</a>
+        <a href="../4°/4°B/4°B_3.html">B3</a>
+        <a href="../4°/4°B/4°B_4.html">B4</a>
+    </div>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+</script>

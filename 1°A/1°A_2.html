@@ -1,0 +1,215 @@
+<head>
+  <meta charset="UTF-8">
+  <title>1° anno: parte A2</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
+<div class="slide active">
+    <h2>le differenza e naturali</h2>
+    <ol>
+        <li>sul confronto (QNF)</li>
+        <li>la differenza (QFR)</li>
+        <li>numeri interi (QNF)</li>
+    </ol>
+</div>
+
+<div class="slide">
+    <h2>sul confronto</h2>
+    <div class="block Q">
+        Due Oompaloompa hanno \({\rm a},{\rm b}\) monete rispettivamente e spendono \({\rm c}\) monete a cena:
+        <ul>
+            <li>Quante monete gli restano?</li>
+            <li>Cosa so dire di \({\rm c}\)?</li>
+            <li>Che succede se offre il primo?</li>
+            <li>Che succede se offre il secondo?</li>
+        </ul>
+        Ho \({\rm a}\) monete e pago con \({\rm b}\) monete a cena, ne ricevo \({\rm c}\) di resto:
+        <ul>
+            <li>Quante monete ho speso?</li>
+            <li>Quante me ne restano?</li>
+            <li>Cosa so dire di \({\rm a},{\rm b}\)?</li>
+            <li>Cosa so dire di \({\rm b},{\rm c}\)?</li>
+        </ul>
+        Ho \({\rm a}\) monete e ne spendo \({\rm b},{\rm c}\) per due regali:
+        <ul>
+            <li>Quante monete ho speso?</li>
+            <li>Quante me ne restano?</li>
+            <li>Cosa so dire di \({\rm a}\)?</li>
+            <li>Cosa so dire di \({\rm b},{\rm c}\)?</li>
+        </ul>
+    </div>
+    <div class="block N">
+        Dati due insiemi contenuti l'uno nell'altro, la differenza tra le loro cardinalità è la cardinalità del complementare:
+        \[{\rm A}\subseteq{\rm B}\Longrightarrow\begin{cases}\left|{\rm A}\right|\le\left|{\rm B}\right|\\\left|{\rm A}\setminus{\rm B}\right|=\left|{\rm A}\right|-\left|{\rm B}\right|\end{cases}\]
+        Come conseguenza:
+        <ul>
+            <li>\[{\rm b}\in{\mathbb N}\Longrightarrow\begin{cases}{\rm a}+{\rm b}\ge{\rm a}\\\left({\rm a}+{\rm b}\right)-{\rm b}={\rm a}\end{cases}\]</li>
+            <li>\[{\rm a}\ge{\rm b}\Longrightarrow\left({\rm a}-{\rm b}\right)+{\rm b}={\rm a}\]</li>
+        </ul>
+    </div>
+    <div class="block F">
+        La differenza e la somma si scambiano:
+        <ul>
+            <li>\[{\rm a}\ge{\rm c}\Longrightarrow\begin{cases}{\rm a}+{\rm b}\ge{\rm c}\\\left({\rm a}-{\rm c}\right)+{\rm b}=\left({\rm a}+{\rm b}\right)-{\rm c}\end{cases}\]</li>
+            <li>\[\begin{cases}{\rm a}+{\rm c}\ge{\rm b}\\{\rm b}\ge{\rm c}\end{cases}\Longrightarrow\begin{cases}{\rm a}\ge{\rm b}-{\rm c}\\{\rm a}-\left({\rm b}-{\rm c}\right)=\left({\rm a}+{\rm c}\right)-{\rm b}\end{cases}\]</li>
+            <li>\[\begin{cases}{\rm a}\ge{\rm b}\\{\rm a}-{\rm b}\ge{\rm c}\end{cases}\Longrightarrow\begin{cases}{\rm a}\ge{\rm b}+{\rm c}\\{\rm a}-\left({\rm b}+{\rm c}\right)=\left({\rm a}-{\rm b}\right)-{\rm c}\end{cases}\]</li>
+        </ul>
+        Queste sono equivalenti alle proprietà invariantive:
+        <ul>
+            <li>\[{\rm b}\ge{\rm c}\Longrightarrow{\rm a}+{\rm b}=\left({\rm a}+{\rm c}\right)+\left({\rm b}-{\rm c}\right)\]</li>
+            <li>\[{\rm a}\ge{\rm c}\Longrightarrow{\rm a}+{\rm b}=\left({\rm a}-{\rm c}\right)+\left({\rm b}+{\rm c}\right)\]</li>
+            <li>\[{\rm a}\ge{\rm b}\Longrightarrow\begin{cases}{\rm a}+{\rm c}\ge{\rm b}+{\rm c}\\{\rm a}-{\rm b}=\left({\rm a}+{\rm c}\right)-\left({\rm b}+{\rm c}\right)\end{cases}\]</li>
+            <li>\[\begin{cases}{\rm b}\ge{\rm c}\\{\rm a}\ge{\rm b}\end{cases}\Longrightarrow\begin{cases}{\rm a}-{\rm c}\ge{\rm b}-{\rm c}\\{\rm a}-{\rm b}=\left({\rm a}-{\rm c}\right)-\left({\rm b}-{\rm c}\right)\end{cases}\]</li>
+        </ul>
+        Le ultime due prendono anche il nome di prima legge di monotonia.
+    </div>
+</div>
+
+<div class="slide">
+    <h2>la differenza</h2>
+    <div class="block Q">
+        Ho \({\rm a}\) pacchetti e ne regalo \({\rm b}\), ogniuno conteneva \({\rm c}\) Wonka:
+        <ul>
+            <li>Quante Wonka avevo?</li>
+            <li>Quante ne ho regalate?</li>
+            <li>Quante me ne restano?</li>
+            <li>Cosa so dire di \({\rm a},{\rm b}\)?</li>
+        </ul>
+        Ho \({\rm a}\) pacchetti da \({\rm b}\) Wonka, ne cadono \({\rm c}\) ogni volta che ne apro uno:
+        <ul>
+            <li>Quante Wonka avevo?</li>
+            <li>Quante ne sono cadute?</li>
+            <li>Quante ne ho mangiate?</li>
+            <li>Cosa so dire di \({\rm b},{\rm c}\)?</li>
+        </ul>
+    </div>
+    <div class="block F">
+        La moltiplicazione è distributiva sulla differenza:
+        <ul>
+            <li>\[\begin{cases}{\rm a}\in{\mathbb N}\\{\rm b}\ge{\rm c}\end{cases}\Longrightarrow\begin{cases}{\rm a}\cdot{\rm b}\ge{\rm a}\cdot{\rm c}\\{\rm a}\cdot\left({\rm b}-{\rm c}\right)={\rm a}\cdot{\rm b}-{\rm a}\cdot{\rm c}\end{cases}\]</li>
+            <li>\[\begin{cases}{\rm a}\ge{\rm b}\\{\rm c}\in{\mathbb N}\end{cases}\Longrightarrow\begin{cases}{\rm a}\cdot{\rm c}\ge{\rm b}\cdot{\rm c}\\\left({\rm a}-{\rm b}\right)\cdot{\rm c}={\rm a}\cdot{\rm c}-{\rm b}\cdot{\rm c}\end{cases}\]</li>
+        </ul>
+        Queste prendono anche il nome di seconda legge di monotonia.
+    </div>
+    <div class="block R">
+        Le leggi di monotonia ci permetteranno di risolvere le disequazioni, ma in questo contesto sono solo cavilli.
+    </div>
+</div>
+
+<div class="slide">
+    <h2>numeri interi</h2>
+    <div class="block Q">
+        Compro \({\rm a}\) Wonka al giorno, e ne mangio \({\rm b}\):
+        <ul>
+            <li>Rispetto ad oggi, quante Wonka avrò tra \({\rm c}\) giorni?</li>
+            <li>Rispetto ad oggi, quante Wonka avevo \({\rm c}\) giorni fa?</li>
+        </ul>
+    </div>
+    <div class="block N">
+        I numeri interi sono differenze tra numeri naturali e vengono rappresentati da modulo e (se questo non è nullo) un segno positivo (spesso omesso) o negativo. Le operazioni sono definite secondo le regole:
+        <ul>
+            <li>\[{\rm a}+\left(-{\rm b}\right)={\rm a}-{\rm b}=-\left({\rm b}-{\rm a}\right)\]</li>
+            <li>\[\left(-{\rm a}\right)+{\rm b}={\rm b}-{\rm a}=-\left({\rm a}-{\rm b}\right)\]</li>
+            <li>\[\left(-{\rm a}\right)-{\rm b}=-\left({\rm a}+{\rm b}\right)=\left(-{\rm b}\right)-{\rm a}\]</li>
+            <li>\[\left(-{\rm a}\right)\cdot{\rm b}=-\left({\rm a}\cdot{\rm b}\right)={\rm a}\cdot\left(-{\rm b}\right)\]</li>
+        </ul>
+        Si dice che:
+        \[{\rm a}\le{\rm b}\Longleftrightarrow{\rm b}-{\rm a}\in{\mathbb N}\]
+    </div>
+    <div class="block F">
+        Le proprietà della differenza sono dunque equivalenti a quelle della somma estese ai numeri interi con l'unico appunto sulla seconda legge di monotonia:
+        <ul>
+            <li>\[\begin{cases}{\rm a}\in{\mathbb N}\\{\rm b}\ge{\rm c}\end{cases}\Longrightarrow\begin{cases}{\rm a}\cdot{\rm b}\ge{\rm a}\cdot{\rm c}\\\left(-{\rm a}\right)\cdot{\rm b}\le\left(-{\rm a}\right)\cdot{\rm c}\end{cases}\]</li>
+            <li>\[\begin{cases}{\rm a}\ge{\rm b}\\{\rm c}\in{\mathbb N}\end{cases}\Longrightarrow\begin{cases}{\rm a}\cdot{\rm c}\ge{\rm b}\cdot{\rm c}\\{\rm a}\cdot\left(-{\rm c}\right)\le{\rm b}\cdot\left(-{\rm c}\right)\end{cases}\]</li>
+        </ul>
+        Notiamo per completezza i casi particolari:
+        <ul>
+            <li>\[{\rm a}-{\rm a}={\rm a}\cdot0=0\]</li>
+            <li>\[{\rm a}+0={\rm a}\cdot1={\rm a}\]</li>
+        </ul>
+    </div>
+</div>
+
+<div class="nav-buttons">
+    <div>
+        <a href="https://oniramortsam.github.io/MateMath">https://oniramortsam.github.io/MateMath</a>
+        <br>
+        <button onclick="prevSlide()">Indietro</button>
+        <a href="../">Torna all'Indice</a>
+        <button onclick="nextSlide()">Avanti</button>
+    </div>
+    <div>
+        1° anno:
+        <br>
+        <a href="../1°/1°A/1°A_1.html">A1</a>
+        <a href="../1°/1°A/1°A_2.html">A2</a>
+        <a href="../1°/1°A/1°A_3.html">A3</a>
+        <a href="../1°/1°A/1°A_4.html">A4</a>
+        <br>
+        <a href="../1°/1°B/1°B_1.html">B1</a>
+        <a href="../1°/1°B/1°B_2.html">B2</a>
+        <a href="../1°/1°B/1°B_3.html">B3</a>
+        <a href="../1°/1°B/1°B_4.html">B4</a>
+    </div>
+    <div>
+        2° anno:
+        <br>
+        <a href="../2°/2°A/2°A_1.html">A1</a>
+        <a href="../2°/2°A/2°A_2.html">A2</a>
+        <a href="../2°/2°A/2°A_3.html">A3</a>
+        <a href="../2°/2°A/2°A_4.html">A4</a>
+        <br>
+        <a href="../2°/2°B/2°B_1.html">B1</a>
+        <a href="../2°/2°B/2°B_2.html">B2</a>
+        <a href="../2°/2°B/2°B_3.html">B3</a>
+        <a href="../2°/2°B/2°B_4.html">B4</a>
+    </div>
+    <div>
+        3° anno:
+        <br>
+        <a href="../3°/3°A/3°A_1.html">A1</a>
+        <a href="../3°/3°A/3°A_2.html">A2</a>
+        <a href="../3°/3°A/3°A_3.html">A3</a>
+        <a href="../3°/3°A/3°A_4.html">A4</a>
+        <br>
+        <a href="../3°/3°B/3°B_1.html">B1</a>
+        <a href="../3°/3°B/3°B_2.html">B2</a>
+        <a href="../3°/3°B/3°B_3.html">B3</a>
+        <a href="../3°/3°B/3°B_4.html">B4</a>
+    </div>
+    <div>
+        4° anno:
+        <br>
+        <a href="../4°/4°A/4°A_1.html">A1</a>
+        <a href="../4°/4°A/4°A_2.html">A2</a>
+        <a href="../4°/4°A/4°A_3.html">A3</a>
+        <a href="../4°/4°A/4°A_4.html">A4</a>
+        <br>
+        <a href="../4°/4°B/4°B_1.html">B1</a>
+        <a href="../4°/4°B/4°B_2.html">B2</a>
+        <a href="../4°/4°B/4°B_3.html">B3</a>
+        <a href="../4°/4°B/4°B_4.html">B4</a>
+    </div>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+</script>

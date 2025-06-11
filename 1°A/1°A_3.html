@@ -1,0 +1,211 @@
+<head>
+  <meta charset="UTF-8">
+  <title>1° anno: parte A3</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
+<div class="slide active">
+    <h2>divisione e divisibilità</h2>
+    <ol>
+        <li>la divisione intera euclidea (QNF)</li>
+        <li>le proprietà della divisione (QFR)</li>
+        <li>sguardo sui numeri razionali (QNF)</li>
+    </ol>
+</div>
+
+<div class="slide">
+    <h2>la divisione intera euclidea</h2>
+    <div class="block Q">
+        Ho \({\rm a}\) monete ed una Wonka ne costa \({\rm b}\):
+        <ul>
+            <li>Quante Wonka posso comprare?</li>
+            <li>Quante monete mi restano?</li>
+        </ul>
+        Voglio distribuire equamente \({\rm a}\) monete a \({\rm b}\) Oompaloompa:
+        <ul>
+            <li>Quanto pago ogniuno?</li>
+            <li>Quante monete mi restano?</li>
+        </ul>
+    </div>
+    <div class="block N">
+        Si dicono quoziente e resto della divisione euclidea tra \({\rm a},{\rm b}\) due numeri tali che:
+        \[\begin{cases}0\le{\rm r}\lt{\rm b}\\{\rm a}={\rm q}\cdot{\rm b}+{\rm r}\end{cases}\Longrightarrow\begin{cases}{\rm q}={\rm a}/\!\!/{\rm b}\\{\rm r}={\rm a}\%{\rm b}\end{cases}\]
+        Vale \({\rm a}\%{\rm b}=0\) se e solo se \({\rm a}\) è multiplo di \({\rm b}\), cioè se si scrive come \({\rm q}\cdot{\rm b}\), in tal caso deve essere \({\rm q}={\rm a}/\!\!/{\rm b}\).
+    </div>
+    <div class="block F">
+        Una proprietà importante è la seguente:
+        <ul>
+            <li>\[\left({\rm a}/\!\!/{\rm b}\right)\%{\rm c}=\left({\rm a}\%\left({\rm b}\cdot{\rm c}\right)\right)/\!\!/{\rm b}\]</li>
+            <li>\[{\rm c}\%{\rm b}=0\Longrightarrow\left({\rm a}/\!\!/{\rm b}\right)\%\left({\rm c}/\!\!/{\rm b}\right)=\left({\rm a}\%{\rm c}\right)/\!\!/{\rm b}\]</li>
+        </ul>
+    </div>
+</div>
+
+<div class="slide">
+    <h2>le proprietà della divisione</h2>
+    <div class="block Q">
+        Ho \({\rm a}\) Wonka ed ogniuna vale \({\rm b}\) monete, voglio pagare \({\rm c}\) Oompaloompa in Wonka:
+        <ul>
+            <li>Quante Wonka posso dare ad ogniuno?</li>
+            <li>Quanto sto pagando un Oompaloompa?</li>
+        </ul>
+        Ho \({\rm a}\) monete ed una Wonka ne costa \({\rm b}\), voglio pagare \({\rm c}\) Oompaloompa in Wonka:
+        <ul>
+            <li>Quante Wonka posso comprare?</li>
+            <li>Quanto pago ogni Oompaloompa?</li>
+        </ul>
+        Due Oompaloompa hanno \({\rm a},{\rm b}\) monete rispettivamente ed una Wonka ne costa \({\rm c}\):
+        <ul>
+            <li>Quante Wonka possono comprare separatamente?</li>
+            <li>Quante monete restano ad ogni Oompaloompa?</li>
+            <li>Quante Wonka possono comprare insieme?</li>
+            <li>Quante monete gli restano in tutto?</li>
+        </ul>
+    </div>
+    <div class="block F">
+        La relazione tra divisione e somma è:
+        <ul>
+            <li>\[\left({\rm a}+{\rm b}\right)\%{\rm c}=\left({\rm a}\%{\rm c}+{\rm b}\%{\rm c}\right)\%{\rm c}\]</li>
+            <li>\[\left({\rm a}+{\rm b}\right)/\!\!/{\rm c}={\rm a}/\!\!/{\rm c}+{\rm b}/\!\!/{\rm c}+\left({\rm a}\%{\rm c}+{\rm b}\%{\rm c}\right)/\!\!/{\rm c}\]</li>
+        </ul>
+        La relazione tra resto e prodotto è:
+        <ul>
+            <li>\[\left({\rm a}\cdot{\rm b}\right)\%{\rm c}=\left(\left({\rm a}\%{\rm c}\right)\cdot\left({\rm b}\%{\rm c}\right)\right)\%{\rm c}\]</li>
+            <li>\[\left(\left({\rm a}/\!\!/{\rm b}\right)\%{\rm c}\right)\cdot{\rm b}+{\rm a}\%{\rm b}={\rm a}\%\left({\rm b}\cdot{\rm c}\right)=\left(\left({\rm a}/\!\!/{\rm c}\right)\%{\rm b}\right)\cdot{\rm c}+{\rm a}\%{\rm c}\]</li>
+        </ul>
+        La relazione tra quoziente e prodotto è:
+        <ul>
+            <li>\[\left({\rm a}\cdot{\rm b}\right)/\!\!/{\rm c}=\left({\rm a}/\!\!/{\rm c}\right)\cdot\left({\rm b}/\!\!/{\rm c}\right)\cdot{\rm c}+\left({\rm a}/\!\!/{\rm c}\right)\cdot\left({\rm b}\%{\rm c}\right)+\left({\rm a}\%{\rm c}\right)\cdot\left({\rm b}/\!\!/{\rm c}\right)\]</li>
+            <li>\[\left({\rm a}/\!\!/{\rm b}\right)/\!\!/{\rm c}={\rm a}/\!\!/\left({\rm b}\cdot{\rm c}\right)=\left({\rm a}/\!\!/{\rm c}\right)/\!\!/{\rm b}\]</li>
+        </ul>
+        La proprietà invariantiva però si legge come:
+        <ul>
+            <li>\[\left({\rm a}\cdot{\rm c}\right)\%\left({\rm b}\cdot{\rm c}\right)=\left({\rm a}\%{\rm b}\right)\cdot{\rm c}\]</li>
+            <li>\[\left({\rm a}\cdot{\rm c}\right)/\!\!/\left({\rm b}\cdot{\rm c}\right)={\rm a}/\!\!/{\rm b}\]</li>
+        </ul>
+    </div>
+    <div class="block R">
+        Notare come le formule sopra diventano molto semplici quando posso cambiare le monete e spezzare le Wonka.
+    </div>
+</div>
+
+<div class="slide">
+    <h2>sguardo sui numeri razionali</h2>
+    <div class="block Q">
+        Il mio cronometro rudimentale ha una lancetta che gira, un Oompaloompa mi passa d'avanti \({\rm a}\) volte ogni \({\rm b}\) giri:
+        <ul>
+            <li>Non conoscendo \({\rm a},{\rm b}\) osservo gli Oompaloompa per \({\rm n}\) giri. Cosa vedo?</li>
+            <li>Cosa posso dedurre su \({\rm a},{\rm b}\) dalle mie osservazioni?</li>
+            <li>Cosa posso sapere sul numero di Oompaloompa che vedrò dopo \({\rm m}\) giri?</li>
+        </ul>
+    </div>
+    <div class="block N">
+        Si definiscono i numeri razionali come le divisioni razionali tra un intero ed un naturale non nullo, sono definite le operazioni:
+        <ul>
+            <li>\[\frac{\rm a}{\rm b}\pm\frac{\rm c}{\rm d}=\frac{{\rm a}\cdot{\rm d}\pm{\rm b}\cdot{\rm c}}{{\rm b}\cdot{\rm d}}\]</li>
+            <li>\[\frac{\rm a}{\rm b}\cdot\frac{\rm c}{\rm d}=\frac{{\rm a}\cdot{\rm c}}{{\rm b}\cdot{\rm d}}\qquad\frac{\rm a}{\rm b}:\frac{\rm c}{\rm d}=\frac{{\rm a}\cdot{\rm d}}{{\rm b}\cdot{\rm c}}\]</li>
+        </ul>
+        e si dice che:
+        \[\frac{\rm a}{\rm b}\le\frac{\rm c}{\rm d}\Longleftrightarrow{\rm a}\cdot{\rm d}\le{\rm b}\cdot{\rm c}\]
+    </div>
+    <div class="block F">
+        Siccome nel mondo dei razionali le operazioni sono due, le proprietà da ricordare sono in realtà tre:
+        <ul>
+            <li>\[{\rm a}+{\rm b}={\rm b}+{\rm a}\]</li>
+            <li>\[\left({\rm a}+{\rm b}\right)+{\rm c}={\rm a}+\left({\rm b}+{\rm a}\right)\]</li>
+            <li>\[{\rm a}\cdot{\rm b}={\rm b}\cdot{\rm a}\]</li>
+            <li>\[\left({\rm a}\cdot{\rm b}\right)\cdot{\rm c}={\rm a}\cdot\left({\rm b}\cdot{\rm a}\right)\]</li>
+            <li>\[\left({\rm a}+{\rm b}\right)\cdot{\rm c}={\rm a}\cdot{\rm c}+{\rm b}\cdot{\rm c}\]</li>
+        </ul>
+        Notiamo per completezza i casi particolari:
+        <ul>
+            <li>\[\left(-{\rm a}\right)={\rm a}\cdot\left(-1\right)={\rm a}:\left(-1\right)\]</li>
+            <li>\[{\rm a}-{\rm a}={\rm a}\cdot0=0\]</li>
+            <li>\[{\rm a}+0={\rm a}\cdot1=\left(-\left(-{\rm a}\right)\right)\]</li>
+        </ul>
+    </div>
+</div>
+
+<div class="nav-buttons">
+    <div>
+        <a href="https://oniramortsam.github.io/MateMath">https://oniramortsam.github.io/MateMath</a>
+        <br>
+        <button onclick="prevSlide()">Indietro</button>
+        <a href="../">Torna all'Indice</a>
+        <button onclick="nextSlide()">Avanti</button>
+    </div>
+    <div>
+        1° anno:
+        <br>
+        <a href="../1°/1°A/1°A_1.html">A1</a>
+        <a href="../1°/1°A/1°A_2.html">A2</a>
+        <a href="../1°/1°A/1°A_3.html">A3</a>
+        <a href="../1°/1°A/1°A_4.html">A4</a>
+        <br>
+        <a href="../1°/1°B/1°B_1.html">B1</a>
+        <a href="../1°/1°B/1°B_2.html">B2</a>
+        <a href="../1°/1°B/1°B_3.html">B3</a>
+        <a href="../1°/1°B/1°B_4.html">B4</a>
+    </div>
+    <div>
+        2° anno:
+        <br>
+        <a href="../2°/2°A/2°A_1.html">A1</a>
+        <a href="../2°/2°A/2°A_2.html">A2</a>
+        <a href="../2°/2°A/2°A_3.html">A3</a>
+        <a href="../2°/2°A/2°A_4.html">A4</a>
+        <br>
+        <a href="../2°/2°B/2°B_1.html">B1</a>
+        <a href="../2°/2°B/2°B_2.html">B2</a>
+        <a href="../2°/2°B/2°B_3.html">B3</a>
+        <a href="../2°/2°B/2°B_4.html">B4</a>
+    </div>
+    <div>
+        3° anno:
+        <br>
+        <a href="../3°/3°A/3°A_1.html">A1</a>
+        <a href="../3°/3°A/3°A_2.html">A2</a>
+        <a href="../3°/3°A/3°A_3.html">A3</a>
+        <a href="../3°/3°A/3°A_4.html">A4</a>
+        <br>
+        <a href="../3°/3°B/3°B_1.html">B1</a>
+        <a href="../3°/3°B/3°B_2.html">B2</a>
+        <a href="../3°/3°B/3°B_3.html">B3</a>
+        <a href="../3°/3°B/3°B_4.html">B4</a>
+    </div>
+    <div>
+        4° anno:
+        <br>
+        <a href="../4°/4°A/4°A_1.html">A1</a>
+        <a href="../4°/4°A/4°A_2.html">A2</a>
+        <a href="../4°/4°A/4°A_3.html">A3</a>
+        <a href="../4°/4°A/4°A_4.html">A4</a>
+        <br>
+        <a href="../4°/4°B/4°B_1.html">B1</a>
+        <a href="../4°/4°B/4°B_2.html">B2</a>
+        <a href="../4°/4°B/4°B_3.html">B3</a>
+        <a href="../4°/4°B/4°B_4.html">B4</a>
+    </div>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+</script>

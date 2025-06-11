@@ -1,0 +1,180 @@
+<head>
+  <meta charset="UTF-8">
+  <title>4° anno: parte B2</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
+<div class="slide active">
+    <h2>limiti e derivate</h2>
+    <ol>
+        <li>i limiti (NFR)</li>
+        <li>derivate (NFR)</li>
+        <li>funzioni (DFR)</li>
+    </ol>
+</div>
+
+<div class="slide">
+    <h2>i limiti</h2>
+    <div class="block N">
+        Si dice che una funzione ammette limite se:
+        \[{\rm y}=\lim_{{\rm z}\rightarrow{\rm x}}{\rm f}\left({\rm z}\right)\Longleftrightarrow\left[\forall{\rm a}\in{\mathbb R}^{\mathbb N}\quad{\rm x}=\lim_{{\rm n}\in{\mathbb N}}{\rm a}_{\rm n}\Longrightarrow{\rm y}=\lim_{{\rm n}\in{\mathbb N}}{\rm f}\left({\rm a}_{\rm n}\right)\right]\]
+        Equivalentemente:
+        \[{\rm y}=\lim_{{\rm z}\rightarrow{\rm x}}{\rm f}\left({\rm z}\right)\Longleftrightarrow\left[\forall\varepsilon\gt0\quad\exists\delta\gt0\quad\forall{\rm z}\in\left[{\rm x}-\delta,{\rm x}+\delta\right]\quad{\rm f}\left({\rm x}\right)\in\left[{\rm y}-\delta,{\rm y}+\delta\right]\right]\]
+        Si dice che una funzione è continua se:
+        \[\forall{\rm x}\in{\mathbb R}\quad\lim_{{\rm z}\rightarrow{\rm x}}{\rm f}\left({\rm x}_{\rm n}\right)={\rm f}\left({\rm x}\right)\]
+        Equivalentemente:
+        \[\forall{\rm x}_{\rm n}\in{\mathbb R}^{\mathbb N}\quad\lim_{{\rm n}\in{\mathbb N}}{\rm f}\left({\rm a}_{\rm n}\right)={\rm f}\left(\lim_{{\rm n}\in{\mathbb N}}{\rm a}_{\rm n}\right)\]
+    </div>
+    <div class="block F">
+        Valgono le seguenti:
+        \[\lim_{{\rm n}\in{\mathbb N}}\left({\rm a}_{\rm n}+{\rm b}_{\rm n}\right)=\left(\lim_{{\rm n}\in{\mathbb N}}{\rm a}_{\rm n}\right)+\left(\lim_{{\rm n}\in{\mathbb N}}{\rm b}_{\rm n}\right)\]
+        \[\lim_{{\rm n}\in{\mathbb N}}\left({\rm a}_{\rm n}-{\rm b}_{\rm n}\right)=\left(\lim_{{\rm n}\in{\mathbb N}}{\rm a}_{\rm n}\right)-\left(\lim_{{\rm n}\in{\mathbb N}}{\rm b}_{\rm n}\right)\]
+        \[\lim_{{\rm n}\in{\mathbb N}}\left({\rm a}_{\rm n}\cdot{\rm b}_{\rm n}\right)=\left(\lim_{{\rm n}\in{\mathbb N}}{\rm a}_{\rm n}\right)\cdot\left(\lim_{{\rm n}\in{\mathbb N}}{\rm b}_{\rm n}\right)\]
+        \[\lim_{{\rm n}\in{\mathbb N}}\left({\rm a}_{\rm n}:{\rm b}_{\rm n}\right)=\left(\lim_{{\rm n}\in{\mathbb N}}{\rm a}_{\rm n}\right):\left(\lim_{{\rm n}\in{\mathbb N}}{\rm b}_{\rm n}\right)\]
+    </div>
+    <div class="block R">
+        Valgono le seguenti:
+        \[\lim_{{\rm x}\rightarrow{\rm 0}}\frac{\exp\left({\rm x}\right)-1}{\rm x}=\lim_{{\rm x}\rightarrow{\rm 0}}\frac{\sin\left({\rm x}\right)}{\rm x}=1\]
+    </div>
+</div>
+
+<div class="slide">
+    <h2>derivate</h2>
+    <div class="block N">
+        Si dice che una funzione è differenziabile se:
+        \[\frac{\partial{\rm f}}{\partial{\rm x}}=\lim_{{\rm y}\rightarrow{\rm x}}\frac{{\rm f}\left({\rm y}\right)-{\rm f}\left({\rm x}\right)}{{\rm y}-{\rm x}}\]
+    </div>
+    <div class="block F">
+        Valgono le seguenti:
+        <ul>
+            <li>\[\frac{\partial{\rm f}+{\rm g}}{\partial{\rm x}}=\frac{\partial{\rm f}}{\partial{\rm x}}+\frac{\partial{\rm g}}{\partial{\rm x}}\]</li>
+            <li>\[\frac{\partial{\rm f}\circ{\rm g}}{\partial{\rm x}}=\left(\frac{\partial{\rm f}}{\partial{\rm x}}\circ{\rm g}\right)\cdot\frac{\partial{\rm g}}{\partial{\rm x}}\]</li>
+            <li>\[\frac{\partial{\rm f}\cdot{\rm g}}{\partial{\rm x}}={\rm f}\cdot\left(\frac{\partial{\rm g}}{\partial{\rm x}}\right)+\left(\frac{\partial{\rm f}}{\partial{\rm x}}\right)\cdot{\rm g}\]</li>
+        </ul>
+    </div>
+    <div class="block R">
+        Valgono le seguenti:
+        <ul>
+            <li>\[\frac{\partial\sin}{\partial{\rm x}}=\cos\qquad\frac{\partial\cos}{\partial{\rm x}}=-\sin\]</li>
+            <li>\[\frac{\partial\arcsin}{\partial{\rm x}}=\sqrt{\frac{1}{1-{\rm x}^2}}\qquad\frac{\partial\arccos}{\partial{\rm x}}=-\sqrt{\frac{1}{1-{\rm x}^2}}\]</li>
+            <li>\[\frac{\partial\tan}{\partial{\rm x}}=1+\tan\left({\rm x}\right)^2\qquad\frac{\partial\cot}{\partial{\rm x}}=-1-\cot\left({\rm x}\right)^2\]</li>
+            <li>\[\frac{\partial\operatorname{arctan}}{\partial{\rm x}}=\frac{1}{1+{\rm x}^2}\qquad\frac{\partial\operatorname{arccot}}{\partial{\rm x}}=-\frac{1}{1+{\rm x}^2}\]</li>
+            <li>\[\frac{\partial\sinh}{\partial{\rm x}}=\cosh\qquad\frac{\partial\cosh}{\partial{\rm x}}=\sinh\]</li>
+            <li>\[\frac{\partial\operatorname{arcsinh}}{\partial{\rm x}}=\sqrt{\frac{1}{{\rm x}^2+1}}\qquad\frac{\partial\operatorname{arccosh}}{\partial{\rm x}}=\sqrt{\frac{1}{{\rm x}^2-1}}\]</li>
+            <li>\[\frac{\partial\tanh}{\partial{\rm x}}=1-\tanh\left({\rm x}\right)^2\qquad\frac{\partial\coth}{\partial{\rm x}}=1-\coth\left({\rm x}\right)^2\]</li>
+            <li>\[\frac{\partial\operatorname{arctanh}}{\partial{\rm x}}=\frac{1}{1-{\rm x}^2}\qquad\frac{\partial\operatorname{arccoth}}{\partial{\rm x}}=\frac{1}{1-{\rm x}^2}\]</li>
+        </ul>
+    </div>
+</div>
+
+<div class="slide">
+    <h2>funzioni</h2>
+    <div class="block D">
+        Il teorema di Bozano dice che:
+        \[\left({\rm f}\left({\rm a}\right)-{\rm y}\right)\cdot\left({\rm f}\left({\rm b}\right)-{\rm y}\right)\lt0\Longrightarrow\exists{\rm x}\in{\mathbb R}\quad\begin{cases}\left({\rm a}-{\rm x}\right)\cdot\left({\rm b}-{\rm x}\right)\lt0\\{\rm y}={\rm f}\left({\rm x}\right)\end{cases}\]
+        Il teorema di Weierstrass dice che, se vale l'ipotesi:
+        \[{\rm L}=\lim_{{\rm x}\rightarrow{\rm a}}{\rm f}\left({\rm x}\right)=\lim_{{\rm x}\rightarrow{\rm b}}{\rm f}\left({\rm x}\right)\]
+        Allora:
+        <ul>
+            <li>\({\rm f}\) ammette massimo oppure \({\rm L}=\sup_{\left({\rm a}-{\rm x}\right)\left({\rm x}-{\rm b}\right)\lt0}\left({\rm f}\right)\).</li>
+            <li>\({\rm f}\) ammette minimo oppure \({\rm L}=\inf_{\left({\rm a}-{\rm x}\right)\left({\rm x}-{\rm b}\right)\lt0}\left({\rm f}\right)\).</li>
+        </ul>
+        Il teorema di Rolle garantisce che la derivata di \({\rm f}\) si annulla in un punto di minimo o di massimo.
+    </div>
+    <div class="block F">
+        Il teorema di Cauchy dice che date due funzioni \({\rm f},{\rm g}\), allora:
+        \[\exists{\rm x}\in{\mathbb R}\quad\begin{cases}\left({\rm a}-{\rm x}\right)\cdot\left({\rm b}-{\rm x}\right)\lt0\\\frac{{\rm f}\left({\rm b}\right)-{\rm f}\left({\rm a}\right)}{{\rm g}\left({\rm b}\right)-{\rm g}\left({\rm a}\right)}=\frac{\partial{\rm f}}{\partial{\rm g}}\end{cases}\]
+        Il teorema si chiama di Lagrange in caso \({\rm g}={\rm x}\).
+    </div>
+    <div class="block R">
+        La regola di de l'Hôpital garantisce che in caso di forma indeterminata:
+        <ul>
+            <li>\[\lim_{{\rm z}\rightarrow{\rm x}}{\rm f}\left({\rm z}\right)=\lim_{{\rm z}\rightarrow{\rm x}}{\rm g}\left({\rm z}\right)=0\Longrightarrow\lim_{{\rm z}\rightarrow{\rm x}}\frac{{\rm f}\left({\rm z}\right)}{{\rm g}\left({\rm z}\right)}=\lim_{{\rm z}\rightarrow{\rm x}}\frac{\partial{\rm f}}{\partial{\rm g}}\left({\rm z}\right)\]</li>
+            <li>\[\lim_{{\rm z}\rightarrow{\rm x}}{\rm f}\left({\rm z}\right)=\lim_{{\rm z}\rightarrow{\rm x}}{\rm g}\left({\rm z}\right)=\infty\Longrightarrow\lim_{{\rm z}\rightarrow{\rm x}}\frac{{\rm f}\left({\rm z}\right)}{{\rm g}\left({\rm z}\right)}=\lim_{{\rm z}\rightarrow{\rm x}}\frac{\partial{\rm f}}{\partial{\rm g}}\left({\rm z}\right)\]</li>
+        </ul>
+    </div>
+</div>
+
+<div class="nav-buttons">
+    <div>
+        <a href="https://oniramortsam.github.io/MateMath">https://oniramortsam.github.io/MateMath</a>
+        <br>
+        <button onclick="prevSlide()">Indietro</button>
+        <a href="../">Torna all'Indice</a>
+        <button onclick="nextSlide()">Avanti</button>
+    </div>
+    <div>
+        1° anno:
+        <br>
+        <a href="../1°/1°A/1°A_1.html">A1</a>
+        <a href="../1°/1°A/1°A_2.html">A2</a>
+        <a href="../1°/1°A/1°A_3.html">A3</a>
+        <a href="../1°/1°A/1°A_4.html">A4</a>
+        <br>
+        <a href="../1°/1°B/1°B_1.html">B1</a>
+        <a href="../1°/1°B/1°B_2.html">B2</a>
+        <a href="../1°/1°B/1°B_3.html">B3</a>
+        <a href="../1°/1°B/1°B_4.html">B4</a>
+    </div>
+    <div>
+        2° anno:
+        <br>
+        <a href="../2°/2°A/2°A_1.html">A1</a>
+        <a href="../2°/2°A/2°A_2.html">A2</a>
+        <a href="../2°/2°A/2°A_3.html">A3</a>
+        <a href="../2°/2°A/2°A_4.html">A4</a>
+        <br>
+        <a href="../2°/2°B/2°B_1.html">B1</a>
+        <a href="../2°/2°B/2°B_2.html">B2</a>
+        <a href="../2°/2°B/2°B_3.html">B3</a>
+        <a href="../2°/2°B/2°B_4.html">B4</a>
+    </div>
+    <div>
+        3° anno:
+        <br>
+        <a href="../3°/3°A/3°A_1.html">A1</a>
+        <a href="../3°/3°A/3°A_2.html">A2</a>
+        <a href="../3°/3°A/3°A_3.html">A3</a>
+        <a href="../3°/3°A/3°A_4.html">A4</a>
+        <br>
+        <a href="../3°/3°B/3°B_1.html">B1</a>
+        <a href="../3°/3°B/3°B_2.html">B2</a>
+        <a href="../3°/3°B/3°B_3.html">B3</a>
+        <a href="../3°/3°B/3°B_4.html">B4</a>
+    </div>
+    <div>
+        4° anno:
+        <br>
+        <a href="../4°/4°A/4°A_1.html">A1</a>
+        <a href="../4°/4°A/4°A_2.html">A2</a>
+        <a href="../4°/4°A/4°A_3.html">A3</a>
+        <a href="../4°/4°A/4°A_4.html">A4</a>
+        <br>
+        <a href="../4°/4°B/4°B_1.html">B1</a>
+        <a href="../4°/4°B/4°B_2.html">B2</a>
+        <a href="../4°/4°B/4°B_3.html">B3</a>
+        <a href="../4°/4°B/4°B_4.html">B4</a>
+    </div>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+</script>

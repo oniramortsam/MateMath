@@ -1,0 +1,209 @@
+<head>
+  <meta charset="UTF-8">
+  <title>3° anno: parte B3</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
+<div class="slide active">
+    <h2>relazioni: ordinamento</h2>
+    <ol>
+        <li>ordini e ordinamento (NFR)</li>
+        <li>le funzioni continue (NFR)</li>
+        <li>le funzioni monotone (NFR)</li>
+    </ol>
+</div>
+
+<div class="slide">
+    <h2>ordini e ordinamento</h2>
+    <div class="block N">
+        Una relazione d'ordine soddisfa le proprietà:
+        <ul>
+            <li>Simmetrica: \[\forall\left({\rm x},{\rm y}\right)\in{\rm A}\times{\rm A}\quad{\cal R}\left({\rm x},{\rm y}\right)\land{\cal R}\left({\rm y},{\rm x}\right)\Longrightarrow{\rm x}={\rm y}\]</li>
+            <li>Transitiva: \[\forall\left({\rm x},{\rm y},{\rm z}\right)\in{\rm A}\times{\rm A}\times{\rm A}\quad{\cal R}\left({\rm x},{\rm y}\right)\land{\cal R}\left({\rm y},{\rm z}\right)\Longrightarrow{\cal R}\left({\rm x},{\rm z}\right)\]</li>
+        </ul>
+        Si può dire totale se:
+        \[\forall\left({\rm x},{\rm y}\right)\in{\rm A}\times{\rm A}\quad{\cal R}\left({\rm x},{\rm y}\right)\lor{\cal R}\left({\rm y},{\rm x}\right)\]
+        Per una relazione d'ordine:
+        <ul>
+            <li>Si dice minorante di un sottoinsieme \({\rm A}\) un elemento \({\rm x}\) che verifica \[\forall{\rm a}\in{\rm A}\quad{\cal R}\left({\rm x},{\rm a}\right)\]</li>
+            <li>Si dice maggiorante di un sottoinsieme \({\rm A}\) un elemento \({\rm x}\) che verifica \[\forall{\rm a}\in{\rm A}\quad{\cal R}\left({\rm a},{\rm x}\right)\]</li>
+            <li>Si dice minimale di un sottoinsieme \({\rm A}\) un elemento \({\rm x}\in{\rm A}\) che verifica \[\forall{\rm a}\in{\rm A}\quad\lnot{\cal R}\left({\rm a},{\rm x}\right)\]</li>
+            <li>Si dice massimale di un sottoinsieme \({\rm A}\) un elemento \({\rm x}\in{\rm A}\) che verifica \[\forall{\rm a}\in{\rm A}\quad\lnot{\cal R}\left({\rm x},{\rm a}\right)\]</li>
+            <li>Si dice minimo di un sottoinsieme \({\rm A}\) un unico elemento \({\rm x}\in{\rm A}\) che verifica \[\forall{\rm a}\in{\rm A}\quad{\cal R}\left({\rm x},{\rm a}\right)\]</li>
+            <li>Si dice massimo di un sottoinsieme \({\rm A}\) un unico elemento \({\rm x}\in{\rm A}\) che verifica \[\forall{\rm a}\in{\rm A}\quad{\cal R}\left({\rm a},{\rm x}\right)\]</li>
+            <li>Si dice estremo inferiore di un sottoinsieme il massimo dei minoranti</li>
+            <li>Si dice estremo superiore di un sottoinsieme il minimo dei maggioranti</li>
+        </ul>
+    </div>
+    <div class="block F">
+        Nel caso della relazione di confronto tra numeri reali si parla di completezza:
+        <ul>
+            <li>Un sottoinsieme ammette minorante se e solo se ammette estremo inferiore.</li>
+            <li>Un sottoinsieme ammette maggiorante se e solo se ammette estremo superiore.</li>
+        </ul>
+        Nel caso della relazione di confronto tra numeri interi:
+        <ul>
+            <li>Un sottoinsieme ammette minorante se e solo se ammette minimo.</li>
+            <li>Un sottoinsieme ammette maggiorante se e solo se ammette massimo.</li>
+        </ul>
+        Tra numeri naturali:
+        <ul>
+            <li>Nel caso della relazione di confronto un sottoinsieme ammette sempre minimo.</li>
+            <li>Nel caso della relazione di divisibilità un sottoinsieme ammette sempre minimale ed estremo inferiore.</li>
+        </ul>
+        Nel caso della relazione di divisibilità tra numeri razionali:
+        <ul>
+            <li>Un sottoinsieme ammette minorante se e solo se ammette minimale.</li>
+            <li>Un sottoinsieme ammette maggiorante se e solo se ammette massimale.</li>
+            <li>Un sottoinsieme ammette minorante se e solo se ammette estremo inferiore, cioè \(\operatorname{gcd}\).</li>
+            <li>Un sottoinsieme ammette maggiorante se e solo se ammette estremo superiore, cioè \(\operatorname{lcm}\).</li>
+        </ul>
+    </div>
+    <div class="block R">
+        Si dice che i numeri razionali sono densi:
+        \[\forall\left({\rm x},{\rm z}\right)\in{\mathbb Q}\times{\mathbb Q}\quad{\rm x}\ne{\rm z}\Longrightarrow\left[\exists{\rm y}\in{\mathbb Q}\quad{\rm x}\lt{\rm y}\lt{\rm z}\right]\]
+    </div>
+</div>
+
+<div class="slide">
+    <h2>le funzioni continue</h2>
+    <div class="block N">
+        Se normalmente:
+        \[\liminf_{{\rm n}\in{\mathbb N}}{\rm x}_{\rm n}\le\limsup_{{\rm n}\in{\mathbb N}}{\rm x}_{\rm n}\]
+        Si dice che una successione ammette limite se:
+        \[{\rm x}=\lim_{{\rm n}\in{\mathbb N}}{\rm x}_{\rm n}\Longleftrightarrow\limsup_{{\rm n}\in{\mathbb N}}{\rm x}_{\rm n}\le{\rm x}\le\liminf_{{\rm n}\in{\mathbb N}}{\rm x}_{\rm n}\]
+        Una funzione \({\rm f}:{\mathbb Q}\rightarrow{\mathbb R}\) si dice continua se:
+        \[\forall{\rm x}\in{\mathbb Q}^{\mathbb N}\quad\lim_{{\rm n}\in{\mathbb N}}{\rm x}_{\rm n}\in{\mathbb Q}\Longrightarrow\lim_{{\rm n}\in{\mathbb N}}{\rm f}\left({\rm x}_{\rm n}\right)={\rm f}\left(\lim_{{\rm n}\in{\mathbb N}}{\rm x}_{\rm n}\right)\]
+        Una funzione continua si estende da un sottoinsieme denso di \({\mathbb R}\) in esattamente un modo.
+    </div>    
+    <div class="block F">
+        Vale la seguente:
+        \[\forall{\rm m}\in{\mathbb N}\quad\exists{\rm n}\in{\mathbb N}\quad\exists{\rm k}\in{\mathbb N}\quad{\rm a}_{\rm k}\le{\rm b}_{\rm m}\Longrightarrow\limsup_{{\rm k}\in{\mathbb N}}{\rm a}_{\rm k}\le\liminf_{{\rm m}\in{\mathbb N}}{\rm b}_{\rm m}\]
+    </div>
+    <div class="block R">
+        Siccome:
+        \[\sum_{{\rm k}\in{\rm n}}\frac{{\rm x}^{{\rm k}+1}}{\left({\rm k}+1\right)!}\le\sum_{{\rm k}\lt{\rm x}+1}\frac{{\rm x}^{{\rm k}+1}}{\left({\rm k}+1\right)!}+\frac{{\rm x}^{{\rm x}+1}}{2\cdot\left({\rm x}+2\right)^{\rm x}}\]
+        Possiamo definire:
+        \[\exp\left({\rm x}\right)=\sum_{{\rm k}\in{\mathbb N}}\frac{{\rm x}^{\rm k}}{{\rm k}!}=\sup_{{\rm n}\in{\mathbb N}}\left(\sum_{{\rm k}\in{\rm n}}\frac{{\rm x}^{\rm k}}{{\rm k}!}\right)\]
+        Consideriamo che, per \({\rm x}\ge0\):
+        \[\begin{split}{\rm m}\ge{\rm n}+{\rm n}\cdot\sqrt[{\rm n}]\frac{{\rm n}-{\rm 1}}{\rm n}\Longrightarrow\left(\frac{{\rm n}+{\rm x}}{\rm n}\right)^{\rm n}-1&=\sum_{{\rm k}\in{\rm n}}\frac{{\rm n}!}{\left({\rm k}+1\right)!\left({\rm n}-{\rm k}-1\right)!}\cdot\left(\frac{\rm x}{\rm n}\right)^{{\rm k}+1}\\
+        &\le\left(\frac{{\rm n}-1}{\rm n}\right)\cdot\sum_{{\rm k}\in{\rm n}}\frac{{\rm x}^{{\rm k}+1}}{\left({\rm k}+1\right)!}\\
+        &\le\left(\frac{{\rm m}-{\rm n}}{\rm n}\right)^{\rm n}\cdot\sum_{{\rm k}\in{\rm n}}\frac{{\rm x}^{{\rm k}+1}}{\left({\rm k}+1\right)!}\\
+        &\le\sum_{{\rm k}\in{\rm n}}\frac{{\rm m}!}{\left({\rm k}+1\right)!\left({\rm m}-{\rm k}-1\right)!}\cdot\left(\frac{\rm x}{\rm m}\right)^{{\rm k}+1}\\
+        &\le\sum_{{\rm k}\in{\rm m}}\frac{{\rm m}!}{\left({\rm k}+1\right)!\left({\rm m}-{\rm k}-1\right)!}\cdot\left(\frac{\rm x}{{\rm m}}\right)^{{\rm k}+1}=\left(\frac{{\rm n}^2+{\rm x}}{\rm m}\right)^{\rm m}-1\end{split}\]
+        Abbiamo:
+        \[\operatorname{limsup}_{{\rm n}\in{\mathbb N}\setminus1}\left(\frac{{\rm n}+{\rm x}}{\rm n}\right)^{\rm n}\le\exp\left({\rm x}\right)\le\operatorname{liminf}_{{\rm n}\in{\mathbb N}\setminus1}\left(\frac{{\rm n}+{\rm x}}{\rm n}\right)^{\rm n}\]
+        Considerando che:
+        \[\forall\left({\rm n},{\rm m}\right)\in\left({\mathbb N}\setminus1\right)\times\left({\mathbb N}\setminus1\right)\quad{\rm x}\cdot{\rm m}\ge{\rm n}\Longleftrightarrow\left(\frac{{\rm m}+1}{\rm m}\right)^{{\rm m}\cdot{\rm x}}\le\left(\frac{{\rm n}+{\rm x}}{\rm n}\right)^{\rm n}\]
+        Abbiamo allo stesso modo:
+        \[\exp\left({\rm x}\right)=\lim_{{\rm n}\in{\mathbb N}\setminus1}\left(\frac{{\rm n}+{\rm x}}{\rm n}\right)^{\rm n}=\left(\lim_{{\rm n}\in{\mathbb N}\setminus1}\left(\frac{{\rm n}+1}{\rm n}\right)^{\rm n}\right)^{\rm x}\]
+    </div>
+</div>
+
+<div class="slide">
+    <h2>le funzioni monotone</h2>
+    <div class="block N">
+        Una funzione si dice monotona in senso stretto se:
+        \[\forall\left({\rm a},{\rm b}{\rm c}\right)\in{\mathbb R}\times{\mathbb R}\times{\mathbb R}\quad\left({\rm a}-{\rm b}\right)\cdot\left({\rm c}-{\rm b}\right)\lt0\Longrightarrow\left({\rm a}-{\rm b}\right)\cdot\left({\rm c}-{\rm b}\right)\lt0\]
+    </div>
+    <div class="block F">
+        Nel caso di funzioni continue di variabile reale l'iniettività equivale alla monotonia.
+    </div>
+    <div class="block R">
+        Nel caso di \(\exp\) l'inversa è detta:
+        \[\log:\left(0,\infty\right)\rightarrow{\mathbb R}\]
+        Nel caso di \(\sin,\cos\) si usano rispettivamente:
+        \[{\rm g}\left({\rm x}\right)=\left({\rm x}+\pi/2\right)/\!\!/\pi\qquad{\rm g}\left({\rm x}\right)={\rm x}/\!\!/\pi\]
+        E le inverse sono rispettivamente:
+        <ul>
+            <li>\[{\rm x}=\pi\cdot{\rm k}+\arcsin\left(\left(-1\right)^{\rm k}\cdot{\rm y}\right)\Longleftrightarrow\begin{cases}\left({\rm x}+\pi/2\right)/\!\!/\pi={\rm k}\\\sin\left({\rm x}\right)={\rm y}\end{cases}\]</li>
+            <li>\[{\rm x}=\pi\cdot{\rm k}+\arccos\left(\left(-1\right)^{\rm k}\cdot{\rm y}\right)\Longleftrightarrow\begin{cases}\left({\rm x}+\pi/2\right)/\!\!/\pi={\rm k}\\\cos\left({\rm x}\right)={\rm y}\end{cases}\]</li>
+        </ul>
+        Dove:
+        \[\arcsin:\left[-1,1\right]\rightarrow\left[-\pi/2,\pi/2\right]\qquad\arccos:\left[-1,1\right]\rightarrow\left[0,\pi\right]\]
+    </div>
+</div>
+
+<div class="nav-buttons">
+    <div>
+        <a href="https://oniramortsam.github.io/MateMath">https://oniramortsam.github.io/MateMath</a>
+        <br>
+        <button onclick="prevSlide()">Indietro</button>
+        <a href="../">Torna all'Indice</a>
+        <button onclick="nextSlide()">Avanti</button>
+    </div>
+    <div>
+        1° anno:
+        <br>
+        <a href="../1°/1°A/1°A_1.html">A1</a>
+        <a href="../1°/1°A/1°A_2.html">A2</a>
+        <a href="../1°/1°A/1°A_3.html">A3</a>
+        <a href="../1°/1°A/1°A_4.html">A4</a>
+        <br>
+        <a href="../1°/1°B/1°B_1.html">B1</a>
+        <a href="../1°/1°B/1°B_2.html">B2</a>
+        <a href="../1°/1°B/1°B_3.html">B3</a>
+        <a href="../1°/1°B/1°B_4.html">B4</a>
+    </div>
+    <div>
+        2° anno:
+        <br>
+        <a href="../2°/2°A/2°A_1.html">A1</a>
+        <a href="../2°/2°A/2°A_2.html">A2</a>
+        <a href="../2°/2°A/2°A_3.html">A3</a>
+        <a href="../2°/2°A/2°A_4.html">A4</a>
+        <br>
+        <a href="../2°/2°B/2°B_1.html">B1</a>
+        <a href="../2°/2°B/2°B_2.html">B2</a>
+        <a href="../2°/2°B/2°B_3.html">B3</a>
+        <a href="../2°/2°B/2°B_4.html">B4</a>
+    </div>
+    <div>
+        3° anno:
+        <br>
+        <a href="../3°/3°A/3°A_1.html">A1</a>
+        <a href="../3°/3°A/3°A_2.html">A2</a>
+        <a href="../3°/3°A/3°A_3.html">A3</a>
+        <a href="../3°/3°A/3°A_4.html">A4</a>
+        <br>
+        <a href="../3°/3°B/3°B_1.html">B1</a>
+        <a href="../3°/3°B/3°B_2.html">B2</a>
+        <a href="../3°/3°B/3°B_3.html">B3</a>
+        <a href="../3°/3°B/3°B_4.html">B4</a>
+    </div>
+    <div>
+        4° anno:
+        <br>
+        <a href="../4°/4°A/4°A_1.html">A1</a>
+        <a href="../4°/4°A/4°A_2.html">A2</a>
+        <a href="../4°/4°A/4°A_3.html">A3</a>
+        <a href="../4°/4°A/4°A_4.html">A4</a>
+        <br>
+        <a href="../4°/4°B/4°B_1.html">B1</a>
+        <a href="../4°/4°B/4°B_2.html">B2</a>
+        <a href="../4°/4°B/4°B_3.html">B3</a>
+        <a href="../4°/4°B/4°B_4.html">B4</a>
+    </div>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+</script>

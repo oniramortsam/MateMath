@@ -1,0 +1,167 @@
+<head>
+  <meta charset="UTF-8">
+  <title>3° anno: parte A4</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
+<div class="slide active">
+    <h2>geometria nello spazio</h2>
+    <ol>
+        <li>punti (QFR)</li>
+        <li>piani (QFR)</li>
+        <li>rette (DFR)</li>
+    </ol>
+</div>
+
+<div class="slide">
+    <h2>punti</h2>
+    <div class="block Q">
+        <ul>
+            <li>Dati due punti nello spazio, si trova la retta che li congiunge: \[\begin{cases}{\rm a}\cdot{\rm x}_{\rm P}+{\rm b}\cdot{\rm y}_{\rm P}+{\rm c}\cdot{\rm z}_{\rm P}+{\rm d}=0\\{\rm a}\cdot{\rm x}_{\rm Q}+{\rm b}\cdot{\rm y}_{\rm Q}+{\rm c}\cdot{\rm z}_{\rm Q}+{\rm d}=0\end{cases}\]</li>
+            <li>Dati tre punti non allineati nello spazio, si trova il piano che passa per quei punti: \[\begin{cases}{\rm a}\cdot{\rm x}_{\rm P}+{\rm b}\cdot{\rm y}_{\rm P}+{\rm c}\cdot{\rm z}_{\rm P}+{\rm d}=0\\{\rm a}\cdot{\rm x}_{\rm Q}+{\rm b}\cdot{\rm y}_{\rm Q}+{\rm c}\cdot{\rm z}_{\rm Q}+{\rm d}=0\\{\rm a}\cdot{\rm x}_{\rm R}+{\rm b}\cdot{\rm y}_{\rm R}+{\rm c}\cdot{\rm z}_{\rm R}+{\rm d}=0\end{cases}\]</li>
+            <li>Dati una retta ed un punto nello spazio, si trova il piano passante per entrambi: \[\left({\rm k}\cdot{\rm a}_0+{\rm h}\cdot{\rm a}_1\right)\cdot{\rm x}+\left({\rm k}\cdot{\rm b}_0+{\rm h}\cdot{\rm b}_1\right)\cdot{\rm y}+\left({\rm k}\cdot{\rm c}_0+{\rm h}\cdot{\rm c}_1\right)\cdot{\rm z}+\left({\rm k}\cdot{\rm d}_0+{\rm h}\cdot{\rm d}_1\right)=0\Longrightarrow\begin{cases}{\rm a}={\rm k}\cdot{\rm a}_0+{\rm h}\cdot{\rm a}_1\\{\rm b}={\rm k}\cdot{\rm b}_0+{\rm h}\cdot{\rm b}_1\\{\rm c}={\rm k}\cdot{\rm c}_0+{\rm h}\cdot{\rm c}_1\\{\rm d}={\rm k}\cdot{\rm d}_0+{\rm h}\cdot{\rm d}_1\end{cases}\]</li>
+        </ul>
+    </div>
+    <div class="block F">
+        <ul>
+            <li>Dati tre punti non allineati nello spazio, si trova il piano che passa per quei punti: \[\begin{cases}{\rm a}={\rm y}_{\rm P}\cdot{\rm z}_{\rm Q}+{\rm y}_{\rm Q}\cdot{\rm z}_{\rm R}+{\rm y}_{\rm R}\cdot{\rm z}_{\rm P}-{\rm z}_{\rm P}\cdot{\rm y}_{\rm Q}-{\rm z}_{\rm Q}\cdot{\rm y}_{\rm R}-{\rm z}_{\rm R}\cdot{\rm y}_{\rm P}\\{\rm b}={\rm z}_{\rm P}\cdot{\rm x}_{\rm Q}+{\rm z}_{\rm Q}\cdot{\rm x}_{\rm R}+{\rm z}_{\rm R}\cdot{\rm x}_{\rm P}-{\rm x}_{\rm P}\cdot{\rm z}_{\rm Q}-{\rm x}_{\rm Q}\cdot{\rm z}_{\rm R}-{\rm x}_{\rm R}\cdot{\rm z}_{\rm P}\\{\rm c}={\rm x}_{\rm P}\cdot{\rm y}_{\rm Q}+{\rm x}_{\rm Q}\cdot{\rm y}_{\rm R}+{\rm x}_{\rm R}\cdot{\rm y}_{\rm P}-{\rm y}_{\rm P}\cdot{\rm x}_{\rm Q}-{\rm y}_{\rm Q}\cdot{\rm x}_{\rm R}-{\rm y}_{\rm R}\cdot{\rm x}_{\rm P}\\{\rm d}={\rm x}_{\rm P}\cdot{\rm y}_{\rm Q}\cdot{\rm z}_{\rm R}+{\rm x}_{\rm Q}\cdot{\rm y}_{\rm R}\cdot{\rm z}_{\rm P}+{\rm x}_{\rm R}\cdot{\rm y}_{\rm P}\cdot{\rm z}_{\rm Q}-{\rm z}_{\rm P}\cdot{\rm y}_{\rm Q}\cdot{\rm x}_{\rm R}-{\rm z}_{\rm Q}\cdot{\rm y}_{\rm R}\cdot{\rm x}_{\rm P}-{\rm z}_{\rm R}\cdot{\rm y}_{\rm P}\cdot{\rm x}_{\rm Q}\end{cases}\]</li>
+            <li>Dati due punti nello spazio, si trova la retta che li congiunge: \[\begin{cases}{\rm x}={\rm t}\cdot{\rm x}_{\rm Q}+\left({\rm t}-1\right)\cdot{\rm x}_{\rm P}\\{\rm y}={\rm t}\cdot{\rm y}_{\rm Q}+\left({\rm t}-1\right)\cdot{\rm y}_{\rm P}\\{\rm z}={\rm t}\cdot{\rm z}_{\rm Q}+\left({\rm t}-1\right)\cdot{\rm z}_{\rm P}\end{cases}\]</li>
+            <li>Dati una retta ed un punto nello spazio, si trova il piano passante per entrambi: \[\begin{cases}{\rm a}=\left({\rm y}-{\rm y}_{\rm P}\right)\cdot{\rm z}_{\rm u}-\left({\rm z}-{\rm z}_{\rm P}\right)\cdot{\rm y}_{\rm u}\\{\rm b}=\left({\rm z}-{\rm z}_{\rm P}\right)\cdot{\rm x}_{\rm u}-\left({\rm x}-{\rm x}_{\rm P}\right)\cdot{\rm z}_{\rm u}\\{\rm c}=\left({\rm x}-{\rm x}_{\rm P}\right)\cdot{\rm y}_{\rm u}-\left({\rm y}-{\rm y}_{\rm P}\right)\cdot{\rm x}_{\rm u}\\{\rm d}={\rm x}\cdot{\rm y}_{\rm P}\cdot{\rm z}_{\rm u}+{\rm y}\cdot{\rm z}_{\rm P}\cdot{\rm x}_{\rm u}+{\rm z}\cdot{\rm x}_{\rm P}\cdot{\rm y}_{\rm u}-{\rm z}\cdot{\rm y}_{\rm P}\cdot{\rm x}_{\rm u}+{\rm y}\cdot{\rm x}_{\rm P}\cdot{\rm z}_{\rm u}+{\rm x}\cdot{\rm z}_{\rm P}\cdot{\rm y}_{\rm u}\end{cases}\]</li>
+        </ul>
+    </div>
+    <div class="block R">
+        La distanza tra due punti si calcola come: \[\sqrt{\left({\rm x}_{\rm Q}-{\rm x}_{\rm P}\right)^2+\left({\rm y}_{\rm Q}-{\rm y}_{\rm P}\right)^2+\left({\rm z}_{\rm Q}-{\rm z}_{\rm P}\right)^2}\]
+    </div>
+</div>
+
+<div class="slide">
+    <h2>piani</h2>
+    <div class="block Q">
+        <ul>
+            <li>Dati due piani nello spazio, si trova la loro retta di intersezione: \[\begin{cases}{\rm a}_0\cdot{\rm x}+{\rm b}_0\cdot{\rm y}+{\rm c}_0\cdot{\rm z}+{\rm d}_0=0\\{\rm a}_1\cdot{\rm x}+{\rm b}_1\cdot{\rm y}+{\rm c}_1\cdot{\rm z}+{\rm d}_1=0\end{cases}\]</li>
+            <li>Dati tre piani nello spazio, si trova la loro intersezione: \[\begin{cases}{\rm a}_0\cdot{\rm x}+{\rm b}_0\cdot{\rm y}+{\rm c}_0\cdot{\rm z}+{\rm d}_0=0\\{\rm a}_1\cdot{\rm x}+{\rm b}_1\cdot{\rm y}+{\rm c}_1\cdot{\rm z}+{\rm d}_1=0\\{\rm a}_2\cdot{\rm x}+{\rm b}_2\cdot{\rm y}+{\rm c}_2\cdot{\rm z}+{\rm d}_2=0\end{cases}\]</li>
+            <li>Dati una retta ed un piano nello spazio, si trova l'intersezione: \[\begin{cases}{\rm a}_0\cdot{\rm x}+{\rm b}_0\cdot{\rm y}+{\rm c}_0\cdot{\rm z}+{\rm d}_0=0\\{\rm a}_1\cdot{\rm x}+{\rm b}_1\cdot{\rm y}+{\rm c}_1\cdot{\rm z}+{\rm d}_1=0\\{\rm a}\cdot{\rm x}+{\rm b}\cdot{\rm y}+{\rm c}\cdot{\rm z}+{\rm d}=0\end{cases}\]</li>
+        </ul>
+    </div>
+    <div class="block F">
+        <ul>
+            <li>Dati due piani nello spazio, si trova la loro retta di intersezione: \[\begin{cases}{\rm x}_{\rm u}={\rm b}_0\cdot{\rm c}_1-{\rm b}_1\cdot{\rm c}_0\\{\rm y}_{\rm u}={\rm c}_0\cdot{\rm a}_1-{\rm c}_1\cdot{\rm a}_0\\{\rm z}_{\rm u}={\rm a}_0\cdot{\rm b}_1-{\rm a}_1\cdot{\rm b}_0\end{cases}\]</li>
+            <li>Dati tre piani nello spazio, si trova la loro intersezione: \[\begin{cases}{\rm x}=-\frac{{\rm d}_0\cdot{\rm b}_1\cdot{\rm c}_2+{\rm b}_0\cdot{\rm c}_1\cdot{\rm d}_2+{\rm c}_0\cdot{\rm d}_1\cdot{\rm b}_2-{\rm c}_0\cdot{\rm b}_1\cdot{\rm d}_2-{\rm b}_0\cdot{\rm d}_1\cdot{\rm c}_2-{\rm d}_0\cdot{\rm c}_1\cdot{\rm b}_2}{{\rm a}_0\cdot{\rm b}_1\cdot{\rm c}_2+{\rm b}_0\cdot{\rm c}_1\cdot{\rm a}_2+{\rm c}_0\cdot{\rm a}_1\cdot{\rm b}_2-{\rm c}_0\cdot{\rm b}_1\cdot{\rm a}_2-{\rm b}_0\cdot{\rm a}_1\cdot{\rm c}_2-{\rm a}_0\cdot{\rm c}_1\cdot{\rm b}_2}\\{\rm y}=-\frac{{\rm a}_0\cdot{\rm d}_1\cdot{\rm c}_2+{\rm d}_0\cdot{\rm c}_1\cdot{\rm a}_2+{\rm c}_0\cdot{\rm a}_1\cdot{\rm d}_2-{\rm c}_0\cdot{\rm d}_1\cdot{\rm a}_2-{\rm d}_0\cdot{\rm a}_1\cdot{\rm c}_2-{\rm a}_0\cdot{\rm c}_1\cdot{\rm d}_2}{{\rm a}_0\cdot{\rm b}_1\cdot{\rm c}_2+{\rm b}_0\cdot{\rm c}_1\cdot{\rm a}_2+{\rm c}_0\cdot{\rm a}_1\cdot{\rm b}_2-{\rm c}_0\cdot{\rm b}_1\cdot{\rm a}_2-{\rm b}_0\cdot{\rm a}_1\cdot{\rm c}_2-{\rm a}_0\cdot{\rm c}_1\cdot{\rm b}_2}\\{\rm z}=-\frac{{\rm a}_0\cdot{\rm b}_1\cdot{\rm d}_2+{\rm b}_0\cdot{\rm d}_1\cdot{\rm a}_2+{\rm d}_0\cdot{\rm a}_1\cdot{\rm b}_2-{\rm d}_0\cdot{\rm b}_1\cdot{\rm a}_2-{\rm b}_0\cdot{\rm a}_1\cdot{\rm d}_2-{\rm a}_0\cdot{\rm d}_1\cdot{\rm b}_2}{{\rm a}_0\cdot{\rm b}_1\cdot{\rm c}_2+{\rm b}_0\cdot{\rm c}_1\cdot{\rm a}_2+{\rm c}_0\cdot{\rm a}_1\cdot{\rm b}_2-{\rm c}_0\cdot{\rm b}_1\cdot{\rm a}_2-{\rm b}_0\cdot{\rm a}_1\cdot{\rm c}_2-{\rm a}_0\cdot{\rm c}_1\cdot{\rm b}_2}\end{cases}\]</li>
+            <li>Dati una retta ed un piano nello spazio, si trova l'intersezione: \[{\rm t}=-\frac{{\rm a}\cdot{\rm x}_{\rm u}+{\rm b}\cdot{\rm y}_{\rm u}+{\rm c}\cdot{\rm z}_{\rm u}+{\rm d}}{{\rm a}\cdot{\rm x}_{\rm P}+{\rm b}\cdot{\rm y}_{\rm P}+{\rm c}\cdot{\rm z}_{\rm P}+{\rm d}}\Longrightarrow\begin{cases}{\rm x}={\rm x}_{\rm P}+{\rm t}\cdot{\rm x}_{\rm u}\\{\rm y}={\rm y}_{\rm P}+{\rm t}\cdot{\rm y}_{\rm u}\\{\rm z}={\rm z}_{\rm P}+{\rm t}\cdot{\rm z}_{\rm u}\end{cases}\]</li>
+        </ul>
+    </div>
+    <div class="block R">
+        La distanza tra due piani paralleli si calcola come:
+        \[\frac{\left|{\rm d}_1-{\rm d}_0\right|}{\sqrt{{\rm a}^2+{\rm b}^2+{\rm c}^2}}\]
+    </div>
+</div>
+
+<div class="slide">
+    <h2>rette</h2>
+    <div class="block D">
+        Date due rette nello spazio, si trova la direzione del piano parallelo ad entrambe:
+        <ul>
+            <li>\[\begin{cases}{\rm a}={\rm y}_{\rm u}\cdot{\rm z}_{\rm v}-{\rm z}_{\rm u}\cdot{\rm y}_{\rm v}\\{\rm b}={\rm z}_{\rm u}\cdot{\rm x}_{\rm v}-{\rm x}_{\rm u}\cdot{\rm z}_{\rm v}\\{\rm c}={\rm x}_{\rm u}\cdot{\rm y}_{\rm v}-{\rm y}_{\rm u}\cdot{\rm x}_{\rm v}\end{cases}\]</li>
+            <li>\[{\rm k}_0\cdot\left({\rm a}_{0,0}\cdot{\rm x}_{\rm v}+{\rm b}_{0,0}\cdot{\rm y}_{\rm v}+{\rm c}_{0,0}\cdot{\rm z}_{\rm v}\right)+{\rm h}_0\cdot\left({\rm a}_{0,1}\cdot{\rm x}_{\rm v}+{\rm b}_{0,1}\cdot{\rm y}_{\rm v}+{\rm c}_{0,1}\cdot{\rm z}_{\rm v}\right)=0\Longrightarrow\begin{cases}{\rm a}={\rm k}_0\cdot{\rm a}_{0,0}+{\rm h}_0\cdot{\rm a}_{0,1}\\{\rm b}={\rm k}_0\cdot{\rm b}_{0,0}+{\rm h}_0\cdot{\rm b}_{0,1}\\{\rm c}={\rm k}_0\cdot{\rm c}_{0,0}+{\rm h}_0\cdot{\rm c}_{0,1}\\{\rm d}_0={\rm k}_0\cdot{\rm d}_{0,0}+{\rm h}_0\cdot{\rm d}_{0,1}\end{cases}\]</li>
+            <li>\[{\rm k}_1\cdot\left({\rm a}_{1,0}\cdot{\rm x}_{\rm u}+{\rm b}_{1,0}\cdot{\rm y}_{\rm u}+{\rm c}_{1,0}\cdot{\rm z}_{\rm u}\right)+{\rm h}_1\cdot\left({\rm a}_{1,1}\cdot{\rm x}_{\rm u}+{\rm b}_{1,1}\cdot{\rm y}_{\rm u}+{\rm c}_{1,1}\cdot{\rm z}_{\rm u}\right)=0\Longrightarrow\begin{cases}{\rm a}={\rm k}_1\cdot{\rm a}_{1,0}+{\rm h}_1\cdot{\rm a}_{1,1}\\{\rm b}={\rm k}_1\cdot{\rm b}_{1,0}+{\rm h}_1\cdot{\rm b}_{1,1}\\{\rm c}={\rm k}_1\cdot{\rm c}_{1,0}+{\rm h}_1\cdot{\rm c}_{1,1}\\{\rm d}_1={\rm k}_1\cdot{\rm d}_{1,0}+{\rm h}_1\cdot{\rm d}_{1,1}\end{cases}\]</li>
+            <li>\[\begin{cases}{\rm a}={\rm k}_0\cdot{\rm a}_{0,0}+{\rm h}_0\cdot{\rm a}_{0,1}={\rm k}_1\cdot{\rm a}_{1,0}+{\rm h}_1\cdot{\rm a}_{1,1}\\{\rm b}={\rm k}_0\cdot{\rm b}_{0,0}+{\rm h}_0\cdot{\rm b}_{0,1}={\rm k}_1\cdot{\rm b}_{1,0}+{\rm h}_1\cdot{\rm b}_{1,1}\\{\rm c}={\rm k}_0\cdot{\rm c}_{0,0}+{\rm h}_0\cdot{\rm c}_{0,1}={\rm k}_1\cdot{\rm c}_{1,0}+{\rm h}_1\cdot{\rm c}_{1,1}\end{cases}\]</li>
+        </ul>
+    </div>
+    <div class="block F">
+        E la retta incidente entrambe e perpendicolare a tale piano:
+        <ul>
+            <li>\begin{cases}{\rm a}_{0,0}\cdot\left({\rm x}+{\rm t}_0\cdot{\rm a}\right)+{\rm b}_{0,0}\cdot\left({\rm y}+{\rm t}_0\cdot{\rm b}\right)+{\rm c}_{0,0}\cdot\left({\rm z}+{\rm t}_0\cdot{\rm c}\right)+{\rm d}_{0,0}=0\\{\rm a}_{0,1}\cdot\left({\rm x}+{\rm t}_0\cdot{\rm a}\right)+{\rm b}_{0,1}\cdot\left({\rm y}+{\rm t}_0\cdot{\rm b}\right)+{\rm c}_{0,1}\cdot\left({\rm z}+{\rm t}_0\cdot{\rm c}\right)+{\rm d}_{0,1}=0\\{\rm a}_{1,0}\cdot\left({\rm x}+{\rm t}_1\cdot{\rm a}\right)+{\rm b}_{1,0}\cdot\left({\rm y}+{\rm t}_1\cdot{\rm b}\right)+{\rm c}_{1,0}\cdot\left({\rm z}+{\rm t}_1\cdot{\rm c}\right)+{\rm d}_{1,0}=0\\{\rm a}_{1,1}\cdot\left({\rm x}+{\rm t}_1\cdot{\rm a}\right)+{\rm b}_{1,1}\cdot\left({\rm y}+{\rm t}_1\cdot{\rm b}\right)+{\rm c}_{1,1}\cdot\left({\rm z}+{\rm t}_1\cdot{\rm c}\right)+{\rm d}_{1,1}=0\end{cases}</li>
+            <li>\begin{cases}{\rm a}_{0,0}\cdot\left({\rm x}+{\rm t}_0\cdot{\rm a}\right)+{\rm b}_{0,0}\cdot\left({\rm y}+{\rm t}_0\cdot{\rm b}\right)+{\rm c}_{0,0}\cdot\left({\rm z}+{\rm t}_0\cdot{\rm c}\right)+{\rm d}_{0,0}=0\\{\rm a}_{0,1}\cdot\left({\rm x}+{\rm t}_0\cdot{\rm a}\right)+{\rm b}_{0,1}\cdot\left({\rm y}+{\rm t}_0\cdot{\rm b}\right)+{\rm c}_{0,1}\cdot\left({\rm z}+{\rm t}_0\cdot{\rm c}\right)+{\rm d}_{0,1}=0\\{\rm x}+{\rm t}_1\cdot{\rm a}={\rm x}_{\rm Q}+{\rm s}_1\cdot{\rm x}_{\rm v}\\{\rm y}+{\rm t}_1\cdot{\rm b}={\rm y}_{\rm Q}+{\rm s}_1\cdot{\rm y}_{\rm v}\\{\rm z}+{\rm t}_1\cdot{\rm c}={\rm z}_{\rm Q}+{\rm s}_1\cdot{\rm z}_{\rm v}\end{cases}</li>
+            <li>\begin{cases}{\rm x}+{\rm t}_0\cdot{\rm a}={\rm x}_{\rm P}+{\rm s}_0\cdot{\rm x}_{\rm u}\\{\rm y}+{\rm t}_0\cdot{\rm b}={\rm y}_{\rm P}+{\rm s}_0\cdot{\rm y}_{\rm u}\\{\rm z}+{\rm t}_0\cdot{\rm c}={\rm z}_{\rm P}+{\rm s}_0\cdot{\rm z}_{\rm u}\\{\rm a}_{1,0}\cdot\left({\rm x}+{\rm t}_1\cdot{\rm a}\right)+{\rm b}_{1,0}\cdot\left({\rm y}+{\rm t}_1\cdot{\rm b}\right)+{\rm c}_{1,0}\cdot\left({\rm z}+{\rm t}_1\cdot{\rm c}\right)+{\rm d}_{1,0}=0\\{\rm a}_{1,1}\cdot\left({\rm x}+{\rm t}_1\cdot{\rm a}\right)+{\rm b}_{1,1}\cdot\left({\rm y}+{\rm t}_1\cdot{\rm b}\right)+{\rm c}_{1,1}\cdot\left({\rm z}+{\rm t}_1\cdot{\rm c}\right)+{\rm d}_{1,1}=0\end{cases}</li>
+            <li>\begin{cases}{\rm x}+{\rm t}_0\cdot{\rm a}={\rm x}_{\rm P}+{\rm s}_0\cdot{\rm x}_{\rm u}\\{\rm y}+{\rm t}_0\cdot{\rm b}={\rm y}_{\rm P}+{\rm s}_0\cdot{\rm y}_{\rm u}\\{\rm z}+{\rm t}_0\cdot{\rm c}={\rm z}_{\rm P}+{\rm s}_0\cdot{\rm z}_{\rm u}\\{\rm x}+{\rm t}_1\cdot{\rm a}={\rm x}_{\rm Q}+{\rm s}_1\cdot{\rm x}_{\rm v}\\{\rm y}+{\rm t}_1\cdot{\rm b}={\rm y}_{\rm Q}+{\rm s}_1\cdot{\rm y}_{\rm v}\\{\rm z}+{\rm t}_1\cdot{\rm c}={\rm z}_{\rm Q}+{\rm s}_1\cdot{\rm z}_{\rm v}\end{cases}</li>
+        </ul>
+    </div>
+    <div class="block R">
+        La distanza tra le due rette si calcola come:
+        \[\left|{\rm t}_1-{\rm t}_0\right|\cdot\sqrt{{\rm a}^2+{\rm b}^2+{\rm c}^2}=\frac{\left|{\rm d}_1-{\rm d}_0\right|}{\sqrt{{\rm a}^2+{\rm b}^2+{\rm c}^2}}\]
+    </div>
+</div>
+
+<div class="nav-buttons">
+    <div>
+        <a href="https://oniramortsam.github.io/MateMath">https://oniramortsam.github.io/MateMath</a>
+        <br>
+        <button onclick="prevSlide()">Indietro</button>
+        <a href="../">Torna all'Indice</a>
+        <button onclick="nextSlide()">Avanti</button>
+    </div>
+    <div>
+        1° anno:
+        <br>
+        <a href="../1°/1°A/1°A_1.html">A1</a>
+        <a href="../1°/1°A/1°A_2.html">A2</a>
+        <a href="../1°/1°A/1°A_3.html">A3</a>
+        <a href="../1°/1°A/1°A_4.html">A4</a>
+        <br>
+        <a href="../1°/1°B/1°B_1.html">B1</a>
+        <a href="../1°/1°B/1°B_2.html">B2</a>
+        <a href="../1°/1°B/1°B_3.html">B3</a>
+        <a href="../1°/1°B/1°B_4.html">B4</a>
+    </div>
+    <div>
+        2° anno:
+        <br>
+        <a href="../2°/2°A/2°A_1.html">A1</a>
+        <a href="../2°/2°A/2°A_2.html">A2</a>
+        <a href="../2°/2°A/2°A_3.html">A3</a>
+        <a href="../2°/2°A/2°A_4.html">A4</a>
+        <br>
+        <a href="../2°/2°B/2°B_1.html">B1</a>
+        <a href="../2°/2°B/2°B_2.html">B2</a>
+        <a href="../2°/2°B/2°B_3.html">B3</a>
+        <a href="../2°/2°B/2°B_4.html">B4</a>
+    </div>
+    <div>
+        3° anno:
+        <br>
+        <a href="../3°/3°A/3°A_1.html">A1</a>
+        <a href="../3°/3°A/3°A_2.html">A2</a>
+        <a href="../3°/3°A/3°A_3.html">A3</a>
+        <a href="../3°/3°A/3°A_4.html">A4</a>
+        <br>
+        <a href="../3°/3°B/3°B_1.html">B1</a>
+        <a href="../3°/3°B/3°B_2.html">B2</a>
+        <a href="../3°/3°B/3°B_3.html">B3</a>
+        <a href="../3°/3°B/3°B_4.html">B4</a>
+    </div>
+    <div>
+        4° anno:
+        <br>
+        <a href="../4°/4°A/4°A_1.html">A1</a>
+        <a href="../4°/4°A/4°A_2.html">A2</a>
+        <a href="../4°/4°A/4°A_3.html">A3</a>
+        <a href="../4°/4°A/4°A_4.html">A4</a>
+        <br>
+        <a href="../4°/4°B/4°B_1.html">B1</a>
+        <a href="../4°/4°B/4°B_2.html">B2</a>
+        <a href="../4°/4°B/4°B_3.html">B3</a>
+        <a href="../4°/4°B/4°B_4.html">B4</a>
+    </div>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+</script>

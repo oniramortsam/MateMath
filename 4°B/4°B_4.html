@@ -1,0 +1,172 @@
+<head>
+  <meta charset="UTF-8">
+  <title>4° anno: parte B4</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
+<div class="slide active">
+    <h2>sulla probabilità</h2>
+    <ol>
+        <li>la media e la varianza (NFR)</li>
+        <li>distribuzioni notevoli (NFR)</li>
+        <li>le coppie di variabili (NFR)</li>
+    </ol>
+</div>
+
+<div class="slide">
+    <h2>la media e la varianza</h2>
+    <div class="block N">
+        Si dice variabile aleatoria un funzione \({\rm X}:\Omega\rightarrow{\mathbb R}\), dove \(\Omega\) può essere:
+        <ul>
+            <li>\({\cal P}\left({\rm d}\right)\) se si può simulare \({\rm X}\) tirando \({\rm d}\) monete bilanciate.</li>
+            <li>\(\left[0,1\right]^{\rm d}\) se si può simulare \({\rm X}\) con \({\rm d}\) scelte consecutive tra possibili alternative.</li>
+        </ul>
+        La selezione del nostro universo \(\omega\in\Omega\) tra quelli possibili è implementata da una RNG.
+    </div>
+    <div class="block F">
+        Si dice valore atteso:
+        <ul>
+            <li>\[{\mathbb E}\left[{\rm X}\right]=\left|\Omega\right|^{-1}\sum_{\omega\in\Omega}{\rm X}\]</li>
+            <li>\[{\mathbb E}\left[{\rm X}\right]=\int_\Omega{\rm X}\times\partial\omega\]</li>
+        </ul>
+        E si dice varianza:
+        \[{\mathbb V}\left[{\rm X}^2\right]={\mathbb E}\left[\left({\rm X}-{\mathbb E}\left[{\rm X}\right]\right)^2\right]={\mathbb E}\left[{\rm X}^2\right]-{\mathbb E}\left[{\rm X}\right]^2\]
+    </div>
+    <div class="block R">
+        Si può considerare la funzione di ripartizione:
+        \[{\rm F}_{\rm X}={\mathbb P}\left[{\rm X}\lt{\rm x}\right]:{\mathbb R}\rightarrow\left[0,1\right]\]
+        Che permette agevolmente di rappresentare:
+        \[\Omega=\left[0,1\right]\qquad{\rm X}={\rm F}_{\rm X}^{-1}\]
+    </div>
+</div>
+
+<div class="slide">
+    <h2>distribuzioni notevoli</h2>
+    <div class="block N">
+        Si considerano le distribuzioni di probabilità:
+        <ul>
+            <li>Poisson: \[{\mathbb P}\left[{\rm X}={\rm k}\right]=\frac{\lambda^{\rm k}}{\exp\left(\lambda\right)\cdot{\rm k}!}\]</li>
+            <li>Binomiale: \[{\mathbb P}\left[{\rm X}={\rm k}\right]=\left(\frac{{\rm n}!}{{\rm k}!\cdot\left({\rm n}-{\rm k}\right)!}\right)\cdot{\rm p}^{\rm k}\cdot\left(1-{\rm p}\right)^{{\rm n}-{\rm k}}\]</li>
+            <li>Pascal: \[{\mathbb P}\left[{\rm X}={\rm k}\right]=\left(\frac{\left({\rm n}+{\rm k}-1\right)!}{{\rm k}!\cdot\left({\rm n}-1\right)!}\right)\cdot{\rm p}^{\rm n}\cdot\left(1-{\rm p}\right)^{\rm k}\]</li>
+            <li>Gamma: \[{\mathbb P}\left[{\rm X}\le{\rm x}\right]=\frac{\lambda^{\rm n}}{\left({\rm n}-1\right)!}\cdot\int_0^{\rm x}\frac{{\rm t}^{{\rm n}-1}}{\exp\left(\lambda\cdot{\rm t}\right)}\times\partial{\rm t}\]</li>
+            <li>Beta: \[{\mathbb P}\left[{\rm X}\le{\rm x}\right]=\frac{\left({\rm n}-1\right)!}{{\rm k}!\cdot\left({\rm n}-{\rm k}\right)!}\cdot\int_0^{\rm x}{\rm t}^{\rm k}\left(1-{\rm t}\right)^{{\rm n}-{\rm k}}\times\partial{\rm t}\]</li>
+            <li>Gauss: \[{\mathbb P}\left[{\rm X}\le{\rm x}\right]=\frac{1}{\sigma\cdot\sqrt{2\cdot\pi}}\cdot\int_{-\infty}^{\rm x}\exp\left(-\frac{1}{2}\cdot\left(\frac{{\rm t}-\mu}{\sigma}\right)^2\right)\times\partial{\rm t}\]</li>
+        </ul>
+    </div>
+    <div class="block F">
+        Si calcolano media e varianza:
+        <ul>
+            <li>Poisson: \[{\mathbb E}\left[{\rm X}\right]=\qquad{\mathbb V}\left[{\rm X}\right]=\]</li>
+            <li>Binomiale: \[{\mathbb E}\left[{\rm X}\right]=\qquad{\mathbb V}\left[{\rm X}\right]=\]</li>
+            <li>Pascal: \[{\mathbb E}\left[{\rm X}\right]=\qquad{\mathbb V}\left[{\rm X}\right]=\]</li>
+            <li>Gamma: \[{\mathbb E}\left[{\rm X}\right]=\qquad{\mathbb V}\left[{\rm X}\right]=\]</li>
+            <li>Beta: \[{\mathbb E}\left[{\rm X}\right]=\qquad{\mathbb V}\left[{\rm X}\right]=\]</li>
+            <li>Gauss: \[{\mathbb E}\left[{\rm X}\right]=\qquad{\mathbb V}\left[{\rm X}\right]=\]</li>
+        </ul>
+    </div>
+    <div class="block R">
+    </div>
+</div>
+
+<div class="slide">
+    <h2>le coppie di variabili</h2>
+    <div class="block N">
+        Definiamo:
+        \[\forall{\cal X}\subseteq\Omega\quad\begin{cases}\forall\omega\in{\cal X}\quad{\mathbb P}\left[\omega\left|{\cal X}\right.\right]=\frac{{\mathbb P}\left[\omega\right]}{{\mathbb P}\left[{\cal X}\right]}\\\forall\omega\notin{\cal X}\quad{\mathbb P}\left[\omega\left|{\cal X}\right.\right]=0\end{cases}\]
+        Da cui:
+        \[\forall\left({\cal Y},{\cal X}\right)\in{\cal P}\left(\Omega\right)\times{\cal P}\left(\Omega\right)\quad{\mathbb P}\left[{\cal Y}\left|{\cal X}\right.\right]=\frac{{\mathbb P}\left[{\cal Y}\cap{\cal X}\right]}{{\mathbb P}\left[{\cal X}\right]}\]
+        Da cui si ricava Bayes:
+        \[\forall\left({\cal Y},{\cal X}\right)\in{\cal P}\left(\Omega\right)\times{\cal P}\left(\Omega\right)\quad{\mathbb P}\left[{\cal X}\left|{\cal Y}\right.\right]=\frac{{\mathbb P}\left[{\cal Y}\left|{\cal X}\right.\right]\cdot{\mathbb P}\left[{\cal X}\right]}{{\mathbb P}\left[{\cal Y}\right]}\]
+    </div>
+    <div class="block F">
+        Si dice che du eventi sono indipendenti se:
+        \[{\mathbb P}\left[{\cal X}\left|{\cal Y}\right.\right]={\mathbb P}\left[{\cal X}\right]\Longleftrightarrow{\mathbb P}\left[{\cal Y}\cap{\cal X}\right]={\mathbb P}\left[{\cal Y}\right]\cdot{\mathbb P}\left[{\cal X}\right]\Longleftrightarrow{\mathbb P}\left[{\cal Y}\left|{\cal X}\right.\right]={\mathbb P}\left[{\cal Y}\right]\]
+    </div>
+    <div class="block R">
+        Non fare l'errore di credere che tre eventi indipendenti a coppie siano indipendenti.
+    </div>
+</div>
+
+<div class="nav-buttons">
+    <div>
+        <a href="https://oniramortsam.github.io/MateMath">https://oniramortsam.github.io/MateMath</a>
+        <br>
+        <button onclick="prevSlide()">Indietro</button>
+        <a href="../">Torna all'Indice</a>
+        <button onclick="nextSlide()">Avanti</button>
+    </div>
+    <div>
+        1° anno:
+        <br>
+        <a href="../1°/1°A/1°A_1.html">A1</a>
+        <a href="../1°/1°A/1°A_2.html">A2</a>
+        <a href="../1°/1°A/1°A_3.html">A3</a>
+        <a href="../1°/1°A/1°A_4.html">A4</a>
+        <br>
+        <a href="../1°/1°B/1°B_1.html">B1</a>
+        <a href="../1°/1°B/1°B_2.html">B2</a>
+        <a href="../1°/1°B/1°B_3.html">B3</a>
+        <a href="../1°/1°B/1°B_4.html">B4</a>
+    </div>
+    <div>
+        2° anno:
+        <br>
+        <a href="../2°/2°A/2°A_1.html">A1</a>
+        <a href="../2°/2°A/2°A_2.html">A2</a>
+        <a href="../2°/2°A/2°A_3.html">A3</a>
+        <a href="../2°/2°A/2°A_4.html">A4</a>
+        <br>
+        <a href="../2°/2°B/2°B_1.html">B1</a>
+        <a href="../2°/2°B/2°B_2.html">B2</a>
+        <a href="../2°/2°B/2°B_3.html">B3</a>
+        <a href="../2°/2°B/2°B_4.html">B4</a>
+    </div>
+    <div>
+        3° anno:
+        <br>
+        <a href="../3°/3°A/3°A_1.html">A1</a>
+        <a href="../3°/3°A/3°A_2.html">A2</a>
+        <a href="../3°/3°A/3°A_3.html">A3</a>
+        <a href="../3°/3°A/3°A_4.html">A4</a>
+        <br>
+        <a href="../3°/3°B/3°B_1.html">B1</a>
+        <a href="../3°/3°B/3°B_2.html">B2</a>
+        <a href="../3°/3°B/3°B_3.html">B3</a>
+        <a href="../3°/3°B/3°B_4.html">B4</a>
+    </div>
+    <div>
+        4° anno:
+        <br>
+        <a href="../4°/4°A/4°A_1.html">A1</a>
+        <a href="../4°/4°A/4°A_2.html">A2</a>
+        <a href="../4°/4°A/4°A_3.html">A3</a>
+        <a href="../4°/4°A/4°A_4.html">A4</a>
+        <br>
+        <a href="../4°/4°B/4°B_1.html">B1</a>
+        <a href="../4°/4°B/4°B_2.html">B2</a>
+        <a href="../4°/4°B/4°B_3.html">B3</a>
+        <a href="../4°/4°B/4°B_4.html">B4</a>
+    </div>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+</script>

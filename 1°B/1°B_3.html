@@ -1,0 +1,181 @@
+<head>
+  <meta charset="UTF-8">
+  <title>1° anno: parte B3</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
+<div class="slide active">
+    <h2>le funzioni</h2>
+    <ol>
+        <li>l'insieme prodotto (NFR)</li>
+        <li>funzioni e potenze (NDR)</li>
+        <li>funzioni e inverse (FD)</li>
+    </ol>
+</div>
+
+<div class="slide">
+    <h2>l'insieme prodotto</h2>
+    <div class="block N">
+        Il prodotto cartesiano è definito come
+        \[{\rm x}\in{\rm A}\times{\rm B}\Longleftrightarrow\left[\exists{\rm a}\in{\rm A},{\rm b}\in{\rm B}\quad{\rm x}=\left({\rm a},{\rm b}\right)\right]\]
+        Equivalentemente
+        \[{\rm x}\in{\rm A}\times{\rm B}\Longleftrightarrow\left[\exists{\rm a},{\rm b}\quad{\rm x}=\left({\rm a},{\rm b}\right)\land\begin{cases}{\rm a}\in{\rm A}\\{\rm b}\in{\rm B}\end{cases}\right]\]
+        Cioè si verifica prima che \({\rm x}\) sia una coppia, e poi l'appartenenza sia di ascissa che di ordinata:
+        <ul>
+            <li>\[\left[\forall{\rm k}\quad\forall{\rm h}\quad{\cal A}\left({\rm k},{\rm h}\right)\right]\Longleftrightarrow\left[\forall\left({\rm k},{\rm h}\right)\quad{\cal A}\left({\rm k},{\rm h}\right)\right]\]</li>
+            <li>\[\left[\exists{\rm k}\quad\exists{\rm h}\quad{\cal A}\left({\rm k},{\rm h}\right)\right]\Longleftrightarrow\left[\exists\left({\rm k},{\rm h}\right)\quad{\cal A}\left({\rm k},{\rm h}\right)\right]\]</li>
+        </ul>
+    </div>
+    <div class="block F">
+        Valgono le proprietà distributive:
+        <ul>
+            <li>\[\left({\rm A}\cup{\rm B}\right)\times{\rm C}=\left({\rm A}\times{\rm C}\right)\cup\left({\rm B}\times{\rm C}\right)\]</li>
+            <li>\[\left({\rm A}\cap{\rm B}\right)\times{\rm C}=\left({\rm A}\times{\rm C}\right)\cap\left({\rm B}\times{\rm C}\right)\]</li>
+            <li>\[\left({\rm A}\setminus{\rm B}\right)\times{\rm C}=\left({\rm A}\times{\rm C}\right)\setminus\left({\rm B}\times{\rm C}\right)\]</li>
+            <li>\[{\rm A}\times{\rm B}\subseteq{\rm C}\times{\rm D}\Longleftrightarrow{\rm A}\subseteq{\rm C}\land{\rm B}\subseteq{\rm D}\]</li>
+        </ul>
+    </div>
+    <div class="block R">
+        Vale la proprietà associativa della moltiplicazione:
+        \[\left|\left({\rm A}\times{\rm B}\right)\times{\rm C}\right|=\left|{\rm A}\times\left({\rm B}\times{\rm C}\right)\right|\]</li>
+        Che si mostra facendo corrispondere in modo biunivoco:
+        \[\left(\left({\rm a},{\rm b}\right),{\rm c}\right)\leftrightarrow\left({\rm a},\left({\rm b},{\rm c}\right)\right)\]
+    </div>
+</div>
+
+<div class="slide">
+    <h2>le funzioni e potenze</h2>
+    <div class="block N">
+        Diciamo \({\rm A}^{\rm B}\) l'insieme delle funzioni \({\rm f}:{\rm B}\rightarrow{\rm A}\).
+    </div>
+    <div class="block F">
+        Mostriamo le corrispondenze canoniche:
+        <ul>
+            <li>\[\left|\left({\rm A}\times{\rm B}\right)^{\rm C}\right|=\left|{\rm A}^{\rm C}\times{\rm B}^{\rm C}\right|\]</li>
+            <li>\[{\rm B}\cap{\rm C}=\emptyset\Longrightarrow\left|{\rm A}^{\left({\rm B}\cup{\rm C}\right)}\right|=\left|{\rm A}^{\rm B}\times{\rm A}^{\rm C}\right|\]</li>
+            <li>\[\left|{\rm A}^{\left({\rm B}\times{\rm C}\right)}\right|=\left|\left({\rm A}^{\rm B}\right)^{\rm C}\right|\]</li>
+        </ul>
+        Facciamo corrispondere \({\rm f}\leftrightarrow{\rm g}\) nei vari casi:
+        <ul>
+            <li>\[{\rm g}=\left({\rm g}_0,{\rm g}_1\right)\land\left[\forall{\rm c}\in{\rm C}\quad{\rm f}\left({\rm c}\right)=\left({\rm g}_0\left({\rm c}\right),{\rm g}_1\left({\rm c}\right)\right)\right]\]</li>
+            <li>\[{\rm g}=\left({\rm g}_0,{\rm g}_1\right)\land\left[\forall{\rm a}\in{\rm A}\quad{\rm f}\left({\rm a}\right)={\rm g}_0\left({\rm a}\right)\right]\land\left[\forall{\rm b}\in{\rm B}\quad{\rm f}\left({\rm b}\right)={\rm g}_1\left({\rm b}\right)\right]\]</li>
+            <li>\[\forall\left({\rm b},{\rm c}\right)\in{\rm B}\times{\rm C}\quad{\rm f}\left({\rm b},{\rm c}\right)={\rm g}\left({\rm c}\right)\left({\rm b}\right)\]</li>
+        </ul>
+        Nel primo e secondo caso le \({\rm f}\) si chiamano \({\rm g}_0\otimes{\rm g}_1,{\rm g}_0\oplus{\rm g}_1\) rispettivamente.
+    </div>
+    <div class="block R">
+        Le corrispondenze canoniche sono a loro volta particolari funzioni che si dicono invertibili, lo vediamo dopo.
+    </div>
+</div>
+
+<div class="slide">
+    <h2>funzioni e inverse</h2>
+    <div class="block F">
+        Una relazione \({\cal R}\), cioè un predicato di due variabili, è detta funzionale da un dominio \({\rm A}\) ad un codominio \({\rm B}\) quando:
+        \[\forall{\rm x}\in{\rm A}\quad\exists{\rm y}\in{\rm B}\quad\forall{\rm z}\in{\rm B}\quad{\cal R}\left({\rm x},{\rm z}\right)\Leftrightarrow{\rm z}={\rm y}\]
+        Tale proprietà è equivalente a:
+        \[\exists{\rm f}\in{\rm B}^{\rm A}\quad\forall\left({\rm x},{\rm y}\right)\in{\rm A}\times{\rm B}\quad{\cal R}\left({\rm x},{\rm y}\right)\Leftrightarrow{\rm y}={\rm f}\left({\rm x}\right)\]
+        Il fatto che esista una funzione inversa:
+        \[\exists{\rm g}\in{\rm A}^{\rm B}\quad\forall\left({\rm x},{\rm y}\right)\in{\rm A}\times{\rm B}\quad{\rm y}={\rm f}\left({\rm x}\right)\Leftrightarrow{\rm x}={\rm g}\left({\rm y}\right)\]
+        Dipende dalla proprietà:
+        \[\forall{\rm y}\in{\rm B}\quad\exists{\rm x}\in{\rm A}\quad\forall{\rm z}\in{\rm A}\quad{\rm f}\left({\rm z}\right)={\rm y}\Leftrightarrow{\rm z}={\rm x}\]
+    </div>
+    <div class="block R">
+        Sia \({\rm f}:{\rm A}\rightarrow{\rm B}\), definiamo le fibre \({\rm f}^{-1}:{\rm B}\rightarrow{\cal P}\left({\rm B}\right)\) come:
+        \[{\rm x}\in{\rm f}^{-1}\left({\rm y}\right)\Longleftrightarrow{\rm f}\left({\rm x}\right)={\rm y}\]
+        Allora vale la proprietà:
+        \[\left|{\rm A}\right|=\sum_{{\rm y}\in{\rm B}}\left|{\rm f}^{-1}\left({\rm y}\right)\right|\]
+        Ma l'invertibilità di \({\rm f}\) è equivalente a
+        \[\forall{\rm y}\in{\rm B}\quad\left|{\rm f}^{-1}\left({\rm y}\right)\right|=1\]
+        Ma la stessa formula può mostrare che:
+        <ul>
+            <li>\[\left[\forall{\rm y}\in{\rm B}\quad\exists{\rm x}\in{\rm A}\quad{\rm f}\left({\rm x}\right)={\rm y}\right]\Longrightarrow\left|{\rm A}\right|\ge\left|{\rm B}\right|\]</li>
+            <li>\[\left[\forall\left({\rm x},{\rm z}\right)\in{\rm A}\times{\rm A}\quad{\rm f}\left({\rm x}\right)={\rm f}\left({\rm z}\right)\Longrightarrow{\rm x}={\rm z}\right]\Longrightarrow\left|{\rm A}\right|\le\left|{\rm B}\right|\]</li>
+        </ul>
+        Tali funzioni si dicono suriettive, iniettive rispettivamente.
+    </div>
+</div>
+
+<div class="nav-buttons">
+    <div>
+        <a href="https://oniramortsam.github.io/MateMath">https://oniramortsam.github.io/MateMath</a>
+        <br>
+        <button onclick="prevSlide()">Indietro</button>
+        <a href="../">Torna all'Indice</a>
+        <button onclick="nextSlide()">Avanti</button>
+    </div>
+    <div>
+        1° anno:
+        <br>
+        <a href="../1°/1°A/1°A_1.html">A1</a>
+        <a href="../1°/1°A/1°A_2.html">A2</a>
+        <a href="../1°/1°A/1°A_3.html">A3</a>
+        <a href="../1°/1°A/1°A_4.html">A4</a>
+        <br>
+        <a href="../1°/1°B/1°B_1.html">B1</a>
+        <a href="../1°/1°B/1°B_2.html">B2</a>
+        <a href="../1°/1°B/1°B_3.html">B3</a>
+        <a href="../1°/1°B/1°B_4.html">B4</a>
+    </div>
+    <div>
+        2° anno:
+        <br>
+        <a href="../2°/2°A/2°A_1.html">A1</a>
+        <a href="../2°/2°A/2°A_2.html">A2</a>
+        <a href="../2°/2°A/2°A_3.html">A3</a>
+        <a href="../2°/2°A/2°A_4.html">A4</a>
+        <br>
+        <a href="../2°/2°B/2°B_1.html">B1</a>
+        <a href="../2°/2°B/2°B_2.html">B2</a>
+        <a href="../2°/2°B/2°B_3.html">B3</a>
+        <a href="../2°/2°B/2°B_4.html">B4</a>
+    </div>
+    <div>
+        3° anno:
+        <br>
+        <a href="../3°/3°A/3°A_1.html">A1</a>
+        <a href="../3°/3°A/3°A_2.html">A2</a>
+        <a href="../3°/3°A/3°A_3.html">A3</a>
+        <a href="../3°/3°A/3°A_4.html">A4</a>
+        <br>
+        <a href="../3°/3°B/3°B_1.html">B1</a>
+        <a href="../3°/3°B/3°B_2.html">B2</a>
+        <a href="../3°/3°B/3°B_3.html">B3</a>
+        <a href="../3°/3°B/3°B_4.html">B4</a>
+    </div>
+    <div>
+        4° anno:
+        <br>
+        <a href="../4°/4°A/4°A_1.html">A1</a>
+        <a href="../4°/4°A/4°A_2.html">A2</a>
+        <a href="../4°/4°A/4°A_3.html">A3</a>
+        <a href="../4°/4°A/4°A_4.html">A4</a>
+        <br>
+        <a href="../4°/4°B/4°B_1.html">B1</a>
+        <a href="../4°/4°B/4°B_2.html">B2</a>
+        <a href="../4°/4°B/4°B_3.html">B3</a>
+        <a href="../4°/4°B/4°B_4.html">B4</a>
+    </div>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+</script>
