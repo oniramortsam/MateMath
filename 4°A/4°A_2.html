@@ -7,102 +7,87 @@
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
 
 <div class="slide active">
-    <h2>le funzioni elementari</h2>
+    <h2>le funzioni inverse iperboliche</h2>
     <ol>
-        <li>ancora le goniometriche (NFR)</li>
-        <li>le funzioni iperboliche (NFR)</li>
-        <li>le tangenti iperboliche (NFR)</li>
+        <li>sulle inverse iperboliche (NFR)</li>
+        <li>l'arcotangente iperbolica (NFR)</li>
     </ol>
 </div>
 
 <div class="slide">
-    <h2>ancora le goniometriche</h2>
+    <h2>sulle inverse iperboliche</h2>
     <div class="block N">
-        Si definiscono:
-        \[\tan\left(\alpha\right)=\frac{\sin\left(\alpha\right)}{\cos\left(\alpha\right)}\qquad\cot\left(\alpha\right)=\frac{\cos\left(\alpha\right)}{\sin\left(\alpha\right)}\]
+        Definiamo:
+        <ul>
+            <li>\[\operatorname{arcsinh}:{\mathbb R}\rightarrow{\mathbb R}\qquad\operatorname{arcsinh}\left({\rm y}\right)=\log\left({\rm y}+\sqrt{{\rm y}^2+1}\right)\]</li>
+            <li>\[\operatorname{arccosh}:{\mathbb R}\rightarrow{\mathbb R}\qquad\operatorname{arccosh}\left({\rm y}\right)=\log\left({\rm y}+\sqrt{{\rm y}^2-1}\right)\]</li>
+        </ul>
     </div>
     <div class="block F">
         Seguono le formule di addizione:
         <ul>
-            <li>\[\tan\left(\alpha+\beta\right)=\frac{\tan\left(\alpha\right)+\tan\left(\beta\right)}{1-\tan\left(\alpha\right)\cdot\tan\left(\beta\right)}\qquad\cot\left(\alpha+\beta\right)=\frac{\cot\left(\alpha\right)\cdot\cot\left(\beta\right)-1}{\cot\left(\beta\right)+\cot\left(\alpha\right)}\]</li>
-            <li>\[\tan\left(\alpha-\beta\right)=\frac{\tan\left(\alpha\right)-\tan\left(\beta\right)}{1+\tan\left(\alpha\right)\cdot\tan\left(\beta\right)}\qquad\cot\left(\alpha-\beta\right)=\frac{\cot\left(\alpha\right)\cdot\cot\left(\beta\right)+1}{\cot\left(\beta\right)-\cot\left(\alpha\right)}\]</li>
+            <li>\[\operatorname{arcsinh}\left({\rm a}\right)+\operatorname{arccosh}\left({\rm b}\right)=\operatorname{arcsinh}\left({\rm a}\cdot{\rm b}+\sqrt{{\rm a}^2+1}\cdot\sqrt{{\rm b}^2-1}\right)\]</li>
+            <li>\[\operatorname{arccosh}\left({\rm a}\right)+\operatorname{arccosh}\left({\rm b}\right)=\operatorname{arccosh}\left({\rm a}\cdot{\rm b}+\sqrt{{\rm a}^2-1}\cdot\sqrt{{\rm b}^2-1}\right)\]</li>
+            <li>\[\operatorname{arccosh}\left({\rm a}\right)-\operatorname{arcsinh}\left({\rm b}\right)=\operatorname{arcsinh}\left(\sqrt{{\rm a}^2-1}\cdot\sqrt{{\rm b}^2+1}-{\rm a}\cdot{\rm b}\right)\]</li>
+            <li>\[\operatorname{arcsinh}\left({\rm a}\right)-\operatorname{arcsinh}\left({\rm b}\right)=\operatorname{arccosh}\left(\sqrt{{\rm a}^2+1}\cdot\sqrt{{\rm b}^2+1}-{\rm a}\cdot{\rm b}\right)\]</li>
         </ul>
-        E di dimezzamento:
-        <ul>
-            <li>\[\tan\left(2\cdot\alpha\right)=\frac{2\cdot\tan\left(\alpha\right)}{1-\tan\left(\alpha\right)^2}\Longrightarrow\tan\left(\frac{\alpha}{2}\right)=\frac{\sqrt{\tan\left(\alpha\right)^2+1}-1}{\tan\left(\alpha\right)}\]</li>
-            <li>\[\cot\left(2\cdot\alpha\right)=\frac{\cot\left(\alpha\right)^2-1}{2\cdot\cot\left(\alpha\right)}\Longrightarrow\cot\left(\frac{\alpha}{2}\right)=\cot\left(\alpha\right)-\sqrt{1+\cot\left(\alpha\right)^2}\]</li>
-        </ul>
+        E le simmetrie:
+        \[\operatorname{arccosh}\left({\rm a}\right)=\operatorname{arcsinh}\left(\sqrt{{\rm a}^2-1}\right)\qquad\operatorname{arcsinh}\left({\rm a}\right)=\operatorname{arccosh}\left(\sqrt{{\rm a}^2+1}\right)\]
     </div>
     <div class="block R">
-        Siccome entrambe sono monotone, si definiscono le inverse:
-        \[\operatorname{arctan}:{\mathbb R}\rightarrow\left(-\pi/2,\pi/2\right)\qquad\operatorname{arccot}:{\mathbb R}\rightarrow\left(0,\pi\right)\]</li>
-    </div>
-</div>
-
-<div class="slide">
-    <h2>le funzioni iperboliche</h2>
-    <div class="block N">
-        Si definiscono:
-        \[\sinh\left(\alpha\right)=\frac{\exp\left(2\cdot\alpha\right)-1}{2\cdot\exp\left(\alpha\right)}\qquad\cosh\left(\alpha\right)=\frac{\exp\left(2\cdot\alpha\right)+1}{2\cdot\exp\left(\alpha\right)}\]
-    </div>
-    <div class="block F">
-        Seguono le formule di addizione:
+        Possiamo ricavare le formule di bisezione:
         <ul>
-            <li>\[\sinh\left(\alpha+\beta\right)=\sinh\left(\alpha\right)\cdot\cosh\left(\beta\right)+\cosh\left(\alpha\right)\cdot\sinh\left(\beta\right)\]</li>
-            <li>\[\cosh\left(\alpha+\beta\right)=\cosh\left(\alpha\right)\cdot\cosh\left(\beta\right)+\sinh\left(\alpha\right)\cdot\sinh\left(\beta\right)\]</li>
-            <li>\[\sinh\left(\alpha-\beta\right)=\sinh\left(\alpha\right)\cdot\cosh\left(\beta\right)-\cosh\left(\alpha\right)\cdot\sinh\left(\beta\right)\]</li>
-            <li>\[\cosh\left(\alpha-\beta\right)=\cosh\left(\alpha\right)\cdot\cosh\left(\beta\right)-\sinh\left(\alpha\right)\cdot\sinh\left(\beta\right)\]</li>
-        </ul>
-        Seguono le formule di werner:
-        <ul>
-            <li>\[\sinh\left(\alpha\right)\cdot\cosh\left(\beta\right)=\frac{\sinh\left(\alpha+\beta\right)+\sinh\left(\alpha-\beta\right)}{2}\]</li>
-            <li>\[\cosh\left(\alpha\right)\cdot\sinh\left(\beta\right)=\frac{\sinh\left(\alpha+\beta\right)-\sinh\left(\alpha-\beta\right)}{2}\]</li>
-            <li>\[\sinh\left(\alpha\right)\cdot\sinh\left(\beta\right)=\frac{\cosh\left(\alpha+\beta\right)-\cosh\left(\alpha-\beta\right)}{2}\]</li>
-            <li>\[\cosh\left(\alpha\right)\cdot\cosh\left(\beta\right)=\frac{\cosh\left(\alpha+\beta\right)+\cosh\left(\alpha-\beta\right)}{2}\]</li>
-        </ul>
-        Seguono le formule di prostaferesi:
-        <ul>
-            <li>\[\sinh\left(\alpha\right)+\sinh\left(\beta\right)=2\cdot\sinh\left(\frac{\alpha+\beta}{2}\right)\cdot\cosh\left(\frac{\alpha-\beta}{2}\right)\]</li>
-            <li>\[\sinh\left(\alpha\right)-\sinh\left(\beta\right)=2\cdot\cosh\left(\frac{\alpha+\beta}{2}\right)\cdot\sinh\left(\frac{\alpha-\beta}{2}\right)\]</li>
-            <li>\[\cosh\left(\alpha\right)-\cosh\left(\beta\right)=2\cdot\sinh\left(\frac{\alpha+\beta}{2}\right)\cdot\sinh\left(\frac{\alpha-\beta}{2}\right)\]</li>
-            <li>\[\cosh\left(\alpha\right)+\cosh\left(\beta\right)=2\cdot\cosh\left(\frac{\alpha+\beta}{2}\right)\cdot\cosh\left(\frac{\alpha-\beta}{2}\right)\]</li>
-        </ul>
-    </div>
-    <div class="block R">
-        Ricaviamo le formule di dimezzamento:
-        \[\sinh\left(\frac{\alpha}{2}\right)=\sqrt{\frac{\cosh\left(2\cdot\alpha\right)-1}{2}}\qquad\cosh\left(\frac{\alpha}{2}\right)=\sqrt{\frac{\cosh\left(2\cdot\alpha\right)+1}{2}}\]
-        Si definiscono le inverse:
-        <ul>
-            <li>\[\operatorname{arcsinh}:\left[0,\infty\right)\rightarrow\left[0,\infty\right)\qquad\operatorname{arcsinh}\left(\alpha\right)=\log\left(\alpha+\sqrt{\alpha^2+1}\right)\]</li>
-            <li>\[\operatorname{arccosh}:\left[1,\infty\right)\rightarrow\left[0,\infty\right)\qquad\operatorname{arccosh}\left(\alpha\right)=\log\left(\alpha+\sqrt{\alpha^2-1}\right)\]</li>
+            <li>\[2\cdot\operatorname{arccosh}\left({\rm a}\right)=\operatorname{arccosh}\left(2\cdot{\rm a}^2-1\right)=\operatorname{arcsinh}\left(2\cdot{\rm a}\cdot\sqrt{{\rm a}^2-1}\right)\]</li>
+            <li>\[2\cdot\operatorname{arcsinh}\left({\rm a}\right)=\operatorname{arccosh}\left(2\cdot{\rm a}^2+1\right)=\operatorname{arcsinh}\left(2\cdot{\rm a}\cdot\sqrt{{\rm a}^2+1}\right)\]</li>
+            <li>\[\operatorname{arccosh}\left({\rm a}\right)=2\cdot\operatorname{arccosh}\left(\sqrt{\frac{{\rm a}+1}{2}}\right)=2\cdot\operatorname{arcsinh}\left(\sqrt{\frac{{\rm a}-1}{2}}\right)\]</li>
         </ul>
     </div>
 </div>
 
 <div class="slide">
-    <h2>le tangenti iperboliche</h2>
+    <h2>l'arcotangente iperbolica</h2>
     <div class="block N">
-        Si definiscono:
-        \[\tanh\left(\alpha\right)=\frac{\sinh\left(\alpha\right)}{\cosh\left(\alpha\right)}\qquad\coth\left(\alpha\right)=\frac{\cosh\left(\alpha\right)}{\sinh\left(\alpha\right)}\]
+        Definiamo:
+        <ul>
+            <li>\[\operatorname{arctanh}:\left(-1,1\right)\rightarrow{\mathbb R}\qquad\operatorname{arctanh}\left({\rm y}\right)=\frac{1}{2}\log\left(\frac{1+{\rm y}}{1-{\rm y}}\right)\]</li>
+            <li>\[\operatorname{arccoth}:\left(1,\infty\right)\rightarrow\left(0,\infty\right)\qquad\operatorname{arccoth}\left({\rm y}\right)=\frac{1}{2}\log\left(\frac{{\rm y}+1}{{\rm y}-1}\right)\]</li>
+        </ul>
     </div>
     <div class="block F">
         Seguono le formule di addizione:
         <ul>
-            <li>\[\tanh\left(\alpha+\beta\right)=\frac{\tanh\left(\alpha\right)+\tanh\left(\beta\right)}{1+\tanh\left(\alpha\right)\cdot\tanh\left(\beta\right)}\qquad\coth\left(\alpha+\beta\right)=\frac{\coth\left(\alpha\right)\cdot\coth\left(\beta\right)+1}{\coth\left(\beta\right)+\coth\left(\alpha\right)}\]</li>
-            <li>\[\tanh\left(\alpha-\beta\right)=\frac{\tanh\left(\alpha\right)-\tanh\left(\beta\right)}{1-\tanh\left(\alpha\right)\cdot\tanh\left(\beta\right)}\qquad\coth\left(\alpha-\beta\right)=\frac{\coth\left(\alpha\right)\cdot\coth\left(\beta\right)-1}{\coth\left(\beta\right)-\coth\left(\alpha\right)}\]</li>
+            <li>\[\operatorname{arctanh}\left({\rm a}\right)+\operatorname{arctanh}\left({\rm b}\right)=\operatorname{arctanh}\left(\frac{{\rm a}+{\rm b}}{1+{\rm a}\cdot{\rm b}}\right)\]</li>
+            <li>\[\operatorname{arccosh}\left({\rm a}\right)+\operatorname{arccosh}\left({\rm b}\right)=\operatorname{arccosh}\left(\frac{{\rm a}\cdot{\rm b}+1}{{\rm b}+{\rm a}}\right)\]</li>
+            <li>\[\operatorname{arctanh}\left({\rm a}\right)-\operatorname{arctanh}\left({\rm b}\right)=\operatorname{arctanh}\left(\frac{{\rm a}-{\rm b}}{1-{\rm a}\cdot{\rm b}}\right)\]</li>
+            <li>\[\operatorname{arccosh}\left({\rm a}\right)-\operatorname{arccosh}\left({\rm b}\right)=\operatorname{arccosh}\left(\frac{{\rm a}\cdot{\rm b}-1}{{\rm b}-{\rm a}}\right)\]</li>
         </ul>
-        E di dimezzamento:
-        <ul>
-            <li>\[\tanh\left(2\cdot\alpha\right)=\frac{2\cdot\tanh\left(\alpha\right)}{1+\tanh\left(\alpha\right)^2}\Longrightarrow\tan\left(\frac{\alpha}{2}\right)=\frac{1-\sqrt{1-\tanh\left(\alpha\right)^2}}{\tan\left(\alpha\right)}\]</li>
-            <li>\[\coth\left(2\cdot\alpha\right)=\frac{\coth\left(\alpha\right)^2+1}{2\cdot\coth\left(\alpha\right)}\Longrightarrow\cot\left(\frac{\alpha}{2}\right)=\coth\left(\alpha\right)+\sqrt{1+\coth\left(\alpha\right)^2}\]</li>
-        </ul>
+        E le simmetrie:
+        \[\operatorname{arctanh}\left({\rm a}\right)=\operatorname{arccoth}\left({\rm a}^{-1}\right)\qquad\operatorname{arccoth}\left({\rm a}\right)=\operatorname{arctanh}\left({\rm a}^{-1}\right)\]</li>
     </div>
     <div class="block R">
-        Si definiscono le inverse:
+        Possiamo ricavare le formule di bisezione:
         <ul>
-            <li>\[\operatorname{arctanh}:\left(-1,1\right)\rightarrow{\mathbb R}\qquad\operatorname{arctanh}\left(\alpha\right)=\frac{\log\left(1+\alpha\right)-\log\left(1-\alpha\right)}{2}\]</li>
-            <li>\[\operatorname{arccoth}:{\mathbb R}\setminus\left(-1,1\right)\rightarrow{\mathbb R}\setminus1\qquad\operatorname{arccoth}\left(\alpha\right)=\frac{\log\left(\alpha+1\right)-\log\left(\alpha-1\right)}{2}\]</li>
+            <li>\[2\cdot\operatorname{arctanh}\left({\rm a}\right)=\operatorname{arctanh}\left(\frac{2\cdot{\rm a}}{1+{\rm a}^2}\right)\qquad\operatorname{arctanh}\left({\rm a}\right)=2\cdot\operatorname{arctanh}\left(\frac{1-\sqrt{1-{\rm a}^2}}{\rm a}\right)\]</li>
+            <li>\[2\cdot\operatorname{arccoth}\left({\rm a}\right)=\operatorname{arccoth}\left(\frac{{\rm a}^2+1}{2\cdot{\rm a}}\right)\qquad\operatorname{arccoth}\left({\rm a}\right)=2\cdot\operatorname{arctanh}\left({\rm a}+\sqrt{{\rm a}^2-1}\right)\]</li>
         </ul>
+        Osservare che:
+        <ul>
+            <li>\[\operatorname{arctanh}\left({\rm a}\right)=\operatorname{arccosh}\left(\frac{1}{\sqrt{1-{\rm a}^2}}\right)=2\cdot\operatorname{arccosh}\left(\frac{1+{\rm a}^2}{1-{\rm a}^2}\right)=\operatorname{arcsinh}\left(\frac{\rm a}{\sqrt{1-{\rm a}^2}}\right)=2\cdot\operatorname{arcsinh}\left(\frac{2\cdot{\rm a}}{1-{\rm a}^2}\right)\]</li>
+            <li>\[\operatorname{arccoth}\left({\rm a}\right)=\operatorname{arccosh}\left(\frac{\rm a}{\sqrt{{\rm a}^2-1}}\right)=2\cdot\operatorname{arccosh}\left(\frac{{\rm a}^2+1}{{\rm a}^2-1}\right)=\operatorname{arcsinh}\left(\frac{1}{\sqrt{{\rm a}^2-1}}\right)=2\cdot\operatorname{arcsinh}\left(\frac{2\cdot{\rm a}}{{\rm a}^2-1}\right)\]</li>
+        </ul>
+    </div>
+</div>
+
+<div class="slide">
+    <div class="block D">
+        Consideriamo un versore \({\rm u}\), allora il ramo d'iperbole:
+        \[{\cal H}=\left\{{\rm O}+{\rm a}\cdot\cosh\left({\rm t}\right)\cdot{\rm u}+{\rm b}\cdot\sinh\left({\rm t}\right)\cdot\left({\cal Z}\times{\rm u}\right)\quad{\rm t}\in{\mathbb R}\right\}\]
+        Corrisponde alla relazione:
+        \[\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm x}_{\rm u}+\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm y}_{\rm u}}{\rm a}\right)^2-\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm y}_{\rm u}-\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm x}_{\rm u}}{\rm b}\right)^2=1\]
+    </div>
+    <div class="block F">
+        Il fascio di tangenti al ramo d'iperbole:
+        \[\left\{\left\{{\rm P}+{\rm t}\cdot\left(\frac{\rm b}{\rm a}\cdot\left(\left({\rm P}-{\rm O}\right)\cdot{\rm u}\right)\cdot\left({\cal Z}\times{\rm u}\right)+\frac{\rm a}{\rm b}\cdot\left(\left({\rm P}-{\rm O}\right)\cdot\left({\cal Z}\times{\rm u}\right)\right)\cdot{\rm u}\right)\quad{\rm t}\in{\mathbb R}\right\}\quad{\rm P}\in{\cal H}\right\}\]
     </div>
 </div>
 
@@ -169,21 +154,33 @@
 </div>
 
 <script>
-  const slides = document.querySelectorAll('.slide');
-  let currentSlide = 0;
 
-  function showSlide(index) {
-    slides.forEach(slide => slide.classList.remove('active'));
-    slides[index].classList.add('active');
-  }
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
 
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-  }
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+    }
 
-  function prevSlide() {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(currentSlide);
-  }
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function Show(index) {
+        const popup = document.getElementById(index);
+        popup.style.display = "block";
+    }
+
+    function Hide(index) {
+        const popup = document.getElementById(index);
+        popup.style.display = "none";
+    }
+
 </script>

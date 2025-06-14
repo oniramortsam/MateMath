@@ -27,6 +27,7 @@ body, html {
 
 /* Slide attiva */
 .slide.active {
+  padding-top: 8rem;
   display: block;
   opacity: 1;
 }
@@ -44,12 +45,6 @@ body, html {
   margin-bottom: 1rem;
   padding-left: 1rem;
   line-height: 1.4;
-}
-
-/* Contenuto slide */
-.slide p {
-  font-size: 1.5rem;
-  line-height: 1.6;
 }
 
 .nav-buttons {
@@ -79,14 +74,6 @@ body, html {
   border-radius: 0.3rem;
 }
 
-a {
-  color: #ddd;
-  border: none;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 0.3rem;
-}
-
 .block {
   overflow-x: auto;
   border-left: 0.4rem solid #222;
@@ -96,6 +83,20 @@ a {
   margin: 2rem 0;
   font-size: 1.6rem;
   box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.4);
+}
+
+.block .proof {
+  display: none;
+  border: 0.2rem solid #ddd;
+  padding: 2rem;
+}
+
+.block a {
+  background-color: #ddd;
+  color: #222;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.3rem;
 }
 
 /* Varianti per tipo di contenuto */

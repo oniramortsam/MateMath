@@ -11,7 +11,6 @@
     <ol>
         <li>potenze e proprietà (QNF)</li>
         <li>la serie geometrica (QFR)</li>
-        <li>le sommatorie serie (NDF)</li>
     </ol>
 </div>
 
@@ -87,49 +86,6 @@
     </div>
 </div>
 
-<div class="slide">
-    <h2>le sommatorie serie</h2>
-    <div class="block N">
-        Si definiscono somma e prodotto:
-        <ul>
-            <li>\[\sum_{{\rm n}\in{\rm N}+1}{\rm a}_{\rm k}=\left(\sum_{{\rm n}\in{\rm n}}{\rm a}_{\rm n}\right)+{\rm a}_{\rm N}\]</li>
-            <li>\[\prod_{{\rm n}\in{\rm N}+1}{\rm a}_{\rm k}=\left(\prod_{{\rm n}\in{\rm n}}{\rm a}_{\rm n}\right)\cdot{\rm a}_{\rm N}\]</li>
-        </ul>
-    </div>
-    <div class="block D">
-        La proprietà distributiva scritta in modo serio è:
-        <ul>
-            <li>\[\left(\sum_{{\rm n}\in{\rm N}}{\rm a}_{\rm n}\right)\cdot{\rm b}=\sum_{{\rm n}\in{\rm N}}\left({\rm a}_{\rm n}\cdot{\rm b}\right)\qquad{\rm a}\cdot\left(\sum_{{\rm n}\in{\rm n}}{\rm b}_{\rm n}\right)=\sum_{{\rm n}\in{\rm n}}\left({\rm a}\cdot{\rm b}_{\rm n}\right)\]</li>
-            <li>\[\left(\prod_{{\rm n}\in{\rm N}}{\rm a}_{\rm n}\right)^{\rm b}=\prod_{{\rm n}\in{\rm N}}\left({\rm a}_{\rm n}\right)^{\rm b}\qquad{\rm a}^\left(\sum_{{\rm n}\in{\rm n}}{\rm b}_{\rm n}\right)=\prod_{{\rm n}\in{\rm n}}{\rm a}^{\left({\rm b}_{\rm n}\right)}\]</li>
-        </ul>
-        La proprietà associativa scritta in modo serio è:
-        <ul>
-            <li>\[\sum_{{\rm m}\in{\rm M}}\left(\sum_{{\rm n}\in{\rm N}_{\rm m}}{\rm a}_{\left(\sum_{{\rm k}\in{\rm m}}{\rm N}_{\rm k}\right)+{\rm n}}\right)=\sum_{\left({\rm n}\in\sum_{{\rm m}\in{\rm M}}{\rm N}_{\rm m}\right)}{\rm a}_{\rm n}\]</li>
-            <li>\[\prod_{{\rm m}\in{\rm M}}\left(\prod_{{\rm n}\in{\rm N}_{\rm m}}{\rm a}_{\left(\sum_{{\rm k}\in{\rm m}}{\rm N}_{\rm k}\right)+{\rm n}}\right)=\prod_{\left({\rm n}\in\sum_{{\rm m}\in{\rm M}}{\rm N}_{\rm m}\right)}{\rm a}_{\rm n}\]</li>
-        </ul>
-        Sia \({\rm f}:{\rm N}\rightarrow{\rm N}\) una permutazione, la proprietà commutativa scritta in modo serio è:
-        <ul>
-            <li>\[\sum_{{\rm n}\in{\rm N}}{\rm a}_{{\rm f}\left({\rm n}\right)}=\sum_{{\rm n}\in{\rm N}}{\rm a}_{\rm n}\]</li>
-            <li>\[\prod_{{\rm n}\in{\rm N}}{\rm a}_{{\rm f}\left({\rm n}\right)}=\prod_{{\rm n}\in{\rm N}}{\rm a}_{\rm n}\]</li>
-        </ul>
-        Questa cosa permette di scrivere le somme ed i prodotti come indicizzate su insiemi.
-    </div>
-    <div class="block F">
-        Si mostra che:
-        <ul>
-            <li>\[\sum_{{\rm n}\in{\rm A}\cup{\rm B}}{\rm a}_{\rm n}=\left(\sum_{{\rm n}\in{\rm A}}{\rm a}_{\rm n}\right)+\left(\sum_{{\rm n}\in{\rm B}}{\rm a}_{\rm n}\right)-\left(\sum_{{\rm n}\in{\rm A}\cap{\rm B}}{\rm a}_{\rm n}\right)\]</li>
-            <li>\[\prod_{{\rm n}\in{\rm A}\cup{\rm B}}{\rm a}_{\rm n}=\left(\prod_{{\rm n}\in{\rm A}}{\rm a}_{\rm n}\right)\cdot\left(\sum_{{\rm n}\in{\rm B}}{\rm a}_{\rm n}\right):\left(\sum_{{\rm n}\in{\rm A}\cap{\rm B}}{\rm a}_{\rm n}\right)\]</li>
-        </ul>
-        Questa cosa si può scrivere in modo serio scrivendo, per un datato \({\cal A}\subseteq{\cal P}\left({\mathbb N}\right)\):
-        \[\forall{\rm k}\in\left|{\cal A}\right|\quad{\rm A}\in{\cal A}_{\rm k}\Longleftrightarrow{\rm A}\subseteq{\cal A}\land\left|{\rm A}\right|={\rm k}\]
-        Valgono infatti le proprietà additive di somma e prodotto:
-        <ul>
-            <li>\[\left(\sum_{\left({\rm n}\in\bigcup_{{\rm X}\in{\cal A}}{\rm X}\right)}{\rm a}_{\rm k}\right)+\sum_{{\rm k}\in\left|{\cal A}\right|}\left(\left(-1\right)^{\rm k}\cdot\sum_{{\rm A}\in{\cal A}_{\rm k}}\left(\sum_{\left({\rm n}\in\bigcap_{{\rm X}\in{\rm A}}{\rm X}\right)}{\rm a}_{\rm n}\right)\right)=0\]</li>
-            <li>\[\left(\prod_{\left({\rm n}\in\bigcup_{{\rm X}\in{\cal A}}{\rm X}\right)}{\rm a}_{\rm k}\right)\cdot\prod_{{\rm k}\in\left|{\cal A}\right|}\left(\prod_{{\rm A}\in{\cal A}_{\rm k}}\left(\prod_{\left({\rm n}\in\bigcap_{{\rm X}\in{\rm A}}{\rm X}\right)}{\rm a}_{\rm n}\right)\right)^{\left(-1\right)^{\rm k}}=0\]</li>
-        </ul>
-    </div>
-</div>
-
 <div class="nav-buttons">
     <div>
         <a href="https://oniramortsam.github.io/MateMath">https://oniramortsam.github.io/MateMath</a>
@@ -193,21 +149,33 @@
 </div>
 
 <script>
-  const slides = document.querySelectorAll('.slide');
-  let currentSlide = 0;
 
-  function showSlide(index) {
-    slides.forEach(slide => slide.classList.remove('active'));
-    slides[index].classList.add('active');
-  }
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
 
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-  }
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+    }
 
-  function prevSlide() {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(currentSlide);
-  }
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function Show(index) {
+        const popup = document.getElementById(index);
+        popup.style.display = "block";
+    }
+
+    function Hide(index) {
+        const popup = document.getElementById(index);
+        popup.style.display = "none";
+    }
+
 </script>

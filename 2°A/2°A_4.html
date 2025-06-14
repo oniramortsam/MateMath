@@ -7,69 +7,62 @@
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
 
 <div class="slide active">
-    <h2>divisione tra polinomi</h2>
+    <h2>le paraboliche</h2>
     <ol>
-        <li>polinomi: grado (NDF)</li>
-        <li>zeri e divisori (DFR)</li>
-        <li>fratti semplici (NFR)</li>
+        <li>reali e radicali (NFR)</li>
+        <li>equazioni quadre (QFR)</li>
+        <li>calcolo pi greco (DFR)</li>
     </ol>
 </div>
 
 <div class="slide">
+    <h2>reali e radicali</h2>
     <div class="block N">
-        Un polinomio di grado \({\rm n}\) nella variabile \({\rm x}\) è una espressione del tipo:
-        \[{\rm f}=\sum_{{\rm k}\in{\rm n}}{\rm f}_{\rm k}\cdot{\rm x}^{\rm k}\]
-        Si dice che \({\rm n}=\deg\left({\rm f}\right)\) se \({\rm a}_{\rm n}\ne0\)
-    </div>
-    <div class="block D">
-        Dati due polinomi \({\rm f},{\rm g}\), si dicono quoziente e resto della divisione euclidea tra \({\rm f},{\rm g}\) due polinomi tali che:
-        \[\begin{cases}0\le\deg\left({\rm r}\right)\lt\deg\left({\rm g}\right)\\{\rm f}={\rm q}\cdot{\rm g}+{\rm r}\end{cases}\Longrightarrow\begin{cases}{\rm q}={\rm f}/\!\!/{\rm g}\\{\rm r}={\rm f}\%{\rm g}\end{cases}\]
-        Vale \({\rm f}\%{\rm g}=0\) se e solo se \({\rm f}\) è multiplo di \({\rm g}\), cioè se si scrive come \({\rm q}\cdot{\rm g}\), in tal caso deve essere \({\rm q}={\rm f}/\!\!/{\rm g}\).
+        Possiamo definire:
+        \[\forall{\rm a}\gt0\quad\sqrt[{\rm n}]{\rm a}=\sup\left({\rm x}\in{\mathbb Q}\quad0\le{\rm x}^{\rm n}\le{\rm a}\right)\]
+        Ed a questo punto posso definire:
+        \[\forall{\rm a}\gt0\quad{\rm a}^\frac{\rm b}{\rm c}=\sqrt[{\rm c}]{{\rm a}^{\rm b}}=\sqrt[{\rm c}]{{\rm a}}^{\rm b}\]
+        e quindi:
+        \[\forall{\rm a}\gt0\quad{\rm a}^{\rm b}=\sup\left({\rm a}^{\rm x}\quad{\rm x}\in{\mathbb Q}\quad{\rm x}\le{\rm b}\right)\]
     </div>
     <div class="block F">
-        Per calcolare la divisione tra polinomi si usa la formula:
-        \[\deg\left({\rm f}\right)\ge\deg\left({\rm g}\right)\Longrightarrow\begin{cases}{\rm f}/\!\!/{\rm g}=\left(\frac{{\rm f}_{\deg\left({\rm f}\right)}}{{\rm g}_{\deg\left({\rm g}\right)}}\right)\cdot{\rm x}^{\deg\left({\rm f}\right)-\deg\left({\rm g}\right)}+\left({\rm f}-\left(\frac{{\rm f}_{\deg\left({\rm f}\right)}}{{\rm g}_{\deg\left({\rm g}\right)}}\right)\cdot{\rm x}^{\deg\left({\rm f}\right)-\deg\left({\rm g}\right)}\cdot{\rm g}\right)/\!\!/{\rm g}\\{\rm f}\%{\rm g}=\left({\rm f}-\left(\frac{{\rm f}_{\deg\left({\rm f}\right)}}{{\rm g}_{\deg\left({\rm g}\right)}}\right)\cdot{\rm x}^{\deg\left({\rm f}\right)-\deg\left({\rm g}\right)}\cdot{\rm g}\right)\%{\rm g}\end{cases}\]
-    </div>
-</div>
-
-<div class="slide">
-    <div class="block D">
-        Considerato che:
+        Le proprietà delle potenze sono allora:
         <ul>
-            <li>Le espressioni vengono meglio quando si può fattorizzare.</li>
-            <li>Le leggi di monotonia valgono per i prodotti.</li>
+            <li>\[\forall\left({\rm a},{\rm b},{\rm c}\right)\in\left(0,\infty\right)\times\left(0,\infty\right)\times{\mathbb R}\quad\begin{cases}\left({\rm a}\cdot{\rm b}\right)^{\rm c}={\rm a}^{\rm c}\cdot{\rm b}^{\rm c}\\\left({\rm a}:{\rm b}\right)^{\rm c}={\rm a}^{\rm c}:{\rm b}^{\rm c}\end{cases}\]</li>
+            <li>\[\forall\left({\rm a},{\rm b},{\rm c}\right)\in\left(0,\infty\right)\times{\mathbb R}\times{\mathbb R}\begin{cases}{\rm a}^{{\rm b}+{\rm c}}={\rm a}^{\rm b}\cdot{\rm a}^{\rm b}\\{\rm a}^{{\rm b}-{\rm c}}={\rm a}^{\rm b}:{\rm a}^{\rm b}\\{\rm a}^{{\rm b}\cdot{\rm c}}=\left({\rm a}^{\rm b}\right)^{\rm c}\\{\rm a}^{{\rm b}:{\rm c}}=\sqrt[{\rm c}]{{\rm a}^{\rm b}}\end{cases}\]</li>
         </ul>
-        Siamo interessati a fattorizzare un polinomio almeno in fattori che non si annullano.
-    </div>
-    <div class="block F">
-        Se si trova un punto in cui un polinomio si annulla, allora se ne trova un divisore:
-        \[{\rm f}\left({\rm a}\right)={\rm f}\%\left({\rm x}-{\rm a}\right)\]
-        Quindi cerchiamo di capire se un polinomio di annulla oppure no.
     </div>
     <div class="block R">
-        Per i polinomi di secondo grado abbiamo già un criterio, in genere:
-        \[{\rm f}={\rm f}\left({\rm a}\right)+\left(\sum_{{\rm k}\in\deg\left({\rm f}\right)}{\rm k}\cdot{\rm f}_{\rm k}\cdot{\rm a}^{{\rm k}-1}\right)\cdot\left({\rm x}-{\rm a}\right)+{\rm g}\cdot\left({\rm x}-{\rm a}\right)\]
-        E si nota che:
-        \[\left[\forall{\rm a}\in{\mathbb R}\quad\left(\frac{\partial{\rm f}}{\partial{\rm x}}\right)\left({\rm a}\right)=\sum_{{\rm k}\in\deg\left({\rm f}\right)}{\rm k}\cdot{\rm f}_{\rm k}\cdot{\rm a}^{{\rm k}-1}=0\Longrightarrow{\rm f}\left({\rm a}\right)\cdot{\rm a}_{\deg\left({\rm f}\right)}\ge0\right]\Rightarrow\left[\forall{\rm a}\in{\mathbb R}\quad{\rm f}\left({\rm a}\right)\cdot{\rm a}_{\deg\left({\rm f}\right)}\ge0\right]\]
-        Notare che per i gradi dispari questo non succede mai.
+        Possiamo risolvere una equazione del tipo:
+        \[{\rm a}\cdot{\rm x}^{\rm n}={\rm b}\]
+        <ul>
+            <li>Se \({\rm n}\%2=0\land{\rm b}:{\rm a}\lt0\) non c'è soluzione.</li>
+            <li>Se \({\rm n}\%2=1\) c'è una sola soluzione \({\rm x}=\sqrt[{\rm n}]{{\rm a}:{\rm b}}\).</li>
+            <li>Se \({\rm n}\%2=1\land{\rm b}:{\rm a}\ge0\) ci sono due soluzioni \({\rm x}=\pm\sqrt[{\rm n}]{{\rm a}:{\rm b}}\).</li>
+        </ul>
     </div>
 </div>
 
 <div class="slide">
-    <div class="block N">
-        Notare che:
-        \[\frac{\rm f}{{\rm g}^{{\rm k}+1}}=\frac{{\rm f}/\!\!/{\rm g}}{{\rm g}^{\rm k}}+\frac{{\rm f}\%{\rm g}}{{\rm g}^{{\rm k}+1}}\]
-        Questo metodo ci sarà utile dopo.
+    <h2>equazioni quadre</h2>
+    <div class="block Q">
+        Una Wonka ha lati \({\rm a},{\rm b}\) la posso tagliare di modo che i due pezzi siano simili?
     </div>
     <div class="block F">
-        Siccome si può fare la divisione euclidea si può fare bezout per trovare:
-        \[\frac{1}{\operatorname{lcm}\left({\rm f},{\rm g}\right)}=\frac{\operatorname{gcd}\left({\rm f},{\rm g}\right)}{{\rm f}\cdot{\rm g}}=\frac{\rm x}{\rm f}+\frac{\rm y}{\rm g}\]
-        Oltre a permettere il calcolo \(\operatorname{gcd},\operatorname{lcm}\), questo metodo ci sarà utile dopo.
+        Una equazione parabolica è del tipo:
+        \[{\rm a}\cdot{\rm x}^2-{\rm b}\cdot{\rm x}+{\rm c}=0\]
+        Questa si può risolvere prima dividendo per \({\rm a}\):
+        \[{\rm x}^2-\left(\frac{\rm b}{\rm a}\right)\cdot{\rm x}+\frac{\rm c}{\rm a}=0\]
+        Poi isolando \({\rm x}-{\rm b}:\left(2\cdot{\rm a}\right)\)
+        \[\left({\rm x}-\frac{\rm b}{2\cdot{\rm a}}\right)^2+\left(\frac{\rm c}{\rm a}-\frac{{\rm b}^2}{4\cdot{\rm a}^2}\right)=0\]
+        Se infine:
+        \[{\rm b}^2\ge4\cdot{\rm a}\cdot{\rm c}\Longrightarrow{\rm x}=\frac{{\rm b}\pm\sqrt{{\rm b}^2-4\cdot{\rm a}\cdot{\rm c}}}{2\cdot{\rm a}}\]
     </div>
     <div class="block R">
-        Un buon tentativo per fattorizzare un polinomio è quello di calcolare:
-        \[\operatorname{gcd}\left({\rm f},\frac{\partial{\rm f}}{\partial{\rm x}}\right)\]
-        Questo avrà tutti i fattori di \({\rm f}\) che compaiono con esponente maggiore di uno.
+        Notare che il minimo della funzione polinomiale è proprio:
+        \[{\rm x}=\frac{\rm b}{2\cdot{\rm a}}\Longrightarrow{\rm a}\cdot{\rm x}^2-{\rm b}\cdot{\rm x}+{\rm c}={\rm c}-\frac{{\rm b}^2}{4\cdot{\rm a}}\]
+        E notare che, se si trovano le soluzioni:
+        \[{\rm a}\cdot{\rm x}^2-{\rm b}\cdot{\rm x}+{\rm c}={\rm a}\cdot\left({\rm x}-\frac{{\rm b}+\sqrt{{\rm b}^2-4\cdot{\rm a}\cdot{\rm c}}}{2\cdot{\rm a}}\right)\cdot\left({\rm x}-\frac{{\rm b}-\sqrt{{\rm b}^2-4\cdot{\rm a}\cdot{\rm c}}}{2\cdot{\rm a}}\right)\]
     </div>
 </div>
 
@@ -136,21 +129,33 @@
 </div>
 
 <script>
-  const slides = document.querySelectorAll('.slide');
-  let currentSlide = 0;
 
-  function showSlide(index) {
-    slides.forEach(slide => slide.classList.remove('active'));
-    slides[index].classList.add('active');
-  }
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
 
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-  }
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+    }
 
-  function prevSlide() {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(currentSlide);
-  }
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function Show(index) {
+        const popup = document.getElementById(index);
+        popup.style.display = "block";
+    }
+
+    function Hide(index) {
+        const popup = document.getElementById(index);
+        popup.style.display = "none";
+    }
+
 </script>

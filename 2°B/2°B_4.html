@@ -9,44 +9,37 @@
 <div class="slide active">
     <h2>chiudiamo il quadro</h2>
     </ol>
-        <li>rette: parametriche e cartesiane (NDF)</li>
-        <li>le equazioni delle circonferenze (NDF)</li>
-        <li>prodotto vettoriale nello spazio (NDR)</li>
+        <li>sul teorema di pitagora (QDR)</li>
+        <li>circonferenze nel piano (NDF)</li>
+        <li>triangoli angoli e lati (QFR)</li>
     </ol>
 </div>
 
 <div class="slide">
-    <h2>rette: parametriche e cartesiane</h2>
-    <div class="block N">
-        Fissiamo un punto ed un versore \({\rm O},{\cal Z}\) sul piano cartesiano:
-        <ul>
-            <li>Consideriamo \({\cal Y}={\cal Z}\times{\cal X}\) la rotazione di \({\cal X}\) di \(\pi/2\).</li>
-            <li>Per ogni punto \({\rm P}\) diciamo \({\rm x}_{\rm P},{\rm y}_{\rm P}\) tali che \({\rm P}={\rm O}+{\rm x}_{\rm P}\cdot{\cal X}+{\rm y}_{\rm P}\cdot{\cal Y}\).</li>
-        </ul>
+    <h2>sul teorema di pitagora</h2>
+    <div class="block Q">
+        Dati due punti \({\rm A},{\rm B}\), come ne calcolo la distanza \(\left|{\rm A}-{\rm B}\right|\)?
     </div>
     <div class="block D">
-        Il prodotto scalare tra due vettori \({\rm u},{\rm v}\) è definito come:
-        \[{\rm u}\cdot{\rm v}={\rm x}_{\rm u}\cdot{\rm x}_{\rm v}+{\rm y}_{\rm u}\cdot{\rm y}_{\rm v}=\left|{\rm u}\right|\cdot\left|{\rm v}\right|\cdot\cos\left(\theta\right)\]
-        Dove \(\theta\) è l'angolo che ruota \({\rm u}\) in \({\rm v}\).
-    </div>
-    <div class="block F">
-        Dati due punti \({\rm A},{\rm B}\) nel piano cartesiano, la retta passante per questi punti si rappresenta come:
-        \[\left\{{\rm B}+{\rm t}\cdot\left({\rm A}-{\rm B}\right)\quad{\rm t}\in{\mathbb R}\right\}\]
-        Che corrisponde alla relazione tra \({\rm x},{\rm y}\):
-        \[\exists{\rm t}\in{\mathbb R}\qquad\begin{cases}{\rm x}={\rm x}_{\rm B}+{\rm t}\cdot\left({\rm x}_{\rm A}-{\rm x}_{\rm B}\right)={\rm t}\cdot{\rm x}_{\rm A}+\left(1-{\rm t}\right)\cdot{\rm x}_{\rm B}\\{\rm y}={\rm y}_{\rm B}+{\rm t}\cdot\left({\rm y}_{\rm B}-{\rm y}_{\rm A}\right)={\rm t}\cdot{\rm y}_{\rm A}+\left(1-{\rm t}\right)\cdot{\rm y}_{\rm B}\end{cases}\]
+        La dimostrazione del teorema di pitagora si articola come segue:
         <ul>
-            <li>In forma cartesiana tale relazione si riduce all'equazione lineare:\[\left({\rm x}-{\rm x}_{\rm B}\right)\cdot\left({\rm y}_{\rm B}-{\rm y}_{\rm A}\right)=\left({\rm y}-{\rm y}_{\rm B}\right)\cdot\left({\rm x}_{\rm B}-{\rm x}_{\rm A}\right)\]</li>
-            <li>Esplicitando \({\rm y}\):\[{\rm y}=\frac{{\rm y}_{\rm A}\cdot{\rm x}_{\rm B}-{\rm y}_{\rm B}\cdot{\rm x}_{\rm A}}{{\rm x}_{\rm B}-{\rm x}_{\rm A}}+\left(\frac{{\rm y}_{\rm B}-{\rm y}_{\rm A}}{{\rm x}_{\rm B}-{\rm x}_{\rm A}}\right)\cdot{\rm x}\]</li>
-            <li>Esplicitando \({\rm x}\):\[{\rm x}=\frac{{\rm y}_{\rm B}\cdot{\rm x}_{\rm A}-{\rm y}_{\rm A}\cdot{\rm x}_{\rm B}}{{\rm y}_{\rm B}-{\rm y}_{\rm A}}+\left(\frac{{\rm x}_{\rm B}-{\rm x}_{\rm A}}{{\rm y}_{\rm B}-{\rm y}_{\rm A}}\right)\cdot{\rm y}\]</li>
+            <li>Costruiamo un quadrato di vertici \(\left({\rm a},{\rm b}\right),\left(-{\rm b},{\rm a}\right),\left(-{\rm a},-{\rm b}\right),\left({\rm b},-{\rm a}\right)\)</li>
+            <li>Consideriamo i rettangoli con i lati paralleli agli assi cartesiani ed aventi i lati del quadrato come diagonali.</li>
+            <li>Consideriamo i due quadrati con lati paralleli agli assi cartesiani, questi hanno area \(4\cdot{\rm a}^2,4\cdot{\rm b}^2\)</li>
         </ul>
-        Tale relazione si scrive in modo compatto come:
-        \[\left({\cal Z}\times\left({\rm B}-{\rm A}\right)\right)\cdot\left({\rm X}-{\rm A}\right)=\left({\cal Z}\times\left({\rm A}-{\rm B}\right)\right)\cdot\left({\rm X}-{\rm B}\right)=0\]
-        Cioè le coordinate parametriche e cartesiane si scambiano passando all'ortogonale.
+        l'area del quadrato disegnato all'inizio è dunque:
+        \[2\cdot\left({\rm a}^2+{\rm b}^2\right)=\left({\rm a}-{\rm b}\right)^2+\left({\rm a}+{\rm b}\right)^2\]
+        Da cui si evince che per un triangolo rettangolo la somma dei quadrati dei cateti è pari al quadrato dell'ipotenusa:
+        \[\cos\left(\theta\right)^2+\sin\left(\theta\right)^2=1\]
+    </div>
+    <div class="block R">
+        La distanza tra due punti si calcola come:
+        \[\left|{\rm A}-{\rm B}\right|=\sqrt{\left({\rm x}_{\rm A}-{\rm x}_{\rm B}\right)^2+\left({\rm y}_{\rm A}-{\rm y}_{\rm B}\right)^2}\]
     </div>
 </div>
 
 <div class="slide">
-    <h2>le equazioni delle circonferenze</h2>
+    <h2>circonferenze nel piano</h2>
     <div class="block N">
         Una tangente ad una circonferenza di centro \({\rm O}\) in un punto \({\rm P}\) è la retta:
         \[\left\{{\rm P}+{\rm t}\cdot\left({\cal Z}\times\left({\rm O}-{\rm P}\right)\right)\quad{\rm t}\in{\mathbb R}\right\}=\left\{{\rm Q}\in{\mathbb R}^2\quad\left({\rm Q}-{\rm P}\right)\cdot\left({\rm O}-{\rm P}\right)=0\right\}\]
@@ -86,40 +79,46 @@
 </div>
 
 <div class="slide">
-    <h2>prodotto vettoriale nello spazio</h2>
-    <div class="block N">
-        Definiamo il prodotto vettoriale di due vettori nello spazio come un vettore:
+    <h2>triangoli angoli e lati</h2>
+    <div class="block Q">
+        Dati tre punti sul piano \({\rm A},{\rm B},{\rm C}\) questi identificano un triangolo:
         <ul>
-            <li>Con direzione perpendicolare ad entrambi.</li>
-            <li>Con verso dato dalla regola della mano destra.</li>
-            <li>Con modulo l'area del parallelogramma da loro identificato.</li>
+            <li>Chiamiamo \(\alpha\) l'angolo che ruota \({\rm B}-{\rm A}\) in \({\rm C}-{\rm A}\).</li>
+            <li>Chiamiamo \(\beta\) l'angolo che ruota \({\rm C}-{\rm B}\) in \({\rm A}-{\rm B}\).</li>
+            <li>Chiamiamo \(\gamma\) l'angolo che ruota \({\rm A}-{\rm C}\) in \({\rm B}-{\rm C}\).</li>
         </ul>
-        Dati due vettori \({\rm u},{\rm v}\) nel piano, il loro prodotto vettoriale è dunque:
-        \[{\rm u}\times{\rm v}=\left|{\rm u}\right|\cdot\left|{\rm v}\right|\cdot\sin\left(\theta\right)\cdot{\cal Z}\]
-        Dove:
+        Denotiamo inoltre:
         <ul>
-            <li>\(\theta\) è l'angolo che ruota \({\rm u}\) in \({\rm v}\) in senso antiorario.</li>
-            <li>\({\cal Z}\) il versore uscente dal piano cartesiano.</li>
+            <li>\[{\rm a}=\left|{\rm C}-{\rm B}\right|\]</li>
+            <li>\[{\rm b}=\left|{\rm A}-{\rm C}\right|\]</li>
+            <li>\[{\rm c}=\left|{\rm C}-{\rm B}\right|\]</li>
         </ul>
-        Chiamiamo determinante:
-        \[\begin{bmatrix}{\rm x}_{\rm u}&{\rm x}_{\rm v}\\{\rm y}_{\rm u}&{\rm y}_{\rm v}\end{bmatrix}={\rm x}_{\rm u}\cdot{\rm y}_{\rm v}-{\rm y}_{\rm u}\cdot{\rm x}_{\rm v}\]
-        Si può calcolare che:
-        \[{\rm u}\times{\rm v}=\begin{bmatrix}{\rm x}_{\rm u}&{\rm x}_{\rm v}\\{\rm y}_{\rm u}&{\rm y}_{\rm v}\end{bmatrix}\cdot{\cal Z}\]
+        Come possiamo calcolare:
+        <ul>
+            <li>\(\frac{\rm a}{\rm b},\frac{\rm c}{\rm a},\frac{\rm b}{\rm c}\) conoscendo \(\alpha,\beta,\gamma\)?</li>
+            <li>\(\alpha,\beta,\gamma\) conoscendo \(\frac{\rm a}{\rm b},\frac{\rm c}{\rm a},\frac{\rm b}{\rm c}\)?</li>
+        </ul>
     </div>
-    <div class="block D">
-        Dati tre vettori \({\rm u},{\rm v},{\rm w}\) nello spazio definiamo:
-        \[\begin{split}\begin{bmatrix}{\rm x}_{\rm u}&{\rm x}_{\rm v}&{\rm x}_{\rm w}\\{\rm y}_{\rm u}&{\rm y}_{\rm v}&{\rm y}_{\rm w}\\{\rm z}_{\rm u}&{\rm z}_{\rm v}&{\rm z}_{\rm w}\end{bmatrix}={\rm u}\times{\rm v}\cdot{\rm w}&={\rm x}_{\rm w}\cdot{\rm u}\times{\rm v}\cdot{\cal X}+{\rm y}_{\rm w}\cdot{\rm u}\times{\rm v}\cdot{\cal Y}+{\rm z}_{\rm w}\cdot{\rm u}\times{\rm v}\cdot{\cal Z}\\
-        &={\rm x}_{\rm w}\cdot\begin{bmatrix}{\rm y}_{\rm u}&{\rm y}_{\rm v}\\{\rm z}_{\rm u}&{\rm z}_{\rm v}\end{bmatrix}-{\rm y}_{\rm w}\cdot\begin{bmatrix}{\rm x}_{\rm u}&{\rm x}_{\rm v}\\{\rm z}_{\rm u}&{\rm z}_{\rm v}\end{bmatrix}+{\rm z}_{\rm w}\cdot\begin{bmatrix}{\rm x}_{\rm u}&{\rm x}_{\rm v}\\{\rm y}_{\rm u}&{\rm y}_{\rm v}\end{bmatrix}\end{split}\]
-        Ed osserviamo che:
-        \[{\rm u}\times{\rm v}=\begin{bmatrix}{\rm y}_{\rm u}&{\rm y}_{\rm v}\\{\rm z}_{\rm u}&{\rm z}_{\rm v}\end{bmatrix}\cdot{\cal X}-\begin{bmatrix}{\rm x}_{\rm u}&{\rm x}_{\rm v}\\{\rm z}_{\rm u}&{\rm z}_{\rm v}\end{bmatrix}\cdot{\cal Y}+\begin{bmatrix}{\rm x}_{\rm u}&{\rm x}_{\rm v}\\{\rm y}_{\rm u}&{\rm y}_{\rm v}\end{bmatrix}\cdot{\cal Z}\]
+    <div class="block F">
+        Diciamo:
+        \[\begin{cases}{\rm a}=\left|{\rm C}-{\rm B}\right|=\cos\left(\beta\right)\cdot{\rm c}+\cos\left(\gamma\right)\cdot{\rm b}\\{\rm b}=\left|{\rm A}-{\rm C}\right|=\cos\left(\gamma\right)\cdot{\rm a}+\cos\left(\alpha\right)\cdot{\rm c}\\{\rm c}=\left|{\rm C}-{\rm B}\right|=\cos\left(\alpha\right)\cdot{\rm b}+\cos\left(\beta\right)\cdot{\rm a}\end{cases}\Longrightarrow\begin{cases}{\rm b}^2-{\rm a}^2=\cos\left(\alpha\right)\cdot{\rm c}\cdot{\rm b}-\cos\left(\beta\right)\cdot{\rm c}\cdot{\rm a}\\{\rm c}^2-{\rm b}^2=\cos\left(\beta\right)\cdot{\rm a}\cdot{\rm c}-\cos\left(\gamma\right)\cdot{\rm a}\cdot{\rm b}\\{\rm a}^2-{\rm c}^2=\cos\left(\gamma\right)\cdot{\rm b}\cdot{\rm a}-\cos\left(\alpha\right)\cdot{\rm b}\cdot{\rm c}\end{cases}\]
+        Cioè:
+        \[\frac{{\rm a}^2}{1-\cos\left(\alpha\right)^2}=\frac{{\rm b}^2}{1-\cos\left(\beta\right)^2}=\frac{{\rm c}^2}{1-\cos\left(\gamma\right)^2}\]
+        Si nota invece che l'area del triangolo si può calcolare come:
+        \[\sin\left(\alpha\right)\cdot{\rm b}\cdot{\rm c}={\rm a}\cdot\sin\left(\beta\right)\cdot{\rm c}={\rm a}\cdot{\rm b}\cdot\sin\left(\gamma\right)\]
+        Da cui si ricava:
+        \[\frac{\rm a}{\sin\left(\alpha\right)}=\frac{\rm b}{\sin\left(\beta\right)}=\frac{\rm c}{\sin\left(\gamma\right)}\]
+        Questa formula è infatti equivalente alla precedente.
     </div>
     <div class="block R">
-        Una retta nello spazio si può rappresentare come:
+        La relazione tra gli angoli interni di un triangolo si legge dunque:
+        \[\begin{cases}{\rm a}=\cos\left(\beta\right)\cdot{\rm c}+\cos\left(\gamma\right)\cdot{\rm b}\\{\rm b}=\cos\left(\gamma\right)\cdot{\rm a}+\cos\left(\alpha\right)\cdot{\rm c}\\{\rm c}=\cos\left(\alpha\right)\cdot{\rm b}+\cos\left(\beta\right)\cdot{\rm a}\end{cases}\Longrightarrow\begin{cases}{\rm b}^2-\cos\left(\gamma\right)\cdot{\rm a}\cdot{\rm b}={\rm c}^2-\cos\left(\beta\right)\cdot{\rm a}\cdot{\rm c}\\{\rm c}^2-\cos\left(\alpha\right)\cdot{\rm b}\cdot{\rm c}={\rm a}^2-\cos\left(\gamma\right)\cdot{\rm b}\cdot{\rm a}\\{\rm a}^2-\cos\left(\beta\right)\cdot{\rm c}\cdot{\rm a}={\rm b}^2-\cos\left(\alpha\right)\cdot{\rm c}\cdot{\rm b}\end{cases}\]
+        E si può calcolare:
         <ul>
-            <li>\[\exists{\rm t}\in{\mathbb R}\quad\begin{cases}{\rm x}={\rm x}_{\rm P}+{\rm t}\cdot{\rm x}_{\rm u}\\{\rm y}={\rm y}_{\rm P}+{\rm t}\cdot{\rm y}_{\rm u}\\{\rm z}={\rm z}_{\rm P}+{\rm t}\cdot{\rm z}_{\rm u}\end{cases}\]</li>
-            <li>\[\frac{{\rm x}-{\rm x}_{\rm P}}{{\rm x}_{\rm u}}=\frac{{\rm y}-{\rm y}_{\rm P}}{{\rm y}_{\rm u}}=\frac{{\rm z}-{\rm z}_{\rm P}}{{\rm z}_{\rm u}}\]</li>
+            <li>\[\cos\left(\alpha\right)=\frac{{\rm b}^2+{\rm c}^2-{\rm a}^2}{2\cdot{\rm b}\cdot{\rm c}}\]</li>
+            <li>\[\cos\left(\beta\right)=\frac{{\rm c}^2+{\rm a}^2-{\rm b}^2}{2\cdot{\rm c}\cdot{\rm a}}\]</li>
+            <li>\[\cos\left(\gamma\right)=\frac{{\rm a}^2+{\rm b}^2-{\rm c}^2}{2\cdot{\rm a}\cdot{\rm b}}\]</li>
         </ul>
-        Si passa agevolmente dall'una all'altra, ma spesso una delle due è meglio.
     </div>
 </div>
 
@@ -186,21 +185,33 @@
 </div>
 
 <script>
-  const slides = document.querySelectorAll('.slide');
-  let currentSlide = 0;
 
-  function showSlide(index) {
-    slides.forEach(slide => slide.classList.remove('active'));
-    slides[index].classList.add('active');
-  }
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
 
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-  }
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+    }
 
-  function prevSlide() {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(currentSlide);
-  }
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function Show(index) {
+        const popup = document.getElementById(index);
+        popup.style.display = "block";
+    }
+
+    function Hide(index) {
+        const popup = document.getElementById(index);
+        popup.style.display = "none";
+    }
+
 </script>

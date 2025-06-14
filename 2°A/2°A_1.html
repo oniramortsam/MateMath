@@ -1,13 +1,13 @@
 <head>
   <meta charset="UTF-8">
-  <title>1° anno: parte A1</title>
+  <title>2° anno: parte A1</title>
   <link rel="stylesheet" href="../style.css">
 </head>
 
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
 
 <div class="slide active">
-    <h2>su gcd, lcm</h2>
+    <h2>su gcd e su lcm</h2>
     <ol>
         <li>l'algoritmo di bezout (QND)</li>
         <li>fattorizzazione unica (NDF)</li>
@@ -44,22 +44,16 @@
     </div>
     <div class="block D">
         Dati due numeri razionali \({\rm a}\gt{\rm b}\) costruiamo una successione decrescente:
-        \[\begin{cases}{\rm r}_0={\rm a}\\{\rm r}_1={\rm b}\\\forall{\rm n}\in{\mathbb N}\quad\begin{cases}{\rm q}_{\rm n}\in{\mathbb N}\\0\le{\rm r}_{{\rm n}+2}={\rm r}_{\rm n}-{\rm q}_{\rm n}\cdot{\rm r}_{{\rm n}+1}\lt{\rm r}_{{\rm n}+1}\end{cases}\end{cases}\]
+        \[\begin{cases}{\rm r}_0={\rm a}\\{\rm r}_1={\rm b}\end{cases}\qquad\begin{cases}{\rm q}_{\rm n}={\rm r}_{\rm n}/\!\!/{\rm r}_{{\rm n}+1}\\{\rm r}_{{\rm n}+2}={\rm r}_{\rm n}\%{\rm r}_{{\rm n}+1}\end{cases}\]
         Sostituendo ogni equazione all'interno della successiva si ottengono:
-        \[\begin{cases}\left({\rm x}_{\rm n},{\rm y}_{\rm n}\right)\in{\mathbb Z}\times{\mathbb Z}\\{\rm r}_{\rm n}={\rm x}_{\rm n}\cdot{\rm a}+{\rm y}_{\rm n}\cdot{\rm b}\\{\rm x}_0={\rm y}_1=1\\{\rm x}_1={\rm y}_0=0\\{\rm x}_{{\rm n}+2}={\rm x}_{\rm n}-{\rm q}_{\rm n}\cdot{\rm x}_{{\rm n}+1}\\{\rm y}_{{\rm n}+2}={\rm y}_{\rm n}-{\rm q}_{\rm n}\cdot{\rm y}_{{\rm n}+1}\end{cases}\]
-        Siccome questi devono essere multipli del reciproco del prodotto dei denominatori di \({\rm a},{\rm b}\), si devono annullare:
-        \[{\rm r}_{\rm N}\ne{\rm r}_{{\rm N}+1}=0\]
-        Da cui si ottiene che
-        \[{\rm r}_{\rm n}={\rm r}_{\rm N}\cdot{\rm Q}_{\rm n}\]
-        Con
-        \[{\rm Q}_{{\rm n}+2}={\rm Q}_{\rm n}-{\rm q}_{\rm n}\cdot{\rm Q}_{{\rm n}+1}\]
-        Da cui:
-        \[{\rm Q}_{\rm n}={\rm Q}_0\cdot{\rm x}_{\rm n}+{\rm Q}_1\cdot{\rm y}_{\rm n}\]
-        E si hanno:
-        \[{\rm Q}_0\cdot{\rm b}={\rm Q}_0\cdot{\rm r}\cdot{\rm Q}_1={\rm a}\cdot{\rm Q}_1\]
-        Con:
-        \[\begin{cases}\operatorname{gcd}\left({\rm a},{\rm b}\right)={\rm r}\\\operatorname{lcm}\left({\rm a},{\rm b}\right)={\rm Q}_0\cdot{\rm r}\cdot{\rm Q}_1\end{cases}\]
-        NON SO SE:\[\left|{\rm x}_{{\rm N}+1}\right|={\rm Q}_0\qquad\left|{\rm y}_{{\rm N}+1}\right|={\rm Q}_1\]
+        \[{\rm r}_{\rm n}={\rm x}_{\rm n}\cdot{\rm a}+{\rm y}_{\rm n}\cdot{\rm b}\qquad\begin{cases}{\rm x}_0={\rm y}_1=1\\{\rm x}_1={\rm y}_0=0\end{cases}\qquad\begin{cases}{\rm x}_{{\rm n}+2}={\rm x}_{\rm n}-{\rm q}_{\rm n}\cdot{\rm x}_{{\rm n}+1}\\{\rm y}_{{\rm n}+2}={\rm y}_{\rm n}-{\rm q}_{\rm n}\cdot{\rm y}_{{\rm n}+1}\end{cases}\]
+        Siccome i valori di \({\rm r}\) devono essere multipli del reciproco del prodotto dei denominatori di \({\rm a},{\rm b}\):
+        \[\exists{\rm N}\in{\mathbb N}\quad{\rm r}_{\rm N}\ne{\rm r}_{{\rm N}+1}=0\]
+        Definiamo:
+        <ul>
+        <li>\[{\rm Q}_{\rm n}={\rm Q}_{{\rm n}+2}+{\rm q}_{\rm n}\cdot{\rm Q}_{{\rm n}+1}={\rm Q}_0\cdot{\rm x}_{\rm n}+{\rm Q}_1\cdot{\rm y}_{\rm n}\]</li>
+        <li>\[\begin{cases}{\rm Q}_{\rm N}=1\\{\rm Q}_{{\rm N}+1}=0\end{cases}\Longrightarrow\left[\forall{\rm n}\in{\mathbb N}\quad{\rm r}_{\rm n}={\rm r}_{\rm N}\cdot{\rm Q}_{\rm n}\right]\Longrightarrow\begin{cases}{\rm b}={\rm r}_{\rm N}\cdot{\rm Q}_1\\{\rm Q}_0\cdot{\rm r}_{\rm N}={\rm a}\end{cases}\Longrightarrow\begin{cases}\operatorname{gcd}\left({\rm a},{\rm b}\right)={\rm r}_{\rm N}\\\operatorname{lcm}\left({\rm a},{\rm b}\right)={\rm Q}_0\cdot{\rm r}_{\rm N}\cdot{\rm Q}_1\end{cases}\]</li>
+        </ul>
     </div>
 </div>
 
@@ -68,7 +62,7 @@
     <div class="block N">
         Un numero primo \({\rm p}\) soddisfa la proprietà:
         \[\forall\left({\rm a},{\rm b}\right)\in{\mathbb N}\times{\mathbb N}\quad\left({\rm a}\cdot{\rm b}\right)\%{\rm p}=0\Longleftrightarrow\left({\rm a}\%{\rm p}\right)\cdot\left({\rm b}\%{\rm p}\right)=0\]
-        per cui è irriducibile:
+        Per cui è irriducibile:
         \[\forall{\rm n}\in{\mathbb N}\quad{\rm p}%{\rm n}=0\Longrightarrow\left({\rm n}-{\rm p}\right)\cdot\left({\rm n}-1\right)=0\]
         Viceversa un numero irriducibile è primo, se infatti \({\rm p}\) non divide \({\rm a},{\rm b}\) allora il massimo comun divisore è:
         \[{\rm x}\cdot{\rm a}+{\rm u}\cdot{\rm p}={\rm y}\cdot{\rm b}+{\rm v}\cdot{\rm p}=1\]
@@ -82,11 +76,11 @@
     <div class="block F">
         Sia:
         \[{\rm n}\%{\rm p}^{{\rm n}/\!\!/\!\!/{\rm p}+1}\ne{\rm n}\%{\rm p}^{{\rm n}/\!\!/\!\!/{\rm p}}=0\]
-        vogliamo dimostrare che:
+        Vogliamo mostrare che:
         \[{\rm n}=\prod_{{\rm m}\in{\mathbb N}}\left({\rm p}_{\rm m}\right)^{{\rm n}/\!\!/\!\!/{\rm p}_{\rm m}}\]
-        per farlo notiamo che dati due numeri coprimi
+        Per farlo notiamo che dati due numeri coprimi
         \[{\rm n}\%{\rm a}={\rm n}\%{\rm b}=0\Longleftrightarrow{\rm n}\%\left({\rm a}\cdot{\rm b}\right)\]
-        e che in particolare i fattori del prodotto sono coprimi tra loro.
+        E che in particolare i fattori del prodotto sono coprimi tra loro.
     </div>
 </div>
 
@@ -97,15 +91,15 @@
         \[\forall\left({\rm a},{\rm b}\right)\in{\mathbb N}\times{\mathbb N}\quad{\rm a}\%{\rm b}=0\Longleftrightarrow\left[\forall{\rm m}\in{\mathbb N}\quad{\rm a}/\!\!/\!\!/{\rm p}_{\rm m}\ge{\rm b}/\!\!/\!\!/{\rm p}_{\rm m}\right]\]
         Da questo segue immediatamente per una successione di naturali:
         <ul>
-            <li>\[\operatorname{gcd}\left({\rm n}_{\rm K}\quad{\rm k}\in{\rm N}\right)=\prod_{{\rm m}\in{\mathbb N}}\left({\rm p}_{\rm m}\right)^{\min\left({\rm n}_{\rm k}/\!\!/\!\!/{\rm p}_{\rm m}\quad{\rm k}\in{\rm K}\right)}\]</li>
-            <li>\[\operatorname{lcm}\left({\rm n}_{\rm K}\quad{\rm k}\in{\rm N}\right)=\prod_{{\rm m}\in{\mathbb N}}\left({\rm p}_{\rm m}\right)^{\max\left({\rm n}_{\rm k}/\!\!/\!\!/{\rm p}_{\rm m}\quad{\rm k}\in{\rm K}\right)}\]</li>
+            <li>\[\operatorname{gcd}_{{\rm k}\in{\rm N}}\left({\rm n}_{\rm K}\right)=\prod_{{\rm m}\in{\mathbb N}}\left({\rm p}_{\rm m}\right)^{\min\left({\rm n}_{\rm k}/\!\!/\!\!/{\rm p}_{\rm m}\quad{\rm k}\in{\rm K}\right)}\]</li>
+            <li>\[\operatorname{lcm}_{{\rm k}\in{\rm N}}\left({\rm n}_{\rm K}\right)=\prod_{{\rm m}\in{\mathbb N}}\left({\rm p}_{\rm m}\right)^{\max\left({\rm n}_{\rm k}/\!\!/\!\!/{\rm p}_{\rm m}\quad{\rm k}\in{\rm K}\right)}\]</li>
         </ul>
     </div>
     <div class="block F">
         Per i numeri razionali positivi si può fare lo stesso e, se questi sono in forma ridotta:
         <ul>
-            <li>\[\operatorname{gcd}\left(\frac{{\rm N}_{\rm m}}{{\rm D}_{\rm m}}\quad{\rm m}\in{\rm M}\right)=\frac{\operatorname{gcd}\left({\rm N}_{\rm m}\quad{\rm m}\in{\rm M}\right)}{\operatorname{lcm}\left({\rm D}_{\rm m}\quad{\rm m}\in{\rm M}\right)}\]</li>
-            <li>\[\operatorname{lcm}\left(\frac{{\rm N}_{\rm m}}{{\rm D}_{\rm m}}\quad{\rm m}\in{\rm M}\right)=\frac{\operatorname{lcm}\left({\rm N}_{\rm m}\quad{\rm m}\in{\rm M}\right)}{\operatorname{gcd}\left({\rm D}_{\rm m}\quad{\rm m}\in{\rm M}\right)}\]</li>
+            <li>\[\operatorname{gcd}_{{\rm m}\in{\rm M}}\left(\frac{{\rm N}_{\rm m}}{{\rm D}_{\rm m}}\right)=\frac{\operatorname{gcd}_{{\rm m}\in{\rm M}}\left({\rm N}_{\rm m}\right)}{\operatorname{lcm}_{{\rm m}\in{\rm M}}\left({\rm D}_{\rm m}\right)}\]</li>
+            <li>\[\operatorname{lcm}_{{\rm m}\in{\rm M}}\left(\frac{{\rm N}_{\rm m}}{{\rm D}_{\rm m}}\right)=\frac{\operatorname{lcm}_{{\rm m}\in{\rm M}}\left({\rm N}_{\rm m}\right)}{\operatorname{gcd}_{{\rm m}\in{\rm M}}\left({\rm D}_{\rm m}\right)}\]</li>
         </ul>
     </div>
     <div class="block R">
@@ -179,21 +173,33 @@
 </div>
 
 <script>
-  const slides = document.querySelectorAll('.slide');
-  let currentSlide = 0;
 
-  function showSlide(index) {
-    slides.forEach(slide => slide.classList.remove('active'));
-    slides[index].classList.add('active');
-  }
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
 
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-  }
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+    }
 
-  function prevSlide() {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(currentSlide);
-  }
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function Show(index) {
+        const popup = document.getElementById(index);
+        popup.style.display = "block";
+    }
+
+    function Hide(index) {
+        const popup = document.getElementById(index);
+        popup.style.display = "none";
+    }
+
 </script>

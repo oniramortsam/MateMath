@@ -9,9 +9,8 @@
 <div class="slide active">
     <h2>relazioni: ordinamento</h2>
     <ol>
-        <li>ordini e ordinamento (NFR)</li>
-        <li>le funzioni continue (NFR)</li>
-        <li>le funzioni monotone (NFR)</li>
+        <li>gli ordini e ordinamento (NFR)</li>
+        <li>sugli elementi estremali (NFR)</li>
     </ol>
 </div>
 
@@ -25,16 +24,30 @@
         </ul>
         Si può dire totale se:
         \[\forall\left({\rm x},{\rm y}\right)\in{\rm A}\times{\rm A}\quad{\cal R}\left({\rm x},{\rm y}\right)\lor{\cal R}\left({\rm y},{\rm x}\right)\]
+    </div>
+    <div class="block F">
+        Le relazioni di confronto e divisibilità sono entrambe ordinamenti, ma solo la prima è totale.
+    </div>
+    <div class="block R">
+        Se due elementi sono confrontabili:
+        \[\left\{\min_{\cal R}\left({\rm a},{\rm b}\right),\max_{\cal R}\left({\rm a},{\rm b}\right)\right\}=\left\{{\rm a},{\rm b}\right\}\]
+        Da cui:
+        \[\forall\left({\rm a},{\rm b}\right)\in{\mathbb Q}\times{\mathbb Q}\quad\begin{cases}\min\left({\rm a},{\rm b}\right)+\max\left({\rm a},{\rm b}\right)={\rm a}+{\rm b}\\\min\left({\rm a},{\rm b}\right)\cdot\max\left({\rm a},{\rm b}\right)={\rm a}\cdot{\rm b}\end{cases}\]
+    </div>
+</div>
+
+<div class="slide">
+    <div class="block N">
         Per una relazione d'ordine:
         <ul>
             <li>Si dice minorante di un sottoinsieme \({\rm A}\) un elemento \({\rm x}\) che verifica \[\forall{\rm a}\in{\rm A}\quad{\cal R}\left({\rm x},{\rm a}\right)\]</li>
             <li>Si dice maggiorante di un sottoinsieme \({\rm A}\) un elemento \({\rm x}\) che verifica \[\forall{\rm a}\in{\rm A}\quad{\cal R}\left({\rm a},{\rm x}\right)\]</li>
             <li>Si dice minimale di un sottoinsieme \({\rm A}\) un elemento \({\rm x}\in{\rm A}\) che verifica \[\forall{\rm a}\in{\rm A}\quad\lnot{\cal R}\left({\rm a},{\rm x}\right)\]</li>
             <li>Si dice massimale di un sottoinsieme \({\rm A}\) un elemento \({\rm x}\in{\rm A}\) che verifica \[\forall{\rm a}\in{\rm A}\quad\lnot{\cal R}\left({\rm x},{\rm a}\right)\]</li>
-            <li>Si dice minimo di un sottoinsieme \({\rm A}\) un unico elemento \({\rm x}\in{\rm A}\) che verifica \[\forall{\rm a}\in{\rm A}\quad{\cal R}\left({\rm x},{\rm a}\right)\]</li>
-            <li>Si dice massimo di un sottoinsieme \({\rm A}\) un unico elemento \({\rm x}\in{\rm A}\) che verifica \[\forall{\rm a}\in{\rm A}\quad{\cal R}\left({\rm a},{\rm x}\right)\]</li>
-            <li>Si dice estremo inferiore di un sottoinsieme il massimo dei minoranti</li>
-            <li>Si dice estremo superiore di un sottoinsieme il minimo dei maggioranti</li>
+            <li>Si dice minimo di un sottoinsieme \({\rm A}\) un unico minorante \({\rm x}\in{\rm A}\).</li>
+            <li>Si dice massimo di un sottoinsieme \({\rm A}\) un unico maggiorante \({\rm x}\in{\rm A}\).</li>
+            <li>Si dice estremo inferiore di un sottoinsieme il massimo dei minoranti.</li>
+            <li>Si dice estremo superiore di un sottoinsieme il minimo dei maggioranti.</li>
         </ul>
     </div>
     <div class="block F">
@@ -64,65 +77,6 @@
     <div class="block R">
         Si dice che i numeri razionali sono densi:
         \[\forall\left({\rm x},{\rm z}\right)\in{\mathbb Q}\times{\mathbb Q}\quad{\rm x}\ne{\rm z}\Longrightarrow\left[\exists{\rm y}\in{\mathbb Q}\quad{\rm x}\lt{\rm y}\lt{\rm z}\right]\]
-    </div>
-</div>
-
-<div class="slide">
-    <h2>le funzioni continue</h2>
-    <div class="block N">
-        Se normalmente:
-        \[\liminf_{{\rm n}\in{\mathbb N}}{\rm x}_{\rm n}\le\limsup_{{\rm n}\in{\mathbb N}}{\rm x}_{\rm n}\]
-        Si dice che una successione ammette limite se:
-        \[{\rm x}=\lim_{{\rm n}\in{\mathbb N}}{\rm x}_{\rm n}\Longleftrightarrow\limsup_{{\rm n}\in{\mathbb N}}{\rm x}_{\rm n}\le{\rm x}\le\liminf_{{\rm n}\in{\mathbb N}}{\rm x}_{\rm n}\]
-        Una funzione \({\rm f}:{\mathbb Q}\rightarrow{\mathbb R}\) si dice continua se:
-        \[\forall{\rm x}\in{\mathbb Q}^{\mathbb N}\quad\lim_{{\rm n}\in{\mathbb N}}{\rm x}_{\rm n}\in{\mathbb Q}\Longrightarrow\lim_{{\rm n}\in{\mathbb N}}{\rm f}\left({\rm x}_{\rm n}\right)={\rm f}\left(\lim_{{\rm n}\in{\mathbb N}}{\rm x}_{\rm n}\right)\]
-        Una funzione continua si estende da un sottoinsieme denso di \({\mathbb R}\) in esattamente un modo.
-    </div>    
-    <div class="block F">
-        Vale la seguente:
-        \[\forall{\rm m}\in{\mathbb N}\quad\exists{\rm n}\in{\mathbb N}\quad\exists{\rm k}\in{\mathbb N}\quad{\rm a}_{\rm k}\le{\rm b}_{\rm m}\Longrightarrow\limsup_{{\rm k}\in{\mathbb N}}{\rm a}_{\rm k}\le\liminf_{{\rm m}\in{\mathbb N}}{\rm b}_{\rm m}\]
-    </div>
-    <div class="block R">
-        Siccome:
-        \[\sum_{{\rm k}\in{\rm n}}\frac{{\rm x}^{{\rm k}+1}}{\left({\rm k}+1\right)!}\le\sum_{{\rm k}\lt{\rm x}+1}\frac{{\rm x}^{{\rm k}+1}}{\left({\rm k}+1\right)!}+\frac{{\rm x}^{{\rm x}+1}}{2\cdot\left({\rm x}+2\right)^{\rm x}}\]
-        Possiamo definire:
-        \[\exp\left({\rm x}\right)=\sum_{{\rm k}\in{\mathbb N}}\frac{{\rm x}^{\rm k}}{{\rm k}!}=\sup_{{\rm n}\in{\mathbb N}}\left(\sum_{{\rm k}\in{\rm n}}\frac{{\rm x}^{\rm k}}{{\rm k}!}\right)\]
-        Consideriamo che, per \({\rm x}\ge0\):
-        \[\begin{split}{\rm m}\ge{\rm n}+{\rm n}\cdot\sqrt[{\rm n}]\frac{{\rm n}-{\rm 1}}{\rm n}\Longrightarrow\left(\frac{{\rm n}+{\rm x}}{\rm n}\right)^{\rm n}-1&=\sum_{{\rm k}\in{\rm n}}\frac{{\rm n}!}{\left({\rm k}+1\right)!\left({\rm n}-{\rm k}-1\right)!}\cdot\left(\frac{\rm x}{\rm n}\right)^{{\rm k}+1}\\
-        &\le\left(\frac{{\rm n}-1}{\rm n}\right)\cdot\sum_{{\rm k}\in{\rm n}}\frac{{\rm x}^{{\rm k}+1}}{\left({\rm k}+1\right)!}\\
-        &\le\left(\frac{{\rm m}-{\rm n}}{\rm n}\right)^{\rm n}\cdot\sum_{{\rm k}\in{\rm n}}\frac{{\rm x}^{{\rm k}+1}}{\left({\rm k}+1\right)!}\\
-        &\le\sum_{{\rm k}\in{\rm n}}\frac{{\rm m}!}{\left({\rm k}+1\right)!\left({\rm m}-{\rm k}-1\right)!}\cdot\left(\frac{\rm x}{\rm m}\right)^{{\rm k}+1}\\
-        &\le\sum_{{\rm k}\in{\rm m}}\frac{{\rm m}!}{\left({\rm k}+1\right)!\left({\rm m}-{\rm k}-1\right)!}\cdot\left(\frac{\rm x}{{\rm m}}\right)^{{\rm k}+1}=\left(\frac{{\rm n}^2+{\rm x}}{\rm m}\right)^{\rm m}-1\end{split}\]
-        Abbiamo:
-        \[\operatorname{limsup}_{{\rm n}\in{\mathbb N}\setminus1}\left(\frac{{\rm n}+{\rm x}}{\rm n}\right)^{\rm n}\le\exp\left({\rm x}\right)\le\operatorname{liminf}_{{\rm n}\in{\mathbb N}\setminus1}\left(\frac{{\rm n}+{\rm x}}{\rm n}\right)^{\rm n}\]
-        Considerando che:
-        \[\forall\left({\rm n},{\rm m}\right)\in\left({\mathbb N}\setminus1\right)\times\left({\mathbb N}\setminus1\right)\quad{\rm x}\cdot{\rm m}\ge{\rm n}\Longleftrightarrow\left(\frac{{\rm m}+1}{\rm m}\right)^{{\rm m}\cdot{\rm x}}\le\left(\frac{{\rm n}+{\rm x}}{\rm n}\right)^{\rm n}\]
-        Abbiamo allo stesso modo:
-        \[\exp\left({\rm x}\right)=\lim_{{\rm n}\in{\mathbb N}\setminus1}\left(\frac{{\rm n}+{\rm x}}{\rm n}\right)^{\rm n}=\left(\lim_{{\rm n}\in{\mathbb N}\setminus1}\left(\frac{{\rm n}+1}{\rm n}\right)^{\rm n}\right)^{\rm x}\]
-    </div>
-</div>
-
-<div class="slide">
-    <h2>le funzioni monotone</h2>
-    <div class="block N">
-        Una funzione si dice monotona in senso stretto se:
-        \[\forall\left({\rm a},{\rm b}{\rm c}\right)\in{\mathbb R}\times{\mathbb R}\times{\mathbb R}\quad\left({\rm a}-{\rm b}\right)\cdot\left({\rm c}-{\rm b}\right)\lt0\Longrightarrow\left({\rm a}-{\rm b}\right)\cdot\left({\rm c}-{\rm b}\right)\lt0\]
-    </div>
-    <div class="block F">
-        Nel caso di funzioni continue di variabile reale l'iniettività equivale alla monotonia.
-    </div>
-    <div class="block R">
-        Nel caso di \(\exp\) l'inversa è detta:
-        \[\log:\left(0,\infty\right)\rightarrow{\mathbb R}\]
-        Nel caso di \(\sin,\cos\) si usano rispettivamente:
-        \[{\rm g}\left({\rm x}\right)=\left({\rm x}+\pi/2\right)/\!\!/\pi\qquad{\rm g}\left({\rm x}\right)={\rm x}/\!\!/\pi\]
-        E le inverse sono rispettivamente:
-        <ul>
-            <li>\[{\rm x}=\pi\cdot{\rm k}+\arcsin\left(\left(-1\right)^{\rm k}\cdot{\rm y}\right)\Longleftrightarrow\begin{cases}\left({\rm x}+\pi/2\right)/\!\!/\pi={\rm k}\\\sin\left({\rm x}\right)={\rm y}\end{cases}\]</li>
-            <li>\[{\rm x}=\pi\cdot{\rm k}+\arccos\left(\left(-1\right)^{\rm k}\cdot{\rm y}\right)\Longleftrightarrow\begin{cases}\left({\rm x}+\pi/2\right)/\!\!/\pi={\rm k}\\\cos\left({\rm x}\right)={\rm y}\end{cases}\]</li>
-        </ul>
-        Dove:
-        \[\arcsin:\left[-1,1\right]\rightarrow\left[-\pi/2,\pi/2\right]\qquad\arccos:\left[-1,1\right]\rightarrow\left[0,\pi\right]\]
     </div>
 </div>
 
@@ -189,21 +143,33 @@
 </div>
 
 <script>
-  const slides = document.querySelectorAll('.slide');
-  let currentSlide = 0;
 
-  function showSlide(index) {
-    slides.forEach(slide => slide.classList.remove('active'));
-    slides[index].classList.add('active');
-  }
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
 
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-  }
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+    }
 
-  function prevSlide() {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(currentSlide);
-  }
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function Show(index) {
+        const popup = document.getElementById(index);
+        popup.style.display = "block";
+    }
+
+    function Hide(index) {
+        const popup = document.getElementById(index);
+        popup.style.display = "none";
+    }
+
 </script>

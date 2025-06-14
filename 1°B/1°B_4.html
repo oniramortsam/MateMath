@@ -56,11 +56,11 @@
     <div class="block N">
         Data una funzione \({\rm f}:{\rm A}\rightarrow{\rm B}\) si dice immagine:
         \[{\rm y}\in\operatorname{Imm}\left({\rm f}\right)\subseteq{\rm B}\Leftrightarrow{\rm f}^{-1}\left({\rm y}\right)\ne\emptyset\]
+        Una relazione \({\cal R}\) si dice di equivalenza su un dominio \({\rm A}\) se:
+        \[\exists{\rm B}\quad\exists{\rm f}\in{\rm B}^{\rm A}\quad\forall{\rm x},{\rm z}\in{\rm A}\times{\rm A}\quad{\cal R}\left({\rm x},{\rm z}\right)\Leftrightarrow{\rm f}\left({\rm x}\right)={\rm f}\left({\rm z}\right)\]
     </div>
     <div class="block F">
-        Una relazione \({\cal R}\) si dice di equivalenza su un dominio {\rm A} se
-        \[\exists{\rm B}\quad\exists{\rm f}\in{\rm B}^{\rm A}\quad\forall{\rm x},{\rm z}\in{\rm A}\times{\rm A}\quad{\cal R}\left({\rm x},{\rm z}\right)\Leftrightarrow{\rm f}\left({\rm x}\right)={\rm f}\left({\rm z}\right)\]
-        Tale proprietà è equivalente a tre condizioni:
+        Una relazione \({\cal R}\) è di equivalenza se e solo se valgono tre condizioni:
         <ul>
             <li>Riflessiva: \[\forall{\rm x}\in{\rm A}\quad{\cal R}\left({\rm x},{\rm x}\right)\]</li>
             <li>Simmetrica: \[\forall\left({\rm x},{\rm y}\right)\in{\rm A}\times{\rm A}\quad{\cal R}\left({\rm x},{\rm y}\right)\Leftrightarrow{\cal R}\left({\rm y},{\rm x}\right)\]</li>
@@ -68,7 +68,7 @@
         </ul>
         Grazie a queste condizioni si può definire \({\rm f}:{\rm A}\rightarrow{\cal P}\left({\rm A}\right)\) come:
         \[{\rm z}\in{\rm f}\left({\rm x}\right)\Longleftrightarrow{\cal R}\left({\rm x},{\rm z}\right)\]
-        Tale funzione si dice proiezione al quoziente e la sua immagine si denota \({\rm A}/{\cal R}\).
+        Tale funzione si dice proiezione al quoziente, la sua immagine è una partizione e si denota \({\rm A}/{\cal R}\).
     </div>
     <div class="block R">
         Una relazione di equivalenza è equilibrata di ordine \(\left|{\cal R}\right|\) se:
@@ -95,7 +95,7 @@
     <div class="block R">
         Per le relazioni di equivalenza equilibrate scegliere una \({\rm g}\) corrisponde a scegliere:
         \[\forall\left({\rm a},{\rm b}\right)\in{\rm B}\times{\rm B}\quad{\rm G}_{{\rm a},{\rm b}}:{\rm f}^{-1}\left({\rm a}\right)\rightarrow{\rm f}^{-1}\left({\rm b}\right)\]
-        Che soddisfi
+        Che soddisfi:
         <ul>
             <li>\[\forall\left({\rm a},{\rm b}\right)\in{\rm B}\times{\rm B}\quad{\rm G}_{{\rm a},{\rm b}}\circ\rm G_{{\rm b},{\rm a}}={\rm G}_{{\rm a},{\rm a}}=1_{{\rm f}^{-1}\left({\rm a}\right)}\]</li>
             <li>\[\forall\left({\rm a},{\rm b},{\rm c}\right)\in{\rm B}\times{\rm B}\times{\rm B}\quad{\rm G}_{{\rm a},{\rm b}}\circ{\rm G}_{{\rm b},{\rm c}}={\rm G}_{{\rm a},{\rm c}}\]</li>
@@ -167,21 +167,33 @@
 </div>
 
 <script>
-  const slides = document.querySelectorAll('.slide');
-  let currentSlide = 0;
 
-  function showSlide(index) {
-    slides.forEach(slide => slide.classList.remove('active'));
-    slides[index].classList.add('active');
-  }
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
 
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-  }
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+    }
 
-  function prevSlide() {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(currentSlide);
-  }
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function Show(index) {
+        const popup = document.getElementById(index);
+        popup.style.display = "block";
+    }
+
+    function Hide(index) {
+        const popup = document.getElementById(index);
+        popup.style.display = "none";
+    }
+
 </script>

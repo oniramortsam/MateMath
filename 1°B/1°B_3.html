@@ -22,11 +22,7 @@
         \[{\rm x}\in{\rm A}\times{\rm B}\Longleftrightarrow\left[\exists{\rm a}\in{\rm A},{\rm b}\in{\rm B}\quad{\rm x}=\left({\rm a},{\rm b}\right)\right]\]
         Equivalentemente
         \[{\rm x}\in{\rm A}\times{\rm B}\Longleftrightarrow\left[\exists{\rm a},{\rm b}\quad{\rm x}=\left({\rm a},{\rm b}\right)\land\begin{cases}{\rm a}\in{\rm A}\\{\rm b}\in{\rm B}\end{cases}\right]\]
-        Cioè si verifica prima che \({\rm x}\) sia una coppia, e poi l'appartenenza sia di ascissa che di ordinata:
-        <ul>
-            <li>\[\left[\forall{\rm k}\quad\forall{\rm h}\quad{\cal A}\left({\rm k},{\rm h}\right)\right]\Longleftrightarrow\left[\forall\left({\rm k},{\rm h}\right)\quad{\cal A}\left({\rm k},{\rm h}\right)\right]\]</li>
-            <li>\[\left[\exists{\rm k}\quad\exists{\rm h}\quad{\cal A}\left({\rm k},{\rm h}\right)\right]\Longleftrightarrow\left[\exists\left({\rm k},{\rm h}\right)\quad{\cal A}\left({\rm k},{\rm h}\right)\right]\]</li>
-        </ul>
+        Cioè si verifica prima che \({\rm x}\) sia una coppia, e poi l'appartenenza sia di ascissa che di ordinata.
     </div>
     <div class="block F">
         Valgono le proprietà distributive:
@@ -161,21 +157,33 @@
 </div>
 
 <script>
-  const slides = document.querySelectorAll('.slide');
-  let currentSlide = 0;
 
-  function showSlide(index) {
-    slides.forEach(slide => slide.classList.remove('active'));
-    slides[index].classList.add('active');
-  }
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
 
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-  }
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+    }
 
-  function prevSlide() {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(currentSlide);
-  }
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function Show(index) {
+        const popup = document.getElementById(index);
+        popup.style.display = "block";
+    }
+
+    function Hide(index) {
+        const popup = document.getElementById(index);
+        popup.style.display = "none";
+    }
+
 </script>

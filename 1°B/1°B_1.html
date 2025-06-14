@@ -120,8 +120,8 @@
         </ul>
         Notare anche:
         <ul>
-            <li>\[\left[\forall{\rm k}\quad\forall{\rm h}\quad{\cal A}\left({\rm k},{\rm h}\right)\right]\Longleftrightarrow\left[\forall{\rm h}\quad\forall{\rm k}\quad{\cal A}\left({\rm k},{\rm h}\right)\right]\]</li>
-            <li>\[\left[\exists{\rm k}\quad\exists{\rm h}\quad{\cal A}\left({\rm k},{\rm h}\right)\right]\Longleftrightarrow\left[\exists{\rm h}\quad\exists{\rm k}\quad{\cal A}\left({\rm k},{\rm h}\right)\right]\]</li>
+            <li>\[\left[\forall{\rm k}\quad\forall{\rm h}\quad{\cal A}\left({\rm k},{\rm h}\right)\right]\Longleftrightarrow\left[\forall\left({\rm h},{\rm k}\right)\quad{\cal A}\left({\rm k},{\rm h}\right)\right]\Longleftrightarrow\left[\forall{\rm h}\quad\forall{\rm k}\quad{\cal A}\left({\rm k},{\rm h}\right)\right]\]</li>
+            <li>\[\left[\exists{\rm k}\quad\exists{\rm h}\quad{\cal A}\left({\rm k},{\rm h}\right)\right]\Longleftrightarrow\left[\exists\left({\rm h},{\rm k}\right)\quad{\cal A}\left({\rm k},{\rm h}\right)\right]\Longleftrightarrow\left[\exists{\rm h}\quad\exists{\rm k}\quad{\cal A}\left({\rm k},{\rm h}\right)\right]\]</li>
         </ul>
     </div>
 </div>
@@ -189,21 +189,33 @@
 </div>
 
 <script>
-  const slides = document.querySelectorAll('.slide');
-  let currentSlide = 0;
 
-  function showSlide(index) {
-    slides.forEach(slide => slide.classList.remove('active'));
-    slides[index].classList.add('active');
-  }
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
 
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-  }
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+    }
 
-  function prevSlide() {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(currentSlide);
-  }
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function Show(index) {
+        const popup = document.getElementById(index);
+        popup.style.display = "block";
+    }
+
+    function Hide(index) {
+        const popup = document.getElementById(index);
+        popup.style.display = "none";
+    }
+
 </script>

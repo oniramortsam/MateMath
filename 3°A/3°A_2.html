@@ -7,142 +7,79 @@
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
 
 <div class="slide active">
-    <h2>i sistemi di equazioni</h2>
+    <h2>la geometria analitica</h2>
     <ol>
-        <li>due variabili (QFR)</li>
-        <li>le proiettive (NFR)</li>
-        <li>tre variabili (QFR)</li>
+        <li>equazioni analitiche delle rette (NDF)</li>
+        <li>prodotto vettoriale nello spazio (NDR)</li>
+        <li></li>
     </ol>
 </div>
 
 <div class="slide">
-    <h2>due variabili</h2>
-    <div class="block Q">
-        In un ristorante:
-        <ul>
-            <li>\({\rm a}\) pizze sono costate \({\rm b}\) monete.</li>
-            <li>Quanto costa una pizza?</li>
-        </ul>
-        In un ristorante:
-        <ul>
-            <li>\({\rm a}_0,{\rm b}_0\) pizze e paste sono costate \({\rm c}_1\) monete.</li>
-            <li>\({\rm a}_1,{\rm b}_1\) pizze e paste sono costate \({\rm c}_1\) monete.</li>
-            <li>Quanto costa una pizza?</li>
-            <li>Quanto costa una pasta?</li>
-        </ul>
-    </div>
-    <div class="block F">
-        Il primo problema trova semplice soluzione come:
-        \[{\rm x}={\rm b}/{\rm a}\]
-        Per il secondo ci poniamo un'altra domanda:
-        <ul>
-            <li>
-                Cerchiamo:
-                \[{\rm u}_0\cdot{\rm a}_0+{\rm u}_1\cdot{\rm a}_1=0\Longrightarrow\left({\rm u}_0\cdot{\rm c}_0+{\rm u}_1\cdot{\rm c}_1\right)=\left({\rm u}_0\cdot{\rm a}_0+{\rm u}_1\cdot{\rm a}_1\right)\cdot{\rm x}\]
-                Siccome una soluzione c'è:
-                \[{\rm x}=-\frac{{\rm u}_0\cdot{\rm c}_0+{\rm u}_1\cdot{\rm c}_1}{{\rm u}_0\cdot{\rm a}_0+{\rm u}_1\cdot{\rm a}_1}=\frac{{\rm c}_0\cdot{\rm b}_1-{\rm c}_1\cdot{\rm b}_0}{{\rm a}_0\cdot{\rm b}_1-{\rm a}_1\cdot{\rm b}_0}=-\frac{\begin{bmatrix}{\rm c}_0&{\rm b}_0\\{\rm c}_1&{\rm b}_1\end{bmatrix}}{\begin{bmatrix}{\rm a}_0&{\rm b}_0\\{\rm a}_1&{\rm b}_1\end{bmatrix}}\]
-            </li>
-            <li>
-                Cerchiamo:
-                \[{\rm v}_0\cdot{\rm a}_0+{\rm v}_1\cdot{\rm a}_1=0\Longrightarrow\left({\rm v}_0\cdot{\rm c}_0+{\rm v}_1\cdot{\rm c}_1\right)=\left({\rm v}_0\cdot{\rm b}_0+{\rm v}_1\cdot{\rm b}_1\right)\cdot{\rm y}\]
-                Siccome una soluzione c'è:
-                \[{\rm y}=-\frac{{\rm v}_0\cdot{\rm c}_0+{\rm v}_1\cdot{\rm c}_1}{{\rm v}_0\cdot{\rm b}_0+{\rm v}_1\cdot{\rm b}_1}=\frac{{\rm a}_0\cdot{\rm c}_1-{\rm a}_1\cdot{\rm c}_0}{{\rm a}_0\cdot{\rm b}_1-{\rm a}_1\cdot{\rm b}_0}=\frac{\begin{bmatrix}{\rm a}_0&{\rm c}_0\\{\rm a}_1&{\rm c}_1\end{bmatrix}}{\begin{bmatrix}{\rm a}_0&{\rm b}_0\\{\rm a}_1&{\rm b}_1\end{bmatrix}}\]
-            </li>
-        </ul>
-    </div>
-    <div class="block R">
-        Si può interpretare questo metodo come:
-        \[{\rm x}\cdot{\rm a}+{\rm y}\cdot{\rm b}={\rm c}\Longrightarrow\begin{cases}{\rm x}=\frac{\left({\cal Z}\times{\rm b}\right)\cdot{\rm c}}{\left({\cal Z}\times{\rm b}\right)\cdot{\rm a}}\\{\rm y}=\frac{\left({\cal Z}\times{\rm a}\right)\cdot{\rm c}}{\left({\cal Z}\times{\rm a}\right)\cdot{\rm b}}\end{cases}\]
-        cioè moltimplicando per l'ortogonale di un vettore si riesce ad annullare un addendo.
-    </div>
-</div>
-
-<div class="slide">
-    <h2>le proiettive</h2>
+    <h2>equazioni analitiche delle rette</h2>
     <div class="block N">
-        Date due rette ed un punto nel piano si definisce la relazione:
-        \[\left({\rm O}_0+{\rm t}_0\cdot{\rm u}_0-{\rm O}\right)\times\left({\rm O}_1+{\rm t}_1\cdot{\rm u}_1-{\rm O}\right)=0\]
-        Dati due piani ed un punto nello spazio si definisce la relazione:
-        \[\left({\rm O}_0+{\rm t}_0\cdot{\rm u}_0+{\rm s}_0\cdot{\rm v}_0-{\rm O}\right)\times\left({\rm O}_1+{\rm t}_1\cdot{\rm u}_1+{\rm s}_1\cdot{\rm v}_1-{\rm O}\right)=0\]
-        Date due rette ed un'altra nello spazio si definisce la relazione:
-        \[\left({\rm O}_0+{\rm t}_0\cdot{\rm u}_0-{\rm O}\right)\times{\rm u}\cdot\left({\rm O}_1+{\rm t}_1\cdot{\rm u}_1-{\rm O}\right)=0\]
-        Tutte queste sono dette proiezioni.
+        Fissiamo un punto ed un versore \({\rm O},{\cal Z}\) sul piano cartesiano:
+        <ul>
+            <li>Consideriamo \({\cal Y}={\cal Z}\times{\cal X}\) la rotazione di \({\cal X}\) di \(\pi/2\).</li>
+            <li>Per ogni punto \({\rm P}\) diciamo \({\rm x}_{\rm P},{\rm y}_{\rm P}\) tali che \({\rm P}={\rm O}+{\rm x}_{\rm P}\cdot{\cal X}+{\rm y}_{\rm P}\cdot{\cal Y}\).</li>
+        </ul>
+    </div>
+    <div class="block D">
+        Il prodotto scalare tra due vettori \({\rm u},{\rm v}\) è definito come:
+        \[{\rm u}\cdot{\rm v}={\rm x}_{\rm u}\cdot{\rm x}_{\rm v}+{\rm y}_{\rm u}\cdot{\rm y}_{\rm v}=\left|{\rm u}\right|\cdot\left|{\rm v}\right|\cdot\cos\left(\theta\right)\]
+        Dove \(\theta\) è l'angolo che ruota \({\rm u}\) in \({\rm v}\).
     </div>
     <div class="block F">
-        La prima si scrive come:
-        \[\left({\rm x}_{{\rm O},0}+{\rm t}_0\cdot{\rm x}_{{\rm u},0}\right)\cdot\left({\rm y}_{{\rm O},1}+{\rm t}_1\cdot{\rm y}_{{\rm u},1}\right)=\left({\rm y}_{{\rm O},0}+{\rm t}_0\cdot{\rm y}_{{\rm u},0}\right)\cdot\left({\rm x}_{{\rm O},1}+{\rm t}_1\cdot{\rm x}_{{\rm u},1}\right)\]
-        Da cui:
-        \[{\rm t}_1=\frac{\left({\rm y}_{{\rm O},0}+{\rm t}_0\cdot{\rm y}_{{\rm u},0}\right)\cdot{\rm x}_{{\rm O},1}-\left({\rm x}_{{\rm O},0}+{\rm t}_0\cdot{\rm x}_{{\rm u},0}\right)\cdot{\rm y}_{{\rm O},1}}{\left({\rm x}_{{\rm O},0}+{\rm t}_0\cdot{\rm x}_{{\rm u},0}\right)\cdot{\rm y}_{{\rm u},1}-\left({\rm y}_{{\rm O},0}+{\rm t}_0\cdot{\rm y}_{{\rm u},0}\right)\cdot{\rm x}_{{\rm u},1}}=-\frac{\begin{bmatrix}{\rm x}_{{\rm u},0}&{\rm y}_{{\rm u},0}\\{\rm x}_{{\rm O},1}&{\rm y}_{{\rm O},1}\end{bmatrix}\cdot{\rm t}_0+\begin{bmatrix}{\rm x}_{{\rm O},0}&{\rm y}_{{\rm O},0}\\{\rm x}_{{\rm O},1}&{\rm y}_{{\rm O},1}\end{bmatrix}}{\begin{bmatrix}{\rm x}_{{\rm u},0}&{\rm y}_{{\rm u},0}\\{\rm x}_{{\rm u},1}&{\rm y}_{{\rm u},1}\end{bmatrix}\cdot{\rm t}_0+\begin{bmatrix}{\rm x}_{{\rm O},0}&{\rm y}_{{\rm O},0}\\{\rm x}_{{\rm u},1}&{\rm y}_{{\rm u},1}\end{bmatrix}}\]
-        La seconda si scrive come:
-        \[{\rm a}_{\rm O}+{\rm t}_1\cdot{\rm a}_{\rm u}+{\rm s}_1\cdot{\rm a}_{\rm v}=0\Longrightarrow\begin{cases}{\rm t}_1=-\frac{{\rm a}_{\rm O}\cdot{\rm v}_1}{{\rm a}_{\rm u}\cdot{\rm v}_1}=\frac{{\rm a}_{\rm O}\cdot{\rm v}_1}{{\rm a}_{\rm v}\cdot{\rm u}_1}\\{\rm s}_1=\frac{{\rm a}_{\rm O}\cdot{\rm u}_1}{{\rm a}_{\rm u}\cdot{\rm v}_1}=-\frac{{\rm a}_{\rm O}\cdot{\rm u}_1}{{\rm a}_{\rm v}\cdot{\rm u}_1}\end{cases}\]
-        dove:
+        Dati due punti \({\rm A},{\rm B}\) nel piano cartesiano, la retta passante per questi punti si rappresenta come:
+        \[\left\{{\rm B}+{\rm t}\cdot\left({\rm A}-{\rm B}\right)\quad{\rm t}\in{\mathbb R}\right\}\]
+        Che corrisponde alla relazione tra \({\rm x},{\rm y}\):
+        \[\exists{\rm t}\in{\mathbb R}\qquad\begin{cases}{\rm x}={\rm x}_{\rm B}+{\rm t}\cdot\left({\rm x}_{\rm A}-{\rm x}_{\rm B}\right)={\rm t}\cdot{\rm x}_{\rm A}+\left(1-{\rm t}\right)\cdot{\rm x}_{\rm B}\\{\rm y}={\rm y}_{\rm B}+{\rm t}\cdot\left({\rm y}_{\rm B}-{\rm y}_{\rm A}\right)={\rm t}\cdot{\rm y}_{\rm A}+\left(1-{\rm t}\right)\cdot{\rm y}_{\rm B}\end{cases}\]
         <ul>
-            <li>\[{\rm a}_{\rm O}=\left({\rm O}_0+{\rm t}_0\cdot{\rm u}_0+{\rm s}_0\cdot{\rm v}_0\right)\times{\rm O}_1\]</li>
-            <li>\[{\rm a}_{\rm u}=\left({\rm O}_0+{\rm t}_0\cdot{\rm u}_0+{\rm s}_0\cdot{\rm v}_0\right)\times{\rm u}_1\]</li>
-            <li>\[{\rm a}_{\rm v}=\left({\rm O}_0+{\rm t}_0\cdot{\rm u}_0+{\rm s}_0\cdot{\rm v}_0\right)\times{\rm v}_1\]</li>
+            <li>In forma cartesiana tale relazione si riduce all'equazione lineare:\[\left({\rm x}-{\rm x}_{\rm B}\right)\cdot\left({\rm y}_{\rm B}-{\rm y}_{\rm A}\right)=\left({\rm y}-{\rm y}_{\rm B}\right)\cdot\left({\rm x}_{\rm B}-{\rm x}_{\rm A}\right)\]</li>
+            <li>Esplicitando \({\rm y}\):\[{\rm y}=\frac{{\rm y}_{\rm A}\cdot{\rm x}_{\rm B}-{\rm y}_{\rm B}\cdot{\rm x}_{\rm A}}{{\rm x}_{\rm B}-{\rm x}_{\rm A}}+\left(\frac{{\rm y}_{\rm B}-{\rm y}_{\rm A}}{{\rm x}_{\rm B}-{\rm x}_{\rm A}}\right)\cdot{\rm x}\]</li>
+            <li>Esplicitando \({\rm x}\):\[{\rm x}=\frac{{\rm y}_{\rm B}\cdot{\rm x}_{\rm A}-{\rm y}_{\rm A}\cdot{\rm x}_{\rm B}}{{\rm y}_{\rm B}-{\rm y}_{\rm A}}+\left(\frac{{\rm x}_{\rm B}-{\rm x}_{\rm A}}{{\rm y}_{\rm B}-{\rm y}_{\rm A}}\right)\cdot{\rm y}\]</li>
         </ul>
-        E notiamo che la soluzione soddisfa:
-        \[{\rm t}_1\cdot{\rm a}_{\rm u}\cdot{\rm O}_1+{\rm s}_1\cdot{\rm a}_{\rm v}\cdot{\rm O}_1={\rm t}_1\cdot{\rm a}_{\rm O}\cdot{\rm u}_1+{\rm s}_1\cdot{\rm a}_{\rm O}\cdot{\rm v}_1=0\]
-        La terza si scrive come:
-        \[{\rm t}_1=-\frac{\begin{bmatrix}{\rm x}_{{\rm O},0}+{\rm t}_0\cdot{\rm x}_{{\rm u},0}&{\rm x}_{\rm u}&{\rm x}_{{\rm O},1}\\{\rm y}_{{\rm O},0}+{\rm t}_0\cdot{\rm y}_{{\rm u},0}&{\rm y}_{\rm u}&{\rm y}_{{\rm O},1}\\{\rm z}_{{\rm O},0}+{\rm t}_0\cdot{\rm z}_{{\rm u},0}&{\rm z}_{\rm u}&{\rm z}_{{\rm O},1}\end{bmatrix}}{\begin{bmatrix}{\rm x}_{{\rm O},0}+{\rm t}_0\cdot{\rm x}_{{\rm u},0}&{\rm x}_{\rm u}&{\rm x}_{{\rm u},1}\\{\rm y}_{{\rm O},0}+{\rm t}_0\cdot{\rm y}_{{\rm u},0}&{\rm y}_{\rm u}&{\rm y}_{{\rm u},1}\\{\rm z}_{{\rm O},0}+{\rm t}_0\cdot{\rm z}_{{\rm u},0}&{\rm z}_{\rm u}&{\rm z}_{{\rm u},1}\end{bmatrix}}\]
-    </div>
-    <div class="block R">
-        Per la seconda possiamo anche scrivere:
-        <ul>
-            <li>\[{\rm a}_{\rm O}=\left({\rm r}_0\cdot{\rm O}_0+{\rm t}_0\cdot{\rm u}_0+{\rm s}_0\cdot{\rm v}_0\right)\times{\rm O}_1\]</li>
-            <li>\[{\rm a}_{\rm u}=\left({\rm r}_0\cdot{\rm O}_0+{\rm t}_0\cdot{\rm u}_0+{\rm s}_0\cdot{\rm v}_0\right)\times{\rm u}_1\]</li>
-            <li>\[{\rm a}_{\rm v}=\left({\rm r}_0\cdot{\rm O}_0+{\rm t}_0\cdot{\rm u}_0+{\rm s}_0\cdot{\rm v}_0\right)\times{\rm v}_1\]</li>
-        </ul>
-        E risolvere:
-        <ul>
-            \[{\rm t}_1=-{\rm a}_{\rm O}\cdot{\rm v}_1={\rm a}_{\rm v}\cdot{\rm O}_1\]
-            \[{\rm s}_1={\rm a}_{\rm O}\cdot{\rm u}_1=-{\rm a}_{\rm u}\cdot{\rm O}_1\]
-            \[{\rm r}_1={\rm a}_{\rm u}\cdot{\rm v}_1={\rm a}_{\rm v}\cdot{\rm u}_1\]
-        </ul>
-        Questa si dice l'equazione omogeneizzata.
+        Tale relazione si scrive in modo compatto come:
+        \[\left({\cal Z}\times\left({\rm B}-{\rm A}\right)\right)\cdot\left({\rm X}-{\rm A}\right)=\left({\cal Z}\times\left({\rm A}-{\rm B}\right)\right)\cdot\left({\rm X}-{\rm B}\right)=0\]
+        Cioè le coordinate parametriche e cartesiane si scambiano passando all'ortogonale.
     </div>
 </div>
 
 <div class="slide">
-    <h2>tre variabili</h2>
-    <div class="block Q">
-        In un ristorante:
+    <h2>prodotto vettoriale nello spazio</h2>
+    <div class="block N">
+        Definiamo il prodotto vettoriale di due vettori nello spazio come un vettore:
         <ul>
-            <li>\({\rm a}_0,{\rm b}_0,{\rm c}_0\) pizze, paste, panini sono costate \({\rm d}_0\) monete.</li>
-            <li>\({\rm a}_1,{\rm b}_1,{\rm c}_1\) pizze, paste, panini sono costate \({\rm d}_1\) monete.</li>
-            <li>\({\rm a}_2,{\rm b}_2,{\rm c}_2\) pizze, paste, panini sono costate \({\rm d}_2\) monete.</li>
-            <li>Quanto costa una pizza?</li>
-            <li>Quanto costa una pasta?</li>
-            <li>Quanto costa un panino?</li>
+            <li>Con direzione perpendicolare ad entrambi.</li>
+            <li>Con verso dato dalla regola della mano destra.</li>
+            <li>Con modulo l'area del parallelogramma da loro identificato.</li>
         </ul>
+        Dati due vettori \({\rm u},{\rm v}\) nel piano, il loro prodotto vettoriale è dunque:
+        \[{\rm u}\times{\rm v}=\left|{\rm u}\right|\cdot\left|{\rm v}\right|\cdot\sin\left(\theta\right)\cdot{\cal Z}\]
+        Dove:
+        <ul>
+            <li>\(\theta\) è l'angolo che ruota \({\rm u}\) in \({\rm v}\) in senso antiorario.</li>
+            <li>\({\cal Z}\) il versore uscente dal piano cartesiano.</li>
+        </ul>
+        Chiamiamo determinante:
+        \[\begin{bmatrix}{\rm x}_{\rm u}&{\rm x}_{\rm v}\\{\rm y}_{\rm u}&{\rm y}_{\rm v}\end{bmatrix}={\rm x}_{\rm u}\cdot{\rm y}_{\rm v}-{\rm y}_{\rm u}\cdot{\rm x}_{\rm v}\]
+        Si può calcolare che:
+        \[{\rm u}\times{\rm v}=\begin{bmatrix}{\rm x}_{\rm u}&{\rm x}_{\rm v}\\{\rm y}_{\rm u}&{\rm y}_{\rm v}\end{bmatrix}\cdot{\cal Z}\]
     </div>
-    <div class="block F">
-        Ragioniamo allo astesso modo:
-        <ul>
-            <li>
-                Cerchiamo:
-                \[\begin{cases}{\rm u}_0\cdot{\rm b}_0+{\rm u}_1\cdot{\rm b}_1+{\rm u}_2\cdot{\rm b}_2=0\\{\rm u}_0\cdot{\rm c}_0+{\rm u}_1\cdot{\rm c}_1+{\rm u}_2\cdot{\rm c}_2=0\end{cases}\]
-                Siccome una soluzione c'è:
-                \[{\rm x}=-\frac{\begin{bmatrix}{\rm b}_1&{\rm b}_2\\{\rm c}_1&{\rm c}_2\end{bmatrix}\cdot{\rm d}_0-\begin{bmatrix}{\rm b}_0&{\rm b}_2\\{\rm c}_0&{\rm c}_2\end{bmatrix}\cdot{\rm d}_1+\begin{bmatrix}{\rm b}_0&{\rm b}_1\\{\rm c}_0&{\rm c}_1\end{bmatrix}\cdot{\rm d}_2}{\begin{bmatrix}{\rm b}_1&{\rm b}_2\\{\rm c}_1&{\rm c}_2\end{bmatrix}\cdot{\rm a}_0-\begin{bmatrix}{\rm b}_0&{\rm b}_2\\{\rm c}_0&{\rm c}_2\end{bmatrix}\cdot{\rm a}_1+\begin{bmatrix}{\rm b}_0&{\rm b}_1\\{\rm c}_0&{\rm c}_1\end{bmatrix}\cdot{\rm a}_2}=-\frac{\begin{bmatrix}{\rm b}_0&{\rm c}_0&{\rm d}_0\\{\rm b}_1&{\rm c}_1&{\rm d}_1\\{\rm b}_2&{\rm c}_2&{\rm d}_2\end{bmatrix}}{\begin{bmatrix}{\rm a}_0&{\rm b}_0&{\rm c}_0\\{\rm a}_1&{\rm b}_1&{\rm c}_1\\{\rm a}_2&{\rm b}_2&{\rm c}_2\end{bmatrix}}\]
-            </li>
-            <li>
-                Cerchiamo:
-                \[\begin{cases}{\rm v}_0\cdot{\rm a}_0+{\rm v}_1\cdot{\rm a}_1+{\rm v}_2\cdot{\rm a}_2=0\\{\rm v}_0\cdot{\rm c}_0+{\rm v}_1\cdot{\rm c}_1+{\rm v}_2\cdot{\rm c}_2=0\end{cases}\]
-                Siccome una soluzione c'è:
-                \[{\rm y}=-\frac{\begin{bmatrix}{\rm a}_1&{\rm a}_2\\{\rm c}_1&{\rm c}_2\end{bmatrix}\cdot{\rm d}_0-\begin{bmatrix}{\rm a}_0&{\rm a}_2\\{\rm c}_0&{\rm c}_2\end{bmatrix}\cdot{\rm d}_1+\begin{bmatrix}{\rm a}_0&{\rm a}_1\\{\rm c}_0&{\rm c}_1\end{bmatrix}\cdot{\rm d}_2}{\begin{bmatrix}{\rm a}_1&{\rm a}_2\\{\rm c}_1&{\rm c}_2\end{bmatrix}\cdot{\rm b}_0-\begin{bmatrix}{\rm a}_0&{\rm a}_2\\{\rm c}_0&{\rm c}_2\end{bmatrix}\cdot{\rm b}_1+\begin{bmatrix}{\rm a}_0&{\rm a}_1\\{\rm c}_0&{\rm c}_1\end{bmatrix}\cdot{\rm b}_2}=\frac{\begin{bmatrix}{\rm a}_0&{\rm c}_0&{\rm d}_0\\{\rm a}_1&{\rm c}_1&{\rm d}_1\\{\rm a}_2&{\rm c}_2&{\rm d}_2\end{bmatrix}}{\begin{bmatrix}{\rm a}_0&{\rm b}_0&{\rm c}_0\\{\rm a}_1&{\rm b}_1&{\rm c}_1\\{\rm a}_2&{\rm b}_2&{\rm c}_2\end{bmatrix}}\]
-            </li>
-            <li>
-                Cerchiamo:
-                \[\begin{cases}{\rm w}_0\cdot{\rm a}_0+{\rm w}_1\cdot{\rm a}_1+{\rm w}_2\cdot{\rm a}_2=0\\{\rm w}_0\cdot{\rm b}_0+{\rm w}_1\cdot{\rm b}_1+{\rm w}_2\cdot{\rm b}_2=0\end{cases}\]
-                Siccome una soluzione c'è:
-                \[{\rm z}=-\frac{\begin{bmatrix}{\rm a}_1&{\rm a}_2\\{\rm b}_1&{\rm b}_2\end{bmatrix}\cdot{\rm d}_0-\begin{bmatrix}{\rm a}_0&{\rm a}_2\\{\rm b}_0&{\rm b}_2\end{bmatrix}\cdot{\rm d}_1+\begin{bmatrix}{\rm a}_0&{\rm a}_1\\{\rm b}_0&{\rm b}_1\end{bmatrix}\cdot{\rm d}_2}{\begin{bmatrix}{\rm a}_1&{\rm a}_2\\{\rm b}_1&{\rm b}_2\end{bmatrix}\cdot{\rm c}_0-\begin{bmatrix}{\rm a}_0&{\rm a}_2\\{\rm b}_0&{\rm b}_2\end{bmatrix}\cdot{\rm c}_1+\begin{bmatrix}{\rm a}_0&{\rm a}_1\\{\rm b}_0&{\rm b}_1\end{bmatrix}\cdot{\rm c}_2}=-\frac{\begin{bmatrix}{\rm a}_0&{\rm b}_0&{\rm d}_0\\{\rm a}_1&{\rm b}_1&{\rm d}_1\\{\rm a}_2&{\rm b}_2&{\rm d}_2\end{bmatrix}}{\begin{bmatrix}{\rm a}_0&{\rm b}_0&{\rm c}_0\\{\rm a}_1&{\rm b}_1&{\rm c}_1\\{\rm a}_2&{\rm b}_2&{\rm c}_2\end{bmatrix}}\]
-            </li>
-        </ul>
+    <div class="block D">
+        Dati tre vettori \({\rm u},{\rm v},{\rm w}\) nello spazio definiamo:
+        \[\begin{split}\begin{bmatrix}{\rm x}_{\rm u}&{\rm x}_{\rm v}&{\rm x}_{\rm w}\\{\rm y}_{\rm u}&{\rm y}_{\rm v}&{\rm y}_{\rm w}\\{\rm z}_{\rm u}&{\rm z}_{\rm v}&{\rm z}_{\rm w}\end{bmatrix}={\rm u}\times{\rm v}\cdot{\rm w}&={\rm x}_{\rm w}\cdot{\rm u}\times{\rm v}\cdot{\cal X}+{\rm y}_{\rm w}\cdot{\rm u}\times{\rm v}\cdot{\cal Y}+{\rm z}_{\rm w}\cdot{\rm u}\times{\rm v}\cdot{\cal Z}\\
+        &={\rm x}_{\rm w}\cdot\begin{bmatrix}{\rm y}_{\rm u}&{\rm y}_{\rm v}\\{\rm z}_{\rm u}&{\rm z}_{\rm v}\end{bmatrix}-{\rm y}_{\rm w}\cdot\begin{bmatrix}{\rm x}_{\rm u}&{\rm x}_{\rm v}\\{\rm z}_{\rm u}&{\rm z}_{\rm v}\end{bmatrix}+{\rm z}_{\rm w}\cdot\begin{bmatrix}{\rm x}_{\rm u}&{\rm x}_{\rm v}\\{\rm y}_{\rm u}&{\rm y}_{\rm v}\end{bmatrix}\end{split}\]
+        Ed osserviamo che:
+        \[{\rm u}\times{\rm v}=\begin{bmatrix}{\rm y}_{\rm u}&{\rm y}_{\rm v}\\{\rm z}_{\rm u}&{\rm z}_{\rm v}\end{bmatrix}\cdot{\cal X}-\begin{bmatrix}{\rm x}_{\rm u}&{\rm x}_{\rm v}\\{\rm z}_{\rm u}&{\rm z}_{\rm v}\end{bmatrix}\cdot{\cal Y}+\begin{bmatrix}{\rm x}_{\rm u}&{\rm x}_{\rm v}\\{\rm y}_{\rm u}&{\rm y}_{\rm v}\end{bmatrix}\cdot{\cal Z}\]
     </div>
     <div class="block R">
-        Si può interpretare questo metodo come:
-        \[{\rm x}\cdot{\rm a}+{\rm y}\cdot{\rm b}+{\rm z}\cdot{\rm c}={\rm d}\Longrightarrow\begin{cases}{\rm x}=\frac{\left({\rm b}\times{\rm c}\right)\cdot{\rm d}}{\left({\rm b}\times{\rm c}\right)\cdot{\rm a}}\\{\rm y}=\frac{\left({\rm c}\times{\rm a}\right)\cdot{\rm d}}{\left({\rm c}\times{\rm a}\right)\cdot{\rm b}}\\{\rm z}=\frac{\left({\rm a}\times{\rm b}\right)\cdot{\rm d}}{\left({\rm a}\times{\rm b}\right)\cdot{\rm c}}\end{cases}\]
-        cioè moltimplicando per l'ortogonale di un vettore si riesce ad annullare un addendo.
+        Una retta nello spazio si può rappresentare come:
+        <ul>
+            <li>\[\exists{\rm t}\in{\mathbb R}\quad\begin{cases}{\rm x}={\rm x}_{\rm P}+{\rm t}\cdot{\rm x}_{\rm u}\\{\rm y}={\rm y}_{\rm P}+{\rm t}\cdot{\rm y}_{\rm u}\\{\rm z}={\rm z}_{\rm P}+{\rm t}\cdot{\rm z}_{\rm u}\end{cases}\]</li>
+            <li>\[\frac{{\rm x}-{\rm x}_{\rm P}}{{\rm x}_{\rm u}}=\frac{{\rm y}-{\rm y}_{\rm P}}{{\rm y}_{\rm u}}=\frac{{\rm z}-{\rm z}_{\rm P}}{{\rm z}_{\rm u}}\]</li>
+        </ul>
+        Si passa agevolmente dall'una all'altra, ma spesso una delle due è meglio.
     </div>
 </div>
 
@@ -209,21 +146,33 @@
 </div>
 
 <script>
-  const slides = document.querySelectorAll('.slide');
-  let currentSlide = 0;
 
-  function showSlide(index) {
-    slides.forEach(slide => slide.classList.remove('active'));
-    slides[index].classList.add('active');
-  }
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
 
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-  }
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+    }
 
-  function prevSlide() {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(currentSlide);
-  }
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function Show(index) {
+        const popup = document.getElementById(index);
+        popup.style.display = "block";
+    }
+
+    function Hide(index) {
+        const popup = document.getElementById(index);
+        popup.style.display = "none";
+    }
+
 </script>
