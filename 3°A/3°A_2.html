@@ -9,14 +9,14 @@
 <div class="slide active">
     <h2>la geometria analitica</h2>
     <ol>
-        <li>equazioni analitiche delle rette (NDF)</li>
-        <li>prodotto vettoriale nello spazio (NDR)</li>
-        <li></li>
+        <li>le rette e il piano (NDF)</li>
+        <li>cambiare coordinate ()</li>
+        <li>il prodotto vettore (NDR)</li>
     </ol>
 </div>
 
 <div class="slide">
-    <h2>equazioni analitiche delle rette</h2>
+    <h2>le rette e il piano</h2>
     <div class="block N">
         Fissiamo un punto ed un versore \({\rm O},{\cal Z}\) sul piano cartesiano:
         <ul>
@@ -35,7 +35,7 @@
         Che corrisponde alla relazione tra \({\rm x},{\rm y}\):
         \[\exists{\rm t}\in{\mathbb R}\qquad\begin{cases}{\rm x}={\rm x}_{\rm B}+{\rm t}\cdot\left({\rm x}_{\rm A}-{\rm x}_{\rm B}\right)={\rm t}\cdot{\rm x}_{\rm A}+\left(1-{\rm t}\right)\cdot{\rm x}_{\rm B}\\{\rm y}={\rm y}_{\rm B}+{\rm t}\cdot\left({\rm y}_{\rm B}-{\rm y}_{\rm A}\right)={\rm t}\cdot{\rm y}_{\rm A}+\left(1-{\rm t}\right)\cdot{\rm y}_{\rm B}\end{cases}\]
         <ul>
-            <li>In forma cartesiana tale relazione si riduce all'equazione lineare:\[\left({\rm x}-{\rm x}_{\rm B}\right)\cdot\left({\rm y}_{\rm B}-{\rm y}_{\rm A}\right)=\left({\rm y}-{\rm y}_{\rm B}\right)\cdot\left({\rm x}_{\rm B}-{\rm x}_{\rm A}\right)\]</li>
+            <li>In forma cartesiana tale relazione si riduce all'equazione lineare: \[\left({\rm x}-{\rm x}_{\rm B}\right)\cdot\left({\rm y}_{\rm B}-{\rm y}_{\rm A}\right)=\left({\rm y}-{\rm y}_{\rm B}\right)\cdot\left({\rm x}_{\rm B}-{\rm x}_{\rm A}\right)\]</li>
             <li>Esplicitando \({\rm y}\):\[{\rm y}=\frac{{\rm y}_{\rm A}\cdot{\rm x}_{\rm B}-{\rm y}_{\rm B}\cdot{\rm x}_{\rm A}}{{\rm x}_{\rm B}-{\rm x}_{\rm A}}+\left(\frac{{\rm y}_{\rm B}-{\rm y}_{\rm A}}{{\rm x}_{\rm B}-{\rm x}_{\rm A}}\right)\cdot{\rm x}\]</li>
             <li>Esplicitando \({\rm x}\):\[{\rm x}=\frac{{\rm y}_{\rm B}\cdot{\rm x}_{\rm A}-{\rm y}_{\rm A}\cdot{\rm x}_{\rm B}}{{\rm y}_{\rm B}-{\rm y}_{\rm A}}+\left(\frac{{\rm x}_{\rm B}-{\rm x}_{\rm A}}{{\rm y}_{\rm B}-{\rm y}_{\rm A}}\right)\cdot{\rm y}\]</li>
         </ul>
@@ -46,7 +46,22 @@
 </div>
 
 <div class="slide">
-    <h2>prodotto vettoriale nello spazio</h2>
+    <h2>cambiare coordinate</h2>
+    Consideriamo il cambio di coordinate:
+    \[\begin{split}
+        {\rm x}_{{\rm f}\left({\rm P}\right)}=\left({\rm x}_{{\rm f}\left({\rm O}+{\cal X}\right)}-{\rm x}_{{\rm f}\left({\rm O}\right)}\right)\cdot{\rm x}_{{\rm P}-{\rm O}}+\left({\rm y}_{{\rm f}\left({\rm O}+{\cal X}\right)}-{\rm y}_{{\rm f}\left({\rm O}\right)}\right)\cdot{\rm y}_{{\rm P}-{\rm O}}+{\rm x}_{{\rm f}\left({\rm O}\right)}\\
+        {\rm y}_{{\rm f}\left({\rm P}\right)}=\left({\rm x}_{{\rm f}\left({\rm O}+{\cal Y}\right)}-{\rm x}_{{\rm f}\left({\rm O}\right)}\right)\cdot{\rm x}_{{\rm P}-{\rm O}}+\left({\rm y}_{{\rm f}\left({\rm O}+{\cal Y}\right)}-{\rm y}_{{\rm f}\left({\rm O}\right)}\right)\cdot{\rm y}_{{\rm P}-{\rm O}}+{\rm x}_{{\rm f}\left({\rm O}\right)}
+    \end{split}\]
+    Allora la retta:
+    \[\left\{{\rm B}+{\rm t}\cdot\left({\rm A}-{\rm B}\right)\quad{\rm t}\in{\mathbb R}\right\}\]
+    Viene trasportata nella retta:
+    \[\left({\rm x}_{\rm P}-{\rm x}_{{\rm f}\left({\rm B}\right)}\right)\cdot\left({\rm y}_{{\rm f}\left({\rm B}\right)}-{\rm y}_{{\rm f}\left({\rm A}\right)}\right)=\left({\rm y}_{\rm P}-{\rm y}_{{\rm f}\left({\rm B}\right)}\right)\cdot\left({\rm x}_{{\rm f}\left({\rm B}\right)}-{\rm x}_{{\rm f}\left({\rm A}\right)}\right)\]
+    Che coincide con:
+    \[\left({\rm x}_{{\rm g}\left({\rm P}\right)}-{\rm x}_{\rm B}\right)\cdot\left({\rm y}_{\rm B}-{\rm y}_{\rm A}\right)=\left({\rm y}_{{\rm g}\left({\rm P}\right)}-{\rm y}_{\rm B}\right)\cdot\left({\rm x}_{\rm B}-{\rm x}_{\rm A}\right)\]
+</div>
+
+<div class="slide">
+    <h2>il prodotto vettore</h2>
     <div class="block N">
         Definiamo il prodotto vettoriale di due vettori nello spazio come un vettore:
         <ul>

@@ -61,9 +61,29 @@
 </div>
 
 <div class="slide">
+    <h2>polinomi e naturali</h2>
+    <div class="block Q">
+        Come si fanno la somma, la differenza ed il prodotto tra numeri scritti in base decimale?
+    </div>
+    <div class="block N">
+        Un polinomio di grado \({\rm n}\) nella variabile \({\rm x}\) è una espressione del tipo:
+        \[{\rm f}=\sum_{{\rm k}\in{\rm n}+1}{\rm f}_{\rm k}\cdot{\rm x}^{\rm k}\]
+        Si dice che \({\rm n}=\deg\left({\rm f}\right)\) se \({\rm a}_{\rm n}\ne0\)
+    </div>
+    <div class="block F">
+        Per calcolare somma, differenza e prodotto tra polinomi si usano le formule:
+        <ul>
+            <li>\[\deg\left({\rm f}+{\rm g}\right)\le\max\left(\deg\left({\rm f}\right),\deg\left({\rm g}\right)\right)\qquad{\rm f}+{\rm g}=\left(\sum_{{\rm k}\in\deg\left({\rm f}+{\rm g}\right)+1}\left({\rm f}_{\rm k}+{\rm g}_{\rm k}\right)\cdot{\rm x}^{\rm k}\right)\]</li>
+            <li>\[\deg\left({\rm f}-{\rm g}\right)\le\max\left(\deg\left({\rm f}\right),\deg\left({\rm g}\right)\right)\qquad{\rm f}-{\rm g}=\left(\sum_{{\rm k}\in\deg\left({\rm f}-{\rm g}\right)+1}\left({\rm f}_{\rm k}-{\rm g}_{\rm k}\right)\cdot{\rm x}^{\rm k}\right)\]</li>
+            <li>\[\deg\left({\rm f}\cdot{\rm g}\right)=\deg\left({\rm f}\right)+\deg\left({\rm g}\right)\qquad{\rm f}\cdot{\rm g}=\left(\sum_{{\rm n}\in\deg\left({\rm f}\cdot{\rm g}\right)+1}\left(\sum_{{\rm k}\in{\rm n}+1}\left({\rm f}_{\rm k}\cdot{\rm g}_{{\rm n}-{\rm k}}\right)\right)\cdot{\rm x}^{\rm n}\right)\]</li>
+        </ul>
+    </div>
+</div>
+
+<div class="slide">
     <h2>la serie geometrica</h2>
     <div class="block Q">
-        Achille viaggia \({\rm a}\) volte più veloce della tartaruga e ci metterebbe un mattito di ciglia a raggiungerla se fosse ferma:
+        Achille viaggia \({\rm a}\) volte più veloce della tartaruga e ci metterebbe un battito di ciglia a raggiungerla se fosse ferma:
         <ul>
             <li>Quanto ci mettere Achille a raggiungere una tartaruga che si ferma dopo un battito di ciglia?</li>
             <li>Quanti battiti di ciglia servono ad Achille per raggiungere la tartaruga?</li>

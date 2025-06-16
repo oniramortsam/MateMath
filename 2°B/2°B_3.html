@@ -9,8 +9,8 @@
 <div class="slide active">
     <h2>sui triangoli retti</h2>
     </ol>
-        <li>funzioni trigonometriche (QNR)</li>
-        <li>le formule goniometriche (DFR)</li>
+        <li>funzioni trigonometriche (QNF)</li>
+        <li>le formule goniometriche (QFR)</li>
         <li>le tangenti e cotangenti (NFR)</li>
     </ol>
 </div>
@@ -18,16 +18,34 @@
 <div class="slide">
     <h2>funzioni trigonometriche</h2>
     <div class="block Q">
-        Consideriamo un vettore \({\rm v}\)
-        <ul>
-            <li>Come posso scrivere la rotazione di \({\rm v}\) di angolo \(\alpha\)?</li>
-            <li>Come posso scrivere la rotazione di \({\rm v}\) di angolo \(\beta\)?</li>
-            <li>Come posso scrivere la rotazione di \({\rm v}\) di angolo \(\alpha+\beta\)?</li>
-        </ul>
+        Consideriamo un vettore \({\rm v}\): Come posso scrivere la rotazione di \({\rm v}\) di angolo \(\theta\)?
     </div>
     <div class="block N">
         Dati tre punti sul piano \({\rm A},{\rm B},{\rm C}\), se \(\beta=\pi/2\), chiamiamo:
         \[\sin\left(\alpha\right)=\cos\left(\gamma\right)=\frac{\left|{\rm C}-{\rm B}\right|}{\left|{\rm C}-{\rm A}\right|}\qquad\cos\left(\alpha\right)=\sin\left(\alpha\right)=\frac{\left|{\rm B}-{\rm A}\right|}{\left|{\rm C}-{\rm A}\right|}\]</li>
+        Seguono \(\dots\) <button><a onclick="Show('1N')">SHOW</a></button>
+        <div class="proof" id="1N">
+            I casi particolari:
+            \[\begin{split}
+                \sin\left(0\right)&=0\\
+                \sin\left(\frac{\pi}{6}\right)&=\frac{\sqrt{3}}{2}\\
+                \sin\left(\frac{\pi}{4}\right)&=\frac{\sqrt{2}}{2}\\
+                \sin\left(\frac{\pi}{3}\right)&=\frac{1}{2}\\
+                \sin\left(\frac{\pi}{2}\right)&=1
+            \end{split}\qquad\begin{split}
+                \cos\left(0\right)&=1\\
+                \cos\left(\frac{\pi}{6}\right)&=\frac{1}{2}\\
+                \cos\left(\frac{\pi}{4}\right)&=\frac{\sqrt{2}}{2}\\
+                \cos\left(\frac{\pi}{3}\right)&=\frac{\sqrt{3}}{2}\\
+                \cos\left(\frac{\pi}{2}\right)&=0
+            \end{split}\]
+            E le simmetrie:
+            \[\sin\left({\rm x}\right)=\sin\left(\pi-{\rm x}\right)=-\sin\left({\rm x}+\pi\right)=-\sin\left(-{\rm x}\right)\]
+            \[\cos\left({\rm x}\right)=-\cos\left(\pi-{\rm x}\right)=-\cos\left({\rm x}+\pi\right)=\cos\left(-{\rm x}\right)\]
+            <button onclick="Hide('1N')">HIDE</button>
+        </div>
+    </div>
+    <div class="block F">
         La rotazione di un angolo \(\theta\) fa corrispondere ad un vettore \({\rm v}\) il vettore:
         \[\cos\left(\theta\right)\cdot{\rm v}+\sin\left(\theta\right)\cdot{\cal Z}\times{\rm v}=\cos\left(\theta\right)\cdot{\rm v}-\sin\left(\theta\right)\cdot{\rm v}\times{\cal Z}\]
         Dove \({\cal Z}\) è il versore uscente dal piano cartesiano:
@@ -36,42 +54,49 @@
             <li>\({\rm v}\times{\cal Z}\) indica la rotazione di \({\rm v}\) di \(\pi/2\) in senso orario.</li>
         </ul>
     </div>
-    <div class="block R">
-        Osserviamo che:
-        <ul>
-            <li>\[\sin\left(0\right)=\cos\left(\frac{\pi}{2}\right)=0\qquad\cos\left(0\right)=\sin\left(\frac{\pi}{2}\right)=1\qquad\cos\left(\frac{\pi}{3}\right)=\sin\left(\frac{\pi}{4}\right)=\frac{\sqrt{2}}{2}\]</li>
-            <li>\[\sin\left(\frac{\pi}{3}\right)=\cos\left(\frac{\pi}{6}\right)=\frac{\sqrt{3}}{2}\qquad\cos\left(\pi/6\right)=\sin\left(\frac{\pi}{3}\right)=\frac{1}{2}\]</li>
-            <li>\[\sin\left(\frac{\pi}{2}-{\rm x}\right)=\cos\left({\rm x}\right)\qquad\cos\left(\frac{\pi}{2}-{\rm x}\right)=\sin\left({\rm x}\right)\]</li>
-            <li>\[\sin\left({\rm x}\right)+\sin\left({\rm x}+\pi\right)=0\qquad\cos\left({\rm x}\right)+\cos\left({\rm x}+\pi\right)=0\]</li>
-        </ul>
-    </div>
 </div>
 
 <div class="slide">
     <h2>le formule goniometriche</h2>
-    <div class="block D">
-        Seguono le formule di addizione:
+    <div class="block Q">
+    Consideriamo un vettore \({\rm v}\):
         <ul>
-            <li>\[\sin\left(\alpha+\beta\right)=\sin\left(\alpha\right)\cdot\cos\left(\beta\right)+\cos\left(\alpha\right)\cdot\sin\left(\beta\right)\qquad\sin\left(\alpha-\beta\right)=\sin\left(\alpha\right)\cdot\cos\left(\beta\right)-\cos\left(\alpha\right)\cdot\sin\left(\beta\right)\]</li>
-            <li>\[\cos\left(\alpha+\beta\right)=\cos\left(\alpha\right)\cdot\cos\left(\beta\right)-\sin\left(\alpha\right)\cdot\sin\left(\beta\right)\qquad\cos\left(\alpha-\beta\right)=\cos\left(\alpha\right)\cdot\cos\left(\beta\right)+\sin\left(\alpha\right)\cdot\sin\left(\beta\right)\]</li>
+            <li>Come posso scrivere la rotazione di \({\rm v}\) di angolo \(\alpha\)?</li>
+            <li>Come posso scrivere la rotazione di \({\rm v}\) di angolo \(\beta\)?</li>
+            <li>Come posso scrivere la rotazione di \({\rm v}\) di angolo \(\alpha+\beta\)?</li>
         </ul>
     </div>
     <div class="block F">
-        Seguono le formule di werner:
+        Seguono le formule di addizione:
         <ul>
-            <li>\[\sin\left(\alpha\right)\cdot\cos\left(\beta\right)=\frac{\sin\left(\alpha+\beta\right)+\sin\left(\alpha-\beta\right)}{2}\qquad\cos\left(\alpha\right)\cdot\sin\left(\beta\right)=\frac{\sin\left(\alpha+\beta\right)-\sin\left(\alpha-\beta\right)}{2}\]</li>
-            <li>\[\sin\left(\alpha\right)\cdot\sin\left(\beta\right)=\frac{\cos\left(\alpha-\beta\right)-\cos\left(\alpha+\beta\right)}{2}\qquad\cos\left(\alpha\right)\cdot\cos\left(\beta\right)=\frac{\cos\left(\alpha-\beta\right)+\cos\left(\alpha+\beta\right)}{2}\]</li>
+            <li>\[\sin\left(\alpha+\beta\right)=\sin\left(\alpha\right)\cdot\cos\left(\beta\right)+\cos\left(\alpha\right)\cdot\sin\left(\beta\right)\]</li>
+            <li>\[\sin\left(\alpha-\beta\right)=\sin\left(\alpha\right)\cdot\cos\left(\beta\right)-\cos\left(\alpha\right)\cdot\sin\left(\beta\right)\]</li>
+            <li>\[\cos\left(\alpha+\beta\right)=\cos\left(\alpha\right)\cdot\cos\left(\beta\right)-\sin\left(\alpha\right)\cdot\sin\left(\beta\right)\]</li>
+            <li>\[\cos\left(\alpha-\beta\right)=\cos\left(\alpha\right)\cdot\cos\left(\beta\right)+\sin\left(\alpha\right)\cdot\sin\left(\beta\right)\]</li>
         </ul>
-        Seguono le formule di prostaferesi:
-        <ul>            
-            <li>\[\sin\left(\alpha\right)+\sin\left(\beta\right)=2\cdot\sin\left(\frac{\alpha+\beta}{2}\right)\cdot\cos\left(\frac{\alpha-\beta}{2}\right)\qquad\sin\left(\alpha\right)-\sin\left(\beta\right)=2\cdot\cos\left(\frac{\alpha+\beta}{2}\right)\cdot\sin\left(\frac{\alpha-\beta}{2}\right)\]</li>
-            <li>\[\cos\left(\beta\right)-\cos\left(\alpha\right)=2\cdot\sin\left(\frac{\alpha+\beta}{2}\right)\cdot\sin\left(\frac{\alpha-\beta}{2}\right)\qquad\cos\left(\beta\right)+\cos\left(\alpha\right)=2\cdot\cos\left(\frac{\alpha+\beta}{2}\right)\cdot\cos\left(\frac{\alpha-\beta}{2}\right)\]</li>
-        </ul>
+        Seguono \(\dots\) <button><a onclick="Show('2F')">SHOW</a></button>
+        <div class="proof" id="2F">
+            Le formule di werner:
+            <ul>
+                <li>\[\sin\left(\alpha\right)\cdot\cos\left(\beta\right)=\frac{\sin\left(\alpha+\beta\right)+\sin\left(\alpha-\beta\right)}{2}\]</li>
+                <li>\[\cos\left(\alpha\right)\cdot\sin\left(\beta\right)=\frac{\sin\left(\alpha+\beta\right)-\sin\left(\alpha-\beta\right)}{2}\]</li>
+                <li>\[\sin\left(\alpha\right)\cdot\sin\left(\beta\right)=\frac{\cos\left(\alpha-\beta\right)-\cos\left(\alpha+\beta\right)}{2}\]</li>
+                <li>\[\cos\left(\alpha\right)\cdot\cos\left(\beta\right)=\frac{\cos\left(\alpha-\beta\right)+\cos\left(\alpha+\beta\right)}{2}\]</li>
+            </ul>
+            Le formule di prostaferesi:
+            <ul>            
+                <li>\[\sin\left(\alpha\right)+\sin\left(\beta\right)=2\cdot\sin\left(\frac{\alpha+\beta}{2}\right)\cdot\cos\left(\frac{\alpha-\beta}{2}\right)\]</li>
+                <li>\[\sin\left(\alpha\right)-\sin\left(\beta\right)=2\cdot\cos\left(\frac{\alpha+\beta}{2}\right)\cdot\sin\left(\frac{\alpha-\beta}{2}\right)\]</li>
+                <li>\[\cos\left(\beta\right)-\cos\left(\alpha\right)=2\cdot\sin\left(\frac{\alpha+\beta}{2}\right)\cdot\sin\left(\frac{\alpha-\beta}{2}\right)\]</li>
+                <li>\[\cos\left(\beta\right)+\cos\left(\alpha\right)=2\cdot\cos\left(\frac{\alpha+\beta}{2}\right)\cdot\cos\left(\frac{\alpha-\beta}{2}\right)\]</li>
+            </ul>
+            <button onclick="Hide('2F')">HIDE</button>
+        </div>
     </div>
     <div class="block R">
         Siccome:
         \[\cos\left(2\cdot\alpha\right)=2\cdot\cos\left(\alpha\right)^2-1=1-2\cdot\sin\left(\alpha\right)^2\]
-        Possiamo ricavare le formule di bisezione:
+        Ricaviamo le formule di bisezione:
         \[\begin{cases}\cos\left(\frac{\alpha}{2}\right)=\pm\sqrt{\frac{1+\cos\left(\alpha\right)}{2}}\\\sin\left(\frac{\alpha}{2}\right)=\pm\sqrt{\frac{1-\cos\left(\alpha\right)}{2}}\end{cases}\]
         Da cui possiamo calcolare:
         \[\pi=\sup_{{\rm n}\in{\mathbb N}}\left(2^{\rm n}\cdot\sin\left(\frac{\pi}{2^{\rm n}}\right)\right)\]
@@ -81,25 +106,52 @@
 <div class="slide">
     <h2>le tangenti e cotangenti</h2>
     <div class="block N">
-        Si definiscono:
+        Definiamo:
         \[\tan\left(\alpha\right)=\frac{\sin\left(\alpha\right)}{\cos\left(\alpha\right)}\qquad\cot\left(\alpha\right)=\frac{\cos\left(\alpha\right)}{\sin\left(\alpha\right)}\]
+        Seguono \(\dots\) <button><a onclick="Show('3N')">SHOW</a></button>
+        <div class="proof" id="3N">
+            Le simmetrie:
+            <button onclick="Hide('3N')">HIDE</button>
+        </div>
     </div>
     <div class="block F">
-        Seguono le formule di addizione:
-        <ul>
-            <li>\[\tan\left(\alpha+\beta\right)=\frac{\tan\left(\alpha\right)+\tan\left(\beta\right)}{1-\tan\left(\alpha\right)\cdot\tan\left(\beta\right)}\qquad\cot\left(\alpha+\beta\right)=\frac{\cot\left(\alpha\right)\cdot\cot\left(\beta\right)-1}{\cot\left(\beta\right)+\cot\left(\alpha\right)}\]</li>
-            <li>\[\tan\left(\alpha-\beta\right)=\frac{\tan\left(\alpha\right)-\tan\left(\beta\right)}{1+\tan\left(\alpha\right)\cdot\tan\left(\beta\right)}\qquad\cot\left(\alpha-\beta\right)=\frac{\cot\left(\alpha\right)\cdot\cot\left(\beta\right)+1}{\cot\left(\beta\right)-\cot\left(\alpha\right)}\]</li>
-        </ul>
-        Possiamo ricavare le formule di bisezione:
-        <ul>
-            <li>\[\tan\left(2\cdot\alpha\right)=\frac{2\cdot\tan\left(\alpha\right)}{1-\tan\left(\alpha\right)^2}\Longrightarrow\tan\left(\frac{\alpha}{2}\right)=\frac{\sqrt{\tan\left(\alpha\right)^2+1}-1}{\tan\left(\alpha\right)}\]</li>
-            <li>\[\cot\left(2\cdot\alpha\right)=\frac{\cot\left(\alpha\right)^2-1}{2\cdot\cot\left(\alpha\right)}\Longrightarrow\cot\left(\frac{\alpha}{2}\right)=\cot\left(\alpha\right)-\sqrt{\cot\left(\alpha\right)^2+1}\]</li>
-        </ul>
+        Seguono \(\dots\) <button><a onclick="Show('3F')">SHOW</a></button>
+        <div class="proof" id="3F">
+            Le formule di addizione per \(\tan\):
+            \[\begin{split}
+                \tan\left(\alpha+\beta\right)&=\frac{\tan\left(\alpha\right)+\tan\left(\beta\right)}{1-\tan\left(\alpha\right)\cdot\tan\left(\beta\right)}\\
+                &=\frac{\tan\left(\alpha\right)\cdot\cot\left(\beta\right)+1}{\cot\left(\beta\right)-\tan\left(\alpha\right)}\\
+                &=\frac{1+\cot\left(\alpha\right)\cdot\tan\left(\beta\right)}{\cot\left(\alpha\right)-\tan\left(\beta\right)}\\
+                &=\frac{\cot\left(\beta\right)+\cot\left(\alpha\right)}{\cot\left(\alpha\right)\cdot\cot\left(\beta\right)-1}\\
+            \end{split}\qquad\begin{split}
+                \tan\left(\alpha-\beta\right)&=\frac{\tan\left(\alpha\right)-\tan\left(\beta\right)}{1+\tan\left(\alpha\right)\cdot\tan\left(\beta\right)}\\
+                &=\frac{\tan\left(\alpha\right)\cdot\cot\left(\beta\right)-1}{\cot\left(\beta\right)+\tan\left(\alpha\right)}\\
+                &=\frac{1-\cot\left(\alpha\right)\cdot\tan\left(\beta\right)}{\cot\left(\alpha\right)+\tan\left(\beta\right)}\\
+                &=\frac{\cot\left(\beta\right)-\cot\left(\alpha\right)}{\cot\left(\alpha\right)\cdot\cot\left(\beta\right)+1}\\
+            \end{split}\]
+            Le formule di addizione per \(\cot\):
+            \[\begin{split}
+                \cot\left(\alpha+\beta\right)&=\frac{1-\tan\left(\alpha\right)\cdot\tan\left(\beta\right)}{\tan\left(\alpha\right)+\tan\left(\beta\right)}\\
+                &=\frac{\cot\left(\beta\right)-\tan\left(\alpha\right)}{\tan\left(\alpha\right)\cdot\cot\left(\beta\right)+1}\\
+                &=\frac{\cot\left(\alpha\right)-\tan\left(\beta\right)}{1+\cot\left(\alpha\right)\cdot\tan\left(\beta\right)}\\
+                &=\frac{\cot\left(\alpha\right)\cdot\cot\left(\beta\right)-1}{\cot\left(\beta\right)+\cot\left(\alpha\right)}\\
+            \end{split}\qquad\begin{split}
+                \cot\left(\alpha-\beta\right)&=\frac{1+\tan\left(\alpha\right)\cdot\tan\left(\beta\right)}{\tan\left(\alpha\right)-\tan\left(\beta\right)}\\
+                &=\frac{\cot\left(\beta\right)+\tan\left(\alpha\right)}{\tan\left(\alpha\right)\cdot\cot\left(\beta\right)-1}\\
+                &=\frac{\cot\left(\alpha\right)+\tan\left(\beta\right)}{1-\cot\left(\alpha\right)\cdot\tan\left(\beta\right)}\\
+                &=\frac{\cot\left(\alpha\right)\cdot\cot\left(\beta\right)+1}{\cot\left(\beta\right)-\cot\left(\alpha\right)}\\
+            \end{split}\]
+            <button onclick="Hide('3F')">HIDE</button>
+        </div>
+        Le formule di duplicazione:
+        \[\tan\left(2\cdot\alpha\right)=\frac{2\cdot\tan\left(\alpha\right)}{1-\tan\left(\alpha\right)^2}\qquad\cot\left(2\cdot\alpha\right)=\frac{\cot\left(\alpha\right)^2-1}{2\cdot\cot\left(\alpha\right)}\]
     </div>
     <div class="block R">
         Osservare che:
-        \[\cos\left(\theta\right)=\frac{1}{\sqrt{1+\tan\left(\theta\right)^2}}=\frac{1-\tan\left(\frac{\theta}{2}\right)^2}{1+\tan\left(\frac{\theta}{2}\right)^2}\qquad\sin\left(\theta\right)=\frac{\tan\left(\theta\right)}{\sqrt{1+\tan\left(\theta\right)^2}}=\frac{2\cdot\tan\left(\frac{\theta}{2}\right)}{1+\tan\left(\frac{\theta}{2}\right)^2}\]
-        \[\cos\left(\theta\right)=\frac{\cot\left(\theta\right)}{\sqrt{1+\cot\left(\theta\right)^2}}=\frac{\cot\left(\frac{\theta}{2}\right)^2-1}{\cot\left(\frac{\theta}{2}\right)^2+1}\qquad\sin\left(\theta\right)=\frac{1}{\sqrt{1+\cot\left(\theta\right)^2}}=\frac{-2\cdot\cot\left(\frac{\theta}{2}\right)}{\cot\left(\frac{\theta}{2}\right)^2+1}\]
+        <ul>
+            <li>\[\cos\left(\theta\right)=\frac{1}{\sqrt{1+\tan\left(\theta\right)^2}}=\frac{1-\tan\left(\frac{\theta}{2}\right)^2}{1+\tan\left(\frac{\theta}{2}\right)^2}\qquad\sin\left(\theta\right)=\frac{\tan\left(\theta\right)}{\sqrt{1+\tan\left(\theta\right)^2}}=\frac{2\cdot\tan\left(\frac{\theta}{2}\right)}{1+\tan\left(\frac{\theta}{2}\right)^2}\]</li>
+            <li>\[\cos\left(\theta\right)=\frac{\cot\left(\theta\right)}{\sqrt{1+\cot\left(\theta\right)^2}}=\frac{\cot\left(\frac{\theta}{2}\right)^2-1}{\cot\left(\frac{\theta}{2}\right)^2+1}\qquad\sin\left(\theta\right)=\frac{1}{\sqrt{1+\cot\left(\theta\right)^2}}=\frac{-2\cdot\cot\left(\frac{\theta}{2}\right)}{\cot\left(\frac{\theta}{2}\right)^2+1}\]</li>
+        </ul>
     </div>
 </div>
 

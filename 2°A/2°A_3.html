@@ -72,10 +72,28 @@
         La prima legge di monotonia si scrive:
         \[{\rm a}+{\rm c}={\rm b}+{\rm c}\Longleftrightarrow{\rm a}\ge{\rm b}\Longleftrightarrow{\rm a}-{\rm c}={\rm b}-{\rm c}\]
         La seconda legge di monotonia si scrive:
-        <ul>
-            <li>\[\begin{cases}{\rm a}\ge{\rm b}\\{\rm c}\ge0\end{cases}\Longrightarrow{\rm a}\cdot{\rm c}\ge{\rm b}\cdot{\rm c}\qquad\begin{cases}{\rm a}\ge{\rm b}\\{\rm c}\le0\end{cases}\Longrightarrow{\rm a}\cdot{\rm c}\le{\rm b}\cdot{\rm c}\]</li>
-            <li>\[\begin{cases}{\rm a}\gt{\rm b}\\{\rm c}\gt0\end{cases}\Longrightarrow{\rm a}:{\rm c}\gt{\rm b}:{\rm c}\qquad\begin{cases}{\rm a}\gt{\rm b}\\{\rm c}\lt0\end{cases}\Longrightarrow{\rm a}:{\rm c}\lt{\rm b}:{\rm c}\]</li>
-        </ul>
+        \[\begin{split}
+            \begin{cases}{\rm a}\ge{\rm b}\\{\rm c}\ge0\end{cases}&\Longrightarrow{\rm a}\cdot{\rm c}\ge{\rm b}\cdot{\rm c}\\
+            \begin{cases}{\rm a}\ge{\rm b}\\{\rm c}\le0\end{cases}&\Longrightarrow{\rm a}\cdot{\rm c}\le{\rm b}\cdot{\rm c}\\
+            \begin{cases}{\rm a}\gt{\rm b}\\{\rm c}\gt0\end{cases}&\Longrightarrow{\rm a}:{\rm c}\gt{\rm b}:{\rm c}\\
+            \begin{cases}{\rm a}\gt{\rm b}\\{\rm c}\lt0\end{cases}&\Longrightarrow{\rm a}:{\rm c}\lt{\rm b}:{\rm c}
+        \end{split}\]
+        Queste si possono anche scrivere come \(\dots\) <button onclick="Show('2R')">SHOW</button>
+        <div class="proof" id="2R">
+            La prima legge di monotonia:
+            \[\begin{split}
+                \max\left({\rm a}+{\rm c},{\rm b}+{\rm c}\right)&=\max\left({\rm a},{\rm b}\right)+{\rm c}\\
+                \max\left({\rm a}-{\rm c},{\rm b}-{\rm c}\right)&=\max\left({\rm a},{\rm b}\right)-{\rm c}\\
+                \min\left({\rm a}+{\rm c},{\rm b}+{\rm c}\right)&=\min\left({\rm a},{\rm b}\right)+{\rm c}\\
+                \min\left({\rm a}-{\rm c},{\rm b}-{\rm c}\right)&=\min\left({\rm a},{\rm b}\right)-{\rm c}
+            \end{split}\]
+            La seconda legge di monotonia:
+            \[\begin{split}
+                {\rm c}\gt0&\Longrightarrow\begin{cases}\max\left({\rm a},{\rm b}\right)\cdot{\rm c}=\max\left({\rm a}\cdot{\rm c},{\rm b}\cdot{\rm c}\right)\\\min\left({\rm a},{\rm b}\right)\cdot{\rm c}=\min\left({\rm a}\cdot{\rm c},{\rm b}\cdot{\rm c}\right)\end{cases}\\
+                {\rm c}\lt0&\Longrightarrow\begin{cases}\max\left({\rm a},{\rm b}\right)\cdot{\rm c}=\min\left({\rm a}\cdot{\rm c},{\rm b}\cdot{\rm c}\right)\\\min\left({\rm a},{\rm b}\right)\cdot{\rm c}=\max\left({\rm a}\cdot{\rm c},{\rm b}\cdot{\rm c}\right)\end{cases}
+            \end{split}\]
+            <button onclick="Hide('2R')">HIDE</button>
+        </div>
     </div>
 </div>
 

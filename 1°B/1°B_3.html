@@ -11,7 +11,7 @@
     <ol>
         <li>l'insieme prodotto (NFR)</li>
         <li>funzioni e potenze (NDR)</li>
-        <li>funzioni e inverse (FD)</li>
+        <li>funzioni e inverse (NFR)</li>
     </ol>
 </div>
 
@@ -42,7 +42,7 @@
 </div>
 
 <div class="slide">
-    <h2>le funzioni e potenze</h2>
+    <h2>funzioni e potenze</h2>
     <div class="block N">
         Diciamo \({\rm A}^{\rm B}\) l'insieme delle funzioni \({\rm f}:{\rm B}\rightarrow{\rm A}\).
     </div>
@@ -68,29 +68,24 @@
 
 <div class="slide">
     <h2>funzioni e inverse</h2>
-    <div class="block F">
+    <div class="block N">
         Una relazione \({\cal R}\), cioè un predicato di due variabili, è detta funzionale da un dominio \({\rm A}\) ad un codominio \({\rm B}\) quando:
         \[\forall{\rm x}\in{\rm A}\quad\exists{\rm y}\in{\rm B}\quad\forall{\rm z}\in{\rm B}\quad{\cal R}\left({\rm x},{\rm z}\right)\Leftrightarrow{\rm z}={\rm y}\]
         Tale proprietà è equivalente a:
         \[\exists{\rm f}\in{\rm B}^{\rm A}\quad\forall\left({\rm x},{\rm y}\right)\in{\rm A}\times{\rm B}\quad{\cal R}\left({\rm x},{\rm y}\right)\Leftrightarrow{\rm y}={\rm f}\left({\rm x}\right)\]
+    </div>
+    <div class="block F">
         Il fatto che esista una funzione inversa:
         \[\exists{\rm g}\in{\rm A}^{\rm B}\quad\forall\left({\rm x},{\rm y}\right)\in{\rm A}\times{\rm B}\quad{\rm y}={\rm f}\left({\rm x}\right)\Leftrightarrow{\rm x}={\rm g}\left({\rm y}\right)\]
         Dipende dalla proprietà:
-        \[\forall{\rm y}\in{\rm B}\quad\exists{\rm x}\in{\rm A}\quad\forall{\rm z}\in{\rm A}\quad{\rm f}\left({\rm z}\right)={\rm y}\Leftrightarrow{\rm z}={\rm x}\]
+        \[\left[\forall{\rm y}\in{\rm B}\quad\exists{\rm x}\in{\rm A}\quad\forall{\rm z}\in{\rm A}\quad{\rm f}\left({\rm z}\right)={\rm y}\Leftrightarrow{\rm z}={\rm x}\right]\Longleftrightarrow\begin{cases}\forall{\rm y}\in{\rm B}\quad\exists{\rm x}\in{\rm A}\quad{\rm f}\left({\rm x}\right)={\rm y}\\\forall\left({\rm x},{\rm z}\right)\in{\rm A}\times{\rm A}\quad{\rm f}\left({\rm x}\right)={\rm f}\left({\rm z}\right)\Longrightarrow{\rm x}={\rm z}\end{cases}\]</li>
+        Le due condizioni a destra si dicono suriettività ed iniettività, rispettivamente.
     </div>
     <div class="block R">
-        Sia \({\rm f}:{\rm A}\rightarrow{\rm B}\), definiamo le fibre \({\rm f}^{-1}:{\rm B}\rightarrow{\cal P}\left({\rm B}\right)\) come:
-        \[{\rm x}\in{\rm f}^{-1}\left({\rm y}\right)\Longleftrightarrow{\rm f}\left({\rm x}\right)={\rm y}\]
-        Allora vale la proprietà:
-        \[\left|{\rm A}\right|=\sum_{{\rm y}\in{\rm B}}\left|{\rm f}^{-1}\left({\rm y}\right)\right|\]
-        Ma l'invertibilità di \({\rm f}\) è equivalente a
-        \[\forall{\rm y}\in{\rm B}\quad\left|{\rm f}^{-1}\left({\rm y}\right)\right|=1\]
-        Ma la stessa formula può mostrare che:
-        <ul>
-            <li>\[\left[\forall{\rm y}\in{\rm B}\quad\exists{\rm x}\in{\rm A}\quad{\rm f}\left({\rm x}\right)={\rm y}\right]\Longrightarrow\left|{\rm A}\right|\ge\left|{\rm B}\right|\]</li>
-            <li>\[\left[\forall\left({\rm x},{\rm z}\right)\in{\rm A}\times{\rm A}\quad{\rm f}\left({\rm x}\right)={\rm f}\left({\rm z}\right)\Longrightarrow{\rm x}={\rm z}\right]\Longrightarrow\left|{\rm A}\right|\le\left|{\rm B}\right|\]</li>
-        </ul>
-        Tali funzioni si dicono suriettive, iniettive rispettivamente.
+        Supponiamo che:
+        \[\left\{{\cal E}\left({\rm x}\right)\quad{\rm x}\in{\rm A}\right\}=\left\{{\rm x}\in{\rm B}\quad{\cal C}\left({\rm x}\right)\right\}\]
+        Allora, per \(\left({\rm f},{\rm g}\right)\in\left({\rm C}^{\rm A}\right)\times\left({\rm A}^{\rm C}\right)\) inverse l'una dell'altra:
+        \[\left\{\left[{\rm f}\circ{\cal E}\right]\left({\rm x}\right)\quad{\rm x}\in{\rm A}\right\}=\left\{{\rm x}\in{\rm B}\quad\left[{\cal C}\circ{\rm g}\right]\left({\rm x}\right)\right\}\]
     </div>
 </div>
 

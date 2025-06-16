@@ -8,24 +8,25 @@
   - somma tra naturali (QNF)
   - la moltiplicazione (QNF)
   - sulla distributiva (QFR)
-- <a href="1°A/1°A_2.html">le differenza e naturali</a>
+- <a href="1°A/1°A_2.html">la differenza e naturali</a>
   - sul confronto (QNF)
   - la differenza (QFR)
-  - numeri interi (QNF)
+  - numeri interi (QNR)
 - <a href="1°A/1°A_3.html">divisione e divisibilità</a>
   - la divisione intera euclidea (QNF)
   - le proprietà della divisione (QFR)
-  - sguardo sui numeri razionali (QNF)
+  - sguardo sui numeri razionali (QNR)
 - <a href="1°A/1°A_4.html">potenze di numeri interi</a>
   - potenze e proprietà (QNF)
+  - polinomi e naturali (QNF)
   - la serie geometrica (QFR)
 
 ### Parte B
 
 - <a href="1°B/1°B_1.html">i predicati</a>
   - congiunzione e disgiunzione (NFR)
-  - le tautologie e gli assurdi (QNF)
-  - predicati e quantificazione (NDF)
+  - le tautologie e gli assurdi (NFR)
+  - predicati e quantificazione (NFR)
 - <a href="1°B/1°B_2.html">gli insiemi</a>
   - che cosa è un insieme (NFR)
   - operazioni di insiemi (NFR)
@@ -35,9 +36,9 @@
   - funzioni e potenze (NFR)
   - funzioni e inverse (NFR)
 - <a href="1°B/1°B_4.html">invertibili</a>
+  - cardinalità delle fibre (NFR)
   - immagini ed iniettività (NFR)
   - equivalenze e quozienti (NFR)
-  - risolvere una equazione (QFR)
 
 ## 2° anno
 
@@ -56,8 +57,9 @@
   - sui numeri reali (NFR)
   - sulla continuità (NF)
 - <a href="2°A/2°A_4.html">le paraboliche</a>
-  - reali e radicali (NFR)
-  - equazioni quadre (QFR)
+  - i reali ed i radicali (NFR)
+  - equazioni quadratiche (QFR)
+  - equazioni di parabola (DF)
 
 ### Parte B
 
@@ -87,8 +89,9 @@
   - zeri e divisori (DFR)
   - fratti semplici (NFR)
 - <a href="3°A/3°A_2.html">la geometria analitica</a>
-  - equazioni analitiche delle rette (NDF)
-  - prodotto vettoriale nello spazio (NDR)
+  - le rette e il piano (NDF)
+  - cambiare coordinate ()
+  - il prodotto vettore (NDR)
 - <a href="3°A/3°A_3.html">i sistemi di equazioni</a>
   - sistemi lineari di due variabili (QFR)
   - proiettive ed equazioni omogenee (NFR)
@@ -111,6 +114,8 @@
 - <a href="3°B/3°B_3.html">relazioni: ordinamento</a>
   - gli ordini e ordinamento (NFR)
   - sugli elementi estremali (NFR)
+- <a href="1°B/1°B_4.html">invertibilità funzioni</a>
+  - risolvere una equazione (QFR)
 
 ## 4° anno
 
@@ -120,14 +125,14 @@
   - l'esponenziale e nepero (NFR)
   - le funzioni iperboliche (NFR)
   - le tangenti iperboliche (NFR)
-- <a href="4°A/4°A_2.html">le funzioni inverse iperboliche</a> (ERRORE NAVBUTTONS)
+- <a href="4°A/4°A_2.html">le funzioni inverse iperboliche</a>
   - sulle inverse iperboliche (NFR)
   - l'arcotangente iperbolica (NFR)
-  - equazione di una iperbole
+  - equazione di una iperbole (DF)
 - <a href="4°A/4°A_3.html">funzioni inverse: goniometriche</a>
   - le arcoseno ed arcocoseno (NFR)
   - la funzione arco tangente (NFR)
-  - l'equazione di un'ellisse
+  - l'equazione di un'ellisse (DF)
 - <a href="4°A/4°A_4.html">le coniche nel piano cartesiano</a>
   - descrizioni cartesiane (NFR)
   - equazioni parametriche (DFR)

@@ -11,6 +11,7 @@
     <ol>
         <li>le arcoseno ed arcocoseno (NFR)</li>
         <li>la funzione arco tangente (NFR)</li>
+        <li>l'equazione di un'ellisse (DF)</li>
     </ol>
 </div>
 
@@ -18,66 +19,103 @@
     <h2>le arcoseno ed arcocoseno</h2>
     <div class="block N">
         Definiamo:
-        \[\arcsin:\left[-1,1\right]\rightarrow\left[-\frac{\pi}{2},\frac{\pi}{2}\right]\qquad\arccos:\left[-1,1\right]\rightarrow\left[0,\pi\right]\]
-        Dove:
         <ul>
-            <li>\[{\rm x}=\pi\cdot{\rm k}+\arcsin\left(\left(-1\right)^{\rm k}\cdot{\rm y}\right)\Longleftrightarrow\begin{cases}\left({\rm x}+\pi/2\right)/\!\!/\pi={\rm k}\\\sin\left({\rm x}\right)={\rm y}\end{cases}\]</li>
-            <li>\[{\rm x}=\pi\cdot{\rm k}+\arccos\left(\left(-1\right)^{\rm k}\cdot{\rm y}\right)\Longleftrightarrow\begin{cases}{\rm x}/\!\!/\pi={\rm k}\\\cos\left({\rm x}\right)={\rm y}\end{cases}\]</li>
+            <li>\[\arcsin:\left[-1,1\right]\rightarrow\left[-\frac{\pi}{2},\frac{\pi}{2}\right]\qquad{\rm x}=\pi\cdot{\rm k}+\arcsin\left(\left(-1\right)^{\rm k}\cdot{\rm y}\right)\Longleftrightarrow\begin{cases}\left({\rm x}+\pi/2\right)/\!\!/\pi={\rm k}\\\sin\left({\rm x}\right)={\rm y}\end{cases}\]</li>
+            <li>\[\arccos:\left[-1,1\right]\rightarrow\left[0,\pi\right]\qquad{\rm x}=\pi\cdot{\rm k}+\arccos\left(\left(-1\right)^{\rm k}\cdot{\rm y}\right)\Longleftrightarrow\begin{cases}{\rm x}/\!\!/\pi={\rm k}\\\cos\left({\rm x}\right)={\rm y}\end{cases}\]</li>
         </ul>
+        Seguono \(\dots\) <button><a onclick="Show('1N')">SHOW</a></button>
+        <div class="proof" id="1N">
+            I casi particolari:
+            \[\begin{split}
+                \arcsin\left(0\right)&=0\\
+                \arcsin\left(\frac{\sqrt{3}}{2}\right)&=\frac{\pi}{6}\\
+                \arcsin\left(\frac{\sqrt{2}}{2}\right)&=\frac{\pi}{4}\\
+                \arcsin\left(\frac{1}{2}\right)&=\frac{\pi}{3}\\
+                \arcsin\left(1\right)&=\frac{\pi}{2}
+            \end{split}\qquad\begin{split}
+                \arccos\left(1\right)&=0\\
+                \arccos\left(\frac{1}{2}\right)&=\frac{\pi}{6}\\
+                \arccos\left(\frac{\sqrt{2}}{2}\right)&=\frac{\pi}{4}\\
+                \arccos\left(\frac{\sqrt{3}}{2}\right)&=\frac{\pi}{3}\\
+                \arccos\left(0\right)&=\frac{\pi}{2}
+            \end{split}\]
+            Le simmetrie:
+            \[\arcsin\left({\rm a}\right)=-\arcsin\left(-{\rm a}\right)=\frac{\pi}{2}-\arccos\left({\rm a}\right)=\arccos\left(-{\rm a}\right)-\frac{\pi}{2}\]
+            \[\arccos\left({\rm a}\right)=\pi-\arccos\left(-{\rm a}\right)=\frac{\pi}{2}-\arcsin\left({\rm a}\right)=\frac{\pi}{2}+\arcsin\left(-{\rm a}\right)\]
+            E pitagora:
+            \[\arcsin\left({\rm a}\right)=\arccos\left(\sqrt{1-{\rm a}^2}\right)\qquad\arccos\left({\rm a}\right)=\arcsin\left(\sqrt{1-{\rm a}^2}\right)\]
+            <button onclick="Hide('1N')">HIDE</button>
+        </div>
     </div>
     <div class="block F">
-        Seguono le formule di addizione:
-        <ul>
-            <li>\[\arcsin\left({\rm a}\cdot{\rm b}+\sqrt{\left(1-{\rm a}^2\right)\cdot\left(1-{\rm b}^2\right)}\right)=\arcsin\left({\rm a}\right)+\arccos\left({\rm b}\right)\]</li>
-            <li>\[\arcsin\left({\rm a}\cdot{\rm b}-\sqrt{\left(1-{\rm a}^2\right)\cdot\left(1-{\rm b}^2\right)}\right)=\arcsin\left({\rm a}\right)-\arccos\left({\rm b}\right)\]</li>
-            <li>\[\arccos\left(\sqrt{\left(1-{\rm a}^2\right)\cdot\left(1-{\rm b}^2\right)}-{\rm a}\cdot{\rm b}\right)=\arcsin\left({\rm b}\right)+\arcsin\left({\rm a}\right)\]</li>
-            <li>\[\arccos\left(\sqrt{\left(1-{\rm a}^2\right)\cdot\left(1-{\rm b}^2\right)}+{\rm a}\cdot{\rm b}\right)=\arcsin\left({\rm b}\right)-\arcsin\left({\rm a}\right)\]</li>
-        </ul>
-        E le simmetrie:
-        <ul>
-            <li>\[\frac{\pi}{2}-\arcsin\left({\rm a}\right)=\arccos\left({\rm a}\right)=\arcsin\left(\sqrt{1-{\rm a}^2}\right)\]</li>
-            <li>\[\frac{\pi}{2}-\arccos\left({\rm a}\right)=\arcsin\left({\rm a}\right)=\arccos\left(\sqrt{1-{\rm a}^2}\right)\]</li>
-        </ul>
-    </div>
-    <div class="block R">
-        Possiamo ricavare le formule di bisezione:
+        Seguono \(\dots\) <button><a onclick="Show('1F')">SHOW</a></button>
+        <div class="proof" id="1F">
+            Le formule di addizione:
+            <ul>
+                <li>\[\arcsin\left({\rm a}\right)+\arcsin\left({\rm b}\right)=\arccos\left(\sqrt{1-{\rm a}^2}\cdot\sqrt{1-{\rm b}^2}-{\rm a}\cdot{\rm b}\right)=\arcsin\left({\rm a}\cdot\sqrt{1-{\rm b}^2}+\sqrt{1-{\rm a}^2}\cdot{\rm b}\right)\]</li>
+                <li>\[\arcsin\left({\rm a}\right)+\arccos\left({\rm b}\right)=\arccos\left(\sqrt{1-{\rm a}^2}\cdot{\rm b}-{\rm a}\cdot\sqrt{1-{\rm b}^2}\right)=\arcsin\left({\rm a}\cdot{\rm b}+\sqrt{1-{\rm a}^2}\cdot\sqrt{1-{\rm b}^2}\right)\]</li>
+                <li>\[\arccos\left({\rm a}\right)+\arcsin\left({\rm b}\right)=\arccos\left({\rm a}\cdot\sqrt{1-{\rm b}^2}-\sqrt{1-{\rm a}^2}\cdot{\rm b}\right)=\arcsin\left(\sqrt{1-{\rm a}^2}\cdot\sqrt{1-{\rm b}^2}+{\rm a}\cdot{\rm b}\right)\]</li>
+                <li>\[\arccos\left({\rm a}\right)+\arccos\left({\rm b}\right)=\arccos\left({\rm a}\cdot{\rm b}-\sqrt{1-{\rm a}^2}\cdot\sqrt{1-{\rm b}^2}\right)=\arcsin\left(\sqrt{1-{\rm a}^2}\cdot{\rm b}+{\rm a}\cdot\sqrt{1-{\rm b}^2}\right)\]</li>
+                <li>\[\arcsin\left({\rm a}\right)-\arcsin\left({\rm b}\right)=\arccos\left(\sqrt{1-{\rm a}^2}\cdot\sqrt{1-{\rm b}^2}+{\rm a}\cdot{\rm b}\right)=\arcsin\left({\rm a}\cdot\sqrt{1-{\rm b}^2}-\sqrt{1-{\rm a}^2}\cdot{\rm b}\right)\]</li>
+                <li>\[\arcsin\left({\rm a}\right)-\arccos\left({\rm b}\right)=\arccos\left(\sqrt{1-{\rm a}^2}\cdot{\rm b}+{\rm a}\cdot\sqrt{1-{\rm b}^2}\right)=\arcsin\left({\rm a}\cdot{\rm b}-\sqrt{1-{\rm a}^2}\cdot\sqrt{1-{\rm b}^2}\right)\]</li>
+                <li>\[\arccos\left({\rm a}\right)-\arcsin\left({\rm b}\right)=\arccos\left({\rm a}\cdot\sqrt{1-{\rm b}^2}+\sqrt{1-{\rm a}^2}\cdot{\rm b}\right)=\arcsin\left(\sqrt{1-{\rm a}^2}\cdot\sqrt{1-{\rm b}^2}-{\rm a}\cdot{\rm b}\right)\]</li>
+                <li>\[\arccos\left({\rm a}\right)-\arccos\left({\rm b}\right)=\arccos\left({\rm a}\cdot{\rm b}+\sqrt{1-{\rm a}^2}\cdot\sqrt{1-{\rm b}^2}\right)=\arcsin\left(\sqrt{1-{\rm a}^2}\cdot{\rm b}-{\rm a}\cdot\sqrt{1-{\rm b}^2}\right)\]</li>
+            </ul>
+            <button onclick="Hide('1F')">HIDE</button>
+        </div>
+        Le formule di bisezione:
         <ul>
             <li>\[2\cdot\arccos\left({\rm a}\right)=\arccos\left(2\cdot{\rm a}^2-1\right)=\arcsin\left(2\cdot{\rm a}\cdot\sqrt{1-{\rm a}^2}\right)\]</li>
             <li>\[2\cdot\arcsin\left({\rm a}\right)=\arccos\left(1-2\cdot{\rm a}^2\right)=\arcsin\left(2\cdot{\rm a}\cdot\sqrt{1-{\rm a}^2}\right)\]</li>
             <li>\[\arccos\left({\rm a}\right)=2\cdot\arccos\left(\sqrt{\frac{1+{\rm a}}{2}}\right)=2\cdot\arcsin\left(\sqrt{\frac{1-{\rm a}}{2}}\right)\]</li>
         </ul>
     </div>
+    <div class="block R">
+        Osservare che:
+        <ul>
+            <li>\[\cos\left(\arcsin\left({\rm a}\right)\right)=\sqrt{1-{\rm a}^2}\qquad\tan\left(\arcsin\left({\rm a}\right)\right)=\frac{\rm a}{\sqrt{1-{\rm a}^2}}\qquad\cot\left(\arcsin\left({\rm a}\right)\right)=\sqrt{\frac{{\rm a}^2+1}{\rm a}}\]</li>
+            <li>\[\sin\left(\arccos\left({\rm a}\right)\right)=\sqrt{1-{\rm a}^2}\qquad\tan\left(\arccos\left({\rm a}\right)\right)=\frac{\sqrt{1-{\rm a}^2}}{\rm a}\qquad\cot\left(\arccos\left({\rm a}\right)\right)=\sqrt{\frac{\rm a}{{\rm a}^2-1}}\]</li>
+        </ul>
+    </div>
+
 </div>
 
 <div class="slide">
     <h2>la funzione arco tangente</h2>
     <div class="block N">
-        Si definiscono:
-        \[\operatorname{arctan}:{\mathbb R}\rightarrow\left(-\frac{\pi}{2},\frac{\pi}{2}\right)\qquad\operatorname{arccot}:{\mathbb R}\rightarrow\left(0,\pi\right)\]
-        Dove:
+        Definiamo:
         <ul>
-            <li>\[{\rm x}=\pi\cdot{\rm k}+\operatorname{arctan}\left({\rm y}\right)\Longleftrightarrow\begin{cases}\left({\rm x}+\pi/2\right)/\!\!/\pi={\rm k}\\\tan\left({\rm x}\right)={\rm y}\end{cases}\]</li>
-            <li>\[{\rm x}=\pi\cdot{\rm k}+\operatorname{arccot}\left({\rm y}\right)\Longleftrightarrow\begin{cases}{\rm x}/\!\!/\pi={\rm k}\\\tan\left({\rm x}\right)={\rm y}\end{cases}\]</li>
+            <li>\[\operatorname{arctan}:{\mathbb R}\rightarrow\left(-\frac{\pi}{2},\frac{\pi}{2}\right)\qquad{\rm x}=\pi\cdot{\rm k}+\operatorname{arctan}\left({\rm y}\right)\Longleftrightarrow\begin{cases}\left({\rm x}+\pi/2\right)/\!\!/\pi={\rm k}\\\tan\left({\rm x}\right)={\rm y}\end{cases}\]</li>
+            <li>\[\operatorname{arccot}:{\mathbb R}\rightarrow\left(0,\pi\right)\qquad{\rm x}=\pi\cdot{\rm k}+\operatorname{arccot}\left({\rm y}\right)\Longleftrightarrow\begin{cases}{\rm x}/\!\!/\pi={\rm k}\\\tan\left({\rm x}\right)={\rm y}\end{cases}\]</li>
         </ul>
+        Seguono \(\dots\) <button><a onclick="Show('2N')">SHOW</a></button>
+        <div class="proof" id="2N">
+            Le simmetrie:
+            \[\operatorname{arctan}\left({\rm a}\right)=-\operatorname{arctan}\left(-{\rm a}\right)=\frac{\pi}{2}-\operatorname{arccot}\left({\rm a}\right)=\operatorname{arccot}\left(-{\rm a}\right)-\frac{\pi}{2}=\operatorname{arccot}\left({\rm a}^{-1}\right)\]
+            \[\operatorname{arccot}\left({\rm a}\right)=\pi-\operatorname{arccot}\left(-{\rm a}\right)=\frac{\pi}{2}-\operatorname{arctan}\left({\rm a}\right)=\frac{\pi}{2}+\operatorname{arctan}\left(-{\rm a}\right)=\operatorname{arctan}\left({\rm a}^{-1}\right)\]
+            <button onclick="Hide('2N')">HIDE</button>
+        </div>
     </div>
     <div class="block F">
-        Seguono le formule di addizione:
-        <ul>
-            <li>\[\operatorname{arctan}\left({\rm a}\right)+\operatorname{arctan}\left({\rm b}\right)=\operatorname{arctan}\left(\frac{{\rm a}+{\rm b}}{1-{\rm a}\cdot{\rm b}}\right)\qquad\operatorname{arccot}\left({\rm a}\right)+\operatorname{arccot}\left({\rm b}\right)=\operatorname{arccot}\left(\frac{{\rm b}\cdot{\rm a}-1}{{\rm b}+{\rm a}}\right)\]</li>
-            <li>\[\operatorname{arctan}\left({\rm a}\right)-\operatorname{arctan}\left({\rm b}\right)=\operatorname{arctan}\left(\frac{{\rm a}-{\rm b}}{1-{\rm a}\cdot{\rm b}}\right)\qquad\operatorname{arccot}\left({\rm a}\right)+\operatorname{arccot}\left({\rm b}\right)=\operatorname{arccot}\left(\frac{{\rm b}\cdot{\rm a}-1}{{\rm b}-{\rm a}}\right)\]</li>
-        </ul>
-        E le simmetrie:
-        <ul>
-            <li>\[\frac{\pi}{2}-\operatorname{arctan}\left({\rm a}\right)=\operatorname{arccot}\left({\rm a}\right)=\operatorname{arctan}\left({\rm a}^{-1}\right)\]</li>
-            <li>\[\frac{\pi}{2}-\operatorname{arccot}\left({\rm a}\right)=\operatorname{arctan}\left({\rm a}\right)=\operatorname{arccot}\left({\rm a}^{-1}\right)\]</li>
-        </ul>
+        Seguono \(\dots\) <button><a onclick="Show('2F')">SHOW</a></button>
+        <div class="proof" id="2F">
+            Le formule di addizione:
+            <ul>
+                <li>\[\operatorname{arctan}\left({\rm a}\right)+\operatorname{arctan}\left({\rm b}\right)=\operatorname{arctan}\left(\frac{{\rm a}-{\rm b}}{1+{\rm a}\cdot{\rm b}}\right)=\operatorname{arccot}\left(\frac{1+{\rm a}\cdot{\rm b}}{{\rm a}-{\rm b}}\right)\]</li>
+                <li>\[\operatorname{arctan}\left({\rm a}\right)+\operatorname{arccot}\left({\rm b}\right)=\operatorname{arctan}\left(\frac{{\rm a}\cdot{\rm b}-1}{{\rm b}+{\rm a}}\right)=\operatorname{arccot}\left(\frac{{\rm b}+{\rm a}}{{\rm a}\cdot{\rm b}-1}\right)\]</li>
+                <li>\[\operatorname{arccot}\left({\rm a}\right)+\operatorname{arctan}\left({\rm b}\right)=\operatorname{arctan}\left(\frac{1-{\rm a}\cdot{\rm b}}{{\rm a}+{\rm b}}\right)=\operatorname{arccot}\left(\frac{{\rm a}+{\rm b}}{1-{\rm a}\cdot{\rm b}}\right)\]</li>
+                <li>\[\operatorname{arccot}\left({\rm a}\right)+\operatorname{arccot}\left({\rm b}\right)=\operatorname{arctan}\left(\frac{{\rm b}-{\rm a}}{{\rm a}\cdot{\rm b}+1}\right)=\operatorname{arccot}\left(\frac{{\rm a}\cdot{\rm b}+1}{{\rm b}-{\rm a}}\right)\]</li>
+                <li>\[\operatorname{arctan}\left({\rm a}\right)-\operatorname{arctan}\left({\rm b}\right)=\operatorname{arctan}\left(\frac{{\rm a}+{\rm b}}{1-{\rm a}\cdot{\rm b}}\right)=\operatorname{arccot}\left(\frac{1-{\rm a}\cdot{\rm b}}{{\rm a}+{\rm b}}\right)\]</li>
+                <li>\[\operatorname{arctan}\left({\rm a}\right)-\operatorname{arccot}\left({\rm b}\right)=\operatorname{arctan}\left(\frac{{\rm a}\cdot{\rm b}+1}{{\rm b}-{\rm a}}\right)=\operatorname{arccot}\left(\frac{{\rm b}-{\rm a}}{{\rm a}\cdot{\rm b}+1}\right)\]</li>
+                <li>\[\operatorname{arccot}\left({\rm a}\right)-\operatorname{arctan}\left({\rm b}\right)=\operatorname{arctan}\left(\frac{1+{\rm a}\cdot{\rm b}}{{\rm a}-{\rm b}}\right)=\operatorname{arccot}\left(\frac{{\rm a}-{\rm b}}{1+{\rm a}\cdot{\rm b}}\right)\]</li>
+                <li>\[\operatorname{arccot}\left({\rm a}\right)-\operatorname{arccot}\left({\rm b}\right)=\operatorname{arctan}\left(\frac{{\rm b}+{\rm a}}{{\rm a}\cdot{\rm b}-1}\right)=\operatorname{arccot}\left(\frac{{\rm a}\cdot{\rm b}-1}{{\rm b}+{\rm a}}\right)\]</li>
+            </ul>
+            <button onclick="Hide('2F')">HIDE</button>
+        </div>
+        Le formule di duplicazione:
+        \[\operatorname{arctan}\left({\rm a}\right)=\frac{\operatorname{arctan}\left(\frac{2\cdot{\rm a}}{1-{\rm a}^2}\right)}{2}\qquad\operatorname{arccot}\left({\rm a}\right)=\frac{\operatorname{arccot}\left(\frac{{\rm a}^2-1}{2\cdot{\rm a}}\right)}{2}\]</li>
     </div>
     <div class="block R">
-        Possiamo ricavare le formule di bisezione:
-        <ul>
-            <li>\[2\cdot\operatorname{arctan}\left({\rm a}\right)=\operatorname{arctan}\left(\frac{2\cdot{\rm a}}{1-{\rm a}^2}\right)\qquad\operatorname{arctan}\left({\rm a}\right)=2\cdot\operatorname{arctan}\left(\frac{\sqrt{{\rm a}^2+1}-1}{\rm a}\right)\]</li>
-            <li>\[2\cdot\operatorname{arccot}\left({\rm a}\right)=\operatorname{arccot}\left(\frac{{\rm a}^2-1}{2\cdot{\rm a}}\right)\qquad\operatorname{arccot}\left({\rm a}\right)=2\cdot\operatorname{arctan}\left({\rm a}-\sqrt{{\rm a}^2+1}\right)\]</li>
-        </ul>
         Osservare che:
         <ul>
             <li>\[\operatorname{arctan}\left({\rm a}\right)=\arccos\left(\frac{1}{\sqrt{1+{\rm a}^2}}\right)=2\cdot\arccos\left(\frac{1-{\rm a}^2}{1+{\rm a}^2}\right)=\arcsin\left(\frac{\rm a}{\sqrt{1+{\rm a}^2}}\right)=2\cdot\arcsin\left(\frac{2\cdot{\rm a}}{1+{\rm a}^2}\right)\]</li>
@@ -92,6 +130,11 @@
         \[{\cal H}=\left\{{\rm O}+{\rm a}\cdot\cos\left({\rm t}\right)\cdot{\rm u}+{\rm b}\cdot\sin\left({\rm t}\right)\cdot\left({\cal Z}\times{\rm u}\right)\quad{\rm t}\in{\mathbb R}\right\}\]
         Corrisponde alla relazione:
         \[\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm x}_{\rm u}+\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm y}_{\rm u}}{\rm a}\right)^2+\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm y}_{\rm u}-\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm x}_{\rm u}}{\rm b}\right)^2=1\]
+        E si può descrivere come:
+        \[\arccos\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm x}_{\rm u}+\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm y}_{\rm u}}{\rm a}\right)={\rm t}=\arcsin\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm y}_{\rm u}-\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm x}_{\rm u}}{\rm b}\right)\]
+        \[-\arccos\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm x}_{\rm u}+\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm y}_{\rm u}}{\rm a}\right)={\rm t}=\arcsin\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm y}_{\rm u}-\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm x}_{\rm u}}{\rm b}\right)\]
+        \[\arccos\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm x}_{\rm u}+\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm y}_{\rm u}}{\rm a}\right)={\rm t}=\pi-\arcsin\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm y}_{\rm u}-\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm x}_{\rm u}}{\rm b}\right)\]
+        \[-\arccos\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm x}_{\rm u}+\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm y}_{\rm u}}{\rm a}\right)={\rm t}=\pi-\arcsin\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm y}_{\rm u}-\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm x}_{\rm u}}{\rm b}\right)\]
     </div>
     <div class="block F">
         Il fascio di tangenti all'ellisse:

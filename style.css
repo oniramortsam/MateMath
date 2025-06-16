@@ -88,10 +88,12 @@ body, html {
 .block .proof {
   display: none;
   border: 0.2rem solid #ddd;
-  padding: 2rem;
+  padding: 1rem;
+  margin: 1rem;
 }
 
-.block a {
+.block button {
+  font-size: 1.6rem;
   background-color: #ddd;
   color: #222;
   border: none;

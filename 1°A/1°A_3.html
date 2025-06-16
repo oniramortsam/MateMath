@@ -11,7 +11,7 @@
     <ol>
         <li>la divisione intera euclidea (QNF)</li>
         <li>le proprietà della divisione (QFR)</li>
-        <li>sguardo sui numeri razionali (QNF)</li>
+        <li>sguardo sui numeri razionali (QNR)</li>
     </ol>
 </div>
 
@@ -68,7 +68,12 @@
         La relazione tra divisione e somma è:
         <ul>
             <li>\[\left({\rm a}+{\rm b}\right)\%{\rm c}=\left({\rm a}\%{\rm c}+{\rm b}\%{\rm c}\right)\%{\rm c}\]</li>
-            <li>\[\left({\rm a}+{\rm b}\right)/\!\!/{\rm c}={\rm a}/\!\!/{\rm c}+{\rm b}/\!\!/{\rm c}+\left({\rm a}\%{\rm c}+{\rm b}\%{\rm c}\right)/\!\!/{\rm c}\]</li>
+            <li>\[\left({\rm a}+{\rm b}\right)/\!\!/{\rm c}=\left({\rm a}/\!\!/{\rm c}+{\rm b}/\!\!/{\rm c}\right)+\left({\rm a}\%{\rm c}+{\rm b}\%{\rm c}\right)/\!\!/{\rm c}\]</li>
+        </ul>
+        La relazione tra divisione e sottrazione è:
+        <ul>
+            <li>\[\left({\rm a}-{\rm b}\right)\%{\rm c}=\left({\rm a}\%{\rm c}-{\rm b}\%{\rm c}\right)\%{\rm c}\]</li>
+            <li>\[\left({\rm a}-{\rm b}\right)/\!\!/{\rm c}=\left({\rm a}/\!\!/{\rm c}-{\rm b}/\!\!/{\rm c}\right)+\left({\rm a}\%{\rm c}-{\rm b}\%{\rm c}\right)/\!\!/{\rm c}\]</li>
         </ul>
         La relazione tra resto e prodotto è:
         <ul>
@@ -80,14 +85,22 @@
             <li>\[\left({\rm a}\cdot{\rm b}\right)/\!\!/{\rm c}=\left({\rm a}/\!\!/{\rm c}\right)\cdot\left({\rm b}/\!\!/{\rm c}\right)\cdot{\rm c}+\left({\rm a}/\!\!/{\rm c}\right)\cdot\left({\rm b}\%{\rm c}\right)+\left({\rm a}\%{\rm c}\right)\cdot\left({\rm b}/\!\!/{\rm c}\right)\]</li>
             <li>\[\left({\rm a}/\!\!/{\rm b}\right)/\!\!/{\rm c}={\rm a}/\!\!/\left({\rm b}\cdot{\rm c}\right)=\left({\rm a}/\!\!/{\rm c}\right)/\!\!/{\rm b}\]</li>
         </ul>
-        La proprietà invariantiva però si legge come:
-        <ul>
-            <li>\[\left({\rm a}\cdot{\rm c}\right)\%\left({\rm b}\cdot{\rm c}\right)=\left({\rm a}\%{\rm b}\right)\cdot{\rm c}\]</li>
-            <li>\[\left({\rm a}\cdot{\rm c}\right)/\!\!/\left({\rm b}\cdot{\rm c}\right)={\rm a}/\!\!/{\rm b}\]</li>
-        </ul>
     </div>
     <div class="block R">
-        Notare come le formule sopra diventano molto semplici quando posso cambiare le monete e spezzare le Wonka.
+        Notare come le formule sopra diventano molto semplici quando \(\dots\) <button onclick="Show('3N')">SHOW</button>
+        <div class="proof" id="3N">
+            Posso cambiare le monete e spezzare le Wonka:
+            \[\begin{split}
+                \begin{cases}{\rm a}\%{\rm c}=0\\{\rm b}\%{\rm c}=0\end{cases}&\Longrightarrow\begin{cases}\left({\rm a}+{\rm b}\right)\%{\rm c}=0\\\left({\rm a}+{\rm b}\right):{\rm c}={\rm a}:{\rm c}+{\rm b}:{\rm c}\end{cases}\\
+                \begin{cases}{\rm a}\%{\rm c}=0\\{\rm b}\%{\rm c}=0\end{cases}&\Longrightarrow\begin{cases}\left({\rm a}-{\rm b}\right)\%{\rm c}=0\\\left({\rm a}-{\rm b}\right):{\rm c}={\rm a}:{\rm c}-{\rm b}:{\rm c}\end{cases}\\
+                {\rm a}\%{\rm c}=0&\Longrightarrow\begin{cases}\left({\rm a}\cdot{\rm b}\right)\%{\rm c}=0\\\left({\rm a}:{\rm c}\right)\cdot{\rm b}=\left({\rm a}\cdot{\rm b}\right):{\rm c}\end{cases}\\
+                {\rm b}\%{\rm c}=0&\Longrightarrow\begin{cases}\left({\rm a}\cdot{\rm b}\right)\%{\rm c}=0\\{\rm a}\cdot\left({\rm b}:{\rm c}\right)=\left({\rm a}\cdot{\rm b}\right):{\rm c}\end{cases}\\
+                {\rm c}\%{\rm b}=0&\Longrightarrow\begin{cases}{\rm a}\%\left({\rm c}:{\rm b}\right)\Longleftrightarrow\left({\rm a}\cdot{\rm b}\right)\%{\rm c}=0\\{\rm a}:\left({\rm c}:{\rm b}\right)=\left({\rm a}\cdot{\rm b}\right):{\rm c}\end{cases}\\
+                {\rm a}\%{\rm b}=0&\Longrightarrow\begin{cases}\left({\rm a}:{\rm b}\right)\%{\rm c}=0\Longleftrightarrow{\rm a}\%\left({\rm b}\cdot{\rm c}\right)=0\\\left({\rm a}:{\rm b}\right):{\rm c}={\rm a}:\left({\rm b}\cdot{\rm c}\right)\end{cases}\\
+                {\rm a}\%{\rm c}=0&\Longrightarrow\begin{cases}\left({\rm a}:{\rm c}\right)\%{\rm b}=0\Longleftrightarrow{\rm a}\%\left({\rm b}\cdot{\rm c}\right)=0\\\left({\rm a}:{\rm c}\right):{\rm b}={\rm a}:\left({\rm b}\cdot{\rm c}\right)\end{cases}
+            \end{split}\]
+            <button onclick="Hide('3N')">HIDE</button>
+        </div>
     </div>
 </div>
 
@@ -102,24 +115,17 @@
         </ul>
     </div>
     <div class="block N">
-        Si definiscono i numeri razionali come le divisioni razionali tra un intero ed un naturale non nullo, sono definite le operazioni:
+        I numeri razionali \({\mathbb Q}\) sono le divisioni tra un numeratore intero ed un denominatore naturale non nullo:
         <ul>
             <li>\[\frac{\rm a}{\rm b}\pm\frac{\rm c}{\rm d}=\frac{{\rm a}\cdot{\rm d}\pm{\rm b}\cdot{\rm c}}{{\rm b}\cdot{\rm d}}\]</li>
             <li>\[\frac{\rm a}{\rm b}\cdot\frac{\rm c}{\rm d}=\frac{{\rm a}\cdot{\rm c}}{{\rm b}\cdot{\rm d}}\qquad\frac{\rm a}{\rm b}:\frac{\rm c}{\rm d}=\frac{{\rm a}\cdot{\rm d}}{{\rm b}\cdot{\rm c}}\]</li>
         </ul>
         e si dice che:
         \[\frac{\rm a}{\rm b}\le\frac{\rm c}{\rm d}\Longleftrightarrow{\rm a}\cdot{\rm d}\le{\rm b}\cdot{\rm c}\]
+        Le proprietà della divisione sono equivalenti a quelle del prodotto estese ai numeri razionali.
     </div>
-    <div class="block F">
-        Siccome nel mondo dei razionali le operazioni sono due, le proprietà da ricordare sono in realtà tre:
-        <ul>
-            <li>\[{\rm a}+{\rm b}={\rm b}+{\rm a}\]</li>
-            <li>\[\left({\rm a}+{\rm b}\right)+{\rm c}={\rm a}+\left({\rm b}+{\rm a}\right)\]</li>
-            <li>\[{\rm a}\cdot{\rm b}={\rm b}\cdot{\rm a}\]</li>
-            <li>\[\left({\rm a}\cdot{\rm b}\right)\cdot{\rm c}={\rm a}\cdot\left({\rm b}\cdot{\rm a}\right)\]</li>
-            <li>\[\left({\rm a}+{\rm b}\right)\cdot{\rm c}={\rm a}\cdot{\rm c}+{\rm b}\cdot{\rm c}\]</li>
-        </ul>
-        Notiamo per completezza i casi particolari:
+    <div class="block R">
+        Notiamo i casi particolari:
         <ul>
             <li>\[\left(-{\rm a}\right)={\rm a}\cdot\left(-1\right)={\rm a}:\left(-1\right)\]</li>
             <li>\[{\rm a}-{\rm a}={\rm a}\cdot0=0\]</li>
