@@ -1,0 +1,438 @@
+<head>
+  <meta charset="UTF-8">
+  <title>A4</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
+<div class="slide active">
+    <h2>I PUNTI E I VETTORI</h2>
+    <ol>
+        <li>punti, vettori e angoli (NFR)</li>
+        <li>triangoli: similitudine (NFR)</li>
+        <li>baricentro e le ceviane (DFR)</li>
+        <li>sul teorema di pitagora (QDR)</li>
+    <ol>
+    <h2>TRIANGOLI NEL PIANO</h2>
+    </ol>
+        <li>l'ortocentro e le altezze (NDF)</li>
+        <li>gli angoli al circocentro (DFR)</li>
+        <li>gli excentri e l'incentro (DFR)</li>
+        <li>le circonferenze tangenti (NDF)</li>
+    <ol>
+</div>
+
+<div class="slide">
+    <h1>I PUNTI E I VETTORI</h1>
+</div>
+
+<div class="slide">
+    <h2>punti, vettori e angoli</h2>
+    <div class="block N">
+        Dobbiamo dire cosa sono punti, rette, lunghezze, angoli, senza ricorrere alle coordinate:
+        <ul>
+            <li>Un vettore definisce una traslazione di punti.</li>
+            <li>Un angolo definisce una rotazione di vettori.</li>
+            <li>Un numero definisce una dilatazione di vettori.</li>
+        </ul>
+    </div>
+    <div class="block F">
+        Postulati di commutatività:
+        <ul>
+            <li>Composizione di rotazioni è una rotazione (somma di angoli, cioè commutativa).</li>
+            <li>Composizione di dilatazioni è una dilatazione (prodotto di numeri, cioè commutativo).</li>
+            <li>Composizione di traslazioni è una traslazione (somma tra vettori, cioè commutativa).</li>
+            <li>Sia dilatazioni che rotazioni si distribuiscono sulla somma di vettori e commutano tra loro.</li>
+        </ul>
+        Postulati di esistenza:
+        <ul>
+            <li>Dati due punti nel piano c'è un solo vettore che manda l'uno nell'altro (differenza tra punti).</li>
+            <li>Dati vettori nel piano esistono una sola rotazione e dilatazione positiva che mandano l'uno nell'altro.</li>
+            <li>Due rette non parallele si intersecano in esattamente un punto.</li>
+        </ul>
+        Postulati di identità:
+        <ul>
+            <li>La dilatazione di \(1\) e la rotazione di \(0\) sono l'identità.</li>
+            <li>La dilatazione di \(-1\) è una rotazione di \(\pi\).</li>
+        </ul>
+        Postulati di misura:
+        <ul>
+            <li>Le rotazioni e le traslazioni coservano i moduli dei vettori, le dilatazioni li moltiplicano.</li>
+            <li>la lunghezza di una diagonale è minore dela somma dei moduli dei lati.</li>
+            <li>Il vettore di modulo minimo che trasla un punto su una retta è perpendicolare alla retta.</li>
+            <li>L'area di un parallelogramma è il prodotto tra base ed altezza.</li>
+        </ul>
+    </div>
+    <div class="block R">
+        Dati due punti, il loro asse di simmetria è il luogo geometrico dei punti da loro equidistanti:
+        <ul>
+            <li>Questo è una retta perpendicolare la segmento che li congiunge.</li>
+            <li>Le assi di simmetria di un triangolo si incontrano nel circocentro.</li>
+            <li>Quindi due circonferenze possono incontrarsi in al più due punti.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="slide">
+    <h2>triangoli: similitudine</h2>
+    <div class="block N">
+        Dati tre punti sul piano \({\rm A},{\rm B},{\rm C}\):
+        <ul>
+            <li>Chiamiamo \(\alpha\) l'angolo che ruota \({\rm B}-{\rm A}\) in \({\rm C}-{\rm A}\).</li>
+            <li>Chiamiamo \(\beta\) l'angolo che ruota \({\rm C}-{\rm B}\) in \({\rm A}-{\rm B}\).</li>
+            <li>Chiamiamo \(\gamma\) l'angolo che ruota \({\rm A}-{\rm C}\) in \({\rm B}-{\rm C}\).</li>
+        </ul>
+        Denotiamo inoltre:
+        <ul>
+            <li>\[{\rm a}=\left|{\rm C}-{\rm B}\right|\]</li>
+            <li>\[{\rm b}=\left|{\rm A}-{\rm C}\right|\]</li>
+            <li>\[{\rm c}=\left|{\rm C}-{\rm B}\right|\]</li>
+        </ul>
+    </div>
+    <div class="block F">
+        Si può notare che:
+        <ul>
+            <li>\(\beta+\gamma\) ruota \({\rm C}-{\rm A}\) in \({\rm B}-{\rm A}\).</li>
+            <li>\(\gamma+\alpha\) ruota \({\rm A}-{\rm B}\) in \({\rm C}-{\rm B}\).</li>
+            <li>\(\alpha+\beta\) ruota \({\rm B}-{\rm C}\) in \({\rm A}-{\rm C}\).</li>
+        </ul>
+        da cui \(\alpha+\beta+\gamma=\pm\pi\) con segno concorde ai singoli addendi.
+    </div>
+    <div class="block C">
+        Si può ruotare due triangoli l'uno sull'altro per mostrare che:
+        <ul>
+            <li>Se due triangoli hanno gli angoli su due vertici e la lunghezza di un lato in comune, allora sono congruenti.</li>
+            <li>Se due triangoli hanno le lunghezze di due lati e l'angolo del vertice compreso in comune, allora sono congruenti.</li>
+            <li>Se due triangoli hanno tutti gli angoli uguali, allora hanno le lunghezze dei lati in proporzione tra loro.</li>
+        </ul>
+        Osservando invece le circonferenze con centro il vertice di un lato e passanti per l'altro vertice dello stesso lato:
+        <ul>
+            <li>Se due triangoli hanno le lunghezze dei tre lati uguali, allora sono congruenti o simmetrici.</li>
+            <li>Se due triangoli hanno le lunghezze dei lati in proporzione tra loro, allora hanno tutti gli angoli uguali o opposti.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="slide">
+    <h2>baricentro e le ceviane</h2>
+    <div class="block D">
+        Consideriamo un punto
+        \[{\rm P}={\rm a}_{\rm P}\cdot{\rm A}+{\rm b}_{\rm P}\cdot{\rm B}+{\rm c}_{\rm P}\cdot{\rm C}\]
+        con \({\rm a}_{\rm P}+{\rm b}_{\rm P}+{\rm c}_{\rm P}=1\) e consideriamo i punti:
+        <ul>
+            <li>\[{\rm D}=\frac{{\rm b}_{\rm P}\cdot{\rm B}+{\rm c}_{\rm P}\cdot{\rm C}}{1-{\rm a}_{\rm P}}\]</li>
+            <li>\[{\rm E}=\frac{{\rm c}_{\rm P}\cdot{\rm C}+{\rm a}_{\rm P}\cdot{\rm A}}{1-{\rm b}_{\rm P}}\]</li>
+            <li>\[{\rm F}=\frac{{\rm a}_{\rm P}\cdot{\rm A}+{\rm b}_{\rm P}\cdot{\rm B}}{1-{\rm c}_{\rm P}}\]</li>
+        </ul>
+        \[\begin{cases}
+        \left|{\rm D}-{\rm B}\right|=\frac{{\rm c}_{\rm P}\cdot{\rm a}}{1-{\rm a}_{\rm P}}\\
+        \left|{\rm D}-{\rm C}\right|=\frac{{\rm b}_{\rm P}\cdot{\rm a}}{1-{\rm a}_{\rm P}}\\
+        \left|{\rm E}-{\rm C}\right|=\frac{{\rm a}_{\rm P}\cdot{\rm b}}{1-{\rm b}_{\rm P}}\\
+        \left|{\rm E}-{\rm A}\right|=\frac{{\rm c}_{\rm P}\cdot{\rm b}}{1-{\rm b}_{\rm P}}\\
+        \left|{\rm F}-{\rm A}\right|=\frac{{\rm b}_{\rm P}\cdot{\rm c}}{1-{\rm c}_{\rm P}}\\
+        \left|{\rm F}-{\rm B}\right|=\frac{{\rm a}_{\rm P}\cdot{\rm c}}{1-{\rm c}_{\rm P}}
+        \end{cases}\]
+        Da cui segue:
+        \[\left|{\rm D}-{\rm B}\right|\cdot\left|{\rm E}-{\rm C}\right|\cdot\left|{\rm F}-{\rm A}\right|=\left|{\rm D}-{\rm C}\right|\cdot\left|{\rm E}-{\rm A}\right|\cdot\left|{\rm F}-{\rm B}\right|\]
+    </div>
+    <div class="block F">
+        Richiedendo che i punti
+        <ul>
+            <li>\[{\rm D}={\rm b}_{\rm D}\cdot{\rm B}+{\rm c}_{\rm D}\cdot{\rm C}\]</li>
+            <li>\[{\rm E}={\rm c}_{\rm E}\cdot{\rm C}+{\rm a}_{\rm E}\cdot{\rm A}\]</li>
+            <li>\[{\rm F}={\rm a}_{\rm F}\cdot{\rm A}+{\rm b}_{\rm F}\cdot{\rm B}\]</li>
+        </ul>
+        siano allineati si ottiene:
+        <ul>
+            <li>\[\frac{{\rm a}_{\rm E}}{{\rm a}_{\rm F}}=\frac{{\rm b}_{\rm D}}{{\rm b}_{\rm D}-{\rm b}_{\rm F}}=\frac{{\rm c}_{\rm D}-{\rm c}_{\rm E}}{{\rm c}_{\rm D}}\]</li>
+            <li>\[\frac{{\rm b}_{\rm F}}{{\rm b}_{\rm D}}=\frac{{\rm c}_{\rm E}}{{\rm c}_{\rm E}-{\rm c}_{\rm D}}=\frac{{\rm a}_{\rm E}-{\rm a}_{\rm F}}{{\rm a}_{\rm E}}\]</li>
+            <li>\[\frac{{\rm c}_{\rm D}}{{\rm c}_{\rm E}}=\frac{{\rm a}_{\rm F}}{{\rm a}_{\rm F}-{\rm a}_{\rm E}}=\frac{{\rm b}_{\rm F}-{\rm b}_{\rm D}}{{\rm b}_{\rm F}}\]</li>
+        </ul>
+        <ul>
+            <li>\[\frac{{\rm c}_{\rm D}}{{\rm c}_{\rm E}}\cdot\frac{{\rm b}_{\rm F}}{{\rm b}_{\rm D}}=\left(\frac{{\rm a}_{\rm F}}{{\rm a}_{\rm F}-{\rm a}_{\rm E}}\right)\cdot\left(\frac{{\rm a}_{\rm E}-{\rm a}_{\rm F}}{{\rm a}_{\rm E}}\right)\]</li>
+            <li>\[\frac{{\rm a}_{\rm E}}{{\rm a}_{\rm F}}\cdot\frac{{\rm c}_{\rm D}}{{\rm c}_{\rm E}}=\left(\frac{{\rm b}_{\rm D}}{{\rm b}_{\rm D}-{\rm a}_{\rm F}}\right)\cdot\left(\frac{{\rm b}_{\rm F}-{\rm b}_{\rm D}}{{\rm b}_{\rm F}}\right)\]</li>
+            <li>\[\frac{{\rm b}_{\rm F}}{{\rm b}_{\rm D}}\cdot\frac{{\rm a}_{\rm E}}{{\rm a}_{\rm F}}=\left(\frac{{\rm c}_{\rm E}}{{\rm c}_{\rm E}-{\rm a}_{\rm D}}\right)\cdot\left(\frac{{\rm c}_{\rm D}-{\rm c}_{\rm E}}{{\rm c}_{\rm D}}\right)\]</li>
+        </ul>
+        Da cui segue:
+        \[\left|{\rm D}-{\rm B}\right|\cdot\left|{\rm E}-{\rm C}\right|\cdot\left|{\rm F}-{\rm A}\right|=\left|{\rm D}-{\rm C}\right|\cdot\left|{\rm E}-{\rm A}\right|\cdot\left|{\rm F}-{\rm B}\right|\]
+    </div>
+    <div class="block R">
+        Insomma la formula è la stessa, ma:
+        <ul>
+            <li>con tre ceviane interne si trova l'intersezione nel triangolo.</li>
+            <li>con una ceviana esterna c'è l'allineamento con una retta secante.</li>
+            <li>con una ceviana interna si trova l'intersezione fuori dal triangolo.</li>
+            <li>con tre ceviane esterne c'è l'allineamento con una retta disgiunta.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="slide">
+    <h2>sul teorema di pitagora</h2>
+    <div class="block Q">
+        Dati due punti \({\rm A},{\rm B}\), come ne calcolo la distanza \(\left|{\rm A}-{\rm B}\right|\)?
+    </div>
+    <div class="block D">
+        La dimostrazione del teorema di pitagora si articola come segue:
+        <ul>
+            <li>Costruiamo un quadrato di vertici \(\left({\rm a},{\rm b}\right),\left(-{\rm b},{\rm a}\right),\left(-{\rm a},-{\rm b}\right),\left({\rm b},-{\rm a}\right)\)</li>
+            <li>Consideriamo i rettangoli con i lati paralleli agli assi cartesiani ed aventi i lati del quadrato come diagonali.</li>
+            <li>Consideriamo i due quadrati con lati paralleli agli assi cartesiani, questi hanno area \(4\cdot{\rm a}^2,4\cdot{\rm b}^2\)</li>
+        </ul>
+        l'area del quadrato disegnato all'inizio è dunque:
+        \[2\cdot\left({\rm a}^2+{\rm b}^2\right)=\left({\rm a}-{\rm b}\right)^2+\left({\rm a}+{\rm b}\right)^2\]
+        Da cui si evince che per un triangolo rettangolo la somma dei quadrati dei cateti è pari al quadrato dell'ipotenusa:
+        \[\cos\left(\theta\right)^2+\sin\left(\theta\right)^2=1\]
+    </div>
+    <div class="block R">
+        La distanza tra due punti si calcola come:
+        \[\left|{\rm A}-{\rm B}\right|=\sqrt{\left({\rm x}_{\rm A}-{\rm x}_{\rm B}\right)^2+\left({\rm y}_{\rm A}-{\rm y}_{\rm B}\right)^2}\]
+    </div>
+</div>
+
+<div class="slide">
+    <h1>TRIANGOLI NEL PIANO</h1>
+</div>
+
+<div class="slide">
+    <h2>l'ortocentro e le altezze</h2>
+    <div class="block N">
+        Date due rette incidenti, le loro due bisettrici sono il luogo geometrico dei punti da loro equidistanti:
+        <ul>
+            <li>Queste sono le rette che dividono a metà i due angoli complementari formati sulla loro intersezione.</li>
+            <li>Le bisettrici di un triangolo si incontrano in quattro punti equidistanti dai lati.</li>
+            <li>Tre di questi punti sono detti excentri e l'altro incentro.</li>
+        </ul>
+    </div>
+    <div class="block D">
+        Siano date le altezze del triangolo \({\rm A},{\rm B},{\rm C}\):
+        \[{\cal S}={\rm a}\cdot\left|{\rm A}-{\rm D}\right|={\rm b}\cdot\left|{\rm B}-{\rm E}\right|={\rm c}\cdot\left|{\rm C}-{\rm F}\right|\]
+        Allora queste si incontrano:
+        <ul>
+            <li>Nell'incentro di \({\rm D},{\rm E},{\rm F}\) se gli angoli sono tutti acuti.</li>
+            <li>Nell'excentro opposto al lato opposto al vertice di angolo ottuso altrimenti.</li>
+        </ul>
+        Tale intersezione \({\rm H}\) è detta ortocentro.
+    </div>
+    <div class="block F">
+        Si notino le similitudini:
+        <ul>
+            <li>\[{\rm B}{\rm F}{\rm H}\simeq{\rm B}{\rm E}{\rm A}\simeq{\rm C}{\rm F}{\rm A}\simeq{\rm C}{\rm E}{\rm H}\]</li>
+            <li>\[{\rm C}{\rm D}{\rm H}\simeq{\rm C}{\rm F}{\rm B}\simeq{\rm A}{\rm D}{\rm B}\simeq{\rm A}{\rm F}{\rm H}\]</li>
+            <li>\[{\rm A}{\rm E}{\rm H}\simeq{\rm A}{\rm D}{\rm C}\simeq{\rm B}{\rm E}{\rm C}\simeq{\rm B}{\rm D}{\rm H}\]</li>
+        </ul>
+        Usando le centrali sugli allineamenti ed applicando di nuovo gli allineamenti:
+        <ul>
+            <li>\[{\rm b}^2+{\rm c}^2-{\rm a}^2=\left|{\rm A}-{\rm E}\right|\cdot{\rm b}+\left|{\rm A}-{\rm F}\right|\cdot{\rm c}\]</li>
+            <li>\[{\rm c}^2+{\rm a}^2-{\rm b}^2=\left|{\rm B}-{\rm F}\right|\cdot{\rm c}+\left|{\rm B}-{\rm D}\right|\cdot{\rm a}\]</li>
+            <li>\[{\rm a}^2+{\rm b}^2-{\rm c}^2=\left|{\rm C}-{\rm D}\right|\cdot{\rm a}+\left|{\rm C}-{\rm E}\right|\cdot{\rm b}\]</li>
+        </ul>
+        Usando invece le similitudini:
+        \[{\rm A}{\rm E}{\rm F}\simeq{\rm D}{\rm B}{\rm C}\simeq{\rm D}{\rm E}{\rm C}\simeq{\rm A}{\rm B}{\rm C}\]
+        Si deduce che:
+        <ul>
+            <li>\[{\rm x}=\left|{\rm F}-{\rm E}\right|=\frac{\rm a}{2\cdot{\rm b}\cdot{\rm c}}\left({\rm b}^2+{\rm c}^2-{\rm a}^2\right)\]</li>
+            <li>\[{\rm y}=\left|{\rm D}-{\rm F}\right|=\frac{\rm b}{2\cdot{\rm a}\cdot{\rm c}}\left({\rm a}^2+{\rm c}^2-{\rm b}^2\right)\]</li>
+            <li>\[{\rm z}=\left|{\rm E}-{\rm D}\right|=\frac{\rm c}{2\cdot{\rm a}\cdot{\rm b}}\left({\rm a}^2+{\rm b}^2-{\rm c}^2\right)\]</li>
+        </ul>
+        Possiamo ricavare:
+        <ul>
+            <li>\[{\rm D}=\frac{{\rm b}\cdot{\rm z}}{{\rm a}\cdot{\rm c}}\cdot{\rm B}+\frac{{\rm c}\cdot{\rm y}}{{\rm a}\cdot{\rm b}}\cdot{\rm C}\]</li>
+            <li>\[{\rm E}=\frac{{\rm c}\cdot{\rm x}}{{\rm b}\cdot{\rm a}}\cdot{\rm C}+\frac{{\rm a}\cdot{\rm z}}{{\rm b}\cdot{\rm c}}\cdot{\rm A}\]</li>
+            <li>\[{\rm F}=\frac{{\rm a}\cdot{\rm y}}{{\rm c}\cdot{\rm b}}\cdot{\rm A}+\frac{{\rm b}\cdot{\rm x}}{{\rm c}\cdot{\rm a}}\cdot{\rm B}\]</li>
+        </ul>
+        Da cui per ceviane:
+        \[{\rm H}=\frac{2\cdot{\rm x}\cdot{\rm y}\cdot{\rm z}}{{\rm x}+{\rm y}+{\rm z}}\cdot\left(\frac{{\rm a}\cdot{\rm A}}{{\rm x}\cdot{\rm b}\cdot{\rm c}}+\frac{{\rm b}\cdot{\rm B}}{{\rm a}\cdot{\rm y}\cdot{\rm c}}+\frac{{\rm c}\cdot{\rm C}}{{\rm a}\cdot{\rm b}\cdot{\rm z}}\right)\]
+        E continuando con le altre similitudini:
+        <ul>
+            <li>\[\left|{\rm A}-{\rm H}\right|=2\cdot{\cal S}\cdot{\rm x}\cdot{\rm b}\cdot{\rm c}\]</li>
+            <li>\[\left|{\rm B}-{\rm H}\right|=2\cdot{\cal S}\cdot{\rm a}\cdot{\rm y}\cdot{\rm c}\]</li>
+            <li>\[\left|{\rm C}-{\rm H}\right|=2\cdot{\cal S}\cdot{\rm a}\cdot{\rm b}\cdot{\rm z}\]</li>
+            <li>\[\left|{\rm D}-{\rm H}\right|=2\cdot{\cal S}\cdot{\rm a}\cdot{\rm y}\cdot{\rm z}\]</li>
+            <li>\[\left|{\rm E}-{\rm H}\right|=2\cdot{\cal S}\cdot{\rm x}\cdot{\rm b}\cdot{\rm z}\]</li>
+            <li>\[\left|{\rm F}-{\rm H}\right|=2\cdot{\cal S}\cdot{\rm x}\cdot{\rm y}\cdot{\rm c}\]</li>
+        </ul>
+    </div>
+</div>
+
+<div class="slide">
+    <h2>gli angoli al circocentro</h2>
+    <div class="block D">
+        Consideriamo il circocentro \({\rm H}\) di \({\rm A},{\rm B},{\rm C}\):
+        <ul>
+            <li>Il triangolo \({\rm H},{\rm B},{\rm C}\) ha angoli \(2\cdot\alpha,\frac{\pi}{2}-\alpha,\frac{\pi}{2}-\alpha\)</li>
+            <li>Il triangolo \({\rm A},{\rm H},{\rm C}\) ha angoli \(2\cdot\beta,\frac{\pi}{2}-\gamma,\frac{\pi}{2}-\beta\)</li>
+            <li>Il triangolo \({\rm A},{\rm B},{\rm H}\) ha angoli \(2\cdot\gamma,\frac{\pi}{2}-\gamma,\frac{\pi}{2}-\gamma\)</li>
+        </ul>
+        Questo mostra che:
+        <ul>
+            <li>L'angolo al centro è doppio dell'angolo sulla circonferenza.</li>
+            <li>L'angolo sulla circonferenza dipende solo dalla corda.</li>
+            <li>Angoli su lati opposti della corda sono complementari.</li>
+        </ul>
+        Un quadrilatero è circoscrivibile se e solo se vale una delle seguenti:
+        <ul>
+            <li>I triangoli che si formano con due lati opposti e l'intersezione delle diagonali sono simili.</li>
+            <li>I triangoli che si formano con due lati opposti e l'intersezione degli altri due sono simili.</li>
+            <li>I triangoli che si formano con le diagonali e l'intersezione di due lati opposti sono simili.</li>
+        </ul>
+        Oppure una delle seguenti:
+        <ul>
+            <li>Angoli su vertici adiacenti formati da diagonali e lati opposti sono uguali.</li>
+            <li>Angoli formati dai lati su vertici opposti sono complementari.</li>
+        </ul>
+    </div>
+    <div class="block F">
+        Congiungendo i punti medi si ottiene un triangolo simile con \({\rm H}\) come ortocentro:
+        \[{\rm H}=\frac{{\rm x}\cdot{\rm A}+{\rm y}\cdot{\rm B}+{\rm z}\cdot{\rm C}}{{\rm x}+{\rm y}+{\rm z}}\]
+    </div>
+    <div class="block R">
+        Inoltre tracciando il diametro del circocentro passante per un vertice si ottiene
+        \[4\cdot{\cal S}\cdot{\cal R}={\rm a}{\rm b}{\rm c}\]
+        Dove \({\cal S},{\cal R}\) sono l'area di \({\rm A},{\rm B},{\rm C}\) ed il raggio della circonferenza circoscritta.
+    </div>
+</div>
+
+<div class="slide">
+    <h2>gli excentri e l'incentro</h2>
+    <div class="block D">
+        Sia \({\rm H}\) l'incentro di \({\rm A},{\rm B},{\rm C}\) e siano \({\rm D},{\rm E},{\rm F}\) gli excentri:
+        <ul>
+            <li>L'ortocentro di \({\rm D},{\rm E},{\rm F}\) è \({\rm H}\) e gli angoli sono \(\frac{\pi-\alpha}{2},\frac{\pi-\beta}{2},\frac{\pi-\gamma}{2}\).</li>
+            <li>L'ortocentro di \({\rm H},{\rm E},{\rm F}\) è \({\rm D}\) e gli angoli sono \(\frac{\pi+\alpha}{2},\frac{\beta}{2},\frac{\gamma}{2}\).</li>
+            <li>L'ortocentro di \({\rm D},{\rm H},{\rm F}\) è \({\rm E}\) e gli angoli sono \(\frac{\alpha}{2},\frac{\pi+\beta}{2},\frac{\gamma}{2}\).</li>
+            <li>L'ortocentro di \({\rm D},{\rm E},{\rm H}\) è \({\rm F}\) e gli angoli sono \(\frac{\alpha}{2},\frac{\beta}{2},\frac{\pi+\gamma}{2}\).</li>
+        </ul>
+        Da cui ricordiamo le formule:
+        <ul>
+            <li>\[\begin{cases}\left|{\rm A}-{\rm E}\right|=\frac{{\rm z}\cdot{\rm b}}{\rm y}\\\left|{\rm A}-{\rm F}\right|=\frac{{\rm y}\cdot{\rm c}}{\rm z}\\\left|{\rm B}-{\rm F}\right|=\frac{{\rm x}\cdot{\rm c}}{\rm z}\\\left|{\rm B}-{\rm D}\right|=\frac{{\rm z}\cdot{\rm a}}{\rm x}\\\left|{\rm C}-{\rm D}\right|=\frac{{\rm y}\cdot{\rm a}}{\rm x}\\\left|{\rm C}-{\rm E}\right|=\frac{{\rm x}\cdot{\rm b}}{\rm y}\end{cases}\qquad\begin{cases}\left|{\rm A}-{\rm H}\right|=2\cdot{\cal S}\cdot{\rm x}\cdot{\rm b}\cdot{\rm c}\\\left|{\rm B}-{\rm H}\right|=2\cdot{\cal S}\cdot{\rm a}\cdot{\rm y}\cdot{\rm c}\\\left|{\rm C}-{\rm H}\right|=2\cdot{\cal S}\cdot{\rm a}\cdot{\rm b}\cdot{\rm z}\\\left|{\rm D}-{\rm H}\right|=2\cdot{\cal S}\cdot{\rm a}\cdot{\rm y}\cdot{\rm z}\\\left|{\rm E}-{\rm H}\right|=2\cdot{\cal S}\cdot{\rm x}\cdot{\rm b}\cdot{\rm z}\\\left|{\rm F}-{\rm H}\right|=2\cdot{\cal S}\cdot{\rm x}\cdot{\rm y}\cdot{\rm c}\end{cases}\]</li>
+            <li>\[\begin{cases}{\rm a}=\frac{\rm x}{2\cdot{\rm y}\cdot{\rm z}}\left({\rm y}^2+{\rm z}^2-{\rm x}^2\right)\\{\rm b}=\frac{\rm y}{2\cdot{\rm x}\cdot{\rm z}}\left({\rm x}^2+{\rm z}^2-{\rm y}^2\right)\\{\rm c}=\frac{\rm z}{2\cdot{\rm x}\cdot{\rm y}}\left({\rm x}^2+{\rm y}^2-{\rm z}^2\right)\end{cases}\qquad\begin{cases}{\rm A}=\frac{{\rm y}\cdot{\rm c}}{{\rm x}\cdot{\rm z}}\cdot{\rm E}+\frac{{\rm z}\cdot{\rm b}}{{\rm x}\cdot{\rm y}}\cdot{\rm F}\\{\rm B}=\frac{{\rm z}\cdot{\rm a}}{{\rm y}\cdot{\rm x}}\cdot{\rm F}+\frac{{\rm x}\cdot{\rm c}}{{\rm y}\cdot{\rm z}}\cdot{\rm D}\\{\rm C}=\frac{{\rm x}\cdot{\rm b}}{{\rm z}\cdot{\rm y}}\cdot{\rm D}+\frac{{\rm y}\cdot{\rm a}}{{\rm z}\cdot{\rm x}}\cdot{\rm E}\end{cases}\]</li>
+            <li>\[{\rm H}=\frac{2\cdot{\rm a}\cdot{\rm b}\cdot{\rm c}}{{\rm a}+{\rm b}+{\rm c}}\cdot\left(\frac{{\rm x}\cdot{\rm D}}{{\rm a}\cdot{\rm y}\cdot{\rm z}}+\frac{{\rm y}\cdot{\rm E}}{{\rm x}\cdot{\rm b}\cdot{\rm z}}+\frac{{\rm z}\cdot{\rm F}}{{\rm x}\cdot{\rm y}\cdot{\rm c}}\right)\]</li>
+        </ul>
+    </div>
+    <div class="block F">
+        Risolvendo invece si ottiene:
+        <ul>
+            <li>\[{\rm D}=\frac{{\rm y}\cdot{\rm z}}{2\cdot{\rm x}\cdot{\rm b}\cdot{\rm c}}\cdot\left({\rm b}\cdot{\rm B}+{\rm c}\cdot{\rm C}-{\rm a}\cdot{\rm A}\right)\]
+            <li>\[{\rm E}=\frac{{\rm z}\cdot{\rm x}}{2\cdot{\rm a}\cdot{\rm y}\cdot{\rm c}}\cdot\left({\rm c}\cdot{\rm C}+{\rm a}\cdot{\rm A}-{\rm b}\cdot{\rm B}\right)\]
+            <li>\[{\rm F}=\frac{{\rm x}\cdot{\rm y}}{2\cdot{\rm a}\cdot{\rm b}\cdot{\rm z}}\cdot\left({\rm a}\cdot{\rm A}+{\rm b}\cdot{\rm B}-{\rm c}\cdot{\rm C}\right)\]
+        </ul>
+        Che sostituendo:
+        \[{\rm H}=\frac{{\rm a}\cdot{\rm A}+{\rm b}\cdot{\rm B}+{\rm c}\cdot{\rm C}}{{\rm a}+{\rm b}+{\rm c}}\]
+        Questo identifica le coordinate affini di excentri ed incentro.
+    </div>
+    <div class="block R">
+        Consideriamo le similitudini:
+        \[\begin{cases}
+        {\rm D}{\rm F}{\rm C}\simeq{\rm A}{\rm F}{\rm W}_1\simeq{\rm H}{\rm A}{\rm W}_0\\
+        {\rm D}{\rm E}{\rm B}\simeq{\rm A}{\rm E}{\rm V}_1\simeq{\rm H}{\rm A}{\rm V}_0\\
+        {\rm E}{\rm D}{\rm A}\simeq{\rm B}{\rm D}{\rm U}_1\simeq{\rm H}{\rm B}{\rm U}_0\\
+        {\rm E}{\rm F}{\rm C}\simeq{\rm B}{\rm F}{\rm W}_1\simeq{\rm H}{\rm B}{\rm W}_0\\
+        {\rm F}{\rm E}{\rm B}\simeq{\rm C}{\rm E}{\rm V}_1\simeq{\rm H}{\rm C}{\rm V}_0\\
+        {\rm F}{\rm D}{\rm A}\simeq{\rm C}{\rm D}{\rm D}_1\simeq{\rm H}{\rm C}{\rm U}_0
+        \end{cases}\]
+        Queste si possono usare per calcolare i raggi degli excentri ed il raggio dell'incentro in funzione di \({\cal S}\).
+    </div>
+</div>
+
+<div class="slide">
+    <h2>le circonferenze tangenti</h2>
+    <div class="block N">
+        Una tangente ad una circonferenza di centro \({\rm O}\) in un punto \({\rm P}\) è la retta:
+        \[\left\{{\rm P}+{\rm t}\cdot\left({\cal Z}\times\left({\rm O}-{\rm P}\right)\right)\quad{\rm t}\in{\mathbb R}\right\}=\left\{{\rm Q}\in{\mathbb R}^2\quad\left({\rm Q}-{\rm P}\right)\cdot\left({\rm O}-{\rm P}\right)=0\right\}\]
+    </div>
+    <div class="block D">
+        <ul>
+            <li>
+                Consideriamo un punto \({\rm Q}\) su una tangente ad una circonferenza di centro \({\rm O}\) in un punto \({\rm P}\):
+                \[{\rm Q}={\rm P}+{\rm t}\cdot\left({\cal Z}\times\left({\rm O}-{\rm P}\right)\right)\]
+                Allora \({\rm Q}\) è esterno alla circonferenza:
+                \[\left|{\rm Q}-{\rm P}\right|^2+\left|{\rm P}-{\rm O}\right|^2=\left|{\rm Q}-{\rm O}\right|^2\]
+                Inoltre si può trovare \({\rm P}\) intersecando una circonferenza di centro \({\rm Q}\).
+            </li>
+            <li>
+                Date due circonferenze:
+                \[\left|{\rm Q}-{\rm O}_1\right|^2-\left|{\rm Q}-{\rm O}_0\right|^2={\rm r}_1^2-{\rm r}_0^2\]
+                Se \({\rm Q}\) sta sulla retta che congiunge i centri:
+                \[\begin{cases}\left|{\rm Q}-{\rm O}_1\right|+\left|{\rm Q}-{\rm O}_0\right|=\left|{\rm O}_1-{\rm O}_0\right|\\\left|{\rm Q}-{\rm O}_1\right|-\left|{\rm Q}-{\rm O}_0\right|=\frac{{\rm r}_1^2-{\rm r}_0^2}{\left|{\rm O}_1-{\rm O}_0\right|}\end{cases}\qquad\begin{cases}\left|{\rm Q}-{\rm O}_1\right|-\left|{\rm Q}-{\rm O}_0\right|=\left|{\rm O}_1-{\rm O}_0\right|\\\left|{\rm Q}-{\rm O}_1\right|+\left|{\rm Q}-{\rm O}_0\right|=\frac{{\rm r}_1^2-{\rm r}_0^2}{\left|{\rm O}_1-{\rm O}_0\right|}\end{cases}\]</li>
+                In entrambi si trova un punto e due tangenti comuni.
+            </li>
+        </ul>
+    </div>
+    <div class="block F">
+        Data una circonferenza:
+        <ul>
+            <li>Per un punto esterno passano due rette tangenti.</li>
+            <li>Da un punto giacente passano una retta tangente.</li>
+            <li>Per un punto interno non passano rette tangenti.</li>
+        </ul>
+        Date due circonferenze:
+        <ul>
+            <li>Se sono esterne, allora hanno 4 tangenti in comune.</li>
+            <li>Se sono secanti, allora hanno 2 tangenti in comune.</li>
+            <li>Se sono interne, allora hanno 0 tangenti in comune.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="nav-buttons">
+    <div>
+        <a href="https://oniramortsam.github.io/MateMath">https://oniramortsam.github.io/MateMath</a>
+        <br>
+        <button onclick="prevSlide()">Indietro</button>
+        <a href="./">Torna all'Indice</a>
+        <button onclick="nextSlide()">Avanti</button>
+    </div>
+    <div>
+        <a href="A1.html">A1</a>
+        <a href="A2.html">A2</a>
+        <a href="A3.html">A3</a>
+        <a href="A4.html">A4</a>
+        <a href="A5.html">A5</a>
+        <br>
+        <a href="B1.html">B1</a>
+        <a href="B2.html">B2</a>
+        <a href="B3.html">B3</a>
+        <a href="B4.html">B4</a>
+        <a href="B5.html">B5</a>
+        <br>
+        <a href="C1.html">C1</a>
+        <a href="C2.html">C2</a>
+        <a href="C3.html">C3</a>
+        <a href="C4.html">C4</a>
+        <a href="C5.html">C5</a>
+    </div>
+</div>
+
+<script>
+
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function Show(index) {
+        const popup = document.getElementById(index);
+        popup.style.display = "block";
+    }
+
+    function Hide(index) {
+        const popup = document.getElementById(index);
+        popup.style.display = "none";
+    }
+
+</script>

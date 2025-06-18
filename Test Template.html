@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Test 1°A</title>
+    <style>
+
+        form {
+            display: none;
+        }
+
+        body {
+        font-family: 'Segoe UI', sans-serif;
+        background: #f9f9f9;
+        color: #333;
+        width: auto;
+        margin: 20px 100px;
+        padding: 20px 100px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        border-radius: 10px;
+        background-color: #fff;
+        }
+
+        h2 {
+        text-align: center;
+        color: #2c3e50;
+        }
+
+        .question {
+        background: #f0f0f5;
+        border-left: 5px solid #3498db;
+        padding: 15px 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        }
+
+        .question p {
+        margin-bottom: 10px;
+        font-weight: bold;
+        }
+
+        label {
+        display: block;
+        margin: 5px 0;
+        cursor: pointer;
+        }
+
+        select {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: auto;
+        max-width: 400px;
+        margin: 8px 0;
+        }
+
+        button {
+        display: block;
+        background: #3498db;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 12px 24px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 20px auto 10px;
+        transition: background 0.3s ease;
+        }
+
+        button:hover {
+        background: #2980b9;
+        }
+
+        .result {
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        color: #27ae60;
+        }
+
+        @media (max-width: 600px) {
+        body {
+            margin: 10px;
+            padding: 15px;
+        }
+        }
+
+    </style>
+</head>
+<body>
+
+  <h1>Test 1°A</h1>
+
+    <form id="quizForm1">
+
+        <div class="question">
+            1. La proprietà associativa vale per: <br>
+            <label><input type="checkbox" name="q1" value="1"> addizione e moltiplicazione</label><br>
+            <label><input type="checkbox" name="q1" value="-1"> sottrazione e divisione</label><br>
+            <label><input type="checkbox" name="q1" value="-1"> addizione e sottrazione</label><br>
+            <label><input type="checkbox" name="q1" value="-1"> moltiplicazione e divisione</label>
+        </div>
+
+        <button type="button" onclick="correggi1()">Invia risposte</button>
+        <p class="result" id="result1"></p>
+
+    </form>
+
+    <form id="quizForm2">
+
+        <div class="question">
+            La proprietà associativa vale per la sottrazione quando
+            <select name="q2A">
+                <option value="1">il minuendo è una somma</option>
+                <option value="-1">il sottraendo è una somma</option>
+                <option value="-1">il minuendo è un prodotto</option>
+                <option value="-1">il sottraendo è un prodotto</option>
+            </select> oppure quando <select name="q2B">
+                <option value="-1">il primo addendo</option>
+                <option value="1">il secondo addendo</option>
+                <option value="-1">il primo fattore</option>
+                <option value="-1">il secondo fattore</option>
+            </select> è una differenza.
+        </div>
+
+        <div class="question">
+            La proprietà associativa si può emulare per la sottrazione passando
+            <select name="q3A">
+                <option value="1">all'opposto</option>
+                <option value="-1">al reciproco</option>
+            </select> ogni <select name="q3B">
+                <option value="1">addendo</option>
+                <option value="-1">fattore</option>
+            </select> del <select name="q3C">
+                <option value="-1">minuendo</option>
+                <option value="1">sottraendo</option>
+            </select>
+        </div>
+
+        <button type="button" onclick="correggi2()">Invia risposte</button>
+        <p class="result" id="result2"></p>
+
+    </form>
+
+    <script>
+
+        const form1 = document.getElementById("quizForm1");
+        form1.style.display = "block";
+
+        function correggi1() {
+        let punteggio = 0;
+        const risposte = document.querySelectorAll('input[type="checkbox"]:checked');
+        risposte.forEach(risposta => {
+            punteggio += parseInt(risposta.value);
+        });
+        const totale = 1;
+        document.getElementById("result1").textContent = `Hai ottenuto ${punteggio} su ${totale}`;
+        if (punteggio == totale) {
+            const form2 = document.getElementById("quizForm2");
+            form2.style.display = "block";
+            }
+        }
+
+        function correggi2() {
+        let punteggio = 0;
+        const risposte = document.querySelectorAll('input[type="checkbox"]:checked');
+        risposte.forEach(risposta => {
+            punteggio += parseInt(risposta.value);
+        });
+        const domande = ["q2A", "q2B", "q3A", "q3B", "q3C"];
+        domande.forEach(nomeDomanda => {
+            const select = document.querySelector(`select[name="${nomeDomanda}"]`);
+            if (select.value === "1") {
+            punteggio++;
+            }
+        });
+        const totale = 5;
+        document.getElementById("result2").textContent = `Hai ottenuto ${punteggio} su ${totale}`;
+        }
+    </script>
+
+</body>
+</html>

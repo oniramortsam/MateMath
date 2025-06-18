@@ -1,107 +1,134 @@
-# MateMath
+# <a href="A1.html">A1</a>
 
-## 1° anno
+| L'ADDIZIONE                |     |
+|----------------------------|-----|
+| somma ed i numeri naturali |(QNF)|
+| prodotto e moltiplicazione |(QNF)|
+| una proprietà distributiva |(QFR)|
+| le proprietà delle potenze |(QNF)|
 
-### Parte A
+| SOTTRAZIONE                |     |
+|----------------------------|-----|
+| una proprietà invariantiva |(QNF)|
+| una proprietà distributiva |(QFR)|
+| la somma tra numeri interi |(QNR)|
+| massimo e minimo di coppie |(   )|
 
-- <a href="1°A/1°A_1.html">le operazioni, proprietà</a>
-  - somma tra naturali (QNF)
-  - la moltiplicazione (QNF)
-  - sulla distributiva (QFR)
-- <a href="1°A/1°A_2.html">la differenza e naturali</a>
-  - sul confronto (QNF)
-  - la differenza (QFR)
-  - numeri interi (QNR)
-- <a href="1°A/1°A_3.html">divisione e divisibilità</a>
-  - la divisione intera euclidea (QNF)
-  - le proprietà della divisione (QFR)
-  - sguardo sui numeri razionali (QNR)
-- <a href="1°A/1°A_4.html">potenze di numeri interi</a>
-  - potenze e proprietà (QNF)
-  - polinomi e naturali (QNF)
-  - la serie geometrica (QFR)
+# <a href="A2.html">A2</a>
 
-### Parte B
+| I PREDICATI                 |     |
+|-----------------------------|-----|
+| congiunzione e disgiunzione |(NFR)|
+| le tautologie e gli assurdi |(NFR)|
+| predicati e quantificazione |(NFR)|
+| rappresentazione di insiemi |(NFR)|
 
-- <a href="1°B/1°B_1.html">i predicati</a>
-  - congiunzione e disgiunzione (NFR)
-  - le tautologie e gli assurdi (NFR)
-  - predicati e quantificazione (NFR)
-- <a href="1°B/1°B_2.html">gli insiemi</a>
-  - che cosa è un insieme (NFR)
-  - operazioni di insiemi (NFR)
-  - confronto tra insiemi (NFR)
-- <a href="1°B/1°B_3.html">le funzioni</a>
-  - l'insieme prodotto (NFR)
-  - funzioni e potenze (NFR)
-  - funzioni e inverse (NFR)
-- <a href="1°B/1°B_4.html">invertibili</a>
-  - cardinalità delle fibre (NFR)
-  - immagini ed iniettività (NFR)
-  - equivalenze e quozienti (NFR)
+| GLI INSIEMI                 |     |
+|-----------------------------|-----|
+| unione intersezione insiemi |(NFR)|
+| inclusione ed insieme parti |(NFR)|
+| insieme prodotto cartesiano |(NFR)|
+| funzioni ed insieme potenza |(NFR)|
 
-## 2° anno
+# <a href="A3.html">A3</a>
 
-### Parte A
+| LA DIVISIONE              |     |
+|---------------------------|-----|
+| divisione intera euclidea |(QNF)|
+| proprietà della divisione |(QFR)|
+| i razionali e i quozienti |(QNR)|
+| invarianza di proporzioni |(   )|
 
-- <a href="2°A/2°A_1.html">su gcd e su lcm</a>
-  - l'algoritmo di bezout (QND)
-  - fattorizzazione unica (NDF)
-  - gcd e lcm di naturali (DFR)
-- <a href="2°A/2°A_2.html">la numerazione</a>
-  - unicità della rappresentazione (NDR)
-  - svolgere operazioni in tabella (NDR)
-  - svolgere la divisione euclidea (QDR)
-- <a href="2°A/2°A_3.html">i numeri reali</a>
-  - numeri razionali (NFR)
-  - sui numeri reali (NFR)
-  - sulla continuità (NF)
-- <a href="2°A/2°A_4.html">le paraboliche</a>
-  - i reali ed i radicali (NFR)
-  - equazioni quadratiche (QFR)
-  - equazioni di parabola (DF)
+| DIVISIBILITÀ          |     |
+|-----------------------|-----|
+| l'algoritmo di bezout |(QND)|
+| fattorizzazione unica |(NDF)|
+| gcd e lcm di naturali |(DFR)|
 
-### Parte B
+# <a href="A4.html">A4</a>
 
-- <a href="2°B/2°B_1.html">su angoli e vettori</a>
-  - punti e rette (NFR)
-  - sui triangoli (NFR)
-  - il baricentro (DFR)
-- <a href="2°B/2°B_2.html">triangoli nel piano</a>
-  - ortocentro e altezze (NDF)
-  - circocentro e angoli (DFR)
-  - excentri ed incentro (DFR)
-- <a href="2°B/2°B_3.html">sui triangoli retti</a>
-  - funzioni trigonometriche (QNR)
-  - le formule goniometriche (DFR)
-  - le tangenti e cotangenti (QNF)
-- <a href="2°B/2°B_4.html">chiudiamo il quadro</a>
-  - sul teorema di pitagora (QDR)
-  - circonferenze nel piano (NDF)
-  - triangoli angoli e lati (QFR)
+| I PUNTI E I VETTORI     |     |
+|-------------------------|-----|
+| punti, vettori e angoli |(NFR)|
+| triangoli: similitudine |(NFR)|
+| baricentro e le ceviane |(DFR)|
+| sul teorema di pitagora |(QDR)|
 
-## 3° anno
+| TRIANGOLI NEL PIANO       |     |
+|---------------------------|-----|
+| l'ortocentro e le altezze |(NDF)|
+| gli angoli al circocentro |(DFR)|
+| gli excentri e l'incentro |(DFR)|
+| le circonferenze tangenti |(NDF)|
 
-### Parte A
+# <a href="A5.html">A5</a>
 
-- <a href="3°A/3°A_1.html">divisione tra polinomi</a>
-  - polinomi: grado (NDF)
-  - zeri e divisori (DFR)
-  - fratti semplici (NFR)
-- <a href="3°A/3°A_2.html">la geometria analitica</a>
-  - le rette e il piano (NDF)
-  - cambiare coordinate ()
-  - il prodotto vettore (NDR)
-- <a href="3°A/3°A_3.html">i sistemi di equazioni</a>
-  - sistemi lineari di due variabili (QFR)
-  - proiettive ed equazioni omogenee (NFR)
-  - sistemi lineari di tre variabili (QFR)
-- <a href="3°A/3°A_4.html">geometria nello spazio</a>
-  - punti (QFR)
-  - piani (QFR)
-  - rette (DFR)
+| ANELLO DEI POLINOMI       |     |
+|---------------------------|-----|
+| polinomi di una variabile |(NF )|
+| la divisione tra polinomi |(NF )|
+| le fattorizzazione e zeri |(DFR)|
+| frazioni: fratti semplici |(NFR)|
 
-### Parte B
+| BASI DI NUMERAZIONE |     |
+|---------------------|-----|
+| la serie geometrica |(QFR)|
+| la rappresentazione |(NDR)|
+| sommare in una base |(NDR)|
+| dividere in tabella |(QDR)|
+
+# <a href="B1.html">B1</a>
+
+| LE FUNZIONI             |     |
+|-------------------------|-----|
+| inversa di una funzione |(NFR)|
+| cardinalità delle fibre |(NFR)|
+| immagini ed iniettività |(NFR)|
+| equivalenze e quozienti |(NFR)|
+
+| ORDINAMENTI            |     |
+|------------------------|-----|
+| le relazioni di ordine |(NFR)|
+| gli elementi estremali |(NFR)|
+| risolvere un'equazione |(QFR)|
+
+# <a href="B2.html">B2</a>
+
+| I NUMERI REALI   |     |
+|------------------|-----|
+| numeri razionali |(NFR)|
+| sui numeri reali |(NFR)|
+| sulla continuità |(NF )|
+
+| LE PARABOLICHE        |     |
+|-----------------------|-----|
+| i reali ed i radicali |(NFR)|
+| equazioni quadratiche |(QFR)|
+| equazioni di parabola |(DF )|
+
+# <a href="B3.html">B3</a>
+
+| GEOMETRIA ANALITICA |     |
+|---------------------|-----|
+| le rette e il piano |(NDF)|
+| cambiare coordinate |(DFR)|
+| il prodotto vettore |(NFR)|
+| sui sistemi lineari |(QFR)|
+| intersezione: rette |(NFR)|
+| le proiezioni piane |(NFR)|
+
+# <a href="B4.html">B4</a>
+
+| GEOMETRIA NELLO SPAZIO  |     |
+|-------------------------|-----|
+| sul prodotto vettoriale |(NFR)|
+| proiezioni nello spazio |(NFR)|
+| sistemi a tre equazioni |(QFR)|
+| punti |(QFR)|
+| piani |(QFR)|
+| rette |(DFR)|
+
+# B5
 
 - <a href="3°B/3°B_1.html">ancora la combinatoria</a>
   - disposizioni (QNF)
@@ -111,20 +138,21 @@
   - distributiva ed additività (ND)
   - commutativa e permutazioni (DFR)
   - associativa e somme doppie (DFR)
-- <a href="3°B/3°B_3.html">relazioni: ordinamento</a>
-  - gli ordini e ordinamento (NFR)
-  - sugli elementi estremali (NFR)
-- <a href="1°B/1°B_4.html">invertibilità funzioni</a>
-  - risolvere una equazione (QFR)
 
-## 4° anno
+# C1
 
-### Parte A
-
+- <a href="2°B/2°B_3.html">sui triangoli retti</a>
+  - funzioni trigonometriche (QNR)
+  - le formule goniometriche (DFR)
+  - le tangenti e cotangenti (QNF)
+  - triangoli angoli e lati (QFR)
 - <a href="4°A/4°A_1.html">le iperboliche e l'esponenziale</a>
   - l'esponenziale e nepero (NFR)
   - le funzioni iperboliche (NFR)
   - le tangenti iperboliche (NFR)
+
+# C2
+
 - <a href="4°A/4°A_2.html">le funzioni inverse iperboliche</a>
   - sulle inverse iperboliche (NFR)
   - l'arcotangente iperbolica (NFR)
@@ -133,13 +161,14 @@
   - le arcoseno ed arcocoseno (NFR)
   - la funzione arco tangente (NFR)
   - l'equazione di un'ellisse (DF)
+
+
+# C3/C4/C5
+
 - <a href="4°A/4°A_4.html">le coniche nel piano cartesiano</a>
   - descrizioni cartesiane (NFR)
   - equazioni parametriche (DFR)
   - delle equazioni affini (DFR)
-
-### Parte B
-
 - <a href="4°B/4°B_2.html">limiti e derivate</a>
   - i limiti (NFR)
   - derivate (NFR)

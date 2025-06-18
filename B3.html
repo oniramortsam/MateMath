@@ -1,0 +1,223 @@
+<head>
+  <meta charset="UTF-8">
+  <title>B3</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
+<div class="slide active">
+    <h2>GEOMETRIA ANALITICA</h2>
+    <ol>
+        <li>le rette e il piano (NDF)</li>
+        <li>cambiare coordinate (DFR)</li>
+        <li>il prodotto vettore (N)</li>
+        <li>sui sistemi lineari (QFR)</li>
+        <li>intersezione: rette (NFR)</li>
+        <li>le proiezioni piane (NF)</li>
+    </ol>
+</div>
+
+<div class="slide">
+    <h2>le rette e il piano</h2>
+    <div class="block N">
+        Fissiamo un punto ed un versore \({\rm O},{\cal X}\) sul piano cartesiano:
+        <ul>
+            <li>Consideriamo \({\cal Y}={\cal Z}\times{\cal X}\) la rotazione di \({\cal X}\) di \(\pi/2\).</li>
+            <li>Per ogni punto \({\rm P}\) diciamo \({\rm x}_{\rm P},{\rm y}_{\rm P}\) tali che \({\rm P}={\rm O}+{\rm x}_{\rm P}\cdot{\cal X}+{\rm y}_{\rm P}\cdot{\cal Y}\).</li>
+        </ul>
+        Il prodotto scalare tra due vettori \({\rm u},{\rm v}\) è definito come:
+        \[{\rm u}\cdot{\rm v}={\rm x}_{\rm u}\cdot{\rm x}_{\rm v}+{\rm y}_{\rm u}\cdot{\rm y}_{\rm v}=\left|{\rm u}\right|\cdot\left|{\rm v}\right|\cdot\cos\left(\theta\right)\]
+        Dove \(\theta\) è l'angolo che ruota \({\rm u}\) in \({\rm v}\).
+    </div>
+    <div class="block F">
+        Dati due punti \({\rm P},{\rm Q}\) nel piano cartesiano, la retta passante per questi punti si rappresenta come:
+        \[\left\{{\rm Q}+{\rm t}\cdot\left({\rm P}-{\rm Q}\right)\quad{\rm t}\in{\mathbb R}\right\}\]
+        Che corrisponde alla relazione tra \({\rm x},{\rm y}\):
+        \[\exists{\rm t}\in{\mathbb R}\qquad\begin{cases}{\rm x}={\rm x}_{\rm Q}+{\rm t}\cdot\left({\rm x}_{\rm P}-{\rm x}_{\rm Q}\right)={\rm t}\cdot{\rm x}_{\rm P}+\left(1-{\rm t}\right)\cdot{\rm x}_{\rm Q}\\{\rm y}={\rm y}_{\rm Q}+{\rm t}\cdot\left({\rm y}_{\rm Q}-{\rm y}_{\rm P}\right)={\rm t}\cdot{\rm y}_{\rm P}+\left(1-{\rm t}\right)\cdot{\rm y}_{\rm Q}\end{cases}\]
+        <ul>
+            <li>In forma cartesiana tale relazione si riduce all'equazione lineare: \[\left({\rm x}-{\rm x}_{\rm Q}\right)\cdot\left({\rm y}_{\rm Q}-{\rm y}_{\rm P}\right)=\left({\rm y}-{\rm y}_{\rm Q}\right)\cdot\left({\rm x}_{\rm Q}-{\rm x}_{\rm P}\right)\]</li>
+            <li>Esplicitando \({\rm y}\):\[{\rm y}=\frac{{\rm y}_{\rm P}\cdot{\rm x}_{\rm Q}-{\rm y}_{\rm Q}\cdot{\rm x}_{\rm P}}{{\rm x}_{\rm Q}-{\rm x}_{\rm P}}+\left(\frac{{\rm y}_{\rm Q}-{\rm y}_{\rm P}}{{\rm x}_{\rm Q}-{\rm x}_{\rm P}}\right)\cdot{\rm x}\]</li>
+            <li>Esplicitando \({\rm x}\):\[{\rm x}=\frac{{\rm y}_{\rm Q}\cdot{\rm x}_{\rm P}-{\rm y}_{\rm P}\cdot{\rm x}_{\rm Q}}{{\rm y}_{\rm Q}-{\rm y}_{\rm P}}+\left(\frac{{\rm x}_{\rm Q}-{\rm x}_{\rm P}}{{\rm y}_{\rm Q}-{\rm y}_{\rm P}}\right)\cdot{\rm y}\]</li>
+        </ul>
+    </div>
+    <div class="block R">
+        Tale relazione si scrive in modo compatto come:
+        \[\left({\cal Z}\times\left({\rm Q}-{\rm P}\right)\right)\cdot\left({\rm X}-{\rm P}\right)=\left({\cal Z}\times\left({\rm P}-{\rm Q}\right)\right)\cdot\left({\rm X}-{\rm Q}\right)=0\]
+        Cioè le coordinate parametriche e cartesiane si scambiano passando all'ortogonale.
+    </div>
+</div>
+
+<div class="slide">
+    <h2>cambiare coordinate</h2>
+    <div class="block D">
+        Consideriamo la trasformazione:
+        \[{\rm f}\left({\rm P}\right)={\rm V}+\left({\rm a}\cdot{\rm u}\cdot\left({\rm P}-{\rm U}\right)\right)\cdot{\rm v}+\left({\rm b}\cdot\left({\cal Z}\times{\rm u}\right)\cdot\left({\rm P}-{\rm U}\right)\right)\cdot\left({\cal Z}\times{\rm v}\right)\]
+        E la sua inversa:
+        \[{\rm g}\left({\rm Q}\right)={\rm U}+\left(\frac{{\rm v}\cdot\left({\rm Q}-{\rm V}\right)}{\rm a}\right)\cdot{\rm u}+\left(\frac{\left({\cal Z}\times{\rm v}\right)\cdot\left({\rm Q}-{\rm V}\right)}{\rm b}\right)\cdot\left({\cal Z}\times{\rm u}\right)\]
+    </div>
+    <div class="block F">
+        Allora la retta:
+        \[\left({\rm x}_{\rm P}-{\rm x}_{\rm Q}\right)\cdot\left({\rm y}_{\rm Q}-{\rm y}_{\rm P}\right)=\left({\rm y}_{\rm P}-{\rm y}_{\rm Q}\right)\cdot\left({\rm x}_{\rm Q}-{\rm x}_{\rm P}\right)\]
+        Viene trasportata nella retta:
+        \[\left({\rm x}_{\rm Q}-{\rm x}_{{\rm f}\left({\rm Q}\right)}\right)\cdot\left({\rm y}_{{\rm f}\left({\rm Q}\right)}-{\rm y}_{{\rm f}\left({\rm P}\right)}\right)=\left({\rm y}_{\rm Q}-{\rm y}_{{\rm f}\left({\rm Q}\right)}\right)\cdot\left({\rm x}_{{\rm f}\left({\rm Q}\right)}-{\rm x}_{{\rm f}\left({\rm P}\right)}\right)\]
+        Che coincide con:
+        \[\left({\rm x}_{{\rm g}\left({\rm Q}\right)}-{\rm x}_{\rm Q}\right)\cdot\left({\rm y}_{\rm Q}-{\rm y}_{\rm P}\right)=\left({\rm y}_{{\rm g}\left({\rm Q}\right)}-{\rm y}_{\rm Q}\right)\cdot\left({\rm x}_{\rm Q}-{\rm x}_{\rm P}\right)\]
+    </div>
+    <div class="block R">
+        In genere se:
+        \[{\cal E}:{\mathbb R}\rightarrow{\mathbb R}^2\qquad{\cal C}:{\mathbb R}^2\rightarrow0\]
+        Allora:
+        \[\operatorname{Imm}\left({\cal E}\right)={\cal C}^{-1}\left(0\right)\Longrightarrow\operatorname{Imm}\left({\rm f}\circ{\cal E}\right)=\left[{\cal C}\circ{\rm g}\right]^{-1}\left(0\right)\]
+        Questo permette di trasportare un luogo geometrico qualunque, come una conica.
+    </div>
+</div>
+
+<div class="slide">
+    <h2>il prodotto vettore</h2>
+    <div class="block N">
+        Dati due vettori \({\rm u},{\rm v}\) nel piano, definiamo il loro prodotto vettoriale:
+        \[{\rm u}\times{\rm v}=\left|{\rm u}\right|\cdot\left|{\rm v}\right|\cdot\sin\left(\theta\right)\cdot{\cal Z}=\det\begin{bmatrix}{\rm x}_{\rm u}&{\rm x}_{\rm v}\\{\rm y}_{\rm u}&{\rm y}_{\rm v}\end{bmatrix}\cdot{\cal Z}\]
+        Dove:
+        <ul>
+            <li>\(\theta\) è l'angolo che ruota \({\rm u}\) in \({\rm v}\) in senso antiorario.</li>
+            <li>\({\cal Z}\) il versore uscente dal piano cartesiano.</li>
+        </ul>
+        Ed abbiamo definito il determinante:
+        \[\det\begin{bmatrix}{\rm x}_{\rm u}&{\rm x}_{\rm v}\\{\rm y}_{\rm u}&{\rm y}_{\rm v}\end{bmatrix}={\rm x}_{\rm u}\cdot{\rm y}_{\rm v}-{\rm y}_{\rm u}\cdot{\rm x}_{\rm v}\]
+    </div>
+</div>
+
+<div class="slide">
+    <h2>sistemi lineari di due variabili</h2>
+    <div class="block Q">
+        In un ristorante:
+        <ul>
+            <li>\({\rm a}_0,{\rm b}_0\) pizze e paste sono costate \({\rm c}_1\) monete.</li>
+            <li>\({\rm a}_1,{\rm b}_1\) pizze e paste sono costate \({\rm c}_1\) monete.</li>
+            <li>Quanto costa una pizza?</li>
+            <li>Quanto costa una pasta?</li>
+        </ul>
+    </div>
+    <div class="block F">
+        Troviamo le due variabili separatamente:
+        <ul>
+            <li>
+                Cerchiamo:
+                \[{\rm u}_0\cdot{\rm a}_0+{\rm u}_1\cdot{\rm a}_1=0\Longrightarrow\left({\rm u}_0\cdot{\rm c}_0+{\rm u}_1\cdot{\rm c}_1\right)=\left({\rm u}_0\cdot{\rm a}_0+{\rm u}_1\cdot{\rm a}_1\right)\cdot{\rm x}\]
+                Siccome una soluzione c'è:
+                \[{\rm x}=-\frac{{\rm u}_0\cdot{\rm c}_0+{\rm u}_1\cdot{\rm c}_1}{{\rm u}_0\cdot{\rm a}_0+{\rm u}_1\cdot{\rm a}_1}=\frac{{\rm c}_0\cdot{\rm b}_1-{\rm c}_1\cdot{\rm b}_0}{{\rm a}_0\cdot{\rm b}_1-{\rm a}_1\cdot{\rm b}_0}=-\frac{\det\begin{bmatrix}{\rm c}_0&{\rm b}_0\\{\rm c}_1&{\rm b}_1\end{bmatrix}}{\det\begin{bmatrix}{\rm a}_0&{\rm b}_0\\{\rm a}_1&{\rm b}_1\end{bmatrix}}\]
+            </li>
+            <li>
+                Cerchiamo:
+                \[{\rm v}_0\cdot{\rm a}_0+{\rm v}_1\cdot{\rm a}_1=0\Longrightarrow\left({\rm v}_0\cdot{\rm c}_0+{\rm v}_1\cdot{\rm c}_1\right)=\left({\rm v}_0\cdot{\rm b}_0+{\rm v}_1\cdot{\rm b}_1\right)\cdot{\rm y}\]
+                Siccome una soluzione c'è:
+                \[{\rm y}=-\frac{{\rm v}_0\cdot{\rm c}_0+{\rm v}_1\cdot{\rm c}_1}{{\rm v}_0\cdot{\rm b}_0+{\rm v}_1\cdot{\rm b}_1}=\frac{{\rm a}_0\cdot{\rm c}_1-{\rm a}_1\cdot{\rm c}_0}{{\rm a}_0\cdot{\rm b}_1-{\rm a}_1\cdot{\rm b}_0}=\frac{\det\begin{bmatrix}{\rm a}_0&{\rm c}_0\\{\rm a}_1&{\rm c}_1\end{bmatrix}}{\det\begin{bmatrix}{\rm a}_0&{\rm b}_0\\{\rm a}_1&{\rm b}_1\end{bmatrix}}\]
+            </li>
+        </ul>
+    </div>
+    <div class="block R">
+        Si può interpretare questo metodo come:
+        \[{\rm x}\cdot\begin{bmatrix}{\rm a}_0\\{\rm a}_1\end{bmatrix}+{\rm y}\cdot\begin{bmatrix}{\rm b}_0\\{\rm b}_1\end{bmatrix}=\begin{bmatrix}{\rm c}_0\\{\rm c}_1\end{bmatrix}\Longrightarrow\begin{cases}{\rm x}\cdot\left({\cal Z}\times\begin{bmatrix}{\rm b}_0\\{\rm b}_1\end{bmatrix}\right)\cdot\begin{bmatrix}{\rm a}_0\\{\rm a}_1\end{bmatrix}={\left({\cal Z}\times\begin{bmatrix}{\rm b}_0\\{\rm b}_1\end{bmatrix}\right)\cdot\begin{bmatrix}{\rm c}_0\\{\rm c}_1\end{bmatrix}}\\{\rm y}\cdot\left({\cal Z}\times\begin{bmatrix}{\rm a}_0\\{\rm a}_1\end{bmatrix}\right)\cdot\begin{bmatrix}{\rm b}_0\\{\rm b}_1\end{bmatrix}=\left({\cal Z}\times\begin{bmatrix}{\rm a}_0\\{\rm a}_1\end{bmatrix}\right)\cdot\begin{bmatrix}{\rm c}_0\\{\rm c}_1\end{bmatrix}\end{cases}\]
+        cioè moltimplicando per l'ortogonale di un vettore si riesce ad annullare un addendo.
+    </div>
+</div>
+
+<div class="slide">
+    <h2>fasci di rette</h2>
+    <div class="block N">
+        Si dice il fascio di rette passanti per \({\rm P}\):
+        \[\left\{\left\{\begin{bmatrix}{\rm x}_{\rm P}-{\rm b}\cdot{\rm t}\\{\rm y}_{\rm P}+{\rm a}\cdot{\rm t}\end{bmatrix}\quad{\rm t}\in{\mathbb R}\right\}\left({\rm a},{\rm b}\right)\in{\mathbb R}^2\setminus1\right\}=\left\{\left\{\left({\rm x},{\rm y}\right)\in{\mathbb R}^2\quad{\rm x}\cdot{\rm a}+{\rm y}\cdot{\rm b}={\rm x}_{\rm P}\cdot{\rm a}+{\rm y}_{\rm P}\cdot{\rm b}\right\}\quad\left({\rm a},{\rm b}\right)\in{\mathbb R}^2\setminus1\right\}\]
+        Si dice il fascio di rette prallele ad \({\rm u}\):
+        \[\left\{\left\{{\rm O}+{\rm u}\cdot{\rm t}+{\cal Z}\times{\rm u}\cdot{\rm c}\quad{\rm t}\in{\mathbb R}\right\}\quad{\rm c}\in{\mathbb R}\right\}=\left\{\left\{{\rm P}\in{\mathbb R}^2\quad\left({\rm P}-{\rm O}\right)\cdot\left({\cal Z}\times{\rm u}\right)={\rm c}\right\}\quad{\rm c}\in{\mathbb R}\right\}\]
+    </div>
+    <div class="block F">
+        Considerate due rette, si può trovare la loro intersezione in modi diversi:
+        <ul>
+            <li>\[\begin{cases}{\rm y}\cdot{\rm x}_{\rm u}-{\rm x}\cdot{\rm y}_{\rm u}={\rm y}_{\rm U}\cdot{\rm x}_{\rm u}-{\rm x}_{\rm U}\cdot{\rm y}_{\rm u}\\{\rm y}\cdot{\rm x}_{\rm v}-{\rm x}\cdot{\rm y}_{\rm v}={\rm y}_{\rm V}\cdot{\rm x}_{\rm v}-{\rm x}_{\rm V}\cdot{\rm y}_{\rm v}\end{cases}\]</li>
+            <li>\[\left({\rm y}_{\rm U}+{\rm t}\cdot{\rm y}_{\rm u}\right)\cdot{\rm x}_{\rm v}-\left({\rm x}_{\rm U}+{\rm t}\cdot{\rm x}_{\rm u}\right)\cdot{\rm y}_{\rm v}={\rm y}_{\rm V}\cdot{\rm x}_{\rm v}-{\rm x}_{\rm V}\cdot{\rm y}_{\rm v}\Longrightarrow\begin{cases}{\rm x}={\rm x}_{\rm U}+{\rm t}\cdot{\rm x}_{\rm u}\\{\rm y}={\rm y}_{\rm U}+{\rm t}\cdot{\rm y}_{\rm u}\end{cases}\]</li>
+            <li>\[\left({\rm y}_{\rm V}+{\rm s}\cdot{\rm y}_{\rm v}\right)\cdot{\rm x}_{\rm u}-\left({\rm x}_{\rm V}+{\rm s}\cdot{\rm x}_{\rm v}\right)\cdot{\rm y}_{\rm u}={\rm y}_{\rm U}\cdot{\rm x}_{\rm u}-{\rm x}_{\rm U}\cdot{\rm y}_{\rm u}\Longrightarrow\begin{cases}{\rm x}={\rm x}_{\rm V}+{\rm s}\cdot{\rm x}_{\rm v}\\{\rm y}={\rm y}_{\rm V}+{\rm s}\cdot{\rm y}_{\rm v}\end{cases}\]</li>
+            <li>\[\begin{cases}{\rm x}={\rm x}_{\rm U}+{\rm t}\cdot{\rm x}_{\rm u}={\rm x}_{\rm V}+{\rm s}\cdot{\rm x}_{\rm v}\\{\rm y}={\rm y}_{\rm U}+{\rm t}\cdot{\rm y}_{\rm u}={\rm y}_{\rm V}+{\rm s}\cdot{\rm y}_{\rm v}\end{cases}\]</li>
+        </ul>
+    </div>
+    <div class="block R">
+        Notare che:
+        \[{\rm k}\cdot\left({\rm y}\cdot{\rm x}_{\rm u}-{\rm x}\cdot{\rm y}_{\rm u}\right)+{\rm h}\cdot\left({\rm y}\cdot{\rm x}_{\rm v}-{\rm x}\cdot{\rm y}_{\rm v}\right)={\rm k}\cdot\left({\rm y}_{\rm U}\cdot{\rm x}_{\rm u}-{\rm x}_{\rm U}\cdot{\rm y}_{\rm u}\right)+{\rm h}\cdot\left({\rm y}_{\rm V}\cdot{\rm x}_{\rm v}-{\rm x}_{\rm V}\cdot{\rm y}_{\rm v}\right)\]
+        Corrisponde all'equazione di un fascio di rette.
+    </div>
+</div>
+
+<div class="slide">
+    <h2>proiettive ed equazioni omogenee</h2>
+    <div class="block N">
+        Date due rette ed un punto nel piano si definisce la relazione:
+        \[\left({\rm O}_0+{\rm t}_0\cdot{\rm u}_0-{\rm O}\right)\times\left({\rm O}_1+{\rm t}_1\cdot{\rm u}_1-{\rm O}\right)=0\]
+    </div>
+    <div class="block F">
+        Questa si scrive come:
+        \[\left({\rm x}_{{\rm O},0}+{\rm t}_0\cdot{\rm x}_{{\rm u},0}\right)\cdot\left({\rm y}_{{\rm O},1}+{\rm t}_1\cdot{\rm y}_{{\rm u},1}\right)=\left({\rm y}_{{\rm O},0}+{\rm t}_0\cdot{\rm y}_{{\rm u},0}\right)\cdot\left({\rm x}_{{\rm O},1}+{\rm t}_1\cdot{\rm x}_{{\rm u},1}\right)\]
+        Da cui:
+        \[{\rm t}_1=\frac{\left({\rm y}_{{\rm O},0}+{\rm t}_0\cdot{\rm y}_{{\rm u},0}\right)\cdot{\rm x}_{{\rm O},1}-\left({\rm x}_{{\rm O},0}+{\rm t}_0\cdot{\rm x}_{{\rm u},0}\right)\cdot{\rm y}_{{\rm O},1}}{\left({\rm x}_{{\rm O},0}+{\rm t}_0\cdot{\rm x}_{{\rm u},0}\right)\cdot{\rm y}_{{\rm u},1}-\left({\rm y}_{{\rm O},0}+{\rm t}_0\cdot{\rm y}_{{\rm u},0}\right)\cdot{\rm x}_{{\rm u},1}}=-\frac{\det\begin{bmatrix}{\rm x}_{{\rm u},0}&{\rm y}_{{\rm u},0}\\{\rm x}_{{\rm O},1}&{\rm y}_{{\rm O},1}\end{bmatrix}\cdot{\rm t}_0+\det\begin{bmatrix}{\rm x}_{{\rm O},0}&{\rm y}_{{\rm O},0}\\{\rm x}_{{\rm O},1}&{\rm y}_{{\rm O},1}\end{bmatrix}}{\det\begin{bmatrix}{\rm x}_{{\rm u},0}&{\rm y}_{{\rm u},0}\\{\rm x}_{{\rm u},1}&{\rm y}_{{\rm u},1}\end{bmatrix}\cdot{\rm t}_0+\det\begin{bmatrix}{\rm x}_{{\rm O},0}&{\rm y}_{{\rm O},0}\\{\rm x}_{{\rm u},1}&{\rm y}_{{\rm u},1}\end{bmatrix}}\]
+    </div>
+</div>
+
+<div class="nav-buttons">
+    <div>
+        <a href="https://oniramortsam.github.io/MateMath">https://oniramortsam.github.io/MateMath</a>
+        <br>
+        <button onclick="prevSlide()">Indietro</button>
+        <a href="./">Torna all'Indice</a>
+        <button onclick="nextSlide()">Avanti</button>
+    </div>
+    <div>
+        <a href="A1.html">A1</a>
+        <a href="A2.html">A2</a>
+        <a href="A3.html">A3</a>
+        <a href="A4.html">A4</a>
+        <a href="A5.html">A5</a>
+        <br>
+        <a href="B1.html">B1</a>
+        <a href="B2.html">B2</a>
+        <a href="B3.html">B3</a>
+        <a href="B4.html">B4</a>
+        <a href="B5.html">B5</a>
+        <br>
+        <a href="C1.html">C1</a>
+        <a href="C2.html">C2</a>
+        <a href="C3.html">C3</a>
+        <a href="C4.html">C4</a>
+        <a href="C5.html">C5</a>
+    </div>
+</div>
+
+<script>
+
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function Show(index) {
+        const popup = document.getElementById(index);
+        popup.style.display = "block";
+    }
+
+    function Hide(index) {
+        const popup = document.getElementById(index);
+        popup.style.display = "none";
+    }
+
+</script>

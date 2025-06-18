@@ -1,0 +1,291 @@
+<head>
+  <meta charset="UTF-8">
+  <title>B1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
+<div class="slide active">
+    <h2>LE FUNZIONI</h2>
+    <ol>
+        <li>inversa di una funzione (NFR)</li>
+        <li>cardinalità delle fibre (NFR)</li>
+        <li>immagini ed iniettività (NFR)</li>
+        <li>equivalenze e quozienti (NFR)</li>
+    <ol>
+    <h2>ORDINAMENTI</h2>
+    </ol>
+        <li>le relazioni di ordine (NFR)</li>
+        <li>gli elementi estremali (NFR)</li>
+        <li>risolvere un'equazione (QFR)</li>
+    <ol>
+</div>
+
+<div class="slide">
+    <h1>LE FUNZIONI</h1>
+</div>
+
+<div class="slide">
+    <h2>inversa di una funzione</h2>
+    <div class="block N">
+        Una relazione \({\cal R}\), cioè un predicato di due variabili, è detta funzionale da un dominio \({\rm A}\) ad un codominio \({\rm B}\) quando:
+        \[\forall{\rm x}\in{\rm A}\quad\exists{\rm y}\in{\rm B}\quad\forall{\rm z}\in{\rm B}\quad{\cal R}\left({\rm x},{\rm z}\right)\Leftrightarrow{\rm z}={\rm y}\]
+        Tale proprietà è equivalente a:
+        \[\exists{\rm f}\in{\rm B}^{\rm A}\quad\forall\left({\rm x},{\rm y}\right)\in{\rm A}\times{\rm B}\quad{\cal R}\left({\rm x},{\rm y}\right)\Leftrightarrow{\rm y}={\rm f}\left({\rm x}\right)\]
+    </div>
+    <div class="block F">
+        Il fatto che esista una funzione inversa:
+        \[\exists{\rm g}\in{\rm A}^{\rm B}\quad\forall\left({\rm x},{\rm y}\right)\in{\rm A}\times{\rm B}\quad{\rm y}={\rm f}\left({\rm x}\right)\Leftrightarrow{\rm x}={\rm g}\left({\rm y}\right)\]
+        Dipende dalla proprietà:
+        \[\left[\forall{\rm y}\in{\rm B}\quad\exists{\rm x}\in{\rm A}\quad\forall{\rm z}\in{\rm A}\quad{\rm f}\left({\rm z}\right)={\rm y}\Leftrightarrow{\rm z}={\rm x}\right]\Longleftrightarrow\begin{cases}\forall{\rm y}\in{\rm B}\quad\exists{\rm x}\in{\rm A}\quad{\rm f}\left({\rm x}\right)={\rm y}\\\forall\left({\rm x},{\rm z}\right)\in{\rm A}\times{\rm A}\quad{\rm f}\left({\rm x}\right)={\rm f}\left({\rm z}\right)\Longrightarrow{\rm x}={\rm z}\end{cases}\]</li>
+        Le due condizioni a destra si dicono suriettività ed iniettività, rispettivamente.
+    </div>
+    <div class="block R">
+        Supponiamo che:
+        \[\left\{{\cal E}\left({\rm x}\right)\quad{\rm x}\in{\rm A}\right\}=\left\{{\rm x}\in{\rm B}\quad{\cal C}\left({\rm x}\right)\right\}\]
+        Allora, per \(\left({\rm f},{\rm g}\right)\in\left({\rm C}^{\rm A}\right)\times\left({\rm A}^{\rm C}\right)\) inverse l'una dell'altra:
+        \[\left\{\left[{\rm f}\circ{\cal E}\right]\left({\rm x}\right)\quad{\rm x}\in{\rm A}\right\}=\left\{{\rm x}\in{\rm B}\quad\left[{\cal C}\circ{\rm g}\right]\left({\rm x}\right)\right\}\]
+    </div>
+</div>
+
+<div class="slide">
+    <h2>cardinalità delle fibre</h2>
+    <div class="block N">
+        Sia \({\rm f}:{\rm A}\rightarrow{\rm B}\), definiamo le fibre \({\rm f}^{-1}:{\rm B}\rightarrow{\cal P}\left({\rm B}\right)\) come:
+        \[{\rm x}\in{\rm f}^{-1}\left({\rm y}\right)\Longleftrightarrow{\rm f}\left({\rm x}\right)={\rm y}\]
+    </div>
+    <div class="block F">
+        Allora vale la proprietà:
+        \[\left|{\rm A}\right|=\sum_{{\rm y}\in{\rm B}}\left|{\rm f}^{-1}\left({\rm y}\right)\right|\]
+        Questa formula può mostrare che:
+        <ul>
+            <li>\[\left[\exists{\rm f}\in{\rm B}^{\rm A}\quad\forall\left({\rm x},{\rm y}\right)\in{\rm A}\times{\rm B}\quad{\cal R}\left({\rm x},{\rm y}\right)\Leftrightarrow{\rm y}={\rm f}\left({\rm x}\right)\right]\Longrightarrow\left|{\rm A}\right|=\left|{\rm B}\right|\]</li>
+            <li>\[\left[\forall{\rm y}\in{\rm B}\quad\exists{\rm x}\in{\rm A}\quad{\rm f}\left({\rm x}\right)={\rm y}\right]\Longrightarrow\left|{\rm A}\right|\ge\left|{\rm B}\right|\]</li>
+            <li>\[\left[\forall\left({\rm x},{\rm z}\right)\in{\rm A}\times{\rm A}\quad{\rm f}\left({\rm x}\right)={\rm f}\left({\rm z}\right)\Longrightarrow{\rm x}={\rm z}\right]\Longrightarrow\left|{\rm A}\right|\le\left|{\rm B}\right|\]</li>
+        </ul>
+        Tali funzioni si dicono suriettive, iniettive rispettivamente.
+    </div>
+    <div class="block R">
+        L'invertibilità, suriettività, iniettività si possono anche scrivere come:
+        <ul>
+            <li>\[\left[\exists{\rm f}\in{\rm B}^{\rm A}\quad\forall\left({\rm x},{\rm y}\right)\in{\rm A}\times{\rm B}\quad{\cal R}\left({\rm x},{\rm y}\right)\Leftrightarrow{\rm y}={\rm f}\left({\rm x}\right)\right]\Longrightarrow\left[\forall{\rm y}\in{\rm B}\quad\left|{\rm f}^{-1}\left({\rm y}\right)\right|=1\right]\]</li>
+            <li>\[\left[\forall{\rm y}\in{\rm B}\quad\exists{\rm x}\in{\rm A}\quad{\rm f}\left({\rm x}\right)={\rm y}\right]\Longrightarrow\left[\forall{\rm y}\in{\rm B}\quad\left|{\rm f}^{-1}\left({\rm y}\right)\right|\ge1\right]\]</li>
+            <li>\[\left[\forall\left({\rm x},{\rm z}\right)\in{\rm A}\times{\rm A}\quad{\rm f}\left({\rm x}\right)={\rm f}\left({\rm z}\right)\Longrightarrow{\rm x}={\rm z}\right]\Longrightarrow\left[\forall{\rm y}\in{\rm B}\quad\left|{\rm f}^{-1}\left({\rm y}\right)\right|\le1\right]\]</li>
+        </ul>
+        Una funzione tra insiemi finiti della stessa cardinalità è iniettiva se e solo se è suriettiva.
+    </div>
+</div>
+
+<div class="slide">
+    <h2>immagini ed iniettività</h2>
+    <div class="block N">
+        Date due funzioni \(\left({\rm f},{\rm g}\right)\in{\rm A}^{\rm B}\times{\rm B}^{\rm C}\) si definisce \({\rm f}\circ{\rm g}\in{\rm A}^{\rm C}\) come:
+        \[\left[{\rm f}\circ{\rm g}\right]\left({\rm x}\right)={\rm f}\left({\rm g}\left({\rm x}\right)\right)\]
+        Si dice inoltre che \({\rm f}\) è un'inversa sinistra di \({\rm g}\) e che \({\rm g}\) è un'inversa destra di \({\rm f}\) se:
+        \[{\rm A}={\rm C}\land\left[{\rm f}\circ{\rm g}\right]\left({\rm x}\right)=1_{\rm A}\left({\rm x}\right)={\rm x}=1_{\rm C}\left({\rm x}\right)\]
+        Una inversa è sia inversa sinistra che inversa destra \(\dots\)
+    </div>
+    <div class="block F">
+        Valgono le proprietà:
+        <ul>
+            <li>La composizione di funzioni suriettive è suriettiva.</li>
+            <li>La composizione di funzioni iniettive è iniettiva.</li>
+            <li>Se la composizione è suriettiva, allora lo è anche la sinistra.</li>
+            <li>Se la composizione è iniettiva, allora lo è anche la destra.</li>
+            <li>Una funzione è surettiva se e solo se ammette inversa destra.</li>
+            <li>Una funzione è iniettiva se e solo se ammette inversa sinistra.</li>
+            <li>Una funzione è invertibile se e solo se è sia iniettiva che suriettiva.</li>
+            <li>L'inversa di una composizione è la composizione delle inverse.</li>
+        </ul>
+    </div>
+    <div class="block R">
+        Sono fatti equivalenti:
+        <ul>
+            <li>Ci sono una inversa sinistra ed una destra.</li>
+            <li>L'inversa sinistra esiste ed è unica.</li>
+            <li>L'inversa destra esiste ed è unica.</li>
+            <li>Le inverse destra e sinistra coincidono.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="slide">
+    <h2>equivalenze e quozienti</h2>
+    <div class="block N">
+        Data una funzione \({\rm f}:{\rm A}\rightarrow{\rm B}\) si dice immagine:
+        \[{\rm y}\in\operatorname{Imm}\left({\rm f}\right)\subseteq{\rm B}\Leftrightarrow{\rm f}^{-1}\left({\rm y}\right)\ne\emptyset\]
+        Una relazione \({\cal R}\) si dice di equivalenza su un dominio \({\rm A}\) se:
+        \[\exists{\rm B}\quad\exists{\rm f}\in{\rm B}^{\rm A}\quad\forall{\rm x},{\rm z}\in{\rm A}\times{\rm A}\quad{\cal R}\left({\rm x},{\rm z}\right)\Leftrightarrow{\rm f}\left({\rm x}\right)={\rm f}\left({\rm z}\right)\]
+    </div>
+    <div class="block F">
+        Una relazione \({\cal R}\) è di equivalenza se e solo se valgono tre condizioni:
+        <ul>
+            <li>Riflessiva: \[\forall{\rm x}\in{\rm A}\quad{\cal R}\left({\rm x},{\rm x}\right)\]</li>
+            <li>Simmetrica: \[\forall\left({\rm x},{\rm y}\right)\in{\rm A}\times{\rm A}\quad{\cal R}\left({\rm x},{\rm y}\right)\Leftrightarrow{\cal R}\left({\rm y},{\rm x}\right)\]</li>
+            <li>Transitiva: \[\forall\left({\rm x},{\rm y},{\rm z}\right)\in{\rm A}\times{\rm A}\times{\rm A}\quad{\cal R}\left({\rm x},{\rm y}\right)\land{\cal R}\left({\rm y},{\rm z}\right)\Longrightarrow{\cal R}\left({\rm x},{\rm z}\right)\]</li>
+        </ul>
+        Grazie a queste condizioni si può definire \({\rm f}:{\rm A}\rightarrow{\cal P}\left({\rm A}\right)\) come:
+        \[{\rm z}\in{\rm f}\left({\rm x}\right)\Longleftrightarrow{\cal R}\left({\rm x},{\rm z}\right)\]
+        Tale funzione si dice proiezione al quoziente, la sua immagine è una partizione e si denota \({\rm A}/{\cal R}\).
+    </div>
+    <div class="block R">
+        Una relazione di equivalenza è equilibrata di ordine \(\left|{\cal R}\right|\) se:
+        \[\forall{\rm y}\in\operatorname{Imm}\left({\rm f}\right)\quad\left|{\rm y}\right|=\left|{\cal R}\right|\]
+        Questa proprietà implica:
+        \[\left|{\rm A}\right|=\left|{\cal R}\right|\cdot\left|{\rm A}/{\cal R}\right|\]
+    </div>
+</div>
+
+<div class="slide">
+    <h1>ORDINAMENTI</h1>
+</div>
+
+<div class="slide">
+    <h2>le relazioni di ordine</h2>
+    <div class="block N">
+        Una relazione d'ordine soddisfa le proprietà:
+        <ul>
+            <li>Simmetrica: \[\forall\left({\rm x},{\rm y}\right)\in{\rm A}\times{\rm A}\quad{\cal R}\left({\rm x},{\rm y}\right)\land{\cal R}\left({\rm y},{\rm x}\right)\Longrightarrow{\rm x}={\rm y}\]</li>
+            <li>Transitiva: \[\forall\left({\rm x},{\rm y},{\rm z}\right)\in{\rm A}\times{\rm A}\times{\rm A}\quad{\cal R}\left({\rm x},{\rm y}\right)\land{\cal R}\left({\rm y},{\rm z}\right)\Longrightarrow{\cal R}\left({\rm x},{\rm z}\right)\]</li>
+        </ul>
+        Si può dire totale se:
+        \[\forall\left({\rm x},{\rm y}\right)\in{\rm A}\times{\rm A}\quad{\cal R}\left({\rm x},{\rm y}\right)\lor{\cal R}\left({\rm y},{\rm x}\right)\]
+    </div>
+    <div class="block F">
+        Le relazioni di confronto e divisibilità sono entrambe ordinamenti, ma solo la prima è totale.
+    </div>
+    <div class="block R">
+        Se due elementi sono confrontabili:
+        \[\left\{\min_{\cal R}\left({\rm a},{\rm b}\right),\max_{\cal R}\left({\rm a},{\rm b}\right)\right\}=\left\{{\rm a},{\rm b}\right\}\]
+        Da cui:
+        \[\forall\left({\rm a},{\rm b}\right)\in{\mathbb Q}\times{\mathbb Q}\quad\begin{cases}\min\left({\rm a},{\rm b}\right)+\max\left({\rm a},{\rm b}\right)={\rm a}+{\rm b}\\\min\left({\rm a},{\rm b}\right)\cdot\max\left({\rm a},{\rm b}\right)={\rm a}\cdot{\rm b}\end{cases}\]
+    </div>
+</div>
+
+<div class="slide">
+    <h2>gli elementi estremali</h2>
+    <div class="block N">
+        Per una relazione d'ordine:
+        <ul>
+            <li>Si dice minorante di un sottoinsieme \({\rm A}\) un elemento \({\rm x}\) che verifica \[\forall{\rm a}\in{\rm A}\quad{\cal R}\left({\rm x},{\rm a}\right)\]</li>
+            <li>Si dice maggiorante di un sottoinsieme \({\rm A}\) un elemento \({\rm x}\) che verifica \[\forall{\rm a}\in{\rm A}\quad{\cal R}\left({\rm a},{\rm x}\right)\]</li>
+            <li>Si dice minimale di un sottoinsieme \({\rm A}\) un elemento \({\rm x}\in{\rm A}\) che verifica \[\forall{\rm a}\in{\rm A}\quad\lnot{\cal R}\left({\rm a},{\rm x}\right)\]</li>
+            <li>Si dice massimale di un sottoinsieme \({\rm A}\) un elemento \({\rm x}\in{\rm A}\) che verifica \[\forall{\rm a}\in{\rm A}\quad\lnot{\cal R}\left({\rm x},{\rm a}\right)\]</li>
+            <li>Si dice minimo di un sottoinsieme \({\rm A}\) un unico minorante \({\rm x}\in{\rm A}\).</li>
+            <li>Si dice massimo di un sottoinsieme \({\rm A}\) un unico maggiorante \({\rm x}\in{\rm A}\).</li>
+            <li>Si dice estremo inferiore di un sottoinsieme il massimo dei minoranti.</li>
+            <li>Si dice estremo superiore di un sottoinsieme il minimo dei maggioranti.</li>
+        </ul>
+    </div>
+    <div class="block F">
+        Nel caso della relazione di confronto tra numeri reali si parla di completezza:
+        <ul>
+            <li>Un sottoinsieme ammette minorante se e solo se ammette estremo inferiore.</li>
+            <li>Un sottoinsieme ammette maggiorante se e solo se ammette estremo superiore.</li>
+        </ul>
+        Nel caso della relazione di confronto tra numeri interi:
+        <ul>
+            <li>Un sottoinsieme ammette minorante se e solo se ammette minimo.</li>
+            <li>Un sottoinsieme ammette maggiorante se e solo se ammette massimo.</li>
+        </ul>
+        Tra numeri naturali:
+        <ul>
+            <li>Nel caso della relazione di confronto un sottoinsieme ammette sempre minimo.</li>
+            <li>Nel caso della relazione di divisibilità un sottoinsieme ammette sempre minimale ed estremo inferiore.</li>
+        </ul>
+        Nel caso della relazione di divisibilità tra numeri razionali:
+        <ul>
+            <li>Un sottoinsieme ammette minorante se e solo se ammette minimale.</li>
+            <li>Un sottoinsieme ammette maggiorante se e solo se ammette massimale.</li>
+            <li>Un sottoinsieme ammette minorante se e solo se ammette estremo inferiore, cioè \(\operatorname{gcd}\).</li>
+            <li>Un sottoinsieme ammette maggiorante se e solo se ammette estremo superiore, cioè \(\operatorname{lcm}\).</li>
+        </ul>
+    </div>
+    <div class="block R">
+        Si dice che i numeri razionali sono densi:
+        \[\forall\left({\rm x},{\rm z}\right)\in{\mathbb Q}\times{\mathbb Q}\quad{\rm x}\ne{\rm z}\Longrightarrow\left[\exists{\rm y}\in{\mathbb Q}\quad{\rm x}\lt{\rm y}\lt{\rm z}\right]\]
+    </div>
+</div>
+
+<div class="slide">
+    <h2>risolvere un'equazione</h2>
+    <div class="block Q">
+        Sia data una funzione \({\rm f}:{\rm A}\rightarrow{\rm B}\) vogliamo una formula per risolvere:
+        \[{\rm f}\left(x\right)={\rm y}\]
+    </div>
+    <div class="block F">
+        Siccome \({\rm f}\) non è necessariamente suriettiva dobbiamo imporre:
+        \[{\rm y}\in\operatorname{Imm}\left({\rm f}\right)\]
+        Consideriamo \({\rm g}\in{\rm C}^{\rm A}\) tale che \({\rm f}\otimes{\rm g}\in\left(\operatorname{Imm}\left({\rm f}\right)\times{\rm C}\right)^{\rm B}\) sia iniettiva, allora:
+        \[\forall{\rm a}\in{\rm C}\quad{\rm g}_{\rm a}\left({\rm y}\right)={\rm x}\Longleftrightarrow{\rm f}\left({\rm x}\right)={\rm y}\land{\rm x}\in{\rm g}^{-1}\left({\rm a}\right)\]
+        Spezza il dominio consentendo di invertire le restrizioni di \({\rm f}\) alle singole fibre di \({\rm g}\):
+        \[{\rm f}=\bigoplus_{{\rm a}\in{\rm C}}{\rm f}_{\rm a}\qquad\forall{\rm a}\in{\rm C}\begin{cases}{\rm f}_{\rm a}:\operatorname{Imm}\left({\rm g}_{\rm a}\right)\rightarrow{\rm B}\\{\rm g}:\operatorname{Imm}\left({\rm f}\right)\rightarrow{\rm A}\end{cases}\]
+    </div>
+    <div class="block R">
+        Nel caso di funzioni di variabile reale possiamo scegliere la relazione:
+        \[\forall\left({\rm x},{\rm y}\right)\in{\mathbb R}\times{\mathbb R}\quad\begin{cases}\left({\rm a}-{\rm x}\right)\cdot\left({\rm b}-{\rm x}\right)\lt0\\\left({\rm a}-{\rm y}\right)\cdot\left({\rm b}-{\rm y}\right)\lt0\end{cases}\Longrightarrow\frac{{\rm f}\left({\rm y}\right)-{\rm f}\left({\rm x}\right)}{{\rm y}-{\rm x}}\cdot\frac{{\rm f}\left({\rm b}\right)-{\rm f}\left({\rm a}\right)}{{\rm b}-{\rm a}}\gt0\]
+        Questa è di equivalenza e quindi identifica una partizione ed una proiezione al quoziente.
+    </div>
+</div>
+
+<div class="nav-buttons">
+    <div>
+        <a href="https://oniramortsam.github.io/MateMath">https://oniramortsam.github.io/MateMath</a>
+        <br>
+        <button onclick="prevSlide()">Indietro</button>
+        <a href="./">Torna all'Indice</a>
+        <button onclick="nextSlide()">Avanti</button>
+    </div>
+    <div>
+        <a href="A1.html">A1</a>
+        <a href="A2.html">A2</a>
+        <a href="A3.html">A3</a>
+        <a href="A4.html">A4</a>
+        <a href="A5.html">A5</a>
+        <br>
+        <a href="B1.html">B1</a>
+        <a href="B2.html">B2</a>
+        <a href="B3.html">B3</a>
+        <a href="B4.html">B4</a>
+        <a href="B5.html">B5</a>
+        <br>
+        <a href="C1.html">C1</a>
+        <a href="C2.html">C2</a>
+        <a href="C3.html">C3</a>
+        <a href="C4.html">C4</a>
+        <a href="C5.html">C5</a>
+    </div>
+</div>
+
+<script>
+
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function Show(index) {
+        const popup = document.getElementById(index);
+        popup.style.display = "block";
+    }
+
+    function Hide(index) {
+        const popup = document.getElementById(index);
+        popup.style.display = "none";
+    }
+
+</script>
