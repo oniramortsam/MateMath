@@ -44,6 +44,7 @@
 | l'algoritmo di bezout |(QND)|
 | fattorizzazione unica |(NDF)|
 | gcd e lcm di naturali |(DFR)|
+|                       |(   )|
 
 # <a href="A4.html">A4</a>
 
@@ -91,6 +92,7 @@
 | le relazioni di ordine |(NFR)|
 | gli elementi estremali |(NFR)|
 | risolvere un'equazione |(QFR)|
+|                        |(   )|
 
 # <a href="B2.html">B2</a>
 
@@ -99,12 +101,14 @@
 | numeri razionali |(NFR)|
 | sui numeri reali |(NFR)|
 | sulla continuità |(NF )|
+|                  |(   )|
 
 | LE PARABOLICHE        |     |
 |-----------------------|-----|
 | i reali ed i radicali |(NFR)|
 | equazioni quadratiche |(QFR)|
 | equazioni di parabola |(DF )|
+|                       |(   )|
 
 # <a href="B3.html">B3</a>
 
@@ -119,65 +123,94 @@
 
 # <a href="B4.html">B4</a>
 
-| GEOMETRIA NELLO SPAZIO  |     |
+| GEOMETRIA ANALITICA     |     |
 |-------------------------|-----|
 | sul prodotto vettoriale |(NFR)|
 | proiezioni nello spazio |(NFR)|
 | sistemi a tre equazioni |(QFR)|
-| punti |(QFR)|
-| piani |(QFR)|
-| rette |(DFR)|
+|                         |(   )|
 
-# B5
+| SPAZIO   |     |
+|----------|-----|
+| il punto |(DFR)|
+| il piano |(DFR)|
+| la retta |(DFR)|
+|          |(   )|
 
-- <a href="3°B/3°B_1.html">ancora la combinatoria</a>
-  - disposizioni (QNF)
-  - combinazioni (QNF)
-  - permutazioni (DFR)
-- <a href="3°B/3°B_2.html">prodotti e somme serie</a>
-  - distributiva ed additività (ND)
-  - commutativa e permutazioni (DFR)
-  - associativa e somme doppie (DFR)
+# <a href="B5.html">B5</a>
 
-# C1
+| ANCORA LA COMBINATORIA |     |
+|------------------------|-----|
+| disposizioni           |(QNF)|
+| combinazioni           |(QNF)|
+| permutazioni           |(DFR)|
+|                        |(   )|
 
-- <a href="2°B/2°B_3.html">sui triangoli retti</a>
-  - funzioni trigonometriche (QNR)
-  - le formule goniometriche (DFR)
-  - le tangenti e cotangenti (QNF)
-  - triangoli angoli e lati (QFR)
-- <a href="4°A/4°A_1.html">le iperboliche e l'esponenziale</a>
-  - l'esponenziale e nepero (NFR)
-  - le funzioni iperboliche (NFR)
-  - le tangenti iperboliche (NFR)
+| PRODOTTI E SOMME SERIE     |     |
+|----------------------------|-----|
+| distributiva ed additività |(ND )|
+| commutativa e permutazioni |(DFR)|
+| associativa e somme doppie |(DFR)|
+|                            |(   )|
 
-# C2
+# <a href="C1.html">C1</a>
 
-- <a href="4°A/4°A_2.html">le funzioni inverse iperboliche</a>
-  - sulle inverse iperboliche (NFR)
-  - l'arcotangente iperbolica (NFR)
-  - equazione di una iperbole (DF)
-- <a href="4°A/4°A_3.html">funzioni inverse: goniometriche</a>
-  - le arcoseno ed arcocoseno (NFR)
-  - la funzione arco tangente (NFR)
-  - l'equazione di un'ellisse (DF)
+| GONIOMETRIA              |     |
+|--------------------------|-----|
+| funzioni trigonometriche |(QNR)|
+| le formule goniometriche |(DFR)|
+| le tangenti e cotangenti |(QNF)|
+| vertici e lati di simili |(QFR)|
 
+| IPERBOLICHE             |     |
+|-------------------------|-----|
+| l'esponenziale e nepero |(NFR)|
+| le funzioni iperboliche |(NFR)|
+| le tangenti iperboliche |(NFR)|
+|                         |(   )|
 
-# C3/C4/C5
+# <a href="C2.html">C2</a>
 
-- <a href="4°A/4°A_4.html">le coniche nel piano cartesiano</a>
-  - descrizioni cartesiane (NFR)
-  - equazioni parametriche (DFR)
-  - delle equazioni affini (DFR)
-- <a href="4°B/4°B_2.html">limiti e derivate</a>
-  - i limiti (NFR)
-  - derivate (NFR)
-  - funzioni (DFR)
-- <a href="4°B/4°B_3.html">calcolo integrale</a>
-  - integrazione per parti (NFR)
-  - lo scambio d'integrali (DFR)
-  - risultati per sequenze (DFR)
-- <a href="4°B/4°B_4.html">sulla probabilità</a>
-  - la media e la varianza (NFR)
-  - distribuzioni notevoli (NFR)
-  - le coppie di variabili (NFR)
+| GONIOMETRIA               |     |
+|---------------------------|-----|
+| le arcoseno ed arcocoseno |(NFR)|
+| la funzione arco tangente |(NFR)|
+| l'equazione di un'ellisse |(DF )|
+|                           |(   )|
+
+| IPERBOLICHE               |     |
+|---------------------------|-----|
+| sulle inverse iperboliche |(NFR)|
+| l'arcotangente iperbolica |(NFR)|
+| equazione di una iperbole |(DF )|
+|                           |(   )|
+
+# <a href="C3.html">C3</a>
+
+| coniche nel piano      |     |
+|------------------------|-----|
+| descrizioni cartesiane |(NFR)|
+| equazioni parametriche |(DFR)|
+| delle equazioni affini |(DFR)|
+
+# <a href="C4.html">C4</a>
+
+| limiti e derivate |     |
+|-------------------|-----|
+| i limiti          |(NFR)|
+| derivate          |(NFR)|
+| funzioni          |(DFR)|
+
+# <a href="C5.html">C5</a>
+
+| CALCOLO INTEGRALE      |     |
+|------------------------|-----|
+| integrazione per parti |(NFR)|
+| lo scambio d'integrali |(DFR)|
+| risultati per sequenze |(DFR)|
+
+| SULLA PROBABILITÀ      |     |
+|------------------------|-----|
+| la media e la varianza |(NFR)|
+| distribuzioni notevoli |(NFR)|
+| le coppie di variabili |(NFR)|

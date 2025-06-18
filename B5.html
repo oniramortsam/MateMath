@@ -1,22 +1,99 @@
 <head>
   <meta charset="UTF-8">
-  <title>3° anno: parte B2</title>
-  <link rel="stylesheet" href="../style.css">
+  <title>B5</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
 
 <div class="slide active">
-    <h2>prodotti e somme serie</h2>
     <ol>
-        <li>distributiva ed additività (ND)</li>
+        <h2>ANCORA LA COMBINATORIA</h2>
+        <li>disposizioni (QNF)</li>
+        <li>combinazioni (QNF)</li>
+        <li>permutazioni (DFR)</li>
+        <li>             (   )</li>
+        <h2>PRODOTTI E SOMME SERIE</h2>
+        <li>distributiva ed additività (ND )</li>
         <li>commutativa e permutazioni (DFR)</li>
         <li>associativa e somme doppie (DFR)</li>
+        <li>                           (   )</li>
     </ol>
 </div>
 
 <div class="slide">
-    <h2>distributiva ed additività</h2>
+    <h1>ANCORA LA COMBINATORIA</h1>
+</div>
+
+<div class="slide">
+    <h2>1. disposizioni</h2>
+    <div class="block Q">
+        Quante sono le funzioni iniettive tra due insiemi?
+    </div>
+    <div class="block N">
+        Diciamo:
+        <ul>
+            <li>\({\cal S}\left({\rm A}\right)\) le permutazioni di \({\rm A}\).</li>
+            <li>\({{\rm n}+1}!={\rm n}!\cdot\left({\rm n}+1\right)\) il fattoriale.</li>
+        </ul>
+        Che \(\left|{\cal S}\left({\rm A}\right)\right|=\left|{\rm A}\right|!\) lo vediamo dopo.
+    </div>
+    <div class="block F">
+        Anzitutto costruiamo:
+        \[\left\{{\rm f}\in{\rm B}^{\rm A}\quad\left|\operatorname{Imm}\left({\rm f}\right)\right|=\left|{\rm A}\right|\right\}\leftrightarrow\left\{{\rm f}\in\left|{\rm B}\right|^{\left|{\rm n}\right|}\quad\left|\operatorname{Imm}\left({\rm f}\right)\right|=\left|{\rm A}\right|\right\}\]
+        Dopodichè:
+        \[\left\{{\rm f}\in{{\rm m}+1}^{{\rm n}+1}\quad\left|\operatorname{Imm}\left({\rm f}\right)\right|=\left|{\rm n}\right|\right\}\leftrightarrow\left({\rm m}+1\right)\times\left\{{\rm f}\in{\rm m}^{\rm n}\quad\left|\operatorname{Imm}\left({\rm f}\right)\right|=\left|{\rm n}\right|\right\}\]
+        Col seguente criterio:
+        \[\forall{\rm k}\in{\rm n}\quad\begin{cases}{\rm g}_1\left({\rm k}\right)\lt{\rm g}_0\Longrightarrow{\rm f}\left({\rm k}+1\right)={\rm g}_1\left({\rm k}\right)\\{\rm g}_1\left({\rm k}\right)\ge{\rm g}_0\Longrightarrow{\rm f}\left({\rm k}+1\right)={\rm g}_1\left({\rm k}\right)+1\end{cases}\]
+        Da cui si ottiene:
+        \[\left|{\rm f}\in{\rm B}^{\rm A}\quad\left|\operatorname{Imm}\left({\rm f}\right)\right|=\left|{\rm A}\right|\right|=\left(\prod_{\left|{\rm B}\right|-\left|{\rm A}\right|\lt{\rm k}\le\left|{\rm B}\right|}{\rm k}\right)=\frac{\left|{\rm B}\right|!}{\left(\left|{\rm B}\right|-\left|{\rm A}\right|\right)!}\]
+    </div>
+</div>
+
+<div class="slide">
+    <h2>2. combinazioni</h2>
+    <div class="block Q">
+        In quanti modi posso distribuire \({\rm n}\) Wonka ad \({\rm m}\) Oompaloompa?
+    </div>
+    <div class="block N">
+        Diciamo:
+        \[{\cal C}_{\rm n}\left({\rm B}\right)=\left\{{\rm f}\in{\mathbb N}^{\rm B}\quad\sum_{{\rm b}\in{\rm B}}{\rm f}\left(\rm B\right)={\rm n}\right\}\]
+        Dato un elemento \({\rm c}\in{\cal C}_{\left|{\rm A}\right|}\left({\rm B}\right)\):
+        \[{\cal P}_{\rm c}\left({\rm B}\right)=\left\{{\rm f}\in{\rm B}^{\rm A}\quad\left[\forall{\rm b}\in{\rm B}\quad{\rm f}^{-1}\left({\rm b}\right)={\rm c}\left({\rm b}\right)\right]\right\}\]
+    </div>
+    <div class="block F">
+        \[\left|{\cal C}_{\rm n}\left({\rm m}\right)\right|=\left|{\cal P}_{{\rm n},{\rm m}}\left(2\right)\right|\]
+    </div>
+</div>
+
+<div class="slide">
+    <h2>3. permutazioni</h2>
+    <div class="block D">
+        Fissiamo \({\rm f}\in{\rm B}^{\rm A}\):
+        \[\left\{\phi\in{\cal S}\left({\rm A}\right)\quad{\rm f}\circ\phi={\rm f}\right\}\leftrightarrow\prod_{{\rm b}\in{\rm B}}{\cal S}\left({\rm f}^{-1}\left({\rm b}\right)\right)\]
+        Da cui per passaggio al quoziente:
+        \[\left|{\cal P}_{\rm c}\left({\rm B}\right)\right|=\frac{\left|{\rm A}\right|!}{\prod_{{\rm b}\in{\rm B}}{\rm c}\left({\rm b}\right)!}\]
+    </div>
+    <div class="block F">
+        Notare che:
+        \[\forall\left({\rm a},{\rm c}\right)\in{\rm A}\times\operatorname{Imm}\left({\rm f}\right)\quad\left|{\rm f}\circ\phi\quad\phi\in{\cal S}\left({\rm A}\right)\land{\rm f}\circ\phi\left({\rm a}\right)={\rm b}\right|=\frac{\left|{\rm A}\right|!\cdot\left|{\rm B}\right|!}{\left(\left|{\rm f}^{-1}\left({\rm b}\right)\right|-1\right)!\cdot\prod_{{\rm c}\in\operatorname{Imm}\left({\rm f}\right)\setminus\left\{{\rm b}\right\}}\left|{\rm f}^{-1}\left({\rm c}\right)\right|!}\]
+        Da cui si ricava Stifel:
+        \[\forall{\rm c}\in{\cal C}_{\rm n}\left({\rm B}\right)\quad{\cal P}_{\rm c}\left({\rm B}\right)=\sum_{{\rm b}\in{\rm B}}{\cal P}_{{\rm c}-1_{\rm b}}\left({\rm B}\right)\]
+    </div>
+    <div class="block R">
+        Notiamo che usando Stifel:
+        \[\left(\sum_{{\rm k}\in{\rm m}}{\rm a}_{\rm k}\right)^{\rm n}=\sum_{{\rm c}\in{\cal C}_{\rm n}\left({\rm m}\right)}\left({\rm n}!\cdot\prod_{{\rm k}\in{\rm m}}\frac{{\rm a}_{\rm k}^{{\rm c}_{\rm k}}}{{\rm c}_{\rm k}!}\right)\]
+        Di questo ci interessa il caso \({\rm m}=2\):
+        \[\left({\rm a}+{\rm b}\right)^{\rm n}=\sum_{{\rm c}\in{\rm n}+1}\left(\frac{{\rm n}!}{{\rm c}!\left({\rm n}-{\rm c}\right)!}\right)\cdot{\rm a}^{\rm c}\cdot{\rm b}^{{\rm n}-{\rm c}}\]
+    </div>
+</div>
+
+<div class="slide">
+    <h1>PRODOTTI E SOMME SERIE</h1>
+</div>
+
+<div class="slide">
+    <h2>5. distributiva ed additività</h2>
     <div class="block N">
         Si definiscono somma e prodotto:
         <ul>
@@ -35,7 +112,7 @@
 </div>
 
 <div class="slide">
-    <h2>associativa e somme doppie</h2>
+    <h2>6. associativa e somme doppie</h2>
     <div class="block D">
         La proprietà associativa scritta in modo serio è:
         <ul>
@@ -60,7 +137,7 @@
 </div>
 
 <div class="slide">
-    <h2>commutativa e permutazioni</h2>
+    <h2>7. commutativa e permutazioni</h2>
     <div class="block D">
         La proprietà commutativa scritta in modo serio è:
         <ul>
@@ -91,60 +168,27 @@
         <a href="https://oniramortsam.github.io/MateMath">https://oniramortsam.github.io/MateMath</a>
         <br>
         <button onclick="prevSlide()">Indietro</button>
-        <a href="../">Torna all'Indice</a>
+        <a href="./">Torna all'Indice</a>
         <button onclick="nextSlide()">Avanti</button>
     </div>
     <div>
-        1° anno:
+        <a href="A1.html">A1</a>
+        <a href="A2.html">A2</a>
+        <a href="A3.html">A3</a>
+        <a href="A4.html">A4</a>
+        <a href="A5.html">A5</a>
         <br>
-        <a href="../1°A/1°A_1.html">A1</a>
-        <a href="../1°A/1°A_2.html">A2</a>
-        <a href="../1°A/1°A_3.html">A3</a>
-        <a href="../1°A/1°A_4.html">A4</a>
+        <a href="B1.html">B1</a>
+        <a href="B2.html">B2</a>
+        <a href="B3.html">B3</a>
+        <a href="B4.html">B4</a>
+        <a href="B5.html">B5</a>
         <br>
-        <a href="../1°B/1°B_1.html">B1</a>
-        <a href="../1°B/1°B_2.html">B2</a>
-        <a href="../1°B/1°B_3.html">B3</a>
-        <a href="../1°B/1°B_4.html">B4</a>
-    </div>
-    <div>
-        2° anno:
-        <br>
-        <a href="../2°A/2°A_1.html">A1</a>
-        <a href="../2°A/2°A_2.html">A2</a>
-        <a href="../2°A/2°A_3.html">A3</a>
-        <a href="../2°A/2°A_4.html">A4</a>
-        <br>
-        <a href="../2°B/2°B_1.html">B1</a>
-        <a href="../2°B/2°B_2.html">B2</a>
-        <a href="../2°B/2°B_3.html">B3</a>
-        <a href="../2°B/2°B_4.html">B4</a>
-    </div>
-    <div>
-        3° anno:
-        <br>
-        <a href="../3°A/3°A_1.html">A1</a>
-        <a href="../3°A/3°A_2.html">A2</a>
-        <a href="../3°A/3°A_3.html">A3</a>
-        <a href="../3°A/3°A_4.html">A4</a>
-        <br>
-        <a href="../3°B/3°B_1.html">B1</a>
-        <a href="../3°B/3°B_2.html">B2</a>
-        <a href="../3°B/3°B_3.html">B3</a>
-        <a href="../3°B/3°B_4.html">B4</a>
-    </div>
-    <div>
-        4° anno:
-        <br>
-        <a href="../4°A/4°A_1.html">A1</a>
-        <a href="../4°A/4°A_2.html">A2</a>
-        <a href="../4°A/4°A_3.html">A3</a>
-        <a href="../4°A/4°A_4.html">A4</a>
-        <br>
-        <a href="../4°B/4°B_1.html">B1</a>
-        <a href="../4°B/4°B_2.html">B2</a>
-        <a href="../4°B/4°B_3.html">B3</a>
-        <a href="../4°B/4°B_4.html">B4</a>
+        <a href="C1.html">C1</a>
+        <a href="C2.html">C2</a>
+        <a href="C3.html">C3</a>
+        <a href="C4.html">C4</a>
+        <a href="C5.html">C5</a>
     </div>
 </div>
 

@@ -7,17 +7,17 @@
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
 
 <div class="slide active">
-    <h2>LA DIVISIONE</h2>
     <ol>
+        <h2>LA DIVISIONE</h2>
         <li>divisione intera euclidea (QNF)</li>
         <li>proprietà della divisione (QFR)</li>
         <li>i razionali e proporzioni (QNR)</li>
-    </ol>
-    <h2>DIVISIBILITÀ</h2>
-    <ol>
+        <li>invarianza di proporzioni (   )</li>
+        <h2>DIVISIBILITÀ</h2>
         <li>l'algoritmo di bezout (QND)</li>
         <li>fattorizzazione unica (NDF)</li>
         <li>gcd e lcm di naturali (DFR)</li>
+        <li>                      (   )</li>
     </ol>
 </div>
 
@@ -26,7 +26,7 @@
 </div>
 
 <div class="slide">
-    <h2>divisione intera euclidea</h2>
+    <h2>1. divisione intera euclidea</h2>
     <div class="block Q">
         Ho \({\rm a}\) monete ed una Wonka ne costa \({\rm b}\):
         <ul>
@@ -54,7 +54,7 @@
 </div>
 
 <div class="slide">
-    <h2>proprietà della divisione</h2>
+    <h2>2. proprietà della divisione</h2>
     <div class="block Q">
         Ho \({\rm a}\) Wonka ed ogniuna vale \({\rm b}\) monete, voglio pagare \({\rm c}\) Oompaloompa in Wonka:
         <ul>
@@ -97,8 +97,8 @@
         </ul>
     </div>
     <div class="block R">
-        Notare come le formule sopra diventano molto semplici quando \(\dots\) <button onclick="Show('3N')">SHOW</button>
-        <div class="proof" id="3N">
+        Notare come le formule sopra diventano molto semplici quando \(\dots\) <button onclick="Show('2N')">SHOW</button>
+        <div class="proof" id="2N">
             Posso cambiare le monete e spezzare le Wonka:
             \[\begin{split}
                 \begin{cases}{\rm a}\%{\rm c}=0\\{\rm b}\%{\rm c}=0\end{cases}&\Longrightarrow\begin{cases}\left({\rm a}+{\rm b}\right)\%{\rm c}=0\\\left({\rm a}+{\rm b}\right):{\rm c}={\rm a}:{\rm c}+{\rm b}:{\rm c}\end{cases}\\
@@ -109,13 +109,13 @@
                 {\rm a}\%{\rm b}=0&\Longrightarrow\begin{cases}\left({\rm a}:{\rm b}\right)\%{\rm c}=0\Longleftrightarrow{\rm a}\%\left({\rm b}\cdot{\rm c}\right)=0\\\left({\rm a}:{\rm b}\right):{\rm c}={\rm a}:\left({\rm b}\cdot{\rm c}\right)\end{cases}\\
                 {\rm a}\%{\rm c}=0&\Longrightarrow\begin{cases}\left({\rm a}:{\rm c}\right)\%{\rm b}=0\Longleftrightarrow{\rm a}\%\left({\rm b}\cdot{\rm c}\right)=0\\\left({\rm a}:{\rm c}\right):{\rm b}={\rm a}:\left({\rm b}\cdot{\rm c}\right)\end{cases}
             \end{split}\]
-            <button onclick="Hide('3N')">HIDE</button>
+            <button onclick="Hide('2N')">HIDE</button>
         </div>
     </div>
 </div>
 
 <div class="slide">
-    <h2>i razionali e proporzioni</h2>
+    <h2>3. i razionali e proporzioni</h2>
     <div class="block Q">
         Il mio cronometro rudimentale ha una lancetta che gira, un Oompaloompa mi passa d'avanti \({\rm a}\) volte ogni \({\rm b}\) giri:
         <ul>
@@ -149,7 +149,7 @@
 </div>
 
 <div class="slide">
-    <h2>l'algoritmo di bezout</h2>
+    <h2>5. l'algoritmo di bezout</h2>
     <div class="block Q">
         Due Oompaloompa intonano un verso ogni \({\rm a},{\rm b}\) giri di lancetta grande rispettivamente, iniziano sincrinizzati:
         <ul>
@@ -191,7 +191,7 @@
 </div>
 
 <div class="slide">
-    <h2>fattorizzazione unica</h2>
+    <h2>6. fattorizzazione unica</h2>
     <div class="block N">
         Un numero primo \({\rm p}\) soddisfa la proprietà:
         \[\forall\left({\rm a},{\rm b}\right)\in{\mathbb N}\times{\mathbb N}\quad\left({\rm a}\cdot{\rm b}\right)\%{\rm p}=0\Longleftrightarrow\left({\rm a}\%{\rm p}\right)\cdot\left({\rm b}\%{\rm p}\right)=0\]
@@ -218,7 +218,7 @@
 </div>
 
 <div class="slide">
-    <h2>gcd e lcm di naturali</h2>
+    <h2>7. gcd e lcm di naturali</h2>
     <div class="block D">
         Anzitutto notiamo che:
         \[\forall\left({\rm a},{\rm b}\right)\in{\mathbb N}\times{\mathbb N}\quad{\rm a}\%{\rm b}=0\Longleftrightarrow\left[\forall{\rm m}\in{\mathbb N}\quad{\rm a}/\!\!/\!\!/{\rm p}_{\rm m}\ge{\rm b}/\!\!/\!\!/{\rm p}_{\rm m}\right]\]

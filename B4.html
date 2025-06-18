@@ -12,14 +12,16 @@
         <li>sul prodotto vettoriale (NFR)</li>
         <li>proiezioni nello spazio (NFR)</li>
         <li>sistemi a tre equazioni (QFR)</li>
-        <li>punti (QFR)</li>
-        <li>piani (QFR)</li>
+        <li>                        (   )</li>
+        <li>punti (DFR)</li>
+        <li>piani (DFR)</li>
         <li>rette (DFR)</li>
+        <li>      (   )</li>
     </ol>
 </div>
 
 <div class="slide">
-    <h2>il prodotto vettore</h2>
+    <h2>1. il prodotto vettore</h2>
     <div class="block N">
         Definiamo il prodotto vettoriale di due vettori nello spazio come un vettore:
         <ul>
@@ -46,7 +48,7 @@
 </div>
 
 <div class="slide">
-    <h2>proiettive ed equazioni omogenee</h2>
+    <h2>2. proiettive ed equazioni omogenee</h2>
     <div class="block N">
         Dati due piani ed un punto nello spazio si definisce la relazione:
         \[\left({\rm O}_0+{\rm t}_0\cdot{\rm u}_0+{\rm s}_0\cdot{\rm v}_0-{\rm O}\right)\times\left({\rm O}_1+{\rm t}_1\cdot{\rm u}_1+{\rm s}_1\cdot{\rm v}_1-{\rm O}\right)=0\]
@@ -86,7 +88,7 @@
 </div>
 
 <div class="slide">
-    <h2>sistemi lineari di tre variabili</h2>
+    <h2>3. sistemi lineari di tre variabili</h2>
     <div class="block Q">
         In un ristorante:
         <ul>
@@ -129,20 +131,25 @@
 </div>
 
 <div class="slide">
-    <h2>punti</h2>
-    <div class="block Q">
-        <ul>
-            <li>Dati due punti nello spazio, si trova la retta che li congiunge: \[\begin{cases}{\rm a}\cdot{\rm x}_{\rm P}+{\rm b}\cdot{\rm y}_{\rm P}+{\rm c}\cdot{\rm z}_{\rm P}+{\rm d}=0\\{\rm a}\cdot{\rm x}_{\rm Q}+{\rm b}\cdot{\rm y}_{\rm Q}+{\rm c}\cdot{\rm z}_{\rm Q}+{\rm d}=0\end{cases}\]</li>
-            <li>Dati tre punti non allineati nello spazio, si trova il piano che passa per quei punti: \[\begin{cases}{\rm a}\cdot{\rm x}_{\rm P}+{\rm b}\cdot{\rm y}_{\rm P}+{\rm c}\cdot{\rm z}_{\rm P}+{\rm d}=0\\{\rm a}\cdot{\rm x}_{\rm Q}+{\rm b}\cdot{\rm y}_{\rm Q}+{\rm c}\cdot{\rm z}_{\rm Q}+{\rm d}=0\\{\rm a}\cdot{\rm x}_{\rm R}+{\rm b}\cdot{\rm y}_{\rm R}+{\rm c}\cdot{\rm z}_{\rm R}+{\rm d}=0\end{cases}\]</li>
-            <li>Dati una retta ed un punto nello spazio, si trova il piano passante per entrambi: \[\left({\rm k}\cdot{\rm a}_0+{\rm h}\cdot{\rm a}_1\right)\cdot{\rm x}+\left({\rm k}\cdot{\rm b}_0+{\rm h}\cdot{\rm b}_1\right)\cdot{\rm y}+\left({\rm k}\cdot{\rm c}_0+{\rm h}\cdot{\rm c}_1\right)\cdot{\rm z}+\left({\rm k}\cdot{\rm d}_0+{\rm h}\cdot{\rm d}_1\right)=0\Longrightarrow\begin{cases}{\rm a}={\rm k}\cdot{\rm a}_0+{\rm h}\cdot{\rm a}_1\\{\rm b}={\rm k}\cdot{\rm b}_0+{\rm h}\cdot{\rm b}_1\\{\rm c}={\rm k}\cdot{\rm c}_0+{\rm h}\cdot{\rm c}_1\\{\rm d}={\rm k}\cdot{\rm d}_0+{\rm h}\cdot{\rm d}_1\end{cases}\]</li>
-        </ul>
+    <h2>5. punti</h2>
+    <div class="block D">
+        Dati due punti \({\rm P},{\rm Q}\) nello spazio, si trova la retta che li congiunge:
+        \[\left\{\begin{bmatrix}{\rm t}\cdot{\rm x}_{\rm Q}+\left(1-{\rm t}\right)\cdot{\rm x}_{\rm P}\\{\rm t}\cdot{\rm y}_{\rm Q}+\left(1-{\rm t}\right)\cdot{\rm y}_{\rm P}\\{\rm t}\cdot{\rm z}_{\rm Q}+\left(1-{\rm t}\right)\cdot{\rm z}_{\rm P}\end{bmatrix}\quad{\rm t}\in{\mathbb R}\right\}=\left\{\left({\rm x},{\rm y},{\rm z}\right)\in{\mathbb R}^3\quad\frac{{\rm x}-{\rm x}_{\rm P}}{{\rm x}_{\rm Q}-{\rm x}_{\rm P}}=\frac{{\rm y}-{\rm y}_{\rm P}}{{\rm y}_{\rm Q}-{\rm y}_{\rm P}}=\frac{{\rm z}-{\rm z}_{\rm P}}{{\rm z}_{\rm Q}-{\rm z}_{\rm P}}\right\}\]
     </div>
     <div class="block F">
-        <ul>
-            <li>Dati due punti nello spazio, si trova la retta che li congiunge: \[\begin{cases}{\rm x}={\rm t}\cdot{\rm x}_{\rm Q}+\left({\rm t}-1\right)\cdot{\rm x}_{\rm P}\\{\rm y}={\rm t}\cdot{\rm y}_{\rm Q}+\left({\rm t}-1\right)\cdot{\rm y}_{\rm P}\\{\rm z}={\rm t}\cdot{\rm z}_{\rm Q}+\left({\rm t}-1\right)\cdot{\rm z}_{\rm P}\end{cases}\]</li>
-            <li>Dati tre punti non allineati nello spazio, si trova il piano che passa per quei punti: \[\begin{cases}{\rm a}={\rm y}_{\rm P}\cdot{\rm z}_{\rm Q}+{\rm y}_{\rm Q}\cdot{\rm z}_{\rm R}+{\rm y}_{\rm R}\cdot{\rm z}_{\rm P}-{\rm z}_{\rm P}\cdot{\rm y}_{\rm Q}-{\rm z}_{\rm Q}\cdot{\rm y}_{\rm R}-{\rm z}_{\rm R}\cdot{\rm y}_{\rm P}\\{\rm b}={\rm z}_{\rm P}\cdot{\rm x}_{\rm Q}+{\rm z}_{\rm Q}\cdot{\rm x}_{\rm R}+{\rm z}_{\rm R}\cdot{\rm x}_{\rm P}-{\rm x}_{\rm P}\cdot{\rm z}_{\rm Q}-{\rm x}_{\rm Q}\cdot{\rm z}_{\rm R}-{\rm x}_{\rm R}\cdot{\rm z}_{\rm P}\\{\rm c}={\rm x}_{\rm P}\cdot{\rm y}_{\rm Q}+{\rm x}_{\rm Q}\cdot{\rm y}_{\rm R}+{\rm x}_{\rm R}\cdot{\rm y}_{\rm P}-{\rm y}_{\rm P}\cdot{\rm x}_{\rm Q}-{\rm y}_{\rm Q}\cdot{\rm x}_{\rm R}-{\rm y}_{\rm R}\cdot{\rm x}_{\rm P}\\{\rm d}={\rm x}_{\rm P}\cdot{\rm y}_{\rm Q}\cdot{\rm z}_{\rm R}+{\rm x}_{\rm Q}\cdot{\rm y}_{\rm R}\cdot{\rm z}_{\rm P}+{\rm x}_{\rm R}\cdot{\rm y}_{\rm P}\cdot{\rm z}_{\rm Q}-{\rm z}_{\rm P}\cdot{\rm y}_{\rm Q}\cdot{\rm x}_{\rm R}-{\rm z}_{\rm Q}\cdot{\rm y}_{\rm R}\cdot{\rm x}_{\rm P}-{\rm z}_{\rm R}\cdot{\rm y}_{\rm P}\cdot{\rm x}_{\rm Q}\end{cases}\]</li>
-            <li>Dati una retta ed un punto nello spazio, si trova il piano passante per entrambi: \[\begin{cases}{\rm a}=\left({\rm y}-{\rm y}_{\rm P}\right)\cdot{\rm z}_{\rm u}-\left({\rm z}-{\rm z}_{\rm P}\right)\cdot{\rm y}_{\rm u}\\{\rm b}=\left({\rm z}-{\rm z}_{\rm P}\right)\cdot{\rm x}_{\rm u}-\left({\rm x}-{\rm x}_{\rm P}\right)\cdot{\rm z}_{\rm u}\\{\rm c}=\left({\rm x}-{\rm x}_{\rm P}\right)\cdot{\rm y}_{\rm u}-\left({\rm y}-{\rm y}_{\rm P}\right)\cdot{\rm x}_{\rm u}\\{\rm d}={\rm x}\cdot{\rm y}_{\rm P}\cdot{\rm z}_{\rm u}+{\rm y}\cdot{\rm z}_{\rm P}\cdot{\rm x}_{\rm u}+{\rm z}\cdot{\rm x}_{\rm P}\cdot{\rm y}_{\rm u}-{\rm z}\cdot{\rm y}_{\rm P}\cdot{\rm x}_{\rm u}+{\rm y}\cdot{\rm x}_{\rm P}\cdot{\rm z}_{\rm u}+{\rm x}\cdot{\rm z}_{\rm P}\cdot{\rm y}_{\rm u}\end{cases}\]</li>
-        </ul>
+        Dato un terzo punto \({\rm R}\) troviamo il pano passante per tutti e tre \(\dots\) <button onclick="Show('5F')">SHOW</button>
+        \[{\rm a}=\det\begin{bmatrix}-1&{\rm y}_{\rm P}&{\rm z}_{\rm P}\\-1&{\rm y}_{\rm Q}&{\rm z}_{\rm Q}\\-1&{\rm y}_{\rm R}&{\rm z}_{\rm R}\end{bmatrix}\qquad{\rm b}=\det\begin{bmatrix}{\rm x}_{\rm P}&-1&{\rm z}_{\rm P}\\{\rm x}_{\rm Q}&-1&{\rm z}_{\rm Q}\\{\rm x}_{\rm R}&-1&{\rm z}_{\rm R}\end{bmatrix}\qquad{\rm c}=\det\begin{bmatrix}{\rm x}_{\rm P}&{\rm y}_{\rm P}&-1\\{\rm x}_{\rm Q}&{\rm y}_{\rm Q}&-1\\{\rm x}_{\rm R}&{\rm y}_{\rm R}&-1\end{bmatrix}\qquad{\rm d}=\det\begin{bmatrix}{\rm x}_{\rm P}&{\rm y}_{\rm P}&{\rm z}_{\rm P}\\{\rm x}_{\rm Q}&{\rm y}_{\rm Q}&{\rm z}_{\rm Q}\\{\rm x}_{\rm R}&{\rm y}_{\rm R}&{\rm z}_{\rm R}\end{bmatrix}\]
+        <div class="proof" id="5F">
+            Poi il fascio di piani per la rettatrovata:
+            \[\left\{\begin{bmatrix}{\rm a}\\{\rm b}\\{\rm c}\\{\rm d}\end{bmatrix}\in{\mathbb R}^4\quad\begin{cases}{\rm a}\cdot{\rm x}_{\rm P}+{\rm b}\cdot{\rm y}_{\rm P}+{\rm c}\cdot{\rm z}_{\rm P}+{\rm d}=0\\{\rm a}\cdot{\rm x}_{\rm Q}+{\rm b}\cdot{\rm y}_{\rm Q}+{\rm c}\cdot{\rm z}_{\rm Q}+{\rm d}=0\end{cases}\right\}\]
+            Si scrive anche:
+            \[\left\{\begin{bmatrix}\frac{\rm h}{{\rm y}_{\rm Q}-{\rm y}_{\rm P}}+\frac{\rm l}{{\rm z}_{\rm Q}-{\rm z}_{\rm P}}\\\frac{\rm k}{{\rm x}_{\rm Q}-{\rm x}_{\rm P}}+\frac{\rm l}{{\rm z}_{\rm Q}-{\rm z}_{\rm P}}\\\frac{\rm k}{{\rm x}_{\rm Q}-{\rm x}_{\rm P}}+\frac{\rm h}{{\rm y}_{\rm Q}-{\rm y}_{\rm P}}\\\frac{{\rm k}\cdot{\rm x}_{\rm P}}{{\rm x}_{\rm P}-{\rm x}_{\rm Q}}+\frac{{\rm h}\cdot{\rm y}_{\rm P}}{{\rm y}_{\rm P}-{\rm y}_{\rm Q}}+\frac{{\rm l}\cdot{\rm z}_{\rm P}}{{\rm z}_{\rm P}-{\rm z}_{\rm Q}}\end{bmatrix}\quad\begin{bmatrix}{\rm k}\\{\rm h}\\{\rm l}\end{bmatrix}\in{\mathbb R}^3\quad{\rm k}+{\rm h}+{\rm l}=0\right\}\]
+            Imponendo l'appartenenza di \({\rm R}\):
+            \[\left(\frac{{\rm y}_{\rm R}+{\rm z}_{\rm R}-{\rm x}_{\rm P}}{{\rm x}_{\rm Q}-{\rm x}_{\rm P}}\right)\cdot{\rm k}+\left(\frac{{\rm z}_{\rm R}+{\rm x}_{\rm R}-{\rm y}_{\rm P}}{{\rm y}_{\rm Q}-{\rm y}_{\rm P}}\right)\cdot{\rm h}+\left(\frac{{\rm x}_{\rm R}+{\rm y}_{\rm R}-{\rm z}_{\rm P}}{{\rm z}_{\rm Q}-{\rm z}_{\rm P}}\right)\cdot{\rm l}={\rm k}+{\rm h}+{\rm l}=0\]
+            Si possono trovare:
+            \[{\rm k}=\qquad{\rm h}=\qquad{\rm l}=\]
+            <button onclick="Hide('5F')">HIDE</button>
+        </div>
     </div>
     <div class="block R">
         La distanza tra due punti si calcola come: \[\sqrt{\left({\rm x}_{\rm Q}-{\rm x}_{\rm P}\right)^2+\left({\rm y}_{\rm Q}-{\rm y}_{\rm P}\right)^2+\left({\rm z}_{\rm Q}-{\rm z}_{\rm P}\right)^2}\]
@@ -150,20 +157,27 @@
 </div>
 
 <div class="slide">
-    <h2>piani</h2>
-    <div class="block Q">
-        <ul>
-            <li>Dati due piani nello spazio, si trova la loro retta di intersezione: \[\begin{cases}{\rm a}_0\cdot{\rm x}+{\rm b}_0\cdot{\rm y}+{\rm c}_0\cdot{\rm z}+{\rm d}_0=0\\{\rm a}_1\cdot{\rm x}+{\rm b}_1\cdot{\rm y}+{\rm c}_1\cdot{\rm z}+{\rm d}_1=0\end{cases}\]</li>
-            <li>Dati tre piani nello spazio, si trova la loro intersezione: \[\begin{cases}{\rm a}_0\cdot{\rm x}+{\rm b}_0\cdot{\rm y}+{\rm c}_0\cdot{\rm z}+{\rm d}_0=0\\{\rm a}_1\cdot{\rm x}+{\rm b}_1\cdot{\rm y}+{\rm c}_1\cdot{\rm z}+{\rm d}_1=0\\{\rm a}_2\cdot{\rm x}+{\rm b}_2\cdot{\rm y}+{\rm c}_2\cdot{\rm z}+{\rm d}_2=0\end{cases}\]</li>
-            <li>Dati una retta ed un piano nello spazio, si trova l'intersezione: \[\begin{cases}{\rm a}_0\cdot{\rm x}+{\rm b}_0\cdot{\rm y}+{\rm c}_0\cdot{\rm z}+{\rm d}_0=0\\{\rm a}_1\cdot{\rm x}+{\rm b}_1\cdot{\rm y}+{\rm c}_1\cdot{\rm z}+{\rm d}_1=0\\{\rm a}\cdot{\rm x}+{\rm b}\cdot{\rm y}+{\rm c}\cdot{\rm z}+{\rm d}=0\end{cases}\]</li>
-        </ul>
+    <h2>6. piani</h2>
+    <div class="block D">
+        Dati tre piani nello spazio, si trova la loro intersezione risolvendo il sistema:
+        \[\begin{cases}{\rm a}_0\cdot{\rm x}+{\rm b}_0\cdot{\rm y}+{\rm c}_0\cdot{\rm z}+{\rm d}_0=0\\{\rm a}_1\cdot{\rm x}+{\rm b}_1\cdot{\rm y}+{\rm c}_1\cdot{\rm z}+{\rm d}_1=0\\{\rm a}_2\cdot{\rm x}+{\rm b}_2\cdot{\rm y}+{\rm c}_2\cdot{\rm z}+{\rm d}_2=0\end{cases}\]
+        Da cui:
+        \[{\rm x}=\frac{\det\begin{bmatrix}-{\rm d}_0&{\rm b}_0&{\rm c}_0\\-{\rm d}_1&{\rm b}_1&{\rm c}_1\\-{\rm d}_2&{\rm b}_2&{\rm c}_2\end{bmatrix}}{\det\begin{bmatrix}{\rm a}_0&{\rm b}_0&{\rm c}_0\\{\rm a}_1&{\rm b}_1&{\rm c}_1\\{\rm a}_2&{\rm b}_2&{\rm c}_2\end{bmatrix}}\qquad{\rm y}=\frac{\det\begin{bmatrix}{\rm a}_0&-{\rm d}_0&{\rm c}_0\\{\rm a}_1&-{\rm d}_1&{\rm c}_1\\{\rm a}_2&-{\rm d}_2&{\rm c}_2\end{bmatrix}}{\det\begin{bmatrix}{\rm a}_0&{\rm b}_0&{\rm c}_0\\{\rm a}_1&{\rm b}_1&{\rm c}_1\\{\rm a}_2&{\rm b}_2&{\rm c}_2\end{bmatrix}}\qquad{\rm z}=\frac{\det\begin{bmatrix}{\rm a}_0&{\rm b}_0&-{\rm d}_0\\{\rm a}_1&{\rm b}_1&-{\rm d}_1\\{\rm a}_2&{\rm b}_2&-{\rm d}_2\end{bmatrix}}{\det\begin{bmatrix}{\rm a}_0&{\rm b}_0&{\rm c}_0\\{\rm a}_1&{\rm b}_1&{\rm c}_1\\{\rm a}_2&{\rm b}_2&{\rm c}_2\end{bmatrix}}\]
     </div>
     <div class="block F">
-        <ul>
-            <li>Dati due piani nello spazio, si trova la loro retta di intersezione: \[\begin{cases}{\rm x}_{\rm u}={\rm b}_0\cdot{\rm c}_1-{\rm b}_1\cdot{\rm c}_0\\{\rm y}_{\rm u}={\rm c}_0\cdot{\rm a}_1-{\rm c}_1\cdot{\rm a}_0\\{\rm z}_{\rm u}={\rm a}_0\cdot{\rm b}_1-{\rm a}_1\cdot{\rm b}_0\end{cases}\]</li>
-            <li>Dati tre piani nello spazio, si trova la loro intersezione: \[\begin{cases}{\rm x}=-\frac{{\rm d}_0\cdot{\rm b}_1\cdot{\rm c}_2+{\rm b}_0\cdot{\rm c}_1\cdot{\rm d}_2+{\rm c}_0\cdot{\rm d}_1\cdot{\rm b}_2-{\rm c}_0\cdot{\rm b}_1\cdot{\rm d}_2-{\rm b}_0\cdot{\rm d}_1\cdot{\rm c}_2-{\rm d}_0\cdot{\rm c}_1\cdot{\rm b}_2}{{\rm a}_0\cdot{\rm b}_1\cdot{\rm c}_2+{\rm b}_0\cdot{\rm c}_1\cdot{\rm a}_2+{\rm c}_0\cdot{\rm a}_1\cdot{\rm b}_2-{\rm c}_0\cdot{\rm b}_1\cdot{\rm a}_2-{\rm b}_0\cdot{\rm a}_1\cdot{\rm c}_2-{\rm a}_0\cdot{\rm c}_1\cdot{\rm b}_2}\\{\rm y}=-\frac{{\rm a}_0\cdot{\rm d}_1\cdot{\rm c}_2+{\rm d}_0\cdot{\rm c}_1\cdot{\rm a}_2+{\rm c}_0\cdot{\rm a}_1\cdot{\rm d}_2-{\rm c}_0\cdot{\rm d}_1\cdot{\rm a}_2-{\rm d}_0\cdot{\rm a}_1\cdot{\rm c}_2-{\rm a}_0\cdot{\rm c}_1\cdot{\rm d}_2}{{\rm a}_0\cdot{\rm b}_1\cdot{\rm c}_2+{\rm b}_0\cdot{\rm c}_1\cdot{\rm a}_2+{\rm c}_0\cdot{\rm a}_1\cdot{\rm b}_2-{\rm c}_0\cdot{\rm b}_1\cdot{\rm a}_2-{\rm b}_0\cdot{\rm a}_1\cdot{\rm c}_2-{\rm a}_0\cdot{\rm c}_1\cdot{\rm b}_2}\\{\rm z}=-\frac{{\rm a}_0\cdot{\rm b}_1\cdot{\rm d}_2+{\rm b}_0\cdot{\rm d}_1\cdot{\rm a}_2+{\rm d}_0\cdot{\rm a}_1\cdot{\rm b}_2-{\rm d}_0\cdot{\rm b}_1\cdot{\rm a}_2-{\rm b}_0\cdot{\rm a}_1\cdot{\rm d}_2-{\rm a}_0\cdot{\rm d}_1\cdot{\rm b}_2}{{\rm a}_0\cdot{\rm b}_1\cdot{\rm c}_2+{\rm b}_0\cdot{\rm c}_1\cdot{\rm a}_2+{\rm c}_0\cdot{\rm a}_1\cdot{\rm b}_2-{\rm c}_0\cdot{\rm b}_1\cdot{\rm a}_2-{\rm b}_0\cdot{\rm a}_1\cdot{\rm c}_2-{\rm a}_0\cdot{\rm c}_1\cdot{\rm b}_2}\end{cases}\]</li>
-            <li>Dati una retta ed un piano nello spazio, si trova l'intersezione: \[{\rm t}=-\frac{{\rm a}\cdot{\rm x}_{\rm u}+{\rm b}\cdot{\rm y}_{\rm u}+{\rm c}\cdot{\rm z}_{\rm u}+{\rm d}}{{\rm a}\cdot{\rm x}_{\rm P}+{\rm b}\cdot{\rm y}_{\rm P}+{\rm c}\cdot{\rm z}_{\rm P}+{\rm d}}\Longrightarrow\begin{cases}{\rm x}={\rm x}_{\rm P}+{\rm t}\cdot{\rm x}_{\rm u}\\{\rm y}={\rm y}_{\rm P}+{\rm t}\cdot{\rm y}_{\rm u}\\{\rm z}={\rm z}_{\rm P}+{\rm t}\cdot{\rm z}_{\rm u}\end{cases}\]</li>
-        </ul>
+        Dati due piani nello spazio, si trova la loro retta di intersezione \(\dots\) <button onclick="Show('6F')">SHOW</button>
+        <div class="proof" id="6F">
+            \[\begin{cases}{\rm x}_{\rm u}={\rm b}_0\cdot{\rm c}_1-{\rm b}_1\cdot{\rm c}_0\\{\rm y}_{\rm u}={\rm c}_0\cdot{\rm a}_1-{\rm c}_1\cdot{\rm a}_0\\{\rm z}_{\rm u}={\rm a}_0\cdot{\rm b}_1-{\rm a}_1\cdot{\rm b}_0\end{cases}\]
+            Ed un punto generico:
+            \[\begin{cases}
+                {\rm x}=\left|{\rm u}\right|^{-2}\cdot\det\begin{bmatrix}-{\rm d}_0&{\rm b}_0&{\rm c}_0\\-{\rm d}_1&{\rm b}_1&{\rm c}_1\\-{\rm t}&{\rm y}_{\rm u}&{\rm z}_{\rm u}\end{bmatrix}={\rm x}_{\rm U}-\frac{{\rm x}_{\rm u}\cdot{\rm t}}{\left|{\rm u}\right|^2}\\
+                {\rm y}=\left|{\rm u}\right|^{-2}\cdot\det\begin{bmatrix}{\rm a}_0&-{\rm d}_0&{\rm c}_0\\{\rm a}_1&-{\rm d}_1&{\rm c}_1\\{\rm x}_{\rm u}&-{\rm t}&{\rm z}_{\rm u}\end{bmatrix}={\rm y}_{\rm U}-\frac{{\rm y}_{\rm u}\cdot{\rm t}}{\left|{\rm u}\right|^2}\\
+                {\rm z}=\left|{\rm u}\right|^{-2}\cdot\det\begin{bmatrix}{\rm a}_0&{\rm b}_0&-{\rm d}_0\\{\rm a}_1&{\rm b}_1&-{\rm d}_1\\{\rm x}_{\rm u}&{\rm y}_{\rm u}&-{\rm t}\end{bmatrix}={\rm z}_{\rm U}-\frac{{\rm z}_{\rm u}\cdot{\rm t}}{\left|{\rm u}\right|^2}
+            \end{cases}\]
+            Dato poi un terzo piano, si trova l'intersezione:
+            \[{\rm t}=-\frac{{\rm a}_2\cdot{\rm x}_{\rm u}+{\rm b}_2\cdot{\rm y}_{\rm u}+{\rm c}_2\cdot{\rm z}_{\rm u}+{\rm d}_2}{{\rm a}_2\cdot{\rm x}_{\rm U}+{\rm b}_2\cdot{\rm y}_{\rm U}+{\rm c}_2\cdot{\rm z}_{\rm U}+{\rm d}_2}\Longrightarrow\begin{cases}{\rm x}={\rm x}_{\rm U}+{\rm t}\cdot{\rm x}_{\rm u}\\{\rm y}={\rm y}_{\rm U}+{\rm t}\cdot{\rm y}_{\rm u}\\{\rm z}={\rm z}_{\rm U}+{\rm t}\cdot{\rm z}_{\rm u}\end{cases}\]
+            Il risultato è lo stesso. <button onclick="Hide('6F')">HIDE</button>
+        </div>
     </div>
     <div class="block R">
         La distanza tra due piani paralleli si calcola come:
@@ -172,23 +186,32 @@
 </div>
 
 <div class="slide">
-    <h2>rette</h2>
+    <h2>7. rette</h2>
     <div class="block D">
-        Date due rette nello spazio, si trova la direzione del piano parallelo ad entrambe:
-        <ul>
-            <li>\[\begin{cases}{\rm a}={\rm y}_{\rm u}\cdot{\rm z}_{\rm v}-{\rm z}_{\rm u}\cdot{\rm y}_{\rm v}\\{\rm b}={\rm z}_{\rm u}\cdot{\rm x}_{\rm v}-{\rm x}_{\rm u}\cdot{\rm z}_{\rm v}\\{\rm c}={\rm x}_{\rm u}\cdot{\rm y}_{\rm v}-{\rm y}_{\rm u}\cdot{\rm x}_{\rm v}\end{cases}\]</li>
-            <li>\[{\rm k}_0\cdot\left({\rm a}_{0,0}\cdot{\rm x}_{\rm v}+{\rm b}_{0,0}\cdot{\rm y}_{\rm v}+{\rm c}_{0,0}\cdot{\rm z}_{\rm v}\right)+{\rm h}_0\cdot\left({\rm a}_{0,1}\cdot{\rm x}_{\rm v}+{\rm b}_{0,1}\cdot{\rm y}_{\rm v}+{\rm c}_{0,1}\cdot{\rm z}_{\rm v}\right)=0\Longrightarrow\begin{cases}{\rm a}={\rm k}_0\cdot{\rm a}_{0,0}+{\rm h}_0\cdot{\rm a}_{0,1}\\{\rm b}={\rm k}_0\cdot{\rm b}_{0,0}+{\rm h}_0\cdot{\rm b}_{0,1}\\{\rm c}={\rm k}_0\cdot{\rm c}_{0,0}+{\rm h}_0\cdot{\rm c}_{0,1}\\{\rm d}_0={\rm k}_0\cdot{\rm d}_{0,0}+{\rm h}_0\cdot{\rm d}_{0,1}\end{cases}\]</li>
-            <li>\[{\rm k}_1\cdot\left({\rm a}_{1,0}\cdot{\rm x}_{\rm u}+{\rm b}_{1,0}\cdot{\rm y}_{\rm u}+{\rm c}_{1,0}\cdot{\rm z}_{\rm u}\right)+{\rm h}_1\cdot\left({\rm a}_{1,1}\cdot{\rm x}_{\rm u}+{\rm b}_{1,1}\cdot{\rm y}_{\rm u}+{\rm c}_{1,1}\cdot{\rm z}_{\rm u}\right)=0\Longrightarrow\begin{cases}{\rm a}={\rm k}_1\cdot{\rm a}_{1,0}+{\rm h}_1\cdot{\rm a}_{1,1}\\{\rm b}={\rm k}_1\cdot{\rm b}_{1,0}+{\rm h}_1\cdot{\rm b}_{1,1}\\{\rm c}={\rm k}_1\cdot{\rm c}_{1,0}+{\rm h}_1\cdot{\rm c}_{1,1}\\{\rm d}_1={\rm k}_1\cdot{\rm d}_{1,0}+{\rm h}_1\cdot{\rm d}_{1,1}\end{cases}\]</li>
-            <li>\[\begin{cases}{\rm a}={\rm k}_0\cdot{\rm a}_{0,0}+{\rm h}_0\cdot{\rm a}_{0,1}={\rm k}_1\cdot{\rm a}_{1,0}+{\rm h}_1\cdot{\rm a}_{1,1}\\{\rm b}={\rm k}_0\cdot{\rm b}_{0,0}+{\rm h}_0\cdot{\rm b}_{0,1}={\rm k}_1\cdot{\rm b}_{1,0}+{\rm h}_1\cdot{\rm b}_{1,1}\\{\rm c}={\rm k}_0\cdot{\rm c}_{0,0}+{\rm h}_0\cdot{\rm c}_{0,1}={\rm k}_1\cdot{\rm c}_{1,0}+{\rm h}_1\cdot{\rm c}_{1,1}\end{cases}\]</li>
-        </ul>
+        Date due rette nello spazio, si trova la direzione perpendicolare ad entrambe \(\dots\) <button onclick="Show('7D')">SHOW</button>
+        <div class="proof" id="7D">
+            Calcolando:
+            <ul>
+                <li>\[{\rm x}_{\rm u}=\det\begin{bmatrix}{\rm b}_{0,0}&{\rm c}_{0,0}\\{\rm b}_{0,1}&{\rm c}_{0,1}\end{bmatrix}\qquad{\rm y}_{\rm u}=\det\begin{bmatrix}{\rm c}_{0,0}&{\rm a}_{0,0}\\{\rm c}_{0,1}&{\rm a}_{0,1}\end{bmatrix}\qquad{\rm z}_{\rm u}=\det\begin{bmatrix}{\rm a}_{0,0}&{\rm b}_{0,0}\\{\rm a}_{0,1}&{\rm b}_{0,1}\end{bmatrix}\]</li>
+                <li>\[{\rm x}_{\rm v}=\det\begin{bmatrix}{\rm b}_{1,0}&{\rm c}_{1,0}\\{\rm b}_{1,1}&{\rm c}_{1,1}\end{bmatrix}\qquad{\rm y}_{\rm v}=\det\begin{bmatrix}{\rm c}_{1,0}&{\rm a}_{1,0}\\{\rm c}_{1,1}&{\rm a}_{1,1}\end{bmatrix}\qquad{\rm z}_{\rm v}=\det\begin{bmatrix}{\rm a}_{1,0}&{\rm b}_{1,0}\\{\rm a}_{1,1}&{\rm b}_{1,1}\end{bmatrix}\]</li>
+            </ul>
+            Da cui:
+            \[\begin{cases}{\rm a}={\rm y}_{\rm u}\cdot{\rm z}_{\rm v}-{\rm z}_{\rm u}\cdot{\rm y}_{\rm v}\\{\rm b}={\rm z}_{\rm u}\cdot{\rm x}_{\rm v}-{\rm x}_{\rm u}\cdot{\rm z}_{\rm v}\\{\rm c}={\rm x}_{\rm u}\cdot{\rm y}_{\rm v}-{\rm y}_{\rm u}\cdot{\rm x}_{\rm v}\end{cases}\]
+            Oppure imponendo il parallelismo ad una retta ad un piano del fascio passante per l'altra:
+            <ul>
+                <li>\[{\rm k}_1\cdot\left({\rm a}_{1,0}\cdot{\rm x}_{\rm u}+{\rm b}_{1,0}\cdot{\rm y}_{\rm u}+{\rm c}_{1,0}\cdot{\rm z}_{\rm u}\right)+{\rm h}_1\cdot\left({\rm a}_{1,1}\cdot{\rm x}_{\rm u}+{\rm b}_{1,1}\cdot{\rm y}_{\rm u}+{\rm c}_{1,1}\cdot{\rm z}_{\rm u}\right)=0\]</li>
+                <li>\[{\rm k}_0\cdot\left({\rm a}_{0,0}\cdot{\rm x}_{\rm v}+{\rm b}_{0,0}\cdot{\rm y}_{\rm v}+{\rm c}_{0,0}\cdot{\rm z}_{\rm v}\right)+{\rm h}_0\cdot\left({\rm a}_{0,1}\cdot{\rm x}_{\rm v}+{\rm b}_{0,1}\cdot{\rm y}_{\rm v}+{\rm c}_{0,1}\cdot{\rm z}_{\rm v}\right)=0\]</li>
+            </ul>
+            Oppure cercando due piani paralleli:
+            \[\begin{cases}{\rm k}_0\cdot{\rm a}_{0,0}+{\rm h}_0\cdot{\rm a}_{0,1}={\rm k}_1\cdot{\rm a}_{1,0}+{\rm h}_1\cdot{\rm a}_{1,1}\\{\rm k}_0\cdot{\rm b}_{0,0}+{\rm h}_0\cdot{\rm b}_{0,1}={\rm k}_1\cdot{\rm b}_{1,0}+{\rm h}_1\cdot{\rm b}_{1,1}\\{\rm k}_0\cdot{\rm c}_{0,0}+{\rm h}_0\cdot{\rm c}_{0,1}={\rm k}_1\cdot{\rm c}_{1,0}+{\rm h}_1\cdot{\rm c}_{1,1}\end{cases}\]
+            <button onclick="Hide('7D')">HIDE</button>
+        </div>
     </div>
     <div class="block F">
-        E la retta incidente entrambe e perpendicolare a tale piano:
+        Si trova anche la retta incidente entrambe e perpendicolare a tale piano risolvendo:
         <ul>
-            <li>\begin{cases}{\rm a}_{0,0}\cdot\left({\rm x}+{\rm t}_0\cdot{\rm a}\right)+{\rm b}_{0,0}\cdot\left({\rm y}+{\rm t}_0\cdot{\rm b}\right)+{\rm c}_{0,0}\cdot\left({\rm z}+{\rm t}_0\cdot{\rm c}\right)+{\rm d}_{0,0}=0\\{\rm a}_{0,1}\cdot\left({\rm x}+{\rm t}_0\cdot{\rm a}\right)+{\rm b}_{0,1}\cdot\left({\rm y}+{\rm t}_0\cdot{\rm b}\right)+{\rm c}_{0,1}\cdot\left({\rm z}+{\rm t}_0\cdot{\rm c}\right)+{\rm d}_{0,1}=0\\{\rm a}_{1,0}\cdot\left({\rm x}+{\rm t}_1\cdot{\rm a}\right)+{\rm b}_{1,0}\cdot\left({\rm y}+{\rm t}_1\cdot{\rm b}\right)+{\rm c}_{1,0}\cdot\left({\rm z}+{\rm t}_1\cdot{\rm c}\right)+{\rm d}_{1,0}=0\\{\rm a}_{1,1}\cdot\left({\rm x}+{\rm t}_1\cdot{\rm a}\right)+{\rm b}_{1,1}\cdot\left({\rm y}+{\rm t}_1\cdot{\rm b}\right)+{\rm c}_{1,1}\cdot\left({\rm z}+{\rm t}_1\cdot{\rm c}\right)+{\rm d}_{1,1}=0\end{cases}</li>
-            <li>\begin{cases}{\rm a}_{0,0}\cdot\left({\rm x}+{\rm t}_0\cdot{\rm a}\right)+{\rm b}_{0,0}\cdot\left({\rm y}+{\rm t}_0\cdot{\rm b}\right)+{\rm c}_{0,0}\cdot\left({\rm z}+{\rm t}_0\cdot{\rm c}\right)+{\rm d}_{0,0}=0\\{\rm a}_{0,1}\cdot\left({\rm x}+{\rm t}_0\cdot{\rm a}\right)+{\rm b}_{0,1}\cdot\left({\rm y}+{\rm t}_0\cdot{\rm b}\right)+{\rm c}_{0,1}\cdot\left({\rm z}+{\rm t}_0\cdot{\rm c}\right)+{\rm d}_{0,1}=0\\{\rm x}+{\rm t}_1\cdot{\rm a}={\rm x}_{\rm Q}+{\rm s}_1\cdot{\rm x}_{\rm v}\\{\rm y}+{\rm t}_1\cdot{\rm b}={\rm y}_{\rm Q}+{\rm s}_1\cdot{\rm y}_{\rm v}\\{\rm z}+{\rm t}_1\cdot{\rm c}={\rm z}_{\rm Q}+{\rm s}_1\cdot{\rm z}_{\rm v}\end{cases}</li>
-            <li>\begin{cases}{\rm x}+{\rm t}_0\cdot{\rm a}={\rm x}_{\rm P}+{\rm s}_0\cdot{\rm x}_{\rm u}\\{\rm y}+{\rm t}_0\cdot{\rm b}={\rm y}_{\rm P}+{\rm s}_0\cdot{\rm y}_{\rm u}\\{\rm z}+{\rm t}_0\cdot{\rm c}={\rm z}_{\rm P}+{\rm s}_0\cdot{\rm z}_{\rm u}\\{\rm a}_{1,0}\cdot\left({\rm x}+{\rm t}_1\cdot{\rm a}\right)+{\rm b}_{1,0}\cdot\left({\rm y}+{\rm t}_1\cdot{\rm b}\right)+{\rm c}_{1,0}\cdot\left({\rm z}+{\rm t}_1\cdot{\rm c}\right)+{\rm d}_{1,0}=0\\{\rm a}_{1,1}\cdot\left({\rm x}+{\rm t}_1\cdot{\rm a}\right)+{\rm b}_{1,1}\cdot\left({\rm y}+{\rm t}_1\cdot{\rm b}\right)+{\rm c}_{1,1}\cdot\left({\rm z}+{\rm t}_1\cdot{\rm c}\right)+{\rm d}_{1,1}=0\end{cases}</li>
-            <li>\begin{cases}{\rm x}+{\rm t}_0\cdot{\rm a}={\rm x}_{\rm P}+{\rm s}_0\cdot{\rm x}_{\rm u}\\{\rm y}+{\rm t}_0\cdot{\rm b}={\rm y}_{\rm P}+{\rm s}_0\cdot{\rm y}_{\rm u}\\{\rm z}+{\rm t}_0\cdot{\rm c}={\rm z}_{\rm P}+{\rm s}_0\cdot{\rm z}_{\rm u}\\{\rm x}+{\rm t}_1\cdot{\rm a}={\rm x}_{\rm Q}+{\rm s}_1\cdot{\rm x}_{\rm v}\\{\rm y}+{\rm t}_1\cdot{\rm b}={\rm y}_{\rm Q}+{\rm s}_1\cdot{\rm y}_{\rm v}\\{\rm z}+{\rm t}_1\cdot{\rm c}={\rm z}_{\rm Q}+{\rm s}_1\cdot{\rm z}_{\rm v}\end{cases}</li>
+            <li>\[\begin{cases}{\rm a}_{0,0}\cdot\left({\rm x}+{\rm t}_0\cdot{\rm a}\right)+{\rm b}_{0,0}\cdot\left({\rm y}+{\rm t}_0\cdot{\rm b}\right)+{\rm c}_{0,0}\cdot\left({\rm z}+{\rm t}_0\cdot{\rm c}\right)+{\rm d}_{0,0}=0\\{\rm a}_{0,1}\cdot\left({\rm x}+{\rm t}_0\cdot{\rm a}\right)+{\rm b}_{0,1}\cdot\left({\rm y}+{\rm t}_0\cdot{\rm b}\right)+{\rm c}_{0,1}\cdot\left({\rm z}+{\rm t}_0\cdot{\rm c}\right)+{\rm d}_{0,1}=0\end{cases}\qquad\begin{cases}{\rm x}+{\rm t}_0\cdot{\rm a}={\rm x}_{\rm P}+{\rm s}_0\cdot{\rm x}_{\rm u}\\{\rm y}+{\rm t}_0\cdot{\rm b}={\rm y}_{\rm P}+{\rm s}_0\cdot{\rm y}_{\rm u}\\{\rm z}+{\rm t}_0\cdot{\rm c}={\rm z}_{\rm P}+{\rm s}_0\cdot{\rm z}_{\rm u}\end{cases}\]</li>
+            <li>\[\begin{cases}{\rm a}_{1,0}\cdot\left({\rm x}+{\rm t}_1\cdot{\rm a}\right)+{\rm b}_{1,0}\cdot\left({\rm y}+{\rm t}_1\cdot{\rm b}\right)+{\rm c}_{1,0}\cdot\left({\rm z}+{\rm t}_1\cdot{\rm c}\right)+{\rm d}_{1,0}=0\\{\rm a}_{1,1}\cdot\left({\rm x}+{\rm t}_1\cdot{\rm a}\right)+{\rm b}_{1,1}\cdot\left({\rm y}+{\rm t}_1\cdot{\rm b}\right)+{\rm c}_{1,1}\cdot\left({\rm z}+{\rm t}_1\cdot{\rm c}\right)+{\rm d}_{1,1}=0\end{cases}\qquad\begin{cases}{\rm x}+{\rm t}_1\cdot{\rm a}={\rm x}_{\rm Q}+{\rm s}_1\cdot{\rm x}_{\rm v}\\{\rm y}+{\rm t}_1\cdot{\rm b}={\rm y}_{\rm Q}+{\rm s}_1\cdot{\rm y}_{\rm v}\\{\rm z}+{\rm t}_1\cdot{\rm c}={\rm z}_{\rm Q}+{\rm s}_1\cdot{\rm z}_{\rm v}\end{cases}\]</li>
         </ul>
     </div>
     <div class="block R">

@@ -7,15 +7,13 @@
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
 
 <div class="slide active">
-    <h2>L'ADDIZIONE</h2>
     <ol>
+        <h2>L'ADDIZIONE</h2>
         <li>somma ed i numeri naturali (QNF)</li>
         <li>prodotto e moltiplicazione (QNF)</li>
         <li>una proprietà distributiva (QFR)</li>
         <li>le proprietà delle potenze (QNF)</li>
-    </ol>
-    <h2>SOTTRAZIONE</h2>
-    <ol>
+        <h2>SOTTRAZIONE</h2>
         <li>una proprietà invariantiva (QNF)</li>
         <li>una proprietà distributiva (QFR)</li>
         <li>la somma tra numeri interi (QNR)</li>
@@ -28,7 +26,7 @@
 </div>
 
 <div class="slide">
-    <h2>somma ed i numeri naturali</h2>
+    <h2>1. somma ed i numeri naturali</h2>
     <div class="block Q">
         Tre Oompaloompa hanno \({\rm a},{\rm b},{\rm c}\) monete rispettivamente:
         <ul>
@@ -52,7 +50,7 @@
 </div>
 
 <div class="slide">
-    <h2>prodotto e moltiplicazione</h2>
+    <h2>2. prodotto e moltiplicazione</h2>
     <div class="block Q">
         Date \({\rm a}\) scatole, ciascuna contenente \({\rm b}\) pacchetti identici, ciascuno contenente \({\rm c}\) Wonka diverse:
         <ul>
@@ -76,7 +74,7 @@
 </div>
 
 <div class="slide">
-    <h2>una proprietà distributiva</h2>
+    <h2>3. una proprietà distributiva</h2>
     <div class="block Q">
         Dati \({\rm a}\) pacchetti contenenti \({\rm b},{\rm c}\) Wonka di due tipi diversi rispettivamente:
         <ul>
@@ -108,7 +106,7 @@
 </div>
 
 <div class="slide">
-    <h2>le proprietà delle potenze</h2>
+    <h2>4. le proprietà delle potenze</h2>
     <div class="block Q">
         Il mio alfabeto contiene \({\rm a}\) consonanti e \({\rm b}\) vocali, una sillaba è sempre costruita da una vocale ed una consonante:
         <ul>
@@ -153,7 +151,7 @@
 </div>
 
 <div class="slide">
-    <h2>una proprietà invariantiva</h2>
+    <h2>5. una proprietà invariantiva</h2>
     <div class="block Q">
         Due Oompaloompa hanno \({\rm a},{\rm b}\) monete rispettivamente e spendono \({\rm c}\) monete a cena:
         <ul>
@@ -195,8 +193,8 @@
             {\rm a}\ge{\rm b}\Longrightarrow\begin{cases}{\rm a}-{\rm b}\ge{\rm c}\Longleftrightarrow{\rm a}\ge{\rm b}+{\rm c}\\\left({\rm a}-{\rm b}\right)-{\rm c}={\rm a}-\left({\rm b}+{\rm c}\right)\end{cases}\\
             {\rm a}\ge{\rm c}\Longrightarrow\begin{cases}{\rm a}-{\rm c}\ge{\rm b}\Longleftrightarrow{\rm a}\ge{\rm b}+{\rm c}\\\left({\rm a}-{\rm c}\right)-{\rm b}={\rm a}-\left({\rm b}+{\rm c}\right)\end{cases}
         \end{split}\]
-        Questa cosa è equivalente a \(\dots\) <button onclick="Show('1F')">SHOW</button>
-        <div class="proof" id="1F">
+        Questa cosa è equivalente a \(\dots\) <button onclick="Show('5F')">SHOW</button>
+        <div class="proof" id="5F">
             Le proprietà invariantive della differenza:
             <ul>
                 <li>\[{\rm b}\ge{\rm c}\Longrightarrow{\rm a}+{\rm b}=\left({\rm a}+{\rm c}\right)+\left({\rm b}-{\rm c}\right)\]</li>
@@ -204,13 +202,13 @@
                 <li>\[\begin{cases}{\rm a}\ge{\rm b}\Longleftrightarrow{\rm a}+{\rm c}\ge{\rm b}+{\rm c}\\{\rm a}-{\rm b}=\left({\rm a}+{\rm c}\right)-\left({\rm b}+{\rm c}\right)\end{cases}\]</li>
                 <li>\[\begin{cases}{\rm a}\ge{\rm c}\\{\rm b}\ge{\rm c}\end{cases}\Longrightarrow\begin{cases}{\rm a}\ge{\rm b}\Longleftrightarrow{\rm a}-{\rm c}\ge{\rm b}-{\rm c}\\{\rm a}-{\rm b}=\left({\rm a}-{\rm c}\right)-\left({\rm b}-{\rm c}\right)\end{cases}\]</li>
             </ul>
-            Le ultime due prendono anche il nome di prima legge di monotonia. <button onclick="Hide('1F')">HIDE</button>
+            Le ultime due prendono anche il nome di prima legge di monotonia. <button onclick="Hide('5F')">HIDE</button>
         </div>
     </div>
 </div>
 
 <div class="slide">
-    <h2>una proprietà distributiva</h2>
+    <h2>6. una proprietà distributiva</h2>
     <div class="block Q">
         Ho \({\rm a}\) pacchetti e ne regalo \({\rm b}\), ogniuno conteneva \({\rm c}\) Wonka:
         <ul>
@@ -241,7 +239,7 @@
 </div>
 
 <div class="slide">
-    <h2>la somma tra numeri interi</h2>
+    <h2>7. la somma tra numeri interi</h2>
     <div class="block Q">
         Compro \({\rm a}\) Wonka al giorno, e ne mangio \({\rm b}\):
         <ul>
@@ -259,14 +257,14 @@
         </ul>
         Si dice che:
         \[{\rm a}\le{\rm b}\Longleftrightarrow{\rm b}-{\rm a}\in{\mathbb N}\]
-        Le proprietà della differenza sono equivalenti a quelle della somma estese ai numeri interi \(\dots\) <button onclick="Show('3N')">SHOW</button>
-        <div class="proof" id="3N">
+        Le proprietà della differenza sono equivalenti a quelle della somma estese ai numeri interi \(\dots\) <button onclick="Show('7N')">SHOW</button>
+        <div class="proof" id="7N">
             L'unico appunto è sulla seconda legge di monotonia:
             <ul>
                 <li>\[\begin{cases}{\rm a}\in{\mathbb N}\\{\rm b}\ge{\rm c}\end{cases}\Longrightarrow\begin{cases}{\rm a}\cdot{\rm b}\ge{\rm a}\cdot{\rm c}\\\left(-{\rm a}\right)\cdot{\rm b}\le\left(-{\rm a}\right)\cdot{\rm c}\end{cases}\]</li>
                 <li>\[\begin{cases}{\rm a}\ge{\rm b}\\{\rm c}\in{\mathbb N}\end{cases}\Longrightarrow\begin{cases}{\rm a}\cdot{\rm c}\ge{\rm b}\cdot{\rm c}\\{\rm a}\cdot\left(-{\rm c}\right)\le{\rm b}\cdot\left(-{\rm c}\right)\end{cases}\]</li>
             </ul>
-            <button onclick="Hide('3N')">HIDE</button>
+            <button onclick="Hide('7N')">HIDE</button>
         </div>
     </div>
     <div class="block R">
