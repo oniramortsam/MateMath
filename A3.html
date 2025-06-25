@@ -12,7 +12,7 @@
         <li>divisione intera euclidea (QNF)</li>
         <li>proprietà della divisione (QFR)</li>
         <li>i razionali e proporzioni (QNR)</li>
-        <li>invarianza di proporzioni (   )</li>
+        <li>proporzioni: determinante (NFR)</li>
         <h2>DIVISIBILITÀ</h2>
         <li>l'algoritmo di bezout (QND)</li>
         <li>fattorizzazione unica (NDF)</li>
@@ -137,10 +137,41 @@
     <div class="block R">
         Notiamo i casi particolari:
         <ul>
-            <li>\[\left(-{\rm a}\right)={\rm a}\cdot\left(-1\right)={\rm a}:\left(-1\right)\]</li>
             <li>\[{\rm a}-{\rm a}={\rm a}\cdot0=0\]</li>
-            <li>\[{\rm a}+0={\rm a}\cdot1=\left(-\left(-{\rm a}\right)\right)\]</li>
+            <li>\[{\rm a}+0={\rm a}\cdot1=\left(-\left(-{\rm a}\right)\right)={\rm a}\]</li>
+            <li>\[\left(-{\rm a}\right)={\rm a}\cdot\left(-1\right)={\rm a}:\left(-1\right)\]</li>
+            <li>\[\left(-{\rm a}\right)\cdot\left(-{\rm b}\right)={\rm a}\cdot{\rm b}\]</li>
+            <li>\[\left(-{\rm a}\right):\left(-{\rm b}\right)={\rm a}:{\rm b}\]</li>
+            <li>\[\left(-{\rm a}\right)^{\rm n}=\left(1-2\cdot\left({\rm n}/\!\!/2\right)\right)\cdot{\rm a}^{\rm n}\]</li>
         </ul>
+    </div>
+</div>
+
+<div class="slide">
+    <h2>4. proporzioni: determinante</h2>
+    <div class="block N">
+        Definiamo:
+        \[\det\begin{bmatrix}{\rm a}&{\rm b}\\{\rm c}&{\rm d}\end{bmatrix}={\rm a}\cdot{\rm d}-{\rm b}\cdot{\rm c}\]
+    </div>
+    <div class="block F">
+        La proprorzione:
+        \[\frac{\rm a}{\rm b}=\frac{\rm c}{\rm d}\]
+        Si scrive in modo equivalente come:
+        <ul>
+            <li>\[\frac{{\rm a}+{\rm b}}{\rm b}=\frac{{\rm c}+{\rm d}}{\rm d}\qquad\frac{{\rm a}-{\rm b}}{\rm b}=\frac{{\rm c}-{\rm d}}{\rm d}\]</li>
+            <li>\[\frac{\rm a}{{\rm a}+{\rm b}}=\frac{\rm c}{{\rm c}+{\rm d}}\qquad\frac{\rm a}{{\rm a}-{\rm b}}=\frac{\rm c}{{\rm c}-{\rm d}}\]</li>
+            <li>\[\frac{{\rm a}+{\rm c}}{{\rm b}+{\rm d}}=\frac{\rm c}{\rm d}=\frac{{\rm a}-{\rm c}}{{\rm b}-{\rm d}}\qquad\frac{{\rm a}+{\rm c}}{{\rm b}+{\rm d}}=\frac{\rm a}{\rm b}=\frac{{\rm a}-{\rm c}}{{\rm b}-{\rm d}}\]</li>
+        </ul>
+        Oppure come:
+        \[\det\begin{bmatrix}{\rm a}&{\rm b}\\{\rm c}&{\rm d}\end{bmatrix}=0\]
+    </div>
+    <div class="block R">
+        Notare che:
+        <ul>
+            <li>\[\det\begin{bmatrix}{\rm a}+{\rm b}&{\rm b}\\{\rm c}+{\rm d}&{\rm d}\end{bmatrix}=\det\begin{bmatrix}{\rm a}&{\rm b}\\{\rm c}&{\rm d}\end{bmatrix}\]</li>
+            <li>\[\det\begin{bmatrix}{\rm a}&{\rm a}+{\rm b}\\{\rm c}&{\rm c}+{\rm d}\end{bmatrix}=\det\begin{bmatrix}{\rm a}&{\rm b}\\{\rm c}&{\rm d}\end{bmatrix}\]</li>
+            <li>\[\det\begin{bmatrix}{\rm a}+{\rm c}&{\rm b}+{\rm d}\\{\rm c}&{\rm d}\end{bmatrix}=\det\begin{bmatrix}{\rm a}&{\rm b}\\{\rm c}&{\rm d}\end{bmatrix}\]</li>
+            <li>\[\det\begin{bmatrix}{\rm a}&{\rm b}\\{\rm a}+{\rm c}&{\rm b}+{\rm d}\end{bmatrix}=\det\begin{bmatrix}{\rm a}&{\rm b}\\{\rm c}&{\rm d}\end{bmatrix}\]</li>
     </div>
 </div>
 

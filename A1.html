@@ -7,18 +7,27 @@
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
 
 <div class="slide active">
+    <h2>Indice:</h2>
     <ol>
-        <h2>L'ADDIZIONE</h2>
+        <h3>L'ADDIZIONE</h3>
         <li>somma ed i numeri naturali (QNF)</li>
         <li>prodotto e moltiplicazione (QNF)</li>
         <li>una proprietà distributiva (QFR)</li>
         <li>le proprietà delle potenze (QNF)</li>
-        <h2>SOTTRAZIONE</h2>
+        <h3>SOTTRAZIONE</h3>
         <li>una proprietà invariantiva (QNF)</li>
         <li>una proprietà distributiva (QFR)</li>
         <li>la somma tra numeri interi (QNR)</li>
-        <li>massimo e minimo di coppie (   )</li>
+        <li>valore assoluto e i moduli (NFR)</li>
     </ol>
+    <h2>Obiettivi:</h2>
+    <ul>
+        <li>Scrivere traccia e svolgimento di un problema</li>
+        <li>La differenza tra uno strumento e un problema</li>
+        <li>Argomentare una soluzione anche quando banale</li>
+        <li>Se pensi bene e parli male non capisco comunque</li>
+        <li>Priorità e posizione relativa alle parantesi</li>
+    </ul>
 </div>
 
 <div class="slide">
@@ -28,12 +37,16 @@
 <div class="slide">
     <h2>1. somma ed i numeri naturali</h2>
     <div class="block Q">
-        Tre Oompaloompa hanno \({\rm a},{\rm b},{\rm c}\) monete rispettivamente:
+        Quante Wonka ho:
         <ul>
-            <li>Quante monete hanno i primi due?</li>
-            <li>Che succede se si scambiano i borselli?</li>
-            <li>Quante monete hanno gli ultimi due?</li>
-            <li>Quanto possono spendere tutti e tre?</li>
+            <li>Se ne ho \({\rm a}\) Wonka fondenti e \({\rm b}\) Wonka al latte?
+            <li>Se ne ho \({\rm b}\) Wonka fondenti e \({\rm a}\) Wonka al latte?
+        </ul>
+        Tre Oompaloompa hanno \({\rm a},{\rm b},{\rm c}\) Wonka rispettivamente:
+        <ul>
+            <li>Quante Wonka hanno i primi due?</li>
+            <li>Quante Wonka hanno gli ultimi due?</li>
+            <li>Quante Wonka possono vendere tutti e tre?</li>
         </ul>
     </div>
     <div class="block N">
@@ -41,10 +54,10 @@
         \[{\rm A}\cap{\rm B}=\emptyset\Longrightarrow\left|{\rm A}\cup{\rm B}\right|=\left|{\rm A}\right|+\left|{\rm B}\right|\]
     </div>
     <div class="block F">
-        La somma è commutativa ed associativa:
+        L'addizione è commutativa ed associativa:
         <ul>
-            <li>\[{\rm a}+{\rm b}={\rm b}+{\rm a}\]</li>
-            <li>\[\left({\rm a}+{\rm b}\right)+{\rm c}={\rm a}+\left({\rm b}+{\rm c}\right)\]</li>
+            <li>Cambiando l'ordine degli addendi di una addizione, la somma non cambia: \[{\rm a}+{\rm b}={\rm b}+{\rm a}\]</li>
+            <li>Cambiando l'ordine di due addizioni l'ultima somma non cambia: \[\left({\rm a}+{\rm b}\right)+{\rm c}={\rm a}+\left({\rm b}+{\rm c}\right)\]</li>
         </ul>
     </div>
 </div>
@@ -52,23 +65,27 @@
 <div class="slide">
     <h2>2. prodotto e moltiplicazione</h2>
     <div class="block Q">
-        Date \({\rm a}\) scatole, ciascuna contenente \({\rm b}\) pacchetti identici, ciascuno contenente \({\rm c}\) Wonka diverse:
+        Ho \({\rm a}\) pacchetti identici, ciascuno contenente \({\rm b}\) Wonka diverse:
+        <ul>
+            <li>Quante Wonka ho di ogni tipo?</li>
+            <li>Quante Wonka ho in totale?</li>
+        </ul>
+        Date \({\rm a}\) scatole, ciascuna contenente \({\rm b}\) pacchetti, ciascuno contenente \({\rm c}\) Wonka:
         <ul>
             <li>Quanti pacchetti ci sono in totale?</li>
             <li>Quante Wonka ci sono in una scatola?</li>
-            <li>Quante Wonka di un tipo in una scatola?</li>
             <li>Quante Wonka ci sono in totale?</li>
         </ul>
     </div>
     <div class="block N">
-        La moltiplicazione tra numeri naturali è la cardinalità del prodotto cartesiano di insiemi aventi tali cardinalità:
+        Il prodotto di numeri naturali è la cardinalità del prodotto cartesiano di insiemi aventi tali cardinalità:
         \[\left|{\rm A}\times{\rm B}\right|=\left|{\rm A}\right|\cdot\left|{\rm B}\right|\]
     </div>
     <div class="block F">
         La moltiplicazione è commutativa ed associativa:
         <ul>
-            <li>\[{\rm a}\cdot{\rm b}={\rm b}\cdot{\rm a}\]</li>
-            <li>\[\left({\rm a}\cdot{\rm b}\right)\cdot{\rm c}={\rm a}\cdot\left({\rm b}\cdot{\rm c}\right)\]</li>
+            <li>Cambiando l'ordine dei fattori di una moltiplicazione, il prodotto non cambia: \[{\rm a}\cdot{\rm b}={\rm b}\cdot{\rm a}\]</li>
+            <li>Cambiando l'ordine di due moltiplicazioni l'ultimo prodotto non cambia: \[\left({\rm a}\cdot{\rm b}\right)\cdot{\rm c}={\rm a}\cdot\left({\rm b}\cdot{\rm c}\right)\]</li>
         </ul>
     </div>
 </div>
@@ -76,29 +93,30 @@
 <div class="slide">
     <h2>3. una proprietà distributiva</h2>
     <div class="block Q">
-        Dati \({\rm a}\) pacchetti contenenti \({\rm b},{\rm c}\) Wonka di due tipi diversi rispettivamente:
+        Ci sono \({\rm a}\) pacchetti contenenti \({\rm a}\) Wonka fondenti e \({\rm b}\) Wonka al latte:
         <ul>
             <li>Quante Wonka ci sono di ogni tipo?</li>
             <li>Quante Wonka ci sono in ogni pacchetto?</li>
             <li>Quante Wonka ci sono in totale?</li>
         </ul>
-        In due classi di \({\rm a},{\rm b}\) studenti rispettivamente, ogni studente ha \({\rm c}\) monete:
+        La ciurma di Barbabianca è composta da  \({\rm a}\) pirati e quella di Barbanera da \({\rm b}\) pirati, ogni pirata ha \({\rm c}\) danari:
         <ul>
-            <li>Quante monete ci sono in ogni classe?</li>
-            <li>Quanti studenti ci sono in totale?</li>
+            <li>Quanti danari può spendere ogni ciurma?</li>
+            <li>Quanti pirati ci sono in totale?</li>
             <li>Quanto potrebbero spendere insieme?</li>
         </ul>
     </div>
     <div class="block F">
         La moltiplicazione è distributiva sulla somma:
         <ul>
-            <li>\[{\rm a}\cdot\left({\rm b}+{\rm c}\right)={\rm a}\cdot{\rm b}+{\rm a}\cdot{\rm c}\]</li>
-            <li>\[\left({\rm a}+{\rm b}\right)\cdot{\rm c}={\rm a}\cdot{\rm c}+{\rm b}\cdot{\rm c}\]</li>
+            <li>Se il primo fattore è una somma, il secondo si distribuisce sugli addendi: \[{\rm a}\cdot\left({\rm b}+{\rm c}\right)={\rm a}\cdot{\rm b}+{\rm a}\cdot{\rm c}\]</li>
+            <li>Se il secondo fattore è una somma, il primo si distribuisce sugli addendi: \[\left({\rm a}+{\rm b}\right)\cdot{\rm c}={\rm a}\cdot{\rm c}+{\rm b}\cdot{\rm c}\]</li>
         </ul>
     </div>
     <div class="block R">
         Per concludere:
         <ul>
+            <li>Se ogni addendo è un prodotto e tuuti hanno un fattore in comune posso raccoglierlo.</li>
             <li>Abbiamo scoperto che, accostando due rettangoli con un lato identico, l'area totale è la somma delle due aree.</li>
             <li>La proprietà distributiva è il motivo per cui mi ricordo solo alla fine di mettere le unità di misura in fisica.</li>
         </ul>
@@ -153,26 +171,24 @@
 <div class="slide">
     <h2>5. una proprietà invariantiva</h2>
     <div class="block Q">
-        Due Oompaloompa hanno \({\rm a},{\rm b}\) monete rispettivamente e spendono \({\rm c}\) monete a cena:
+        Due amici hanno \({\rm a},{\rm b}\) monete rispettivamente e spendono \({\rm c}\) monete a cena:
         <ul>
+            <li>Possono pagare?</li>
+            <li>Può offrire il primo?</li>
+            <li>Può offrire il secondo?</li>
             <li>Quante monete gli restano?</li>
-            <li>Cosa so dire di \({\rm c}\)?</li>
-            <li>Che succede se offre il primo?</li>
-            <li>Che succede se offre il secondo?</li>
         </ul>
         Ho \({\rm a}\) monete e pago con \({\rm b}\) monete a cena, ne ricevo \({\rm c}\) di resto:
         <ul>
-            <li>Quante monete ho speso?</li>
-            <li>Quante me ne restano?</li>
-            <li>Cosa so dire di \({\rm a},{\rm b}\)?</li>
-            <li>Cosa so dire di \({\rm b},{\rm c}\)?</li>
+            <li>Quante monete ho speso? Quante me ne restano?</li>
+            <li>Quante ne ho prima di avere il resto? E dopo?</li>
+            <li>Se prendo il resto prima di pagare quanto ho?</li>
         </ul>
         Ho \({\rm a}\) monete e ne spendo \({\rm b},{\rm c}\) per due regali:
         <ul>
-            <li>Quante monete ho speso?</li>
-            <li>Quante me ne restano?</li>
-            <li>Cosa so dire di \({\rm a}\)?</li>
-            <li>Cosa so dire di \({\rm b},{\rm c}\)?</li>
+            <li>Quante monete ho speso? Quante me ne restano?</li>
+            <li>Quante me ne restano comprando solo il primo regalo?</li>
+            <li>Quante me ne restano comprando solo il secondo regalo?</li>
         </ul>
     </div>
     <div class="block N">
@@ -185,17 +201,7 @@
         </ul>
     </div>
     <div class="block F">
-        La differenza si scambia con la somma:
-        \[\begin{split}
-            {\rm a}\ge{\rm c}\Longrightarrow\begin{cases}{\rm a}+{\rm b}\ge{\rm c}\\\left({\rm a}-{\rm c}\right)+{\rm b}=\left({\rm a}+{\rm b}\right)-{\rm c}\end{cases}\\
-            {\rm b}\ge{\rm c}\Longrightarrow\begin{cases}{\rm a}+{\rm b}\ge{\rm c}\\{\rm a}+\left({\rm b}-{\rm c}\right)=\left({\rm a}+{\rm b}\right)-{\rm c}\end{cases}\\
-            {\rm c}\ge{\rm b}\Longrightarrow\begin{cases}{\rm a}\ge{\rm c}-{\rm b}\Longleftrightarrow{\rm a}+{\rm b}\ge{\rm c}\\{\rm a}-\left({\rm c}-{\rm b}\right)=\left({\rm a}+{\rm b}\right)-{\rm c}\end{cases}\\
-            {\rm a}\ge{\rm b}\Longrightarrow\begin{cases}{\rm a}-{\rm b}\ge{\rm c}\Longleftrightarrow{\rm a}\ge{\rm b}+{\rm c}\\\left({\rm a}-{\rm b}\right)-{\rm c}={\rm a}-\left({\rm b}+{\rm c}\right)\end{cases}\\
-            {\rm a}\ge{\rm c}\Longrightarrow\begin{cases}{\rm a}-{\rm c}\ge{\rm b}\Longleftrightarrow{\rm a}\ge{\rm b}+{\rm c}\\\left({\rm a}-{\rm c}\right)-{\rm b}={\rm a}-\left({\rm b}+{\rm c}\right)\end{cases}
-        \end{split}\]
-        Questa cosa è equivalente a \(\dots\) <button onclick="Show('5F')">SHOW</button>
-        <div class="proof" id="5F">
-            Le proprietà invariantive della differenza:
+        La sottrazione è invariantive rispetto all'addizione \(\dots\) <button onclick="Show('5F')">SHOW</button>
             <ul>
                 <li>\[{\rm b}\ge{\rm c}\Longrightarrow{\rm a}+{\rm b}=\left({\rm a}+{\rm c}\right)+\left({\rm b}-{\rm c}\right)\]</li>
                 <li>\[{\rm a}\ge{\rm c}\Longrightarrow{\rm a}+{\rm b}=\left({\rm a}-{\rm c}\right)+\left({\rm b}+{\rm c}\right)\]</li>
@@ -203,6 +209,15 @@
                 <li>\[\begin{cases}{\rm a}\ge{\rm c}\\{\rm b}\ge{\rm c}\end{cases}\Longrightarrow\begin{cases}{\rm a}\ge{\rm b}\Longleftrightarrow{\rm a}-{\rm c}\ge{\rm b}-{\rm c}\\{\rm a}-{\rm b}=\left({\rm a}-{\rm c}\right)-\left({\rm b}-{\rm c}\right)\end{cases}\]</li>
             </ul>
             Le ultime due prendono anche il nome di prima legge di monotonia. <button onclick="Hide('5F')">HIDE</button>
+        <div class="proof" id="5F">
+        Questa cosa è equivalente a:
+        <ul>
+            <li>\[{\rm a}\ge{\rm c}\Longrightarrow\begin{cases}{\rm a}+{\rm b}\ge{\rm c}\\\left({\rm a}-{\rm c}\right)+{\rm b}=\left({\rm a}+{\rm b}\right)-{\rm c}\end{cases}\]</li>
+            <li>\[{\rm b}\ge{\rm c}\Longrightarrow\begin{cases}{\rm a}+{\rm b}\ge{\rm c}\\{\rm a}+\left({\rm b}-{\rm c}\right)=\left({\rm a}+{\rm b}\right)-{\rm c}\end{cases}\]</li>
+            <li>\[{\rm c}\ge{\rm b}\Longrightarrow\begin{cases}{\rm a}\ge{\rm c}-{\rm b}\Longleftrightarrow{\rm a}+{\rm b}\ge{\rm c}\\{\rm a}-\left({\rm c}-{\rm b}\right)=\left({\rm a}+{\rm b}\right)-{\rm c}\end{cases}\]</li>
+            <li>\[{\rm a}\ge{\rm b}\Longrightarrow\begin{cases}{\rm a}-{\rm b}\ge{\rm c}\Longleftrightarrow{\rm a}\ge{\rm b}+{\rm c}\\\left({\rm a}-{\rm b}\right)-{\rm c}={\rm a}-\left({\rm b}+{\rm c}\right)\end{cases}\]</li>
+            <li>\[{\rm a}\ge{\rm c}\Longrightarrow\begin{cases}{\rm a}-{\rm c}\ge{\rm b}\Longleftrightarrow{\rm a}\ge{\rm b}+{\rm c}\\\left({\rm a}-{\rm c}\right)-{\rm b}={\rm a}-\left({\rm b}+{\rm c}\right)\end{cases}\]</li>
+        </ul>
         </div>
     </div>
 </div>
@@ -241,7 +256,7 @@
 <div class="slide">
     <h2>7. la somma tra numeri interi</h2>
     <div class="block Q">
-        Compro \({\rm a}\) Wonka al giorno, e ne mangio \({\rm b}\):
+        Ogni giorno compro \({\rm a}\) Wonka e ne mangio \({\rm b}\):
         <ul>
             <li>Rispetto ad oggi, quante Wonka avrò tra \({\rm c}\) giorni?</li>
             <li>Rispetto ad oggi, quante Wonka avevo \({\rm c}\) giorni fa?</li>
@@ -271,7 +286,34 @@
         Notiamo i casi particolari:
         <ul>
             <li>\[{\rm a}-{\rm a}={\rm a}\cdot0=0\]</li>
-            <li>\[{\rm a}+0={\rm a}\cdot1={\rm a}\]</li>
+            <li>\[{\rm a}+0=1\cdot{\rm a}=\left(-\left(-{\rm a}\right)\right)={\rm a}\]</li>
+            <li>\[\left(-{\rm a}\right)={\rm a}\cdot\left(-1\right)\]</li>
+            <li>\[\left(-{\rm a}\right)\cdot\left(-{\rm b}\right)={\rm a}\cdot{\rm b}\]</li>
+        </ul>
+    </div>
+</div>
+
+<div class="slide">
+    <h2>8. valore assoluto e i moduli</h2>
+    <div class="block N">
+        Definiamo:
+        \[\forall{\rm a}\in{\mathbb N}\quad\left|{\rm a}\right|=\left|-{\rm a}\right|={\rm a}\]
+    </div>
+    <div class="block F">
+        Allora:
+        <ul>
+            <li>\[\left|{\rm a}+{\rm b}\right|\ge\left|{\rm a}\right|+\left|{\rm b}\right|\]</li>
+            <li>\[\left|{\rm a}-{\rm b}\right|\le\left|\left|{\rm a}\right|-\left|{\rm b}\right|\right|\]</li>
+            <li>\[\left|{\rm a}\cdot{\rm b}\right|&=\left|{\rm a}\right|\cdot\left|{\rm b}\right|\]</li>
+        </ul>
+    </div>
+    <div class="block R">
+        Notare che:
+        <ul>
+            <li>\[\left|{\rm a}+{\rm b}\right|+\left|{\rm a}-{\rm b}\right|=2\cdot\max\left(\left|{\rm a}\right|,\left|{\rm b}\right|\right)\]</li>
+            <li>\[\left|\left|{\rm a}+{\rm b}\right|-\left|{\rm a}-{\rm b}\right|\right|=2\cdot\min\left(\left|{\rm a}\right|,\left|{\rm b}\right|\right)\]</li>
+            <li>\[\left|{\rm a}+{\rm b}\right|+\left|{\rm a}-{\rm b}\right|+\left|\left|{\rm a}+{\rm b}\right|-\left|{\rm a}-{\rm b}\right|\right|=\left|{\rm a}\right|+\left|{\rm b}\right|\]</li>
+            <li>\[\left|{\rm a}+{\rm b}\right|+\left|{\rm a}-{\rm b}\right|-\left|\left|{\rm a}+{\rm b}\right|-\left|{\rm a}-{\rm b}\right|\right|=\left|\left|{\rm a}\right|-\left|{\rm b}\right|\right|\]</li>
         </ul>
     </div>
 </div>

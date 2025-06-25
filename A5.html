@@ -123,7 +123,7 @@
     </div>
     <div class="block R">
         Sapendo la scrittura in base \({\rm D}\) di un numero razionale possiamo calcolare numeratore e denominatore:
-        \[\frac{\rm a}{\rm b}=\frac{\rm K}{{\rm D}^{\rm m}}+\sum_{{\rm j}>0}\frac{\rm H}{{\rm D}^{{\rm m}+{\rm t}\cdot{\rm j}}}=\frac{\rm K}{{\rm D}^{\rm m}}+\sum_{{\rm j}>0}\frac{\rm H}{{\rm D}^{{\rm m}+{\rm t}\cdot{\rm j}}}=\frac{\rm K}{{\rm D}^{\rm m}}+\frac{\rm H}{{\rm D}^{\rm m}\cdot\left({\rm D}^{\rm t}-1\right)}\]
+        \[\frac{\rm a}{\rm b}=\frac{\rm K}{{\rm D}^{\rm m}}+\sum_{{\rm j}\in{\mathbb N}\setminus1}\frac{\rm H}{{\rm D}^{{\rm m}+{\rm t}\cdot{\rm j}}}=\frac{\rm K}{{\rm D}^{\rm m}}+\sum_{{\rm j}\in{\mathbb N}\setminus1}\frac{\rm H}{{\rm D}^{{\rm m}+{\rm t}\cdot{\rm j}}}=\frac{\rm K}{{\rm D}^{\rm m}}+\frac{\rm H}{{\rm D}^{\rm m}\cdot\left({\rm D}^{\rm t}-1\right)}\]
         Dove \({\rm H}\lt{\rm D}^{\rm t}\) è il periodo di lunghezza \({\rm t}\) ed \({\rm m}\) è la lunghezza della mantissa non periodica.
     </div>
 </div>
@@ -212,7 +212,7 @@
         Che si riscrive come:
         \[\frac{\left({\rm D}^{\rm n}\cdot{\rm a}\right)/\!\!/{\rm b}}{{\rm D}^{\rm n}}=\frac{\left({\rm D}^{\rm m}\cdot{\rm a}\right)/\!\!/{\rm b}}{{\rm D}^{\rm m}}+\frac{{\rm k}\cdot\left({\rm D}^{{\rm n}-{\rm m}}-1\right)}{{\rm D}^{\rm n}\cdot{\rm b}}=\frac{\left({\rm D}^{\rm m}\cdot{\rm a}\right)/\!\!/{\rm b}}{{\rm D}^{\rm m}}+\frac{{\rm H}}{{\rm D}^{\rm n}}\cdot\sum_{{\rm j}\in\frac{{\rm m}-{\rm n}}{\rm t}}{\rm D}^{{\rm t}\cdot{\rm j}}\]
         Questo permette di approssimare:
-        \[\frac{\rm a}{\rm b}=\frac{\left({\rm D}^{\rm m}\cdot{\rm a}\right)/\!\!/{\rm b}}{{\rm D}^{\rm m}}+\sum_{{\rm j}>0}\frac{\rm H}{{\rm D}^{{\rm m}+{\rm t}\cdot{\rm j}}}\]
+        \[\frac{\rm a}{\rm b}=\frac{\left({\rm D}^{\rm m}\cdot{\rm a}\right)/\!\!/{\rm b}}{{\rm D}^{\rm m}}+\sum_{{\rm j}\in{\mathbb N}\setminus1}\frac{\rm H}{{\rm D}^{{\rm m}+{\rm t}\cdot{\rm j}}}\]
         Il valore di \({\rm H}\lt{\rm D}^{\rm t}\) è detto periodo e \({\rm t}\lt{\rm b}\) è la sua lunghezza.
     </div>
 </div>

@@ -14,7 +14,7 @@
 | una proprietà invariantiva |(QNF)|
 | una proprietà distributiva |(QFR)|
 | la somma tra numeri interi |(QNR)|
-| massimo e minimo di coppie |(   )|
+| valore assoluto e i moduli |(NFR)|
 
 ## <a href="A2.html">A2</a>
 
@@ -39,7 +39,7 @@
 | divisione intera euclidea |(QNF)|
 | proprietà della divisione |(QFR)|
 | i razionali e i quozienti |(QNR)|
-| invarianza di proporzioni |(   )|
+| proporzioni: determinante |(NFR)|
 
 | DIVISIBILITÀ          |     |
 |-----------------------|-----|
@@ -94,7 +94,7 @@
 | le relazioni di ordine |(NFR)|
 | gli elementi estremali |(NFR)|
 | risolvere un'equazione |(QFR)|
-|                        |(   )|
+| proiettive e monotonia |(   )|
 
 ## <a href="B2.html">B2</a>
 
@@ -102,30 +102,35 @@
 |------------------|-----|
 | numeri razionali |(NFR)|
 | sui numeri reali |(NFR)|
-| sulla continuità |(NF )|
-|                  |(   )|
+| reali e radicali |(NFR)|
+| logaritmi e basi |(NF )|
 
 | LE PARABOLICHE        |     |
 |-----------------------|-----|
-| i reali ed i radicali |(NFR)|
 | equazioni quadratiche |(QFR)|
-| equazioni di parabola |(DF )|
-|                       |(   )|
+| simmetriche due a due |(   )|
+| vedi anche le cubiche |(DFR)|
+| e le equazioni quarte |(DFR)|
 
 ## <a href="B3.html">B3</a>
 
-| GEOMETRIA ANALITICA |     |
-|---------------------|-----|
-| le rette e il piano |(NDF)|
-| cambiare coordinate |(DFR)|
-| il prodotto vettore |(NFR)|
-| sui sistemi lineari |(QFR)|
-| intersezione: rette |(NFR)|
-| le proiezioni piane |(NFR)|
+| GEOMETRIA NEL PIANO  |     |
+|----------------------|-----|
+| equazioni analitiche |(NDF)|
+| determinante due due |(NFR)|
+| intersezione e rette |(NFR)|
+| proiezioni nel piano |(NF )|
+
+| GEOMETRIA ANALITICA   |     |
+|-----------------------|-----|
+| sistemi lineari piani |(QFR)|
+| trasformazioni affini |(DFR)|
+| coniche: eccentricità |(NFR)|
+| tangenti a una conica |(NDF)|
 
 ## <a href="B4.html">B4</a>
 
-| GEOMETRIA ANALITICA     |     |
+| GEOMETRIA NELLO SPAZIO  |     |
 |-------------------------|-----|
 | sul prodotto vettoriale |(NFR)|
 | proiezioni nello spazio |(NFR)|
@@ -137,16 +142,16 @@
 | il punto |(DFR)|
 | il piano |(DFR)|
 | la retta |(DFR)|
-|          |(   )|
+| distanze |(   )|
 
 ## <a href="B5.html">B5</a>
 
-| ANCORA LA COMBINATORIA |     |
-|------------------------|-----|
-| disposizioni           |(QNF)|
-| combinazioni           |(QNF)|
-| permutazioni           |(DFR)|
-|                        |(   )|
+| COMBINATORIA |     |
+|--------------|-----|
+| disposizioni |(QNF)|
+| combinazioni |(QNF)|
+| permutazioni |(DFR)|
+|              |(   )|
 
 | PRODOTTI E SOMME SERIE     |     |
 |----------------------------|-----|
@@ -187,14 +192,6 @@
 | equazione di una iperbole |(DF )|
 |                           |(   )|
 
-## <a href="C3.html">C3</a>
-
-| coniche nel piano      |     |
-|------------------------|-----|
-| descrizioni cartesiane |(NFR)|
-| equazioni parametriche |(DFR)|
-| delle equazioni affini |(DFR)|
-
 ## <a href="C4.html">C4</a>
 
 | limiti e derivate |     |
@@ -202,6 +199,14 @@
 | i limiti          |(NFR)|
 | derivate          |(NFR)|
 | funzioni          |(DFR)|
+| tangenti          |(   )|
+
+|                   |     |
+|-------------------|-----|
+|                   |(   )|
+|                   |(   )|
+|                   |(   )|
+|                   |(   )|
 
 ## <a href="C5.html">C5</a>
 
@@ -210,9 +215,11 @@
 | integrazione per parti |(NFR)|
 | lo scambio d'integrali |(DFR)|
 | risultati per sequenze |(DFR)|
+|                        |(   )|
 
 | SULLA PROBABILITÀ      |     |
 |------------------------|-----|
 | la media e la varianza |(NFR)|
 | distribuzioni notevoli |(NFR)|
 | le coppie di variabili |(NFR)|
+|                        |(   )|

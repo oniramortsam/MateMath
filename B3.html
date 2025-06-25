@@ -7,19 +7,26 @@
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
 
 <div class="slide active">
-    <h2>GEOMETRIA ANALITICA</h2>
     <ol>
-        <li>le rette e il piano (NDF)</li>
-        <li>cambiare coordinate (DFR)</li>
-        <li>il prodotto vettore (N)</li>
-        <li>sui sistemi lineari (QFR)</li>
-        <li>intersezione: rette (NFR)</li>
-        <li>le proiezioni piane (NF)</li>
+        <h2>GEOMETRIA NEL PIANO</h2>
+        <li>equazioni analitiche (NDF)</li>
+        <li>determinante due due (NFR)</li>
+        <li>intersezione e rette (NFR)</li>
+        <li>proiezioni nel piano (NF )</li>
+        <h2>GEOMETRIA ANALITICA</h2>
+        <li>sistemi lineari piani (QFR)</li>
+        <li>trasformazioni affini (DFR)</li>
+        <li>coniche: eccentricità (NFR)</li>
+        <li>tangenti a una conica (NDF)</li>
     </ol>
 </div>
 
 <div class="slide">
-    <h2>le rette e il piano</h2>
+    <h1>GEOMETRIA NEL PIANO</h1>
+</div>
+
+<div class="slide">
+    <h2>1. equazioni analitiche</h2>
     <div class="block N">
         Fissiamo un punto ed un versore \({\rm O},{\cal X}\) sul piano cartesiano:
         <ul>
@@ -31,50 +38,26 @@
         Dove \(\theta\) è l'angolo che ruota \({\rm u}\) in \({\rm v}\).
     </div>
     <div class="block F">
-        Dati due punti \({\rm P},{\rm Q}\) nel piano cartesiano, la retta passante per questi punti si rappresenta come:
-        \[\left\{{\rm Q}+{\rm t}\cdot\left({\rm P}-{\rm Q}\right)\quad{\rm t}\in{\mathbb R}\right\}\]
+        Dati due punti \({\rm U},{\rm V}\) nel piano cartesiano, la retta passante per questi punti si rappresenta come:
+        \[\left\{{\rm U}+{\rm t}\cdot\left({\rm V}-{\rm U}\right)\quad{\rm t}\in{\mathbb R}\right\}=\left\{\left(1-{\rm t}\right)\cdot{\rm U}+{\rm t}\cdot{\rm V}\quad{\rm t}\in{\mathbb R}\right\}\]
         Che corrisponde alla relazione tra \({\rm x},{\rm y}\):
-        \[\exists{\rm t}\in{\mathbb R}\qquad\begin{cases}{\rm x}={\rm x}_{\rm Q}+{\rm t}\cdot\left({\rm x}_{\rm P}-{\rm x}_{\rm Q}\right)={\rm t}\cdot{\rm x}_{\rm P}+\left(1-{\rm t}\right)\cdot{\rm x}_{\rm Q}\\{\rm y}={\rm y}_{\rm Q}+{\rm t}\cdot\left({\rm y}_{\rm Q}-{\rm y}_{\rm P}\right)={\rm t}\cdot{\rm y}_{\rm P}+\left(1-{\rm t}\right)\cdot{\rm y}_{\rm Q}\end{cases}\]
+        \[\exists{\rm t}\in{\mathbb R}\qquad\begin{cases}{\rm x}={\rm x}_{\rm U}+{\rm t}\cdot\left({\rm x}_{\rm V}-{\rm x}_{\rm U}\right)=\left(1-{\rm t}\right)\cdot{\rm x}_{\rm U}+{\rm t}\cdot{\rm x}_{\rm V}\\{\rm y}={\rm y}_{\rm U}+{\rm t}\cdot\left({\rm y}_{\rm V}-{\rm y}_{\rm U}\right)=\left(1-{\rm t}\right)\cdot{\rm y}_{\rm U}+{\rm t}\cdot{\rm y}_{\rm V}\end{cases}\]
         <ul>
-            <li>In forma cartesiana tale relazione si riduce all'equazione lineare: \[\left({\rm x}-{\rm x}_{\rm Q}\right)\cdot\left({\rm y}_{\rm Q}-{\rm y}_{\rm P}\right)=\left({\rm y}-{\rm y}_{\rm Q}\right)\cdot\left({\rm x}_{\rm Q}-{\rm x}_{\rm P}\right)\]</li>
-            <li>Esplicitando \({\rm y}\):\[{\rm y}=\frac{{\rm y}_{\rm P}\cdot{\rm x}_{\rm Q}-{\rm y}_{\rm Q}\cdot{\rm x}_{\rm P}}{{\rm x}_{\rm Q}-{\rm x}_{\rm P}}+\left(\frac{{\rm y}_{\rm Q}-{\rm y}_{\rm P}}{{\rm x}_{\rm Q}-{\rm x}_{\rm P}}\right)\cdot{\rm x}\]</li>
-            <li>Esplicitando \({\rm x}\):\[{\rm x}=\frac{{\rm y}_{\rm Q}\cdot{\rm x}_{\rm P}-{\rm y}_{\rm P}\cdot{\rm x}_{\rm Q}}{{\rm y}_{\rm Q}-{\rm y}_{\rm P}}+\left(\frac{{\rm x}_{\rm Q}-{\rm x}_{\rm P}}{{\rm y}_{\rm Q}-{\rm y}_{\rm P}}\right)\cdot{\rm y}\]</li>
+            <li>In forma cartesiana tale relazione si riduce all'equazione lineare: \[\left({\rm x}-{\rm x}_{\rm V}\right)\cdot\left({\rm y}_{\rm V}-{\rm y}_{\rm U}\right)=\left({\rm y}-{\rm y}_{\rm V}\right)\cdot\left({\rm x}_{\rm V}-{\rm x}_{\rm U}\right)\]</li>
+            <li>Esplicitando \({\rm y}\):\[{\rm y}=\frac{{\rm y}_{\rm U}\cdot{\rm x}_{\rm V}-{\rm y}_{\rm V}\cdot{\rm x}_{\rm U}}{{\rm x}_{\rm V}-{\rm x}_{\rm U}}+\left(\frac{{\rm y}_{\rm V}-{\rm y}_{\rm U}}{{\rm x}_{\rm V}-{\rm x}_{\rm U}}\right)\cdot{\rm x}\]</li>
+            <li>Esplicitando \({\rm x}\):\[{\rm x}=\frac{{\rm x}_{\rm U}\cdot{\rm y}_{\rm V}-{\rm x}_{\rm V}\cdot{\rm y}_{\rm U}}{{\rm y}_{\rm V}-{\rm y}_{\rm U}}+\left(\frac{{\rm x}_{\rm V}-{\rm x}_{\rm U}}{{\rm y}_{\rm V}-{\rm y}_{\rm U}}\right)\cdot{\rm y}\]</li>
         </ul>
     </div>
     <div class="block R">
         Tale relazione si scrive in modo compatto come:
-        \[\left({\cal Z}\times\left({\rm Q}-{\rm P}\right)\right)\cdot\left({\rm X}-{\rm P}\right)=\left({\cal Z}\times\left({\rm P}-{\rm Q}\right)\right)\cdot\left({\rm X}-{\rm Q}\right)=0\]
-        Cioè le coordinate parametriche e cartesiane si scambiano passando all'ortogonale.
+        \[\left({\cal Z}\times\left({\rm V}-{\rm U}\right)\right)\cdot\left({\rm P}-{\rm U}\right)=\left({\cal Z}\times\left({\rm U}-{\rm V}\right)\right)\cdot\left({\rm P}-{\rm V}\right)=0\]
+        E la distanza di un punto da una retta è:
+        \[\left(\frac{{\cal Z}\times\left({\rm V}-{\rm U}\right)}{\left|{\rm V}-{\rm U}\right|}\right)\cdot\left({\rm P}-{\rm U}\right)=\left(\frac{{\cal Z}\times\left({\rm U}-{\rm V}\right)}{\left|{\rm V}-{\rm U}\right|}\right)\cdot\left({\rm P}-{\rm V}\right)\]
     </div>
 </div>
 
 <div class="slide">
-    <h2>cambiare coordinate</h2>
-    <div class="block D">
-        Consideriamo la trasformazione:
-        \[{\rm f}\left({\rm P}\right)={\rm V}+\left({\rm a}\cdot{\rm u}\cdot\left({\rm P}-{\rm U}\right)\right)\cdot{\rm v}+\left({\rm b}\cdot\left({\cal Z}\times{\rm u}\right)\cdot\left({\rm P}-{\rm U}\right)\right)\cdot\left({\cal Z}\times{\rm v}\right)\]
-        E la sua inversa:
-        \[{\rm g}\left({\rm Q}\right)={\rm U}+\left(\frac{{\rm v}\cdot\left({\rm Q}-{\rm V}\right)}{\rm a}\right)\cdot{\rm u}+\left(\frac{\left({\cal Z}\times{\rm v}\right)\cdot\left({\rm Q}-{\rm V}\right)}{\rm b}\right)\cdot\left({\cal Z}\times{\rm u}\right)\]
-    </div>
-    <div class="block F">
-        Allora la retta:
-        \[\left({\rm x}_{\rm P}-{\rm x}_{\rm Q}\right)\cdot\left({\rm y}_{\rm Q}-{\rm y}_{\rm P}\right)=\left({\rm y}_{\rm P}-{\rm y}_{\rm Q}\right)\cdot\left({\rm x}_{\rm Q}-{\rm x}_{\rm P}\right)\]
-        Viene trasportata nella retta:
-        \[\left({\rm x}_{\rm Q}-{\rm x}_{{\rm f}\left({\rm Q}\right)}\right)\cdot\left({\rm y}_{{\rm f}\left({\rm Q}\right)}-{\rm y}_{{\rm f}\left({\rm P}\right)}\right)=\left({\rm y}_{\rm Q}-{\rm y}_{{\rm f}\left({\rm Q}\right)}\right)\cdot\left({\rm x}_{{\rm f}\left({\rm Q}\right)}-{\rm x}_{{\rm f}\left({\rm P}\right)}\right)\]
-        Che coincide con:
-        \[\left({\rm x}_{{\rm g}\left({\rm Q}\right)}-{\rm x}_{\rm Q}\right)\cdot\left({\rm y}_{\rm Q}-{\rm y}_{\rm P}\right)=\left({\rm y}_{{\rm g}\left({\rm Q}\right)}-{\rm y}_{\rm Q}\right)\cdot\left({\rm x}_{\rm Q}-{\rm x}_{\rm P}\right)\]
-    </div>
-    <div class="block R">
-        In genere se:
-        \[{\cal E}:{\mathbb R}\rightarrow{\mathbb R}^2\qquad{\cal C}:{\mathbb R}^2\rightarrow0\]
-        Allora:
-        \[\operatorname{Imm}\left({\cal E}\right)={\cal C}^{-1}\left(0\right)\Longrightarrow\operatorname{Imm}\left({\rm f}\circ{\cal E}\right)=\left[{\cal C}\circ{\rm g}\right]^{-1}\left(0\right)\]
-        Questo permette di trasportare un luogo geometrico qualunque, come una conica.
-    </div>
-</div>
-
-<div class="slide">
-    <h2>il prodotto vettore</h2>
+    <h2>2. determinante due due</h2>
     <div class="block N">
         Dati due vettori \({\rm u},{\rm v}\) nel piano, definiamo il loro prodotto vettoriale:
         \[{\rm u}\times{\rm v}=\left|{\rm u}\right|\cdot\left|{\rm v}\right|\cdot\sin\left(\theta\right)\cdot{\cal Z}=\det\begin{bmatrix}{\rm x}_{\rm u}&{\rm x}_{\rm v}\\{\rm y}_{\rm u}&{\rm y}_{\rm v}\end{bmatrix}\cdot{\cal Z}\]
@@ -86,10 +69,60 @@
         Ed abbiamo definito il determinante:
         \[\det\begin{bmatrix}{\rm x}_{\rm u}&{\rm x}_{\rm v}\\{\rm y}_{\rm u}&{\rm y}_{\rm v}\end{bmatrix}={\rm x}_{\rm u}\cdot{\rm y}_{\rm v}-{\rm y}_{\rm u}\cdot{\rm x}_{\rm v}\]
     </div>
+    <div class="block F">
+        La condizione di parallelismo si scrive come:
+        \[\left\{{\rm t}\cdot{\rm u}\quad{\rm t}\in{\mathbb R}\right\}=\left\{{\rm t}\cdot{\rm v}\quad{\rm t}\in{\mathbb R}\right\}\Longleftrightarrow\left[\exists{\rm t}\in{\mathbb R}\setminus1\quad{\rm v}={\rm t}\cdot{\rm u}\right]\Longleftrightarrow\left({\rm u}\times{\rm v}\right)=0\]
+    </div>
+    <div class="block R">
+        Osservare che nel piano:
+        \[\left({\rm u}\times{\rm v}\right)\cdot{\cal Z}=\left({\cal Z}\times{\rm u}\right)\cdot{\rm v}=\left({\rm v}\times{\cal Z}\right)\cdot{\rm u}\]
+    </div>
 </div>
 
 <div class="slide">
-    <h2>sistemi lineari di due variabili</h2>
+    <h2>3. intersezione e rette</h2>
+    <div class="block N">
+        Si dice il fascio di rette passanti per \({\rm P}\):
+        \[\left\{\left\{\begin{bmatrix}{\rm x}_{\rm P}-{\rm b}\cdot{\rm t}\\{\rm y}_{\rm P}+{\rm a}\cdot{\rm t}\end{bmatrix}\quad{\rm t}\in{\mathbb R}\right\}\quad\begin{bmatrix}{\rm a}\\{\rm b}\end{bmatrix}\in{\mathbb R}^2\setminus1\right\}=\left\{\left\{\left({\rm x},{\rm y}\right)\in{\mathbb R}^2\quad{\rm x}\cdot{\rm a}+{\rm y}\cdot{\rm b}={\rm x}_{\rm P}\cdot{\rm a}+{\rm y}_{\rm P}\cdot{\rm b}\right\}\quad\begin{bmatrix}{\rm a}\\{\rm b}\end{bmatrix}\in{\mathbb R}^2\setminus1\right\}\]
+        Si dice il fascio di rette prallele ad \({\rm u}\):
+        \[\left\{\left\{{\rm O}+{\rm u}\cdot{\rm t}+{\cal Z}\times{\rm u}\cdot{\rm c}\quad{\rm t}\in{\mathbb R}\right\}\quad{\rm c}\in{\mathbb R}\right\}=\left\{\left\{{\rm P}\in{\mathbb R}^2\quad\left({\rm P}-{\rm O}\right)\cdot\left({\cal Z}\times{\rm u}\right)={\rm c}\right\}\quad{\rm c}\in{\mathbb R}\right\}\]
+    </div>
+    <div class="block F">
+        Considerate due rette, si può trovare la loro intersezione in modi diversi:
+        <ul>
+            <li>\[\begin{cases}{\rm y}\cdot{\rm x}_{\rm u}-{\rm x}\cdot{\rm y}_{\rm u}={\rm y}_{\rm U}\cdot{\rm x}_{\rm u}-{\rm x}_{\rm U}\cdot{\rm y}_{\rm u}\\{\rm y}\cdot{\rm x}_{\rm v}-{\rm x}\cdot{\rm y}_{\rm v}={\rm y}_{\rm V}\cdot{\rm x}_{\rm v}-{\rm x}_{\rm V}\cdot{\rm y}_{\rm v}\end{cases}\]</li>
+            <li>\[\left({\rm y}_{\rm U}+{\rm t}\cdot{\rm y}_{\rm u}\right)\cdot{\rm x}_{\rm v}-\left({\rm x}_{\rm U}+{\rm t}\cdot{\rm x}_{\rm u}\right)\cdot{\rm y}_{\rm v}={\rm y}_{\rm V}\cdot{\rm x}_{\rm v}-{\rm x}_{\rm V}\cdot{\rm y}_{\rm v}\Longrightarrow\begin{cases}{\rm x}={\rm x}_{\rm U}+{\rm t}\cdot{\rm x}_{\rm u}\\{\rm y}={\rm y}_{\rm U}+{\rm t}\cdot{\rm y}_{\rm u}\end{cases}\]</li>
+            <li>\[\left({\rm y}_{\rm V}+{\rm s}\cdot{\rm y}_{\rm v}\right)\cdot{\rm x}_{\rm u}-\left({\rm x}_{\rm V}+{\rm s}\cdot{\rm x}_{\rm v}\right)\cdot{\rm y}_{\rm u}={\rm y}_{\rm U}\cdot{\rm x}_{\rm u}-{\rm x}_{\rm U}\cdot{\rm y}_{\rm u}\Longrightarrow\begin{cases}{\rm x}={\rm x}_{\rm V}+{\rm s}\cdot{\rm x}_{\rm v}\\{\rm y}={\rm y}_{\rm V}+{\rm s}\cdot{\rm y}_{\rm v}\end{cases}\]</li>
+            <li>\[\begin{cases}{\rm x}={\rm x}_{\rm U}+{\rm t}\cdot{\rm x}_{\rm u}={\rm x}_{\rm V}+{\rm s}\cdot{\rm x}_{\rm v}\\{\rm y}={\rm y}_{\rm U}+{\rm t}\cdot{\rm y}_{\rm u}={\rm y}_{\rm V}+{\rm s}\cdot{\rm y}_{\rm v}\end{cases}\]</li>
+        </ul>
+    </div>
+    <div class="block R">
+        Notare che:
+        \[{\rm k}\cdot\left({\rm y}\cdot{\rm x}_{\rm u}-{\rm x}\cdot{\rm y}_{\rm u}\right)+{\rm h}\cdot\left({\rm y}\cdot{\rm x}_{\rm v}-{\rm x}\cdot{\rm y}_{\rm v}\right)={\rm k}\cdot\left({\rm y}_{\rm U}\cdot{\rm x}_{\rm u}-{\rm x}_{\rm U}\cdot{\rm y}_{\rm u}\right)+{\rm h}\cdot\left({\rm y}_{\rm V}\cdot{\rm x}_{\rm v}-{\rm x}_{\rm V}\cdot{\rm y}_{\rm v}\right)\]
+        Corrisponde all'equazione di un fascio di rette.
+    </div>
+</div>
+
+<div class="slide">
+    <h2>4. proiezioni nel piano</h2>
+    <div class="block N">
+        Date due rette ed un punto nel piano si definisce la relazione:
+        \[\left({\rm O}_0+{\rm t}_0\cdot{\rm u}_0-{\rm O}\right)\times\left({\rm O}_1+{\rm t}_1\cdot{\rm u}_1-{\rm O}\right)=0\]
+    </div>
+    <div class="block F">
+        Questa si scrive come:
+        \[\left({\rm x}_{{\rm O},0}+{\rm t}_0\cdot{\rm x}_{{\rm u},0}\right)\cdot\left({\rm y}_{{\rm O},1}+{\rm t}_1\cdot{\rm y}_{{\rm u},1}\right)=\left({\rm y}_{{\rm O},0}+{\rm t}_0\cdot{\rm y}_{{\rm u},0}\right)\cdot\left({\rm x}_{{\rm O},1}+{\rm t}_1\cdot{\rm x}_{{\rm u},1}\right)\]
+        Da cui:
+        \[{\rm t}_1=\frac{\left({\rm y}_{{\rm O},0}+{\rm t}_0\cdot{\rm y}_{{\rm u},0}\right)\cdot{\rm x}_{{\rm O},1}-\left({\rm x}_{{\rm O},0}+{\rm t}_0\cdot{\rm x}_{{\rm u},0}\right)\cdot{\rm y}_{{\rm O},1}}{\left({\rm x}_{{\rm O},0}+{\rm t}_0\cdot{\rm x}_{{\rm u},0}\right)\cdot{\rm y}_{{\rm u},1}-\left({\rm y}_{{\rm O},0}+{\rm t}_0\cdot{\rm y}_{{\rm u},0}\right)\cdot{\rm x}_{{\rm u},1}}=-\frac{\det\begin{bmatrix}{\rm x}_{{\rm u},0}&{\rm y}_{{\rm u},0}\\{\rm x}_{{\rm O},1}&{\rm y}_{{\rm O},1}\end{bmatrix}\cdot{\rm t}_0+\det\begin{bmatrix}{\rm x}_{{\rm O},0}&{\rm y}_{{\rm O},0}\\{\rm x}_{{\rm O},1}&{\rm y}_{{\rm O},1}\end{bmatrix}}{\det\begin{bmatrix}{\rm x}_{{\rm u},0}&{\rm y}_{{\rm u},0}\\{\rm x}_{{\rm u},1}&{\rm y}_{{\rm u},1}\end{bmatrix}\cdot{\rm t}_0+\det\begin{bmatrix}{\rm x}_{{\rm O},0}&{\rm y}_{{\rm O},0}\\{\rm x}_{{\rm u},1}&{\rm y}_{{\rm u},1}\end{bmatrix}}\]
+    </div>
+</div>
+
+<div class="slide">
+    <h1>GEOMETRIA ANALITICA</h1>
+</div>
+
+<div class="slide">
+    <h2>5. sistemi lineari piani</h2>
     <div class="block Q">
         In un ristorante:
         <ul>
@@ -124,42 +157,133 @@
 </div>
 
 <div class="slide">
-    <h2>fasci di rette</h2>
-    <div class="block N">
-        Si dice il fascio di rette passanti per \({\rm P}\):
-        \[\left\{\left\{\begin{bmatrix}{\rm x}_{\rm P}-{\rm b}\cdot{\rm t}\\{\rm y}_{\rm P}+{\rm a}\cdot{\rm t}\end{bmatrix}\quad{\rm t}\in{\mathbb R}\right\}\quad\begin{bmatrix}{\rm a}\\{\rm b}\end{bmatrix}\in{\mathbb R}^2\setminus1\right\}=\left\{\left\{\left({\rm x},{\rm y}\right)\in{\mathbb R}^2\quad{\rm x}\cdot{\rm a}+{\rm y}\cdot{\rm b}={\rm x}_{\rm P}\cdot{\rm a}+{\rm y}_{\rm P}\cdot{\rm b}\right\}\quad\begin{bmatrix}{\rm a}\\{\rm b}\end{bmatrix}\in{\mathbb R}^2\setminus1\right\}\]
-        Si dice il fascio di rette prallele ad \({\rm u}\):
-        \[\left\{\left\{{\rm O}+{\rm u}\cdot{\rm t}+{\cal Z}\times{\rm u}\cdot{\rm c}\quad{\rm t}\in{\mathbb R}\right\}\quad{\rm c}\in{\mathbb R}\right\}=\left\{\left\{{\rm P}\in{\mathbb R}^2\quad\left({\rm P}-{\rm O}\right)\cdot\left({\cal Z}\times{\rm u}\right)={\rm c}\right\}\quad{\rm c}\in{\mathbb R}\right\}\]
+    <h2>6. trasformazioni affini</h2>
+    <div class="block D">
+        Consideriamo la trasformazione:
+        \[{\rm f}\left({\rm P}\right)={\rm V}+\left({\rm a}\cdot{\rm u}\cdot\left({\rm P}-{\rm U}\right)\right)\cdot{\rm v}+\left({\rm b}\cdot\left({\cal Z}\times{\rm u}\right)\cdot\left({\rm P}-{\rm U}\right)\right)\cdot\left({\cal Z}\times{\rm v}\right)\]
+        E la sua inversa:
+        \[{\rm g}\left({\rm Q}\right)={\rm U}+\left(\frac{{\rm v}\cdot\left({\rm Q}-{\rm V}\right)}{\rm a}\right)\cdot{\rm u}+\left(\frac{\left({\cal Z}\times{\rm v}\right)\cdot\left({\rm Q}-{\rm V}\right)}{\rm b}\right)\cdot\left({\cal Z}\times{\rm u}\right)\]
     </div>
     <div class="block F">
-        Considerate due rette, si può trovare la loro intersezione in modi diversi:
-        <ul>
-            <li>\[\begin{cases}{\rm y}\cdot{\rm x}_{\rm u}-{\rm x}\cdot{\rm y}_{\rm u}={\rm y}_{\rm U}\cdot{\rm x}_{\rm u}-{\rm x}_{\rm U}\cdot{\rm y}_{\rm u}\\{\rm y}\cdot{\rm x}_{\rm v}-{\rm x}\cdot{\rm y}_{\rm v}={\rm y}_{\rm V}\cdot{\rm x}_{\rm v}-{\rm x}_{\rm V}\cdot{\rm y}_{\rm v}\end{cases}\]</li>
-            <li>\[\left({\rm y}_{\rm U}+{\rm t}\cdot{\rm y}_{\rm u}\right)\cdot{\rm x}_{\rm v}-\left({\rm x}_{\rm U}+{\rm t}\cdot{\rm x}_{\rm u}\right)\cdot{\rm y}_{\rm v}={\rm y}_{\rm V}\cdot{\rm x}_{\rm v}-{\rm x}_{\rm V}\cdot{\rm y}_{\rm v}\Longrightarrow\begin{cases}{\rm x}={\rm x}_{\rm U}+{\rm t}\cdot{\rm x}_{\rm u}\\{\rm y}={\rm y}_{\rm U}+{\rm t}\cdot{\rm y}_{\rm u}\end{cases}\]</li>
-            <li>\[\left({\rm y}_{\rm V}+{\rm s}\cdot{\rm y}_{\rm v}\right)\cdot{\rm x}_{\rm u}-\left({\rm x}_{\rm V}+{\rm s}\cdot{\rm x}_{\rm v}\right)\cdot{\rm y}_{\rm u}={\rm y}_{\rm U}\cdot{\rm x}_{\rm u}-{\rm x}_{\rm U}\cdot{\rm y}_{\rm u}\Longrightarrow\begin{cases}{\rm x}={\rm x}_{\rm V}+{\rm s}\cdot{\rm x}_{\rm v}\\{\rm y}={\rm y}_{\rm V}+{\rm s}\cdot{\rm y}_{\rm v}\end{cases}\]</li>
-            <li>\[\begin{cases}{\rm x}={\rm x}_{\rm U}+{\rm t}\cdot{\rm x}_{\rm u}={\rm x}_{\rm V}+{\rm s}\cdot{\rm x}_{\rm v}\\{\rm y}={\rm y}_{\rm U}+{\rm t}\cdot{\rm y}_{\rm u}={\rm y}_{\rm V}+{\rm s}\cdot{\rm y}_{\rm v}\end{cases}\]</li>
-        </ul>
+        Allora la retta:
+        \[\left({\rm x}_{\rm P}-{\rm x}_{\rm Q}\right)\cdot\left({\rm y}_{\rm Q}-{\rm y}_{\rm P}\right)=\left({\rm y}_{\rm P}-{\rm y}_{\rm Q}\right)\cdot\left({\rm x}_{\rm Q}-{\rm x}_{\rm P}\right)\]
+        Viene trasportata nella retta:
+        \[\left({\rm x}_{\rm Q}-{\rm x}_{{\rm f}\left({\rm Q}\right)}\right)\cdot\left({\rm y}_{{\rm f}\left({\rm Q}\right)}-{\rm y}_{{\rm f}\left({\rm P}\right)}\right)=\left({\rm y}_{\rm Q}-{\rm y}_{{\rm f}\left({\rm Q}\right)}\right)\cdot\left({\rm x}_{{\rm f}\left({\rm Q}\right)}-{\rm x}_{{\rm f}\left({\rm P}\right)}\right)\]
+        Che coincide con:
+        \[\left({\rm x}_{{\rm g}\left({\rm Q}\right)}-{\rm x}_{\rm Q}\right)\cdot\left({\rm y}_{\rm Q}-{\rm y}_{\rm P}\right)=\left({\rm y}_{{\rm g}\left({\rm Q}\right)}-{\rm y}_{\rm Q}\right)\cdot\left({\rm x}_{\rm Q}-{\rm x}_{\rm P}\right)\]
     </div>
     <div class="block R">
-        Notare che:
-        \[{\rm k}\cdot\left({\rm y}\cdot{\rm x}_{\rm u}-{\rm x}\cdot{\rm y}_{\rm u}\right)+{\rm h}\cdot\left({\rm y}\cdot{\rm x}_{\rm v}-{\rm x}\cdot{\rm y}_{\rm v}\right)={\rm k}\cdot\left({\rm y}_{\rm U}\cdot{\rm x}_{\rm u}-{\rm x}_{\rm U}\cdot{\rm y}_{\rm u}\right)+{\rm h}\cdot\left({\rm y}_{\rm V}\cdot{\rm x}_{\rm v}-{\rm x}_{\rm V}\cdot{\rm y}_{\rm v}\right)\]
-        Corrisponde all'equazione di un fascio di rette.
+        In genere se:
+        \[{\cal E}:{\mathbb R}\rightarrow{\mathbb R}^2\qquad{\cal C}:{\mathbb R}^2\rightarrow0\]
+        Allora:
+        \[\operatorname{Imm}\left({\cal E}\right)={\cal C}^{-1}\left(0\right)\Longrightarrow\operatorname{Imm}\left({\rm f}\circ{\cal E}\right)=\left[{\cal C}\circ{\rm g}\right]^{-1}\left(0\right)\]
+        Questo permette di trasportare un luogo geometrico qualunque, come una conica.
     </div>
 </div>
 
 <div class="slide">
-    <h2>proiettive ed equazioni omogenee</h2>
+    <h2>7. coniche: eccentricità</h2>
     <div class="block N">
-        Date due rette ed un punto nel piano si definisce la relazione:
-        \[\left({\rm O}_0+{\rm t}_0\cdot{\rm u}_0-{\rm O}\right)\times\left({\rm O}_1+{\rm t}_1\cdot{\rm u}_1-{\rm O}\right)=0\]
+        Una ellisse di fuochi \({\rm O}\pm{\rm a}\cdot{\cal X}\) ed asse \({\rm c}\gt\left|{\rm a}\right|\) è definita come il luogo geometrico:
+        \[\left\{{\rm P}\in{\mathbb R}^2\quad\left|{\rm P}-{\rm O}+{\rm a}\cdot{\cal X}\right|+\left|{\rm P}-{\rm O}-{\rm a}\cdot{\cal X}\right|=2\cdot{\rm c}\right\}\]
+        Una iperbole di fuochi \({\rm O}\pm{\rm a}\cdot{\cal X}\) ed asse \({\rm c}\lt\left|{\rm a}\right|\) è definita come il luogo geometrico:
+        \[\left\{{\rm P}\in{\mathbb R}^2\quad\left|\left|{\rm P}-{\rm O}+{\rm a}\cdot{\cal X}\right|-\left|{\rm P}-{\rm O}-{\rm a}\cdot{\cal X}\right|\right|=2\cdot{\rm c}\right\}\]
+        In entrambi i casi, si può <a onclick="Show('7N')">dimostrare:</a>
+        \[\frac{{\rm x}^2}{{\rm a}^2}+\frac{{\rm y}^2}{{\rm c}^2-{\rm a}^2}=1\]
+        <div class="proof" id="7N">
+            \[\left({\rm x}+{\rm a}\right)^2+\left({\rm x}-{\rm a}\right)^2+2\cdot{\rm y}^2\pm2\sqrt{\left(\left({\rm x}+{\rm a}\right)^2+{\rm y}^2\right)\cdot\left(\left({\rm x}-{\rm a}\right)^2+{\rm y}^2\right)}=4\cdot{\rm c}^2\]
+            Da cui segue:
+            \[4\cdot\left(\left({\rm x}+{\rm a}\right)^2+{\rm y}^2\right)\cdot\left(\left({\rm x}-{\rm a}\right)^2+{\rm y}^2\right)=\left(\left({\rm x}+{\rm a}\right)^2+\left({\rm x}-{\rm a}\right)^2+2\cdot{\rm y}^2-4\cdot{\rm c}^2\right)^2\]
+            Che sviluppando:
+            \[8\cdot{\rm c}^2\cdot\left(\left({\rm x}+{\rm a}\right)^2+\left({\rm x}-{\rm a}\right)^2+2\cdot{\rm y}^2\right)=16\cdot{\rm c}^4+\left(\left({\rm x}+{\rm a}\right)^2-\left({\rm x}-{\rm a}\right)^2\right)^2\]
+            Ed infine:
+            \[{\rm c}^2\cdot\left({\rm x}^2+{\rm a}^2+{\rm y}^2\right)={\rm c}^4+{\rm x}^2\cdot{\rm a}^2\]
+            <a onclick="Hide('7N')">come volevasi.</a>
+        </div>
     </div>
     <div class="block F">
-        Questa si scrive come:
-        \[\left({\rm x}_{{\rm O},0}+{\rm t}_0\cdot{\rm x}_{{\rm u},0}\right)\cdot\left({\rm y}_{{\rm O},1}+{\rm t}_1\cdot{\rm y}_{{\rm u},1}\right)=\left({\rm y}_{{\rm O},0}+{\rm t}_0\cdot{\rm y}_{{\rm u},0}\right)\cdot\left({\rm x}_{{\rm O},1}+{\rm t}_1\cdot{\rm x}_{{\rm u},1}\right)\]
+        Fissiamo un fuoco sull'asse delle ordinate e l'asse delle ascisse come direttrice, allora l'equazione:
+        \[{\rm x}^2+\left({\rm y}-{\rm d}\right)^2={\rm e}^2\cdot{\rm y}^2\Longleftrightarrow{\rm x}^2+\left(1-{\rm e}^2\right)\cdot{\rm y}^2-2\cdot{\rm d}\cdot{\rm y}+{\rm d}^2=0\]
+        Raccogliendo i quadrati:
+        \[\frac{{\rm x}^2}{1-{\rm e}^2}+\left({\rm y}-\frac{\rm d}{1-{\rm e}^2}\right)^2=\left(\frac{\rm d}{1-{\rm e}^2}\right)^2-\frac{{\rm d}^2}{1-{\rm e}^2}=\left(\frac{{\rm d}\cdot{\rm e}}{1-{\rm e}^2}\right)^2\]
         Da cui:
-        \[{\rm t}_1=\frac{\left({\rm y}_{{\rm O},0}+{\rm t}_0\cdot{\rm y}_{{\rm u},0}\right)\cdot{\rm x}_{{\rm O},1}-\left({\rm x}_{{\rm O},0}+{\rm t}_0\cdot{\rm x}_{{\rm u},0}\right)\cdot{\rm y}_{{\rm O},1}}{\left({\rm x}_{{\rm O},0}+{\rm t}_0\cdot{\rm x}_{{\rm u},0}\right)\cdot{\rm y}_{{\rm u},1}-\left({\rm y}_{{\rm O},0}+{\rm t}_0\cdot{\rm y}_{{\rm u},0}\right)\cdot{\rm x}_{{\rm u},1}}=-\frac{\det\begin{bmatrix}{\rm x}_{{\rm u},0}&{\rm y}_{{\rm u},0}\\{\rm x}_{{\rm O},1}&{\rm y}_{{\rm O},1}\end{bmatrix}\cdot{\rm t}_0+\det\begin{bmatrix}{\rm x}_{{\rm O},0}&{\rm y}_{{\rm O},0}\\{\rm x}_{{\rm O},1}&{\rm y}_{{\rm O},1}\end{bmatrix}}{\det\begin{bmatrix}{\rm x}_{{\rm u},0}&{\rm y}_{{\rm u},0}\\{\rm x}_{{\rm u},1}&{\rm y}_{{\rm u},1}\end{bmatrix}\cdot{\rm t}_0+\det\begin{bmatrix}{\rm x}_{{\rm O},0}&{\rm y}_{{\rm O},0}\\{\rm x}_{{\rm u},1}&{\rm y}_{{\rm u},1}\end{bmatrix}}\]
+        \[{\rm a}={\rm e}\cdot{\rm c}\qquad{\rm c}=\frac{{\rm d}\cdot{\rm e}}{\left|1-{\rm e}^2\right|}\]
+        Ed i due fuochi sono:
+        \[\frac{\rm d}{1\pm{\rm e}}\]
+    </div>
+    <div class="block R">
+        Data una equazione del tipo:
+        \[{\rm A}\cdot{\rm x}^2+{\rm F}\cdot{\rm x}\cdot{\rm y}+{\rm B}\cdot{\rm y}^2+{\rm C}\cdot{\rm x}+{\rm D}\cdot{\rm y}+{\rm E}=0\]
+        Si può dimostrare che questa è del tipo:
+        \[\frac{\left(\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm x}_{\rm u}+\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm y}_{\rm u}\right)^2}{\rm a}+\frac{\left(\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm x}_{\rm u}-\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm y}_{\rm u}\right)^2}{\rm b}=1\]
+        <button onclick="Show('7R')">SHOW</button>
+        <div class="proof" id="7R">
+            Cerchiamo \({\rm x}_{\rm u},{\rm y}_{\rm u},{\rm a},{\rm b}\) con \({\rm x}_{\rm u}^2+{\rm y}_{\rm u}^2=1\) risolvendo:
+            \[\begin{cases}{\rm A}=\frac{{\rm x}_{\rm u}^2}{\rm a}+\frac{{\rm y}_{\rm u}^2}{\rm b}\\{\rm F}=2\cdot{\rm x}_{\rm u}\cdot{\rm y}_{\rm u}\cdot\left(\frac{{\rm b}-{\rm a}}{{\rm a}\cdot{\rm b}}\right)\\{\rm B}=\frac{{\rm y}_{\rm u}^2}{\rm a}+\frac{{\rm x}_{\rm u}^2}{\rm b}\end{cases}\Longrightarrow\begin{cases}{\rm b}\cdot{\rm A}-{\rm a}\cdot{\rm B}={\rm x}_{\rm u}^2\cdot\left(\frac{{\rm b}^2-{\rm a}^2}{{\rm a}\cdot{\rm b}}\right)\\{\rm a}\cdot{\rm A}-{\rm b}\cdot{\rm B}={\rm y}_{\rm u}^2\cdot\left(\frac{{\rm a}^2-{\rm b}^2}{{\rm a}\cdot{\rm b}}\right)\end{cases}\Longrightarrow{\rm A}+{\rm B}=\frac{{\rm a}+{\rm b}}{{\rm a}\cdot{\rm b}}\]
+            Scrivendo \({\rm u}\) in funzione di \({\rm a},{\rm b}\):
+            \[\begin{cases}{\rm x}_{\rm u}=\pm\sqrt{\frac{{\rm b}\cdot{\rm A}-{\rm a}\cdot{\rm B}}{\left({\rm b}^2-{\rm a}^2\right)\cdot\left({\rm A}+{\rm B}\right)}}\\{\rm y}_{\rm u}=\pm\sqrt{\frac{{\rm a}\cdot{\rm A}-{\rm b}\cdot{\rm B}}{\left({\rm a}^2-{\rm b}^2\right)\cdot\left({\rm A}+{\rm B}\right)}}\end{cases}\]
+            Da cui:
+            \[\begin{split}
+                \frac{\left({\rm a}+{\rm b}\right)^4\cdot{\rm F}^2}{4}=\left|{\rm a}\cdot{\rm B}-{\rm b}\cdot{\rm A}\right|\cdot\left|{\rm a}\cdot{\rm A}-{\rm b}\cdot{\rm B}\right|&={\rm a}\cdot{\rm b}\cdot\left({\rm A}^2+{\rm B}^2\right)-{\rm A}\cdot{\rm B}\cdot\left({\rm a}^2+{\rm b}^2\right)\\
+                &={\rm a}\cdot{\rm b}\cdot\left({\rm A}+{\rm B}\right)^2-{\rm A}\cdot{\rm B}\cdot\left({\rm a}+{\rm b}\right)^2\\
+                &=\left({\rm a}+{\rm b}\right)\cdot\left({\rm A}+{\rm B}\right)-{\rm A}\cdot{\rm B}\cdot\left({\rm a}+{\rm b}\right)^2
+            \end{split}\]
+            Cioè:
+            \[\frac{{\rm F}^2}{4}\cdot\left({\rm a}+{\rm b}\right)^3={\rm A}+{\rm B}-{\rm A}\cdot{\rm B}\cdot\left({\rm a}+{\rm b}\right)\]
+            Che si risolve scrivendo:
+            \[\begin{cases}\alpha+\beta=4\cdot\left(\frac{{\rm A}+{\rm B}}{{\rm F}^2}\right)\\\alpha\cdot\beta=-\left(\frac{4}{3}\cdot\frac{{\rm A}\cdot{\rm B}}{{\rm F}^2}\right)^3\end{cases}\Longrightarrow{\rm a}+{\rm b}=\sqrt[3]{\alpha}+\sqrt[3]{\beta}\]
+            Da cui:
+            \[\alpha,\beta=2\cdot\left(\frac{{\rm A}+{\rm B}}{{\rm F}^2}\right)\pm\sqrt{4\cdot\left(\frac{{\rm A}+{\rm B}}{{\rm F}^2}\right)^2+\left(\frac{4}{3}\cdot\frac{{\rm A}\cdot{\rm B}}{{\rm F}^2}\right)^3}\]
+            Ed infine:
+            \[{\rm a},{\rm b}=\frac{\sqrt[3]{\alpha}+\sqrt[3]{\beta}}{2}\pm\sqrt{\left(\frac{\sqrt[3]{\alpha}+\sqrt[3]{\beta}}{2}\right)^2-4\cdot\frac{\sqrt[3]{\alpha}+\sqrt[3]{\beta}}{{\rm A}+{\rm B}}}\]
+            E si conclude risolvendo:
+            \[\begin{cases}
+                {\rm C}+\frac{2\cdot{\rm x}_{\rm u}}{\rm a}\cdot\left({\rm x}_{\rm O}\cdot{\rm x}_{\rm u}+{\rm y}_{\rm O}\cdot{\rm y}_{\rm u}\right)+\frac{2\cdot{\rm y}_{\rm u}}{\rm b}\cdot\left({\rm x}_{\rm O}\cdot{\rm y}_{\rm u}-{\rm y}_{\rm O}\cdot{\rm x}_{\rm u}\right)=0\\
+                {\rm D}+\frac{2\cdot{\rm y}_{\rm u}}{\rm a}\cdot\left({\rm x}_{\rm O}\cdot{\rm x}_{\rm u}+{\rm y}_{\rm O}\cdot{\rm y}_{\rm u}\right)+\frac{2\cdot{\rm x}_{\rm u}}{\rm b}\cdot\left({\rm y}_{\rm O}\cdot{\rm x}_{\rm u}-{\rm x}_{\rm O}\cdot{\rm y}_{\rm u}\right)=0
+            \end{cases}\]
+            Ed infine ponendo:
+            \[{\rm k}=\frac{\left({\rm x}_{\rm O}\cdot{\rm x}_{\rm u}+{\rm y}_{\rm O}\cdot{\rm y}_{\rm u}\right)^2}{\rm a}+\frac{\left({\rm y}_{\rm O}\cdot{\rm x}_{\rm u}-{\rm x}_{\rm O}\cdot{\rm y}_{\rm u}\right)^2}{\rm b}-{\rm E}\]
+            Si ottiene:
+            \[\frac{\left(\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm x}_{\rm u}+\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm y}_{\rm u}\right)^2}{{\rm a}\cdot{\rm k}}+\frac{\left(\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm x}_{\rm u}-\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm y}_{\rm u}\right)^2}{{\rm b}\cdot{\rm k}}=1\]
+            <button onclick="Hide('7R')">HIDE</button>
+        </div>
     </div>
 </div>
+
+<div class="slide">
+    <h2>8. tangenti a una conica</h2>
+    <div class="block N">
+        Consideriamo l'equazione:
+        \[\frac{\left({\rm x}_{\rm P}+{\rm t}\cdot{\rm x}_{\rm u}\right)^2}{{\rm a}^2}+\frac{\left({\rm y}_{\rm P}+{\rm t}\cdot{\rm y}_{\rm u}\right)^2}{{\rm c}^2-{\rm a}^2}=1\]
+        Il discriminante nullo sarebbe:
+        \[\left(\frac{{\rm x}_{\rm u}\cdot{\rm x}_{\rm P}}{{\rm a}^2}+\frac{{\rm y}_{\rm u}\cdot{\rm y}_{\rm P}}{{\rm c}^2-{\rm a}^2}\right)^2=\left(\frac{{\rm x}_{\rm u}^2}{{\rm a}^2}+\frac{{\rm y}_{\rm u}^2}{{\rm c}^2-{\rm a}^2}\right)\cdot\left(\frac{{\rm x}_{\rm P}^2}{{\rm a}^2}+\frac{{\rm y}_{\rm P}^2}{{\rm c}^2-{\rm a}^2}-1\right)\]
+        Che identifica la condizione di tangenza alla conica:
+        \[\frac{\left({\rm x}_{\rm u}\cdot{\rm y}_{\rm P}-{\rm y}_{\rm u}\cdot{\rm x}_{\rm P}\right)^2}{{\rm a}^2\cdot\left({\rm c}^2-{\rm a}^2\right)}=\left(\frac{{\rm x}_{\rm u}^2}{{\rm a}^2}+\frac{{\rm y}_{\rm u}^2}{{\rm c}^2-{\rm a}^2}\right)\]
+    </div>
+    <div class="block D">
+        Data una conica:
+        <ul>
+            <li>Per un punto esterno passano due rette tangenti.</li>
+            <li>Da un punto giacente passano una retta tangente.</li>
+            <li>Per un punto interno non passano rette tangenti.</li>
+        </ul>
+        Date due coniche:
+        <ul>
+            <li>Se sono esterne, allora hanno 4 tangenti in comune.</li>
+            <li>Se sono secanti, allora hanno 2 tangenti in comune.</li>
+            <li>Se sono interne, allora hanno 0 tangenti in comune.</li>
+        </ul>
+    </div>
+    <div class="block F">
+        Consideriamo un versore \({\rm u}\), la parabola:
+        \[{\cal H}=\left\{{\rm O}+{\rm t}\cdot{\rm u}+{\rm b}\cdot{\rm t}^2\cdot\left({\cal Z}\times{\rm u}\right)\quad{\rm t}\in{\mathbb R}\right\}\]
+        Corrisponde alla relazione:
+        \[\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm x}_{\rm u}+\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm y}_{\rm u}}{\rm a}\right)^2=\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm y}_{\rm u}-\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm x}_{\rm u}}{\rm b}\]
+        Il fascio di tangenti ad \({\cal H}\):
+        \[\left\{\left\{{\rm P}+{\rm t}\cdot\left({\rm u}+2\cdot\left(\left({\rm P}-{\rm O}\right)\cdot{\rm u}\right)\cdot\left({\cal Z}\times{\rm u}\right)\right)\quad{\rm t}\in{\mathbb R}\right\}\quad{\rm P}\in{\cal H}\right\}\]
+    </div>
+</div>
+
 
 <div class="nav-buttons">
     <div>

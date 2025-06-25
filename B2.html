@@ -10,14 +10,14 @@
     <ol>
         <h2>I NUMERI REALI</h2>
         <li>numeri razionali (NFR)</li>
-        <li>sui numeri reali (NFR)</li>
-        <li>sulla continuità (NF )</li>
-        <li>                 (   )</li>
+        <li>sui numeri reali (NDF)</li>
+        <li>reali e radicali (NFR)</li>
+        <li>logaritmi e basi (NF )</li>
         <h2>LE PARABOLICHE</h2>
-        <li>i reali ed i radicali (NFR)</li>
         <li>equazioni quadratiche (QFR)</li>
-        <li>equazioni di parabola (DF )</li>
-        <li>                      (   )</li>
+        <li>simmetriche due a due (   )</li>
+        <li>vedi anche le cubiche (DFR)</li>
+        <li>e le equazioni quarte (DFR)</li>
     </ol>
 </div>
 
@@ -39,43 +39,26 @@
             <li>\[\frac{\rm a}{\rm b}\cdot\frac{\rm c}{\rm d}=\frac{{\rm a}\cdot{\rm c}}{{\rm b}\cdot{\rm d}}\qquad\frac{\rm a}{\rm b}:\frac{\rm c}{\rm d}=\frac{{\rm a}\cdot{\rm d}}{{\rm b}\cdot{\rm c}}\]</li>
             <li>\[\left(\frac{\rm a}{\rm b}\right)^{\rm n}=\frac{{\rm a}^{\rm n}}{{\rm b}^{\rm n}}\qquad\left(\frac{\rm a}{\rm b}\right)^{-{\rm n}}=\frac{{\rm b}^{\rm n}}{{\rm a}^{\rm n}}\]</li>
         </ul>
-    </div>
-    <div class="block F">
-        Tuttavia, bisogna sempre portare il risultato in forma ridotta:
+        Anche tra razionali vale:
+        \[\operatorname{gcd}\left({\rm a},{\rm b}\right)\cdot\operatorname{lcm}\left({\rm a},{\rm b}\right)={\rm a}\cdot{\rm b}\]
+        Nello svolgimento delle espressioni bisogna sempre portare il risultato in forma ridotta:
         \[\frac{\rm a}{\rm b}=\frac{{\rm a}:\operatorname{gcd}\left({\rm a},{\rm b}\right)}{{\rm b}:\operatorname{gcd}\left({\rm a},{\rm b}\right)}=\frac{\operatorname{lcm}\left({\rm a},{\rm b}\right):{\rm b}}{\operatorname{lcm}\left({\rm a},{\rm b}\right):{\rm a}}\]
         Scriviamo sempre numeratore e denominatore fattorizzati e per minimizzare la quantità di calcoli:
         \[\frac{\rm a}{\rm b}\pm\frac{\rm c}{\rm d}=\frac{\operatorname{gcd}\left({\rm a},{\rm b}\right)}{\operatorname{lcm}\left({\rm b},{\rm d}\right)}\cdot\left(\frac{{\rm a}\cdot\operatorname{lcm}\left({\rm b},{\rm d}\right)}{\operatorname{gcd}\left({\rm a},{\rm c}\right)\cdot{\rm b}}\pm\frac{{\rm c}\cdot\operatorname{lcm}\left({\rm b},{\rm d}\right)}{\operatorname{gcd}\left({\rm a},{\rm c}\right)\cdot{\rm d}}\right)\]
         In questo modo andrà calcolato e fattorizzato solo il secondo fattore.
     </div>
-    <div class="block R">
-        Anche tra razionali vale:
-        \[\operatorname{gcd}\left({\rm a},{\rm b}\right)\cdot\operatorname{lcm}\left({\rm a},{\rm b}\right)={\rm a}\cdot{\rm b}\]
-    </div>
-</div>
-
-<div class="slide">
-    <h2>2. sui numeri reali</h2>
-    <div class="block N">
-        Sia data una successione di numeri naturali \({\rm D}_{{\rm n}+1}={\rm D}_{\rm n}\cdot{\rm d}_{\rm n}\) e consideriamo:
-        \[{\rm x}_{{\rm n}+1}\in{\rm d}_{\rm n}\qquad{\rm X}_{{\rm n}+1}={\rm X}_{\rm n}\cdot{\rm d}_{\rm n}+{\rm x}_{{\rm n}+1}\]
-        Da cui:
-        \[\frac{{\rm X}_{\rm n}}{{\rm D}_{\rm n}}\lt\frac{{\rm X}_{{\rm n}+1}}{{\rm D}_{{\rm n}+1}}\lt\frac{{\rm X}_{{\rm n}+1}+1}{{\rm D}_{{\rm n}+1}}\lt\frac{{\rm X}_{\rm n}+1}{{\rm D}_{\rm n}}\]
-        Questo identifica un numero reale:
-        \[\forall{\rm n}\in{\mathbb N}\quad\frac{{\rm X}_{\rm n}}{{\rm D}_{\rm n}}\lt{\rm x}\lt\frac{{\rm X}_{\rm n}+1}{{\rm D}_{\rm n}}\]
-        Se ad esempio \({\rm D}_{\rm n}={\rm n}!\), allora \({\rm x}\) non può essere razionale.
-    </div>
     <div class="block F">
         Ribadiamo le proprietà delle operazioni:
         \[\begin{cases}
-        {\rm a}+\left({\rm b}+{\rm c}\right)={\rm a}+{\rm b}+{\rm c}={\rm a}+{\rm c}+{\rm b}\\
-        {\rm a}+\left({\rm b}-{\rm c}\right)={\rm a}+{\rm b}-{\rm c}={\rm a}-{\rm c}+{\rm b}\\
-        {\rm a}-\left({\rm b}+{\rm c}\right)={\rm a}-{\rm b}-{\rm c}={\rm a}-{\rm c}-{\rm b}\\
-        {\rm a}-\left({\rm b}-{\rm c}\right)={\rm a}-{\rm b}+{\rm c}={\rm a}+{\rm c}-{\rm b}
+            {\rm a}+\left({\rm b}+{\rm c}\right)={\rm a}+{\rm b}+{\rm c}={\rm a}+{\rm c}+{\rm b}\\
+            {\rm a}+\left({\rm b}-{\rm c}\right)={\rm a}+{\rm b}-{\rm c}={\rm a}-{\rm c}+{\rm b}\\
+            {\rm a}-\left({\rm b}+{\rm c}\right)={\rm a}-{\rm b}-{\rm c}={\rm a}-{\rm c}-{\rm b}\\
+            {\rm a}-\left({\rm b}-{\rm c}\right)={\rm a}-{\rm b}+{\rm c}={\rm a}+{\rm c}-{\rm b}
         \end{cases}\qquad\begin{cases}
-        {\rm a}\cdot\left({\rm b}\cdot{\rm c}\right)={\rm a}\cdot{\rm b}\cdot{\rm c}={\rm a}\cdot{\rm c}\cdot{\rm b}\\
-        {\rm a}\cdot\left({\rm b}:{\rm c}\right)={\rm a}\cdot{\rm b}:{\rm c}={\rm a}:{\rm c}\cdot{\rm b}\\
-        {\rm a}:\left({\rm b}\cdot{\rm c}\right)={\rm a}:{\rm b}:{\rm c}={\rm a}:{\rm c}:{\rm b}\\
-        {\rm a}:\left({\rm b}:{\rm c}\right)={\rm a}:{\rm b}\cdot{\rm c}={\rm a}\cdot{\rm c}:{\rm b}
+            {\rm a}\cdot\left({\rm b}\cdot{\rm c}\right)={\rm a}\cdot{\rm b}\cdot{\rm c}={\rm a}\cdot{\rm c}\cdot{\rm b}\\
+            {\rm a}\cdot\left({\rm b}:{\rm c}\right)={\rm a}\cdot{\rm b}:{\rm c}={\rm a}:{\rm c}\cdot{\rm b}\\
+            {\rm a}:\left({\rm b}\cdot{\rm c}\right)={\rm a}:{\rm b}:{\rm c}={\rm a}:{\rm c}:{\rm b}\\
+            {\rm a}:\left({\rm b}:{\rm c}\right)={\rm a}:{\rm b}\cdot{\rm c}={\rm a}\cdot{\rm c}:{\rm b}
         \end{cases}\]
     </div>
     <div class="block R">
@@ -108,8 +91,17 @@
 </div>
 
 <div class="slide">
-    <h2>3. sulla continuità</h2>
+    <h2>2. sui numeri reali</h2>
     <div class="block N">
+        Sia data una successione di numeri naturali \({\rm D}_{{\rm n}+1}={\rm D}_{\rm n}\cdot{\rm d}_{\rm n}\) e consideriamo:
+        \[{\rm x}_{{\rm n}+1}\in{\rm d}_{\rm n}\qquad{\rm X}_{{\rm n}+1}={\rm X}_{\rm n}\cdot{\rm d}_{\rm n}+{\rm x}_{{\rm n}+1}\]
+        Da cui:
+        \[\frac{{\rm X}_{\rm n}}{{\rm D}_{\rm n}}\lt\frac{{\rm X}_{{\rm n}+1}}{{\rm D}_{{\rm n}+1}}\lt\frac{{\rm X}_{{\rm n}+1}+1}{{\rm D}_{{\rm n}+1}}\lt\frac{{\rm X}_{\rm n}+1}{{\rm D}_{\rm n}}\]
+        Questo identifica un numero reale:
+        \[\forall{\rm n}\in{\mathbb N}\quad\frac{{\rm X}_{\rm n}}{{\rm D}_{\rm n}}\lt{\rm x}\lt\frac{{\rm X}_{\rm n}+1}{{\rm D}_{\rm n}}\]
+        Se ad esempio \({\rm D}_{\rm n}={\rm n}!\), allora \({\rm x}\) non può essere razionale.
+    </div>
+    <div class="block D">
         Se normalmente:
         \[\liminf_{{\rm n}\in{\mathbb N}}{\rm x}_{\rm n}=\sup_{{\rm n}\in{\mathbb N}}\left(\inf_{{\rm k}\in{\mathbb N}}{\rm x}_{\rm n}\right)\le\inf_{{\rm n}\in{\mathbb N}}\left(\sup_{{\rm k}\in{\mathbb N}}{\rm x}_{\rm n}\right)=\limsup_{{\rm n}\in{\mathbb N}}{\rm x}_{\rm n}\]
         Si dice che una successione ammette limite quando:
@@ -117,7 +109,7 @@
         Una funzione \({\rm f}:{\mathbb Q}\rightarrow{\mathbb R}\) si dice continua se:
         \[\forall{\rm x}\in{\mathbb Q}^{\mathbb N}\quad\lim_{{\rm n}\in{\mathbb N}}{\rm x}_{\rm n}\in{\mathbb Q}\Longrightarrow\lim_{{\rm n}\in{\mathbb N}}{\rm f}\left({\rm x}_{\rm n}\right)={\rm f}\left(\lim_{{\rm n}\in{\mathbb N}}{\rm x}_{\rm n}\right)\]
         Una funzione continua si estende da un sottoinsieme denso di \({\mathbb R}\) in esattamente un modo.
-    </div>    
+    </div>
     <div class="block F">
         Valgono le seguenti:
         <ul>
@@ -130,11 +122,7 @@
 </div>
 
 <div class="slide">
-    <h1>LE PARABOLICHE</h1>
-</div>
-
-<div class="slide">
-    <h2>5. i reali ed i radicali</h2>
+    <h2>3. reali e radicali</h2>
     <div class="block N">
         Possiamo definire:
         \[\forall{\rm a}\gt0\quad\sqrt[{\rm n}]{\rm a}=\sup\left({\rm x}\in{\mathbb Q}\quad0\le{\rm x}^{\rm n}\le{\rm a}\right)\]
@@ -147,7 +135,8 @@
         Le proprietà delle potenze sono allora:
         <ul>
             <li>\[\forall\left({\rm a},{\rm b},{\rm c}\right)\in\left(0,\infty\right)\times\left(0,\infty\right)\times{\mathbb R}\quad\begin{cases}\left({\rm a}\cdot{\rm b}\right)^{\rm c}={\rm a}^{\rm c}\cdot{\rm b}^{\rm c}\\\left({\rm a}:{\rm b}\right)^{\rm c}={\rm a}^{\rm c}:{\rm b}^{\rm c}\end{cases}\]</li>
-            <li>\[\forall\left({\rm a},{\rm b},{\rm c}\right)\in\left(0,\infty\right)\times{\mathbb R}\times{\mathbb R}\begin{cases}{\rm a}^{{\rm b}+{\rm c}}={\rm a}^{\rm b}\cdot{\rm a}^{\rm b}\\{\rm a}^{{\rm b}-{\rm c}}={\rm a}^{\rm b}:{\rm a}^{\rm b}\\{\rm a}^{{\rm b}\cdot{\rm c}}=\left({\rm a}^{\rm b}\right)^{\rm c}\\{\rm a}^{{\rm b}:{\rm c}}=\sqrt[{\rm c}]{{\rm a}^{\rm b}}\end{cases}\]</li>
+            <li>\[\forall\left({\rm a},{\rm b},{\rm c}\right)\in\left(0,\infty\right)\times{\mathbb R}\times{\mathbb R}\quad\begin{cases}{\rm a}^{{\rm b}+{\rm c}}={\rm a}^{\rm b}\cdot{\rm a}^{\rm c}\\{\rm a}^{{\rm b}-{\rm c}}={\rm a}^{\rm b}:{\rm a}^{\rm c}\end{cases}\]</li>
+            <li>\[\forall\left({\rm a},{\rm b},{\rm c}\right)\in\left(0,\infty\right)\times{\mathbb R}\times{\mathbb R}\quad\begin{cases}{\rm a}^{{\rm b}\cdot{\rm c}}=\left({\rm a}^{\rm b}\right)^{\rm c}\\{\rm a}^{{\rm b}:{\rm c}}=\sqrt[{\rm c}]{{\rm a}^{\rm b}}\end{cases}\]</li>
         </ul>
     </div>
     <div class="block R">
@@ -162,7 +151,27 @@
 </div>
 
 <div class="slide">
-    <h2>6. equazioni quadratiche</h2>
+    <h2>4. logaritmi e basi</h2>
+    <div class="block N">
+        Possiamo definire:
+        \[\forall\left({\rm a},{\rm b}\right)\in\left(0,\infty\right)\times\left(0,\infty\right)\quad\log_{\rm a}\left({\rm b}\right)=\sup\left({\rm x}\in{\mathbb Q}\quad0\le{\rm a}^{\rm x}\le{\rm b}\right)\]
+    </div>
+    <div class="block F">
+        Le proprietà delle potenze sono allora:
+        <ul>
+            <li>\[\forall\left({\rm a},{\rm b},{\rm c}\right)\in\left(0,\infty\right)\times\left(0,\infty\right)\times{\mathbb R}\quad\begin{cases}\log_{\rm a}\left({\rm b}^{\rm c}\right)=\log_{\rm a}\left({\rm b}\right)\cdot{\rm c}\\\log_{\rm a}\left(\sqrt[{\rm c}]{\rm b}\right)=\log_{\rm a}\left({\rm b}\right):{\rm c}\end{cases}\]</li>
+            <li>\[\forall\left({\rm a},{\rm b},{\rm c}\right)\in\left(0,\infty\right)\times\left(0,\infty\right)\times\left(0,\infty\right)\quad\begin{cases}\log_{\rm c}\left({\rm a}\cdot{\rm b}\right)=\log_{\rm c}\left({\rm a}\right)+\log_{\rm c}\left({\rm b}\right)\\\log_{\rm c}\left({\rm a}:{\rm b}\right)=\log_{\rm c}\left({\rm a}\right)-\log_{\rm c}\left({\rm b}\right)\end{cases}\]</li>
+            <li>\[\forall\left({\rm a},{\rm b},{\rm c}\right)\in\left(0,\infty\right)\times\left(0,\infty\right)\times\left(0,\infty\right)\quad\begin{cases}\log_{{\rm a}}\left({\rm c}\right)=\log_{\rm a}\left({\rm b}\right)\cdot\log_{\rm b}\left({\rm c}\right)\\\log_{{\rm a}}\left({\rm b}\right)=\log_{\rm a}\left({\rm c}\right):\log_{\rm b}\left({\rm c}\right)\end{cases}\]</li>
+        </ul>
+    </div>
+</div>
+
+<div class="slide">
+    <h1>LE PARABOLICHE</h1>
+</div>
+
+<div class="slide">
+    <h2>5. equazioni quadratiche</h2>
     <div class="block Q">
         Una Wonka ha lati \({\rm a},{\rm b}\) la posso tagliare di modo che i due pezzi siano simili?
     </div>
@@ -185,16 +194,77 @@
 </div>
 
 <div class="slide">
-    <h2>7. equazioni di parabola</h2>
+    <h2>7. simmetriche due a due</h2>
+    Le soluzioni \({\rm x}_0,{\rm x}_1\) di:
+    \[{\rm a}\cdot{\rm x}^2+{\rm b}\cdot{\rm x}+{\rm c}=0\]
+    Sono dunque identificate da:
+    \[{\rm x}_0+{\rm x}_1=-\frac{\rm b}{\rm a}\qquad{\rm x}_0\cdot{\rm x}_1=\frac{\rm c}{\rm a}\]
+    Da cui:
+    \[\left\{{\rm x}_0,{\rm x}_1\right\}=\left\{\frac{{\rm x}_0+{\rm x}_1}{2}+\sqrt{\left(\frac{{\rm x}_0+{\rm x}_1}{2}\right)^2-{\rm x}_0\cdot{\rm x}_1},\frac{{\rm x}_0+{\rm x}_1}{2}-\sqrt{\left(\frac{{\rm x}_0+{\rm x}_1}{2}\right)^2-{\rm x}_0\cdot{\rm x}_1}\right\}\]
+    Questo si poteva ottenere da:
+    \[\left|\alpha-\beta\right|=\sqrt{\left({\rm x}_0+{\rm x}_1\right)^2-4\cdot{\rm x}_0\cdot{\rm x}_1}\]
+</div>
+
+<div class="slide">
+    <h2>6. vedi anche le cubiche</h2>
     <div class="block D">
-        Consideriamo un versore \({\rm u}\), la parabola:
-        \[{\cal H}=\left\{{\rm O}+{\rm t}\cdot{\rm u}+{\rm b}\cdot{\rm t}^2\cdot\left({\cal Z}\times{\rm u}\right)\quad{\rm t}\in{\mathbb R}\right\}\]
-        Corrisponde alla relazione:
-        \[\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm x}_{\rm u}+\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm y}_{\rm u}}{\rm a}\right)^2=\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm y}_{\rm u}-\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm x}_{\rm u}}{\rm b}\]
+        Posso risolvere una equazione di terzo grado del tipo:
+        \[{\rm a}\cdot{\rm x}^3+{\rm b}\cdot{\rm x}^2+{\rm c}\cdot{\rm x}+{\rm d}=0\]
+        Raccogliendo il cubo:
+        \[\left({\rm x}+\frac{\rm b}{3\cdot{\rm a}}\right)^3=\left(\frac{{\rm b}^2}{3\cdot{\rm a}^2}-\frac{\rm c}{\rm a}\right)\cdot{\rm x}+\left(\frac{{\rm b}^3}{27\cdot{\rm a}^3}-\frac{\rm d}{\rm a}\right)=\left(\frac{{\rm b}^2}{3\cdot{\rm a}^2}-\frac{\rm c}{\rm a}\right)\cdot\left({\rm x}+\frac{\rm b}{3\cdot{\rm a}}\right)+\left(\frac{{\rm c}\cdot{\rm b}}{3\cdot{\rm a}^2}-\frac{2\cdot{\rm b}^3}{27\cdot{\rm a}^3}-\frac{\rm d}{\rm a}\right)\]
+        Riducendosi cioè ad:
+        \[{\rm x}={\rm X}-\frac{\rm b}{3\cdot{\rm a}}\qquad{\rm X}^3=3\cdot{\rm A}\cdot{\rm X}+{\rm B}\]
+        Dove:
+        \[{\rm A}=\frac{{\rm b}^2}{9\cdot{\rm a}^2}-\frac{\rm c}{3\cdot{\rm a}}\qquad{\rm B}=\left(\frac{{\rm c}\cdot{\rm b}}{3\cdot{\rm a}^2}-\frac{2\cdot{\rm b}^3}{27\cdot{\rm a}^3}-\frac{\rm d}{\rm a}\right)\]
     </div>
     <div class="block F">
-        Il fascio di tangenti alla parabola:
-        \[\left\{\left\{{\rm P}+{\rm t}\cdot\left({\rm u}+2\cdot\left(\left({\rm P}-{\rm O}\right)\cdot{\rm u}\right)\cdot\left({\cal Z}\times{\rm u}\right)\right)\quad{\rm t}\in{\mathbb R}\right\}\quad{\rm P}\in{\cal H}\right\}\]
+        La soluzione si trova scrivendo:
+        \[\begin{cases}\alpha\cdot\beta={\rm A}^3\\\alpha+\beta={\rm B}\end{cases}\Longrightarrow{\rm x}=\sqrt[3]{\alpha}+\sqrt[3]{\beta}-\frac{\rm b}{3\cdot{\rm a}}\]
+        Ed infine trovando:
+        \[\alpha,\beta=\frac{\rm B}{2}\pm\sqrt{\left(\frac{\rm B}{2}\right)^2-{\rm A}^3}\Longrightarrow{\rm x}=\sqrt[3]{\frac{\rm B}{2}+\sqrt{\left(\frac{\rm B}{2}\right)^2-{\rm A}^3}}+\sqrt[3]{\frac{\rm B}{2}-\sqrt{\left(\frac{\rm B}{2}\right)^2-{\rm A}^3}}-\frac{\rm b}{3\cdot{\rm a}}\]
+    </div>
+    <div class="block R">
+        Anche in questo caso, se le soluzioni sono \({\rm x}_0,{\rm x}_1,{\rm x}_2\), allora il sistema equivalente:
+        \[\begin{cases}
+            -\frac{\rm b}{\rm a}={\rm x}_0+{\rm x}_1+{\rm x}_2\\
+            \frac{\rm c}{\rm a}={\rm x}_1\cdot{\rm x}_2+{\rm x}_2\cdot{\rm x}_0+{\rm x}_0\cdot{\rm x}_1\\
+            -\frac{\rm d}{\rm a}={\rm x}_0\cdot{\rm x}_1\cdot{\rm x}_2
+        \end{cases}\]
+        E detti:
+        \[{\rm X}_0=\frac{2\cdot{\rm x}_0-{\rm x}_1-{\rm x}_2}{3}\qquad{\rm X}_1=\frac{2\cdot{\rm x}_1-{\rm x}_2-{\rm x}_0}{3}\qquad{\rm X}_2=\frac{2\cdot{\rm x}_2-{\rm x}_0-{\rm x}_1}{3}\]
+        Si ha il sistema equivalente:
+        \[\begin{cases}
+            {\rm X}_0+{\rm X}_1+{\rm X}_2=0\\
+            \frac{\rm c}{\rm a}-\frac{{\rm b}^2}{3\cdot{\rm a}^2}=-3\cdot{\rm A}={\rm X}_1\cdot{\rm X}_2+{\rm X}_2\cdot{\rm X}_0+{\rm X}_0\cdot{\rm X}_1\\
+            \frac{{\rm c}\cdot{\rm b}}{3\cdot{\rm a}^2}-\frac{2\cdot{\rm b}^3}{27\cdot{\rm a}^3}-\frac{\rm d}{\rm a}={\rm B}={\rm X}_0\cdot{\rm X}_1\cdot{\rm X}_2
+        \end{cases}\]
+    </div>
+</div>
+
+<div class="slide">
+    <h2>8. e le equazioni quarte</h2>
+    <div class="block D">
+        Posso risolvere una equazione di quarto grado del tipo:
+        \[{\rm x}^4+{\rm a}\cdot{\rm x}^3+{\rm b}\cdot{\rm x}^2+{\rm c}\cdot{\rm x}+{\rm d}=0\]
+        Raccogliendo:
+        \[{\rm X}={\rm x}+\frac{\rm a}{4}\Longrightarrow{\rm x}^2={\rm X}^2-\frac{\rm a}{2}\cdot{\rm X}+\frac{{\rm a}^2}{4}\]
+        Si ottiene:
+        \[{\rm X}^4+\left({\rm b}-\frac{3\cdot{\rm a}^2}{8}\right)\cdot{\rm x}^2+\left({\rm c}-\frac{{\rm a}^3}{16}\right)\cdot{\rm x}+\left({\rm d}-\frac{{\rm a}^3}{256}\right)={\rm X}^4+{\rm A}\cdot{\rm X}^2+{\rm B}\cdot{\rm X}+{\rm C}=0\]
+        Con
+        \[{\rm A}={\rm b}-\frac{3\cdot{\rm a}^2}{8}\qquad{\rm B}={\rm c}-\frac{{\rm a}^3}{16}-\frac{\rm a}{2}\cdot\left({\rm b}-\frac{3\cdot{\rm a}^2}{8}\right)\qquad{\rm C}={\rm d}-\frac{{\rm a}^3}{256}-\frac{\rm a}{4}\cdot\left({\rm c}-\frac{{\rm a}^3}{16}\right)+\frac{{\rm a}^2}{4}\cdot\left({\rm b}-\frac{3\cdot{\rm a}^2}{8}\right)\]
+    </div>
+    <div class="block F">
+        La soluzione si trova scrivendo:
+        \[{\rm X}+{\rm A}\cdot{\rm X}^2+{\rm B}\cdot{\rm X}+{\rm C}=\left({\rm X}^2+\alpha\cdot{\rm X}+\beta\right)\cdot\left({\rm X}^2-\alpha\cdot{\rm X}+\frac{\rm C}{\beta}\right)\]
+        Ed infine trovando:
+        \[\begin{cases}\beta+\frac{\rm C}{\beta}-\alpha^2={\rm A}\\\alpha\cdot\left(\frac{\rm C}{\beta}-\beta\right)={\rm B}\end{cases}\Longrightarrow\begin{cases}2\cdot\beta=\alpha^2+{\rm A}-\frac{\rm B}{\alpha}\\2\cdot\frac{\rm C}{\beta}=\alpha^2+{\rm A}+\frac{\rm B}{\alpha}\end{cases}\]
+        Che si riduce all'equazione di terzo grado:
+        \[4\cdot{\rm C}=\left(\alpha^2+{\rm A}-\frac{\rm B}{\alpha}\right)\cdot\left(\alpha^2+{\rm A}+\frac{\rm B}{\alpha}\right)=\left(\alpha^2+{\rm A}\right)^2-\frac{{\rm B}^2}{\alpha^2}\]
+    </div>
+    <div class="block R">
+        Notare che le possibili soluzioni per \(\alpha\) sono:
+        \[\alpha^2\in\left\{\left(\frac{{\rm x}_0+{\rm x}_1-{\rm x}_2-{\rm x}_3}{2}\right)^2,\left(\frac{{\rm x}_0-{\rm x}_1+{\rm x}_2-{\rm x}_3}{2}\right)^2,\left(\frac{{\rm x}_0-{\rm x}_1-{\rm x}_2+{\rm x}_3}{2}\right)^2\right\}\]
+        Quindi il risultato non dipende dalla soluzione scelta.
     </div>
 </div>
 
