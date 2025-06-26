@@ -59,6 +59,10 @@ body, html {
   border-bottom: solid 4px #222;
 }
 
+.nav-buttons button a {
+  color: #ddd;
+}
+
 .nav-buttons a {
   color: #444;
 }
@@ -93,6 +97,7 @@ body, html {
 }
 
 .block button {
+  margin: 1rem;
   font-size: 1.6rem;
   background-color: #ddd;
   color: #222;

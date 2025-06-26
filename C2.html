@@ -11,12 +11,12 @@
         <h2>GONIOMETRIA</h2>
         <li>le arcoseno ed arcocoseno (NFR)</li>
         <li>la funzione arco tangente (NFR)</li>
-        <li>l'equazione di un'ellisse (DF )</li>
+        <li>l'equazione di un'ellisse (DFR)</li>
         <li>                          (   )</li>
         <h2>IPERBOLICHE</h2>
         <li>sulle inverse iperboliche (NFR)</li>
         <li>l'arcotangente iperbolica (NFR)</li>
-        <li>equazione di una iperbole (DF )</li>
+        <li>equazione di una iperbole (DFR)</li>
         <li>                          (   )</li>
     </ol>
 </div>
@@ -141,15 +141,23 @@
         \[{\cal H}=\left\{{\rm O}+{\rm a}\cdot\cos\left({\rm t}\right)\cdot{\rm u}+{\rm b}\cdot\sin\left({\rm t}\right)\cdot\left({\cal Z}\times{\rm u}\right)\quad{\rm t}\in{\mathbb R}\right\}\]
         Corrisponde alla relazione:
         \[\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm x}_{\rm u}+\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm y}_{\rm u}}{\rm a}\right)^2+\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm y}_{\rm u}-\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm x}_{\rm u}}{\rm b}\right)^2=1\]
-        E si può descrivere come:
-        \[\arccos\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm x}_{\rm u}+\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm y}_{\rm u}}{\rm a}\right)={\rm t}=\arcsin\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm y}_{\rm u}-\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm x}_{\rm u}}{\rm b}\right)\]
-        \[-\arccos\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm x}_{\rm u}+\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm y}_{\rm u}}{\rm a}\right)={\rm t}=\arcsin\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm y}_{\rm u}-\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm x}_{\rm u}}{\rm b}\right)\]
-        \[\arccos\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm x}_{\rm u}+\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm y}_{\rm u}}{\rm a}\right)={\rm t}=\pi-\arcsin\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm y}_{\rm u}-\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm x}_{\rm u}}{\rm b}\right)\]
-        \[-\arccos\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm x}_{\rm u}+\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm y}_{\rm u}}{\rm a}\right)={\rm t}=\pi-\arcsin\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm y}_{\rm u}-\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm x}_{\rm u}}{\rm b}\right)\]
+        Si può descrivere \({\cal H}\) come l'unione di:
+        <ul>
+            <li>\[\arccos\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm x}_{\rm u}+\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm y}_{\rm u}}{\rm a}\right)={\rm t}=\arcsin\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm y}_{\rm u}-\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm x}_{\rm u}}{\rm b}\right)\]</li>
+            <li>\[-\arccos\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm x}_{\rm u}+\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm y}_{\rm u}}{\rm a}\right)={\rm t}=\arcsin\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm y}_{\rm u}-\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm x}_{\rm u}}{\rm b}\right)\]</li>
+            <li>\[\arccos\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm x}_{\rm u}+\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm y}_{\rm u}}{\rm a}\right)={\rm t}=\pi-\arcsin\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm y}_{\rm u}-\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm x}_{\rm u}}{\rm b}\right)\]</li>
+            <li>\[-\arccos\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm x}_{\rm u}+\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm y}_{\rm u}}{\rm a}\right)={\rm t}=\pi-\arcsin\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm y}_{\rm u}-\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm x}_{\rm u}}{\rm b}\right)\]</li>
+        </ul>
     </div>
     <div class="block F">
-        Il fascio di tangenti all'ellisse:
+        Il fascio di tangenti ad \({\cal H}\) è:
         \[\left\{\left\{{\rm P}+{\rm t}\cdot\left(\frac{\rm b}{\rm a}\cdot\left(\left({\rm P}-{\rm O}\right)\cdot{\rm u}\right)\cdot\left({\cal Z}\times{\rm u}\right)-\frac{\rm a}{\rm b}\cdot\left(\left({\rm P}-{\rm O}\right)\cdot\left({\cal Z}\times{\rm u}\right)\right)\cdot{\rm u}\right)\quad{\rm t}\in{\mathbb R}\right\}\quad{\rm P}\in{\cal H}\right\}\]
+    </div>
+    <div class="block R">
+        L'eccentricità si calcola come:
+        \[{\rm e}=\frac{\rm a}{\rm c}\qquad{\rm d}=\frac{\left|1-{\rm e}^2\right|}{\rm e}\cdot{\rm c}\]
+        Così che la direttrice si trova come:
+        \[\left({\rm P}-{\rm O}+\left({\rm a}+{\rm d}\right)\cdot{\cal X}\right)\cdot{\cal X}=0\]
     </div>
 </div>
 
@@ -253,19 +261,29 @@
     <h2>7. equazione di una iperbole</h2>
     <div class="block D">
         Consideriamo un versore \({\rm u}\), allora i rami d'iperbole:
-        \[{\cal H}=\left\{{\rm O}+{\rm a}\cdot\cosh\left({\rm t}\right)\cdot{\rm u}+{\rm b}\cdot\sinh\left({\rm t}\right)\cdot\left({\cal Z}\times{\rm u}\right)\quad{\rm t}\in{\mathbb R}\right\}\]
-        \[{\cal H}=\left\{{\rm O}-{\rm a}\cdot\cosh\left({\rm t}\right)\cdot{\rm u}+{\rm b}\cdot\sinh\left({\rm t}\right)\cdot\left({\cal Z}\times{\rm u}\right)\quad{\rm t}\in{\mathbb R}\right\}\]
+        <ul>
+            <li>\[{\cal H}=\left\{{\rm O}+{\rm a}\cdot\cosh\left({\rm t}\right)\cdot{\rm u}+{\rm b}\cdot\sinh\left({\rm t}\right)\cdot\left({\cal Z}\times{\rm u}\right)\quad{\rm t}\in{\mathbb R}\right\}\]</li>
+            <li>\[{\cal H}=\left\{{\rm O}-{\rm a}\cdot\cosh\left({\rm t}\right)\cdot{\rm u}+{\rm b}\cdot\sinh\left({\rm t}\right)\cdot\left({\cal Z}\times{\rm u}\right)\quad{\rm t}\in{\mathbb R}\right\}\]</li>
+        </ul>
         Corrispondono alla relazione:
         \[\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm x}_{\rm u}+\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm y}_{\rm u}}{\rm a}\right)^2-\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm y}_{\rm u}-\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm x}_{\rm u}}{\rm b}\right)^2=1\]
         E si possono descrivere come:
-        \[\arccosh\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm x}_{\rm u}+\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm y}_{\rm u}}{\rm a}\right)={\rm t}=\arcsinh\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm y}_{\rm u}-\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm x}_{\rm u}}{\rm b}\right)\]
-        \[-\arccosh\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm x}_{\rm u}+\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm y}_{\rm u}}{\rm a}\right)={\rm t}=\arcsinh\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm y}_{\rm u}-\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm x}_{\rm u}}{\rm b}\right)\]
-        \[\arccosh\left(-\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm x}_{\rm u}+\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm y}_{\rm u}}{\rm a}\right)={\rm t}=\arcsinh\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm y}_{\rm u}-\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm x}_{\rm u}}{\rm b}\right)\]
-        \[-\arccosh\left(-\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm x}_{\rm u}+\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm y}_{\rm u}}{\rm a}\right)={\rm t}=\arcsinh\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm y}_{\rm u}-\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm x}_{\rm u}}{\rm b}\right)\]
+        <ul>
+            <li>\[\operatorname{arccosh}\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm x}_{\rm u}+\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm y}_{\rm u}}{\rm a}\right)={\rm t}=\operatorname{arcsinh}\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm y}_{\rm u}-\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm x}_{\rm u}}{\rm b}\right)\]</li>
+            <li>\[-\operatorname{arccosh}\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm x}_{\rm u}+\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm y}_{\rm u}}{\rm a}\right)={\rm t}=\operatorname{arcsinh}\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm y}_{\rm u}-\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm x}_{\rm u}}{\rm b}\right)\]</li>
+            <li>\[\operatorname{arccosh}\left(-\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm x}_{\rm u}+\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm y}_{\rm u}}{\rm a}\right)={\rm t}=\operatorname{arcsinh}\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm y}_{\rm u}-\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm x}_{\rm u}}{\rm b}\right)\]</li>
+            <li>\[-\operatorname{arccosh}\left(-\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm x}_{\rm u}+\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm y}_{\rm u}}{\rm a}\right)={\rm t}=\operatorname{arcsinh}\left(\frac{\left({\rm x}-{\rm x}_{\rm O}\right)\cdot{\rm y}_{\rm u}-\left({\rm y}-{\rm y}_{\rm O}\right)\cdot{\rm x}_{\rm u}}{\rm b}\right)\]</li>
+        </ul>
     </div>
     <div class="block F">
         Il fascio di tangenti al ramo d'iperbole:
         \[\left\{\left\{{\rm P}+{\rm t}\cdot\left(\frac{\rm b}{\rm a}\cdot\left(\left({\rm P}-{\rm O}\right)\cdot{\rm u}\right)\cdot\left({\cal Z}\times{\rm u}\right)+\frac{\rm a}{\rm b}\cdot\left(\left({\rm P}-{\rm O}\right)\cdot\left({\cal Z}\times{\rm u}\right)\right)\cdot{\rm u}\right)\quad{\rm t}\in{\mathbb R}\right\}\quad{\rm P}\in{\cal H}\right\}\]
+    </div>
+    <div class="block R">
+        L'eccentricità si calcola come:
+        \[{\rm e}=\frac{\rm a}{\rm c}\qquad{\rm d}=\frac{\left|1-{\rm e}^2\right|}{\rm e}\cdot{\rm c}\]
+        Così che la direttrice si trova come:
+        \[\left({\rm P}-{\rm O}+\left({\rm a}-{\rm d}\right)\cdot{\cal X}\right)\cdot{\cal X}=0\]
     </div>
 </div>
 

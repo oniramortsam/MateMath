@@ -46,7 +46,7 @@
 | l'algoritmo di bezout |(QND)|
 | fattorizzazione unica |(NDF)|
 | gcd e lcm di naturali |(DFR)|
-|                       |(   )|
+| sul teorema del resto |(   )|
 
 ## <a href="A4.html">A4</a>
 
@@ -146,12 +146,12 @@
 
 ## <a href="B5.html">B5</a>
 
-| COMBINATORIA |     |
-|--------------|-----|
-| disposizioni |(QNF)|
-| combinazioni |(QNF)|
-| permutazioni |(DFR)|
-|              |(   )|
+| LA COMBINATORIA |     |
+|-----------------|-----|
+| le disposizioni |(QNF)|
+| le combinazioni |(QNF)|
+| le permutazioni |(DFR)|
+| fermat: teorema |(   )|
 
 | PRODOTTI E SOMME SERIE     |     |
 |----------------------------|-----|

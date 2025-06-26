@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="it">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Test A</title>
+    <style>
+
+        body {
+        font-family: 'Segoe UI', sans-serif;
+        background: #f9f9f9;
+        color: #333;
+        width: auto;
+        margin: 20px 100px;
+        padding: 20px 100px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        border-radius: 10px;
+        background-color: #fff;
+        }
+
+        h2 {
+        text-align: center;
+        color: #2c3e50;
+        }
+
+        .question {
+        background: #f0f0f5;
+        border-left: 5px solid #3498db;
+        padding: 15px 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        }
+
+        .question p {
+        margin-bottom: 10px;
+        font-weight: bold;
+        }
+
+        label {
+        display: block;
+        margin: 5px 0;
+        cursor: pointer;
+        }
+
+        select {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: auto;
+        max-width: 400px;
+        margin: 8px 0;
+        }
+
+        button {
+        display: block;
+        background: #3498db;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 12px 24px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 20px auto 10px;
+        transition: background 0.3s ease;
+        }
+
+        button:hover {
+        background: #2980b9;
+        }
+
+        .result {
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        color: #27ae60;
+        }
+
+        @media (max-width: 600px) {
+        body {
+            margin: 10px;
+            padding: 15px;
+        }
+        }
+
+        .nav-buttons {
+            padding: 8px;
+            position: sticky;
+            display: flex;
+            gap: 32px;
+            z-index: 1000;
+            text-align: center;
+            align-items: center;
+            }
+
+    </style>
+</head>
+
+<body>
+
+    <form>
+
+        <h2>Quiz proprietà addizione</h2>
+
+        <div class="question">
+            <p>1. Quali di queste sono equivalenti ad \({\rm a}+\left({\rm b}+{\rm c}\right)\)?</p>
+            <input type="checkbox" name="s1q1" value="+1"> \({\rm a}+{\rm b}+{\rm c}\)<br>
+            <input type="checkbox" name="s1q1" value="-1"> \({\rm a}+{\rm b}-{\rm c}\)<br>
+            <input type="checkbox" name="s1q1" value="-1"> \({\rm a}-{\rm b}+{\rm c}\)<br>
+            <input type="checkbox" name="s1q1" value="-1"> \({\rm a}-{\rm b}-{\rm c}\)<br>
+            <input type="checkbox" name="s1q1" value="+1"> \({\rm a}+{\rm c}+{\rm b}\)<br>
+            <input type="checkbox" name="s1q1" value="-1"> \({\rm a}+{\rm c}-{\rm b}\)<br>
+            <input type="checkbox" name="s1q1" value="-1"> \({\rm a}-{\rm c}+{\rm b}\)<br>
+            <input type="checkbox" name="s1q1" value="-1"> \({\rm a}-{\rm c}-{\rm b}\)
+        </div>
+
+        <div class="question">
+            <p>2. Quali di queste sono equivalenti ad \({\rm a}+\left({\rm b}-{\rm c}\right)\)?</p>
+            <input type="checkbox" name="s1q2" value="-1"> \({\rm a}+{\rm b}+{\rm c}\)<br>
+            <input type="checkbox" name="s1q2" value="+1"> \({\rm a}+{\rm b}-{\rm c}\)<br>
+            <input type="checkbox" name="s1q2" value="-1"> \({\rm a}-{\rm b}+{\rm c}\)<br>
+            <input type="checkbox" name="s1q2" value="-1"> \({\rm a}-{\rm b}-{\rm c}\)<br>
+            <input type="checkbox" name="s1q2" value="-1"> \({\rm a}+{\rm c}+{\rm b}\)<br>
+            <input type="checkbox" name="s1q2" value="-1"> \({\rm a}+{\rm c}-{\rm b}\)<br>
+            <input type="checkbox" name="s1q2" value="+1"> \({\rm a}-{\rm c}+{\rm b}\)<br>
+            <input type="checkbox" name="s1q2" value="-1"> \({\rm a}-{\rm c}-{\rm b}\)
+        </div>
+
+        <div class="question">
+            <p>3. Quali di queste sono equivalenti ad \({\rm a}-\left({\rm b}+{\rm c}\right)\)?</p>
+            <input type="checkbox" name="s1q3" value="-1"> \({\rm a}+{\rm b}+{\rm c}\)<br>
+            <input type="checkbox" name="s1q3" value="-1"> \({\rm a}+{\rm b}-{\rm c}\)<br>
+            <input type="checkbox" name="s1q3" value="-1"> \({\rm a}-{\rm b}+{\rm c}\)<br>
+            <input type="checkbox" name="s1q3" value="+1"> \({\rm a}-{\rm b}-{\rm c}\)<br>
+            <input type="checkbox" name="s1q3" value="-1"> \({\rm a}+{\rm c}+{\rm b}\)<br>
+            <input type="checkbox" name="s1q3" value="-1"> \({\rm a}+{\rm c}-{\rm b}\)<br>
+            <input type="checkbox" name="s1q3" value="-1"> \({\rm a}-{\rm c}+{\rm b}\)<br>
+            <input type="checkbox" name="s1q3" value="+1"> \({\rm a}-{\rm c}-{\rm b}\)
+        </div>
+
+        <div class="question">
+            <p>4. Quali di queste sono equivalenti ad \({\rm a}-\left({\rm b}-{\rm c}\right)\)?</p>
+            <input type="checkbox" name="s1q4" value="-1"> \({\rm a}+{\rm b}+{\rm c}\)<br>
+            <input type="checkbox" name="s1q4" value="-1"> \({\rm a}+{\rm b}-{\rm c}\)<br>
+            <input type="checkbox" name="s1q4" value="+1"> \({\rm a}-{\rm b}+{\rm c}\)<br>
+            <input type="checkbox" name="s1q4" value="-1"> \({\rm a}-{\rm b}-{\rm c}\)<br>
+            <input type="checkbox" name="s1q4" value="-1"> \({\rm a}+{\rm c}+{\rm b}\)<br>
+            <input type="checkbox" name="s1q4" value="+1"> \({\rm a}+{\rm c}-{\rm b}\)<br>
+            <input type="checkbox" name="s1q4" value="-1"> \({\rm a}-{\rm c}+{\rm b}\)<br>
+            <input type="checkbox" name="s1q4" value="-1"> \({\rm a}-{\rm c}-{\rm b}\)
+        </div>
+
+        <div class="question">
+            <p>5. Quali di queste sono equivalenti ad \({\rm a}\cdot\left({\rm b}+{\rm c}\right)\)?</p>
+            <input type="checkbox" name="s1q5" value="-1"> \({\rm a}\cdot{\rm b}+{\rm c}\)<br>
+            <input type="checkbox" name="s1q5" value="-1"> \({\rm b}+{\rm a}\cdot{\rm c}\)<br>
+            <input type="checkbox" name="s1q5" value="-1"> \({\rm b}\cdot{\rm a}+{\rm c}\)<br>
+            <input type="checkbox" name="s1q5" value="-1"> \({\rm b}+{\rm c}\cdot{\rm a}\)<br>
+            <input type="checkbox" name="s1q5" value="+1"> \({\rm a}\cdot{\rm b}+{\rm a}\cdot{\rm c}\)<br>
+            <input type="checkbox" name="s1q5" value="+1"> \({\rm b}\cdot{\rm a}+{\rm c}\cdot{\rm a}\)<br>
+            <input type="checkbox" name="s1q5" value="+1"> \(\left({\rm b}+{\rm c}\right)\cdot{\rm a}\)<br>
+            <input type="checkbox" name="s1q5" value="+1"> \({\rm a}\cdot\left({\rm c}+{\rm b}\right)\)<br>
+        </div>
+
+        <div class="question">
+            <p>6. Quali di queste sono equivalenti ad \({\rm a}\cdot\left({\rm b}-{\rm c}\right)\)?</p>
+            <input type="checkbox" name="s1q6" value="-1"> \({\rm a}\cdot{\rm b}-{\rm c}\)<br>
+            <input type="checkbox" name="s1q6" value="-1"> \({\rm b}-{\rm a}\cdot{\rm c}\)<br>
+            <input type="checkbox" name="s1q6" value="-1"> \({\rm b}\cdot{\rm a}-{\rm c}\)<br>
+            <input type="checkbox" name="s1q6" value="-1"> \({\rm b}-{\rm c}\cdot{\rm a}\)<br>
+            <input type="checkbox" name="s1q6" value="+1"> \({\rm a}\cdot{\rm b}-{\rm a}\cdot{\rm c}\)<br>
+            <input type="checkbox" name="s1q6" value="+1"> \({\rm b}\cdot{\rm a}-{\rm c}\cdot{\rm a}\)<br>
+            <input type="checkbox" name="s1q6" value="+1"> \(\left({\rm b}-{\rm c}\right)\cdot{\rm a}\)<br>
+            <input type="checkbox" name="s1q6" value="-1"> \({\rm a}\cdot\left({\rm c}-{\rm b}\right)\)<br>
+        </div>
+
+        <div class="question">
+            <p>7. Quali di queste sono equivalenti ad \({\rm a}\cdot{\rm b}+{\rm c}\)?</p>
+            <input type="checkbox" name="s1q7" value="-1"> \({\rm a}\cdot\left({\rm b}+{\rm c}\right)\)<br>
+            <input type="checkbox" name="s1q7" value="-1"> \({\rm b}\cdot\left({\rm a}+{\rm c}\right)\)<br>
+            <input type="checkbox" name="s1q7" value="+1"> \({\rm c}+{\rm a}\cdot{\rm b}\)<br>
+            <input type="checkbox" name="s1q7" value="+1"> \({\rm b}\cdot{\rm a}+{\rm c}\)<br>
+            <input type="checkbox" name="s1q7" value="-1"> \({\rm b}+{\rm a}\cdot{\rm c}\)<br>
+            <input type="checkbox" name="s1q7" value="-1"> \({\rm a}+{\rm c}\cdot{\rm b}\)<br>
+            <input type="checkbox" name="s1q7" value="+1"> \({\rm a}\cdot\left({\rm b}+{\rm c}:{\rm a}\right)\)<br>
+            <input type="checkbox" name="s1q7" value="+1"> \(\left({\rm a}+{\rm c}:{\rm b}\right)\cdot{\rm b}\)<br>
+        </div>
+
+        <div class="question">
+            <p>8. Quali di queste sono equivalenti ad \({\rm a}\cdot{\rm b}-{\rm c}\)?</p>
+            <input type="checkbox" name="s1q8" value="-1"> \({\rm a}\cdot\left({\rm b}-{\rm c}\right)\)<br>
+            <input type="checkbox" name="s1q8" value="-1"> \({\rm b}\cdot\left({\rm a}-{\rm c}\right)\)<br>
+            <input type="checkbox" name="s1q8" value="-1"> \({\rm c}-{\rm a}\cdot{\rm b}\)<br>
+            <input type="checkbox" name="s1q8" value="+1"> \({\rm b}\cdot{\rm a}-{\rm c}\)<br>
+            <input type="checkbox" name="s1q8" value="-1"> \({\rm b}-{\rm a}\cdot{\rm c}\)<br>
+            <input type="checkbox" name="s1q8" value="-1"> \({\rm a}-{\rm c}\cdot{\rm b}\)<br>
+            <input type="checkbox" name="s1q8" value="+1"> \({\rm a}\cdot\left({\rm b}-{\rm c}:{\rm a}\right)\)<br>
+            <input type="checkbox" name="s1q8" value="+1"> \(\left({\rm a}-{\rm c}:{\rm b}\right)\cdot{\rm b}\)<br>
+        </div>
+
+        <div class="nav-buttons">
+            <button type="button" onclick="correggi('s1')">Invia risposte</button>
+            <p class="result" id="results1"></p>
+            <button type="button" onclick="imbroglia('s1')">Mostra risposte</button>
+        </div>
+    </form>
+
+    <form>
+
+        <h2>Quiz leggi di monotonia</h2>
+
+        <div class="question">
+            <p>1. Quali di queste sono equivalenti ad \({\rm a}\le{\rm b}\) per \({\rm c}\) positivo?</p>
+            <input type="checkbox" name="s2q1" value="+1"> \({\rm a}+{\rm c}\le{\rm b}+{\rm c}\)<br>
+            <input type="checkbox" name="s2q1" value="-1"> \({\rm a}+{\rm c}\le{\rm b}-{\rm c}\)<br>
+            <input type="checkbox" name="s2q1" value="-1"> \({\rm a}-{\rm c}\le{\rm b}+{\rm c}\)<br>
+            <input type="checkbox" name="s2q1" value="+1"> \({\rm a}-{\rm c}\le{\rm b}-{\rm c}\)<br>
+            <input type="checkbox" name="s2q1" value="-1"> \({\rm a}+{\rm c}\ge{\rm b}+{\rm c}\)<br>
+            <input type="checkbox" name="s2q1" value="-1"> \({\rm a}+{\rm c}\ge{\rm b}-{\rm c}\)<br>
+            <input type="checkbox" name="s2q1" value="-1"> \({\rm a}-{\rm c}\ge{\rm b}+{\rm c}\)<br>
+            <input type="checkbox" name="s2q1" value="-1"> \({\rm a}-{\rm c}\ge{\rm b}-{\rm c}\)<br>
+        </div>
+
+        <div class="question">
+            <p>2. Quali di queste sono equivalenti ad \({\rm a}\le{\rm b}\) per \({\rm c}\) negativo?</p>
+            <input type="checkbox" name="s2q2" value="+1"> \({\rm a}+{\rm c}\le{\rm b}+{\rm c}\)<br>
+            <input type="checkbox" name="s2q2" value="-1"> \({\rm a}+{\rm c}\le{\rm b}-{\rm c}\)<br>
+            <input type="checkbox" name="s2q2" value="-1"> \({\rm a}-{\rm c}\le{\rm b}+{\rm c}\)<br>
+            <input type="checkbox" name="s2q2" value="+1"> \({\rm a}-{\rm c}\le{\rm b}-{\rm c}\)<br>
+            <input type="checkbox" name="s2q2" value="-1"> \({\rm a}+{\rm c}\ge{\rm b}+{\rm c}\)<br>
+            <input type="checkbox" name="s2q2" value="-1"> \({\rm a}+{\rm c}\ge{\rm b}-{\rm c}\)<br>
+            <input type="checkbox" name="s2q2" value="-1"> \({\rm a}-{\rm c}\ge{\rm b}+{\rm c}\)<br>
+            <input type="checkbox" name="s2q2" value="-1"> \({\rm a}-{\rm c}\ge{\rm b}-{\rm c}\)<br>
+        </div>
+
+        <div class="question">
+            <p>3. Quali di queste sono equivalenti ad \({\rm a}\le{\rm b}\) per \({\rm c}\) positivo?</p>
+            <input type="checkbox" name="s2q3" value="+1"> \({\rm a}\cdot{\rm c}\le{\rm b}\cdot{\rm c}\)<br>
+            <input type="checkbox" name="s2q3" value="-1"> \({\rm a}\cdot{\rm c}\le{\rm b}:{\rm c}\)<br>
+            <input type="checkbox" name="s2q3" value="-1"> \({\rm a}:{\rm c}\le{\rm b}\cdot{\rm c}\)<br>
+            <input type="checkbox" name="s2q3" value="+1"> \({\rm a}:{\rm c}\le{\rm b}:{\rm c}\)<br>
+            <input type="checkbox" name="s2q3" value="-1"> \({\rm a}\cdot{\rm c}\ge{\rm b}\cdot{\rm c}\)<br>
+            <input type="checkbox" name="s2q3" value="-1"> \({\rm a}\cdot{\rm c}\ge{\rm b}:{\rm c}\)<br>
+            <input type="checkbox" name="s2q3" value="-1"> \({\rm a}:{\rm c}\ge{\rm b}\cdot{\rm c}\)<br>
+            <input type="checkbox" name="s2q3" value="-1"> \({\rm a}:{\rm c}\ge{\rm b}:{\rm c}\)
+        </div>
+
+        <div class="question">
+            <p>4. Quali di queste sono equivalenti ad \({\rm a}\le{\rm b}\) per \({\rm c}\) negativo?</p>
+            <input type="checkbox" name="s2q4" value="-1"> \({\rm a}\cdot{\rm c}\le{\rm b}\cdot{\rm c}\)<br>
+            <input type="checkbox" name="s2q4" value="-1"> \({\rm a}\cdot{\rm c}\le{\rm b}:{\rm c}\)<br>
+            <input type="checkbox" name="s2q4" value="-1"> \({\rm a}:{\rm c}\le{\rm b}\cdot{\rm c}\)<br>
+            <input type="checkbox" name="s2q4" value="-1"> \({\rm a}:{\rm c}\le{\rm b}:{\rm c}\)<br>
+            <input type="checkbox" name="s2q4" value="+1"> \({\rm a}\cdot{\rm c}\ge{\rm b}\cdot{\rm c}\)<br>
+            <input type="checkbox" name="s2q4" value="-1"> \({\rm a}\cdot{\rm c}\ge{\rm b}:{\rm c}\)<br>
+            <input type="checkbox" name="s2q4" value="-1"> \({\rm a}:{\rm c}\ge{\rm b}\cdot{\rm c}\)<br>
+            <input type="checkbox" name="s2q4" value="+1"> \({\rm a}:{\rm c}\ge{\rm b}:{\rm c}\)
+        </div>
+
+        <div class="question">
+            <p>5. Quali di queste sono equivalenti per \({\rm c}\) positivo?</p>
+            <input type="checkbox" name="s2q5" value="-1"> \({\rm a}+{\rm c}\le{\rm b}\Longleftrightarrow{\rm a}\le{\rm b}+{\rm c}\)<br>
+            <input type="checkbox" name="s2q5" value="+1"> \({\rm a}+{\rm c}\le{\rm b}\Longleftrightarrow{\rm a}\le{\rm b}-{\rm c}\)<br>
+            <input type="checkbox" name="s2q5" value="+1"> \({\rm a}-{\rm c}\le{\rm b}\Longleftrightarrow{\rm a}\le{\rm b}+{\rm c}\)<br>
+            <input type="checkbox" name="s2q5" value="-1"> \({\rm a}-{\rm c}\le{\rm b}\Longleftrightarrow{\rm a}\le{\rm b}-{\rm c}\)<br>
+            <input type="checkbox" name="s2q5" value="-1"> \({\rm a}+{\rm c}\le{\rm b}\Longleftrightarrow{\rm a}\ge{\rm b}+{\rm c}\)<br>
+            <input type="checkbox" name="s2q5" value="-1"> \({\rm a}+{\rm c}\le{\rm b}\Longleftrightarrow{\rm a}\ge{\rm b}-{\rm c}\)<br>
+            <input type="checkbox" name="s2q5" value="-1"> \({\rm a}-{\rm c}\le{\rm b}\Longleftrightarrow{\rm a}\ge{\rm b}+{\rm c}\)<br>
+            <input type="checkbox" name="s2q5" value="-1"> \({\rm a}-{\rm c}\le{\rm b}\Longleftrightarrow{\rm a}\ge{\rm b}-{\rm c}\)<br>
+        </div>
+
+        <div class="question">
+            <p>6. Quali di queste sono equivalenti per \({\rm c}\) negativo?</p>
+            <input type="checkbox" name="s2q6" value="-1"> \({\rm a}+{\rm c}\le{\rm b}\Longleftrightarrow{\rm a}\le{\rm b}+{\rm c}\)<br>
+            <input type="checkbox" name="s2q6" value="+1"> \({\rm a}+{\rm c}\le{\rm b}\Longleftrightarrow{\rm a}\le{\rm b}-{\rm c}\)<br>
+            <input type="checkbox" name="s2q6" value="+1"> \({\rm a}-{\rm c}\le{\rm b}\Longleftrightarrow{\rm a}\le{\rm b}+{\rm c}\)<br>
+            <input type="checkbox" name="s2q6" value="-1"> \({\rm a}-{\rm c}\le{\rm b}\Longleftrightarrow{\rm a}\le{\rm b}-{\rm c}\)<br>
+            <input type="checkbox" name="s2q6" value="-1"> \({\rm a}+{\rm c}\le{\rm b}\Longleftrightarrow{\rm a}\ge{\rm b}+{\rm c}\)<br>
+            <input type="checkbox" name="s2q6" value="-1"> \({\rm a}+{\rm c}\le{\rm b}\Longleftrightarrow{\rm a}\ge{\rm b}-{\rm c}\)<br>
+            <input type="checkbox" name="s2q6" value="-1"> \({\rm a}-{\rm c}\le{\rm b}\Longleftrightarrow{\rm a}\ge{\rm b}+{\rm c}\)<br>
+            <input type="checkbox" name="s2q6" value="-1"> \({\rm a}-{\rm c}\le{\rm b}\Longleftrightarrow{\rm a}\ge{\rm b}-{\rm c}\)<br>
+        </div>
+
+        <div class="question">
+            <p>7. Quali di queste sono equivalenti per \({\rm c}\) positivo?</p>
+            <input type="checkbox" name="s2q7" value="-1"> \({\rm a}\cdot{\rm c}\le{\rm b}\Longleftrightarrow{\rm a}\le{\rm b}\cdot{\rm c}\)<br>
+            <input type="checkbox" name="s2q7" value="+1"> \({\rm a}\cdot{\rm c}\le{\rm b}\Longleftrightarrow{\rm a}\le{\rm b}:{\rm c}\)<br>
+            <input type="checkbox" name="s2q7" value="+1"> \({\rm a}:{\rm c}\le{\rm b}\Longleftrightarrow{\rm a}\le{\rm b}\cdot{\rm c}\)<br>
+            <input type="checkbox" name="s2q7" value="-1"> \({\rm a}:{\rm c}\le{\rm b}\Longleftrightarrow{\rm a}\le{\rm b}:{\rm c}\)<br>
+            <input type="checkbox" name="s2q7" value="-1"> \({\rm a}\cdot{\rm c}\le{\rm b}\Longleftrightarrow{\rm a}\ge{\rm b}\cdot{\rm c}\)<br>
+            <input type="checkbox" name="s2q7" value="-1"> \({\rm a}\cdot{\rm c}\le{\rm b}\Longleftrightarrow{\rm a}\ge{\rm b}:{\rm c}\)<br>
+            <input type="checkbox" name="s2q7" value="-1"> \({\rm a}:{\rm c}\le{\rm b}\Longleftrightarrow{\rm a}\ge{\rm b}\cdot{\rm c}\)<br>
+            <input type="checkbox" name="s2q7" value="-1"> \({\rm a}:{\rm c}\le{\rm b}\Longleftrightarrow{\rm a}\ge{\rm b}:{\rm c}\)<br>
+        </div>
+
+        <div class="question">
+            <p>8. Quali di queste sono equivalenti per \({\rm c}\) negativo?</p>
+            <input type="checkbox" name="s2q8" value="-1"> \({\rm a}\cdot{\rm c}\le{\rm b}\Longleftrightarrow{\rm a}\le{\rm b}\cdot{\rm c}\)<br>
+            <input type="checkbox" name="s2q8" value="-1"> \({\rm a}\cdot{\rm c}\le{\rm b}\Longleftrightarrow{\rm a}\le{\rm b}:{\rm c}\)<br>
+            <input type="checkbox" name="s2q8" value="-1"> \({\rm a}:{\rm c}\le{\rm b}\Longleftrightarrow{\rm a}\le{\rm b}\cdot{\rm c}\)<br>
+            <input type="checkbox" name="s2q8" value="-1"> \({\rm a}:{\rm c}\le{\rm b}\Longleftrightarrow{\rm a}\le{\rm b}:{\rm c}\)<br>
+            <input type="checkbox" name="s2q8" value="-1"> \({\rm a}\cdot{\rm c}\le{\rm b}\Longleftrightarrow{\rm a}\ge{\rm b}\cdot{\rm c}\)<br>
+            <input type="checkbox" name="s2q8" value="1"> \({\rm a}\cdot{\rm c}\le{\rm b}\Longleftrightarrow{\rm a}\ge{\rm b}:{\rm c}\)<br>
+            <input type="checkbox" name="s2q8" value="1"> \({\rm a}:{\rm c}\le{\rm b}\Longleftrightarrow{\rm a}\ge{\rm b}\cdot{\rm c}\)<br>
+            <input type="checkbox" name="s2q8" value="-1"> \({\rm a}:{\rm c}\le{\rm b}\Longleftrightarrow{\rm a}\ge{\rm b}:{\rm c}\)<br>
+        </div>
+
+        <div class="nav-buttons">
+            <button type="button" onclick="correggi('s2')">Invia risposte</button>
+            <p class="result" id="results2"></p>
+            <button type="button" onclick="imbroglia('s2')">Mostra risposte</button>
+        </div>
+    </form>
+
+    <form>
+
+        <h2>Quiz connettivi logici</h2>
+
+        <div class="question">
+            <p>1. Quali di queste sono equivalenti ad \({\cal A}\Longrightarrow{\cal B}\land{\cal C}\)?</p>
+            <input type="checkbox" name="s2q1" value="+1"> \(\left({\cal A}\Longrightarrow{\cal B}\right)\land\left({\cal A}\Longrightarrow{\cal C}\right)\)<br>
+            <input type="checkbox" name="s2q1" value="+1"> \(\left({\cal A}\lor{\cal B}\Longrightarrow{\cal B}\right)\land\left({\cal A}\lor{\cal C}\Longrightarrow{\cal C}\right)\)<br>
+            <input type="checkbox" name="s2q1" value="+1"> \(\left({\cal A}\Longrightarrow{\cal A}\land{\cal B}\right)\land\left({\cal A}\Longrightarrow{\cal A}\land{\cal C}\right)\)<br>
+            <input type="checkbox" name="s2q1" value="+1"> \({\cal A}\Longrightarrow{\cal A}\land{\cal B}\land{\cal C}\)<br>
+            <input type="checkbox" name="s2q1" value="-1"> \({\cal B}\lor\left({\cal A}\Longrightarrow{\cal C}\right)\)<br>
+            <input type="checkbox" name="s2q1" value="-1"> \({\cal B}\land\left({\cal A}\Longrightarrow{\cal C}\right)\)<br>
+            <input type="checkbox" name="s2q1" value="-1"> \(\left({\cal A}\Longrightarrow{\cal B}\right)\lor{\cal C}\)<br>
+            <input type="checkbox" name="s2q1" value="-1"> \(\left({\cal A}\Longrightarrow{\cal B}\right)\land{\cal C}\)
+        </div>
+
+        <div class="question">
+            <p>2. Quali di queste sono equivalenti ad \({\cal A}\Longrightarrow{\cal B}\lor{\cal C}\)?</p>
+            <input type="checkbox" name="s2q2" value="+1"> \(\left({\cal A}\Longrightarrow{\cal B}\right)\land\left({\cal A}\Longrightarrow{\cal C}\right)\)<br>
+            <input type="checkbox" name="s2q2" value="+1"> \(\left({\cal A}\Longrightarrow{\cal B}\right)\lor\left({\cal A}\Longrightarrow{\cal C}\right)\)<br>
+            <input type="checkbox" name="s2q2" value="+1"> \(\left({\cal A}\Longrightarrow{\cal B}\right)\lor{\cal C}\)<br>
+            <input type="checkbox" name="s2q2" value="+1"> \({\cal B}\lor\left({\cal A}\Longrightarrow{\cal C}\right)\)<br>
+            <input type="checkbox" name="s2q2" value="-1"> \({\cal A}\Longrightarrow\left({\cal B}\Longrightarrow{\cal C}\right)\)<br>
+            <input type="checkbox" name="s2q2" value="-1"> \({\cal B}\Longrightarrow\left({\cal A}\Longrightarrow{\cal C}\right)\)<br>
+            <input type="checkbox" name="s2q2" value="+1"> \({\cal A}\lor{\cal B}\Longrightarrow{\cal B}\lor{\cal C}\)<br>
+            <input type="checkbox" name="s2q2" value="+1"> \({\cal A}\lor{\cal C}\Longrightarrow{\cal B}\lor{\cal C}\)
+        </div>
+
+        <div class="question">
+            <p>3. Quali di queste sono equivalenti ad \({\cal A}\land{\cal B}\Longrightarrow{\cal C}\)?</p>
+            <input type="checkbox" name="s2q3" value="-1"> \(\left({\cal A}\Longrightarrow{\cal C}\right)\land\left({\cal B}\Longrightarrow{\cal C}\right)\)<br>
+            <input type="checkbox" name="s2q3" value="+1"> \(\left({\cal A}\Longrightarrow{\cal C}\right)\lor\left({\cal B}\Longrightarrow{\cal C}\right)\)<br>
+            <input type="checkbox" name="s2q3" value="-1"> \(\left({\cal A}\Longrightarrow{\cal B}\right)\lor{\cal C}\)<br>
+            <input type="checkbox" name="s2q3" value="-1"> \({\cal B}\lor\left({\cal A}\Longrightarrow{\cal C}\right)\)<br>
+            <input type="checkbox" name="s2q3" value="+1"> \({\cal A}\Longrightarrow\left({\cal B}\Longrightarrow{\cal C}\right)\)<br>
+            <input type="checkbox" name="s2q3" value="+1"> \({\cal B}\Longrightarrow\left({\cal A}\Longrightarrow{\cal C}\right)\)<br>
+            <input type="checkbox" name="s2q3" value="+1"> \({\cal A}\land{\cal B}\Longrightarrow{\cal A}\land{\cal C}\)<br>
+            <input type="checkbox" name="s2q3" value="+1"> \({\cal A}\land{\cal B}\Longrightarrow{\cal A}\land{\cal C}\)
+        </div>
+
+        <div class="question">
+            <p>4. Quali di queste sono equivalenti ad \({\cal A}\lor{\cal B}\Longrightarrow{\cal C}\)?</p>
+            <input type="checkbox" name="s2q4" value="+1"> \(\left({\cal A}\Longrightarrow{\cal C}\right)\land\left({\cal B}\Longrightarrow{\cal C}\right)\)<br>
+            <input type="checkbox" name="s2q4" value="+1"> \(\left({\cal A}\lor{\cal C}\Longrightarrow{\cal C}\right)\land\left({\cal B}\lor{\cal C}\Longrightarrow{\cal C}\right)\)<br>
+            <input type="checkbox" name="s2q4" value="+1"> \(\left({\cal A}\Longrightarrow{\cal A}\land{\cal C}\right)\land\left({\cal B}\Longrightarrow{\cal B}\land{\cal C}\right)\)<br>
+            <input type="checkbox" name="s2q4" value="+1"> \({\cal A}\lor{\cal B}\lor{\cal C}\Longrightarrow{\cal C}\)<br>
+            <input type="checkbox" name="s2q4" value="-1"> \({\cal A}\lor\left({\cal B}\Longrightarrow{\cal C}\right)\)<br>
+            <input type="checkbox" name="s2q4" value="-1"> \({\cal A}\land\left({\cal B}\Longrightarrow{\cal C}\right)\)<br>
+            <input type="checkbox" name="s2q4" value="-1"> \(\left({\cal A}\Longrightarrow{\cal C}\right)\lor{\cal B}\)<br>
+            <input type="checkbox" name="s2q4" value="-1"> \(\left({\cal A}\Longrightarrow{\cal C}\right)\land{\cal B}\)
+        </div>
+
+        <div class="question">
+            <p>5. Quali di queste implicazioni sono valide?</p>
+            <input type="checkbox" name="s2q5" value="+1"> \(\left[\forall{\rm k}\quad{\cal A}\left({\rm k}\right)\land{\cal B}\left({\rm k}\right)\right]\Longleftarrow\left[\forall{\rm k}\quad{\cal A}\left({\rm k}\right)\right]\land\left[\forall{\rm k}\quad{\cal B}\left({\rm k}\right)\right]\)<br>
+            <input type="checkbox" name="s2q5" value="+1"> \(\left[\exists{\rm k}\quad{\cal A}\left({\rm k}\right)\lor{\cal B}\left({\rm k}\right)\right]\Longrightarrow\left[\exists{\rm k}\quad{\cal A}\left({\rm k}\right)\right]\lor\left[\exists{\rm k}\quad{\cal B}\left({\rm k}\right)\right]\)<br>
+            <input type="checkbox" name="s2q5" value="+1"> \(\left[\forall{\rm k}\quad{\cal A}\left({\rm k}\right)\land{\cal B}\left({\rm k}\right)\right]\Longleftarrow\left[\forall{\rm k}\quad{\cal A}\left({\rm k}\right)\right]\land\left[\forall{\rm k}\quad{\cal B}\left({\rm k}\right)\right]\)<br>
+            <input type="checkbox" name="s2q5" value="+1"> \(\left[\exists{\rm k}\quad{\cal A}\left({\rm k}\right)\lor{\cal B}\left({\rm k}\right)\right]\Longrightarrow\left[\exists{\rm k}\quad{\cal A}\left({\rm k}\right)\right]\lor\left[\exists{\rm k}\quad{\cal B}\left({\rm k}\right)\right]\)<br>
+            <input type="checkbox" name="s2q5" value="-1"> \(\left[\forall{\rm k}\quad{\cal A}\left({\rm k}\right)\lor{\cal B}\left({\rm k}\right)\right]\Longrightarrow\left[\forall{\rm k}\quad{\cal A}\left({\rm k}\right)\right]\lor\left[\forall{\rm k}\quad{\cal B}\left({\rm k}\right)\right]\)<br>
+            <input type="checkbox" name="s2q5" value="+1"> \(\left[\forall{\rm k}\quad{\cal A}\left({\rm k}\right)\lor{\cal B}\left({\rm k}\right)\right]\Longleftarrow\left[\forall{\rm k}\quad{\cal A}\left({\rm k}\right)\right]\lor\left[\forall{\rm k}\quad{\cal B}\left({\rm k}\right)\right]\)<br>
+            <input type="checkbox" name="s2q5" value="-1"> \(\left[\exists{\rm k}\quad{\cal A}\left({\rm k}\right)\land{\cal B}\left({\rm k}\right)\right]\Longleftarrow\left[\exists{\rm k}\quad{\cal A}\left({\rm k}\right)\right]\lor\left[\exists{\rm k}\quad{\cal B}\left({\rm k}\right)\right]\)<br>
+            <input type="checkbox" name="s2q5" value="+1"> \(\left[\exists{\rm k}\quad{\cal A}\left({\rm k}\right)\land{\cal B}\left({\rm k}\right)\right]\Longrightarrow\left[\exists{\rm k}\quad{\cal A}\left({\rm k}\right)\right]\lor\left[\exists{\rm k}\quad{\cal B}\left({\rm k}\right)\right]\)
+        </div>
+
+        <div class="question">
+            <p>6. Quali di queste implicazioni sono valide?</p>
+            <input type="checkbox" name="s2q6" value="+1"> \(\left[\exists{\rm k}\quad{\cal A}\left({\rm k}\right)\land{\cal B}\left({\rm k}\right)\right]\Longleftarrow\left[\forall{\rm k}\quad{\cal A}\left({\rm k}\right)\right]\land\left[\exists{\rm k}\quad{\cal B}\left({\rm k}\right)\right]\)<br>
+            <input type="checkbox" name="s2q6" value="+1"> \(\left[\forall{\rm k}\quad{\cal A}\left({\rm k}\right)\lor{\cal B}\left({\rm k}\right)\right]\Longrightarrow\left[\forall{\rm k}\quad{\cal A}\left({\rm k}\right)\right]\lor\left[\exists{\rm k}\quad{\cal B}\left({\rm k}\right)\right]\)<br>
+            <input type="checkbox" name="s2q6" value="-1"> \(\left[\exists{\rm k}\quad{\cal A}\left({\rm k}\right)\land{\cal B}\left({\rm k}\right)\right]\Longrightarrow\left[\forall{\rm k}\quad{\cal A}\left({\rm k}\right)\right]\land\left[\exists{\rm k}\quad{\cal B}\left({\rm k}\right)\right]\)<br>
+            <input type="checkbox" name="s2q6" value="-1"> \(\left[\forall{\rm k}\quad{\cal A}\left({\rm k}\right)\lor{\cal B}\left({\rm k}\right)\right]\Longleftarrow\left[\forall{\rm k}\quad{\cal A}\left({\rm k}\right)\right]\lor\left[\exists{\rm k}\quad{\cal B}\left({\rm k}\right)\right]\)<br>
+            <input type="checkbox" name="s2q6" value="-1"> \(\left[\exists{\rm k}\quad{\cal A}\left({\rm k}\right)\land{\cal B}\right]\Longrightarrow\left[\forall{\rm k}\quad{\cal A}\left({\rm k}\right)\right]\land{\cal B}\)<br>
+            <input type="checkbox" name="s2q6" value="+1"> \(\left[\forall{\rm k}\quad{\cal A}\left({\rm k}\right)\lor{\cal B}\right]\Longleftarrow\left[\forall{\rm k}\quad{\cal A}\left({\rm k}\right)\right]\lor{\cal B}\)<br>
+            <input type="checkbox" name="s2q6" value="+1"> \(\left[\exists{\rm k}\quad{\cal A}\land{\cal B}\left({\rm k}\right)\right]\Longrightarrow{\cal A}\land\left[\exists{\rm k}\quad{\cal B}\left({\rm k}\right)\right]\)<br>
+            <input type="checkbox" name="s2q6" value="-1"> \(\left[\forall{\rm k}\quad{\cal A}\lor{\cal B}\left({\rm k}\right)\right]\Longleftarrow{\cal A}\lor\left[\exists{\rm k}\quad{\cal B}\left({\rm k}\right)\right]\)<br>
+        </div>
+
+        <div class="question">
+            <p>7. Quali di queste implicazioni sono valide?</p>
+            <input type="checkbox" name="s2q7" value="+1"> \(\left[\exists{\rm k}\quad{\cal A}\left({\rm k}\right)\land{\cal B}\left({\rm k}\right)\right]\Longleftarrow\left[\forall{\rm k}\quad{\cal A}\left({\rm k}\right)\right]\land\left[\exists{\rm k}\quad{\cal B}\left({\rm k}\right)\right]\)<br>
+            <input type="checkbox" name="s2q7" value="+1"> \(\left[\forall{\rm k}\quad{\cal A}\left({\rm k}\right)\lor{\cal B}\left({\rm k}\right)\right]\Longrightarrow\left[\forall{\rm k}\quad{\cal A}\left({\rm k}\right)\right]\lor\left[\exists{\rm k}\quad{\cal B}\left({\rm k}\right)\right]\)<br>
+            <input type="checkbox" name="s2q7" value="-1"> \(\left[\exists{\rm k}\quad{\cal A}\left({\rm k}\right)\land{\cal B}\left({\rm k}\right)\right]\Longrightarrow\left[\forall{\rm k}\quad{\cal A}\left({\rm k}\right)\right]\land\left[\exists{\rm k}\quad{\cal B}\left({\rm k}\right)\right]\)<br>
+            <input type="checkbox" name="s2q7" value="-1"> \(\left[\forall{\rm k}\quad{\cal A}\left({\rm k}\right)\lor{\cal B}\left({\rm k}\right)\right]\Longleftarrow\left[\forall{\rm k}\quad{\cal A}\left({\rm k}\right)\right]\lor\left[\exists{\rm k}\quad{\cal B}\left({\rm k}\right)\right]\)<br>
+            <input type="checkbox" name="s2q7" value="-1"> \(\left[\exists{\rm k}\quad{\cal A}\left({\rm k}\right)\land{\cal B}\right]\Longrightarrow\left[\forall{\rm k}\quad{\cal A}\left({\rm k}\right)\right]\land{\cal B}\)<br>
+            <input type="checkbox" name="s2q7" value="+1"> \(\left[\forall{\rm k}\quad{\cal A}\left({\rm k}\right)\lor{\cal B}\right]\Longleftarrow\left[\forall{\rm k}\quad{\cal A}\left({\rm k}\right)\right]\lor{\cal B}\)<br>
+            <input type="checkbox" name="s2q7" value="+1"> \(\left[\exists{\rm k}\quad{\cal A}\land{\cal B}\left({\rm k}\right)\right]\Longrightarrow{\cal A}\land\left[\exists{\rm k}\quad{\cal B}\left({\rm k}\right)\right]\)<br>
+            <input type="checkbox" name="s2q7" value="-1"> \(\left[\forall{\rm k}\quad{\cal A}\lor{\cal B}\left({\rm k}\right)\right]\Longleftarrow{\cal A}\lor\left[\exists{\rm k}\quad{\cal B}\left({\rm k}\right)\right]\)<br>
+        </div>
+
+        <div class="question">
+            <p>8. Quali di queste implicazioni sono valide?</p>
+            <input type="checkbox" name="s2q8" value="+1"> \(\left[\exists{\rm k}\quad{\cal B}\left({\rm k}\right)\right]\Longleftarrow\left[\forall{\rm k}\quad{\cal A}\left({\rm k}\right)\right]\land\left[\exists{\rm k}\quad{\cal A}\left({\rm k}\right)\Longrightarrow{\cal B}\left({\rm k}\right)\right]\)<br>
+            <input type="checkbox" name="s2q8" value="+1"> \(\left[\exists{\rm k}\quad{\cal A}\left({\rm k}\right)\right]\Longleftarrow\left[\forall{\rm k}\quad{\cal B}\left({\rm k}\right)\Longrightarrow{\cal A}\left({\rm k}\right)\right]\land\left[\exists{\rm k}\quad{\cal B}\left({\rm k}\right)\right]\)<br>
+            <input type="checkbox" name="s2q8" value="+1"> \(\left[\forall{\rm k}\quad{\cal B}\left({\rm k}\right)\right]\land\left[\exists{\rm k}\quad{\cal B}\left({\rm k}\right)\Longrightarrow{\cal A}\left({\rm k}\right)\right]\Longrightarrow\left[\exists{\rm k}\quad{\cal A}\left({\rm k}\right)\right]\)<br>
+            <input type="checkbox" name="s2q8" value="+1"> \(\left[\forall{\rm k}\quad{\cal A}\left({\rm k}\right)\right]\land\left[\exists{\rm k}\quad{\cal A}\left({\rm k}\right)\Longrightarrow{\cal B}\left({\rm k}\right)\right]\Longrightarrow\left[\exists{\rm k}\quad{\cal B}\left({\rm k}\right)\right]\)<br>
+            <input type="checkbox" name="s2q8" value="-1"> \(\left[\forall{\rm k}\quad{\cal B}\left({\rm k}\right)\right]\Longleftarrow\left[\forall{\rm k}\quad{\cal A}\left({\rm k}\right)\right]\land\left[\exists{\rm k}\quad{\cal A}\left({\rm k}\right)\Longrightarrow{\cal B}\left({\rm k}\right)\right]\)<br>
+            <input type="checkbox" name="s2q8" value="-1"> \(\left[\forall{\rm k}\quad{\cal A}\left({\rm k}\right)\right]\Longleftarrow\left[\forall{\rm k}\quad{\cal B}\left({\rm k}\right)\Longrightarrow{\cal A}\left({\rm k}\right)\right]\land\left[\exists{\rm k}\quad{\cal B}\left({\rm k}\right)\right]\)<br>
+            <input type="checkbox" name="s2q8" value="-1"> \(\left[\forall{\rm k}\quad{\cal B}\left({\rm k}\right)\right]\land\left[\exists{\rm k}\quad{\cal B}\left({\rm k}\right)\Longrightarrow{\cal A}\left({\rm k}\right)\right]\Longrightarrow\left[\forall{\rm k}\quad{\cal A}\left({\rm k}\right)\right]\)<br>
+            <input type="checkbox" name="s2q8" value="-1"> \(\left[\forall{\rm k}\quad{\cal A}\left({\rm k}\right)\right]\land\left[\exists{\rm k}\quad{\cal A}\left({\rm k}\right)\Longrightarrow{\cal B}\left({\rm k}\right)\right]\Longrightarrow\left[\forall{\rm k}\quad{\cal B}\left({\rm k}\right)\right]\)<br>
+        </div>
+
+        <div class="nav-buttons">
+            <button type="button" onclick="correggi('s3')">Invia risposte</button>
+            <p class="result" id="results3"></p>
+            <button type="button" onclick="imbroglia('s3')">Mostra risposte</button>
+        </div>
+        
+    </form>
+
+    <div class="nav-buttons">
+        <button type="button" onclick="prevSlide()">Indietro</button>
+        <a href="A1.html">A1</a>
+        <a href="A2.html">A2</a>
+        <a href="A3.html">A3</a>
+        <a href="A4.html">A4</a>
+        <a href="A5.html">A5</a>
+        <button type="button" onclick="nextSlide()">Avanti</button>
+    </div>
+
+    <script>
+
+        function correggi(SlideId) {
+            let punteggioTot = 0;
+            const domande = ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8"].map(QuestionID => SlideId + QuestionID );
+            domande.forEach((nomeDomanda) => {
+                let punteggio = 0;
+                let punteggioMax = 0;
+                let punteggioMin = 0;
+                const risposte = document.querySelectorAll(`input[name="${nomeDomanda}"]`);
+                let corretto = true;
+                risposte.forEach(risposta => {
+                    const selezionato = risposta.checked;
+                    const valore = parseFloat(risposta.value);
+                    if (selezionato) {punteggio += valore;}
+                    if (valore > 0) {punteggioMax += valore;}
+                    if (valore < 0) {punteggioMin += valore;}
+                    });
+                punteggioTot += (punteggio - punteggioMin) / (punteggioMax - punteggioMin)
+                });
+            document.getElementById("result" + SlideId).textContent = `Hai ottenuto ${punteggioTot} punti`;
+            if (currentSlide == Locked && Locked < slides.length - 1) {Locked ++;}
+            }
+
+        function isLocale() {
+            return location.protocol === "file:" || location.hostname === "localhost";
+        }
+
+        function imbroglia(SlideId) {
+            if (isLocale()) {
+                let punteggioTot = 0;
+                const domande = ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8"].map(QuestionID => SlideId + QuestionID );
+                domande.forEach((nomeDomanda) => {
+                    const risposte = document.querySelectorAll(`input[name="${nomeDomanda}"]`);
+                    risposte.forEach(risposta => {
+                        const valore = parseFloat(risposta.value);
+                        if (valore > 0) {risposta.checked = true;}
+                        if (valore < 0) {risposta.checked = false;}
+                        });
+                    });
+                }
+            correggi(SlideId);
+            }
+
+        const slides = document.querySelectorAll('form');
+        let currentSlide = 0;
+        let Locked = 0
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.style.display = "none");
+            slides[index].style.display = "block";
+        }
+
+        function nextSlide() {
+            if (currentSlide < Locked) {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                showSlide(currentSlide);
+            }
+        }
+    
+        showSlide(currentSlide);
+
+    </script>

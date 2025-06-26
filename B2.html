@@ -39,13 +39,17 @@
             <li>\[\frac{\rm a}{\rm b}\cdot\frac{\rm c}{\rm d}=\frac{{\rm a}\cdot{\rm c}}{{\rm b}\cdot{\rm d}}\qquad\frac{\rm a}{\rm b}:\frac{\rm c}{\rm d}=\frac{{\rm a}\cdot{\rm d}}{{\rm b}\cdot{\rm c}}\]</li>
             <li>\[\left(\frac{\rm a}{\rm b}\right)^{\rm n}=\frac{{\rm a}^{\rm n}}{{\rm b}^{\rm n}}\qquad\left(\frac{\rm a}{\rm b}\right)^{-{\rm n}}=\frac{{\rm b}^{\rm n}}{{\rm a}^{\rm n}}\]</li>
         </ul>
-        Anche tra razionali vale:
-        \[\operatorname{gcd}\left({\rm a},{\rm b}\right)\cdot\operatorname{lcm}\left({\rm a},{\rm b}\right)={\rm a}\cdot{\rm b}\]
-        Nello svolgimento delle espressioni bisogna sempre portare il risultato in forma ridotta:
-        \[\frac{\rm a}{\rm b}=\frac{{\rm a}:\operatorname{gcd}\left({\rm a},{\rm b}\right)}{{\rm b}:\operatorname{gcd}\left({\rm a},{\rm b}\right)}=\frac{\operatorname{lcm}\left({\rm a},{\rm b}\right):{\rm b}}{\operatorname{lcm}\left({\rm a},{\rm b}\right):{\rm a}}\]
-        Scriviamo sempre numeratore e denominatore fattorizzati e per minimizzare la quantità di calcoli:
-        \[\frac{\rm a}{\rm b}\pm\frac{\rm c}{\rm d}=\frac{\operatorname{gcd}\left({\rm a},{\rm b}\right)}{\operatorname{lcm}\left({\rm b},{\rm d}\right)}\cdot\left(\frac{{\rm a}\cdot\operatorname{lcm}\left({\rm b},{\rm d}\right)}{\operatorname{gcd}\left({\rm a},{\rm c}\right)\cdot{\rm b}}\pm\frac{{\rm c}\cdot\operatorname{lcm}\left({\rm b},{\rm d}\right)}{\operatorname{gcd}\left({\rm a},{\rm c}\right)\cdot{\rm d}}\right)\]
-        In questo modo andrà calcolato e fattorizzato solo il secondo fattore.
+        <br><button onclick="Show('1N')">SHOW</button>
+        <div class="proof" id="1N">
+            Anche tra razionali vale:
+            \[\operatorname{gcd}\left({\rm a},{\rm b}\right)\cdot\operatorname{lcm}\left({\rm a},{\rm b}\right)={\rm a}\cdot{\rm b}\]
+            Nello svolgimento delle espressioni bisogna sempre portare il risultato in forma ridotta:
+            \[\frac{\rm a}{\rm b}=\frac{{\rm a}:\operatorname{gcd}\left({\rm a},{\rm b}\right)}{{\rm b}:\operatorname{gcd}\left({\rm a},{\rm b}\right)}=\frac{\operatorname{lcm}\left({\rm a},{\rm b}\right):{\rm b}}{\operatorname{lcm}\left({\rm a},{\rm b}\right):{\rm a}}\]
+            Scriviamo sempre numeratore e denominatore fattorizzati e per minimizzare la quantità di calcoli:
+            \[\frac{\rm a}{\rm b}\pm\frac{\rm c}{\rm d}=\frac{\operatorname{gcd}\left({\rm a},{\rm b}\right)}{\operatorname{lcm}\left({\rm b},{\rm d}\right)}\cdot\left(\frac{{\rm a}\cdot\operatorname{lcm}\left({\rm b},{\rm d}\right)}{\operatorname{gcd}\left({\rm a},{\rm c}\right)\cdot{\rm b}}\pm\frac{{\rm c}\cdot\operatorname{lcm}\left({\rm b},{\rm d}\right)}{\operatorname{gcd}\left({\rm a},{\rm c}\right)\cdot{\rm d}}\right)\]
+            In questo modo andrà calcolato e fattorizzato solo il secondo fattore.
+            <br><button onclick="Hide('1N')">HIDE</button>
+        </div>
     </div>
     <div class="block F">
         Ribadiamo le proprietà delle operazioni:
@@ -65,27 +69,37 @@
         La prima legge di monotonia si scrive:
         \[{\rm a}+{\rm c}={\rm b}+{\rm c}\Longleftrightarrow{\rm a}\ge{\rm b}\Longleftrightarrow{\rm a}-{\rm c}={\rm b}-{\rm c}\]
         La seconda legge di monotonia si scrive:
-        \[\begin{split}
-            \begin{cases}{\rm a}\ge{\rm b}\\{\rm c}\ge0\end{cases}&\Longrightarrow{\rm a}\cdot{\rm c}\ge{\rm b}\cdot{\rm c}\\
-            \begin{cases}{\rm a}\ge{\rm b}\\{\rm c}\le0\end{cases}&\Longrightarrow{\rm a}\cdot{\rm c}\le{\rm b}\cdot{\rm c}\\
-            \begin{cases}{\rm a}\gt{\rm b}\\{\rm c}\gt0\end{cases}&\Longrightarrow{\rm a}:{\rm c}\gt{\rm b}:{\rm c}\\
-            \begin{cases}{\rm a}\gt{\rm b}\\{\rm c}\lt0\end{cases}&\Longrightarrow{\rm a}:{\rm c}\lt{\rm b}:{\rm c}
-        \end{split}\]
-        Queste si possono anche scrivere come \(\dots\) <button onclick="Show('2R')">SHOW</button>
+        <ul>
+            <li>\[{\rm c}\gt0\Longrightarrow\begin{cases}
+                    {\rm a}\gt{\rm b}\Longleftrightarrow{\rm a}\cdot{\rm c}\gt{\rm b}\cdot{\rm c}\\
+                    {\rm a}\gt{\rm b}\Longleftrightarrow{\rm a}:{\rm c}\gt{\rm b}:{\rm c}\\
+                    {\rm a}\gt{\rm b}\cdot{\rm c}\Longleftrightarrow{\rm a}:{\rm c}\gt{\rm b}\\
+                    {\rm a}\gt{\rm b}:{\rm c}\Longleftrightarrow{\rm a}\cdot{\rm c}\gt{\rm b}
+                \end{cases}\]</li>
+            <li>\[{\rm c}\ge0\land{\rm a}\ge{\rm b}\Longrightarrow{\rm a}\cdot{\rm c}\ge{\rm b}\cdot{\rm c}\]</li>
+            <li>\[{\rm c}\lt0\Longrightarrow\begin{cases}
+                    {\rm a}\gt{\rm b}\Longleftrightarrow{\rm a}\cdot{\rm c}\lt{\rm b}\cdot{\rm c}\\
+                    {\rm a}\gt{\rm b}\Longleftrightarrow{\rm a}:{\rm c}\lt{\rm b}:{\rm c}\\
+                    {\rm a}\gt{\rm b}\cdot{\rm c}\Longleftrightarrow{\rm a}:{\rm c}\lt{\rm b}\\
+                    {\rm a}\gt{\rm b}:{\rm c}\Longleftrightarrow{\rm a}\cdot{\rm c}\lt{\rm b}
+                \end{cases}\]</li>
+            <li>\[{\rm c}\le0\land{\rm a}\ge{\rm b}\Longrightarrow{\rm a}\cdot{\rm c}\le{\rm b}\cdot{\rm c}\]</li>
+        </ul>
+        <br><button onclick="Show('2R')">SHOW</button>
         <div class="proof" id="2R">
-            La prima legge di monotonia:
-            \[\begin{split}
-                \max\left({\rm a}+{\rm c},{\rm b}+{\rm c}\right)&=\max\left({\rm a},{\rm b}\right)+{\rm c}\\
-                \max\left({\rm a}-{\rm c},{\rm b}-{\rm c}\right)&=\max\left({\rm a},{\rm b}\right)-{\rm c}\\
-                \min\left({\rm a}+{\rm c},{\rm b}+{\rm c}\right)&=\min\left({\rm a},{\rm b}\right)+{\rm c}\\
-                \min\left({\rm a}-{\rm c},{\rm b}-{\rm c}\right)&=\min\left({\rm a},{\rm b}\right)-{\rm c}
-            \end{split}\]
-            La seconda legge di monotonia:
-            \[\begin{split}
-                {\rm c}\gt0&\Longrightarrow\begin{cases}\max\left({\rm a},{\rm b}\right)\cdot{\rm c}=\max\left({\rm a}\cdot{\rm c},{\rm b}\cdot{\rm c}\right)\\\min\left({\rm a},{\rm b}\right)\cdot{\rm c}=\min\left({\rm a}\cdot{\rm c},{\rm b}\cdot{\rm c}\right)\end{cases}\\
-                {\rm c}\lt0&\Longrightarrow\begin{cases}\max\left({\rm a},{\rm b}\right)\cdot{\rm c}=\min\left({\rm a}\cdot{\rm c},{\rm b}\cdot{\rm c}\right)\\\min\left({\rm a},{\rm b}\right)\cdot{\rm c}=\max\left({\rm a}\cdot{\rm c},{\rm b}\cdot{\rm c}\right)\end{cases}
-            \end{split}\]
-            <button onclick="Hide('2R')">HIDE</button>
+            La prima legge di monotonia si scrive anche come:
+            <ul>
+                <li>\[\max\left({\rm a}+{\rm c},{\rm b}+{\rm c}\right)=\max\left({\rm a},{\rm b}\right)+{\rm c}\]</li>
+                <li>\[\max\left({\rm a}-{\rm c},{\rm b}-{\rm c}\right)=\max\left({\rm a},{\rm b}\right)-{\rm c}\]</li>
+                <li>\[\min\left({\rm a}+{\rm c},{\rm b}+{\rm c}\right)=\min\left({\rm a},{\rm b}\right)+{\rm c}\]</li>
+                <li>\[\min\left({\rm a}-{\rm c},{\rm b}-{\rm c}\right)=\min\left({\rm a},{\rm b}\right)-{\rm c}\]</li>
+            </ul>
+            La seconda legge di monotonia si scrive anche come:
+            <ul>
+                <li>\[{\rm c}\gt0\Longrightarrow\begin{cases}\max\left({\rm a},{\rm b}\right)\cdot{\rm c}=\max\left({\rm a}\cdot{\rm c},{\rm b}\cdot{\rm c}\right)\\\max\left({\rm a},{\rm b}\right):{\rm c}=\max\left({\rm a}:{\rm c},{\rm b}:{\rm c}\right)\\\min\left({\rm a},{\rm b}\right)\cdot{\rm c}=\min\left({\rm a}\cdot{\rm c},{\rm b}\cdot{\rm c}\right)\\\min\left({\rm a},{\rm b}\right):{\rm c}=\min\left({\rm a}:{\rm c},{\rm b}:{\rm c}\right)\end{cases}\]</li>
+                <li>\[{\rm c}\lt0\Longrightarrow\begin{cases}\max\left({\rm a},{\rm b}\right)\cdot{\rm c}=\min\left({\rm a}\cdot{\rm c},{\rm b}\cdot{\rm c}\right)\\\max\left({\rm a},{\rm b}\right):{\rm c}=\min\left({\rm a}:{\rm c},{\rm b}:{\rm c}\right)\\\min\left({\rm a},{\rm b}\right)\cdot{\rm c}=\max\left({\rm a}\cdot{\rm c},{\rm b}\cdot{\rm c}\right)\\\min\left({\rm a},{\rm b}\right):{\rm c}=\max\left({\rm a}:{\rm c},{\rm b}:{\rm c}\right)\end{cases}\]</li>
+            </ul>
+            <br><button onclick="Hide('2R')">HIDE</button>
         </div>
     </div>
 </div>
