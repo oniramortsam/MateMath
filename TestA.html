@@ -97,7 +97,7 @@
 
 <body>
 
-    <form>
+    <form id="s1">
 
         <h2>Quiz proprietà addizione</h2>
 
@@ -204,7 +204,7 @@
         </div>
     </form>
 
-    <form>
+    <form id="s2">
 
         <h2>Quiz leggi di monotonia</h2>
 
@@ -311,7 +311,7 @@
         </div>
     </form>
 
-    <form>
+    <form id="s3">
 
         <h2>Quiz connettivi logici</h2>
 
@@ -458,8 +458,7 @@
         }
 
         function imbroglia(SlideId) {
-            if (isLocale()) {
-                let punteggioTot = 0;
+            if (isLocale() || Locked > currentSlide) {
                 const domande = ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8"].map(QuestionID => SlideId + QuestionID );
                 domande.forEach((nomeDomanda) => {
                     const risposte = document.querySelectorAll(`input[name="${nomeDomanda}"]`);
@@ -480,7 +479,13 @@
         function showSlide(index) {
             slides.forEach(slide => slide.style.display = "none");
             slides[index].style.display = "block";
-        }
+            const SlideId = slides[index].id;
+            const domande = ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8"].map(QuestionID => SlideId + QuestionID );
+            domande.forEach((nomeDomanda) => {
+                const risposte = document.querySelectorAll(`input[name="${nomeDomanda}"]`);
+                risposte.forEach(risposta => {risposta.checked = false;});
+                });
+            }
 
         function nextSlide() {
             if (currentSlide < Locked) {
