@@ -92,6 +92,10 @@
             align-items: center;
             }
 
+        .nav-buttons p {
+            width: 120px;
+        }
+
     </style>
 </head>
 
@@ -468,17 +472,15 @@
         if (!isLocale()) {window.imbroglia = function() {};}
 
         function imbroglia(SlideId) {
-            if (isLocale() || Locked > currentSlide) {
-                const domande = ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8"].map(QuestionID => SlideId + QuestionID );
-                domande.forEach((nomeDomanda) => {
-                    const risposte = document.querySelectorAll(`input[name="${nomeDomanda}"]`);
-                    risposte.forEach(risposta => {
-                        const valore = parseFloat(risposta.value);
-                        if (valore > 0) {risposta.checked = true;}
-                        if (valore < 0) {risposta.checked = false;}
-                        });
+            const domande = ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8"].map(QuestionID => SlideId + QuestionID );
+            domande.forEach((nomeDomanda) => {
+                const risposte = document.querySelectorAll(`input[name="${nomeDomanda}"]`);
+                risposte.forEach(risposta => {
+                    const valore = parseFloat(risposta.value);
+                    if (valore > 0) {risposta.checked = true;}
+                    if (valore < 0) {risposta.checked = false;}
                     });
-                }
+                });
             correggi(SlideId);
             }
 
