@@ -94,7 +94,7 @@
 | le relazioni di ordine |(NFR)|
 | gli elementi estremali |(NFR)|
 | risolvere un'equazione |(QFR)|
-| proiettive e monotonia |(   )|
+| proiettive e monotonia |(DFR)|
 
 ## <a href="B2.html">B2</a>
 
