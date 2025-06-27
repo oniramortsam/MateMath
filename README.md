@@ -46,7 +46,7 @@
 | l'algoritmo di bezout |(QND)|
 | fattorizzazione unica |(NDF)|
 | gcd e lcm di naturali |(DFR)|
-| sul teorema del resto |(   )|
+| sul teorema del resto |(QDR)|
 
 ## <a href="A4.html">A4</a>
 

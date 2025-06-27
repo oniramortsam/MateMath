@@ -253,18 +253,33 @@
         <ul>
             <li>\[\left|\left({\rm A}\times{\rm B}\right)^{\rm C}\right|=\left|{\rm A}^{\rm C}\times{\rm B}^{\rm C}\right|\]</li>
             <li>\[{\rm B}\cap{\rm C}=\emptyset\Longrightarrow\left|{\rm A}^{\left({\rm B}\cup{\rm C}\right)}\right|=\left|{\rm A}^{\rm B}\times{\rm A}^{\rm C}\right|\]</li>
-            <li>\[\left|{\rm A}^{\left({\rm B}\times{\rm C}\right)}\right|=\left|\left({\rm A}^{\rm B}\right)^{\rm C}\right|\]</li>
+            <li>\[\left|\left({\rm A}^{\rm B}\right)^{\rm C}\right|=\left|{\rm A}^{\left({\rm B}\times{\rm C}\right)}\right|=\left|\left({\rm A}^{\rm C}\right)^{\rm B}\right|\]</li>
         </ul>
-        Facciamo corrispondere \({\rm f}\leftrightarrow{\rm g}\) nei vari casi:
+        Nei vari casi possiamo mostrare corrispondenze:
         <ul>
-            <li>\[{\rm g}=\left({\rm g}_0,{\rm g}_1\right)\land\left[\forall{\rm c}\in{\rm C}\quad{\rm f}\left({\rm c}\right)=\left({\rm g}_0\left({\rm c}\right),{\rm g}_1\left({\rm c}\right)\right)\right]\]</li>
-            <li>\[{\rm g}=\left({\rm g}_0,{\rm g}_1\right)\land\left[\forall{\rm a}\in{\rm A}\quad{\rm f}\left({\rm a}\right)={\rm g}_0\left({\rm a}\right)\right]\land\left[\forall{\rm b}\in{\rm B}\quad{\rm f}\left({\rm b}\right)={\rm g}_1\left({\rm b}\right)\right]\]</li>
-            <li>\[\forall\left({\rm b},{\rm c}\right)\in{\rm B}\times{\rm C}\quad{\rm f}\left({\rm b},{\rm c}\right)={\rm g}\left({\rm c}\right)\left({\rm b}\right)\]</li>
+            <li>
+                \[\begin{split}
+                    \left({\rm A}\times{\rm B}\right)^{\rm C}\leftrightarrow{\rm A}^{\rm C}\times{\rm B}^{\rm C}\qquad{\rm f}={\rm g}_0\otimes{\rm g}_1\leftrightarrow\left({\rm g}_0,{\rm g}_1\right)\\
+                    \left[\forall{\rm c}\in{\rm C}\quad{\rm f}\left({\rm c}\right)=\left({\rm g}_0\left({\rm c}\right),{\rm g}_1\left({\rm c}\right)\right)\right]
+                \end{split}\]
+            </li>
+            <li>
+                \[\begin{split}
+                    {\rm A}^{\left({\rm B}\cup{\rm C}\right)}\leftrightarrow{\rm A}^{\rm B}\times{\rm A}^{\rm C}\qquad{\rm f}={\rm g}_0\oplus{\rm g}_1\leftrightarrow\left({\rm g}_0,{\rm g}_1\right)\\
+                    \left[\forall{\rm a}\in{\rm A}\quad{\rm f}\left({\rm a}\right)={\rm g}_0\left({\rm a}\right)\right]\land\left[\forall{\rm b}\in{\rm B}\quad{\rm f}\left({\rm b}\right)={\rm g}_1\left({\rm b}\right)\right]
+                \end{split}\]
+            </li>
+            <li>
+                \[\begin{split}
+                    \left({\rm A}^{\rm B}\right)^{\rm C}\leftrightarrow{\rm A}^{\left({\rm B}\times{\rm C}\right)}\leftrightarrow\left({\rm A}^{\rm C}\right)^{\rm B}\qquad{\rm g}_0\leftrightarrow{\rm f}\leftrightarrow{\rm g}_1\\
+                    \forall\left({\rm b},{\rm c}\right)\in{\rm B}\times{\rm C}\quad{\rm g}_0\left({\rm c}\right)\left({\rm b}\right)={\rm f}\left({\rm b},{\rm c}\right)={\rm g}_1\left({\rm b}\right)\left({\rm c}\right)
+                \end{split}\]
+            </li>
         </ul>
         Nel primo e secondo caso le \({\rm f}\) si chiamano \({\rm g}_0\otimes{\rm g}_1,{\rm g}_0\oplus{\rm g}_1\) rispettivamente.
     </div>
     <div class="block R">
-        Le corrispondenze canoniche sono a loro volta particolari funzioni che si dicono invertibili, lo vediamo dopo.
+        Le corrispondenze canoniche sono a loro volta particolari funzioni che si dicono biunivoche o invertibili.
     </div>
 </div>
 

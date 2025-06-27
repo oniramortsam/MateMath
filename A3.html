@@ -17,7 +17,7 @@
         <li>l'algoritmo di bezout (QND)</li>
         <li>fattorizzazione unica (NDF)</li>
         <li>gcd e lcm di naturali (DFR)</li>
-        <li>sul teorema del resto (   )</li>
+        <li>sul teorema del resto (QDR)</li>
     </ol>
 </div>
 
@@ -276,13 +276,30 @@
 
 <div class="slide">
     <h2>8. sul teorema del resto</h2>
-    Dati \({\rm x}\lt{\rm a}\) ed \({\rm y}\lt{\rm b}\) cerco \(\alpha\lt{\rm a}\) e \(\beta\lt{\rm b}\) tali che
-    \[{\rm x}+\beta\cdot{\rm a}={\rm y}+\alpha\cdot{\rm b}\]
-    Siano:
-    \[{\rm B}\cdot{\rm b}+{\rm A}\cdot{\rm a}=1\]
-    Allora
-    \[\alpha=\left(\left({\rm x}-{\rm y}\right)\cdot{\rm B}\right)\%{\rm a}\]
-    \[\beta=\left(\left({\rm y}-{\rm x}\right)\cdot{\rm A}\right)\%{\rm b}\]
+    <div class="block Q">
+        Dati:
+        \[\left({\rm a},{\rm b}\right)\in{\mathbb N}\times{\mathbb N}\qquad\gcd\left({\rm a},{\rm b}\right)=1\]
+        Cerco:
+        \[\forall\left({\rm x},{\rm y}\right)\in{\rm a}\times{\rm b}\quad\exists\left(\alpha,\beta\right)\in{\rm a}\times{\rm b}\quad{\rm x}+\beta\cdot{\rm a}={\rm y}+\alpha\cdot{\rm b}\]
+    </div>
+    <div class="block D">
+        Siano:
+        \[{\rm B}\cdot{\rm b}+{\rm A}\cdot{\rm a}=1\]
+        Allora:
+        <ul>
+            <li>\[\alpha=\left(\left({\rm x}-{\rm y}\right)\cdot{\rm B}\right)\%{\rm a}\]</li>
+            <li>\[\beta=\left(\left({\rm y}-{\rm x}\right)\cdot{\rm A}\right)\%{\rm b}\]</li>
+        </ul>
+        Sono soluzioni.
+    </div>
+    <div class="block R">
+        Cioè la relazione:
+        \[\begin{split}
+            {\rm a}\times{\rm b}&\leftrightarrow{\rm a}\cdot{\rm b}\\
+            \left({\rm x},{\rm y}\right)&\leftrightarrow{\rm z}\quad\begin{cases}{\rm z}\%{\rm a}={\rm x}\\{\rm z}\%{\rm b}={\rm y}\end{cases}
+        \end{split}\]
+        È ben definita e biunivoca.
+    </div>
 </div>
 
 <div class="nav-buttons">
