@@ -17,7 +17,7 @@
         <li>le relazioni di ordine (NFR)</li>
         <li>gli elementi estremali (NFR)</li>
         <li>risolvere un'equazione (QFR)</li>
-        <li>                       (   )</li>
+        <li>proiettive e monotonia (   )</li>
     <ol>
 </div>
 
@@ -226,6 +226,25 @@
         \[\forall\left({\rm x},{\rm y}\right)\in{\mathbb R}\times{\mathbb R}\quad\begin{cases}\left({\rm a}-{\rm x}\right)\cdot\left({\rm b}-{\rm x}\right)\lt0\\\left({\rm a}-{\rm y}\right)\cdot\left({\rm b}-{\rm y}\right)\lt0\end{cases}\Longrightarrow\frac{{\rm f}\left({\rm y}\right)-{\rm f}\left({\rm x}\right)}{{\rm y}-{\rm x}}\cdot\frac{{\rm f}\left({\rm b}\right)-{\rm f}\left({\rm a}\right)}{{\rm b}-{\rm a}}\gt0\]
         Questa è di equivalenza e quindi identifica una partizione ed una proiezione al quoziente.
     </div>
+</div>
+
+<div class="slide">
+    <h2>8. proiettive e monotonia</h2>
+    Sia:
+    \[{\rm f}\left({\rm x}\right)=\frac{{\rm a}\cdot{\rm x}+{\rm b}}{{\rm c}\cdot{\rm x}+{\rm d}}\]
+    Allora:
+    \[{\rm f}\left({\rm x}\right)-{\rm f}\left({\rm y}\right)=\det\begin{bmatrix}{\rm a}&{\rm b}\\{\rm c}&{\rm d}\end{bmatrix}\cdot\frac{{\rm x}-{\rm y}}{\left({\rm c}\cdot{\rm x}+{\rm d}\right)\cdot\left({\rm c}\cdot{\rm y}+{\rm d}\right)}\]
+    Supponiamo che il determinante sia positivo:
+    <ul>
+        <li>\[\left[\begin{cases}{\rm x}\lt-\frac{\rm d}{\rm c}\\{\rm y}\lt-\frac{\rm d}{\rm c}\end{cases}\lor\begin{cases}{\rm x}\gt-\frac{\rm d}{\rm c}\\{\rm y}\gt-\frac{\rm d}{\rm c}\end{cases}\right]\Longrightarrow\left[{\rm f}\left({\rm x}\right)\lt{\rm f}\left({\rm y}\right)\Longleftrightarrow{\rm x}\lt{\rm y}\right]\]</li>
+        <li>\[\begin{cases}{\rm x}\lt-\frac{\rm d}{\rm c}\lt{\rm y}\Longrightarrow{\rm f}\left({\rm x}\right)\gt\frac{\rm a}{\rm c}\gt{\rm f}\left({\rm y}\right)\\{\rm x}\gt-\frac{\rm d}{\rm c}\gt{\rm y}\Longrightarrow{\rm f}\left({\rm x}\right)\lt\frac{\rm a}{\rm c}\lt{\rm f}\left({\rm y}\right)\end{cases}\]</li>
+    </ul>
+    Questo mostra che le due restrizioni:
+    \[{\rm f}:\left(-\infty,-\frac{\rm d}{\rm c}\right)\rightarrow\left(\frac{\rm a}{\rm c},\infty\right)\qquad{\rm f}:\left(-\frac{\rm d}{\rm c},\infty\right)\rightarrow\left(-\infty,\frac{\rm a}{\rm c}\right)\]
+    Sono invertibili e le inverse:
+    \[{\rm g}:\left(\frac{\rm a}{\rm c},\infty\right)\rightarrow\left(-\infty,-\frac{\rm d}{\rm c}\right)\qquad{\rm g}:\left(-\infty,\frac{\rm a}{\rm c}\right)\rightarrow\left(-\frac{\rm d}{\rm c},\infty\right)\]
+    Si definiscono entrambe come:
+    \[{\rm g}\left({\rm y}\right)=\frac{{\rm d}\cdot{\rm y}-{\rm b}}{{\rm a}-{\rm c}\cdot{\rm y}}\]
 </div>
 
 <div class="nav-buttons">

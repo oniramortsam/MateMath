@@ -431,6 +431,10 @@
 
     <script>
 
+        const slides = document.querySelectorAll('form');
+        let currentSlide = 0;
+        let Locked = 0
+
         function correggi(SlideId) {
             let punteggioTot = 0;
             const domande = ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8"].map(QuestionID => SlideId + QuestionID );
@@ -454,8 +458,12 @@
             }
 
         function isLocale() {
-            return location.protocol === "file:" || location.hostname === "localhost";
-        }
+                    return (
+                        location.protocol === "file:" || 
+                        location.hostname === "localhost" || 
+                        location.hostname === "127.0.0.1"
+                    );
+                }
 
         function imbroglia(SlideId) {
             if (isLocale() || Locked > currentSlide) {
@@ -471,10 +479,6 @@
                 }
             correggi(SlideId);
             }
-
-        const slides = document.querySelectorAll('form');
-        let currentSlide = 0;
-        let Locked = 0
 
         function showSlide(index) {
             slides.forEach(slide => slide.style.display = "none");

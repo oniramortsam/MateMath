@@ -303,23 +303,28 @@
     <div class="block N">
         Definiamo:
         \[\forall{\rm a}\in{\mathbb N}\quad\left|{\rm a}\right|=\left|-{\rm a}\right|={\rm a}\]
+        Cioè:
+        \[\forall{\rm a}\in{\mathbb Z}\quad\begin{cases}\left|{\rm a}\right|=\left|-{\rm a}\right|={\rm a}\Longleftrightarrow{\rm a}\ge0\\\left|{\rm a}\right|=\left|-{\rm a}\right|=-{\rm a}\Longleftrightarrow{\rm a}\le0\end{cases}\]
+        Notare che:
+        \[\left|{\rm a}\cdot{\rm b}\right|=\left|{\rm a}\right|\cdot\left|{\rm b}\right|\]
     </div>
     <div class="block F">
-        Allora:
-        <ul>
-            <li>\[\left|{\rm a}+{\rm b}\right|\le\left|{\rm a}\right|+\left|{\rm b}\right|\]</li>
-            <li>\[\left|{\rm a}-{\rm b}\right|\ge\left|\left|{\rm a}\right|-\left|{\rm b}\right|\right|\]</li>
-            <li>\[\left|{\rm a}\cdot{\rm b}\right|=\left|{\rm a}\right|\cdot\left|{\rm b}\right|\]</li>
-        </ul>
-    </div>
-    <div class="block R">
         Notare che:
         <ul>
             <li>\[\left|{\rm a}+{\rm b}\right|+\left|{\rm a}-{\rm b}\right|=2\cdot\max\left(\left|{\rm a}\right|,\left|{\rm b}\right|\right)\]</li>
             <li>\[\left|\left|{\rm a}+{\rm b}\right|-\left|{\rm a}-{\rm b}\right|\right|=2\cdot\min\left(\left|{\rm a}\right|,\left|{\rm b}\right|\right)\]</li>
-            <li>\[\left|{\rm a}+{\rm b}\right|+\left|{\rm a}-{\rm b}\right|+\left|\left|{\rm a}+{\rm b}\right|-\left|{\rm a}-{\rm b}\right|\right|=\left|{\rm a}\right|+\left|{\rm b}\right|\]</li>
-            <li>\[\left|{\rm a}+{\rm b}\right|+\left|{\rm a}-{\rm b}\right|-\left|\left|{\rm a}+{\rm b}\right|-\left|{\rm a}-{\rm b}\right|\right|=\left|\left|{\rm a}\right|-\left|{\rm b}\right|\right|\]</li>
+            <li>\[\left|{\rm a}\right|+\left|{\rm b}\right|=\max\left(\left|{\rm a}\right|,\left|{\rm b}\right|\right)+\min\left(\left|{\rm a}\right|,\left|{\rm b}\right|\right)\]</li>
+            <li>\[\left|{\rm a}-{\rm b}\right|=\max\left(\left|{\rm a}\right|,\left|{\rm b}\right|\right)-\min\left(\left|{\rm a}\right|,\left|{\rm b}\right|\right)\]</li>
         </ul>
+        Allora:
+        \[\left|\left|{\rm a}\right|-\left|{\rm b}\right|\right|\le\left|{\rm a}\right|+\left|{\rm b}\right|\]
+    </div>
+    <div class="block R">
+        La diseguaglianza triangolare si scrive:
+        \[\left|\left|{\rm a}\right|-\left|{\rm b}\right|\right|\le\left|{\rm a}\pm{\rm b}\right|\le\left|{\rm a}\right|+\left|{\rm b}\right|\]
+        Infatti:
+        \[{\rm a}\cdot{\rm b}\ge0\Longrightarrow\begin{cases}\left|{\rm a}\right|+\left|{\rm b}\right|=\left|{\rm a}+{\rm b}\right|\\\left|\left|{\rm a}\right|-\left|{\rm b}\right|\right|=\left|{\rm a}-{\rm b}\right|\end{cases}\]
+        \[{\rm a}\cdot{\rm b}\le0\Longrightarrow\begin{cases}\left|{\rm a}\right|+\left|{\rm b}\right|=\left|{\rm a}-{\rm b}\right|\\\left|\left|{\rm a}\right|-\left|{\rm b}\right|\right|=\left|{\rm a}+{\rm b}\right|\end{cases}\]
     </div>
 </div>
 

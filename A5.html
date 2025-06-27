@@ -9,9 +9,9 @@
 <div class="slide active">
     <ol>
         <h2>ANELLO DEI POLINOMI</h2>
-        <li>polinomi di una variabile (NF )</li>
-        <li>la divisione tra polinomi (NF )</li>
-        <li>le fattorizzazione e zeri (DFR)</li>
+        <li>polinomi di una variabile (NFR)</li>
+        <li>la divisione tra polinomi (NFR)</li>
+        <li>la fattorizzazione e zeri (DFR)</li>
         <li>frazioni: fratti semplici (NFR)</li>
         <h2>BASI DI NUMERAZIONE</h2>
         <li>la serie geometrica (QFR)</li>
@@ -33,12 +33,16 @@
         Si dice che \({\rm n}=\deg\left({\rm f}\right)\) se \({\rm a}_{\rm n}\ne0\)
     </div>
     <div class="block F">
-        Per calcolare somma, differenza e prodotto tra polinomi si usano le formule:
+        Per calcolare somma e differenza tra polinomi si usano le formule:
         <ul>
             <li>\[\deg\left({\rm f}+{\rm g}\right)\le\max\left(\deg\left({\rm f}\right),\deg\left({\rm g}\right)\right)\qquad{\rm f}+{\rm g}=\left(\sum_{{\rm k}\in\deg\left({\rm f}+{\rm g}\right)+1}\left({\rm f}_{\rm k}+{\rm g}_{\rm k}\right)\cdot{\rm x}^{\rm k}\right)\]</li>
             <li>\[\deg\left({\rm f}-{\rm g}\right)\le\max\left(\deg\left({\rm f}\right),\deg\left({\rm g}\right)\right)\qquad{\rm f}-{\rm g}=\left(\sum_{{\rm k}\in\deg\left({\rm f}-{\rm g}\right)+1}\left({\rm f}_{\rm k}-{\rm g}_{\rm k}\right)\cdot{\rm x}^{\rm k}\right)\]</li>
-            <li>\[\deg\left({\rm f}\cdot{\rm g}\right)=\deg\left({\rm f}\right)+\deg\left({\rm g}\right)\qquad{\rm f}\cdot{\rm g}=\left(\sum_{{\rm n}\in\deg\left({\rm f}\cdot{\rm g}\right)+1}\left(\sum_{{\rm k}\in{\rm n}+1}\left({\rm f}_{\rm k}\cdot{\rm g}_{{\rm n}-{\rm k}}\right)\right)\cdot{\rm x}^{\rm n}\right)\]</li>
         </ul>
+        Per calcolare il prodotto invece:
+        \[\deg\left({\rm f}\cdot{\rm g}\right)=\deg\left({\rm f}\right)+\deg\left({\rm g}\right)\qquad{\rm f}\cdot{\rm g}=\left(\sum_{{\rm n}\in\deg\left({\rm f}\cdot{\rm g}\right)+1}\left(\sum_{{\rm k}\in{\rm n}+1}\left({\rm f}_{\rm k}\cdot{\rm g}_{{\rm n}-{\rm k}}\right)\right)\cdot{\rm x}^{\rm n}\right)\]
+    </div>
+    <div class="block R">
+        Quando fai le operazioni in tabella, stai facendo questo per \({\rm x}=10\).
     </div>
 </div>
 
@@ -53,10 +57,13 @@
         Per calcolare la divisione tra polinomi si usa la formula:
         \[\deg\left({\rm f}\right)\ge\deg\left({\rm g}\right)\Longrightarrow\begin{cases}{\rm f}/\!\!/{\rm g}=\left(\frac{{\rm f}_{\deg\left({\rm f}\right)}}{{\rm g}_{\deg\left({\rm g}\right)}}\right)\cdot{\rm x}^{\deg\left({\rm f}\right)-\deg\left({\rm g}\right)}+\left({\rm f}-\left(\frac{{\rm f}_{\deg\left({\rm f}\right)}}{{\rm g}_{\deg\left({\rm g}\right)}}\right)\cdot{\rm x}^{\deg\left({\rm f}\right)-\deg\left({\rm g}\right)}\cdot{\rm g}\right)/\!\!/{\rm g}\\{\rm f}\%{\rm g}=\left({\rm f}-\left(\frac{{\rm f}_{\deg\left({\rm f}\right)}}{{\rm g}_{\deg\left({\rm g}\right)}}\right)\cdot{\rm x}^{\deg\left({\rm f}\right)-\deg\left({\rm g}\right)}\cdot{\rm g}\right)\%{\rm g}\end{cases}\]
     </div>
+    <div class="block R">
+        Per i polinomi di una variabile vale ancora bezout e quindi la fattorizzazione unica.
+    </div>
 </div>
 
 <div class="slide">
-    <h2>3. le fattorizzazione e zeri</h2>
+    <h2>3. la fattorizzazione e zeri</h2>
     <div class="block D">
         Considerato che:
         <ul>
@@ -71,10 +78,10 @@
         Quindi cerchiamo di capire se un polinomio di annulla oppure no.
     </div>
     <div class="block R">
-        Per i polinomi di secondo grado abbiamo già un criterio, in genere:
+        Per i polinomi di secondo grado abbiamo già un criterio, in generale:
         \[{\rm f}={\rm f}\left({\rm a}\right)+\left(\sum_{{\rm k}\in\deg\left({\rm f}\right)}{\rm k}\cdot{\rm f}_{\rm k}\cdot{\rm a}^{{\rm k}-1}\right)\cdot\left({\rm x}-{\rm a}\right)+{\rm g}\cdot\left({\rm x}-{\rm a}\right)\]
         E si nota che:
-        \[\left[\forall{\rm a}\in{\mathbb R}\quad\left(\frac{\partial{\rm f}}{\partial{\rm x}}\right)\left({\rm a}\right)=\sum_{{\rm k}\in\deg\left({\rm f}\right)}{\rm k}\cdot{\rm f}_{\rm k}\cdot{\rm a}^{{\rm k}-1}=0\Longrightarrow{\rm f}\left({\rm a}\right)\cdot{\rm a}_{\deg\left({\rm f}\right)}\ge0\right]\Rightarrow\left[\forall{\rm a}\in{\mathbb R}\quad{\rm f}\left({\rm a}\right)\cdot{\rm a}_{\deg\left({\rm f}\right)}\ge0\right]\]
+        \[\left[\forall{\rm a}\in{\mathbb R}\quad\left(\frac{\partial{\rm f}}{\partial{\rm x}}\right)\left({\rm a}\right)=\left(\sum_{{\rm k}\in\deg\left({\rm f}\right)}{\rm k}\cdot{\rm f}_{\rm k}\cdot{\rm a}^{{\rm k}-1}\right)=0\Longrightarrow{\rm f}\left({\rm a}\right)\cdot{\rm a}_{\deg\left({\rm f}\right)}\ge0\right]\Rightarrow\left[\forall{\rm a}\in{\mathbb R}\quad{\rm f}\left({\rm a}\right)\cdot{\rm a}_{\deg\left({\rm f}\right)}\ge0\right]\]
         Notare che per i gradi dispari questo non succede mai.
     </div>
 </div>

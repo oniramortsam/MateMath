@@ -68,9 +68,9 @@
 
 | ANELLO DEI POLINOMI       |     |
 |---------------------------|-----|
-| polinomi di una variabile |(NF )|
-| la divisione tra polinomi |(NF )|
-| le fattorizzazione e zeri |(DFR)|
+| polinomi di una variabile |(NFR)|
+| la divisione tra polinomi |(NFR)|
+| la fattorizzazione e zeri |(DFR)|
 | frazioni: fratti semplici |(NFR)|
 
 | BASI DI NUMERAZIONE |     |
