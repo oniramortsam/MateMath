@@ -12,7 +12,7 @@
         <li>numeri razionali (NFR)</li>
         <li>sui numeri reali (NDF)</li>
         <li>reali e radicali (NFR)</li>
-        <li>logaritmi e basi (NF )</li>
+        <li>logaritmi e basi (NFR)</li>
         <h2>LE PARABOLICHE</h2>
         <li>equazioni quadratiche (QFR)</li>
         <li>simmetriche due a due (   )</li>
@@ -152,6 +152,19 @@
             <li>\[\forall\left({\rm a},{\rm b},{\rm c}\right)\in\left(0,\infty\right)\times{\mathbb R}\times{\mathbb R}\quad\begin{cases}{\rm a}^{{\rm b}+{\rm c}}={\rm a}^{\rm b}\cdot{\rm a}^{\rm c}\\{\rm a}^{{\rm b}-{\rm c}}={\rm a}^{\rm b}:{\rm a}^{\rm c}\end{cases}\]</li>
             <li>\[\forall\left({\rm a},{\rm b},{\rm c}\right)\in\left(0,\infty\right)\times{\mathbb R}\times{\mathbb R}\quad\begin{cases}{\rm a}^{{\rm b}\cdot{\rm c}}=\left({\rm a}^{\rm b}\right)^{\rm c}\\{\rm a}^{{\rm b}:{\rm c}}=\sqrt[{\rm c}]{{\rm a}^{\rm b}}\end{cases}\]</li>
         </ul>
+        <br><button onclick="Show('3F')">SHOW</button>
+        <div class="proof" id="3F">
+            Siccome:
+            \[\forall\left({\rm N},{\rm D}\right)\in{\mathbb Z}\times{\mathbb N}\quad{\rm a}^\frac{\rm N}{\rm D}\gt1\Longleftrightarrow{\rm a}^{\rm N}\gt1\Longleftrightarrow\left({\rm a}-1\right)\cdot{\rm N}\gt0\]
+            Allora la terza legge di monotonia:
+            <ul>
+                <li>Per \({\rm a}\gt1\), \({\rm a}^{\rm x}\) è crescente.</li>
+                <li>Per \({\rm a}\lt1\), \({\rm a}^{\rm x}\) è decrescente.</li>
+                <li>Per \({\rm a}\gt0\), \({\rm x}^{\rm a}\) è crescente.</li>
+                <li>Per \({\rm a}\lt0\), \({\rm x}^{\rm a}\) è decrescente.</li>
+            </ul>
+            <br><button onclick="Hide('3F')">HIDE</button>
+        </div>
     </div>
     <div class="block R">
         Possiamo risolvere una equazione del tipo:
@@ -168,7 +181,10 @@
     <h2>4. logaritmi e basi</h2>
     <div class="block N">
         Possiamo definire:
-        \[\forall\left({\rm a},{\rm b}\right)\in\left(0,\infty\right)\times\left(0,\infty\right)\quad\log_{\rm a}\left({\rm b}\right)=\sup\left({\rm x}\in{\mathbb Q}\quad0\le{\rm a}^{\rm x}\le{\rm b}\right)\]
+        <ul>
+            <li>\[\forall\left({\rm a},{\rm b}\right)\in\left(1,\infty\right)\times\left(0,\infty\right)\quad\log_{\rm a}\left({\rm b}\right)=\sup\left({\rm x}\in{\mathbb Q}\quad0\le{\rm a}^{\rm x}\le{\rm b}\right)\]</li>
+            <li>\[\forall\left({\rm a},{\rm b}\right)\in\left(0,1\right)\times\left(0,\infty\right)\quad\log_{\rm a}\left({\rm b}\right)=\inf\left({\rm x}\in{\mathbb Q}\quad0\le{\rm a}^{\rm x}\le{\rm b}\right)\]</li>
+        </ul>
     </div>
     <div class="block F">
         Le proprietà delle potenze sono allora:
@@ -176,6 +192,13 @@
             <li>\[\forall\left({\rm a},{\rm b},{\rm c}\right)\in\left(0,\infty\right)\times\left(0,\infty\right)\times{\mathbb R}\quad\begin{cases}\log_{\rm a}\left({\rm b}^{\rm c}\right)=\log_{\rm a}\left({\rm b}\right)\cdot{\rm c}\\\log_{\rm a}\left(\sqrt[{\rm c}]{\rm b}\right)=\log_{\rm a}\left({\rm b}\right):{\rm c}\end{cases}\]</li>
             <li>\[\forall\left({\rm a},{\rm b},{\rm c}\right)\in\left(0,\infty\right)\times\left(0,\infty\right)\times\left(0,\infty\right)\quad\begin{cases}\log_{\rm c}\left({\rm a}\cdot{\rm b}\right)=\log_{\rm c}\left({\rm a}\right)+\log_{\rm c}\left({\rm b}\right)\\\log_{\rm c}\left({\rm a}:{\rm b}\right)=\log_{\rm c}\left({\rm a}\right)-\log_{\rm c}\left({\rm b}\right)\end{cases}\]</li>
             <li>\[\forall\left({\rm a},{\rm b},{\rm c}\right)\in\left(0,\infty\right)\times\left(0,\infty\right)\times\left(0,\infty\right)\quad\begin{cases}\log_{{\rm a}}\left({\rm c}\right)=\log_{\rm a}\left({\rm b}\right)\cdot\log_{\rm b}\left({\rm c}\right)\\\log_{{\rm a}}\left({\rm b}\right)=\log_{\rm a}\left({\rm c}\right):\log_{\rm b}\left({\rm c}\right)\end{cases}\]</li>
+        </ul>
+    </div>
+    <div class="block R">
+        Notare che:
+        <ul>
+            <li>Per \({\rm a}\gt1\), \({\rm a}^{\rm x}\) è crescente e lo è anche \(\log_{\rm a}\left({\rm x}\right)\).</li>
+            <li>Per \({\rm a}\lt1\), \({\rm a}^{\rm x}\) è decrescente e lo è anche \(\log_{\rm a}\left({\rm x}\right)\).</li>
         </ul>
     </div>
 </div>
